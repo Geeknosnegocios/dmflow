@@ -1,1 +1,45 @@
-{"data":"Y29uc3QgQlJFVk9fQVBJID0gImh0dHBzOi8vYXBpLmJyZXZvLmNvbS92My9zbXRwL2VtYWlsIjsKCmV4cG9ydCB0eXBlIE5vdGlmeUlucHV0ID0gewogIHN1YmplY3Q6IHN0cmluZzsKICBodG1sOiBzdHJpbmc7CiAgdG8/OiBzdHJpbmc7IC8vIG92ZXJyaWRlIGRlZmF1bHQKfTsKCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBzZW5kTm90aWZpY2F0aW9uKGlucHV0OiBOb3RpZnlJbnB1dCk6IFByb21pc2U8Ym9vbGVhbj4gewogIGNvbnN0IGtleSA9IHByb2Nlc3MuZW52LkJSRVZPX0FQSV9LRVk7CiAgY29uc3QgdG8gPSBpbnB1dC50byA/PyBwcm9jZXNzLmVudi5OT1RJRllfRU1BSUw7CiAgY29uc3QgZnJvbUVtYWlsID0gcHJvY2Vzcy5lbnYuTk9USUZZX0ZST01fRU1BSUwgPz8gIm5vLXJlcGx5QGdlZWthY2FkZW15LnNpdGUiOwogIGNvbnN0IGZyb21OYW1lID0gcHJvY2Vzcy5lbnYuTk9USUZZX0ZST01fTkFNRSA/PyAiRE1GbG93IjsKCiAgaWYgKCFrZXkgfHwgIXRvKSB7CiAgICBjb25zb2xlLndhcm4oIltkbWZsb3ddIG5vdGlmeSBza2lwcGVkIOKAlCBtaXNzaW5nIEJSRVZPX0FQSV9LRVkgb3IgTk9USUZZX0VNQUlMIik7CiAgICByZXR1cm4gZmFsc2U7CiAgfQoKICB0cnkgewogICAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2goQlJFVk9fQVBJLCB7CiAgICAgIG1ldGhvZDogIlBPU1QiLAogICAgICBoZWFkZXJzOiB7CiAgICAgICAgImFwaS1rZXkiOiBrZXksCiAgICAgICAgImNvbnRlbnQtdHlwZSI6ICJhcHBsaWNhdGlvbi9qc29uIiwKICAgICAgICBhY2NlcHQ6ICJhcHBsaWNhdGlvbi9qc29uIiwKICAgICAgfSwKICAgICAgYm9keTogSlNPTi5zdHJpbmdpZnkoewogICAgICAgIHNlbmRlcjogeyBuYW1lOiBmcm9tTmFtZSwgZW1haWw6IGZyb21FbWFpbCB9LAogICAgICAgIHRvOiBbeyBlbWFpbDogdG8gfV0sCiAgICAgICAgc3ViamVjdDogaW5wdXQuc3ViamVjdCwKICAgICAgICBodG1sQ29udGVudDogaW5wdXQuaHRtbCwKICAgICAgfSksCiAgICB9KTsKICAgIGlmICghcmVzLm9rKSB7CiAgICAgIGNvbnN0IGJvZHkgPSBhd2FpdCByZXMudGV4dCgpOwogICAgICBjb25zb2xlLndhcm4oYFtkbWZsb3ddIG5vdGlmeSBmYWlsZWQ6ICR7cmVzLnN0YXR1c30gJHtib2R5LnNsaWNlKDAsIDIwMCl9YCk7CiAgICAgIHJldHVybiBmYWxzZTsKICAgIH0KICAgIHJldHVybiB0cnVlOwogIH0gY2F0Y2ggKGUpIHsKICAgIGNvbnNvbGUud2FybihgW2RtZmxvd10gbm90aWZ5IGVycm9yOiAkeyhlIGFzIEVycm9yKS5tZXNzYWdlfWApOwogICAgcmV0dXJuIGZhbHNlOwogIH0KfQo="}
+const BREVO_API = "https://api.brevo.com/v3/smtp/email";
+
+export type NotifyInput = {
+  subject: string;
+  html: string;
+  to?: string; // override default
+};
+
+export async function sendNotification(input: NotifyInput): Promise<boolean> {
+  const key = process.env.BREVO_API_KEY;
+  const to = input.to ?? process.env.NOTIFY_EMAIL;
+  const fromEmail = process.env.NOTIFY_FROM_EMAIL ?? "no-reply@geekacademy.site";
+  const fromName = process.env.NOTIFY_FROM_NAME ?? "DMFlow";
+
+  if (!key || !to) {
+    console.warn("[dmflow] notify skipped — missing BREVO_API_KEY or NOTIFY_EMAIL");
+    return false;
+  }
+
+  try {
+    const res = await fetch(BREVO_API, {
+      method: "POST",
+      headers: {
+        "api-key": key,
+        "content-type": "application/json",
+        accept: "application/json",
+      },
+      body: JSON.stringify({
+        sender: { name: fromName, email: fromEmail },
+        to: [{ email: to }],
+        subject: input.subject,
+        htmlContent: input.html,
+      }),
+    });
+    if (!res.ok) {
+      const body = await res.text();
+      console.warn(`[dmflow] notify failed: ${res.status} ${body.slice(0, 200)}`);
+      return false;
+    }
+    return true;
+  } catch (e) {
+    console.warn(`[dmflow] notify error: ${(e as Error).message}`);
+    return false;
+  }
+}

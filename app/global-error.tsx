@@ -1,1 +1,39 @@
-{"data":"InVzZSBjbGllbnQiOwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gR2xvYmFsRXJyb3IoewogIGVycm9yLAogIHJlc2V0LAp9OiB7CiAgZXJyb3I6IEVycm9yICYgeyBkaWdlc3Q/OiBzdHJpbmcgfTsKICByZXNldDogKCkgPT4gdm9pZDsKfSkgewogIHJldHVybiAoCiAgICA8aHRtbCBsYW5nPSJwdC1CUiI+CiAgICAgIDxib2R5IHN0eWxlPXt7IGJhY2tncm91bmQ6ICIjMGEwYjEwIiwgY29sb3I6ICIjZTdlOWVmIiwgZm9udEZhbWlseTogInN5c3RlbS11aSwgc2Fucy1zZXJpZiIsIG1pbkhlaWdodDogIjEwMHZoIiwgZGlzcGxheTogImZsZXgiLCBhbGlnbkl0ZW1zOiAiY2VudGVyIiwganVzdGlmeUNvbnRlbnQ6ICJjZW50ZXIiLCBwYWRkaW5nOiAiMnJlbSIgfX0+CiAgICAgICAgPGRpdiBzdHlsZT17eyBtYXhXaWR0aDogNTIwLCB0ZXh0QWxpZ246ICJjZW50ZXIiIH19PgogICAgICAgICAgPGRpdiBzdHlsZT17eyBtYXJnaW5Cb3R0b206IDEyLCBmb250U2l6ZTogMzIgfX0+4pqgPC9kaXY+CiAgICAgICAgICA8aDEgc3R5bGU9e3sgZm9udFNpemU6IDIyLCBmb250V2VpZ2h0OiA3MDAsIG1hcmdpbkJvdHRvbTogOCB9fT4KICAgICAgICAgICAgQWxnbyBkZXUgcnVpbQogICAgICAgICAgPC9oMT4KICAgICAgICAgIDxwIHN0eWxlPXt7IGNvbG9yOiAiIzlhYTFhZCIsIGZvbnRTaXplOiAxNCwgbWFyZ2luQm90dG9tOiAyMCB9fT4KICAgICAgICAgICAge2Vycm9yLm1lc3NhZ2UgfHwgIkZhbGhhIGNyw610aWNhIG5hIGFwbGljYcOnw6NvLiJ9CiAgICAgICAgICA8L3A+CiAgICAgICAgICA8YnV0dG9uCiAgICAgICAgICAgIG9uQ2xpY2s9e3Jlc2V0fQogICAgICAgICAgICBzdHlsZT17ewogICAgICAgICAgICAgIGJhY2tncm91bmQ6ICIjMjJkM2VlIiwKICAgICAgICAgICAgICBjb2xvcjogIiMwYTBiMTAiLAogICAgICAgICAgICAgIGJvcmRlcjogMCwKICAgICAgICAgICAgICBib3JkZXJSYWRpdXM6IDgsCiAgICAgICAgICAgICAgcGFkZGluZzogIjEwcHggMjBweCIsCiAgICAgICAgICAgICAgZm9udFdlaWdodDogNjAwLAogICAgICAgICAgICAgIGN1cnNvcjogInBvaW50ZXIiLAogICAgICAgICAgICB9fQogICAgICAgICAgPgogICAgICAgICAgICBSZWNhcnJlZ2FyCiAgICAgICAgICA8L2J1dHRvbj4KICAgICAgICA8L2Rpdj4KICAgICAgPC9ib2R5PgogICAgPC9odG1sPgogICk7Cn0K"}
+"use client";
+
+export default function GlobalError({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
+}) {
+  return (
+    <html lang="pt-BR">
+      <body style={{ background: "#0a0b10", color: "#e7e9ef", fontFamily: "system-ui, sans-serif", minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "2rem" }}>
+        <div style={{ maxWidth: 520, textAlign: "center" }}>
+          <div style={{ marginBottom: 12, fontSize: 32 }}>⚠</div>
+          <h1 style={{ fontSize: 22, fontWeight: 700, marginBottom: 8 }}>
+            Algo deu ruim
+          </h1>
+          <p style={{ color: "#9aa1ad", fontSize: 14, marginBottom: 20 }}>
+            {error.message || "Falha crítica na aplicação."}
+          </p>
+          <button
+            onClick={reset}
+            style={{
+              background: "#22d3ee",
+              color: "#0a0b10",
+              border: 0,
+              borderRadius: 8,
+              padding: "10px 20px",
+              fontWeight: 600,
+              cursor: "pointer",
+            }}
+          >
+            Recarregar
+          </button>
+        </div>
+      </body>
+    </html>
+  );
+}

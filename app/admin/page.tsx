@@ -1,1 +1,253 @@
-{"data":"aW1wb3J0IHsgcmVxdWlyZVByb2ZpbGUgfSBmcm9tICJAL2xpYi9hdXRoIjsKaW1wb3J0IHsgc3VwYWJhc2VBZG1pbiB9IGZyb20gIkAvbGliL3N1cGFiYXNlIjsKaW1wb3J0IHsgcmVkaXJlY3QgfSBmcm9tICJuZXh0L25hdmlnYXRpb24iOwppbXBvcnQgeyBDYXJkLCBDYXJkSGVhZGVyLCBTdGF0dXNQaWxsIH0gZnJvbSAiQC9jb21wb25lbnRzL3ZpeiI7CmltcG9ydCB7IGZtdFJlbGF0aXZlLCBmbXRDb21wYWN0IH0gZnJvbSAiQC9saWIvZm9ybWF0IjsKaW1wb3J0IExpbmsgZnJvbSAibmV4dC9saW5rIjsKCmV4cG9ydCBjb25zdCBkeW5hbWljID0gImZvcmNlLWR5bmFtaWMiOwoKZXhwb3J0IGRlZmF1bHQgYXN5bmMgZnVuY3Rpb24gQWRtaW5QYWdlKCkgewogIGNvbnN0IHByb2ZpbGUgPSBhd2FpdCByZXF1aXJlUHJvZmlsZSgpOwogIGlmICghcHJvZmlsZS5pc19hZG1pbikgcmVkaXJlY3QoIi9kYXNoYm9hcmQiKTsKCiAgY29uc3QgYWRtaW4gPSBzdXBhYmFzZUFkbWluKCk7CgogIGNvbnN0IFt1c2Vyc1JlcywgYWNjb3VudHNSZXMsIGV2ZW50c1Jlcywgc3Vic1Jlc10gPSBhd2FpdCBQcm9taXNlLmFsbChbCiAgICBhZG1pbgogICAgICAuZnJvbSgidXNlcl9wcm9maWxlcyIpCiAgICAgIC5zZWxlY3QoIioiKQogICAgICAub3JkZXIoImNyZWF0ZWRfYXQiLCB7IGFzY2VuZGluZzogZmFsc2UgfSkKICAgICAgLmxpbWl0KDIwMCksCiAgICBhZG1pbi5mcm9tKCJhY2NvdW50cyIpLnNlbGVjdCgiaWQsIG93bmVyX3VzZXJfaWQsIGlnX3VzZXJuYW1lLCBhY3RpdmUsIGNyZWF0ZWRfYXQiKSwKICAgIGFkbWluCiAgICAgIC5mcm9tKCJldmVudHMiKQogICAgICAuc2VsZWN0KCJhY2NvdW50X2lkLCBjcmVhdGVkX2F0IikKICAgICAgLmd0ZSgiY3JlYXRlZF9hdCIsIG5ldyBEYXRlKERhdGUubm93KCkgLSAzMCAqIDg2NDAwMDAwKS50b0lTT1N0cmluZygpKSwKICAgIGFkbWluCiAgICAgIC5mcm9tKCJzdWJzY3JpcHRpb25fZXZlbnRzIikKICAgICAgLnNlbGVjdCgiKiIpCiAgICAgIC5ndGUoImNyZWF0ZWRfYXQiLCBuZXcgRGF0ZShEYXRlLm5vdygpIC0gMzAgKiA4NjQwMDAwMCkudG9JU09TdHJpbmcoKSkKICAgICAgLm9yZGVyKCJjcmVhdGVkX2F0IiwgeyBhc2NlbmRpbmc6IGZhbHNlIH0pCiAgICAgIC5saW1pdCg1MCksCiAgXSk7CgogIGNvbnN0IHVzZXJzID0gdXNlcnNSZXMuZGF0YSA/PyBbXTsKICBjb25zdCBhY2NvdW50cyA9IGFjY291bnRzUmVzLmRhdGEgPz8gW107CiAgY29uc3QgZXZlbnRzMzAgPSBldmVudHNSZXMuZGF0YSA/PyBbXTsKICBjb25zdCBzdWJzID0gc3Vic1Jlcy5kYXRhID8/IFtdOwoKICBjb25zdCBldmVudHNCeUFjY291bnQgPSBuZXcgTWFwPHN0cmluZywgbnVtYmVyPigpOwogIGZvciAoY29uc3QgZSBvZiBldmVudHMzMCkgewogICAgZXZlbnRzQnlBY2NvdW50LnNldCgKICAgICAgKGUgYXMgYW55KS5hY2NvdW50X2lkLAogICAgICAoZXZlbnRzQnlBY2NvdW50LmdldCgoZSBhcyBhbnkpLmFjY291bnRfaWQpID8/IDApICsgMQogICAgKTsKICB9CgogIGNvbnN0IGFjY291bnRzQnlVc2VyID0gbmV3IE1hcDxzdHJpbmcsIGFueVtdPigpOwogIGZvciAoY29uc3QgYSBvZiBhY2NvdW50cyBhcyBhbnlbXSkgewogICAgaWYgKCFhLm93bmVyX3VzZXJfaWQpIGNvbnRpbnVlOwogICAgY29uc3QgYXJyID0gYWNjb3VudHNCeVVzZXIuZ2V0KGEub3duZXJfdXNlcl9pZCkgPz8gW107CiAgICBhcnIucHVzaChhKTsKICAgIGFjY291bnRzQnlVc2VyLnNldChhLm93bmVyX3VzZXJfaWQsIGFycik7CiAgfQoKICBjb25zdCBtcnIgPSB1c2VycwogICAgLmZpbHRlcigodTogYW55KSA9PiB1LnBsYW5fc2x1ZyA9PT0gInBybyIpCiAgICAubGVuZ3RoICogMzcgKwogICAgdXNlcnMuZmlsdGVyKCh1OiBhbnkpID0+IHUucGxhbl9zbHVnID09PSAiYnVzaW5lc3MiKS5sZW5ndGggKiA5NzsKCiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJteC1hdXRvIG1heC13LTd4bCBweC02IHB5LTggc3BhY2UteS04Ij4KICAgICAgPGhlYWRlciBjbGFzc05hbWU9ImZsZXggaXRlbXMtZW5kIGp1c3RpZnktYmV0d2VlbiI+CiAgICAgICAgPGRpdj4KICAgICAgICAgIDxoMSBjbGFzc05hbWU9InRleHQtNHhsIGZvbnQtYm9sZCB0cmFja2luZy10aWdodCI+QWRtaW48L2gxPgogICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LWRpbS0yIHRleHQtc20iPlNpc3RlbWEgb3ZlcnZpZXcgwrcge3VzZXJzLmxlbmd0aH0gdXN1w6FyaW9zPC9wPgogICAgICAgIDwvZGl2PgogICAgICAgIDxMaW5rCiAgICAgICAgICBocmVmPSIvZGFzaGJvYXJkIgogICAgICAgICAgY2xhc3NOYW1lPSJ0ZXh0LXRpbnkgcm91bmRlZC1sZyBib3JkZXIgYm9yZGVyLWxpbmUtMiBob3Zlcjpib3JkZXItYWNjZW50LzQwIHB4LTMgcHktMiB0ZXh0LWRpbS0yIGhvdmVyOnRleHQtZmcgdHJhbnNpdGlvbi1jb2xvcnMiCiAgICAgICAgPgogICAgICAgICAg4oaQIHZvbHRhciBkYXNoYm9hcmQKICAgICAgICA8L0xpbms+CiAgICAgIDwvaGVhZGVyPgoKICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJncmlkIGdyaWQtY29scy0yIG1kOmdyaWQtY29scy00IGdhcC0zIj4KICAgICAgICA8U3RhdCBsYWJlbD0iVXN1w6FyaW9zIHRvdGFsIiB2YWx1ZT17Zm10Q29tcGFjdCh1c2Vycy5sZW5ndGgpfSAvPgogICAgICAgIDxTdGF0CiAgICAgICAgICBsYWJlbD0iTVJSIGVzdGltYWRvIgogICAgICAgICAgdmFsdWU9e2BSJCR7bXJyfWB9CiAgICAgICAgICB0b25lPSJnb29kIgogICAgICAgIC8+CiAgICAgICAgPFN0YXQKICAgICAgICAgIGxhYmVsPSJDb250YXMgSUcgY29uZWN0YWRhcyIKICAgICAgICAgIHZhbHVlPXtmbXRDb21wYWN0KGFjY291bnRzLmxlbmd0aCl9CiAgICAgICAgICB0b25lPSJhY2NlbnQiCiAgICAgICAgLz4KICAgICAgICA8U3RhdCBsYWJlbD0iRXZlbnRvcyAzMGQiIHZhbHVlPXtmbXRDb21wYWN0KGV2ZW50czMwLmxlbmd0aCl9IHRvbmU9InZpb2xldCIgLz4KICAgICAgPC9zZWN0aW9uPgoKICAgICAgey8qIFBsYW4gZGlzdHJpYnV0aW9uICovfQogICAgICA8Q2FyZD4KICAgICAgICA8Q2FyZEhlYWRlciB0aXRsZT0iRGlzdHJpYnVpw6fDo28gZGUgcGxhbm9zIiAvPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJwLTUgZ3JpZCBncmlkLWNvbHMtMyBnYXAtNCI+CiAgICAgICAgICB7WyJmcmVlIiwgInBybyIsICJidXNpbmVzcyJdLm1hcCgoc2x1ZykgPT4gewogICAgICAgICAgICBjb25zdCBjb3VudCA9IHVzZXJzLmZpbHRlcigodTogYW55KSA9PiB1LnBsYW5fc2x1ZyA9PT0gc2x1ZykubGVuZ3RoOwogICAgICAgICAgICBjb25zdCBwY3QgPSB1c2Vycy5sZW5ndGgKICAgICAgICAgICAgICA/IE1hdGgucm91bmQoKGNvdW50IC8gdXNlcnMubGVuZ3RoKSAqIDEwMCkKICAgICAgICAgICAgICA6IDA7CiAgICAgICAgICAgIHJldHVybiAoCiAgICAgICAgICAgICAgPGRpdiBrZXk9e3NsdWd9IGNsYXNzTmFtZT0icm91bmRlZC1sZyBib3JkZXIgYm9yZGVyLWxpbmUgYmctYmctMSBwLTQiPgogICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtdGlueSB0ZXh0LWRpbS0yIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciI+CiAgICAgICAgICAgICAgICAgIHtzbHVnfQogICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ibW9uby1udW0gdGV4dC0yeGwgZm9udC1ib2xkIG10LTEiPntjb3VudH08L2Rpdj4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJ0ZXh0LXRpbnkgdGV4dC1kaW0tMiI+e3BjdH0lPC9kaXY+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ibXQtMiBoLTEgcm91bmRlZC1mdWxsIGJnLXdoaXRlLzUgb3ZlcmZsb3ctaGlkZGVuIj4KICAgICAgICAgICAgICAgICAgPGRpdgogICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT17YGgtZnVsbCAkewogICAgICAgICAgICAgICAgICAgICAgc2x1ZyA9PT0gImZyZWUiCiAgICAgICAgICAgICAgICAgICAgICAgID8gImJnLWRpbS0yIgogICAgICAgICAgICAgICAgICAgICAgICA6IHNsdWcgPT09ICJwcm8iCiAgICAgICAgICAgICAgICAgICAgICAgID8gImJnLWFjY2VudCIKICAgICAgICAgICAgICAgICAgICAgICAgOiAiYmctdmlvbGV0IgogICAgICAgICAgICAgICAgICAgIH1gfQogICAgICAgICAgICAgICAgICAgIHN0eWxlPXt7IHdpZHRoOiBgJHtwY3R9JWAgfX0KICAgICAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICApOwogICAgICAgICAgfSl9CiAgICAgICAgPC9kaXY+CiAgICAgIDwvQ2FyZD4KCiAgICAgIHsvKiBVc2VycyB0YWJsZSAqL30KICAgICAgPENhcmQ+CiAgICAgICAgPENhcmRIZWFkZXIKICAgICAgICAgIHRpdGxlPSJVc3XDoXJpb3MgcmVjZW50ZXMiCiAgICAgICAgICBzdWJ0aXRsZT17YMOabHRpbW9zICR7dXNlcnMubGVuZ3RofSBzaWdudXBzYH0KICAgICAgICAvPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJvdmVyZmxvdy14LWF1dG8iPgogICAgICAgICAgPHRhYmxlIGNsYXNzTmFtZT0idy1mdWxsIHRleHQtc20iPgogICAgICAgICAgICA8dGhlYWQgY2xhc3NOYW1lPSJ0ZXh0LXRpbnkgdGV4dC1kaW0tMiB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXIiPgogICAgICAgICAgICAgIDx0cj4KICAgICAgICAgICAgICAgIDx0aCBjbGFzc05hbWU9InB4LTUgcHktMyB0ZXh0LWxlZnQiPkVtYWlsPC90aD4KICAgICAgICAgICAgICAgIDx0aCBjbGFzc05hbWU9InB4LTMgcHktMyB0ZXh0LWxlZnQiPlBsYW5vPC90aD4KICAgICAgICAgICAgICAgIDx0aCBjbGFzc05hbWU9InB4LTMgcHktMyB0ZXh0LXJpZ2h0Ij5Db250YXM8L3RoPgogICAgICAgICAgICAgICAgPHRoIGNsYXNzTmFtZT0icHgtMyBweS0zIHRleHQtcmlnaHQiPkV2ZW50b3MgMzBkPC90aD4KICAgICAgICAgICAgICAgIDx0aCBjbGFzc05hbWU9InB4LTUgcHktMyB0ZXh0LXJpZ2h0Ij5EZXNkZTwvdGg+CiAgICAgICAgICAgICAgPC90cj4KICAgICAgICAgICAgPC90aGVhZD4KICAgICAgICAgICAgPHRib2R5PgogICAgICAgICAgICAgIHt1c2Vycy5tYXAoKHU6IGFueSkgPT4gewogICAgICAgICAgICAgICAgY29uc3QgdXNlckFjY3RzID0gYWNjb3VudHNCeVVzZXIuZ2V0KHUuaWQpID8/IFtdOwogICAgICAgICAgICAgICAgY29uc3QgYWNjdEV2ZW50cyA9IHVzZXJBY2N0cy5yZWR1Y2UoCiAgICAgICAgICAgICAgICAgIChhY2MsIGEpID0+IGFjYyArIChldmVudHNCeUFjY291bnQuZ2V0KGEuaWQpID8/IDApLAogICAgICAgICAgICAgICAgICAwCiAgICAgICAgICAgICAgICApOwogICAgICAgICAgICAgICAgcmV0dXJuICgKICAgICAgICAgICAgICAgICAgPHRyIGtleT17dS5pZH0gY2xhc3NOYW1lPSJib3JkZXItdCBib3JkZXItbGluZSI+CiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNSBweS0zIj4KICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmb250LW1lZGl1bSI+e3UuZnVsbF9uYW1lID8/ICLigJQifTwvZGl2PgogICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtdGlueSB0ZXh0LWRpbS0yIj57dS5lbWFpbH08L2Rpdj4KICAgICAgICAgICAgICAgICAgICA8L3RkPgogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9InB4LTMgcHktMyI+CiAgICAgICAgICAgICAgICAgICAgICA8U3RhdHVzUGlsbAogICAgICAgICAgICAgICAgICAgICAgICB0b25lPXsKICAgICAgICAgICAgICAgICAgICAgICAgICB1LnBsYW5fc2x1ZyA9PT0gImZyZWUiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA/ICJkaW0iCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA6IHUucGxhbl9zbHVnID09PSAicHJvIgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPyAiYWNjZW50IgogICAgICAgICAgICAgICAgICAgICAgICAgICAgOiAidmlvbGV0IgogICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgICAgIGxhYmVsPXt1LnBsYW5fc2x1Z30KICAgICAgICAgICAgICAgICAgICAgIC8+CiAgICAgICAgICAgICAgICAgICAgPC90ZD4KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC0zIHB5LTMgdGV4dC1yaWdodCBtb25vLW51bSI+CiAgICAgICAgICAgICAgICAgICAgICB7dXNlckFjY3RzLmxlbmd0aH0KICAgICAgICAgICAgICAgICAgICA8L3RkPgogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9InB4LTMgcHktMyB0ZXh0LXJpZ2h0IG1vbm8tbnVtIj4KICAgICAgICAgICAgICAgICAgICAgIHthY2N0RXZlbnRzfQogICAgICAgICAgICAgICAgICAgIDwvdGQ+CiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNSBweS0zIHRleHQtcmlnaHQgdGV4dC10aW55IHRleHQtZGltLTIgZm9udC1tb25vIj4KICAgICAgICAgICAgICAgICAgICAgIHtmbXRSZWxhdGl2ZSh1LmNyZWF0ZWRfYXQpfQogICAgICAgICAgICAgICAgICAgIDwvdGQ+CiAgICAgICAgICAgICAgICAgIDwvdHI+CiAgICAgICAgICAgICAgICApOwogICAgICAgICAgICAgIH0pfQogICAgICAgICAgICA8L3Rib2R5PgogICAgICAgICAgPC90YWJsZT4KICAgICAgICA8L2Rpdj4KICAgICAgPC9DYXJkPgoKICAgICAgey8qIFJlY2VudCBwYXltZW50cyAqL30KICAgICAgPENhcmQ+CiAgICAgICAgPENhcmRIZWFkZXIKICAgICAgICAgIHRpdGxlPSJBc3NpbmF0dXJhcyByZWNlbnRlcyIKICAgICAgICAgIHN1YnRpdGxlPSLDmmx0aW1vcyAzMCBkaWFzIGRlIGV2ZW50b3MgTGFzdGxpbmsiCiAgICAgICAgLz4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZGl2aWRlLXkgZGl2aWRlLWxpbmUiPgogICAgICAgICAge3N1YnMubGVuZ3RoID09PSAwID8gKAogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0icC04IHRleHQtY2VudGVyIHRleHQtZGltLTIgdGV4dC1zbSI+CiAgICAgICAgICAgICAgTmVuaHVtIGV2ZW50byBkZSBhc3NpbmF0dXJhCiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgKSA6ICgKICAgICAgICAgICAgc3Vicy5tYXAoKHM6IGFueSkgPT4gKAogICAgICAgICAgICAgIDxkaXYKICAgICAgICAgICAgICAgIGtleT17cy5pZH0KICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0icHgtNSBweS0zIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiB0ZXh0LXNtIgogICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgIDxkaXY+CiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmb250LW1vbm8gdGV4dC10aW55IHRleHQtZGltLTIiPgogICAgICAgICAgICAgICAgICAgIHtzLmV4dGVybmFsX2lkID8/IHMuaWQuc2xpY2UoMCwgMTIpfQogICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgPGRpdj4KICAgICAgICAgICAgICAgICAgICB7cy5wbGFuX3NsdWcgPz8gIuKAlCJ9IMK3eyIgIn0KICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtZGltLTIiPntmbXRSZWxhdGl2ZShzLmNyZWF0ZWRfYXQpfTwvc3Bhbj4KICAgICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMyI+CiAgICAgICAgICAgICAgICAgIHtzLmFtb3VudF9icmwgJiYgKAogICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0ibW9uby1udW0iPlIke051bWJlcihzLmFtb3VudF9icmwpLnRvRml4ZWQoMil9PC9zcGFuPgogICAgICAgICAgICAgICAgICApfQogICAgICAgICAgICAgICAgICA8U3RhdHVzUGlsbAogICAgICAgICAgICAgICAgICAgIHRvbmU9e3Muc3RhdHVzID09PSAicGFpZCIgPyAiZ29vZCIgOiAiZGltIn0KICAgICAgICAgICAgICAgICAgICBsYWJlbD17cy5zdGF0dXN9CiAgICAgICAgICAgICAgICAgIC8+CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgKSkKICAgICAgICAgICl9CiAgICAgICAgPC9kaXY+CiAgICAgIDwvQ2FyZD4KICAgIDwvZGl2PgogICk7Cn0KCmZ1bmN0aW9uIFN0YXQoewogIGxhYmVsLAogIHZhbHVlLAogIHRvbmUsCn06IHsKICBsYWJlbDogc3RyaW5nOwogIHZhbHVlOiBzdHJpbmc7CiAgdG9uZT86ICJnb29kIiB8ICJhY2NlbnQiIHwgInZpb2xldCI7Cn0pIHsKICBjb25zdCBjb2xvciA9CiAgICB0b25lID09PSAiZ29vZCIKICAgICAgPyAidGV4dC1nb29kIgogICAgICA6IHRvbmUgPT09ICJhY2NlbnQiCiAgICAgID8gInRleHQtYWNjZW50IgogICAgICA6IHRvbmUgPT09ICJ2aW9sZXQiCiAgICAgID8gInRleHQtdmlvbGV0IgogICAgICA6ICJ0ZXh0LWZnIjsKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9InJvdW5kZWQteGwgYm9yZGVyIGJvcmRlci1saW5lIGJnLXN1cmZhY2Ugc2hhZG93LWNhcmQgcC00Ij4KICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtdGlueSB0ZXh0LWRpbS0yIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciI+e2xhYmVsfTwvZGl2PgogICAgICA8ZGl2IGNsYXNzTmFtZT17YG10LTIgdGV4dC0yeGwgZm9udC1zZW1pYm9sZCBtb25vLW51bSAke2NvbG9yfWB9PgogICAgICAgIHt2YWx1ZX0KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICApOwp9Cg=="}
+import { requireProfile } from "@/lib/auth";
+import { supabaseAdmin } from "@/lib/supabase";
+import { redirect } from "next/navigation";
+import { Card, CardHeader, StatusPill } from "@/components/viz";
+import { fmtRelative, fmtCompact } from "@/lib/format";
+import Link from "next/link";
+
+export const dynamic = "force-dynamic";
+
+export default async function AdminPage() {
+  const profile = await requireProfile();
+  if (!profile.is_admin) redirect("/dashboard");
+
+  const admin = supabaseAdmin();
+
+  const [usersRes, accountsRes, eventsRes, subsRes] = await Promise.all([
+    admin
+      .from("user_profiles")
+      .select("*")
+      .order("created_at", { ascending: false })
+      .limit(200),
+    admin.from("accounts").select("id, owner_user_id, ig_username, active, created_at"),
+    admin
+      .from("events")
+      .select("account_id, created_at")
+      .gte("created_at", new Date(Date.now() - 30 * 86400000).toISOString()),
+    admin
+      .from("subscription_events")
+      .select("*")
+      .gte("created_at", new Date(Date.now() - 30 * 86400000).toISOString())
+      .order("created_at", { ascending: false })
+      .limit(50),
+  ]);
+
+  const users = usersRes.data ?? [];
+  const accounts = accountsRes.data ?? [];
+  const events30 = eventsRes.data ?? [];
+  const subs = subsRes.data ?? [];
+
+  const eventsByAccount = new Map<string, number>();
+  for (const e of events30) {
+    eventsByAccount.set(
+      (e as any).account_id,
+      (eventsByAccount.get((e as any).account_id) ?? 0) + 1
+    );
+  }
+
+  const accountsByUser = new Map<string, any[]>();
+  for (const a of accounts as any[]) {
+    if (!a.owner_user_id) continue;
+    const arr = accountsByUser.get(a.owner_user_id) ?? [];
+    arr.push(a);
+    accountsByUser.set(a.owner_user_id, arr);
+  }
+
+  const mrr = users
+    .filter((u: any) => u.plan_slug === "pro")
+    .length * 37 +
+    users.filter((u: any) => u.plan_slug === "business").length * 97;
+
+  return (
+    <div className="mx-auto max-w-7xl px-6 py-8 space-y-8">
+      <header className="flex items-end justify-between">
+        <div>
+          <h1 className="text-4xl font-bold tracking-tight">Admin</h1>
+          <p className="text-dim-2 text-sm">Sistema overview · {users.length} usuários</p>
+        </div>
+        <Link
+          href="/dashboard"
+          className="text-tiny rounded-lg border border-line-2 hover:border-accent/40 px-3 py-2 text-dim-2 hover:text-fg transition-colors"
+        >
+          ← voltar dashboard
+        </Link>
+      </header>
+
+      <section className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <Stat label="Usuários total" value={fmtCompact(users.length)} />
+        <Stat
+          label="MRR estimado"
+          value={`R$${mrr}`}
+          tone="good"
+        />
+        <Stat
+          label="Contas IG conectadas"
+          value={fmtCompact(accounts.length)}
+          tone="accent"
+        />
+        <Stat label="Eventos 30d" value={fmtCompact(events30.length)} tone="violet" />
+      </section>
+
+      {/* Plan distribution */}
+      <Card>
+        <CardHeader title="Distribuição de planos" />
+        <div className="p-5 grid grid-cols-3 gap-4">
+          {["free", "pro", "business"].map((slug) => {
+            const count = users.filter((u: any) => u.plan_slug === slug).length;
+            const pct = users.length
+              ? Math.round((count / users.length) * 100)
+              : 0;
+            return (
+              <div key={slug} className="rounded-lg border border-line bg-bg-1 p-4">
+                <div className="text-tiny text-dim-2 uppercase tracking-wider">
+                  {slug}
+                </div>
+                <div className="mono-num text-2xl font-bold mt-1">{count}</div>
+                <div className="text-tiny text-dim-2">{pct}%</div>
+                <div className="mt-2 h-1 rounded-full bg-white/5 overflow-hidden">
+                  <div
+                    className={`h-full ${
+                      slug === "free"
+                        ? "bg-dim-2"
+                        : slug === "pro"
+                        ? "bg-accent"
+                        : "bg-violet"
+                    }`}
+                    style={{ width: `${pct}%` }}
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </Card>
+
+      {/* Users table */}
+      <Card>
+        <CardHeader
+          title="Usuários recentes"
+          subtitle={`Últimos ${users.length} signups`}
+        />
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead className="text-tiny text-dim-2 uppercase tracking-wider">
+              <tr>
+                <th className="px-5 py-3 text-left">Email</th>
+                <th className="px-3 py-3 text-left">Plano</th>
+                <th className="px-3 py-3 text-right">Contas</th>
+                <th className="px-3 py-3 text-right">Eventos 30d</th>
+                <th className="px-5 py-3 text-right">Desde</th>
+              </tr>
+            </thead>
+            <tbody>
+              {users.map((u: any) => {
+                const userAccts = accountsByUser.get(u.id) ?? [];
+                const acctEvents = userAccts.reduce(
+                  (acc, a) => acc + (eventsByAccount.get(a.id) ?? 0),
+                  0
+                );
+                return (
+                  <tr key={u.id} className="border-t border-line">
+                    <td className="px-5 py-3">
+                      <div className="font-medium">{u.full_name ?? "—"}</div>
+                      <div className="text-tiny text-dim-2">{u.email}</div>
+                    </td>
+                    <td className="px-3 py-3">
+                      <StatusPill
+                        tone={
+                          u.plan_slug === "free"
+                            ? "dim"
+                            : u.plan_slug === "pro"
+                            ? "accent"
+                            : "violet"
+                        }
+                        label={u.plan_slug}
+                      />
+                    </td>
+                    <td className="px-3 py-3 text-right mono-num">
+                      {userAccts.length}
+                    </td>
+                    <td className="px-3 py-3 text-right mono-num">
+                      {acctEvents}
+                    </td>
+                    <td className="px-5 py-3 text-right text-tiny text-dim-2 font-mono">
+                      {fmtRelative(u.created_at)}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </Card>
+
+      {/* Recent payments */}
+      <Card>
+        <CardHeader
+          title="Assinaturas recentes"
+          subtitle="Últimos 30 dias de eventos Lastlink"
+        />
+        <div className="divide-y divide-line">
+          {subs.length === 0 ? (
+            <div className="p-8 text-center text-dim-2 text-sm">
+              Nenhum evento de assinatura
+            </div>
+          ) : (
+            subs.map((s: any) => (
+              <div
+                key={s.id}
+                className="px-5 py-3 flex items-center justify-between text-sm"
+              >
+                <div>
+                  <div className="font-mono text-tiny text-dim-2">
+                    {s.external_id ?? s.id.slice(0, 12)}
+                  </div>
+                  <div>
+                    {s.plan_slug ?? "—"} ·{" "}
+                    <span className="text-dim-2">{fmtRelative(s.created_at)}</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  {s.amount_brl && (
+                    <span className="mono-num">R${Number(s.amount_brl).toFixed(2)}</span>
+                  )}
+                  <StatusPill
+                    tone={s.status === "paid" ? "good" : "dim"}
+                    label={s.status}
+                  />
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+function Stat({
+  label,
+  value,
+  tone,
+}: {
+  label: string;
+  value: string;
+  tone?: "good" | "accent" | "violet";
+}) {
+  const color =
+    tone === "good"
+      ? "text-good"
+      : tone === "accent"
+      ? "text-accent"
+      : tone === "violet"
+      ? "text-violet"
+      : "text-fg";
+  return (
+    <div className="rounded-xl border border-line bg-surface shadow-card p-4">
+      <div className="text-tiny text-dim-2 uppercase tracking-wider">{label}</div>
+      <div className={`mt-2 text-2xl font-semibold mono-num ${color}`}>
+        {value}
+      </div>
+    </div>
+  );
+}

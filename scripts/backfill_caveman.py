@@ -1,12 +1,12 @@
 """
-Backfill DMFlow: pega todos os comentários de um post IG que batem com uma keyword
-e dispara reply público + DM privada retroativamente.
+Backfill DMflow — Post Caveman
+Manda o link do tutorial para todos que comentaram no post.
+
+Janela Meta: DM privada só funciona dentro de 7 dias do comentário.
+Fora da janela, só manda reply público.
 
 Uso:
-  python backfill_post.py <post_id> <keyword> [--dry-run]
-
-Janela Meta: private_reply só funciona dentro de 7 dias do comentário.
-Fora da janela, só manda reply público.
+  python backfill_caveman.py [--dry-run] [--only-recent]
 """
 import json
 import sys
@@ -16,19 +16,21 @@ import urllib.parse
 import urllib.error
 from datetime import datetime, timezone, timedelta
 
-# ---------- config via env ou hardcoded pro teste ----------
-IG_TOKEN = "IGAANrqbjy6ZAFBZAGJVSFBDeHItMlFZAek9nbDFWMlF1WDUyczFrVG0wcktCd2h5MFZAHY2JIc3ktU0NfbnFqOUtmS0hiUnp1TFQtNktORXlnc1J4eGJJbEJlNUMyQTRTa1hwTTRwNE8zWjRlT0R2SXozZADlOaFlSTklxcTE2YmhjYwZDZD"
+# ---------- config ----------
+IG_TOKEN   = "IGAANrqbjy6ZAFBZAGJVSFBDeHItMlFZAek9nbDFWMlF1WDUyczFrVG0wcktCd2h5MFZAHY2JIc3ktU0NfbnFqOUtmS0hiUnp1TFQtNktORXlnc1J4eGJJbEJlNUMyQTRTa1hwTTRwNE8zWjRlT0R2SXozZADlOaFlSTklxcTE2YmhjYwZDZD"
 SUPABASE_URL = "https://zoknypleoribwomifzgi.supabase.co"
 SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpva255cGxlb3JpYndvbWlmemdpIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NTQ5OTUzNSwiZXhwIjoyMDkxMDc1NTM1fQ.PRwnl7GGwfnnQD6CrzWy72L6wRElc7t4O9Gz1VJwk3E"
-ACCOUNT_ID = "b5371147-07f8-4fa8-9494-f8f22713d455"
-RULE_ID = "9ecc3241-b981-4dc4-b97f-52b2adb5644f"
+ACCOUNT_ID  = "b5371147-07f8-4fa8-9494-f8f22713d455"
+RULE_ID     = "2beaea4a-9994-445d-88f8-3e228eb91924"
 
-IG_API = "https://graph.instagram.com/v25.0"
+POST_ID     = "18125763628595504"  # instagram.com/p/DXjgKVyEiKZ/
 
-PUBLIC_REPLY = "Opa! Te mandei no direct 👇"
-DM_TEXT = "Opa! Desculpa a demora. Vi que você comentou 'GEMINI' querendo o tutorial da conta enterprise. Segue o tutorial completo abaixo 👇"
-DM_BUTTON_URL = "https://youtu.be/qYIR0kVo9Zo?si=IgvJ0pbzp7S0AMpz"
-DM_BUTTON_TEXT = "Ver tutorial"
+IG_API      = "https://graph.instagram.com/v25.0"
+
+PUBLIC_REPLY  = "Opa! Te mandei no direct 🔥"
+DM_TEXT       = "Opa, {username}! 🎬 Aqui o tutorial que prometi:\n\nhttps://youtu.be/lrcHeEZEaNU?si=pFirDwbpTneyS2Fp\n\nAssiste e me conta o que achou! 🚀"
+DM_BUTTON_URL  = "https://youtu.be/lrcHeEZEaNU?si=pFirDwbpTneyS2Fp"
+DM_BUTTON_TEXT = "Assistir tutorial 🎬"
 
 
 def http(url, method="GET", body=None, headers=None):
@@ -81,8 +83,9 @@ def reply_public(comment_id, text):
     return http(url, "POST", {"message": text}, ig_headers())
 
 
-def send_dm(comment_id, text, btn_url, btn_text):
+def send_dm(comment_id, username, btn_url, btn_text):
     url = f"{IG_API}/me/messages"
+    text = DM_TEXT.replace("{username}", username or "")
     msg = {
         "attachment": {
             "type": "template",
@@ -111,41 +114,35 @@ def already_logged(comment_id):
     return isinstance(data, list) and len(data) > 0
 
 
-def log_event(c, rule_triggered, reply_ok, reply_err, dm_ok, dm_err):
+def log_event(c, reply_ok, reply_err, dm_ok, dm_err):
     url = f"{SUPABASE_URL}/rest/v1/events"
+    username = c.get("username") or (c.get("from") or {}).get("username")
     body = {
         "account_id": ACCOUNT_ID,
-        "rule_id": RULE_ID if rule_triggered else None,
+        "rule_id": RULE_ID,
         "ig_comment_id": c["id"],
-        "ig_media_id": None,
+        "ig_media_id": POST_ID,
         "ig_user_id": (c.get("from") or {}).get("id"),
-        "ig_username": c.get("username") or (c.get("from") or {}).get("username"),
+        "ig_username": username,
         "comment_text": c.get("text"),
-        "matched_keyword": "GEMINI" if rule_triggered else None,
+        "matched_keyword": None,
         "public_reply_sent": reply_ok,
         "public_reply_error": reply_err,
         "dm_sent": dm_ok,
         "dm_error": dm_err,
         "raw_payload": {"backfill": True, "timestamp": c.get("timestamp")},
+        "platform": "instagram",
     }
     return http(url, "POST", body, sb_headers())
 
 
 def main():
-    if len(sys.argv) < 3:
-        print("usage: backfill_post.py <post_id> <keyword> [--dry-run] [--only-recent]")
-        sys.exit(1)
-    post_id = sys.argv[1]
-    keyword = sys.argv[2].lower()
     dry = "--dry-run" in sys.argv
     only_recent = "--only-recent" in sys.argv
 
-    print(f"[info] Fetching comments from post {post_id}...")
-    comments = list_all_comments(post_id)
+    print(f"[info] Fetching comments from post {POST_ID}...")
+    comments = list_all_comments(POST_ID)
     print(f"[info] {len(comments)} comments total")
-
-    matching = [c for c in comments if keyword in (c.get("text") or "").lower()]
-    print(f"[info] {len(matching)} contain '{keyword}'")
 
     cutoff = datetime.now(timezone.utc) - timedelta(days=7)
 
@@ -155,11 +152,11 @@ def main():
     stats = {"skip_logged": 0, "reply_ok": 0, "reply_fail": 0,
              "dm_ok": 0, "dm_fail_window": 0, "dm_fail_other": 0}
 
-    for i, c in enumerate(matching, 1):
+    for i, c in enumerate(comments, 1):
         cid = c["id"]
         ts = parse_ts(c["timestamp"])
         within = ts > cutoff
-        user = c.get("username") or "?"
+        username = c.get("username") or (c.get("from") or {}).get("username") or "?"
 
         if only_recent and not within:
             continue
@@ -168,9 +165,9 @@ def main():
             stats["skip_logged"] += 1
             continue
 
-        prefix = f"[{i:03d}/{len(matching)}] @{user} ({ts.date()})"
+        prefix = f"[{i:03d}/{len(comments)}] @{username} ({ts.date()})"
         if dry:
-            print(f"{prefix} DRY — would {'reply+DM' if within else 'reply only'}")
+            print(f"{prefix} DRY — would {'reply+DM' if within else 'reply only (fora da janela 7d)'}")
             continue
 
         # Reply público
@@ -182,21 +179,22 @@ def main():
         else:
             stats["reply_fail"] += 1
 
-        # DM privada (só se dentro da janela)
+        # DM privada (só dentro da janela de 7 dias)
         dm_ok = False
         dm_err = None
         if within:
-            d_status, d_data = send_dm(cid, DM_TEXT, DM_BUTTON_URL, DM_BUTTON_TEXT)
+            d_status, d_data = send_dm(cid, username, DM_BUTTON_URL, DM_BUTTON_TEXT)
             dm_ok = 200 <= d_status < 300
             dm_err = None if dm_ok else json.dumps(d_data)[:200]
             if dm_ok:
                 stats["dm_ok"] += 1
             else:
                 stats["dm_fail_other"] += 1
+                print(f"  [dm error] {dm_err}")
         else:
             stats["dm_fail_window"] += 1
 
-        log_event(c, True, reply_ok, reply_err, dm_ok, dm_err)
+        log_event(c, reply_ok, reply_err, dm_ok, dm_err)
 
         status_str = (
             f"reply={'ok' if reply_ok else 'fail'} "

@@ -1,1 +1,66 @@
-{"data":"LyoqCiAqIFVuaWZpZWQgTExNIHdyYXBwZXIgdXNpbmcgR3JvcSAoZnJlZSB0aWVyLCBPcGVuQUktY29tcGF0aWJsZSkuCiAqIE1vZGVsOiBsbGFtYS0zLjMtNzBiLXZlcnNhdGlsZSBmb3IgcXVhbGl0eSwgbGxhbWEtMy4xLThiLWluc3RhbnQgZm9yIHNwZWVkLgogKi8KY29uc3QgR1JPUV9VUkwgPSAiaHR0cHM6Ly9hcGkuZ3JvcS5jb20vb3BlbmFpL3YxL2NoYXQvY29tcGxldGlvbnMiOwoKdHlwZSBDaGF0TWVzc2FnZSA9IHsgcm9sZTogInN5c3RlbSIgfCAidXNlciIgfCAiYXNzaXN0YW50IjsgY29udGVudDogc3RyaW5nIH07CgpleHBvcnQgdHlwZSBMbG1PcHRzID0gewogIG1vZGVsPzogc3RyaW5nOwogIHRlbXBlcmF0dXJlPzogbnVtYmVyOwogIG1heF90b2tlbnM/OiBudW1iZXI7CiAgcmVzcG9uc2VfZm9ybWF0PzogeyB0eXBlOiAianNvbl9vYmplY3QiIH0gfCB7IHR5cGU6ICJ0ZXh0IiB9Owp9OwoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGxsbUNoYXQoCiAgbWVzc2FnZXM6IENoYXRNZXNzYWdlW10sCiAgb3B0czogTGxtT3B0cyA9IHt9Cik6IFByb21pc2U8c3RyaW5nPiB7CiAgY29uc3Qga2V5ID0gcHJvY2Vzcy5lbnYuR1JPUV9BUElfS0VZOwogIGlmICgha2V5KSB0aHJvdyBuZXcgRXJyb3IoIkdST1FfQVBJX0tFWSBub3Qgc2V0Iik7CgogIGNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKEdST1FfVVJMLCB7CiAgICBtZXRob2Q6ICJQT1NUIiwKICAgIGhlYWRlcnM6IHsKICAgICAgImNvbnRlbnQtdHlwZSI6ICJhcHBsaWNhdGlvbi9qc29uIiwKICAgICAgYXV0aG9yaXphdGlvbjogYEJlYXJlciAke2tleX1gLAogICAgfSwKICAgIGJvZHk6IEpTT04uc3RyaW5naWZ5KHsKICAgICAgbW9kZWw6IG9wdHMubW9kZWwgPz8gImxsYW1hLTMuMy03MGItdmVyc2F0aWxlIiwKICAgICAgdGVtcGVyYXR1cmU6IG9wdHMudGVtcGVyYXR1cmUgPz8gMC4zLAogICAgICBtYXhfdG9rZW5zOiBvcHRzLm1heF90b2tlbnMgPz8gNTEyLAogICAgICBtZXNzYWdlcywKICAgICAgLi4uKG9wdHMucmVzcG9uc2VfZm9ybWF0ID8geyByZXNwb25zZV9mb3JtYXQ6IG9wdHMucmVzcG9uc2VfZm9ybWF0IH0gOiB7fSksCiAgICB9KSwKICAgIHNpZ25hbDogQWJvcnRTaWduYWwudGltZW91dCgxNTAwMCksCiAgfSk7CgogIGlmICghcmVzLm9rKSB7CiAgICBjb25zdCBib2R5ID0gYXdhaXQgcmVzLnRleHQoKTsKICAgIHRocm93IG5ldyBFcnJvcihgR3JvcSBIVFRQICR7cmVzLnN0YXR1c306ICR7Ym9keS5zbGljZSgwLCAyMDApfWApOwogIH0KCiAgY29uc3QganNvbjogYW55ID0gYXdhaXQgcmVzLmpzb24oKTsKICByZXR1cm4ganNvbi5jaG9pY2VzPy5bMF0/Lm1lc3NhZ2U/LmNvbnRlbnQgPz8gIiI7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBsbG1Kc29uPFQgPSBhbnk+KAogIHN5c3RlbVByb21wdDogc3RyaW5nLAogIHVzZXJJbnB1dDogc3RyaW5nLAogIG9wdHM6IExsbU9wdHMgPSB7fQopOiBQcm9taXNlPFQgfCBudWxsPiB7CiAgdHJ5IHsKICAgIGNvbnN0IG91dCA9IGF3YWl0IGxsbUNoYXQoCiAgICAgIFsKICAgICAgICB7IHJvbGU6ICJzeXN0ZW0iLCBjb250ZW50OiBzeXN0ZW1Qcm9tcHQgfSwKICAgICAgICB7IHJvbGU6ICJ1c2VyIiwgY29udGVudDogdXNlcklucHV0IH0sCiAgICAgIF0sCiAgICAgIHsgLi4ub3B0cywgcmVzcG9uc2VfZm9ybWF0OiB7IHR5cGU6ICJqc29uX29iamVjdCIgfSB9CiAgICApOwogICAgcmV0dXJuIEpTT04ucGFyc2Uob3V0KSBhcyBUOwogIH0gY2F0Y2ggKGUpIHsKICAgIGNvbnNvbGUud2FybigiW2xsbV0ganNvbiBwYXJzZSBmYWlsZWQ6IiwgKGUgYXMgRXJyb3IpLm1lc3NhZ2UpOwogICAgcmV0dXJuIG51bGw7CiAgfQp9Cg=="}
+/**
+ * Unified LLM wrapper using Groq (free tier, OpenAI-compatible).
+ * Model: llama-3.3-70b-versatile for quality, llama-3.1-8b-instant for speed.
+ */
+const GROQ_URL = "https://api.groq.com/openai/v1/chat/completions";
+
+type ChatMessage = { role: "system" | "user" | "assistant"; content: string };
+
+export type LlmOpts = {
+  model?: string;
+  temperature?: number;
+  max_tokens?: number;
+  response_format?: { type: "json_object" } | { type: "text" };
+};
+
+export async function llmChat(
+  messages: ChatMessage[],
+  opts: LlmOpts = {}
+): Promise<string> {
+  const key = process.env.GROQ_API_KEY;
+  if (!key) throw new Error("GROQ_API_KEY not set");
+
+  const res = await fetch(GROQ_URL, {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      authorization: `Bearer ${key}`,
+    },
+    body: JSON.stringify({
+      model: opts.model ?? "llama-3.3-70b-versatile",
+      temperature: opts.temperature ?? 0.3,
+      max_tokens: opts.max_tokens ?? 512,
+      messages,
+      ...(opts.response_format ? { response_format: opts.response_format } : {}),
+    }),
+    signal: AbortSignal.timeout(15000),
+  });
+
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`Groq HTTP ${res.status}: ${body.slice(0, 200)}`);
+  }
+
+  const json: any = await res.json();
+  return json.choices?.[0]?.message?.content ?? "";
+}
+
+export async function llmJson<T = any>(
+  systemPrompt: string,
+  userInput: string,
+  opts: LlmOpts = {}
+): Promise<T | null> {
+  try {
+    const out = await llmChat(
+      [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: userInput },
+      ],
+      { ...opts, response_format: { type: "json_object" } }
+    );
+    return JSON.parse(out) as T;
+  } catch (e) {
+    console.warn("[llm] json parse failed:", (e as Error).message);
+    return null;
+  }
+}

@@ -1,1 +1,16 @@
-{"data":"aW1wb3J0IGNyeXB0byBmcm9tICJjcnlwdG8iOwoKZXhwb3J0IGZ1bmN0aW9uIHZlcmlmeU1ldGFTaWduYXR1cmUoCiAgcmF3Qm9keTogc3RyaW5nLAogIHNpZ25hdHVyZUhlYWRlcjogc3RyaW5nIHwgbnVsbCwKICBhcHBTZWNyZXQ6IHN0cmluZwopOiBib29sZWFuIHsKICBpZiAoIXNpZ25hdHVyZUhlYWRlcikgcmV0dXJuIGZhbHNlOwogIGNvbnN0IGV4cGVjdGVkID0KICAgICJzaGEyNTY9IiArCiAgICBjcnlwdG8uY3JlYXRlSG1hYygic2hhMjU2IiwgYXBwU2VjcmV0KS51cGRhdGUocmF3Qm9keSkuZGlnZXN0KCJoZXgiKTsKICBjb25zdCBhID0gQnVmZmVyLmZyb20oZXhwZWN0ZWQpOwogIGNvbnN0IGIgPSBCdWZmZXIuZnJvbShzaWduYXR1cmVIZWFkZXIpOwogIGlmIChhLmxlbmd0aCAhPT0gYi5sZW5ndGgpIHJldHVybiBmYWxzZTsKICByZXR1cm4gY3J5cHRvLnRpbWluZ1NhZmVFcXVhbChhLCBiKTsKfQo="}
+import crypto from "crypto";
+
+export function verifyMetaSignature(
+  rawBody: string,
+  signatureHeader: string | null,
+  appSecret: string
+): boolean {
+  if (!signatureHeader) return false;
+  const expected =
+    "sha256=" +
+    crypto.createHmac("sha256", appSecret).update(rawBody).digest("hex");
+  const a = Buffer.from(expected);
+  const b = Buffer.from(signatureHeader);
+  if (a.length !== b.length) return false;
+  return crypto.timingSafeEqual(a, b);
+}

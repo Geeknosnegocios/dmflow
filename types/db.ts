@@ -1,1 +1,78 @@
-{"data":"ZXhwb3J0IHR5cGUgQWNjb3VudCA9IHsKICBpZDogc3RyaW5nOwogIG5hbWU6IHN0cmluZzsKICBpZ19idXNpbmVzc19pZDogc3RyaW5nOwogIGlnX3VzZXJuYW1lOiBzdHJpbmcgfCBudWxsOwogIGlnX2FjY2Vzc190b2tlbjogc3RyaW5nOwogIGlnX3BhZ2VfaWQ6IHN0cmluZyB8IG51bGw7CiAgYXBwX2lkOiBzdHJpbmcgfCBudWxsOwogIGFwcF9zZWNyZXQ6IHN0cmluZzsKICB2ZXJpZnlfdG9rZW46IHN0cmluZzsKICBhY3RpdmU6IGJvb2xlYW47CiAgaWdfdG9rZW5fZXhwaXJlc19hdDogc3RyaW5nIHwgbnVsbDsKICBpZ190b2tlbl9yZWZyZXNoZWRfYXQ6IHN0cmluZyB8IG51bGw7CiAgbm90aWZ5X2VtYWlsOiBzdHJpbmcgfCBudWxsOwogIGxhc3RfZXJyb3Jfbm90aWZpZWRfYXQ6IHN0cmluZyB8IG51bGw7CiAgb3V0Z29pbmdfd2ViaG9va191cmw6IHN0cmluZyB8IG51bGw7CiAgb3V0Z29pbmdfd2ViaG9va19zZWNyZXQ6IHN0cmluZyB8IG51bGw7CiAgb3V0Z29pbmdfd2ViaG9va19ldmVudHM6IHN0cmluZ1tdOwogIHNlbnRpbWVudF9maWx0ZXJfZW5hYmxlZDogYm9vbGVhbjsKICBzZW50aW1lbnRfbWluX2NvbmZpZGVuY2U6IG51bWJlcjsKICBjcmVhdGVkX2F0OiBzdHJpbmc7CiAgdXBkYXRlZF9hdDogc3RyaW5nOwp9OwoKZXhwb3J0IHR5cGUgTWF0Y2hNb2RlID0gImNvbnRhaW5zIiB8ICJleGFjdCIgfCAic3RhcnRzX3dpdGgiIHwgImFueSI7CmV4cG9ydCB0eXBlIFRyaWdnZXJUeXBlID0gImNvbW1lbnQiIHwgImZpcnN0X2RtIiB8ICJzdG9yeV9yZXBseSI7CgpleHBvcnQgdHlwZSBEbUJ1dHRvbiA9IHsgdXJsOiBzdHJpbmc7IHRpdGxlOiBzdHJpbmcgfTsKCmV4cG9ydCB0eXBlIFJ1bGUgPSB7CiAgaWQ6IHN0cmluZzsKICBhY2NvdW50X2lkOiBzdHJpbmc7CiAgbmFtZTogc3RyaW5nOwogIHBvc3RfaWQ6IHN0cmluZyB8IG51bGw7CiAgc3RvcnlfaWQ6IHN0cmluZyB8IG51bGw7CiAga2V5d29yZDogc3RyaW5nIHwgbnVsbDsKICBtYXRjaF9tb2RlOiBNYXRjaE1vZGU7CiAgdHJpZ2dlcl90eXBlOiBUcmlnZ2VyVHlwZTsKICBwdWJsaWNfcmVwbHk6IHN0cmluZyB8IG51bGw7CiAgZG1fbWVzc2FnZTogc3RyaW5nOwogIGRtX2J1dHRvbl91cmw6IHN0cmluZyB8IG51bGw7CiAgZG1fYnV0dG9uX3RleHQ6IHN0cmluZyB8IG51bGw7CiAgZG1fYnV0dG9uczogRG1CdXR0b25bXSB8IG51bGw7CiAgcHJpb3JpdHk6IG51bWJlcjsKICBhY3RpdmU6IGJvb2xlYW47CiAgdHJpZ2dlcmVkX2NvdW50OiBudW1iZXI7CiAgdmFyaWFudHM6IEFycmF5PHsgbWVzc2FnZTogc3RyaW5nOyBidXR0b25zPzogRG1CdXR0b25bXSB9PiB8IG51bGw7CiAgdmFyaWFudF9ncm91cDogc3RyaW5nIHwgbnVsbDsKICB2YXJpYW50X2hpdHM6IG51bWJlcltdOwogIHZhcmlhbnRfY29udmVyc2lvbnM6IG51bWJlcltdOwogIGZvbGxvd3VwX2RlbGF5X2hvdXJzOiBudW1iZXIgfCBudWxsOwogIGZvbGxvd3VwX21lc3NhZ2U6IHN0cmluZyB8IG51bGw7CiAgZm9sbG93dXBfYnV0dG9uczogRG1CdXR0b25bXSB8IG51bGw7CiAgdGVzdF9tb2RlOiBib29sZWFuOwogIGlzX3RlbXBsYXRlOiBib29sZWFuOwogIHBsYXRmb3JtOiBzdHJpbmc7CiAgY3JlYXRlZF9hdDogc3RyaW5nOwogIHVwZGF0ZWRfYXQ6IHN0cmluZzsKfTsKCmV4cG9ydCB0eXBlIEV2ZW50ID0gewogIGlkOiBzdHJpbmc7CiAgYWNjb3VudF9pZDogc3RyaW5nOwogIHJ1bGVfaWQ6IHN0cmluZyB8IG51bGw7CiAgaWdfY29tbWVudF9pZDogc3RyaW5nOwogIGlnX21lZGlhX2lkOiBzdHJpbmcgfCBudWxsOwogIGlnX3VzZXJfaWQ6IHN0cmluZyB8IG51bGw7CiAgaWdfdXNlcm5hbWU6IHN0cmluZyB8IG51bGw7CiAgY29tbWVudF90ZXh0OiBzdHJpbmcgfCBudWxsOwogIG1hdGNoZWRfa2V5d29yZDogc3RyaW5nIHwgbnVsbDsKICBwdWJsaWNfcmVwbHlfc2VudDogYm9vbGVhbjsKICBwdWJsaWNfcmVwbHlfZXJyb3I6IHN0cmluZyB8IG51bGw7CiAgZG1fc2VudDogYm9vbGVhbjsKICBkbV9lcnJvcjogc3RyaW5nIHwgbnVsbDsKICByYXdfcGF5bG9hZDogdW5rbm93bjsKICBwbGF0Zm9ybTogc3RyaW5nOwogIGNyZWF0ZWRfYXQ6IHN0cmluZzsKfTsK"}
+export type Account = {
+  id: string;
+  name: string;
+  ig_business_id: string;
+  ig_username: string | null;
+  ig_access_token: string;
+  ig_page_id: string | null;
+  app_id: string | null;
+  app_secret: string;
+  verify_token: string;
+  active: boolean;
+  ig_token_expires_at: string | null;
+  ig_token_refreshed_at: string | null;
+  notify_email: string | null;
+  last_error_notified_at: string | null;
+  outgoing_webhook_url: string | null;
+  outgoing_webhook_secret: string | null;
+  outgoing_webhook_events: string[];
+  sentiment_filter_enabled: boolean;
+  sentiment_min_confidence: number;
+  created_at: string;
+  updated_at: string;
+};
+
+export type MatchMode = "contains" | "exact" | "starts_with" | "any";
+export type TriggerType = "comment" | "first_dm" | "story_reply";
+
+export type DmButton = { url: string; title: string };
+
+export type Rule = {
+  id: string;
+  account_id: string;
+  name: string;
+  post_id: string | null;
+  story_id: string | null;
+  keyword: string | null;
+  match_mode: MatchMode;
+  trigger_type: TriggerType;
+  public_reply: string | null;
+  dm_message: string;
+  dm_button_url: string | null;
+  dm_button_text: string | null;
+  dm_buttons: DmButton[] | null;
+  priority: number;
+  active: boolean;
+  triggered_count: number;
+  variants: Array<{ message: string; buttons?: DmButton[] }> | null;
+  variant_group: string | null;
+  variant_hits: number[];
+  variant_conversions: number[];
+  followup_delay_hours: number | null;
+  followup_message: string | null;
+  followup_buttons: DmButton[] | null;
+  test_mode: boolean;
+  is_template: boolean;
+  platform: string;
+  created_at: string;
+  updated_at: string;
+};
+
+export type Event = {
+  id: string;
+  account_id: string;
+  rule_id: string | null;
+  ig_comment_id: string;
+  ig_media_id: string | null;
+  ig_user_id: string | null;
+  ig_username: string | null;
+  comment_text: string | null;
+  matched_keyword: string | null;
+  public_reply_sent: boolean;
+  public_reply_error: string | null;
+  dm_sent: boolean;
+  dm_error: string | null;
+  raw_payload: unknown;
+  platform: string;
+  created_at: string;
+};

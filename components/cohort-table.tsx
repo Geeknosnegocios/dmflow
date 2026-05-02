@@ -1,1 +1,88 @@
-{"data":"aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IHR5cGUgeyBDb2hvcnRSb3cgfSBmcm9tICJAL2xpYi9hbmFseXRpY3MiOwoKZXhwb3J0IGZ1bmN0aW9uIENvaG9ydFRhYmxlKHsgcm93cyB9OiB7IHJvd3M6IENvaG9ydFJvd1tdIH0pIHsKICBpZiAocm93cy5sZW5ndGggPT09IDApIHsKICAgIHJldHVybiAoCiAgICAgIDxkaXYgY2xhc3NOYW1lPSJwLTggdGV4dC1jZW50ZXIgdGV4dC1kaW0tMiB0ZXh0LXNtIj4KICAgICAgICBTZW0gZGFkb3MgZGUgY29ob3J0IOKAlCBwcmVjaXNhIHBlbG8gbWVub3MgMiBzZW1hbmFzIGRlIGV2ZW50b3MuCiAgICAgIDwvZGl2PgogICAgKTsKICB9CgogIGNvbnN0IG1heFNpemUgPSBNYXRoLm1heCguLi5yb3dzLm1hcCgocikgPT4gci5zaXplKSwgMSk7CgogIGNvbnN0IGNlbGxDb2xvciA9IChudW06IG51bWJlciwgZGVub206IG51bWJlcikgPT4gewogICAgaWYgKGRlbm9tID09PSAwKSByZXR1cm4geyBiZzogInJnYmEoMjU1LDI1NSwyNTUsMC4wMykiLCB0eHQ6ICJ0ZXh0LWRpbS0yIiB9OwogICAgY29uc3QgcmF0ZSA9IG51bSAvIGRlbm9tOwogICAgaWYgKHJhdGUgPj0gMC40KSByZXR1cm4geyBiZzogInJnYmEoNTIsMjExLDE1MywwLjIwKSIsIHR4dDogInRleHQtZ29vZCIgfTsKICAgIGlmIChyYXRlID49IDAuMTUpIHJldHVybiB7IGJnOiAicmdiYSgyNTEsMTkxLDM2LDAuMTYpIiwgdHh0OiAidGV4dC13YXJuIiB9OwogICAgaWYgKHJhdGUgPiAwKSByZXR1cm4geyBiZzogInJnYmEoMzQsMjExLDIzOCwwLjEyKSIsIHR4dDogInRleHQtYWNjZW50IiB9OwogICAgcmV0dXJuIHsgYmc6ICJyZ2JhKDI1NSwyNTUsMjU1LDAuMDMpIiwgdHh0OiAidGV4dC1kaW0tMiIgfTsKICB9OwoKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9Im92ZXJmbG93LXgtYXV0byI+CiAgICAgIDx0YWJsZSBjbGFzc05hbWU9InctZnVsbCB0ZXh0LXNtIj4KICAgICAgICA8dGhlYWQ+CiAgICAgICAgICA8dHIgY2xhc3NOYW1lPSJ0ZXh0LXRpbnkgdGV4dC1kaW0tMiB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXIiPgogICAgICAgICAgICA8dGggY2xhc3NOYW1lPSJweC0zIHB5LTIgdGV4dC1sZWZ0IGZvbnQtbWVkaXVtIj5Db29ydGUgKHNlbWFuYSk8L3RoPgogICAgICAgICAgICA8dGggY2xhc3NOYW1lPSJweC0zIHB5LTIgdGV4dC1yaWdodCBmb250LW1lZGl1bSI+VGFtYW5obzwvdGg+CiAgICAgICAgICAgIDx0aCBjbGFzc05hbWU9InB4LTMgcHktMiB0ZXh0LWNlbnRlciBmb250LW1lZGl1bSI+RCs3PC90aD4KICAgICAgICAgICAgPHRoIGNsYXNzTmFtZT0icHgtMyBweS0yIHRleHQtY2VudGVyIGZvbnQtbWVkaXVtIj5EKzE0PC90aD4KICAgICAgICAgICAgPHRoIGNsYXNzTmFtZT0icHgtMyBweS0yIHRleHQtY2VudGVyIGZvbnQtbWVkaXVtIj5EKzMwPC90aD4KICAgICAgICAgIDwvdHI+CiAgICAgICAgPC90aGVhZD4KICAgICAgICA8dGJvZHk+CiAgICAgICAgICB7cm93cy5tYXAoKHIpID0+IHsKICAgICAgICAgICAgY29uc3Qgc2l6ZUJhciA9IChyLnNpemUgLyBtYXhTaXplKSAqIDEwMDsKICAgICAgICAgICAgcmV0dXJuICgKICAgICAgICAgICAgICA8dHIga2V5PXtyLndlZWt9IGNsYXNzTmFtZT0iYm9yZGVyLXQgYm9yZGVyLWxpbmUiPgogICAgICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtMyBweS0yIj4KICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZvbnQtbW9ubyB0ZXh0LXRpbnkgdGV4dC1kaW0tMiI+e3Iud2Vla308L2Rpdj4KICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtdGlueSB0ZXh0LWRpbSI+ZGVzZGUge3Iud2Vla19zdGFydH08L2Rpdj4KICAgICAgICAgICAgICAgIDwvdGQ+CiAgICAgICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC0zIHB5LTIgdGV4dC1yaWdodCI+CiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiBqdXN0aWZ5LWVuZCI+CiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXgtMSBoLTEgcm91bmRlZC1mdWxsIGJnLXdoaXRlLzUgbWF4LXctWzgwcHhdIG92ZXJmbG93LWhpZGRlbiI+CiAgICAgICAgICAgICAgICAgICAgICA8ZGl2CiAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0iaC1mdWxsIGJnLWFjY2VudC80MCIKICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9e3sgd2lkdGg6IGAke3NpemVCYXJ9JWAgfX0KICAgICAgICAgICAgICAgICAgICAgIC8+CiAgICAgICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJtb25vLW51bSB3LTggdGV4dC1yaWdodCI+e3Iuc2l6ZX08L3NwYW4+CiAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPC90ZD4KICAgICAgICAgICAgICAgIHsoCiAgICAgICAgICAgICAgICAgIFsKICAgICAgICAgICAgICAgICAgICBbci5jbGlja2VkX2Q3LCByLnNpemVdLAogICAgICAgICAgICAgICAgICAgIFtyLmNsaWNrZWRfZDE0LCByLnNpemVdLAogICAgICAgICAgICAgICAgICAgIFtyLmNsaWNrZWRfZDMwLCByLnNpemVdLAogICAgICAgICAgICAgICAgICBdIGFzIEFycmF5PFtudW1iZXIsIG51bWJlcl0+CiAgICAgICAgICAgICAgICApLm1hcCgoW251bSwgZGVub21dLCBpKSA9PiB7CiAgICAgICAgICAgICAgICAgIGNvbnN0IGMgPSBjZWxsQ29sb3IobnVtLCBkZW5vbSk7CiAgICAgICAgICAgICAgICAgIGNvbnN0IHBjdCA9CiAgICAgICAgICAgICAgICAgICAgZGVub20gPT09IDAgPyAwIDogTWF0aC5yb3VuZCgobnVtIC8gZGVub20pICogMTAwKTsKICAgICAgICAgICAgICAgICAgcmV0dXJuICgKICAgICAgICAgICAgICAgICAgICA8dGQKICAgICAgICAgICAgICAgICAgICAgIGtleT17aX0KICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0icHgtMyBweS0yIHRleHQtY2VudGVyIgogICAgICAgICAgICAgICAgICAgICAgc3R5bGU9e3sgYmFja2dyb3VuZDogYy5iZyB9fQogICAgICAgICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPXtgbW9uby1udW0gJHtjLnR4dH0gdGV4dC1zbSBmb250LXNlbWlib2xkYH0+CiAgICAgICAgICAgICAgICAgICAgICAgIHtwY3R9JQogICAgICAgICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC10aW55IHRleHQtZGltLTIiPgogICAgICAgICAgICAgICAgICAgICAgICB7bnVtfS97ZGVub219CiAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgICA8L3RkPgogICAgICAgICAgICAgICAgICApOwogICAgICAgICAgICAgICAgfSl9CiAgICAgICAgICAgICAgPC90cj4KICAgICAgICAgICAgKTsKICAgICAgICAgIH0pfQogICAgICAgIDwvdGJvZHk+CiAgICAgIDwvdGFibGU+CiAgICA8L2Rpdj4KICApOwp9Cg=="}
+import React from "react";
+import type { CohortRow } from "@/lib/analytics";
+
+export function CohortTable({ rows }: { rows: CohortRow[] }) {
+  if (rows.length === 0) {
+    return (
+      <div className="p-8 text-center text-dim-2 text-sm">
+        Sem dados de cohort — precisa pelo menos 2 semanas de eventos.
+      </div>
+    );
+  }
+
+  const maxSize = Math.max(...rows.map((r) => r.size), 1);
+
+  const cellColor = (num: number, denom: number) => {
+    if (denom === 0) return { bg: "rgba(255,255,255,0.03)", txt: "text-dim-2" };
+    const rate = num / denom;
+    if (rate >= 0.4) return { bg: "rgba(52,211,153,0.20)", txt: "text-good" };
+    if (rate >= 0.15) return { bg: "rgba(251,191,36,0.16)", txt: "text-warn" };
+    if (rate > 0) return { bg: "rgba(34,211,238,0.12)", txt: "text-accent" };
+    return { bg: "rgba(255,255,255,0.03)", txt: "text-dim-2" };
+  };
+
+  return (
+    <div className="overflow-x-auto">
+      <table className="w-full text-sm">
+        <thead>
+          <tr className="text-tiny text-dim-2 uppercase tracking-wider">
+            <th className="px-3 py-2 text-left font-medium">Coorte (semana)</th>
+            <th className="px-3 py-2 text-right font-medium">Tamanho</th>
+            <th className="px-3 py-2 text-center font-medium">D+7</th>
+            <th className="px-3 py-2 text-center font-medium">D+14</th>
+            <th className="px-3 py-2 text-center font-medium">D+30</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => {
+            const sizeBar = (r.size / maxSize) * 100;
+            return (
+              <tr key={r.week} className="border-t border-line">
+                <td className="px-3 py-2">
+                  <div className="font-mono text-tiny text-dim-2">{r.week}</div>
+                  <div className="text-tiny text-dim">desde {r.week_start}</div>
+                </td>
+                <td className="px-3 py-2 text-right">
+                  <div className="flex items-center gap-2 justify-end">
+                    <div className="flex-1 h-1 rounded-full bg-white/5 max-w-[80px] overflow-hidden">
+                      <div
+                        className="h-full bg-accent/40"
+                        style={{ width: `${sizeBar}%` }}
+                      />
+                    </div>
+                    <span className="mono-num w-8 text-right">{r.size}</span>
+                  </div>
+                </td>
+                {(
+                  [
+                    [r.clicked_d7, r.size],
+                    [r.clicked_d14, r.size],
+                    [r.clicked_d30, r.size],
+                  ] as Array<[number, number]>
+                ).map(([num, denom], i) => {
+                  const c = cellColor(num, denom);
+                  const pct =
+                    denom === 0 ? 0 : Math.round((num / denom) * 100);
+                  return (
+                    <td
+                      key={i}
+                      className="px-3 py-2 text-center"
+                      style={{ background: c.bg }}
+                    >
+                      <div className={`mono-num ${c.txt} text-sm font-semibold`}>
+                        {pct}%
+                      </div>
+                      <div className="text-tiny text-dim-2">
+                        {num}/{denom}
+                      </div>
+                    </td>
+                  );
+                })}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+}

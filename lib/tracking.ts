@@ -1,1 +1,58 @@
-{"data":"aW1wb3J0IHsgc3VwYWJhc2VBZG1pbiB9IGZyb20gIi4vc3VwYWJhc2UiOwoKY29uc3QgQUxQSEFCRVQgPQogICIwMTIzNDU2Nzg5QUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVphYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3h5eiI7CgpleHBvcnQgZnVuY3Rpb24gc2hvcnRJZChsZW4gPSAxMCk6IHN0cmluZyB7CiAgbGV0IG91dCA9ICIiOwogIGZvciAobGV0IGkgPSAwOyBpIDwgbGVuOyBpKyspIHsKICAgIG91dCArPSBBTFBIQUJFVFtNYXRoLmZsb29yKE1hdGgucmFuZG9tKCkgKiBBTFBIQUJFVC5sZW5ndGgpXTsKICB9CiAgcmV0dXJuIG91dDsKfQoKZXhwb3J0IHR5cGUgVHJhY2tlZEJ1dHRvbiA9IHsgdXJsOiBzdHJpbmc7IHRpdGxlOiBzdHJpbmcgfTsKCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBidWlsZFRyYWNrZWRCdXR0b25zKHBhcmFtczogewogIGJ1dHRvbnM6IFRyYWNrZWRCdXR0b25bXTsKICBhY2NvdW50SWQ6IHN0cmluZzsKICBydWxlSWQ6IHN0cmluZyB8IG51bGw7CiAgZXZlbnRJZD86IHN0cmluZyB8IG51bGw7CiAgaWdVc2VySWQ/OiBzdHJpbmcgfCBudWxsOwogIGJhc2VVcmw6IHN0cmluZzsKfSk6IFByb21pc2U8VHJhY2tlZEJ1dHRvbltdPiB7CiAgY29uc3Qgc2IgPSBzdXBhYmFzZUFkbWluKCk7CiAgY29uc3Qgb3V0OiBUcmFja2VkQnV0dG9uW10gPSBbXTsKCiAgZm9yIChsZXQgaSA9IDA7IGkgPCBwYXJhbXMuYnV0dG9ucy5sZW5ndGg7IGkrKykgewogICAgY29uc3QgYiA9IHBhcmFtcy5idXR0b25zW2ldOwogICAgY29uc3QgaWQgPSBzaG9ydElkKDEwKTsKICAgIGNvbnN0IHsgZXJyb3IgfSA9IGF3YWl0IHNiLmZyb20oInRyYWNrZWRfbGlua3MiKS5pbnNlcnQoewogICAgICBpZCwKICAgICAgYWNjb3VudF9pZDogcGFyYW1zLmFjY291bnRJZCwKICAgICAgcnVsZV9pZDogcGFyYW1zLnJ1bGVJZCwKICAgICAgZXZlbnRfaWQ6IHBhcmFtcy5ldmVudElkID8/IG51bGwsCiAgICAgIGJ1dHRvbl9pbmRleDogaSwKICAgICAgYnV0dG9uX3RpdGxlOiBiLnRpdGxlLAogICAgICB0YXJnZXRfdXJsOiBiLnVybCwKICAgICAgaWdfdXNlcl9pZDogcGFyYW1zLmlnVXNlcklkID8/IG51bGwsCiAgICB9KTsKICAgIGlmIChlcnJvcikgewogICAgICAvLyBmYWxsYmFjazogcmV0dXJuIG9yaWdpbmFsIGlmIGluc2VydCBmYWlscwogICAgICBvdXQucHVzaChiKTsKICAgICAgY29udGludWU7CiAgICB9CiAgICBvdXQucHVzaCh7IHRpdGxlOiBiLnRpdGxlLCB1cmw6IGAke3BhcmFtcy5iYXNlVXJsfS9yLyR7aWR9YCB9KTsKICB9CgogIHJldHVybiBvdXQ7Cn0KCmV4cG9ydCBmdW5jdGlvbiByZXNvbHZlQmFzZVVybChyZXE6IFJlcXVlc3QpOiBzdHJpbmcgewogIGNvbnN0IGVudiA9IHByb2Nlc3MuZW52LlBVQkxJQ19CQVNFX1VSTDsKICBpZiAoZW52KSByZXR1cm4gZW52LnJlcGxhY2UoL1wvJC8sICIiKTsKICBjb25zdCBob3N0ID0gcmVxLmhlYWRlcnMuZ2V0KCJob3N0IikgPz8gImRtZmxvdy52ZXJjZWwuYXBwIjsKICBjb25zdCBwcm90byA9CiAgICByZXEuaGVhZGVycy5nZXQoIngtZm9yd2FyZGVkLXByb3RvIikgPz8gKGhvc3QuaW5jbHVkZXMoImxvY2FsaG9zdCIpID8gImh0dHAiIDogImh0dHBzIik7CiAgcmV0dXJuIGAke3Byb3RvfTovLyR7aG9zdH1gOwp9Cg=="}
+import { supabaseAdmin } from "./supabase";
+
+const ALPHABET =
+  "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+export function shortId(len = 10): string {
+  let out = "";
+  for (let i = 0; i < len; i++) {
+    out += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+  }
+  return out;
+}
+
+export type TrackedButton = { url: string; title: string };
+
+export async function buildTrackedButtons(params: {
+  buttons: TrackedButton[];
+  accountId: string;
+  ruleId: string | null;
+  eventId?: string | null;
+  igUserId?: string | null;
+  baseUrl: string;
+}): Promise<TrackedButton[]> {
+  const sb = supabaseAdmin();
+  const out: TrackedButton[] = [];
+
+  for (let i = 0; i < params.buttons.length; i++) {
+    const b = params.buttons[i];
+    const id = shortId(10);
+    const { error } = await sb.from("tracked_links").insert({
+      id,
+      account_id: params.accountId,
+      rule_id: params.ruleId,
+      event_id: params.eventId ?? null,
+      button_index: i,
+      button_title: b.title,
+      target_url: b.url,
+      ig_user_id: params.igUserId ?? null,
+    });
+    if (error) {
+      // fallback: return original if insert fails
+      out.push(b);
+      continue;
+    }
+    out.push({ title: b.title, url: `${params.baseUrl}/r/${id}` });
+  }
+
+  return out;
+}
+
+export function resolveBaseUrl(req: Request): string {
+  const env = process.env.PUBLIC_BASE_URL;
+  if (env) return env.replace(/\/$/, "");
+  const host = req.headers.get("host") ?? "dmflow.vercel.app";
+  const proto =
+    req.headers.get("x-forwarded-proto") ?? (host.includes("localhost") ? "http" : "https");
+  return `${proto}://${host}`;
+}

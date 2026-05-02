@@ -1,1 +1,48 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlcXVlc3QsIE5leHRSZXNwb25zZSB9IGZyb20gIm5leHQvc2VydmVyIjsKaW1wb3J0IHsgc3VwYWJhc2VBZG1pbiB9IGZyb20gIkAvbGliL3N1cGFiYXNlIjsKaW1wb3J0IHsgc3Vic2NyaWJlQXBwLCBnZXRTdWJzY3JpYmVkQXBwcywgd2hvQW1JIH0gZnJvbSAiQC9saWIvbWV0YSI7CmltcG9ydCB0eXBlIHsgQWNjb3VudCB9IGZyb20gIkAvdHlwZXMvZGIiOwoKZXhwb3J0IGNvbnN0IHJ1bnRpbWUgPSAibm9kZWpzIjsKZXhwb3J0IGNvbnN0IGR5bmFtaWMgPSAiZm9yY2UtZHluYW1pYyI7CgpleHBvcnQgYXN5bmMgZnVuY3Rpb24gR0VUKHJlcTogTmV4dFJlcXVlc3QpIHsKICBjb25zdCB7IHNlYXJjaFBhcmFtcyB9ID0gbmV3IFVSTChyZXEudXJsKTsKICBjb25zdCBhY2NvdW50SWQgPSBzZWFyY2hQYXJhbXMuZ2V0KCJhY2NvdW50X2lkIik7CgogIGNvbnN0IHNiID0gc3VwYWJhc2VBZG1pbigpOwogIGxldCBhY2NvdW50OiBBY2NvdW50IHwgbnVsbCA9IG51bGw7CiAgaWYgKGFjY291bnRJZCkgewogICAgY29uc3QgeyBkYXRhIH0gPSBhd2FpdCBzYgogICAgICAuZnJvbSgiYWNjb3VudHMiKQogICAgICAuc2VsZWN0KCIqIikKICAgICAgLmVxKCJpZCIsIGFjY291bnRJZCkKICAgICAgLm1heWJlU2luZ2xlPEFjY291bnQ+KCk7CiAgICBhY2NvdW50ID0gZGF0YSA/PyBudWxsOwogIH0gZWxzZSB7CiAgICBjb25zdCB7IGRhdGEgfSA9IGF3YWl0IHNiCiAgICAgIC5mcm9tKCJhY2NvdW50cyIpCiAgICAgIC5zZWxlY3QoIioiKQogICAgICAuZXEoImFjdGl2ZSIsIHRydWUpCiAgICAgIC5saW1pdCgxKQogICAgICAubWF5YmVTaW5nbGU8QWNjb3VudD4oKTsKICAgIGFjY291bnQgPSBkYXRhID8/IG51bGw7CiAgfQoKICBpZiAoIWFjY291bnQpIHsKICAgIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IGVycm9yOiAiYWNjb3VudCBub3QgZm91bmQiIH0sIHsgc3RhdHVzOiA0MDQgfSk7CiAgfQoKICBjb25zdCBbbWUsIHN1YnMsIHN1YnNjcmliZWRdID0gYXdhaXQgUHJvbWlzZS5hbGwoWwogICAgd2hvQW1JKHsgYWNjZXNzVG9rZW46IGFjY291bnQuaWdfYWNjZXNzX3Rva2VuIH0pLAogICAgZ2V0U3Vic2NyaWJlZEFwcHMoeyBhY2Nlc3NUb2tlbjogYWNjb3VudC5pZ19hY2Nlc3NfdG9rZW4gfSksCiAgICBzdWJzY3JpYmVBcHAoeyBhY2Nlc3NUb2tlbjogYWNjb3VudC5pZ19hY2Nlc3NfdG9rZW4gfSksCiAgXSk7CgogIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7CiAgICBhY2NvdW50OiB7IGlkOiBhY2NvdW50LmlkLCBuYW1lOiBhY2NvdW50Lm5hbWUsIGlnX2J1c2luZXNzX2lkOiBhY2NvdW50LmlnX2J1c2luZXNzX2lkIH0sCiAgICBtZSwKICAgIHByZXZpb3VzX3N1YnNjcmlwdGlvbnM6IHN1YnMsCiAgICBzdWJzY3JpYmVfcmVzdWx0OiBzdWJzY3JpYmVkLAogIH0pOwp9Cg=="}
+import { NextRequest, NextResponse } from "next/server";
+import { supabaseAdmin } from "@/lib/supabase";
+import { subscribeApp, getSubscribedApps, whoAmI } from "@/lib/meta";
+import type { Account } from "@/types/db";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+export async function GET(req: NextRequest) {
+  const { searchParams } = new URL(req.url);
+  const accountId = searchParams.get("account_id");
+
+  const sb = supabaseAdmin();
+  let account: Account | null = null;
+  if (accountId) {
+    const { data } = await sb
+      .from("accounts")
+      .select("*")
+      .eq("id", accountId)
+      .maybeSingle<Account>();
+    account = data ?? null;
+  } else {
+    const { data } = await sb
+      .from("accounts")
+      .select("*")
+      .eq("active", true)
+      .limit(1)
+      .maybeSingle<Account>();
+    account = data ?? null;
+  }
+
+  if (!account) {
+    return NextResponse.json({ error: "account not found" }, { status: 404 });
+  }
+
+  const [me, subs, subscribed] = await Promise.all([
+    whoAmI({ accessToken: account.ig_access_token }),
+    getSubscribedApps({ accessToken: account.ig_access_token }),
+    subscribeApp({ accessToken: account.ig_access_token }),
+  ]);
+
+  return NextResponse.json({
+    account: { id: account.id, name: account.name, ig_business_id: account.ig_business_id },
+    me,
+    previous_subscriptions: subs,
+    subscribe_result: subscribed,
+  });
+}

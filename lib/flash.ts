@@ -1,1 +1,50 @@
-{"data":"aW1wb3J0IHsgY29va2llcyB9IGZyb20gIm5leHQvaGVhZGVycyI7Cgp0eXBlIEZsYXNoS2luZCA9ICJzdWNjZXNzIiB8ICJlcnJvciIgfCAiaW5mbyIgfCAid2FybiI7CgpleHBvcnQgdHlwZSBGbGFzaCA9IHsKICBraW5kOiBGbGFzaEtpbmQ7CiAgbWVzc2FnZTogc3RyaW5nOwp9OwoKY29uc3QgQ09PS0lFID0gImRtZmxvd19mbGFzaCI7CmNvbnN0IE5FV19LRVlfQ09PS0lFID0gImRtZmxvd19uZXdfa2V5IjsKCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBzZXRGbGFzaChmbGFzaDogRmxhc2gpIHsKICBjb25zdCBzdG9yZSA9IGF3YWl0IGNvb2tpZXMoKTsKICBzdG9yZS5zZXQoQ09PS0lFLCBKU09OLnN0cmluZ2lmeShmbGFzaCksIHsKICAgIHBhdGg6ICIvIiwKICAgIG1heEFnZTogMTAsCiAgICBodHRwT25seTogZmFsc2UsCiAgICBzYW1lU2l0ZTogImxheCIsCiAgfSk7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBzZXROZXdLZXkoZnVsbEtleTogc3RyaW5nKSB7CiAgY29uc3Qgc3RvcmUgPSBhd2FpdCBjb29raWVzKCk7CiAgc3RvcmUuc2V0KE5FV19LRVlfQ09PS0lFLCBmdWxsS2V5LCB7CiAgICBwYXRoOiAiLyIsCiAgICBtYXhBZ2U6IDEyMCwKICAgIGh0dHBPbmx5OiBmYWxzZSwKICAgIHNhbWVTaXRlOiAibGF4IiwKICB9KTsKfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHJlYWRBbmRDbGVhck5ld0tleSgpOiBQcm9taXNlPHN0cmluZyB8IG51bGw+IHsKICBjb25zdCBzdG9yZSA9IGF3YWl0IGNvb2tpZXMoKTsKICBjb25zdCB2YWwgPSBzdG9yZS5nZXQoTkVXX0tFWV9DT09LSUUpPy52YWx1ZSA/PyBudWxsOwogIGlmICh2YWwpIHRyeSB7IHN0b3JlLmRlbGV0ZShORVdfS0VZX0NPT0tJRSk7IH0gY2F0Y2ggeyAvKiBleHBpcmVzIGluIDEyMHMgKi8gfQogIHJldHVybiB2YWw7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiByZWFkQW5kQ2xlYXJGbGFzaCgpOiBQcm9taXNlPEZsYXNoIHwgbnVsbD4gewogIGNvbnN0IHN0b3JlID0gYXdhaXQgY29va2llcygpOwogIGNvbnN0IHJhdyA9IHN0b3JlLmdldChDT09LSUUpPy52YWx1ZTsKICBpZiAoIXJhdykgcmV0dXJuIG51bGw7CiAgdHJ5IHsgc3RvcmUuZGVsZXRlKENPT0tJRSk7IH0gY2F0Y2ggeyAvKiByZWFkLW9ubHkgY29udGV4dDsgbWF4QWdlOjEwIGV4cGlyZXMgaXQgKi8gfQogIHRyeSB7CiAgICByZXR1cm4gSlNPTi5wYXJzZShyYXcpIGFzIEZsYXNoOwogIH0gY2F0Y2ggewogICAgcmV0dXJuIG51bGw7CiAgfQp9Cg=="}
+import { cookies } from "next/headers";
+
+type FlashKind = "success" | "error" | "info" | "warn";
+
+export type Flash = {
+  kind: FlashKind;
+  message: string;
+};
+
+const COOKIE = "dmflow_flash";
+const NEW_KEY_COOKIE = "dmflow_new_key";
+
+export async function setFlash(flash: Flash) {
+  const store = await cookies();
+  store.set(COOKIE, JSON.stringify(flash), {
+    path: "/",
+    maxAge: 10,
+    httpOnly: false,
+    sameSite: "lax",
+  });
+}
+
+export async function setNewKey(fullKey: string) {
+  const store = await cookies();
+  store.set(NEW_KEY_COOKIE, fullKey, {
+    path: "/",
+    maxAge: 120,
+    httpOnly: false,
+    sameSite: "lax",
+  });
+}
+
+export async function readAndClearNewKey(): Promise<string | null> {
+  const store = await cookies();
+  const val = store.get(NEW_KEY_COOKIE)?.value ?? null;
+  if (val) try { store.delete(NEW_KEY_COOKIE); } catch { /* expires in 120s */ }
+  return val;
+}
+
+export async function readAndClearFlash(): Promise<Flash | null> {
+  const store = await cookies();
+  const raw = store.get(COOKIE)?.value;
+  if (!raw) return null;
+  try { store.delete(COOKIE); } catch { /* read-only context; maxAge:10 expires it */ }
+  try {
+    return JSON.parse(raw) as Flash;
+  } catch {
+    return null;
+  }
+}

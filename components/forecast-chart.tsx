@@ -1,1 +1,182 @@
-{"data":"InVzZSBjbGllbnQiOwoKaW1wb3J0IFJlYWN0LCB7IHVzZUVmZmVjdCwgdXNlUmVmLCB1c2VTdGF0ZSB9IGZyb20gInJlYWN0IjsKCi8qKgogKiBDaGFydCB3aXRoIGFjdHVhbCAoc29saWQpICsgZm9yZWNhc3QgKGRhc2hlZCkgbGluZS4KICovCmV4cG9ydCBmdW5jdGlvbiBGb3JlY2FzdENoYXJ0KHsKICBhY3R1YWwsCiAgYWN0dWFsTGFiZWxzLAogIGZvcmVjYXN0LAogIGZvcmVjYXN0TGFiZWxzLAogIGhlaWdodCA9IDIyMCwKICBjb2xvciA9ICIjMjJkM2VlIiwKICBmb3JlY2FzdENvbG9yID0gIiNhNzhiZmEiLAp9OiB7CiAgYWN0dWFsOiBudW1iZXJbXTsKICBhY3R1YWxMYWJlbHM6IHN0cmluZ1tdOwogIGZvcmVjYXN0OiBudW1iZXJbXTsKICBmb3JlY2FzdExhYmVsczogc3RyaW5nW107CiAgaGVpZ2h0PzogbnVtYmVyOwogIGNvbG9yPzogc3RyaW5nOwogIGZvcmVjYXN0Q29sb3I/OiBzdHJpbmc7Cn0pIHsKICBjb25zdCBjb250YWluZXJSZWYgPSB1c2VSZWY8SFRNTERpdkVsZW1lbnQ+KG51bGwpOwogIGNvbnN0IFt3aWR0aCwgc2V0V2lkdGhdID0gdXNlU3RhdGUoNjQwKTsKICBjb25zdCBwYWRYID0gMzY7CiAgY29uc3QgcGFkWSA9IDIyOwoKICB1c2VFZmZlY3QoKCkgPT4gewogICAgY29uc3QgZWwgPSBjb250YWluZXJSZWYuY3VycmVudDsKICAgIGlmICghZWwpIHJldHVybjsKICAgIGNvbnN0IHJvID0gbmV3IFJlc2l6ZU9ic2VydmVyKChlKSA9PiB7CiAgICAgIGNvbnN0IHcgPSBlWzBdPy5jb250ZW50UmVjdC53aWR0aDsKICAgICAgaWYgKHcgJiYgdyA+IDApIHNldFdpZHRoKE1hdGgubWF4KDMyMCwgTWF0aC5yb3VuZCh3KSkpOwogICAgfSk7CiAgICByby5vYnNlcnZlKGVsKTsKICAgIHJldHVybiAoKSA9PiByby5kaXNjb25uZWN0KCk7CiAgfSwgW10pOwoKICBjb25zdCBhbGwgPSBbLi4uYWN0dWFsLCAuLi5mb3JlY2FzdF07CiAgY29uc3QgbWF4ID0gTWF0aC5tYXgoLi4uYWxsLCAxKTsKICBjb25zdCB0b3RhbCA9IGFsbC5sZW5ndGg7CgogIGNvbnN0IHBvaW50c0ZvciA9IChkYXRhOiBudW1iZXJbXSwgc3RhcnRJZHg6IG51bWJlcik6IHN0cmluZyA9PiB7CiAgICBpZiAoZGF0YS5sZW5ndGggPT09IDApIHJldHVybiAiIjsKICAgIGNvbnN0IHN0ZXAgPSAod2lkdGggLSBwYWRYICogMikgLyBNYXRoLm1heCgxLCB0b3RhbCAtIDEpOwogICAgcmV0dXJuIGRhdGEKICAgICAgLm1hcCgodiwgaSkgPT4gewogICAgICAgIGNvbnN0IHggPSBwYWRYICsgKHN0YXJ0SWR4ICsgaSkgKiBzdGVwOwogICAgICAgIGNvbnN0IHkgPSBwYWRZICsgKDEgLSB2IC8gbWF4KSAqIChoZWlnaHQgLSBwYWRZICogMik7CiAgICAgICAgcmV0dXJuIGAke3gudG9GaXhlZCgxKX0sJHt5LnRvRml4ZWQoMSl9YDsKICAgICAgfSkKICAgICAgLmpvaW4oIiAiKTsKICB9OwoKICBjb25zdCB5R3JpZCA9IFswLCAxLCAyLCAzLCA0XS5tYXAoKGkpID0+IHsKICAgIGNvbnN0IHkgPSBwYWRZICsgKGkgLyA0KSAqIChoZWlnaHQgLSBwYWRZICogMik7CiAgICBjb25zdCB2ID0gTWF0aC5yb3VuZChtYXggKiAoMSAtIGkgLyA0KSk7CiAgICByZXR1cm4geyB5LCB2IH07CiAgfSk7CgogIGNvbnN0IGZvcmVjYXN0U3RhcnRYID0KICAgIHBhZFggKyAoYWN0dWFsLmxlbmd0aCAtIDEpICogKCh3aWR0aCAtIHBhZFggKiAyKSAvIE1hdGgubWF4KDEsIHRvdGFsIC0gMSkpOwoKICBjb25zdCBicmlkZ2VQb2ludHMgPSBgJHsKICAgIHBvaW50c0ZvcihbYWN0dWFsW2FjdHVhbC5sZW5ndGggLSAxXV0sIGFjdHVhbC5sZW5ndGggLSAxKSB8fCAiMCwwIgogIH0gJHtwb2ludHNGb3IoW2ZvcmVjYXN0WzBdXSwgYWN0dWFsLmxlbmd0aCkgfHwgIjAsMCJ9YDsKCiAgcmV0dXJuICgKICAgIDxkaXYgcmVmPXtjb250YWluZXJSZWZ9IGNsYXNzTmFtZT0icmVsYXRpdmUiPgogICAgICA8c3ZnCiAgICAgICAgdmlld0JveD17YDAgMCAke3dpZHRofSAke2hlaWdodH1gfQogICAgICAgIHdpZHRoPSIxMDAlIgogICAgICAgIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIG1lZXQiCiAgICAgICAgc3R5bGU9e3sgaGVpZ2h0LCBkaXNwbGF5OiAiYmxvY2siIH19CiAgICAgICAgcm9sZT0iaW1nIgogICAgICAgIGFyaWEtbGFiZWw9e2BQcmV2aXPDo28gcHLDs3hpbW9zICR7Zm9yZWNhc3QubGVuZ3RofSBwZXLDrW9kb3NgfQogICAgICA+CiAgICAgICAgPHRpdGxlPlRlbmTDqm5jaWEgKyBwcmV2aXPDo288L3RpdGxlPgoKICAgICAgICB7LyogZ3JpZCAqL30KICAgICAgICB7eUdyaWQubWFwKChnLCBpKSA9PiAoCiAgICAgICAgICA8ZyBrZXk9e2l9PgogICAgICAgICAgICA8bGluZQogICAgICAgICAgICAgIHgxPXtwYWRYfQogICAgICAgICAgICAgIHkxPXtnLnl9CiAgICAgICAgICAgICAgeDI9e3dpZHRoIC0gcGFkWH0KICAgICAgICAgICAgICB5Mj17Zy55fQogICAgICAgICAgICAgIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjA0KSIKICAgICAgICAgICAgICBzdHJva2VXaWR0aD0iMSIKICAgICAgICAgICAgLz4KICAgICAgICAgICAgPHRleHQKICAgICAgICAgICAgICB4PXtwYWRYIC0gNn0KICAgICAgICAgICAgICB5PXtnLnkgKyAzfQogICAgICAgICAgICAgIHRleHRBbmNob3I9ImVuZCIKICAgICAgICAgICAgICBjbGFzc05hbWU9ImZpbGwtZGltLTIiCiAgICAgICAgICAgICAgc3R5bGU9e3sgZm9udFNpemU6IDksIGZvbnRGYW1pbHk6ICJKZXRCcmFpbnMgTW9ubywgbW9ub3NwYWNlIiB9fQogICAgICAgICAgICA+CiAgICAgICAgICAgICAge2cudn0KICAgICAgICAgICAgPC90ZXh0PgogICAgICAgICAgPC9nPgogICAgICAgICkpfQoKICAgICAgICB7LyogZm9yZWNhc3Qgem9uZSBiYWNrZ3JvdW5kICovfQogICAgICAgIDxyZWN0CiAgICAgICAgICB4PXtmb3JlY2FzdFN0YXJ0WH0KICAgICAgICAgIHk9e3BhZFl9CiAgICAgICAgICB3aWR0aD17d2lkdGggLSBwYWRYIC0gZm9yZWNhc3RTdGFydFh9CiAgICAgICAgICBoZWlnaHQ9e2hlaWdodCAtIHBhZFkgKiAyfQogICAgICAgICAgZmlsbD17Zm9yZWNhc3RDb2xvcn0KICAgICAgICAgIG9wYWNpdHk9IjAuMDUiCiAgICAgICAgLz4KICAgICAgICA8dGV4dAogICAgICAgICAgeD17Zm9yZWNhc3RTdGFydFggKyA4fQogICAgICAgICAgeT17cGFkWSArIDE0fQogICAgICAgICAgY2xhc3NOYW1lPSJmaWxsLWRpbS0yIgogICAgICAgICAgc3R5bGU9e3sgZm9udFNpemU6IDksIGZvbnRGYW1pbHk6ICJKZXRCcmFpbnMgTW9ubywgbW9ub3NwYWNlIiB9fQogICAgICAgID4KICAgICAgICAgIHByZXZpc8OjbwogICAgICAgIDwvdGV4dD4KCiAgICAgICAgey8qIGFjdHVhbCBsaW5lICovfQogICAgICAgIDxwb2x5bGluZQogICAgICAgICAgcG9pbnRzPXtwb2ludHNGb3IoYWN0dWFsLCAwKX0KICAgICAgICAgIGZpbGw9Im5vbmUiCiAgICAgICAgICBzdHJva2U9e2NvbG9yfQogICAgICAgICAgc3Ryb2tlV2lkdGg9IjIiCiAgICAgICAgICBzdHJva2VMaW5lam9pbj0icm91bmQiCiAgICAgICAgICBzdHJva2VMaW5lY2FwPSJyb3VuZCIKICAgICAgICAvPgoKICAgICAgICB7LyogYnJpZGdlIChsYXN0IGFjdHVhbCDihpIgZmlyc3QgZm9yZWNhc3QpIGFzIGRhc2hlZCBmYWRlZCAqL30KICAgICAgICA8cG9seWxpbmUKICAgICAgICAgIHBvaW50cz17YnJpZGdlUG9pbnRzfQogICAgICAgICAgZmlsbD0ibm9uZSIKICAgICAgICAgIHN0cm9rZT17Zm9yZWNhc3RDb2xvcn0KICAgICAgICAgIHN0cm9rZVdpZHRoPSIxLjUiCiAgICAgICAgICBzdHJva2VEYXNoYXJyYXk9IjQgMyIKICAgICAgICAgIG9wYWNpdHk9IjAuNiIKICAgICAgICAvPgoKICAgICAgICB7LyogZm9yZWNhc3QgbGluZSAoZGFzaGVkKSAqL30KICAgICAgICA8cG9seWxpbmUKICAgICAgICAgIHBvaW50cz17cG9pbnRzRm9yKGZvcmVjYXN0LCBhY3R1YWwubGVuZ3RoKX0KICAgICAgICAgIGZpbGw9Im5vbmUiCiAgICAgICAgICBzdHJva2U9e2ZvcmVjYXN0Q29sb3J9CiAgICAgICAgICBzdHJva2VXaWR0aD0iMiIKICAgICAgICAgIHN0cm9rZURhc2hhcnJheT0iNCAzIgogICAgICAgICAgc3Ryb2tlTGluZWpvaW49InJvdW5kIgogICAgICAgICAgc3Ryb2tlTGluZWNhcD0icm91bmQiCiAgICAgICAgLz4KCiAgICAgICAgey8qIGZvcmVjYXN0IHBvaW50cyAqL30KICAgICAgICB7Zm9yZWNhc3QubWFwKCh2LCBpKSA9PiB7CiAgICAgICAgICBjb25zdCBzdGVwID0gKHdpZHRoIC0gcGFkWCAqIDIpIC8gTWF0aC5tYXgoMSwgdG90YWwgLSAxKTsKICAgICAgICAgIGNvbnN0IHggPSBwYWRYICsgKGFjdHVhbC5sZW5ndGggKyBpKSAqIHN0ZXA7CiAgICAgICAgICBjb25zdCB5ID0gcGFkWSArICgxIC0gdiAvIG1heCkgKiAoaGVpZ2h0IC0gcGFkWSAqIDIpOwogICAgICAgICAgcmV0dXJuIDxjaXJjbGUga2V5PXtpfSBjeD17eH0gY3k9e3l9IHI9ezN9IGZpbGw9e2ZvcmVjYXN0Q29sb3J9IC8+OwogICAgICAgIH0pfQogICAgICA8L3N2Zz4KCiAgICAgIHsvKiBsZWdlbmQgKi99CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGdhcC00IG10LTIgdGV4dC10aW55IHRleHQtZGltLTIiPgogICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTEuNSI+CiAgICAgICAgICA8c3BhbgogICAgICAgICAgICBjbGFzc05hbWU9ImlubGluZS1ibG9jayBoLTIgdy02IgogICAgICAgICAgICBzdHlsZT17eyBiYWNrZ3JvdW5kOiBjb2xvciB9fQogICAgICAgICAgLz4KICAgICAgICAgIEhpc3TDs3JpY28gKHthY3R1YWxMYWJlbHMubGVuZ3RofSBwZXLDrW9kb3MpCiAgICAgICAgPC9zcGFuPgogICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTEuNSI+CiAgICAgICAgICA8c3BhbgogICAgICAgICAgICBjbGFzc05hbWU9ImlubGluZS1ibG9jayBoLTIgdy02IGJvcmRlci10LTIgYm9yZGVyLWRhc2hlZCIKICAgICAgICAgICAgc3R5bGU9e3sgYm9yZGVyQ29sb3I6IGZvcmVjYXN0Q29sb3IgfX0KICAgICAgICAgIC8+CiAgICAgICAgICBQcmV2aXPDo28gKHtmb3JlY2FzdC5sZW5ndGh9IHBlcsOtb2RvcykKICAgICAgICA8L3NwYW4+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgKTsKfQo="}
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
+
+/**
+ * Chart with actual (solid) + forecast (dashed) line.
+ */
+export function ForecastChart({
+  actual,
+  actualLabels,
+  forecast,
+  forecastLabels,
+  height = 220,
+  color = "#22d3ee",
+  forecastColor = "#a78bfa",
+}: {
+  actual: number[];
+  actualLabels: string[];
+  forecast: number[];
+  forecastLabels: string[];
+  height?: number;
+  color?: string;
+  forecastColor?: string;
+}) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [width, setWidth] = useState(640);
+  const padX = 36;
+  const padY = 22;
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver((e) => {
+      const w = e[0]?.contentRect.width;
+      if (w && w > 0) setWidth(Math.max(320, Math.round(w)));
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  const all = [...actual, ...forecast];
+  const max = Math.max(...all, 1);
+  const total = all.length;
+
+  const pointsFor = (data: number[], startIdx: number): string => {
+    if (data.length === 0) return "";
+    const step = (width - padX * 2) / Math.max(1, total - 1);
+    return data
+      .map((v, i) => {
+        const x = padX + (startIdx + i) * step;
+        const y = padY + (1 - v / max) * (height - padY * 2);
+        return `${x.toFixed(1)},${y.toFixed(1)}`;
+      })
+      .join(" ");
+  };
+
+  const yGrid = [0, 1, 2, 3, 4].map((i) => {
+    const y = padY + (i / 4) * (height - padY * 2);
+    const v = Math.round(max * (1 - i / 4));
+    return { y, v };
+  });
+
+  const forecastStartX =
+    padX + (actual.length - 1) * ((width - padX * 2) / Math.max(1, total - 1));
+
+  const bridgePoints = `${
+    pointsFor([actual[actual.length - 1]], actual.length - 1) || "0,0"
+  } ${pointsFor([forecast[0]], actual.length) || "0,0"}`;
+
+  return (
+    <div ref={containerRef} className="relative">
+      <svg
+        viewBox={`0 0 ${width} ${height}`}
+        width="100%"
+        preserveAspectRatio="xMidYMid meet"
+        style={{ height, display: "block" }}
+        role="img"
+        aria-label={`Previsão próximos ${forecast.length} períodos`}
+      >
+        <title>Tendência + previsão</title>
+
+        {/* grid */}
+        {yGrid.map((g, i) => (
+          <g key={i}>
+            <line
+              x1={padX}
+              y1={g.y}
+              x2={width - padX}
+              y2={g.y}
+              stroke="rgba(255,255,255,0.04)"
+              strokeWidth="1"
+            />
+            <text
+              x={padX - 6}
+              y={g.y + 3}
+              textAnchor="end"
+              className="fill-dim-2"
+              style={{ fontSize: 9, fontFamily: "JetBrains Mono, monospace" }}
+            >
+              {g.v}
+            </text>
+          </g>
+        ))}
+
+        {/* forecast zone background */}
+        <rect
+          x={forecastStartX}
+          y={padY}
+          width={width - padX - forecastStartX}
+          height={height - padY * 2}
+          fill={forecastColor}
+          opacity="0.05"
+        />
+        <text
+          x={forecastStartX + 8}
+          y={padY + 14}
+          className="fill-dim-2"
+          style={{ fontSize: 9, fontFamily: "JetBrains Mono, monospace" }}
+        >
+          previsão
+        </text>
+
+        {/* actual line */}
+        <polyline
+          points={pointsFor(actual, 0)}
+          fill="none"
+          stroke={color}
+          strokeWidth="2"
+          strokeLinejoin="round"
+          strokeLinecap="round"
+        />
+
+        {/* bridge (last actual → first forecast) as dashed faded */}
+        <polyline
+          points={bridgePoints}
+          fill="none"
+          stroke={forecastColor}
+          strokeWidth="1.5"
+          strokeDasharray="4 3"
+          opacity="0.6"
+        />
+
+        {/* forecast line (dashed) */}
+        <polyline
+          points={pointsFor(forecast, actual.length)}
+          fill="none"
+          stroke={forecastColor}
+          strokeWidth="2"
+          strokeDasharray="4 3"
+          strokeLinejoin="round"
+          strokeLinecap="round"
+        />
+
+        {/* forecast points */}
+        {forecast.map((v, i) => {
+          const step = (width - padX * 2) / Math.max(1, total - 1);
+          const x = padX + (actual.length + i) * step;
+          const y = padY + (1 - v / max) * (height - padY * 2);
+          return <circle key={i} cx={x} cy={y} r={3} fill={forecastColor} />;
+        })}
+      </svg>
+
+      {/* legend */}
+      <div className="flex gap-4 mt-2 text-tiny text-dim-2">
+        <span className="flex items-center gap-1.5">
+          <span
+            className="inline-block h-2 w-6"
+            style={{ background: color }}
+          />
+          Histórico ({actualLabels.length} períodos)
+        </span>
+        <span className="flex items-center gap-1.5">
+          <span
+            className="inline-block h-2 w-6 border-t-2 border-dashed"
+            style={{ borderColor: forecastColor }}
+          />
+          Previsão ({forecast.length} períodos)
+        </span>
+      </div>
+    </div>
+  );
+}

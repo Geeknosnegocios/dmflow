@@ -1,1 +1,149 @@
-{"data":"IyBETUZsb3cKCkF1dG9tYcOnw6NvIGVzdGlsbyBNYW55Q2hhdDogYWxndcOpbSBjb21lbnRhIG5vIHRldSBwb3N0IGRvIEluc3RhZ3JhbSDihpIgcmVzcG9uZGUgcHVibGljYW1lbnRlICoqKyoqIG1hbmRhIERNIHByaXZhZGEgYXV0b23DoXRpY2EuCgpTdGFjazogTmV4dC5qcyAxNiDCtyBTdXBhYmFzZSAoc2NoZW1hIGBkbWZsb3dgKSDCtyBNZXRhIEdyYXBoIEFQSSB2MjEuCgotLS0KCiMjIENvbW8gZnVuY2lvbmEKCmBgYApJbnN0YWdyYW0gY29tbWVudAogICAgICAg4pSCCiAgICAgICDilrwKIE1ldGEgd2ViaG9vayAoUE9TVCAvYXBpL3dlYmhvb2svaW5zdGFncmFtKQogICAgICAg4pSCCiAgICAgICDilJzilIDilIAgdmFsaWRhIEhNQUMgKFgtSHViLVNpZ25hdHVyZS0yNTYpCiAgICAgICDilJzilIDilIAgYWNoYSBhY2NvdW50IHBlbG8gaWdfYnVzaW5lc3NfaWQKICAgICAgIOKUnOKUgOKUgCBlc2NvbGhlIHJ1bGUgcG9yIGtleXdvcmQvcG9zdF9pZAogICAgICAg4pSc4pSA4pSAIFBPU1QgL3tjb21tZW50X2lkfS9yZXBsaWVzICAgICAgICAgIOKGkiByZXNwb3N0YSBww7pibGljYQogICAgICAg4pSc4pSA4pSAIFBPU1QgL3tpZ19idXNpbmVzc19pZH0vbWVzc2FnZXMKICAgICAgIOKUgiAgIGNvbSByZWNpcGllbnQuY29tbWVudF9pZCAgICAgICAgICAgIOKGkiBETSBwcml2YWRhCiAgICAgICDilJTilIDilIAgZ3JhdmEgZXZlbnQgZW0gZG1mbG93LmV2ZW50cwpgYGAKClVtYSB2ZXogcG9yIGNvbWVudMOhcmlvIChNZXRhIHJlZ3JhOiBgcHJpdmF0ZV9yZXBsaWVzYCBzw7MgcG9kZSBzZXIgdXNhZG8gMXggcG9yIGBjb21tZW50X2lkYCkuCgotLS0KCiMjIFNldHVwCgojIyMgMS4gU3VwYWJhc2UKClByb2pldG86ICoqR2VlayBBY2FkZW15KiogKGB6b2tueXBsZW9yaWJ3b21pZnpnaWApClNjaGVtYTogYGRtZmxvd2AgKGrDoSBjcmlhZG8gdmlhIE1DUCkKVGFiZWxhczogYGFjY291bnRzYCwgYHJ1bGVzYCwgYGV2ZW50c2AKCkFjY291bnQgasOhIHNlZWRhZGE6Ci0gYGlkYCA9IGBiNTM3MTE0Ny0wN2Y4LTRmYTgtOTQ5NC1mOGYyMjcxM2Q0NTVgCi0gYGlnX2J1c2luZXNzX2lkYCA9IGAxNzg0MTQwMDEwMDAzMDA4MGAKLSBgdmVyaWZ5X3Rva2VuYCA9IGBkbWZsb3dfdmVyaWZ5XzU2NjQ1ZjA1NDVlZjllZDFgCgpSdWxlIGRlIGV4ZW1wbG8gasOhIHNlZWRhZGE6IGtleXdvcmQgYFFVRVJPYCDihpIgcmVwbHkgYFRlIG1hbmRlaSBubyBkaXJlY3Qg8J+Rh2AgKyBETSBjb20gYm90w6NvIHByYSBgZ2Vlay1vcy5nZWVrYWNhZGVteS5zaXRlYC4KCiMjIyAyLiBFbnYgdmFycwoKQ29waWFyIGAuZW52LmxvY2FsLmV4YW1wbGVgIHByYSBgLmVudi5sb2NhbGAgZSBwcmVlbmNoZXI6CgpgYGBiYXNoClNVUEFCQVNFX1VSTD1odHRwczovL3pva255cGxlb3JpYndvbWlmemdpLnN1cGFiYXNlLmNvClNVUEFCQVNFX1NFUlZJQ0VfUk9MRV9LRVk9PHBlZ2FyIGVtIFN1cGFiYXNlIOKGkiBTZXR0aW5ncyDihpIgQVBJIOKGkiBzZXJ2aWNlX3JvbGU+Ck5FWFRfUFVCTElDX1NVUEFCQVNFX1VSTD1odHRwczovL3pva255cGxlb3JpYndvbWlmemdpLnN1cGFiYXNlLmNvCk5FWFRfUFVCTElDX1NVUEFCQVNFX0FOT05fS0VZPXNiX3B1Ymxpc2hhYmxlXzJQeHk0Y2R0Q0dVUUl3RWxlbjFfVmdfN0ktby1VbVIKYGBgCgojIyMgMy4gRGV2IGxvY2FsCgpgYGBiYXNoCm5wbSBpbnN0YWxsCm5wbSBydW4gZGV2CiMgYWJyZSBodHRwOi8vbG9jYWxob3N0OjMwMDAvZGFzaGJvYXJkCmBgYAoKIyMjIDQuIERlcGxveSBWZXJjZWwKCmBgYGJhc2gKdmVyY2VsIGxvZ2luICAgICAgICAgICAgIyAxeAp2ZXJjZWwgbGluayAtLXllcyAgICAgICAjIGNyaWEgcHJvamV0byBkbWZsb3ctYXBwCnZlcmNlbCBlbnYgYWRkIFNVUEFCQVNFX1VSTCBwcm9kdWN0aW9uCnZlcmNlbCBlbnYgYWRkIFNVUEFCQVNFX1NFUlZJQ0VfUk9MRV9LRVkgcHJvZHVjdGlvbgp2ZXJjZWwgZW52IGFkZCBORVhUX1BVQkxJQ19TVVBBQkFTRV9VUkwgcHJvZHVjdGlvbgp2ZXJjZWwgZW52IGFkZCBORVhUX1BVQkxJQ19TVVBBQkFTRV9BTk9OX0tFWSBwcm9kdWN0aW9uCnZlcmNlbCBkZXBsb3kgLS1wcm9kCmBgYAoKQW5vdGFyIGEgVVJMIHF1ZSBvIFZlcmNlbCByZXRvcm5hIChleDogYGh0dHBzOi8vZG1mbG93LWFwcC52ZXJjZWwuYXBwYCkuCgotLS0KCiMjIENvbmZpZ3VyYXIgTWV0YSBXZWJob29rCgojIyMgMS4gTWV0YSBmb3IgRGV2ZWxvcGVycyDihpIgQXBwICJBdXRvbWHDp8OjbyBuOG4gR2VlayIgKElEIGAxMjgxOTcwNzQ0MDM2MjY3YCkKCk1lbnUgbGF0ZXJhbCDihpIgKipXZWJob29rcyoqIOKGkiAqKkluc3RhZ3JhbSoqCgotIENhbGxiYWNrIFVSTDogYGh0dHBzOi8vPHR1YS12ZXJjZWwtdXJsPi9hcGkvd2ViaG9vay9pbnN0YWdyYW1gCi0gVmVyaWZ5IFRva2VuOiBgZG1mbG93X3ZlcmlmeV81NjY0NWYwNTQ1ZWY5ZWQxYAotIENsaWNhciAqKlZlcmlmaWNhciBlIHNhbHZhcioqIOKAlCBkZXZlIHBhc3NhciAobm9zc28gR0VUIHJlc3BvbmRlIGNoYWxsZW5nZSkKCiMjIyAyLiBTdWJzY3JpYmlyIGFvIGNhbXBvIGBjb21tZW50c2AKCk5hIG1lc21hIHRlbGEgZGUgd2ViaG9vaywgbWFyY2FyIG8gY2FtcG8gKipgY29tbWVudHNgKiogZSAqKlN1YnNjcmliaXIqKi4KCiMjIyAzLiBMaWdhciBvIHdlYmhvb2sgw6AgY29udGEgSUcKCmBgYGJhc2gKY3VybCAtWCBQT1NUIFwKICAiaHR0cHM6Ly9ncmFwaC5mYWNlYm9vay5jb20vdjIxLjAvMTc4NDE0MDAxMDAwMzAwODAvc3Vic2NyaWJlZF9hcHBzP3N1YnNjcmliZWRfZmllbGRzPWNvbW1lbnRzJmFjY2Vzc190b2tlbj0kVE9LRU4iCmBgYAoKU3Vic3RpdHVhIGAkVE9LRU5gIHBlbG8gYWNjZXNzIHRva2VuIGRhIGNvbnRhIChtZXNtbyBxdWUgdMOhIGVtIGBkZXBsb3lfYW5kX3Bvc3QucHlgKS4KCiMjIyA0LiBUZXN0YXIKCjEuIElyIG51bSBwb3N0IHRldSBkbyBAYW5kcmV5d2VzdGxleQoyLiBDb21lbnRhciAiRXUgUVVFUk8gaXNzbyIKMy4gRW0gYXTDqSA1cyBkZXZlIGFwYXJlY2VyOgogICAtIFJlc3Bvc3RhIHDDumJsaWNhOiAiVGUgbWFuZGVpIG5vIGRpcmVjdCDwn5GHIgogICAtIERNIHByaXZhZGEgY29tIGJvdMOjbyBwcmEgR0VFSy1PUwo0LiBDb25mZXJpciBlbSBgL2Rhc2hib2FyZGAg4oCUIGV2ZW50byByZWdpc3RyYWRvLgoKLS0tCgojIyBFbmRwb2ludHMKCnwgUm90YSB8IE3DqXRvZG8gfCBPIHF1ZSBmYXogfAp8LS0tfC0tLXwtLS18CnwgYC9hcGkvd2ViaG9vay9pbnN0YWdyYW1gIHwgR0VUIHwgSGFuZHNoYWtlIE1ldGEgKHZlcmlmeV90b2tlbikgfAp8IGAvYXBpL3dlYmhvb2svaW5zdGFncmFtYCB8IFBPU1QgfCBSZWNlYmUgY29tbWVudCwgZGlzcGFyYSByZXBseStETSB8CnwgYC9kYXNoYm9hcmRgIHwgR0VUIHwgTGlzdGEgw7psdGltb3MgMTAwIGV2ZW50b3MgfAp8IGAvZGFzaGJvYXJkL3J1bGVzYCB8IEdFVC9QT1NUIHwgQ1JVRCByZWdyYXMgfAoKLS0tCgojIyBMaW1pdGVzIGltcG9ydGFudGVzIChNZXRhKQoKLSAqKlByaXZhdGUgUmVwbHkqKjogMXggcG9yIGBjb21tZW50X2lkYC4gU2UgasOhIHJlc3BvbmRldSwgTWV0YSByZWplaXRhLgotICoqTWVuc2FnZW5zIHByb2F0aXZhcyoqOiBzw7MgNyBkaWFzIGFww7NzIG8gY29tZW50w6FyaW8uIERlcG9pcyBkaXNzbywgcHJlY2lzYSB0YWcgYEhVTUFOX0FHRU5UYC4KLSAqKlJhdGUgbGltaXQqKjogMjAwIGNoYW1hZGFzL2hvcmEvYXBwIHBvciBwYWRyw6NvLgotICoqQXBwIFJldmlldyoqOiBwcmEgdmlyYXIgU2FhUyB2YWkgcHJlY2lzYXIgZG8gTWV0YSBhcHJvdmFyIGBpbnN0YWdyYW1fbWFuYWdlX21lc3NhZ2VzYCBwcmEgb3V0cmFzIGNvbnRhcyBJRyBhbMOpbSBkYSB0dWEuCgotLS0KCiMjIFBvbnRlIHBybyBTYWFTCgpTY2hlbWEgasOhIMOpIG11bHRpLXRlbmFudDoKCi0gYGFjY291bnRzYCBwb2RlIGNyZXNjZXIgcHJhIE4gY29udGFzIOKAlCBjYWRhIHVtYSBjb20gc2V1IGBpZ19hY2Nlc3NfdG9rZW5gLCBgYXBwX3NlY3JldGAsIGB2ZXJpZnlfdG9rZW5gCi0gYHJ1bGVzYCBlIGBldmVudHNgIHPDo28gaXNvbGFkb3MgcG9yIGBhY2NvdW50X2lkYAotIFdlYmhvb2sgdmFsaWRhIHNpZ25hdHVyZSBjb20gYGFwcF9zZWNyZXRgICoqZGEgY29udGEgY2VydGEqKiAoYWNoYWRhIHZpYSBgaWdfYnVzaW5lc3NfaWRgIHF1ZSB2ZW0gbm8gcGF5bG9hZCkKClByYSB2aXJhciBTYWFTIGRlIHZlcmRhZGU6CjEuIE9BdXRoIE1ldGEgKExvZ2luIHdpdGggRmFjZWJvb2spIHByYSB1c2VyIGNvbmVjdGFyIGEgY29udGEgSUcgZGVsZQoyLiBHZXJhw6fDo28gYXV0b23DoXRpY2EgZGUgYHZlcmlmeV90b2tlbmAgw7puaWNvIHBvciBhY2NvdW50CjMuIFN1YnNjcmliaXIgbyBhcHAgTWV0YSBub3MgYGNvbW1lbnRzYCBkYSBjb250YSBjb25lY3RhZGEgdmlhIEFQSQo0LiBDb2JyYW7Dp2EgKFN0cmlwZSAvIExhc3RsaW5rKQo1LiBVSSBvbmJvYXJkaW5nICsgZGFzaGJvYXJkIG11bHRpLXVzZXIKCkEgYmFzZSBkbyB3ZWJob29rIGrDoSBhZ3VlbnRhIGlzc28gc2VtIG11ZGFuw6dhLgo="}
+# DMFlow
+
+Automação estilo ManyChat: alguém comenta no teu post do Instagram → responde publicamente **+** manda DM privada automática.
+
+Stack: Next.js 16 · Supabase (schema `dmflow`) · Meta Graph API v21.
+
+---
+
+## Como funciona
+
+```
+Instagram comment
+       │
+       ▼
+ Meta webhook (POST /api/webhook/instagram)
+       │
+       ├── valida HMAC (X-Hub-Signature-256)
+       ├── acha account pelo ig_business_id
+       ├── escolhe rule por keyword/post_id
+       ├── POST /{comment_id}/replies          → resposta pública
+       ├── POST /{ig_business_id}/messages
+       │   com recipient.comment_id            → DM privada
+       └── grava event em dmflow.events
+```
+
+Uma vez por comentário (Meta regra: `private_replies` só pode ser usado 1x por `comment_id`).
+
+---
+
+## Setup
+
+### 1. Supabase
+
+Projeto: **Geek Academy** (`zoknypleoribwomifzgi`)
+Schema: `dmflow` (já criado via MCP)
+Tabelas: `accounts`, `rules`, `events`
+
+Account já seedada:
+- `id` = `b5371147-07f8-4fa8-9494-f8f22713d455`
+- `ig_business_id` = `17841400100030080`
+- `verify_token` = `dmflow_verify_56645f0545ef9ed1`
+
+Rule de exemplo já seedada: keyword `QUERO` → reply `Te mandei no direct 👇` + DM com botão pra `geek-os.geekacademy.site`.
+
+### 2. Env vars
+
+Copiar `.env.local.example` pra `.env.local` e preencher:
+
+```bash
+SUPABASE_URL=https://zoknypleoribwomifzgi.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=<pegar em Supabase → Settings → API → service_role>
+NEXT_PUBLIC_SUPABASE_URL=https://zoknypleoribwomifzgi.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=sb_publishable_2Pxy4cdtCGUQIwElen1_Vg_7I-o-UmR
+```
+
+### 3. Dev local
+
+```bash
+npm install
+npm run dev
+# abre http://localhost:3000/dashboard
+```
+
+### 4. Deploy Vercel
+
+```bash
+vercel login            # 1x
+vercel link --yes       # cria projeto dmflow-app
+vercel env add SUPABASE_URL production
+vercel env add SUPABASE_SERVICE_ROLE_KEY production
+vercel env add NEXT_PUBLIC_SUPABASE_URL production
+vercel env add NEXT_PUBLIC_SUPABASE_ANON_KEY production
+vercel deploy --prod
+```
+
+Anotar a URL que o Vercel retorna (ex: `https://dmflow-app.vercel.app`).
+
+---
+
+## Configurar Meta Webhook
+
+### 1. Meta for Developers → App "Automação n8n Geek" (ID `1281970744036267`)
+
+Menu lateral → **Webhooks** → **Instagram**
+
+- Callback URL: `https://<tua-vercel-url>/api/webhook/instagram`
+- Verify Token: `dmflow_verify_56645f0545ef9ed1`
+- Clicar **Verificar e salvar** — deve passar (nosso GET responde challenge)
+
+### 2. Subscribir ao campo `comments`
+
+Na mesma tela de webhook, marcar o campo **`comments`** e **Subscribir**.
+
+### 3. Ligar o webhook à conta IG
+
+```bash
+curl -X POST \
+  "https://graph.facebook.com/v21.0/17841400100030080/subscribed_apps?subscribed_fields=comments&access_token=$TOKEN"
+```
+
+Substitua `$TOKEN` pelo access token da conta (mesmo que tá em `deploy_and_post.py`).
+
+### 4. Testar
+
+1. Ir num post teu do @andreywestley
+2. Comentar "Eu QUERO isso"
+3. Em até 5s deve aparecer:
+   - Resposta pública: "Te mandei no direct 👇"
+   - DM privada com botão pra GEEK-OS
+4. Conferir em `/dashboard` — evento registrado.
+
+---
+
+## Endpoints
+
+| Rota | Método | O que faz |
+|---|---|---|
+| `/api/webhook/instagram` | GET | Handshake Meta (verify_token) |
+| `/api/webhook/instagram` | POST | Recebe comment, dispara reply+DM |
+| `/dashboard` | GET | Lista últimos 100 eventos |
+| `/dashboard/rules` | GET/POST | CRUD regras |
+
+---
+
+## Limites importantes (Meta)
+
+- **Private Reply**: 1x por `comment_id`. Se já respondeu, Meta rejeita.
+- **Mensagens proativas**: só 7 dias após o comentário. Depois disso, precisa tag `HUMAN_AGENT`.
+- **Rate limit**: 200 chamadas/hora/app por padrão.
+- **App Review**: pra virar SaaS vai precisar do Meta aprovar `instagram_manage_messages` pra outras contas IG além da tua.
+
+---
+
+## Ponte pro SaaS
+
+Schema já é multi-tenant:
+
+- `accounts` pode crescer pra N contas — cada uma com seu `ig_access_token`, `app_secret`, `verify_token`
+- `rules` e `events` são isolados por `account_id`
+- Webhook valida signature com `app_secret` **da conta certa** (achada via `ig_business_id` que vem no payload)
+
+Pra virar SaaS de verdade:
+1. OAuth Meta (Login with Facebook) pra user conectar a conta IG dele
+2. Geração automática de `verify_token` único por account
+3. Subscribir o app Meta nos `comments` da conta conectada via API
+4. Cobrança (Stripe / Lastlink)
+5. UI onboarding + dashboard multi-user
+
+A base do webhook já aguenta isso sem mudança.

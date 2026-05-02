@@ -1,1 +1,48 @@
-{"data":"InVzZSBjbGllbnQiOwoKaW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IHsgdXNlRm9ybVN0YXR1cyB9IGZyb20gInJlYWN0LWRvbSI7CgpleHBvcnQgZnVuY3Rpb24gU3VibWl0QnV0dG9uKHsKICBjaGlsZHJlbiwKICBjbGFzc05hbWUgPSAiIiwKICBwZW5kaW5nTGFiZWwsCiAgLi4ucmVzdAp9OiB7CiAgY2hpbGRyZW46IFJlYWN0LlJlYWN0Tm9kZTsKICBjbGFzc05hbWU/OiBzdHJpbmc7CiAgcGVuZGluZ0xhYmVsPzogc3RyaW5nOwp9ICYgUmVhY3QuQnV0dG9uSFRNTEF0dHJpYnV0ZXM8SFRNTEJ1dHRvbkVsZW1lbnQ+KSB7CiAgY29uc3QgeyBwZW5kaW5nIH0gPSB1c2VGb3JtU3RhdHVzKCk7CiAgcmV0dXJuICgKICAgIDxidXR0b24KICAgICAgey4uLnJlc3R9CiAgICAgIHR5cGU9InN1Ym1pdCIKICAgICAgZGlzYWJsZWQ9e3BlbmRpbmcgfHwgcmVzdC5kaXNhYmxlZH0KICAgICAgY2xhc3NOYW1lPXtgJHtjbGFzc05hbWV9ICR7CiAgICAgICAgcGVuZGluZyA/ICJvcGFjaXR5LTYwIGN1cnNvci13YWl0IiA6ICIiCiAgICAgIH0gaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIGdhcC0yYH0KICAgICAgYXJpYS1idXN5PXtwZW5kaW5nIHx8IHVuZGVmaW5lZH0KICAgID4KICAgICAge3BlbmRpbmcgJiYgKAogICAgICAgIDxzdmcKICAgICAgICAgIHdpZHRoPSIxNCIKICAgICAgICAgIGhlaWdodD0iMTQiCiAgICAgICAgICB2aWV3Qm94PSIwIDAgMTQgMTQiCiAgICAgICAgICBjbGFzc05hbWU9ImFuaW1hdGUtc3BpbiIKICAgICAgICAgIGFyaWEtaGlkZGVuPSJ0cnVlIgogICAgICAgID4KICAgICAgICAgIDxjaXJjbGUgY3g9IjciIGN5PSI3IiByPSI1IiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlV2lkdGg9IjEuNSIgc3Ryb2tlT3BhY2l0eT0iMC4yNSIgZmlsbD0ibm9uZSIgLz4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgIGQ9Ik0gMTIgNyBBIDUgNSAwIDAgMCA3IDIiCiAgICAgICAgICAgIHN0cm9rZT0iY3VycmVudENvbG9yIgogICAgICAgICAgICBzdHJva2VXaWR0aD0iMS44IgogICAgICAgICAgICBzdHJva2VMaW5lY2FwPSJyb3VuZCIKICAgICAgICAgICAgZmlsbD0ibm9uZSIKICAgICAgICAgIC8+CiAgICAgICAgPC9zdmc+CiAgICAgICl9CiAgICAgIDxzcGFuPntwZW5kaW5nID8gcGVuZGluZ0xhYmVsID8/ICJQcm9jZXNzYW5kb+KApiIgOiBjaGlsZHJlbn08L3NwYW4+CiAgICA8L2J1dHRvbj4KICApOwp9Cg=="}
+"use client";
+
+import React from "react";
+import { useFormStatus } from "react-dom";
+
+export function SubmitButton({
+  children,
+  className = "",
+  pendingLabel,
+  ...rest
+}: {
+  children: React.ReactNode;
+  className?: string;
+  pendingLabel?: string;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>) {
+  const { pending } = useFormStatus();
+  return (
+    <button
+      {...rest}
+      type="submit"
+      disabled={pending || rest.disabled}
+      className={`${className} ${
+        pending ? "opacity-60 cursor-wait" : ""
+      } inline-flex items-center gap-2`}
+      aria-busy={pending || undefined}
+    >
+      {pending && (
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 14 14"
+          className="animate-spin"
+          aria-hidden="true"
+        >
+          <circle cx="7" cy="7" r="5" stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.25" fill="none" />
+          <path
+            d="M 12 7 A 5 5 0 0 0 7 2"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            fill="none"
+          />
+        </svg>
+      )}
+      <span>{pending ? pendingLabel ?? "Processando…" : children}</span>
+    </button>
+  );
+}

@@ -1,1 +1,95 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlcXVlc3QsIE5leHRSZXNwb25zZSB9IGZyb20gIm5leHQvc2VydmVyIjsKaW1wb3J0IHsgc3VwYWJhc2VBZG1pbiB9IGZyb20gIkAvbGliL3N1cGFiYXNlIjsKCmV4cG9ydCBjb25zdCBydW50aW1lID0gIm5vZGVqcyI7CmV4cG9ydCBjb25zdCBkeW5hbWljID0gImZvcmNlLWR5bmFtaWMiOwoKY29uc3QgSUdfSUQgPSAiMTc4NDE0MDAxMDAwMzAwODAiOwpjb25zdCBJR19UT0tFTiA9IHByb2Nlc3MuZW52LklHX0FDQ0VTU19UT0tFTiA/PyAiRUFBU044aExQaTZzQlJhOWNZYXI2cGtRamwxV0piWVh4QUpCU1pDQjhlcDJ3Z0VRazBwTjc2TVNwRmV1MVBGeHh2SGNiOFpBbnJxN3U3T0JaQXpIWUhuTnRHcXJXak5Nb21aQ3pVV3RvejdHQVVpWkNlTmV4YXJvV1hWWkNTenphNlF1TVNJNTZaQkNydXh3MGd0bWpCVDc1RkM5d1BXSTRrdjZaQzJpRzh5THpMWkNUNFcyWkJhdkVpcm9PUnZPZW1Sc0pqek13WkRaRCI7IC8vIG5vdm8gbmFvLWV4cGlyYQovLyBiYWNrdXA6IEVBQVNOOGhMUGk2c0JSUE5YblVGVXpHVVFmSTZycUZNRGo4dmc4WkJSVzFST0RjSU5PaFZrVzZ4SDhtZjFUU05yY1RaQzFhendneDl2QnVueHJaQVpBSW95cXBUOFd2R1FGVWxlOGd3ZFB1R2x2OWZ5NE9LR0QzOXpJb0RCVEYxdlZ1dFhJSGlwMlJ4MElvbEc1Z0JWMENhYnRNZmVzWkN6NjhkNHo2TmZaQWZVNGFxZzRkOUhoaXUza2didjlFdXF0bUJNWVkxaUJMaldlbUJ1dG4KY29uc3QgQVBJID0gImh0dHBzOi8vZ3JhcGguZmFjZWJvb2suY29tL3YxOS4wIjsKCmFzeW5jIGZ1bmN0aW9uIGdyYXBoUG9zdChwYXRoOiBzdHJpbmcsIGRhdGE6IFJlY29yZDxzdHJpbmcsIHN0cmluZz4pIHsKICBjb25zdCBib2R5ID0gbmV3IFVSTFNlYXJjaFBhcmFtcyh7IC4uLmRhdGEsIGFjY2Vzc190b2tlbjogSUdfVE9LRU4gfSk7CiAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2goYCR7QVBJfS8ke3BhdGh9YCwgeyBtZXRob2Q6ICJQT1NUIiwgYm9keSB9KTsKICBjb25zdCBqc29uID0gYXdhaXQgcmVzLmpzb24oKTsKICBpZiAoIXJlcy5vaykgdGhyb3cgbmV3IEVycm9yKGBHcmFwaCAke3Jlcy5zdGF0dXN9OiAke2pzb24/LmVycm9yPy5tZXNzYWdlID8/IEpTT04uc3RyaW5naWZ5KGpzb24pfWApOwogIHJldHVybiBqc29uOwp9Cgphc3luYyBmdW5jdGlvbiBncmFwaEdldChwYXRoOiBzdHJpbmcsIHBhcmFtczogUmVjb3JkPHN0cmluZywgc3RyaW5nPiA9IHt9KSB7CiAgY29uc3QgcXMgPSBuZXcgVVJMU2VhcmNoUGFyYW1zKHsgLi4ucGFyYW1zLCBhY2Nlc3NfdG9rZW46IElHX1RPS0VOIH0pOwogIGNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKGAke0FQSX0vJHtwYXRofT8ke3FzfWApOwogIGNvbnN0IGpzb24gPSBhd2FpdCByZXMuanNvbigpOwogIGlmICghcmVzLm9rKSB0aHJvdyBuZXcgRXJyb3IoYEdyYXBoICR7cmVzLnN0YXR1c306ICR7anNvbj8uZXJyb3I/Lm1lc3NhZ2UgPz8gSlNPTi5zdHJpbmdpZnkoanNvbil9YCk7CiAgcmV0dXJuIGpzb247Cn0KCmFzeW5jIGZ1bmN0aW9uIHB1Ymxpc2hSZWVsKHZpZGVvVXJsOiBzdHJpbmcsIGNhcHRpb246IHN0cmluZyk6IFByb21pc2U8eyBwb3N0X2lkOiBzdHJpbmc7IHBlcm1hbGluazogc3RyaW5nIH0+IHsKICBjb25zdCBjb250YWluZXIgPSBhd2FpdCBncmFwaFBvc3QoYCR7SUdfSUR9L21lZGlhYCwgewogICAgbWVkaWFfdHlwZTogIlJFRUxTIiwKICAgIHZpZGVvX3VybDogdmlkZW9VcmwsCiAgICBjYXB0aW9uLAogICAgc2hhcmVfdG9fZmVlZDogInRydWUiLAogIH0pOwogIGNvbnN0IGNvbnRhaW5lcklkOiBzdHJpbmcgPSBjb250YWluZXIuaWQ7CgogIC8vIFBvbGwgYXRlIEZJTklTSEVEIChtYXggOTBzKQogIGZvciAobGV0IGkgPSAwOyBpIDwgMzA7IGkrKykgewogICAgYXdhaXQgbmV3IFByb21pc2UoKHIpID0+IHNldFRpbWVvdXQociwgMzAwMCkpOwogICAgY29uc3QgaW5mbyA9IGF3YWl0IGdyYXBoR2V0KGNvbnRhaW5lcklkLCB7IGZpZWxkczogInN0YXR1c19jb2RlIiB9KTsKICAgIGlmIChpbmZvLnN0YXR1c19jb2RlID09PSAiRklOSVNIRUQiKSBicmVhazsKICAgIGlmIChpbmZvLnN0YXR1c19jb2RlID09PSAiRVJST1IiKSB0aHJvdyBuZXcgRXJyb3IoYElHIHByb2Nlc3NpbmcgZXJyb3I6ICR7SlNPTi5zdHJpbmdpZnkoaW5mbyl9YCk7CiAgfQoKICBjb25zdCBwdWIgPSBhd2FpdCBncmFwaFBvc3QoYCR7SUdfSUR9L21lZGlhX3B1Ymxpc2hgLCB7IGNyZWF0aW9uX2lkOiBjb250YWluZXJJZCB9KTsKICBjb25zdCBwb3N0SWQ6IHN0cmluZyA9IHB1Yi5pZDsKCiAgbGV0IHBlcm1hbGluayA9ICIiOwogIHRyeSB7CiAgICBjb25zdCBpbmZvMiA9IGF3YWl0IGdyYXBoR2V0KHBvc3RJZCwgeyBmaWVsZHM6ICJwZXJtYWxpbmsiIH0pOwogICAgcGVybWFsaW5rID0gaW5mbzIucGVybWFsaW5rID8/ICIiOwogIH0gY2F0Y2gge30KCiAgcmV0dXJuIHsgcG9zdF9pZDogcG9zdElkLCBwZXJtYWxpbmsgfTsKfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIEdFVChyZXE6IE5leHRSZXF1ZXN0KSB7CiAgLy8gVmVyaWZpY2EgQ1JPTl9TRUNSRVQgc2UgY29uZmlndXJhZG8KICBjb25zdCBzZWNyZXQgPSBwcm9jZXNzLmVudi5DUk9OX1NFQ1JFVDsKICBpZiAoc2VjcmV0ICYmIHJlcS5oZWFkZXJzLmdldCgiYXV0aG9yaXphdGlvbiIpICE9PSBgQmVhcmVyICR7c2VjcmV0fWApIHsKICAgIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IGVycm9yOiAidW5hdXRob3JpemVkIiB9LCB7IHN0YXR1czogNDAxIH0pOwogIH0KCiAgY29uc3Qgc2IgPSBzdXBhYmFzZUFkbWluKCk7CiAgY29uc3Qgbm93VW5peCA9IE1hdGguZmxvb3IoRGF0ZS5ub3coKSAvIDEwMDApOwoKICBjb25zdCB7IGRhdGE6IGR1ZSwgZXJyb3IgfSA9IGF3YWl0IHNiCiAgICAuZnJvbSgic2NoZWR1bGVkX3JlZWxzIikKICAgIC5zZWxlY3QoIioiKQogICAgLmVxKCJzdGF0dXMiLCAicGVuZGluZyIpCiAgICAubHRlKCJzY2hlZHVsZWRfdW5peCIsIG5vd1VuaXgpCiAgICAubGltaXQoNSk7CgogIGlmIChlcnJvcikgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsgZXJyb3I6IGVycm9yLm1lc3NhZ2UgfSwgeyBzdGF0dXM6IDUwMCB9KTsKICBpZiAoIWR1ZSB8fCBkdWUubGVuZ3RoID09PSAwKSByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oeyBvazogdHJ1ZSwgcHVibGlzaGVkOiAwIH0pOwoKICBjb25zdCByZXN1bHRzID0gW107CiAgZm9yIChjb25zdCByZWVsIG9mIGR1ZSkgewogICAgdHJ5IHsKICAgICAgY29uc3QgeyBwb3N0X2lkLCBwZXJtYWxpbmsgfSA9IGF3YWl0IHB1Ymxpc2hSZWVsKHJlZWwudmlkZW9fdXJsLCByZWVsLmNhcHRpb24pOwogICAgICBhd2FpdCBzYi5mcm9tKCJzY2hlZHVsZWRfcmVlbHMiKS51cGRhdGUoewogICAgICAgIHN0YXR1czogInB1Ymxpc2hlZCIsCiAgICAgICAgcG9zdF9pZCwKICAgICAgICBwZXJtYWxpbmssCiAgICAgICAgcHVibGlzaGVkX2F0OiBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCksCiAgICAgIH0pLmVxKCJpZCIsIHJlZWwuaWQpOwogICAgICByZXN1bHRzLnB1c2goeyBpZDogcmVlbC5pZCwgc2x1ZzogcmVlbC5zbHVnLCBpZHg6IHJlZWwuaWR4LCBwb3N0X2lkLCBvazogdHJ1ZSB9KTsKICAgIH0gY2F0Y2ggKGU6IGFueSkgewogICAgICBhd2FpdCBzYi5mcm9tKCJzY2hlZHVsZWRfcmVlbHMiKS51cGRhdGUoeyBzdGF0dXM6ICJlcnJvciIsIGVycm9yOiBlLm1lc3NhZ2UgfSkuZXEoImlkIiwgcmVlbC5pZCk7CiAgICAgIHJlc3VsdHMucHVzaCh7IGlkOiByZWVsLmlkLCBzbHVnOiByZWVsLnNsdWcsIGlkeDogcmVlbC5pZHgsIG9rOiBmYWxzZSwgZXJyb3I6IGUubWVzc2FnZSB9KTsKICAgIH0KICB9CgogIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IG9rOiB0cnVlLCBwdWJsaXNoZWQ6IHJlc3VsdHMuZmlsdGVyKChyKSA9PiByLm9rKS5sZW5ndGgsIHJlc3VsdHMgfSk7Cn0K"}
+import { NextRequest, NextResponse } from "next/server";
+import { supabaseAdmin } from "@/lib/supabase";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+const IG_ID = "17841400100030080";
+const IG_TOKEN = process.env.IG_ACCESS_TOKEN ?? "EAASN8hLPi6sBRa9cYar6pkQjl1WJbYXxAJBSZCB8ep2wgEQk0pN76MSpFeu1PFxxvHcb8ZAnrq7u7OBZAzHYHnNtGqrWjNMomZCzUWtoz7GAUiZCeNexaroWXVZCSzza6QuMSI56ZBCruxw0gtmjBT75FC9wPWI4kv6ZC2iG8yLzLZCT4W2ZBavEiroORvOemRsJjzMwZDZD"; // novo nao-expira
+// backup: EAASN8hLPi6sBRPNXnUFUzGUQfI6rqFMDj8vg8ZBRW1RODcINOhVkW6xH8mf1TSNrcTZC1azwgx9vBunxrZAZAIoyqpT8WvGQFUle8gwdPuGlv9fy4OKGD39zIoDBTF1vVutXIHip2Rx0IolG5gBV0CabtMfesZCz68d4z6NfZAfU4aqg4d9Hhiu3kgbv9EuqtmBMYY1iBLjWemButn
+const API = "https://graph.facebook.com/v19.0";
+
+async function graphPost(path: string, data: Record<string, string>) {
+  const body = new URLSearchParams({ ...data, access_token: IG_TOKEN });
+  const res = await fetch(`${API}/${path}`, { method: "POST", body });
+  const json = await res.json();
+  if (!res.ok) throw new Error(`Graph ${res.status}: ${json?.error?.message ?? JSON.stringify(json)}`);
+  return json;
+}
+
+async function graphGet(path: string, params: Record<string, string> = {}) {
+  const qs = new URLSearchParams({ ...params, access_token: IG_TOKEN });
+  const res = await fetch(`${API}/${path}?${qs}`);
+  const json = await res.json();
+  if (!res.ok) throw new Error(`Graph ${res.status}: ${json?.error?.message ?? JSON.stringify(json)}`);
+  return json;
+}
+
+async function publishReel(videoUrl: string, caption: string): Promise<{ post_id: string; permalink: string }> {
+  const container = await graphPost(`${IG_ID}/media`, {
+    media_type: "REELS",
+    video_url: videoUrl,
+    caption,
+    share_to_feed: "true",
+  });
+  const containerId: string = container.id;
+
+  // Poll ate FINISHED (max 90s)
+  for (let i = 0; i < 30; i++) {
+    await new Promise((r) => setTimeout(r, 3000));
+    const info = await graphGet(containerId, { fields: "status_code" });
+    if (info.status_code === "FINISHED") break;
+    if (info.status_code === "ERROR") throw new Error(`IG processing error: ${JSON.stringify(info)}`);
+  }
+
+  const pub = await graphPost(`${IG_ID}/media_publish`, { creation_id: containerId });
+  const postId: string = pub.id;
+
+  let permalink = "";
+  try {
+    const info2 = await graphGet(postId, { fields: "permalink" });
+    permalink = info2.permalink ?? "";
+  } catch {}
+
+  return { post_id: postId, permalink };
+}
+
+export async function GET(req: NextRequest) {
+  // Verifica CRON_SECRET se configurado
+  const secret = process.env.CRON_SECRET;
+  if (secret && req.headers.get("authorization") !== `Bearer ${secret}`) {
+    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  }
+
+  const sb = supabaseAdmin();
+  const nowUnix = Math.floor(Date.now() / 1000);
+
+  const { data: due, error } = await sb
+    .from("scheduled_reels")
+    .select("*")
+    .eq("status", "pending")
+    .lte("scheduled_unix", nowUnix)
+    .limit(5);
+
+  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  if (!due || due.length === 0) return NextResponse.json({ ok: true, published: 0 });
+
+  const results = [];
+  for (const reel of due) {
+    try {
+      const { post_id, permalink } = await publishReel(reel.video_url, reel.caption);
+      await sb.from("scheduled_reels").update({
+        status: "published",
+        post_id,
+        permalink,
+        published_at: new Date().toISOString(),
+      }).eq("id", reel.id);
+      results.push({ id: reel.id, slug: reel.slug, idx: reel.idx, post_id, ok: true });
+    } catch (e: any) {
+      await sb.from("scheduled_reels").update({ status: "error", error: e.message }).eq("id", reel.id);
+      results.push({ id: reel.id, slug: reel.slug, idx: reel.idx, ok: false, error: e.message });
+    }
+  }
+
+  return NextResponse.json({ ok: true, published: results.filter((r) => r.ok).length, results });
+}

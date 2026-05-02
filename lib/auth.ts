@@ -1,1 +1,71 @@
-{"data":"aW1wb3J0IHsgc3VwYWJhc2VTZXJ2ZXIgfSBmcm9tICIuL3N1cGFiYXNlLXNlcnZlciI7CmltcG9ydCB7IHN1cGFiYXNlQWRtaW4gfSBmcm9tICIuL3N1cGFiYXNlIjsKaW1wb3J0IHsgcmVkaXJlY3QgfSBmcm9tICJuZXh0L25hdmlnYXRpb24iOwoKZXhwb3J0IHR5cGUgVXNlclByb2ZpbGUgPSB7CiAgaWQ6IHN0cmluZzsKICBlbWFpbDogc3RyaW5nOwogIGZ1bGxfbmFtZTogc3RyaW5nIHwgbnVsbDsKICBpc19hZG1pbjogYm9vbGVhbjsKICBwbGFuX3NsdWc6IHN0cmluZzsKICBzdWJzY3JpcHRpb25fc3RhdHVzOiBzdHJpbmc7CiAgc3Vic2NyaXB0aW9uX2V4cGlyZXNfYXQ6IHN0cmluZyB8IG51bGw7CiAgY3JlYXRlZF9hdDogc3RyaW5nOwp9OwoKZXhwb3J0IHR5cGUgUGxhbiA9IHsKICBzbHVnOiBzdHJpbmc7CiAgbmFtZTogc3RyaW5nOwogIHByaWNlX2JybDogbnVtYmVyOwogIG1heF9hY2NvdW50czogbnVtYmVyOwogIG1heF9ydWxlczogbnVtYmVyOwogIG1heF9ldmVudHNfcGVyX21vbnRoOiBudW1iZXI7CiAgaGFzX2FwaTogYm9vbGVhbjsKICBoYXNfd2hpdGVfbGFiZWw6IGJvb2xlYW47CiAgaGFzX2FpOiBib29sZWFuOwogIGxhc3RsaW5rX3Byb2R1Y3RfdXJsOiBzdHJpbmcgfCBudWxsOwp9OwoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldFVzZXIoKSB7CiAgY29uc3Qgc2IgPSBhd2FpdCBzdXBhYmFzZVNlcnZlcigpOwogIGNvbnN0IHsgZGF0YSB9ID0gYXdhaXQgc2IuYXV0aC5nZXRVc2VyKCk7CiAgcmV0dXJuIGRhdGEudXNlciA/PyBudWxsOwp9CgpleHBvcnQgYXN5bmMgZnVuY3Rpb24gZ2V0UHJvZmlsZSgpOiBQcm9taXNlPFVzZXJQcm9maWxlIHwgbnVsbD4gewogIGNvbnN0IHVzZXIgPSBhd2FpdCBnZXRVc2VyKCk7CiAgaWYgKCF1c2VyKSByZXR1cm4gbnVsbDsKICBjb25zdCBhZG1pbiA9IHN1cGFiYXNlQWRtaW4oKTsKICBjb25zdCB7IGRhdGEgfSA9IGF3YWl0IGFkbWluCiAgICAuZnJvbSgidXNlcl9wcm9maWxlcyIpCiAgICAuc2VsZWN0KCIqIikKICAgIC5lcSgiaWQiLCB1c2VyLmlkKQogICAgLm1heWJlU2luZ2xlPFVzZXJQcm9maWxlPigpOwogIHJldHVybiBkYXRhID8/IG51bGw7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBnZXRQbGFuKHNsdWc6IHN0cmluZyk6IFByb21pc2U8UGxhbiB8IG51bGw+IHsKICBjb25zdCBhZG1pbiA9IHN1cGFiYXNlQWRtaW4oKTsKICBjb25zdCB7IGRhdGEgfSA9IGF3YWl0IGFkbWluCiAgICAuZnJvbSgicGxhbnMiKQogICAgLnNlbGVjdCgiKiIpCiAgICAuZXEoInNsdWciLCBzbHVnKQogICAgLm1heWJlU2luZ2xlPFBsYW4+KCk7CiAgcmV0dXJuIGRhdGEgPz8gbnVsbDsKfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHJlcXVpcmVQcm9maWxlKCk6IFByb21pc2U8VXNlclByb2ZpbGU+IHsKICBjb25zdCBwcm9maWxlID0gYXdhaXQgZ2V0UHJvZmlsZSgpOwogIGlmICghcHJvZmlsZSkgcmVkaXJlY3QoIi9hdXRoL2xvZ2luIik7CiAgcmV0dXJuIHByb2ZpbGU7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBnZXRVc2VyQWNjb3VudHModXNlcklkOiBzdHJpbmcpIHsKICBjb25zdCBhZG1pbiA9IHN1cGFiYXNlQWRtaW4oKTsKICBjb25zdCB7IGRhdGEgfSA9IGF3YWl0IGFkbWluCiAgICAuZnJvbSgiYWNjb3VudHMiKQogICAgLnNlbGVjdCgiKiIpCiAgICAuZXEoIm93bmVyX3VzZXJfaWQiLCB1c2VySWQpCiAgICAub3JkZXIoImNyZWF0ZWRfYXQiLCB7IGFzY2VuZGluZzogdHJ1ZSB9KTsKICByZXR1cm4gZGF0YSA/PyBbXTsKfQo="}
+import { supabaseServer } from "./supabase-server";
+import { supabaseAdmin } from "./supabase";
+import { redirect } from "next/navigation";
+
+export type UserProfile = {
+  id: string;
+  email: string;
+  full_name: string | null;
+  is_admin: boolean;
+  plan_slug: string;
+  subscription_status: string;
+  subscription_expires_at: string | null;
+  created_at: string;
+};
+
+export type Plan = {
+  slug: string;
+  name: string;
+  price_brl: number;
+  max_accounts: number;
+  max_rules: number;
+  max_events_per_month: number;
+  has_api: boolean;
+  has_white_label: boolean;
+  has_ai: boolean;
+  lastlink_product_url: string | null;
+};
+
+export async function getUser() {
+  const sb = await supabaseServer();
+  const { data } = await sb.auth.getUser();
+  return data.user ?? null;
+}
+
+export async function getProfile(): Promise<UserProfile | null> {
+  const user = await getUser();
+  if (!user) return null;
+  const admin = supabaseAdmin();
+  const { data } = await admin
+    .from("user_profiles")
+    .select("*")
+    .eq("id", user.id)
+    .maybeSingle<UserProfile>();
+  return data ?? null;
+}
+
+export async function getPlan(slug: string): Promise<Plan | null> {
+  const admin = supabaseAdmin();
+  const { data } = await admin
+    .from("plans")
+    .select("*")
+    .eq("slug", slug)
+    .maybeSingle<Plan>();
+  return data ?? null;
+}
+
+export async function requireProfile(): Promise<UserProfile> {
+  const profile = await getProfile();
+  if (!profile) redirect("/auth/login");
+  return profile;
+}
+
+export async function getUserAccounts(userId: string) {
+  const admin = supabaseAdmin();
+  const { data } = await admin
+    .from("accounts")
+    .select("*")
+    .eq("owner_user_id", userId)
+    .order("created_at", { ascending: true });
+  return data ?? [];
+}

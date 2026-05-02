@@ -1,1 +1,73 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlcXVlc3QsIE5leHRSZXNwb25zZSB9IGZyb20gIm5leHQvc2VydmVyIjsKaW1wb3J0IHsgc3VwYWJhc2VBZG1pbiB9IGZyb20gIkAvbGliL3N1cGFiYXNlIjsKCmV4cG9ydCBjb25zdCBydW50aW1lID0gIm5vZGVqcyI7CmV4cG9ydCBjb25zdCBkeW5hbWljID0gImZvcmNlLWR5bmFtaWMiOwoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIEdFVCgKICByZXE6IE5leHRSZXF1ZXN0LAogIGNvbnRleHQ6IHsgcGFyYW1zOiBQcm9taXNlPHsgaWQ6IHN0cmluZyB9PiB9CikgewogIGNvbnN0IHsgaWQgfSA9IGF3YWl0IGNvbnRleHQucGFyYW1zOwogIGNvbnN0IHNiID0gc3VwYWJhc2VBZG1pbigpOwoKICBjb25zdCB7IGRhdGE6IGxpbmsgfSA9IGF3YWl0IHNiCiAgICAuZnJvbSgidHJhY2tlZF9saW5rcyIpCiAgICAuc2VsZWN0KCJpZCwgdGFyZ2V0X3VybCwgY2xpY2tfY291bnQsIHJ1bGVfaWQsIGV2ZW50X2lkIikKICAgIC5lcSgiaWQiLCBpZCkKICAgIC5tYXliZVNpbmdsZSgpOwoKICBpZiAoIWxpbmsgfHwgIWxpbmsudGFyZ2V0X3VybCkgewogICAgcmV0dXJuIG5ldyBOZXh0UmVzcG9uc2UoImxpbmsgbm90IGZvdW5kIiwgeyBzdGF0dXM6IDQwNCB9KTsKICB9CgogIGNvbnN0IG5vdyA9IG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKICBjb25zdCBpcCA9CiAgICByZXEuaGVhZGVycy5nZXQoIngtZm9yd2FyZGVkLWZvciIpPy5zcGxpdCgiLCIpWzBdPy50cmltKCkgPz8KICAgIHJlcS5oZWFkZXJzLmdldCgieC1yZWFsLWlwIikgPz8KICAgIG51bGw7CgogIGNvbnN0IGlzRmlyc3RDbGljayA9IChsaW5rLmNsaWNrX2NvdW50ID8/IDApID09PSAwOwoKICBhd2FpdCBQcm9taXNlLmFsbChbCiAgICBzYgogICAgICAuZnJvbSgidHJhY2tlZF9saW5rcyIpCiAgICAgIC51cGRhdGUoewogICAgICAgIGNsaWNrX2NvdW50OiAobGluay5jbGlja19jb3VudCA/PyAwKSArIDEsCiAgICAgICAgbGFzdF9jbGlja2VkX2F0OiBub3csCiAgICAgICAgLi4uKGlzRmlyc3RDbGljayA/IHsgZmlyc3RfY2xpY2tlZF9hdDogbm93IH0gOiB7fSksCiAgICAgIH0pCiAgICAgIC5lcSgiaWQiLCBpZCksCiAgICBzYi5mcm9tKCJsaW5rX2NsaWNrcyIpLmluc2VydCh7CiAgICAgIHRyYWNrZWRfbGlua19pZDogaWQsCiAgICAgIGlwLAogICAgICB1c2VyX2FnZW50OiByZXEuaGVhZGVycy5nZXQoInVzZXItYWdlbnQiKSwKICAgICAgcmVmZXJlcjogcmVxLmhlYWRlcnMuZ2V0KCJyZWZlcmVyIiksCiAgICB9KSwKICBdKTsKCiAgLy8gTWFyayB2YXJpYW50IGNvbnZlcnNpb24gb24gZmlyc3QgY2xpY2sKICBpZiAoaXNGaXJzdENsaWNrICYmIGxpbmsucnVsZV9pZCAmJiBsaW5rLmV2ZW50X2lkKSB7CiAgICBjb25zdCB7IGRhdGE6IGV2ZW50IH0gPSBhd2FpdCBzYgogICAgICAuZnJvbSgiZXZlbnRzIikKICAgICAgLnNlbGVjdCgidmFyaWFudF9pbmRleCIpCiAgICAgIC5lcSgiaWQiLCBsaW5rLmV2ZW50X2lkKQogICAgICAubWF5YmVTaW5nbGUoKTsKICAgIGlmIChldmVudD8udmFyaWFudF9pbmRleCAhPT0gbnVsbCAmJiBldmVudD8udmFyaWFudF9pbmRleCAhPT0gdW5kZWZpbmVkKSB7CiAgICAgIGNvbnN0IHsgZGF0YTogcnVsZSB9ID0gYXdhaXQgc2IKICAgICAgICAuZnJvbSgicnVsZXMiKQogICAgICAgIC5zZWxlY3QoInZhcmlhbnRfY29udmVyc2lvbnMiKQogICAgICAgIC5lcSgiaWQiLCBsaW5rLnJ1bGVfaWQpCiAgICAgICAgLm1heWJlU2luZ2xlKCk7CiAgICAgIGNvbnN0IGNvbnZzID0gWy4uLigocnVsZT8udmFyaWFudF9jb252ZXJzaW9ucyBhcyBudW1iZXJbXSkgPz8gW10pXTsKICAgICAgd2hpbGUgKGNvbnZzLmxlbmd0aCA8PSBldmVudC52YXJpYW50X2luZGV4KSBjb252cy5wdXNoKDApOwogICAgICBjb252c1tldmVudC52YXJpYW50X2luZGV4XSA9IChjb252c1tldmVudC52YXJpYW50X2luZGV4XSA/PyAwKSArIDE7CiAgICAgIGF3YWl0IHNiCiAgICAgICAgLmZyb20oInJ1bGVzIikKICAgICAgICAudXBkYXRlKHsgdmFyaWFudF9jb252ZXJzaW9uczogY29udnMgfSkKICAgICAgICAuZXEoImlkIiwgbGluay5ydWxlX2lkKTsKICAgIH0KICB9CgogIHJldHVybiBOZXh0UmVzcG9uc2UucmVkaXJlY3QobGluay50YXJnZXRfdXJsLCAzMDIpOwp9Cg=="}
+import { NextRequest, NextResponse } from "next/server";
+import { supabaseAdmin } from "@/lib/supabase";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+export async function GET(
+  req: NextRequest,
+  context: { params: Promise<{ id: string }> }
+) {
+  const { id } = await context.params;
+  const sb = supabaseAdmin();
+
+  const { data: link } = await sb
+    .from("tracked_links")
+    .select("id, target_url, click_count, rule_id, event_id")
+    .eq("id", id)
+    .maybeSingle();
+
+  if (!link || !link.target_url) {
+    return new NextResponse("link not found", { status: 404 });
+  }
+
+  const now = new Date().toISOString();
+  const ip =
+    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
+    req.headers.get("x-real-ip") ??
+    null;
+
+  const isFirstClick = (link.click_count ?? 0) === 0;
+
+  await Promise.all([
+    sb
+      .from("tracked_links")
+      .update({
+        click_count: (link.click_count ?? 0) + 1,
+        last_clicked_at: now,
+        ...(isFirstClick ? { first_clicked_at: now } : {}),
+      })
+      .eq("id", id),
+    sb.from("link_clicks").insert({
+      tracked_link_id: id,
+      ip,
+      user_agent: req.headers.get("user-agent"),
+      referer: req.headers.get("referer"),
+    }),
+  ]);
+
+  // Mark variant conversion on first click
+  if (isFirstClick && link.rule_id && link.event_id) {
+    const { data: event } = await sb
+      .from("events")
+      .select("variant_index")
+      .eq("id", link.event_id)
+      .maybeSingle();
+    if (event?.variant_index !== null && event?.variant_index !== undefined) {
+      const { data: rule } = await sb
+        .from("rules")
+        .select("variant_conversions")
+        .eq("id", link.rule_id)
+        .maybeSingle();
+      const convs = [...((rule?.variant_conversions as number[]) ?? [])];
+      while (convs.length <= event.variant_index) convs.push(0);
+      convs[event.variant_index] = (convs[event.variant_index] ?? 0) + 1;
+      await sb
+        .from("rules")
+        .update({ variant_conversions: convs })
+        .eq("id", link.rule_id);
+    }
+  }
+
+  return NextResponse.redirect(link.target_url, 302);
+}

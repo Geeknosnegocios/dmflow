@@ -1,1 +1,95 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlcXVlc3QsIE5leHRSZXNwb25zZSB9IGZyb20gIm5leHQvc2VydmVyIjsKaW1wb3J0IHsgc3VwYWJhc2VBZG1pbiB9IGZyb20gIkAvbGliL3N1cGFiYXNlIjsKCmV4cG9ydCBjb25zdCBydW50aW1lID0gIm5vZGVqcyI7CmV4cG9ydCBjb25zdCBkeW5hbWljID0gImZvcmNlLWR5bmFtaWMiOwoKZnVuY3Rpb24gY3N2RXNjYXBlKHY6IGFueSk6IHN0cmluZyB7CiAgaWYgKHYgPT09IG51bGwgfHwgdiA9PT0gdW5kZWZpbmVkKSByZXR1cm4gIiI7CiAgY29uc3QgcyA9IFN0cmluZyh2KS5yZXBsYWNlKC8iL2csICciIicpOwogIGlmICgvWywiXG5dLy50ZXN0KHMpKSByZXR1cm4gYCIke3N9ImA7CiAgcmV0dXJuIHM7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBHRVQocmVxOiBOZXh0UmVxdWVzdCkgewogIGNvbnN0IHsgc2VhcmNoUGFyYW1zIH0gPSBuZXcgVVJMKHJlcS51cmwpOwogIGNvbnN0IGtpbmQgPSBzZWFyY2hQYXJhbXMuZ2V0KCJraW5kIikgPz8gImV2ZW50cyI7CiAgY29uc3Qgc2IgPSBzdXBhYmFzZUFkbWluKCk7CgogIGlmIChraW5kID09PSAiZXZlbnRzIikgewogICAgY29uc3QgeyBkYXRhIH0gPSBhd2FpdCBzYgogICAgICAuZnJvbSgiZXZlbnRzIikKICAgICAgLnNlbGVjdCgKICAgICAgICAiY3JlYXRlZF9hdCwgaWdfdXNlcm5hbWUsIGlnX3VzZXJfaWQsIGNvbW1lbnRfdGV4dCwgbWF0Y2hlZF9rZXl3b3JkLCBpZ19tZWRpYV9pZCwgcHVibGljX3JlcGx5X3NlbnQsIHB1YmxpY19yZXBseV9lcnJvciwgZG1fc2VudCwgZG1fZXJyb3IsIHJ1bGVfaWQiCiAgICAgICkKICAgICAgLm9yZGVyKCJjcmVhdGVkX2F0IiwgeyBhc2NlbmRpbmc6IGZhbHNlIH0pCiAgICAgIC5saW1pdCgxMDAwMCk7CgogICAgY29uc3Qgcm93cyA9IChkYXRhID8/IFtdKSBhcyBhbnlbXTsKICAgIGNvbnN0IGhlYWRlciA9IFsKICAgICAgImNyZWF0ZWRfYXQiLAogICAgICAiaWdfdXNlcm5hbWUiLAogICAgICAiaWdfdXNlcl9pZCIsCiAgICAgICJjb21tZW50X3RleHQiLAogICAgICAibWF0Y2hlZF9rZXl3b3JkIiwKICAgICAgImlnX21lZGlhX2lkIiwKICAgICAgInB1YmxpY19yZXBseV9zZW50IiwKICAgICAgInB1YmxpY19yZXBseV9lcnJvciIsCiAgICAgICJkbV9zZW50IiwKICAgICAgImRtX2Vycm9yIiwKICAgICAgInJ1bGVfaWQiLAogICAgXTsKICAgIGNvbnN0IGNzdiA9IFtoZWFkZXIuam9pbigiLCIpXQogICAgICAuY29uY2F0KHJvd3MubWFwKChyKSA9PiBoZWFkZXIubWFwKChoKSA9PiBjc3ZFc2NhcGUocltoXSkpLmpvaW4oIiwiKSkpCiAgICAgIC5qb2luKCJcbiIpOwoKICAgIHJldHVybiBuZXcgTmV4dFJlc3BvbnNlKGNzdiwgewogICAgICBoZWFkZXJzOiB7CiAgICAgICAgImNvbnRlbnQtdHlwZSI6ICJ0ZXh0L2NzdjsgY2hhcnNldD11dGYtOCIsCiAgICAgICAgImNvbnRlbnQtZGlzcG9zaXRpb24iOiBgYXR0YWNobWVudDsgZmlsZW5hbWU9ImRtZmxvd19ldmVudHNfJHtuZXcgRGF0ZSgpCiAgICAgICAgICAudG9JU09TdHJpbmcoKQogICAgICAgICAgLnNsaWNlKDAsIDEwKX0uY3N2ImAsCiAgICAgIH0sCiAgICB9KTsKICB9CgogIGlmIChraW5kID09PSAiY2xpY2tzIikgewogICAgY29uc3QgeyBkYXRhIH0gPSBhd2FpdCBzYgogICAgICAuZnJvbSgidHJhY2tlZF9saW5rcyIpCiAgICAgIC5zZWxlY3QoCiAgICAgICAgImlkLCBjcmVhdGVkX2F0LCBydWxlX2lkLCBidXR0b25fdGl0bGUsIHRhcmdldF91cmwsIGNsaWNrX2NvdW50LCBmaXJzdF9jbGlja2VkX2F0LCBsYXN0X2NsaWNrZWRfYXQsIGlnX3VzZXJfaWQiCiAgICAgICkKICAgICAgLm9yZGVyKCJjcmVhdGVkX2F0IiwgeyBhc2NlbmRpbmc6IGZhbHNlIH0pCiAgICAgIC5saW1pdCgxMDAwMCk7CgogICAgY29uc3Qgcm93cyA9IChkYXRhID8/IFtdKSBhcyBhbnlbXTsKICAgIGNvbnN0IGhlYWRlciA9IFsKICAgICAgImlkIiwKICAgICAgImNyZWF0ZWRfYXQiLAogICAgICAicnVsZV9pZCIsCiAgICAgICJidXR0b25fdGl0bGUiLAogICAgICAidGFyZ2V0X3VybCIsCiAgICAgICJjbGlja19jb3VudCIsCiAgICAgICJmaXJzdF9jbGlja2VkX2F0IiwKICAgICAgImxhc3RfY2xpY2tlZF9hdCIsCiAgICAgICJpZ191c2VyX2lkIiwKICAgIF07CiAgICBjb25zdCBjc3YgPSBbaGVhZGVyLmpvaW4oIiwiKV0KICAgICAgLmNvbmNhdChyb3dzLm1hcCgocikgPT4gaGVhZGVyLm1hcCgoaCkgPT4gY3N2RXNjYXBlKHJbaF0pKS5qb2luKCIsIikpKQogICAgICAuam9pbigiXG4iKTsKCiAgICByZXR1cm4gbmV3IE5leHRSZXNwb25zZShjc3YsIHsKICAgICAgaGVhZGVyczogewogICAgICAgICJjb250ZW50LXR5cGUiOiAidGV4dC9jc3Y7IGNoYXJzZXQ9dXRmLTgiLAogICAgICAgICJjb250ZW50LWRpc3Bvc2l0aW9uIjogYGF0dGFjaG1lbnQ7IGZpbGVuYW1lPSJkbWZsb3dfY2xpY2tzXyR7bmV3IERhdGUoKQogICAgICAgICAgLnRvSVNPU3RyaW5nKCkKICAgICAgICAgIC5zbGljZSgwLCAxMCl9LmNzdiJgLAogICAgICB9LAogICAgfSk7CiAgfQoKICByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oCiAgICB7IGVycm9yOiAidW5rbm93biBraW5kIiwgYWxsb3dlZDogWyJldmVudHMiLCAiY2xpY2tzIl0gfSwKICAgIHsgc3RhdHVzOiA0MDAgfQogICk7Cn0K"}
+import { NextRequest, NextResponse } from "next/server";
+import { supabaseAdmin } from "@/lib/supabase";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+function csvEscape(v: any): string {
+  if (v === null || v === undefined) return "";
+  const s = String(v).replace(/"/g, '""');
+  if (/[,"\n]/.test(s)) return `"${s}"`;
+  return s;
+}
+
+export async function GET(req: NextRequest) {
+  const { searchParams } = new URL(req.url);
+  const kind = searchParams.get("kind") ?? "events";
+  const sb = supabaseAdmin();
+
+  if (kind === "events") {
+    const { data } = await sb
+      .from("events")
+      .select(
+        "created_at, ig_username, ig_user_id, comment_text, matched_keyword, ig_media_id, public_reply_sent, public_reply_error, dm_sent, dm_error, rule_id"
+      )
+      .order("created_at", { ascending: false })
+      .limit(10000);
+
+    const rows = (data ?? []) as any[];
+    const header = [
+      "created_at",
+      "ig_username",
+      "ig_user_id",
+      "comment_text",
+      "matched_keyword",
+      "ig_media_id",
+      "public_reply_sent",
+      "public_reply_error",
+      "dm_sent",
+      "dm_error",
+      "rule_id",
+    ];
+    const csv = [header.join(",")]
+      .concat(rows.map((r) => header.map((h) => csvEscape(r[h])).join(",")))
+      .join("\n");
+
+    return new NextResponse(csv, {
+      headers: {
+        "content-type": "text/csv; charset=utf-8",
+        "content-disposition": `attachment; filename="dmflow_events_${new Date()
+          .toISOString()
+          .slice(0, 10)}.csv"`,
+      },
+    });
+  }
+
+  if (kind === "clicks") {
+    const { data } = await sb
+      .from("tracked_links")
+      .select(
+        "id, created_at, rule_id, button_title, target_url, click_count, first_clicked_at, last_clicked_at, ig_user_id"
+      )
+      .order("created_at", { ascending: false })
+      .limit(10000);
+
+    const rows = (data ?? []) as any[];
+    const header = [
+      "id",
+      "created_at",
+      "rule_id",
+      "button_title",
+      "target_url",
+      "click_count",
+      "first_clicked_at",
+      "last_clicked_at",
+      "ig_user_id",
+    ];
+    const csv = [header.join(",")]
+      .concat(rows.map((r) => header.map((h) => csvEscape(r[h])).join(",")))
+      .join("\n");
+
+    return new NextResponse(csv, {
+      headers: {
+        "content-type": "text/csv; charset=utf-8",
+        "content-disposition": `attachment; filename="dmflow_clicks_${new Date()
+          .toISOString()
+          .slice(0, 10)}.csv"`,
+      },
+    });
+  }
+
+  return NextResponse.json(
+    { error: "unknown kind", allowed: ["events", "clicks"] },
+    { status: 400 }
+  );
+}

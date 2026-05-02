@@ -1,1 +1,140 @@
-{"data":"LyoqCiAqIENvaG9ydCBhbmFseXNpczogZ3JvdXBzIHVzZXJzIGJ5IHdlZWsgb2YgZmlyc3QgY29udGFjdCwKICogcmV0dXJucyByZXRlbnRpb24gJSBhdCA3LzE0LzMwIGRheXMgYmFzZWQgb24gY2xpY2svcmV0dXJuIGV2ZW50cy4KICovCmV4cG9ydCB0eXBlIENvaG9ydFJvdyA9IHsKICB3ZWVrOiBzdHJpbmc7IC8vICJZWVlZLVd3dyIgbGFiZWwKICB3ZWVrX3N0YXJ0OiBzdHJpbmc7IC8vIElTTwogIHNpemU6IG51bWJlcjsKICBjbGlja2VkX2Q3OiBudW1iZXI7CiAgY2xpY2tlZF9kMTQ6IG51bWJlcjsKICBjbGlja2VkX2QzMDogbnVtYmVyOwp9OwoKZnVuY3Rpb24gc3RhcnRPZldlZWsoZDogRGF0ZSk6IERhdGUgewogIGNvbnN0IGRvdyA9IGQuZ2V0RGF5KCk7IC8vIDAgU3VuLi42IFNhdAogIGNvbnN0IGRpZmYgPSAoZG93ICsgNikgJSA3OyAvLyBkYXlzIHNpbmNlIE1vbmRheQogIGNvbnN0IG0gPSBuZXcgRGF0ZShkKTsKICBtLnNldEhvdXJzKDAsIDAsIDAsIDApOwogIG0uc2V0RGF0ZShtLmdldERhdGUoKSAtIGRpZmYpOwogIHJldHVybiBtOwp9CgpmdW5jdGlvbiB3ZWVrTGFiZWwoZDogRGF0ZSk6IHN0cmluZyB7CiAgY29uc3QgeWVhciA9IGQuZ2V0RnVsbFllYXIoKTsKICBjb25zdCBmaXJzdFRodXJzZGF5ID0gbmV3IERhdGUoeWVhciwgMCwgNCk7CiAgY29uc3QgZmlyc3RXZWVrU3RhcnQgPSBzdGFydE9mV2VlayhmaXJzdFRodXJzZGF5KTsKICBjb25zdCB3ZWVrTnVtID0KICAgIE1hdGguZmxvb3IoKGQuZ2V0VGltZSgpIC0gZmlyc3RXZWVrU3RhcnQuZ2V0VGltZSgpKSAvICg3ICogODY0MDAwMDApKSArIDE7CiAgcmV0dXJuIGAke3llYXJ9LVcke1N0cmluZyh3ZWVrTnVtKS5wYWRTdGFydCgyLCAiMCIpfWA7Cn0KCmV4cG9ydCBmdW5jdGlvbiBidWlsZENvaG9ydHMoCiAgZXZlbnRzOiBBcnJheTx7IGlnX3VzZXJfaWQ6IHN0cmluZyB8IG51bGw7IGNyZWF0ZWRfYXQ6IHN0cmluZyB9PiwKICBjbGlja3NCeVVzZXI6IE1hcDxzdHJpbmcsIG51bWJlcltdPgopOiBDb2hvcnRSb3dbXSB7CiAgLy8gZmlyc3Qtc2VlbiBwZXIgdXNlcgogIGNvbnN0IGZpcnN0QnlVc2VyID0gbmV3IE1hcDxzdHJpbmcsIERhdGU+KCk7CiAgZm9yIChjb25zdCBlIG9mIGV2ZW50cykgewogICAgaWYgKCFlLmlnX3VzZXJfaWQpIGNvbnRpbnVlOwogICAgY29uc3QgdCA9IG5ldyBEYXRlKGUuY3JlYXRlZF9hdCk7CiAgICBjb25zdCBwcmV2ID0gZmlyc3RCeVVzZXIuZ2V0KGUuaWdfdXNlcl9pZCk7CiAgICBpZiAoIXByZXYgfHwgdCA8IHByZXYpIGZpcnN0QnlVc2VyLnNldChlLmlnX3VzZXJfaWQsIHQpOwogIH0KCiAgY29uc3QgY29ob3J0TWFwID0gbmV3IE1hcDwKICAgIHN0cmluZywKICAgIHsgd2Vla19zdGFydDogRGF0ZTsgdXNlcnM6IFNldDxzdHJpbmc+IH0KICA+KCk7CgogIGZvciAoY29uc3QgW3VzZXJJZCwgZmlyc3REYXRlXSBvZiBmaXJzdEJ5VXNlci5lbnRyaWVzKCkpIHsKICAgIGNvbnN0IHdTdGFydCA9IHN0YXJ0T2ZXZWVrKGZpcnN0RGF0ZSk7CiAgICBjb25zdCBrZXkgPSB3U3RhcnQudG9JU09TdHJpbmcoKS5zbGljZSgwLCAxMCk7CiAgICBjb25zdCByb3cgPSBjb2hvcnRNYXAuZ2V0KGtleSkgPz8geyB3ZWVrX3N0YXJ0OiB3U3RhcnQsIHVzZXJzOiBuZXcgU2V0KCkgfTsKICAgIHJvdy51c2Vycy5hZGQodXNlcklkKTsKICAgIGNvaG9ydE1hcC5zZXQoa2V5LCByb3cpOwogIH0KCiAgY29uc3Qgcm93czogQ29ob3J0Um93W10gPSBbXTsKICBmb3IgKGNvbnN0IFtfa2V5LCByb3ddIG9mIGNvaG9ydE1hcC5lbnRyaWVzKCkpIHsKICAgIGxldCBkNyA9IDAsCiAgICAgIGQxNCA9IDAsCiAgICAgIGQzMCA9IDA7CiAgICBmb3IgKGNvbnN0IHVzZXJJZCBvZiByb3cudXNlcnMpIHsKICAgICAgY29uc3QgZmlyc3RUcyA9IGZpcnN0QnlVc2VyLmdldCh1c2VySWQpIS5nZXRUaW1lKCk7CiAgICAgIGNvbnN0IHVzZXJDbGlja3MgPSBjbGlja3NCeVVzZXIuZ2V0KHVzZXJJZCkgPz8gW107CiAgICAgIGZvciAoY29uc3QgY3Qgb2YgdXNlckNsaWNrcykgewogICAgICAgIGNvbnN0IGRpZmZEYXlzID0gKGN0IC0gZmlyc3RUcykgLyA4NjQwMDAwMDsKICAgICAgICBpZiAoZGlmZkRheXMgPj0gMCAmJiBkaWZmRGF5cyA8PSA3KSBkNysrOwogICAgICAgIGlmIChkaWZmRGF5cyA+PSAwICYmIGRpZmZEYXlzIDw9IDE0KSBkMTQrKzsKICAgICAgICBpZiAoZGlmZkRheXMgPj0gMCAmJiBkaWZmRGF5cyA8PSAzMCkgZDMwKys7CiAgICAgIH0KICAgIH0KICAgIHJvd3MucHVzaCh7CiAgICAgIHdlZWs6IHdlZWtMYWJlbChyb3cud2Vla19zdGFydCksCiAgICAgIHdlZWtfc3RhcnQ6IHJvdy53ZWVrX3N0YXJ0LnRvSVNPU3RyaW5nKCkuc2xpY2UoMCwgMTApLAogICAgICBzaXplOiByb3cudXNlcnMuc2l6ZSwKICAgICAgY2xpY2tlZF9kNzogZDcsCiAgICAgIGNsaWNrZWRfZDE0OiBkMTQsCiAgICAgIGNsaWNrZWRfZDMwOiBkMzAsCiAgICB9KTsKICB9CgogIHJvd3Muc29ydCgoYSwgYikgPT4gYS53ZWVrX3N0YXJ0LmxvY2FsZUNvbXBhcmUoYi53ZWVrX3N0YXJ0KSk7CiAgcmV0dXJuIHJvd3Muc2xpY2UoLTEyKTsgLy8gw7psdGltYXMgMTIgc2VtYW5hcwp9CgovKioKICogU2ltcGxlIGxpbmVhciByZWdyZXNzaW9uIGZvcmVjYXN0LgogKiBHaXZlbiBzZXJpZXMgb2YgbGFzdCBOIHBlcmlvZHMsIGV4dHJhcG9sYXRlcyBuZXh0IE0gcGVyaW9kcy4KICovCmV4cG9ydCBmdW5jdGlvbiBmb3JlY2FzdExpbmVhcigKICBzZXJpZXM6IG51bWJlcltdLAogIHBlcmlvZHNBaGVhZDogbnVtYmVyCik6IG51bWJlcltdIHsKICBjb25zdCBuID0gc2VyaWVzLmxlbmd0aDsKICBpZiAobiA8IDIpIHJldHVybiBuZXcgQXJyYXkocGVyaW9kc0FoZWFkKS5maWxsKHNlcmllc1swXSA/PyAwKTsKCiAgLy8gbWVhbiB4LCB5CiAgY29uc3QgeHMgPSBzZXJpZXMubWFwKChfLCBpKSA9PiBpKTsKICBjb25zdCB5cyA9IHNlcmllczsKICBjb25zdCBtZWFuWCA9IHhzLnJlZHVjZSgoYSwgYikgPT4gYSArIGIsIDApIC8gbjsKICBjb25zdCBtZWFuWSA9IHlzLnJlZHVjZSgoYSwgYikgPT4gYSArIGIsIDApIC8gbjsKCiAgbGV0IG51bSA9IDAsCiAgICBkZW4gPSAwOwogIGZvciAobGV0IGkgPSAwOyBpIDwgbjsgaSsrKSB7CiAgICBudW0gKz0gKHhzW2ldIC0gbWVhblgpICogKHlzW2ldIC0gbWVhblkpOwogICAgZGVuICs9ICh4c1tpXSAtIG1lYW5YKSAqKiAyOwogIH0KICBjb25zdCBzbG9wZSA9IGRlbiA9PT0gMCA/IDAgOiBudW0gLyBkZW47CiAgY29uc3QgaW50ZXJjZXB0ID0gbWVhblkgLSBzbG9wZSAqIG1lYW5YOwoKICBjb25zdCBvdXQ6IG51bWJlcltdID0gW107CiAgZm9yIChsZXQgaSA9IDA7IGkgPCBwZXJpb2RzQWhlYWQ7IGkrKykgewogICAgY29uc3QgeCA9IG4gKyBpOwogICAgY29uc3QgeSA9IGludGVyY2VwdCArIHNsb3BlICogeDsKICAgIG91dC5wdXNoKE1hdGgubWF4KDAsIE1hdGgucm91bmQoeSkpKTsKICB9CiAgcmV0dXJuIG91dDsKfQoKLyoqCiAqIFBlcmlvZCBjb21wYXJpc29uLiBHaXZlbiBhIHRhcmdldCBwZXJpb2QgYW5kIGl0cyBwcmV2aW91cyBlcXVpdmFsZW50LAogKiByZXR1cm5zIHsgY3VycmVudCwgcHJldmlvdXMsIGRlbHRhX2FicywgZGVsdGFfcGN0IH0uCiAqLwpleHBvcnQgZnVuY3Rpb24gY29tcGFyZVRvdGFscyhjdXJyZW50OiBudW1iZXIsIHByZXZpb3VzOiBudW1iZXIpIHsKICBjb25zdCBkZWx0YUFicyA9IGN1cnJlbnQgLSBwcmV2aW91czsKICBjb25zdCBkZWx0YVBjdCA9CiAgICBwcmV2aW91cyA9PT0gMAogICAgICA/IGN1cnJlbnQgPT09IDAKICAgICAgICA/IDAKICAgICAgICA6IDEwMAogICAgICA6IChkZWx0YUFicyAvIHByZXZpb3VzKSAqIDEwMDsKICByZXR1cm4gewogICAgY3VycmVudCwKICAgIHByZXZpb3VzLAogICAgZGVsdGFfYWJzOiBkZWx0YUFicywKICAgIGRlbHRhX3BjdDogZGVsdGFQY3QsCiAgfTsKfQo="}
+/**
+ * Cohort analysis: groups users by week of first contact,
+ * returns retention % at 7/14/30 days based on click/return events.
+ */
+export type CohortRow = {
+  week: string; // "YYYY-Www" label
+  week_start: string; // ISO
+  size: number;
+  clicked_d7: number;
+  clicked_d14: number;
+  clicked_d30: number;
+};
+
+function startOfWeek(d: Date): Date {
+  const dow = d.getDay(); // 0 Sun..6 Sat
+  const diff = (dow + 6) % 7; // days since Monday
+  const m = new Date(d);
+  m.setHours(0, 0, 0, 0);
+  m.setDate(m.getDate() - diff);
+  return m;
+}
+
+function weekLabel(d: Date): string {
+  const year = d.getFullYear();
+  const firstThursday = new Date(year, 0, 4);
+  const firstWeekStart = startOfWeek(firstThursday);
+  const weekNum =
+    Math.floor((d.getTime() - firstWeekStart.getTime()) / (7 * 86400000)) + 1;
+  return `${year}-W${String(weekNum).padStart(2, "0")}`;
+}
+
+export function buildCohorts(
+  events: Array<{ ig_user_id: string | null; created_at: string }>,
+  clicksByUser: Map<string, number[]>
+): CohortRow[] {
+  // first-seen per user
+  const firstByUser = new Map<string, Date>();
+  for (const e of events) {
+    if (!e.ig_user_id) continue;
+    const t = new Date(e.created_at);
+    const prev = firstByUser.get(e.ig_user_id);
+    if (!prev || t < prev) firstByUser.set(e.ig_user_id, t);
+  }
+
+  const cohortMap = new Map<
+    string,
+    { week_start: Date; users: Set<string> }
+  >();
+
+  for (const [userId, firstDate] of firstByUser.entries()) {
+    const wStart = startOfWeek(firstDate);
+    const key = wStart.toISOString().slice(0, 10);
+    const row = cohortMap.get(key) ?? { week_start: wStart, users: new Set() };
+    row.users.add(userId);
+    cohortMap.set(key, row);
+  }
+
+  const rows: CohortRow[] = [];
+  for (const [_key, row] of cohortMap.entries()) {
+    let d7 = 0,
+      d14 = 0,
+      d30 = 0;
+    for (const userId of row.users) {
+      const firstTs = firstByUser.get(userId)!.getTime();
+      const userClicks = clicksByUser.get(userId) ?? [];
+      for (const ct of userClicks) {
+        const diffDays = (ct - firstTs) / 86400000;
+        if (diffDays >= 0 && diffDays <= 7) d7++;
+        if (diffDays >= 0 && diffDays <= 14) d14++;
+        if (diffDays >= 0 && diffDays <= 30) d30++;
+      }
+    }
+    rows.push({
+      week: weekLabel(row.week_start),
+      week_start: row.week_start.toISOString().slice(0, 10),
+      size: row.users.size,
+      clicked_d7: d7,
+      clicked_d14: d14,
+      clicked_d30: d30,
+    });
+  }
+
+  rows.sort((a, b) => a.week_start.localeCompare(b.week_start));
+  return rows.slice(-12); // últimas 12 semanas
+}
+
+/**
+ * Simple linear regression forecast.
+ * Given series of last N periods, extrapolates next M periods.
+ */
+export function forecastLinear(
+  series: number[],
+  periodsAhead: number
+): number[] {
+  const n = series.length;
+  if (n < 2) return new Array(periodsAhead).fill(series[0] ?? 0);
+
+  // mean x, y
+  const xs = series.map((_, i) => i);
+  const ys = series;
+  const meanX = xs.reduce((a, b) => a + b, 0) / n;
+  const meanY = ys.reduce((a, b) => a + b, 0) / n;
+
+  let num = 0,
+    den = 0;
+  for (let i = 0; i < n; i++) {
+    num += (xs[i] - meanX) * (ys[i] - meanY);
+    den += (xs[i] - meanX) ** 2;
+  }
+  const slope = den === 0 ? 0 : num / den;
+  const intercept = meanY - slope * meanX;
+
+  const out: number[] = [];
+  for (let i = 0; i < periodsAhead; i++) {
+    const x = n + i;
+    const y = intercept + slope * x;
+    out.push(Math.max(0, Math.round(y)));
+  }
+  return out;
+}
+
+/**
+ * Period comparison. Given a target period and its previous equivalent,
+ * returns { current, previous, delta_abs, delta_pct }.
+ */
+export function compareTotals(current: number, previous: number) {
+  const deltaAbs = current - previous;
+  const deltaPct =
+    previous === 0
+      ? current === 0
+        ? 0
+        : 100
+      : (deltaAbs / previous) * 100;
+  return {
+    current,
+    previous,
+    delta_abs: deltaAbs,
+    delta_pct: deltaPct,
+  };
+}

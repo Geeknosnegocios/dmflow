@@ -1,1 +1,204 @@
-{"data":"InVzZSBjbGllbnQiOwoKaW1wb3J0IFJlYWN0LCB7IHVzZVN0YXRlIH0gZnJvbSAicmVhY3QiOwppbXBvcnQgdHlwZSB7IFJ1bGUgfSBmcm9tICJAL3R5cGVzL2RiIjsKCmV4cG9ydCBmdW5jdGlvbiBFZGl0UnVsZUJ1dHRvbih7CiAgcnVsZSwKICB1cGRhdGVBY3Rpb24sCiAgYWNjb3VudE5hbWUsCn06IHsKICBydWxlOiBSdWxlOwogIHVwZGF0ZUFjdGlvbjogKGZkOiBGb3JtRGF0YSkgPT4gUHJvbWlzZTx2b2lkPjsKICBhY2NvdW50TmFtZT86IHN0cmluZzsKfSkgewogIGNvbnN0IFtvcGVuLCBzZXRPcGVuXSA9IHVzZVN0YXRlKGZhbHNlKTsKCiAgaWYgKCFvcGVuKSB7CiAgICByZXR1cm4gKAogICAgICA8YnV0dG9uCiAgICAgICAgdHlwZT0iYnV0dG9uIgogICAgICAgIG9uQ2xpY2s9eygpID0+IHNldE9wZW4odHJ1ZSl9CiAgICAgICAgY2xhc3NOYW1lPSJ0ZXh0LXRpbnkgcm91bmRlZC1tZCBib3JkZXIgbWluLWgtWzMycHhdIGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBib3JkZXItbGluZS0yIGhvdmVyOmJvcmRlci1hY2NlbnQvNDAgcHgtMi41IHB5LTEgdGV4dC1kaW0tMiBob3Zlcjp0ZXh0LWFjY2VudCB0cmFuc2l0aW9uLWNvbG9ycyIKICAgICAgPgogICAgICAgIGVkaXRhcgogICAgICA8L2J1dHRvbj4KICAgICk7CiAgfQoKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9ImZpeGVkIGluc2V0LTAgei01MCBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBiZy1ibGFjay82MCBwLTQiIG9uQ2xpY2s9eygpID0+IHNldE9wZW4oZmFsc2UpfT4KICAgICAgPGRpdgogICAgICAgIGNsYXNzTmFtZT0iYmctc3VyZmFjZSBib3JkZXIgYm9yZGVyLWxpbmUtMiByb3VuZGVkLTJ4bCBzaGFkb3ctMnhsIHctZnVsbCBtYXgtdy0yeGwgbWF4LWgtWzkwdmhdIG92ZXJmbG93LXktYXV0byIKICAgICAgICBvbkNsaWNrPXsoZSkgPT4gZS5zdG9wUHJvcGFnYXRpb24oKX0KICAgICAgPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gcC01IGJvcmRlci1iIGJvcmRlci1saW5lIj4KICAgICAgICAgIDxoMiBjbGFzc05hbWU9ImZvbnQtc2VtaWJvbGQgdGV4dC1sZyI+RWRpdGFyIHJlZ3JhPC9oMj4KICAgICAgICAgIDxidXR0b24KICAgICAgICAgICAgdHlwZT0iYnV0dG9uIgogICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBzZXRPcGVuKGZhbHNlKX0KICAgICAgICAgICAgY2xhc3NOYW1lPSJ0ZXh0LWRpbS0yIGhvdmVyOnRleHQtZmcgdGV4dC14bCBsZWFkaW5nLW5vbmUiCiAgICAgICAgICA+CiAgICAgICAgICAgIMOXCiAgICAgICAgICA8L2J1dHRvbj4KICAgICAgICA8L2Rpdj4KICAgICAgICA8Zm9ybQogICAgICAgICAgYWN0aW9uPXthc3luYyAoZmQpID0+IHsKICAgICAgICAgICAgYXdhaXQgdXBkYXRlQWN0aW9uKGZkKTsKICAgICAgICAgICAgc2V0T3BlbihmYWxzZSk7CiAgICAgICAgICB9fQogICAgICAgICAgY2xhc3NOYW1lPSJwLTUgc3BhY2UteS00IgogICAgICAgID4KICAgICAgICAgIDxpbnB1dCB0eXBlPSJoaWRkZW4iIG5hbWU9ImlkIiB2YWx1ZT17cnVsZS5pZH0gLz4KCiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZ3JpZCBncmlkLWNvbHMtMSBtZDpncmlkLWNvbHMtMiBnYXAtMyI+CiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJzcGFjZS15LTEiPgogICAgICAgICAgICAgIDxsYWJlbCBjbGFzc05hbWU9InRleHQtdGlueSB0ZXh0LWRpbS0yIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciBibG9jayI+Tm9tZSBkYSByZWdyYTwvbGFiZWw+CiAgICAgICAgICAgICAgPGlucHV0CiAgICAgICAgICAgICAgICBuYW1lPSJuYW1lIgogICAgICAgICAgICAgICAgZGVmYXVsdFZhbHVlPXtydWxlLm5hbWV9CiAgICAgICAgICAgICAgICByZXF1aXJlZAogICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJ3LWZ1bGwgYmctYmctMSBib3JkZXIgYm9yZGVyLWxpbmUtMiByb3VuZGVkLWxnIHB4LTMgcHktMiB0ZXh0LXNtIHBsYWNlaG9sZGVyOnRleHQtZGltLTIgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOmJvcmRlci1hY2NlbnQvNTAgdHJhbnNpdGlvbi1jb2xvcnMiCiAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJzcGFjZS15LTEiPgogICAgICAgICAgICAgIDxsYWJlbCBjbGFzc05hbWU9InRleHQtdGlueSB0ZXh0LWRpbS0yIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciBibG9jayI+VGlwbyBkZSBnYXRpbGhvPC9sYWJlbD4KICAgICAgICAgICAgICA8c2VsZWN0CiAgICAgICAgICAgICAgICBuYW1lPSJ0cmlnZ2VyX3R5cGUiCiAgICAgICAgICAgICAgICBkZWZhdWx0VmFsdWU9e3J1bGUudHJpZ2dlcl90eXBlfQogICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJ3LWZ1bGwgYmctYmctMSBib3JkZXIgYm9yZGVyLWxpbmUtMiByb3VuZGVkLWxnIHB4LTMgcHktMiB0ZXh0LXNtIHRleHQtZmcgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOmJvcmRlci1hY2NlbnQvNTAgdHJhbnNpdGlvbi1jb2xvcnMiCiAgICAgICAgICAgICAgPgogICAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT0iY29tbWVudCI+Q29tZW50w6FyaW8gZW0gcG9zdDwvb3B0aW9uPgogICAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT0iZmlyc3RfZG0iPlByaW1laXJhIERNIChib2FzLXZpbmRhcyk8L29wdGlvbj4KICAgICAgICAgICAgICAgIDxvcHRpb24gdmFsdWU9InN0b3J5X3JlcGx5Ij5SZXNwb3N0YSBhIHN0b3J5PC9vcHRpb24+CiAgICAgICAgICAgICAgPC9zZWxlY3Q+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9kaXY+CgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImdyaWQgZ3JpZC1jb2xzLTEgbWQ6Z3JpZC1jb2xzLTIgZ2FwLTMiPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS0xIj4KICAgICAgICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPSJ0ZXh0LXRpbnkgdGV4dC1kaW0tMiB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXIgYmxvY2siPktleXdvcmQ8L2xhYmVsPgogICAgICAgICAgICAgIDxpbnB1dAogICAgICAgICAgICAgICAgbmFtZT0ia2V5d29yZCIKICAgICAgICAgICAgICAgIGRlZmF1bHRWYWx1ZT17cnVsZS5rZXl3b3JkID8/ICIifQogICAgICAgICAgICAgICAgcGxhY2Vob2xkZXI9J0V4OiAiUVVFUk8iIOKAlCB2YXppbyA9IHF1YWxxdWVyJwogICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJ3LWZ1bGwgYmctYmctMSBib3JkZXIgYm9yZGVyLWxpbmUtMiByb3VuZGVkLWxnIHB4LTMgcHktMiB0ZXh0LXNtIHBsYWNlaG9sZGVyOnRleHQtZGltLTIgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOmJvcmRlci1hY2NlbnQvNTAgdHJhbnNpdGlvbi1jb2xvcnMiCiAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJzcGFjZS15LTEiPgogICAgICAgICAgICAgIDxsYWJlbCBjbGFzc05hbWU9InRleHQtdGlueSB0ZXh0LWRpbS0yIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciBibG9jayI+TWF0Y2ggbW9kZTwvbGFiZWw+CiAgICAgICAgICAgICAgPHNlbGVjdAogICAgICAgICAgICAgICAgbmFtZT0ibWF0Y2hfbW9kZSIKICAgICAgICAgICAgICAgIGRlZmF1bHRWYWx1ZT17cnVsZS5tYXRjaF9tb2RlfQogICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJ3LWZ1bGwgYmctYmctMSBib3JkZXIgYm9yZGVyLWxpbmUtMiByb3VuZGVkLWxnIHB4LTMgcHktMiB0ZXh0LXNtIHRleHQtZmcgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOmJvcmRlci1hY2NlbnQvNTAgdHJhbnNpdGlvbi1jb2xvcnMiCiAgICAgICAgICAgICAgPgogICAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT0iY29udGFpbnMiPmNvbnTDqW0ga2V5d29yZDwvb3B0aW9uPgogICAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT0iZXhhY3QiPmV4YXRvPC9vcHRpb24+CiAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSJzdGFydHNfd2l0aCI+Y29tZcOnYSBjb208L29wdGlvbj4KICAgICAgICAgICAgICAgIDxvcHRpb24gdmFsdWU9ImFueSI+cXVhbHF1ZXIgdGV4dG8gZGlzcGFyYTwvb3B0aW9uPgogICAgICAgICAgICAgIDwvc2VsZWN0PgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDwvZGl2PgoKICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJzcGFjZS15LTEiPgogICAgICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPSJ0ZXh0LXRpbnkgdGV4dC1kaW0tMiB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXIgYmxvY2siPgogICAgICAgICAgICAgIFJlc3Bvc3RhIHDDumJsaWNhIChzw7MgY29tZW50w6FyaW8pCiAgICAgICAgICAgIDwvbGFiZWw+CiAgICAgICAgICAgIDx0ZXh0YXJlYQogICAgICAgICAgICAgIG5hbWU9InB1YmxpY19yZXBseSIKICAgICAgICAgICAgICBkZWZhdWx0VmFsdWU9e3J1bGUucHVibGljX3JlcGx5ID8/ICIifQogICAgICAgICAgICAgIHJvd3M9ezJ9CiAgICAgICAgICAgICAgY2xhc3NOYW1lPSJ3LWZ1bGwgYmctYmctMSBib3JkZXIgYm9yZGVyLWxpbmUtMiByb3VuZGVkLWxnIHB4LTMgcHktMiB0ZXh0LXNtIHBsYWNlaG9sZGVyOnRleHQtZGltLTIgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOmJvcmRlci1hY2NlbnQvNTAgdHJhbnNpdGlvbi1jb2xvcnMgcmVzaXplLXkiCiAgICAgICAgICAgIC8+CiAgICAgICAgICA8L2Rpdj4KCiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS0xIj4KICAgICAgICAgICAgPGxhYmVsIGNsYXNzTmFtZT0idGV4dC10aW55IHRleHQtZGltLTIgdXBwZXJjYXNlIHRyYWNraW5nLXdpZGVyIGJsb2NrIj4KICAgICAgICAgICAgICBNZW5zYWdlbSBETSAqCiAgICAgICAgICAgIDwvbGFiZWw+CiAgICAgICAgICAgIDx0ZXh0YXJlYQogICAgICAgICAgICAgIG5hbWU9ImRtX21lc3NhZ2UiCiAgICAgICAgICAgICAgZGVmYXVsdFZhbHVlPXtydWxlLmRtX21lc3NhZ2V9CiAgICAgICAgICAgICAgcm93cz17M30KICAgICAgICAgICAgICByZXF1aXJlZAogICAgICAgICAgICAgIGNsYXNzTmFtZT0idy1mdWxsIGJnLWJnLTEgYm9yZGVyIGJvcmRlci1saW5lLTIgcm91bmRlZC1sZyBweC0zIHB5LTIgdGV4dC1zbSBwbGFjZWhvbGRlcjp0ZXh0LWRpbS0yIGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpib3JkZXItYWNjZW50LzUwIHRyYW5zaXRpb24tY29sb3JzIHJlc2l6ZS15IgogICAgICAgICAgICAvPgogICAgICAgICAgPC9kaXY+CgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktMiI+CiAgICAgICAgICAgIDxsYWJlbCBjbGFzc05hbWU9InRleHQtdGlueSB0ZXh0LWRpbS0yIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciBibG9jayI+Qm90w7VlcyAoYXTDqSAzKTwvbGFiZWw+CiAgICAgICAgICAgIHtbMCwgMSwgMl0ubWFwKChpKSA9PiB7CiAgICAgICAgICAgICAgY29uc3QgYiA9IHJ1bGUuZG1fYnV0dG9ucz8uW2ldOwogICAgICAgICAgICAgIHJldHVybiAoCiAgICAgICAgICAgICAgICA8ZGl2IGtleT17aX0gY2xhc3NOYW1lPSJncmlkIGdyaWQtY29scy1bMWZyXzJmcl0gZ2FwLTIiPgogICAgICAgICAgICAgICAgICA8aW5wdXQKICAgICAgICAgICAgICAgICAgICBuYW1lPXtgYnRuX3RleHRfJHtpfWB9CiAgICAgICAgICAgICAgICAgICAgcGxhY2Vob2xkZXI9e2BCb3TDo28gJHtpICsgMX0gwrcgdGV4dG9gfQogICAgICAgICAgICAgICAgICAgIG1heExlbmd0aD17MjB9CiAgICAgICAgICAgICAgICAgICAgZGVmYXVsdFZhbHVlPXtiPy50aXRsZSA/PyAiIn0KICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9InctZnVsbCBiZy1iZy0xIGJvcmRlciBib3JkZXItbGluZS0yIHJvdW5kZWQtbGcgcHgtMyBweS0yIHRleHQtc20gcGxhY2Vob2xkZXI6dGV4dC1kaW0tMiBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6Ym9yZGVyLWFjY2VudC81MCB0cmFuc2l0aW9uLWNvbG9ycyIKICAgICAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgICAgICAgPGlucHV0CiAgICAgICAgICAgICAgICAgICAgbmFtZT17YGJ0bl91cmxfJHtpfWB9CiAgICAgICAgICAgICAgICAgICAgcGxhY2Vob2xkZXI9e2BCb3TDo28gJHtpICsgMX0gwrcgVVJMYH0KICAgICAgICAgICAgICAgICAgICBkZWZhdWx0VmFsdWU9e2I/LnVybCA/PyAiIn0KICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9InctZnVsbCBiZy1iZy0xIGJvcmRlciBib3JkZXItbGluZS0yIHJvdW5kZWQtbGcgcHgtMyBweS0yIHRleHQtc20gcGxhY2Vob2xkZXI6dGV4dC1kaW0tMiBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6Ym9yZGVyLWFjY2VudC81MCB0cmFuc2l0aW9uLWNvbG9ycyIKICAgICAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICk7CiAgICAgICAgICAgIH0pfQogICAgICAgICAgPC9kaXY+CgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImdyaWQgZ3JpZC1jb2xzLTEgbWQ6Z3JpZC1jb2xzLVsxMjBweF8xZnJdIGdhcC0zIj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktMSI+CiAgICAgICAgICAgICAgPGxhYmVsIGNsYXNzTmFtZT0idGV4dC10aW55IHRleHQtZGltLTIgdXBwZXJjYXNlIHRyYWNraW5nLXdpZGVyIGJsb2NrIj5Gb2xsb3ctdXAgKGgpPC9sYWJlbD4KICAgICAgICAgICAgICA8aW5wdXQKICAgICAgICAgICAgICAgIG5hbWU9ImZvbGxvd3VwX2RlbGF5X2hvdXJzIgogICAgICAgICAgICAgICAgdHlwZT0ibnVtYmVyIgogICAgICAgICAgICAgICAgbWluPXswfQogICAgICAgICAgICAgICAgZGVmYXVsdFZhbHVlPXtydWxlLmZvbGxvd3VwX2RlbGF5X2hvdXJzID8/IDB9CiAgICAgICAgICAgICAgICBjbGFzc05hbWU9InctZnVsbCBiZy1iZy0xIGJvcmRlciBib3JkZXItbGluZS0yIHJvdW5kZWQtbGcgcHgtMyBweS0yIHRleHQtc20gcGxhY2Vob2xkZXI6dGV4dC1kaW0tMiBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6Ym9yZGVyLWFjY2VudC81MCB0cmFuc2l0aW9uLWNvbG9ycyIKICAgICAgICAgICAgICAvPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktMSI+CiAgICAgICAgICAgICAgPGxhYmVsIGNsYXNzTmFtZT0idGV4dC10aW55IHRleHQtZGltLTIgdXBwZXJjYXNlIHRyYWNraW5nLXdpZGVyIGJsb2NrIj5NZW5zYWdlbSBmb2xsb3ctdXA8L2xhYmVsPgogICAgICAgICAgICAgIDx0ZXh0YXJlYQogICAgICAgICAgICAgICAgbmFtZT0iZm9sbG93dXBfbWVzc2FnZSIKICAgICAgICAgICAgICAgIHJvd3M9ezJ9CiAgICAgICAgICAgICAgICBkZWZhdWx0VmFsdWU9e3J1bGUuZm9sbG93dXBfbWVzc2FnZSA/PyAiIn0KICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0idy1mdWxsIGJnLWJnLTEgYm9yZGVyIGJvcmRlci1saW5lLTIgcm91bmRlZC1sZyBweC0zIHB5LTIgdGV4dC1zbSBwbGFjZWhvbGRlcjp0ZXh0LWRpbS0yIGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpib3JkZXItYWNjZW50LzUwIHRyYW5zaXRpb24tY29sb3JzIHJlc2l6ZS15IgogICAgICAgICAgICAgIC8+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9kaXY+CgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBwdC0zIGJvcmRlci10IGJvcmRlci1saW5lIj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktMSI+CiAgICAgICAgICAgICAgPGxhYmVsIGNsYXNzTmFtZT0idGV4dC10aW55IHRleHQtZGltLTIgdXBwZXJjYXNlIHRyYWNraW5nLXdpZGVyIGJsb2NrIj5QcmlvcmlkYWRlPC9sYWJlbD4KICAgICAgICAgICAgICA8aW5wdXQKICAgICAgICAgICAgICAgIG5hbWU9InByaW9yaXR5IgogICAgICAgICAgICAgICAgdHlwZT0ibnVtYmVyIgogICAgICAgICAgICAgICAgZGVmYXVsdFZhbHVlPXtydWxlLnByaW9yaXR5fQogICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJ3LTMyIGJnLWJnLTEgYm9yZGVyIGJvcmRlci1saW5lLTIgcm91bmRlZC1sZyBweC0zIHB5LTIgdGV4dC1zbSBwbGFjZWhvbGRlcjp0ZXh0LWRpbS0yIGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpib3JkZXItYWNjZW50LzUwIHRyYW5zaXRpb24tY29sb3JzIgogICAgICAgICAgICAgIC8+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBnYXAtMiI+CiAgICAgICAgICAgICAgPGJ1dHRvbgogICAgICAgICAgICAgICAgdHlwZT0iYnV0dG9uIgogICAgICAgICAgICAgICAgb25DbGljaz17KCkgPT4gc2V0T3BlbihmYWxzZSl9CiAgICAgICAgICAgICAgICBjbGFzc05hbWU9InJvdW5kZWQtbGcgYm9yZGVyIGJvcmRlci1saW5lLTIgcHgtNCBweS0yIHRleHQtc20gdGV4dC1kaW0tMiBob3Zlcjp0ZXh0LWZnIHRyYW5zaXRpb24tY29sb3JzIgogICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgIENhbmNlbGFyCiAgICAgICAgICAgICAgPC9idXR0b24+CiAgICAgICAgICAgICAgPGJ1dHRvbgogICAgICAgICAgICAgICAgdHlwZT0ic3VibWl0IgogICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJyb3VuZGVkLWxnIGJnLWFjY2VudCBob3ZlcjpiZy1hY2NlbnQvOTAgdGV4dC1hY2NlbnQtaW5rIGZvbnQtc2VtaWJvbGQgcHgtNSBweS0yIHRleHQtc20gdHJhbnNpdGlvbi1jb2xvcnMiCiAgICAgICAgICAgICAgPgogICAgICAgICAgICAgICAgU2FsdmFyIGFsdGVyYcOnw7VlcwogICAgICAgICAgICAgIDwvYnV0dG9uPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZm9ybT4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICApOwp9Cg=="}
+"use client";
+
+import React, { useState } from "react";
+import type { Rule } from "@/types/db";
+
+export function EditRuleButton({
+  rule,
+  updateAction,
+  accountName,
+}: {
+  rule: Rule;
+  updateAction: (fd: FormData) => Promise<void>;
+  accountName?: string;
+}) {
+  const [open, setOpen] = useState(false);
+
+  if (!open) {
+    return (
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="text-tiny rounded-md border min-h-[32px] inline-flex items-center justify-center border-line-2 hover:border-accent/40 px-2.5 py-1 text-dim-2 hover:text-accent transition-colors"
+      >
+        editar
+      </button>
+    );
+  }
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4" onClick={() => setOpen(false)}>
+      <div
+        className="bg-surface border border-line-2 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-center justify-between p-5 border-b border-line">
+          <h2 className="font-semibold text-lg">Editar regra</h2>
+          <button
+            type="button"
+            onClick={() => setOpen(false)}
+            className="text-dim-2 hover:text-fg text-xl leading-none"
+          >
+            ×
+          </button>
+        </div>
+        <form
+          action={async (fd) => {
+            await updateAction(fd);
+            setOpen(false);
+          }}
+          className="p-5 space-y-4"
+        >
+          <input type="hidden" name="id" value={rule.id} />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="space-y-1">
+              <label className="text-tiny text-dim-2 uppercase tracking-wider block">Nome da regra</label>
+              <input
+                name="name"
+                defaultValue={rule.name}
+                required
+                className="w-full bg-bg-1 border border-line-2 rounded-lg px-3 py-2 text-sm placeholder:text-dim-2 focus:outline-none focus:border-accent/50 transition-colors"
+              />
+            </div>
+            <div className="space-y-1">
+              <label className="text-tiny text-dim-2 uppercase tracking-wider block">Tipo de gatilho</label>
+              <select
+                name="trigger_type"
+                defaultValue={rule.trigger_type}
+                className="w-full bg-bg-1 border border-line-2 rounded-lg px-3 py-2 text-sm text-fg focus:outline-none focus:border-accent/50 transition-colors"
+              >
+                <option value="comment">Comentário em post</option>
+                <option value="first_dm">Primeira DM (boas-vindas)</option>
+                <option value="story_reply">Resposta a story</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="space-y-1">
+              <label className="text-tiny text-dim-2 uppercase tracking-wider block">Keyword</label>
+              <input
+                name="keyword"
+                defaultValue={rule.keyword ?? ""}
+                placeholder='Ex: "QUERO" — vazio = qualquer'
+                className="w-full bg-bg-1 border border-line-2 rounded-lg px-3 py-2 text-sm placeholder:text-dim-2 focus:outline-none focus:border-accent/50 transition-colors"
+              />
+            </div>
+            <div className="space-y-1">
+              <label className="text-tiny text-dim-2 uppercase tracking-wider block">Match mode</label>
+              <select
+                name="match_mode"
+                defaultValue={rule.match_mode}
+                className="w-full bg-bg-1 border border-line-2 rounded-lg px-3 py-2 text-sm text-fg focus:outline-none focus:border-accent/50 transition-colors"
+              >
+                <option value="contains">contém keyword</option>
+                <option value="exact">exato</option>
+                <option value="starts_with">começa com</option>
+                <option value="any">qualquer texto dispara</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="space-y-1">
+            <label className="text-tiny text-dim-2 uppercase tracking-wider block">
+              Resposta pública (só comentário)
+            </label>
+            <textarea
+              name="public_reply"
+              defaultValue={rule.public_reply ?? ""}
+              rows={2}
+              className="w-full bg-bg-1 border border-line-2 rounded-lg px-3 py-2 text-sm placeholder:text-dim-2 focus:outline-none focus:border-accent/50 transition-colors resize-y"
+            />
+          </div>
+
+          <div className="space-y-1">
+            <label className="text-tiny text-dim-2 uppercase tracking-wider block">
+              Mensagem DM *
+            </label>
+            <textarea
+              name="dm_message"
+              defaultValue={rule.dm_message}
+              rows={3}
+              required
+              className="w-full bg-bg-1 border border-line-2 rounded-lg px-3 py-2 text-sm placeholder:text-dim-2 focus:outline-none focus:border-accent/50 transition-colors resize-y"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <label className="text-tiny text-dim-2 uppercase tracking-wider block">Botões (até 3)</label>
+            {[0, 1, 2].map((i) => {
+              const b = rule.dm_buttons?.[i];
+              return (
+                <div key={i} className="grid grid-cols-[1fr_2fr] gap-2">
+                  <input
+                    name={`btn_text_${i}`}
+                    placeholder={`Botão ${i + 1} · texto`}
+                    maxLength={20}
+                    defaultValue={b?.title ?? ""}
+                    className="w-full bg-bg-1 border border-line-2 rounded-lg px-3 py-2 text-sm placeholder:text-dim-2 focus:outline-none focus:border-accent/50 transition-colors"
+                  />
+                  <input
+                    name={`btn_url_${i}`}
+                    placeholder={`Botão ${i + 1} · URL`}
+                    defaultValue={b?.url ?? ""}
+                    className="w-full bg-bg-1 border border-line-2 rounded-lg px-3 py-2 text-sm placeholder:text-dim-2 focus:outline-none focus:border-accent/50 transition-colors"
+                  />
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-3">
+            <div className="space-y-1">
+              <label className="text-tiny text-dim-2 uppercase tracking-wider block">Follow-up (h)</label>
+              <input
+                name="followup_delay_hours"
+                type="number"
+                min={0}
+                defaultValue={rule.followup_delay_hours ?? 0}
+                className="w-full bg-bg-1 border border-line-2 rounded-lg px-3 py-2 text-sm placeholder:text-dim-2 focus:outline-none focus:border-accent/50 transition-colors"
+              />
+            </div>
+            <div className="space-y-1">
+              <label className="text-tiny text-dim-2 uppercase tracking-wider block">Mensagem follow-up</label>
+              <textarea
+                name="followup_message"
+                rows={2}
+                defaultValue={rule.followup_message ?? ""}
+                className="w-full bg-bg-1 border border-line-2 rounded-lg px-3 py-2 text-sm placeholder:text-dim-2 focus:outline-none focus:border-accent/50 transition-colors resize-y"
+              />
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between pt-3 border-t border-line">
+            <div className="space-y-1">
+              <label className="text-tiny text-dim-2 uppercase tracking-wider block">Prioridade</label>
+              <input
+                name="priority"
+                type="number"
+                defaultValue={rule.priority}
+                className="w-32 bg-bg-1 border border-line-2 rounded-lg px-3 py-2 text-sm placeholder:text-dim-2 focus:outline-none focus:border-accent/50 transition-colors"
+              />
+            </div>
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={() => setOpen(false)}
+                className="rounded-lg border border-line-2 px-4 py-2 text-sm text-dim-2 hover:text-fg transition-colors"
+              >
+                Cancelar
+              </button>
+              <button
+                type="submit"
+                className="rounded-lg bg-accent hover:bg-accent/90 text-accent-ink font-semibold px-5 py-2 text-sm transition-colors"
+              >
+                Salvar alterações
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}

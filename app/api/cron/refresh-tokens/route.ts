@@ -1,1 +1,48 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlcXVlc3QsIE5leHRSZXNwb25zZSB9IGZyb20gIm5leHQvc2VydmVyIjsKaW1wb3J0IHsgcmVmcmVzaEFsbEV4cGlyaW5nIH0gZnJvbSAiQC9saWIvdG9rZW4tcmVmcmVzaCI7CmltcG9ydCB7IHNlbmROb3RpZmljYXRpb24gfSBmcm9tICJAL2xpYi9ub3RpZnkiOwoKZXhwb3J0IGNvbnN0IHJ1bnRpbWUgPSAibm9kZWpzIjsKZXhwb3J0IGNvbnN0IGR5bmFtaWMgPSAiZm9yY2UtZHluYW1pYyI7CgpmdW5jdGlvbiBhdXRoT2socmVxOiBOZXh0UmVxdWVzdCk6IGJvb2xlYW4gewogIGNvbnN0IHNlY3JldCA9IHByb2Nlc3MuZW52LkNST05fU0VDUkVUOwogIGNvbnN0IGlzVmVyY2VsQ3JvbiA9IHJlcS5oZWFkZXJzLmdldCgidXNlci1hZ2VudCIpPy5pbmNsdWRlcygidmVyY2VsLWNyb24iKSA/PyBmYWxzZTsKICBpZiAoaXNWZXJjZWxDcm9uKSByZXR1cm4gdHJ1ZTsKICBpZiAoIXNlY3JldCB8fCBzZWNyZXQubGVuZ3RoID09PSAwKSByZXR1cm4gdHJ1ZTsgLy8gYWxsb3cgaWYgdW5zZXQKICBjb25zdCBoZWFkZXIgPSByZXEuaGVhZGVycy5nZXQoImF1dGhvcml6YXRpb24iKTsKICByZXR1cm4gaGVhZGVyID09PSBgQmVhcmVyICR7c2VjcmV0fWA7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBHRVQocmVxOiBOZXh0UmVxdWVzdCkgewogIGlmICghYXV0aE9rKHJlcSkpIHsKICAgIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IGVycm9yOiAidW5hdXRob3JpemVkIiB9LCB7IHN0YXR1czogNDAxIH0pOwogIH0KCiAgY29uc3QgcmVzdWx0cyA9IGF3YWl0IHJlZnJlc2hBbGxFeHBpcmluZygxNCk7CgogIGNvbnN0IGZhaWx1cmVzID0gcmVzdWx0cy5maWx0ZXIoKHIpID0+ICFyLm9rKTsKICBpZiAoZmFpbHVyZXMubGVuZ3RoID4gMCkgewogICAgYXdhaXQgc2VuZE5vdGlmaWNhdGlvbih7CiAgICAgIHN1YmplY3Q6IGDwn5qoIERNRmxvdzogJHtmYWlsdXJlcy5sZW5ndGh9IHRva2VuKHMpIGZhbGhhcmFtIG5vIHJlZnJlc2hgLAogICAgICBodG1sOiBgPGgyPkZhbGhhIGFvIHJlbm92YXIgdG9rZW4ocykgSW5zdGFncmFtPC9oMj4KICAgICAgICA8cD5BbGd1bSB0b2tlbiBuw6NvIHDDtGRlIHNlciByZW5vdmFkbyBhdXRvbWF0aWNhbWVudGUuIFNlIG7Do28gZm9yIHJlc29sdmlkbywgbyBzaXN0ZW1hIHBhcmEgZW0gYXTDqSAxNCBkaWFzLjwvcD4KICAgICAgICA8dWw+CiAgICAgICAgICAke2ZhaWx1cmVzCiAgICAgICAgICAgIC5tYXAoCiAgICAgICAgICAgICAgKGYpID0+CiAgICAgICAgICAgICAgICBgPGxpPjxiPiR7Zi5hY2NvdW50X2lkfTwvYj46ICR7ImVycm9yIiBpbiBmID8gZi5lcnJvciA6ICIifTwvbGk+YAogICAgICAgICAgICApCiAgICAgICAgICAgIC5qb2luKCIiKX0KICAgICAgICA8L3VsPgogICAgICAgIDxwPjxhIGhyZWY9Imh0dHBzOi8vZG1mbG93LnZlcmNlbC5hcHAvZGFzaGJvYXJkIj5BYnJpciBkYXNoYm9hcmQ8L2E+PC9wPmAsCiAgICB9KTsKICB9CgogIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7CiAgICBwcm9jZXNzZWQ6IHJlc3VsdHMubGVuZ3RoLAogICAgc3VjY2VlZGVkOiByZXN1bHRzLmZpbHRlcigocikgPT4gci5vaykubGVuZ3RoLAogICAgZmFpbGVkOiBmYWlsdXJlcy5sZW5ndGgsCiAgICByZXN1bHRzLAogIH0pOwp9Cg=="}
+import { NextRequest, NextResponse } from "next/server";
+import { refreshAllExpiring } from "@/lib/token-refresh";
+import { sendNotification } from "@/lib/notify";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+function authOk(req: NextRequest): boolean {
+  const secret = process.env.CRON_SECRET;
+  const isVercelCron = req.headers.get("user-agent")?.includes("vercel-cron") ?? false;
+  if (isVercelCron) return true;
+  if (!secret || secret.length === 0) return true; // allow if unset
+  const header = req.headers.get("authorization");
+  return header === `Bearer ${secret}`;
+}
+
+export async function GET(req: NextRequest) {
+  if (!authOk(req)) {
+    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  }
+
+  const results = await refreshAllExpiring(14);
+
+  const failures = results.filter((r) => !r.ok);
+  if (failures.length > 0) {
+    await sendNotification({
+      subject: `🚨 DMFlow: ${failures.length} token(s) falharam no refresh`,
+      html: `<h2>Falha ao renovar token(s) Instagram</h2>
+        <p>Algum token não pôde ser renovado automaticamente. Se não for resolvido, o sistema para em até 14 dias.</p>
+        <ul>
+          ${failures
+            .map(
+              (f) =>
+                `<li><b>${f.account_id}</b>: ${"error" in f ? f.error : ""}</li>`
+            )
+            .join("")}
+        </ul>
+        <p><a href="https://dmflow.vercel.app/dashboard">Abrir dashboard</a></p>`,
+    });
+  }
+
+  return NextResponse.json({
+    processed: results.length,
+    succeeded: results.filter((r) => r.ok).length,
+    failed: failures.length,
+    results,
+  });
+}

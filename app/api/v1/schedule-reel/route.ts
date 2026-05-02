@@ -1,1 +1,33 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlcXVlc3QsIE5leHRSZXNwb25zZSB9IGZyb20gIm5leHQvc2VydmVyIjsKaW1wb3J0IHsgdmVyaWZ5QXBpS2V5IH0gZnJvbSAiQC9saWIvYXBpLWtleXMiOwppbXBvcnQgeyBzdXBhYmFzZUFkbWluIH0gZnJvbSAiQC9saWIvc3VwYWJhc2UiOwoKZXhwb3J0IGNvbnN0IHJ1bnRpbWUgPSAibm9kZWpzIjsKZXhwb3J0IGNvbnN0IGR5bmFtaWMgPSAiZm9yY2UtZHluYW1pYyI7CgpleHBvcnQgYXN5bmMgZnVuY3Rpb24gUE9TVChyZXE6IE5leHRSZXF1ZXN0KSB7CiAgY29uc3QgYXV0aCA9IHJlcS5oZWFkZXJzLmdldCgiYXV0aG9yaXphdGlvbiIpID8/ICIiOwogIGNvbnN0IHRva2VuID0gYXV0aC5yZXBsYWNlKC9eQmVhcmVyXHMrL2ksICIiKTsKICBjb25zdCB2ID0gYXdhaXQgdmVyaWZ5QXBpS2V5KHRva2VuKTsKICBpZiAoIXYudmFsaWQpIHsKICAgIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IGVycm9yOiAiaW52YWxpZCBhcGkga2V5IiB9LCB7IHN0YXR1czogNDAxIH0pOwogIH0KCiAgY29uc3QgeyBzbHVnLCBpZHgsIHZpZGVvX3VybCwgY2FwdGlvbiwga2V5d29yZCwgY2FuYWwgPSAiR04iLCBzY2hlZHVsZWRfdW5peCB9ID0gYXdhaXQgcmVxLmpzb24oKTsKICBpZiAoIXNsdWcgfHwgIWlkeCB8fCAhdmlkZW9fdXJsIHx8ICFjYXB0aW9uIHx8ICFzY2hlZHVsZWRfdW5peCkgewogICAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsgZXJyb3I6ICJzbHVnLCBpZHgsIHZpZGVvX3VybCwgY2FwdGlvbiwgc2NoZWR1bGVkX3VuaXggb2JyaWdhdG9yaW9zIiB9LCB7IHN0YXR1czogNDAwIH0pOwogIH0KCiAgY29uc3Qgc2IgPSBzdXBhYmFzZUFkbWluKCk7CiAgY29uc3QgeyBkYXRhLCBlcnJvciB9ID0gYXdhaXQgc2IKICAgIC5mcm9tKCJzY2hlZHVsZWRfcmVlbHMiKQogICAgLmluc2VydCh7IHNsdWcsIGlkeCwgdmlkZW9fdXJsLCBjYXB0aW9uLCBrZXl3b3JkLCBjYW5hbCwgc2NoZWR1bGVkX3VuaXgsIHN0YXR1czogInBlbmRpbmciIH0pCiAgICAuc2VsZWN0KCJpZCIpCiAgICAuc2luZ2xlKCk7CgogIGlmIChlcnJvcikgewogICAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsgZXJyb3I6IGVycm9yLm1lc3NhZ2UgfSwgeyBzdGF0dXM6IDUwMCB9KTsKICB9CgogIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IG9rOiB0cnVlLCBpZDogZGF0YS5pZCB9KTsKfQo="}
+import { NextRequest, NextResponse } from "next/server";
+import { verifyApiKey } from "@/lib/api-keys";
+import { supabaseAdmin } from "@/lib/supabase";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+export async function POST(req: NextRequest) {
+  const auth = req.headers.get("authorization") ?? "";
+  const token = auth.replace(/^Bearer\s+/i, "");
+  const v = await verifyApiKey(token);
+  if (!v.valid) {
+    return NextResponse.json({ error: "invalid api key" }, { status: 401 });
+  }
+
+  const { slug, idx, video_url, caption, keyword, canal = "GN", scheduled_unix } = await req.json();
+  if (!slug || !idx || !video_url || !caption || !scheduled_unix) {
+    return NextResponse.json({ error: "slug, idx, video_url, caption, scheduled_unix obrigatorios" }, { status: 400 });
+  }
+
+  const sb = supabaseAdmin();
+  const { data, error } = await sb
+    .from("scheduled_reels")
+    .insert({ slug, idx, video_url, caption, keyword, canal, scheduled_unix, status: "pending" })
+    .select("id")
+    .single();
+
+  if (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
+
+  return NextResponse.json({ ok: true, id: data.id });
+}

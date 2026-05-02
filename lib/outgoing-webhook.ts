@@ -1,1 +1,68 @@
-{"data":"aW1wb3J0IGNyeXB0byBmcm9tICJjcnlwdG8iOwppbXBvcnQgeyBzdXBhYmFzZUFkbWluIH0gZnJvbSAiLi9zdXBhYmFzZSI7Cgp0eXBlIERpc3BhdGNoSW5wdXQgPSB7CiAgYWNjb3VudElkOiBzdHJpbmc7CiAgd2ViaG9va1VybDogc3RyaW5nOwogIHdlYmhvb2tTZWNyZXQ/OiBzdHJpbmcgfCBudWxsOwogIGV2ZW50VHlwZTogc3RyaW5nOwogIHBheWxvYWQ6IFJlY29yZDxzdHJpbmcsIGFueT47Cn07CgovKioKICogRmlyZXMgYSBQT1NUIHRvIHRoZSBjb25maWd1cmVkIG91dGdvaW5nIHdlYmhvb2sgd2l0aCBITUFDIHNpZ25hdHVyZS4KICogU2lnbmF0dXJlIGhlYWRlcjogeC1kbWZsb3ctc2lnbmF0dXJlLTI1NiA9IHNoYTI1Nj08aGV4PgogKiBOb24tYmxvY2tpbmc6IGxvZ3Mgb3V0Y29tZSB0byBkbWZsb3cub3V0Z29pbmdfd2ViaG9va19kZWxpdmVyaWVzLgogKi8KZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGRpc3BhdGNoT3V0Z29pbmcoaW5wdXQ6IERpc3BhdGNoSW5wdXQpOiBQcm9taXNlPHZvaWQ+IHsKICBjb25zdCBzYiA9IHN1cGFiYXNlQWRtaW4oKTsKICBjb25zdCBib2R5ID0gSlNPTi5zdHJpbmdpZnkoewogICAgZXZlbnQ6IGlucHV0LmV2ZW50VHlwZSwKICAgIGRlbGl2ZXJlZF9hdDogbmV3IERhdGUoKS50b0lTT1N0cmluZygpLAogICAgYWNjb3VudF9pZDogaW5wdXQuYWNjb3VudElkLAogICAgZGF0YTogaW5wdXQucGF5bG9hZCwKICB9KTsKCiAgY29uc3Qgc3RhcnRlZCA9IERhdGUubm93KCk7CiAgbGV0IHN0YXR1cyA9IDA7CiAgbGV0IGVycm9yTXNnOiBzdHJpbmcgfCBudWxsID0gbnVsbDsKCiAgdHJ5IHsKICAgIGNvbnN0IGhlYWRlcnM6IFJlY29yZDxzdHJpbmcsIHN0cmluZz4gPSB7CiAgICAgICJjb250ZW50LXR5cGUiOiAiYXBwbGljYXRpb24vanNvbiIsCiAgICAgICJ4LWRtZmxvdy1ldmVudCI6IGlucHV0LmV2ZW50VHlwZSwKICAgICAgIngtZG1mbG93LWRlbGl2ZXJ5IjogY3J5cHRvLnJhbmRvbUJ5dGVzKDgpLnRvU3RyaW5nKCJoZXgiKSwKICAgICAgInVzZXItYWdlbnQiOiAiZG1mbG93LXdlYmhvb2svMS4wIiwKICAgIH07CiAgICBpZiAoaW5wdXQud2ViaG9va1NlY3JldCkgewogICAgICBjb25zdCBzaWcgPSBjcnlwdG8KICAgICAgICAuY3JlYXRlSG1hYygic2hhMjU2IiwgaW5wdXQud2ViaG9va1NlY3JldCkKICAgICAgICAudXBkYXRlKGJvZHkpCiAgICAgICAgLmRpZ2VzdCgiaGV4Iik7CiAgICAgIGhlYWRlcnNbIngtZG1mbG93LXNpZ25hdHVyZS0yNTYiXSA9IGBzaGEyNTY9JHtzaWd9YDsKICAgIH0KCiAgICBjb25zdCByZXMgPSBhd2FpdCBmZXRjaChpbnB1dC53ZWJob29rVXJsLCB7CiAgICAgIG1ldGhvZDogIlBPU1QiLAogICAgICBoZWFkZXJzLAogICAgICBib2R5LAogICAgICBzaWduYWw6IEFib3J0U2lnbmFsLnRpbWVvdXQoODAwMCksCiAgICB9KTsKICAgIHN0YXR1cyA9IHJlcy5zdGF0dXM7CiAgICBpZiAoIXJlcy5vaykgewogICAgICBlcnJvck1zZyA9IGBIVFRQICR7cmVzLnN0YXR1c31gOwogICAgfQogIH0gY2F0Y2ggKGUpIHsKICAgIGVycm9yTXNnID0gKGUgYXMgRXJyb3IpLm1lc3NhZ2U7CiAgfQoKICBhd2FpdCBzYi5mcm9tKCJvdXRnb2luZ193ZWJob29rX2RlbGl2ZXJpZXMiKS5pbnNlcnQoewogICAgYWNjb3VudF9pZDogaW5wdXQuYWNjb3VudElkLAogICAgZXZlbnRfdHlwZTogaW5wdXQuZXZlbnRUeXBlLAogICAgcGF5bG9hZDogSlNPTi5wYXJzZShib2R5KSwKICAgIHVybDogaW5wdXQud2ViaG9va1VybCwKICAgIHN0YXR1cywKICAgIHJlc3BvbnNlX21zOiBEYXRlLm5vdygpIC0gc3RhcnRlZCwKICAgIGVycm9yOiBlcnJvck1zZywKICB9KTsKfQo="}
+import crypto from "crypto";
+import { supabaseAdmin } from "./supabase";
+
+type DispatchInput = {
+  accountId: string;
+  webhookUrl: string;
+  webhookSecret?: string | null;
+  eventType: string;
+  payload: Record<string, any>;
+};
+
+/**
+ * Fires a POST to the configured outgoing webhook with HMAC signature.
+ * Signature header: x-dmflow-signature-256 = sha256=<hex>
+ * Non-blocking: logs outcome to dmflow.outgoing_webhook_deliveries.
+ */
+export async function dispatchOutgoing(input: DispatchInput): Promise<void> {
+  const sb = supabaseAdmin();
+  const body = JSON.stringify({
+    event: input.eventType,
+    delivered_at: new Date().toISOString(),
+    account_id: input.accountId,
+    data: input.payload,
+  });
+
+  const started = Date.now();
+  let status = 0;
+  let errorMsg: string | null = null;
+
+  try {
+    const headers: Record<string, string> = {
+      "content-type": "application/json",
+      "x-dmflow-event": input.eventType,
+      "x-dmflow-delivery": crypto.randomBytes(8).toString("hex"),
+      "user-agent": "dmflow-webhook/1.0",
+    };
+    if (input.webhookSecret) {
+      const sig = crypto
+        .createHmac("sha256", input.webhookSecret)
+        .update(body)
+        .digest("hex");
+      headers["x-dmflow-signature-256"] = `sha256=${sig}`;
+    }
+
+    const res = await fetch(input.webhookUrl, {
+      method: "POST",
+      headers,
+      body,
+      signal: AbortSignal.timeout(8000),
+    });
+    status = res.status;
+    if (!res.ok) {
+      errorMsg = `HTTP ${res.status}`;
+    }
+  } catch (e) {
+    errorMsg = (e as Error).message;
+  }
+
+  await sb.from("outgoing_webhook_deliveries").insert({
+    account_id: input.accountId,
+    event_type: input.eventType,
+    payload: JSON.parse(body),
+    url: input.webhookUrl,
+    status,
+    response_ms: Date.now() - started,
+    error: errorMsg,
+  });
+}

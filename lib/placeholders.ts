@@ -1,1 +1,36 @@
-{"data":"LyoqCiAqIEludGVycG9sYXRlIGR5bmFtaWMgcGxhY2Vob2xkZXJzIGluIERNIG1lc3NhZ2VzLgogKiBTdXBwb3J0ZWQ6CiAqICAge3VzZXJuYW1lfSAgICAgIOKGkiAiYW5kcmV5d2VzbGxleSIgKG5vIEApCiAqICAge0B1c2VybmFtZX0gICAgIOKGkiAiQGFuZHJleXdlc2xsZXkiCiAqICAge2ZpcnN0X25hbWV9ICAgIOKGkiAiQW5kcmV5IiAoYmVzdC1lZmZvcnQgZnJvbSB1c2VybmFtZSwgZmFsbGJhY2sgdXNlcm5hbWUpCiAqICAge2hvdXJfZ3JlZXRpbmd9IOKGkiAiQm9tIGRpYSIgLyAiQm9hIHRhcmRlIiAvICJCb2Egbm9pdGUiIChwdC1CUikKICovCmV4cG9ydCBmdW5jdGlvbiBpbnRlcnBvbGF0ZSgKICBtZXNzYWdlOiBzdHJpbmcsCiAgY3R4OiB7IHVzZXJuYW1lPzogc3RyaW5nIHwgbnVsbDsgdGltZXpvbmU/OiBzdHJpbmcgfSA9IHt9Cik6IHN0cmluZyB7CiAgaWYgKCFtZXNzYWdlKSByZXR1cm4gbWVzc2FnZTsKICBjb25zdCB1c2VybmFtZSA9IGN0eC51c2VybmFtZSA/PyAiIjsKICBjb25zdCBtZW50aW9uID0gdXNlcm5hbWUgPyBgQCR7dXNlcm5hbWV9YCA6ICIiOwogIGNvbnN0IGZpcnN0TmFtZSA9IHVzZXJuYW1lCiAgICA/IHVzZXJuYW1lCiAgICAgICAgLnJlcGxhY2UoL1suXy1dKy9nLCAiICIpCiAgICAgICAgLnNwbGl0KC9ccysvKVswXQogICAgICAgIC5yZXBsYWNlKC8oPzpefFxzKVxTL2csIChjKSA9PiBjLnRvVXBwZXJDYXNlKCkpCiAgICA6ICIiOwogIGNvbnN0IGhvdXIgPSBuZXcgRGF0ZSgpLmdldEhvdXJzKCk7CiAgY29uc3QgZ3JlZXRpbmcgPQogICAgaG91ciA8IDEyID8gIkJvbSBkaWEiIDogaG91ciA8IDE4ID8gIkJvYSB0YXJkZSIgOiAiQm9hIG5vaXRlIjsKCiAgcmV0dXJuIG1lc3NhZ2UKICAgIC5yZXBsYWNlKC9ce0B1c2VybmFtZVx9L2csIG1lbnRpb24gfHwgInZvY8OqIikKICAgIC5yZXBsYWNlKC9ce3VzZXJuYW1lXH0vZywgdXNlcm5hbWUgfHwgInZvY8OqIikKICAgIC5yZXBsYWNlKC9ce2ZpcnN0X25hbWVcfS9nLCBmaXJzdE5hbWUgfHwgInZvY8OqIikKICAgIC5yZXBsYWNlKC9ce2hvdXJfZ3JlZXRpbmdcfS9nLCBncmVldGluZyk7Cn0KCmV4cG9ydCBmdW5jdGlvbiBoYXNQbGFjZWhvbGRlcnMoczogc3RyaW5nIHwgbnVsbCB8IHVuZGVmaW5lZCk6IGJvb2xlYW4gewogIGlmICghcykgcmV0dXJuIGZhbHNlOwogIHJldHVybiAvXHsoPzpAP3VzZXJuYW1lfGZpcnN0X25hbWV8aG91cl9ncmVldGluZylcfS8udGVzdChzKTsKfQo="}
+/**
+ * Interpolate dynamic placeholders in DM messages.
+ * Supported:
+ *   {username}      → "andreyweslley" (no @)
+ *   {@username}     → "@andreyweslley"
+ *   {first_name}    → "Andrey" (best-effort from username, fallback username)
+ *   {hour_greeting} → "Bom dia" / "Boa tarde" / "Boa noite" (pt-BR)
+ */
+export function interpolate(
+  message: string,
+  ctx: { username?: string | null; timezone?: string } = {}
+): string {
+  if (!message) return message;
+  const username = ctx.username ?? "";
+  const mention = username ? `@${username}` : "";
+  const firstName = username
+    ? username
+        .replace(/[._-]+/g, " ")
+        .split(/\s+/)[0]
+        .replace(/(?:^|\s)\S/g, (c) => c.toUpperCase())
+    : "";
+  const hour = new Date().getHours();
+  const greeting =
+    hour < 12 ? "Bom dia" : hour < 18 ? "Boa tarde" : "Boa noite";
+
+  return message
+    .replace(/\{@username\}/g, mention || "você")
+    .replace(/\{username\}/g, username || "você")
+    .replace(/\{first_name\}/g, firstName || "você")
+    .replace(/\{hour_greeting\}/g, greeting);
+}
+
+export function hasPlaceholders(s: string | null | undefined): boolean {
+  if (!s) return false;
+  return /\{(?:@?username|first_name|hour_greeting)\}/.test(s);
+}

@@ -1,1 +1,50 @@
-{"data":"aW1wb3J0ICIuL2dsb2JhbHMuY3NzIjsKaW1wb3J0IHR5cGUgeyBNZXRhZGF0YSwgVmlld3BvcnQgfSBmcm9tICJuZXh0IjsKaW1wb3J0IHsgSW50ZXIsIEpldEJyYWluc19Nb25vIH0gZnJvbSAibmV4dC9mb250L2dvb2dsZSI7Cgpjb25zdCBpbnRlciA9IEludGVyKHsKICBzdWJzZXRzOiBbImxhdGluIl0sCiAgZGlzcGxheTogInN3YXAiLAogIHZhcmlhYmxlOiAiLS1mb250LWludGVyIiwKfSk7Cgpjb25zdCBqZXRicmFpbnMgPSBKZXRCcmFpbnNfTW9ubyh7CiAgc3Vic2V0czogWyJsYXRpbiJdLAogIGRpc3BsYXk6ICJzd2FwIiwKICB2YXJpYWJsZTogIi0tZm9udC1qZXRicmFpbnMiLAp9KTsKCmV4cG9ydCBjb25zdCBtZXRhZGF0YTogTWV0YWRhdGEgPSB7CiAgdGl0bGU6ICJETUZsb3cg4oCUIEF1dG9tYcOnw6NvIGRlIERNcyBJbnN0YWdyYW0iLAogIGRlc2NyaXB0aW9uOgogICAgIlJlc3BvbmRlIGNvbWVudMOhcmlvcyBhdXRvbWF0aWNhbWVudGUgZSBtYW5kYSBETSBwcml2YWRhIGNvbSBsaW5rIHRyYWNrZWFkby4iLAp9OwoKZXhwb3J0IGNvbnN0IHZpZXdwb3J0OiBWaWV3cG9ydCA9IHsKICB3aWR0aDogImRldmljZS13aWR0aCIsCiAgaW5pdGlhbFNjYWxlOiAxLAogIHRoZW1lQ29sb3I6ICIjMGEwYjEwIiwKfTsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFJvb3RMYXlvdXQoewogIGNoaWxkcmVuLAp9OiB7CiAgY2hpbGRyZW46IFJlYWN0LlJlYWN0Tm9kZTsKfSkgewogIHJldHVybiAoCiAgICA8aHRtbAogICAgICBsYW5nPSJwdC1CUiIKICAgICAgY2xhc3NOYW1lPXtgJHtpbnRlci52YXJpYWJsZX0gJHtqZXRicmFpbnMudmFyaWFibGV9YH0KICAgID4KICAgICAgPGJvZHkgY2xhc3NOYW1lPSJtaW4taC1zY3JlZW4gYW50aWFsaWFzZWQiPgogICAgICAgIDxhCiAgICAgICAgICBocmVmPSIjbWFpbiIKICAgICAgICAgIGNsYXNzTmFtZT0ic3Itb25seSBmb2N1czpub3Qtc3Itb25seSBmaXhlZCB0b3AtMyBsZWZ0LTMgei1bMTAwXSByb3VuZGVkLW1kIGJnLWFjY2VudCB0ZXh0LWFjY2VudC1pbmsgcHgtMyBweS0yIHRleHQtc20gZm9udC1zZW1pYm9sZCIKICAgICAgICA+CiAgICAgICAgICBQdWxhciBwYXJhIGNvbnRlw7pkbwogICAgICAgIDwvYT4KICAgICAgICB7Y2hpbGRyZW59CiAgICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICApOwp9Cg=="}
+import "./globals.css";
+import type { Metadata, Viewport } from "next";
+import { Inter, JetBrains_Mono } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-jetbrains",
+});
+
+export const metadata: Metadata = {
+  title: "DMFlow — Automação de DMs Instagram",
+  description:
+    "Responde comentários automaticamente e manda DM privada com link trackeado.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0a0b10",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html
+      lang="pt-BR"
+      className={`${inter.variable} ${jetbrains.variable}`}
+    >
+      <body className="min-h-screen antialiased">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only fixed top-3 left-3 z-[100] rounded-md bg-accent text-accent-ink px-3 py-2 text-sm font-semibold"
+        >
+          Pular para conteúdo
+        </a>
+        {children}
+      </body>
+    </html>
+  );
+}

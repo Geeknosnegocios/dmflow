@@ -1,1 +1,90 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlcXVlc3QsIE5leHRSZXNwb25zZSB9IGZyb20gIm5leHQvc2VydmVyIjsKaW1wb3J0IHsgc3VwYWJhc2VBZG1pbiB9IGZyb20gIkAvbGliL3N1cGFiYXNlIjsKaW1wb3J0IHsgc2VuZERpcmVjdE1lc3NhZ2UgfSBmcm9tICJAL2xpYi9tZXRhIjsKaW1wb3J0IHsgYnVpbGRUcmFja2VkQnV0dG9ucywgcmVzb2x2ZUJhc2VVcmwgfSBmcm9tICJAL2xpYi90cmFja2luZyI7CmltcG9ydCB7IGludGVycG9sYXRlIH0gZnJvbSAiQC9saWIvcGxhY2Vob2xkZXJzIjsKaW1wb3J0IHR5cGUgeyBBY2NvdW50LCBSdWxlIH0gZnJvbSAiQC90eXBlcy9kYiI7CgpleHBvcnQgY29uc3QgcnVudGltZSA9ICJub2RlanMiOwpleHBvcnQgY29uc3QgZHluYW1pYyA9ICJmb3JjZS1keW5hbWljIjsKCi8qKgogKiBTZW5kcyBhIHRlc3QgRE0gdXNpbmcgdGhlIHJ1bGUncyBjb25maWd1cmVkIG1lc3NhZ2UgKyBidXR0b25zCiAqIHRvIHRoZSBhY2NvdW50IG93bmVyIChzZWxmLURNKS4gVXNlZnVsIHRvIHZhbGlkYXRlIHdpdGhvdXQgY3JlYXRpbmcgYSBwdWJsaWMgdHJpZ2dlci4KICovCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBQT1NUKHJlcTogTmV4dFJlcXVlc3QpIHsKICBjb25zdCBmb3JtID0gYXdhaXQgcmVxLmZvcm1EYXRhKCk7CiAgY29uc3QgcnVsZUlkID0gU3RyaW5nKGZvcm0uZ2V0KCJydWxlX2lkIikgPz8gIiIpOwogIGlmICghcnVsZUlkKSB7CiAgICByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oeyBlcnJvcjogInJ1bGVfaWQgcmVxdWlyZWQiIH0sIHsgc3RhdHVzOiA0MDAgfSk7CiAgfQoKICBjb25zdCBzYiA9IHN1cGFiYXNlQWRtaW4oKTsKICBjb25zdCBiYXNlVXJsID0gcmVzb2x2ZUJhc2VVcmwocmVxKTsKCiAgY29uc3QgeyBkYXRhOiBydWxlIH0gPSBhd2FpdCBzYgogICAgLmZyb20oInJ1bGVzIikKICAgIC5zZWxlY3QoIioiKQogICAgLmVxKCJpZCIsIHJ1bGVJZCkKICAgIC5tYXliZVNpbmdsZTxSdWxlPigpOwogIGlmICghcnVsZSkgewogICAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsgZXJyb3I6ICJydWxlIG5vdCBmb3VuZCIgfSwgeyBzdGF0dXM6IDQwNCB9KTsKICB9CgogIGNvbnN0IHsgZGF0YTogYWNjb3VudCB9ID0gYXdhaXQgc2IKICAgIC5mcm9tKCJhY2NvdW50cyIpCiAgICAuc2VsZWN0KCIqIikKICAgIC5lcSgiaWQiLCBydWxlLmFjY291bnRfaWQpCiAgICAubWF5YmVTaW5nbGU8QWNjb3VudD4oKTsKICBpZiAoIWFjY291bnQpIHsKICAgIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IGVycm9yOiAiYWNjb3VudCBub3QgZm91bmQiIH0sIHsgc3RhdHVzOiA0MDQgfSk7CiAgfQoKICAvLyBGZXRjaCBvd24gSUcgdXNlciBpZCAoZm9yIEluc3RhZ3JhbSBMb2dpbiwgL21lIHJldHVybnMgSUcgdXNlciBpZCB0byBzZWxmLW1lc3NhZ2UpCiAgbGV0IHJlY2lwaWVudElkOiBzdHJpbmcgfCBudWxsID0gbnVsbDsKICB0cnkgewogICAgY29uc3QgciA9IGF3YWl0IGZldGNoKGBodHRwczovL2dyYXBoLmluc3RhZ3JhbS5jb20vdjI1LjAvbWU/ZmllbGRzPWlkYCwgewogICAgICBoZWFkZXJzOiB7IEF1dGhvcml6YXRpb246IGBCZWFyZXIgJHthY2NvdW50LmlnX2FjY2Vzc190b2tlbn1gIH0sCiAgICB9KTsKICAgIGlmIChyLm9rKSByZWNpcGllbnRJZCA9IChhd2FpdCByLmpzb24oKSk/LmlkID8/IG51bGw7CiAgfSBjYXRjaCB7fQoKICBpZiAoIXJlY2lwaWVudElkKSB7CiAgICByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oCiAgICAgIHsgZXJyb3I6ICJjb3VsZCBub3QgcmVzb2x2ZSBzZWxmIElHIHVzZXIgaWQiIH0sCiAgICAgIHsgc3RhdHVzOiA1MDAgfQogICAgKTsKICB9CgogIGNvbnN0IG1lc3NhZ2UgPSBpbnRlcnBvbGF0ZSgKICAgIGBbVEVTVEVdICR7cnVsZS5kbV9tZXNzYWdlfWAsCiAgICB7IHVzZXJuYW1lOiBhY2NvdW50LmlnX3VzZXJuYW1lIH0KICApOwoKICBjb25zdCBidXR0b25zID0gcnVsZS5kbV9idXR0b25zID8/IFtdOwogIGNvbnN0IHRyYWNrZWQgPQogICAgYnV0dG9ucy5sZW5ndGggPiAwCiAgICAgID8gYXdhaXQgYnVpbGRUcmFja2VkQnV0dG9ucyh7CiAgICAgICAgICBidXR0b25zLAogICAgICAgICAgYWNjb3VudElkOiBhY2NvdW50LmlkLAogICAgICAgICAgcnVsZUlkOiBydWxlLmlkLAogICAgICAgICAgZXZlbnRJZDogbnVsbCwKICAgICAgICAgIGlnVXNlcklkOiByZWNpcGllbnRJZCwKICAgICAgICAgIGJhc2VVcmwsCiAgICAgICAgfSkKICAgICAgOiBbXTsKCiAgY29uc3QgZG0gPSBhd2FpdCBzZW5kRGlyZWN0TWVzc2FnZSh7CiAgICByZWNpcGllbnRJZCwKICAgIG1lc3NhZ2UsCiAgICBidXR0b25zOiB0cmFja2VkLmxlbmd0aCA+IDAgPyB0cmFja2VkIDogbnVsbCwKICAgIGFjY2Vzc1Rva2VuOiBhY2NvdW50LmlnX2FjY2Vzc190b2tlbiwKICB9KTsKCiAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsKICAgIG9rOiBkbS5vaywKICAgIGVycm9yOiBkbS5vayA/IG51bGwgOiBkbS5lcnJvciwKICAgIHJlY2lwaWVudF9pZDogcmVjaXBpZW50SWQsCiAgICBtZXNzYWdlX3ByZXZpZXc6IG1lc3NhZ2UsCiAgfSk7Cn0K"}
+import { NextRequest, NextResponse } from "next/server";
+import { supabaseAdmin } from "@/lib/supabase";
+import { sendDirectMessage } from "@/lib/meta";
+import { buildTrackedButtons, resolveBaseUrl } from "@/lib/tracking";
+import { interpolate } from "@/lib/placeholders";
+import type { Account, Rule } from "@/types/db";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+/**
+ * Sends a test DM using the rule's configured message + buttons
+ * to the account owner (self-DM). Useful to validate without creating a public trigger.
+ */
+export async function POST(req: NextRequest) {
+  const form = await req.formData();
+  const ruleId = String(form.get("rule_id") ?? "");
+  if (!ruleId) {
+    return NextResponse.json({ error: "rule_id required" }, { status: 400 });
+  }
+
+  const sb = supabaseAdmin();
+  const baseUrl = resolveBaseUrl(req);
+
+  const { data: rule } = await sb
+    .from("rules")
+    .select("*")
+    .eq("id", ruleId)
+    .maybeSingle<Rule>();
+  if (!rule) {
+    return NextResponse.json({ error: "rule not found" }, { status: 404 });
+  }
+
+  const { data: account } = await sb
+    .from("accounts")
+    .select("*")
+    .eq("id", rule.account_id)
+    .maybeSingle<Account>();
+  if (!account) {
+    return NextResponse.json({ error: "account not found" }, { status: 404 });
+  }
+
+  // Fetch own IG user id (for Instagram Login, /me returns IG user id to self-message)
+  let recipientId: string | null = null;
+  try {
+    const r = await fetch(`https://graph.instagram.com/v25.0/me?fields=id`, {
+      headers: { Authorization: `Bearer ${account.ig_access_token}` },
+    });
+    if (r.ok) recipientId = (await r.json())?.id ?? null;
+  } catch {}
+
+  if (!recipientId) {
+    return NextResponse.json(
+      { error: "could not resolve self IG user id" },
+      { status: 500 }
+    );
+  }
+
+  const message = interpolate(
+    `[TESTE] ${rule.dm_message}`,
+    { username: account.ig_username }
+  );
+
+  const buttons = rule.dm_buttons ?? [];
+  const tracked =
+    buttons.length > 0
+      ? await buildTrackedButtons({
+          buttons,
+          accountId: account.id,
+          ruleId: rule.id,
+          eventId: null,
+          igUserId: recipientId,
+          baseUrl,
+        })
+      : [];
+
+  const dm = await sendDirectMessage({
+    recipientId,
+    message,
+    buttons: tracked.length > 0 ? tracked : null,
+    accessToken: account.ig_access_token,
+  });
+
+  return NextResponse.json({
+    ok: dm.ok,
+    error: dm.ok ? null : dm.error,
+    recipient_id: recipientId,
+    message_preview: message,
+  });
+}

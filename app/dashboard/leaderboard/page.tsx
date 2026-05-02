@@ -1,1 +1,275 @@
-{"data":"aW1wb3J0IHsgc3VwYWJhc2VBZG1pbiB9IGZyb20gIkAvbGliL3N1cGFiYXNlIjsKaW1wb3J0IHsgQ2FyZCwgQ2FyZEhlYWRlciwgRW1wdHlTdGF0ZSwgU3RhdHVzUGlsbCB9IGZyb20gIkAvY29tcG9uZW50cy92aXoiOwppbXBvcnQgeyBmbXRDb21wYWN0LCBmbXRQY3QgfSBmcm9tICJAL2xpYi9mb3JtYXQiOwppbXBvcnQgdHlwZSB7IEFjY291bnQgfSBmcm9tICJAL3R5cGVzL2RiIjsKaW1wb3J0IHsgVHJvcGh5LCBFeHRlcm5hbExpbmsgfSBmcm9tICJsdWNpZGUtcmVhY3QiOwoKZXhwb3J0IGNvbnN0IGR5bmFtaWMgPSAiZm9yY2UtZHluYW1pYyI7Cgp0eXBlIE1lZGlhID0gewogIGlkOiBzdHJpbmc7CiAgY2FwdGlvbjogc3RyaW5nOwogIHBlcm1hbGluazogc3RyaW5nOwogIHRodW1ibmFpbDogc3RyaW5nOwogIG1lZGlhX3R5cGU6IHN0cmluZzsKICB0aW1lc3RhbXA6IHN0cmluZzsKfTsKCmFzeW5jIGZ1bmN0aW9uIGZldGNoTWVkaWFNYXAoYWNjb3VudDogQWNjb3VudCk6IFByb21pc2U8TWFwPHN0cmluZywgTWVkaWE+PiB7CiAgY29uc3QgbWFwID0gbmV3IE1hcDxzdHJpbmcsIE1lZGlhPigpOwogIHRyeSB7CiAgICBjb25zdCB1cmwgPQogICAgICAiaHR0cHM6Ly9ncmFwaC5pbnN0YWdyYW0uY29tL3YyNS4wL21lL21lZGlhP2ZpZWxkcz1pZCxjYXB0aW9uLHBlcm1hbGluayx0aHVtYm5haWxfdXJsLG1lZGlhX3VybCxtZWRpYV90eXBlLHRpbWVzdGFtcCZsaW1pdD0xMDAiOwogICAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2godXJsLCB7CiAgICAgIGhlYWRlcnM6IHsgQXV0aG9yaXphdGlvbjogYEJlYXJlciAke2FjY291bnQuaWdfYWNjZXNzX3Rva2VufWAgfSwKICAgICAgY2FjaGU6ICJuby1zdG9yZSIsCiAgICB9KTsKICAgIGlmICghcmVzLm9rKSByZXR1cm4gbWFwOwogICAgY29uc3QganNvbjogYW55ID0gYXdhaXQgcmVzLmpzb24oKTsKICAgIGZvciAoY29uc3QgbSBvZiBqc29uLmRhdGEgPz8gW10pIHsKICAgICAgbWFwLnNldChtLmlkLCB7CiAgICAgICAgaWQ6IG0uaWQsCiAgICAgICAgY2FwdGlvbjogbS5jYXB0aW9uID8/ICIiLAogICAgICAgIHBlcm1hbGluazogbS5wZXJtYWxpbmssCiAgICAgICAgdGh1bWJuYWlsOiBtLnRodW1ibmFpbF91cmwgPz8gbS5tZWRpYV91cmwsCiAgICAgICAgbWVkaWFfdHlwZTogbS5tZWRpYV90eXBlLAogICAgICAgIHRpbWVzdGFtcDogbS50aW1lc3RhbXAsCiAgICAgIH0pOwogICAgfQogIH0gY2F0Y2gge30KICByZXR1cm4gbWFwOwp9Cgphc3luYyBmdW5jdGlvbiBsb2FkKCkgewogIGNvbnN0IHNiID0gc3VwYWJhc2VBZG1pbigpOwogIGNvbnN0IHNpbmNlID0gbmV3IERhdGUoRGF0ZS5ub3coKSAtIDMwICogODY0MDAwMDApLnRvSVNPU3RyaW5nKCk7CgogIGNvbnN0IFthY2NvdW50UmVzLCBldmVudHNSZXMsIGxpbmtzUmVzXSA9IGF3YWl0IFByb21pc2UuYWxsKFsKICAgIHNiCiAgICAgIC5mcm9tKCJhY2NvdW50cyIpCiAgICAgIC5zZWxlY3QoIioiKQogICAgICAuZXEoImFjdGl2ZSIsIHRydWUpCiAgICAgIC5saW1pdCgxKQogICAgICAubWF5YmVTaW5nbGU8QWNjb3VudD4oKSwKICAgIHNiCiAgICAgIC5mcm9tKCJldmVudHMiKQogICAgICAuc2VsZWN0KCJpZ19tZWRpYV9pZCwgZG1fc2VudCwgaWdfdXNlcl9pZCIpCiAgICAgIC5ndGUoImNyZWF0ZWRfYXQiLCBzaW5jZSkKICAgICAgLm5vdCgiaWdfbWVkaWFfaWQiLCAiaXMiLCBudWxsKSwKICAgIHNiCiAgICAgIC5mcm9tKCJ0cmFja2VkX2xpbmtzIikKICAgICAgLnNlbGVjdCgiZXZlbnRfaWQsIGNsaWNrX2NvdW50IikKICAgICAgLmd0KCJjbGlja19jb3VudCIsIDApLAogIF0pOwoKICBjb25zdCBhY2NvdW50ID0gYWNjb3VudFJlcy5kYXRhOwogIGlmICghYWNjb3VudCkgcmV0dXJuIHsgYWNjb3VudDogbnVsbCwgcm93czogW10gfTsKCiAgY29uc3QgZXZlbnRzID0gKGV2ZW50c1Jlcy5kYXRhID8/IFtdKSBhcyBhbnlbXTsKICBjb25zdCBsaW5rcyA9IChsaW5rc1Jlcy5kYXRhID8/IFtdKSBhcyBhbnlbXTsKCiAgLy8gY2xpY2sgY291bnQgcGVyIGV2ZW50X2lkCiAgY29uc3QgY2xpY2tzQnlFdmVudCA9IG5ldyBNYXA8c3RyaW5nLCBudW1iZXI+KCk7CiAgZm9yIChjb25zdCBsIG9mIGxpbmtzKSB7CiAgICBpZiAoIWwuZXZlbnRfaWQpIGNvbnRpbnVlOwogICAgY2xpY2tzQnlFdmVudC5zZXQobC5ldmVudF9pZCwgKGNsaWNrc0J5RXZlbnQuZ2V0KGwuZXZlbnRfaWQpID8/IDApICsgKGwuY2xpY2tfY291bnQgPz8gMCkpOwogIH0KCiAgLy8gQWdncmVnYXRlIHBlciBtZWRpYQogIHR5cGUgQWdnID0gewogICAgbWVkaWFfaWQ6IHN0cmluZzsKICAgIGV2ZW50czogbnVtYmVyOwogICAgZG1zOiBudW1iZXI7CiAgICB1bmlxdWVfdXNlcnM6IFNldDxzdHJpbmc+OwogICAgY2xpY2tzOiBudW1iZXI7CiAgfTsKICBjb25zdCBhZ2cgPSBuZXcgTWFwPHN0cmluZywgQWdnPigpOwogIGZvciAoY29uc3QgZSBvZiBldmVudHMpIHsKICAgIGNvbnN0IGtleSA9IGUuaWdfbWVkaWFfaWQgYXMgc3RyaW5nOwogICAgY29uc3Qgcm93ID0KICAgICAgYWdnLmdldChrZXkpID8/CiAgICAgIHsgbWVkaWFfaWQ6IGtleSwgZXZlbnRzOiAwLCBkbXM6IDAsIHVuaXF1ZV91c2VyczogbmV3IFNldCgpLCBjbGlja3M6IDAgfTsKICAgIHJvdy5ldmVudHMrKzsKICAgIGlmIChlLmRtX3NlbnQpIHJvdy5kbXMrKzsKICAgIGlmIChlLmlnX3VzZXJfaWQpIHJvdy51bmlxdWVfdXNlcnMuYWRkKGUuaWdfdXNlcl9pZCk7CiAgICBhZ2cuc2V0KGtleSwgcm93KTsKICB9CgogIC8vIGxpbmsgY2xpY2tzOiBuZWVkIHRvIGpvaW4gdmlhIGV2ZW50X2lkIOKGkiBtZWRpYV9pZC4gV2UgbmVlZCBldmVudHMrbGlua3Mgam9pbmVkLgogIC8vIEZvciBzaW1wbGljaXR5LCBmZXRjaCBldmVudHMgdy8gaWQgKyBtZWRpYQogIGNvbnN0IHsgZGF0YTogZXZlbnRzRnVsbCB9ID0gYXdhaXQgc2IKICAgIC5mcm9tKCJldmVudHMiKQogICAgLnNlbGVjdCgiaWQsIGlnX21lZGlhX2lkIikKICAgIC5ndGUoImNyZWF0ZWRfYXQiLCBzaW5jZSkKICAgIC5ub3QoImlnX21lZGlhX2lkIiwgImlzIiwgbnVsbCk7CgogIGNvbnN0IGV2ZW50VG9NZWRpYSA9IG5ldyBNYXA8c3RyaW5nLCBzdHJpbmc+KCk7CiAgZm9yIChjb25zdCBlZiBvZiAoZXZlbnRzRnVsbCA/PyBbXSkgYXMgYW55W10pIHsKICAgIGV2ZW50VG9NZWRpYS5zZXQoZWYuaWQsIGVmLmlnX21lZGlhX2lkKTsKICB9CiAgZm9yIChjb25zdCBbZXZlbnRJZCwgY291bnRdIG9mIGNsaWNrc0J5RXZlbnQuZW50cmllcygpKSB7CiAgICBjb25zdCBtZWRpYUlkID0gZXZlbnRUb01lZGlhLmdldChldmVudElkKTsKICAgIGlmICghbWVkaWFJZCkgY29udGludWU7CiAgICBjb25zdCByb3cgPSBhZ2cuZ2V0KG1lZGlhSWQpOwogICAgaWYgKHJvdykgcm93LmNsaWNrcyArPSBjb3VudDsKICB9CgogIGNvbnN0IG1lZGlhTWFwID0gYXdhaXQgZmV0Y2hNZWRpYU1hcChhY2NvdW50KTsKCiAgY29uc3Qgcm93cyA9IEFycmF5LmZyb20oYWdnLnZhbHVlcygpKQogICAgLm1hcCgocikgPT4gKHsKICAgICAgLi4uciwKICAgICAgdW5pcXVlX3VzZXJzX2NvdW50OiByLnVuaXF1ZV91c2Vycy5zaXplLAogICAgICBtZWRpYTogbWVkaWFNYXAuZ2V0KHIubWVkaWFfaWQpID8/IG51bGwsCiAgICB9KSkKICAgIC5zb3J0KChhLCBiKSA9PiBiLmV2ZW50cyAtIGEuZXZlbnRzKQogICAgLnNsaWNlKDAsIDIwKTsKCiAgcmV0dXJuIHsgYWNjb3VudCwgcm93cyB9Owp9CgpleHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiBMZWFkZXJib2FyZFBhZ2UoKSB7CiAgY29uc3QgeyBhY2NvdW50LCByb3dzIH0gPSBhd2FpdCBsb2FkKCk7CgogIGlmICghYWNjb3VudCkgewogICAgcmV0dXJuICgKICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktNiI+CiAgICAgICAgPGgxIGNsYXNzTmFtZT0idGV4dC00eGwgZm9udC1ib2xkIHRyYWNraW5nLXRpZ2h0Ij5MZWFkZXJib2FyZDwvaDE+CiAgICAgICAgPEVtcHR5U3RhdGUKICAgICAgICAgIHRpdGxlPSJTZW0gY29udGEgY29uZWN0YWRhIgogICAgICAgICAgbWVzc2FnZT0iQ29uZWN0ZSB1bWEgY29udGEgcHJhIHZlciBsZWFkZXJib2FyZC4iCiAgICAgICAgLz4KICAgICAgPC9kaXY+CiAgICApOwogIH0KCiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJzcGFjZS15LTgiPgogICAgICA8aGVhZGVyPgogICAgICAgIDxoMSBjbGFzc05hbWU9InRleHQtNHhsIGZvbnQtYm9sZCB0cmFja2luZy10aWdodCBmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiI+CiAgICAgICAgICA8VHJvcGh5IGNsYXNzTmFtZT0iaC04IHctOCB0ZXh0LXdhcm4iIC8+CiAgICAgICAgICBMZWFkZXJib2FyZAogICAgICAgIDwvaDE+CiAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LWRpbS0yIHRleHQtc20iPgogICAgICAgICAgUG9zdHMgcXVlIG1haXMgZ2VyYXJhbSBsZWFkcyBub3Mgw7psdGltb3MgMzAgZGlhcwogICAgICAgIDwvcD4KICAgICAgPC9oZWFkZXI+CgogICAgICB7cm93cy5sZW5ndGggPT09IDAgPyAoCiAgICAgICAgPEVtcHR5U3RhdGUKICAgICAgICAgIHRpdGxlPSJTZW0gZGFkb3Mgc3VmaWNpZW50ZXMiCiAgICAgICAgICBtZXNzYWdlPSJRdWFuZG8gcG9zdHMgcmVjZWJlcmVtIGV2ZW50b3MsIGFwYXJlY2VtIGFxdWkgb3JkZW5hZG9zIHBvciB2b2x1bWUuIgogICAgICAgIC8+CiAgICAgICkgOiAoCiAgICAgICAgPGRpdiBjbGFzc05hbWU9ImdyaWQgZ3JpZC1jb2xzLTEgbWQ6Z3JpZC1jb2xzLTIgbGc6Z3JpZC1jb2xzLTMgZ2FwLTQiPgogICAgICAgICAge3Jvd3MubWFwKChyLCBpZHgpID0+ICgKICAgICAgICAgICAgPENhcmQga2V5PXtyLm1lZGlhX2lkfSBjbGFzc05hbWU9Im92ZXJmbG93LWhpZGRlbiBncm91cCI+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImFzcGVjdC1zcXVhcmUgYmctYmxhY2sgcmVsYXRpdmUgb3ZlcmZsb3ctaGlkZGVuIj4KICAgICAgICAgICAgICAgIHtyLm1lZGlhPy50aHVtYm5haWwgPyAoCiAgICAgICAgICAgICAgICAgIC8vIGVzbGludC1kaXNhYmxlLW5leHQtbGluZSBAbmV4dC9uZXh0L25vLWltZy1lbGVtZW50CiAgICAgICAgICAgICAgICAgIDxpbWcKICAgICAgICAgICAgICAgICAgICBzcmM9e3IubWVkaWEudGh1bWJuYWlsfQogICAgICAgICAgICAgICAgICAgIGFsdD0iIgogICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0idy1mdWxsIGgtZnVsbCBvYmplY3QtY292ZXIgZ3JvdXAtaG92ZXI6c2NhbGUtMTA1IHRyYW5zaXRpb24tdHJhbnNmb3JtIGR1cmF0aW9uLTMwMCIKICAgICAgICAgICAgICAgICAgICBsb2FkaW5nPSJsYXp5IgogICAgICAgICAgICAgICAgICAvPgogICAgICAgICAgICAgICAgKSA6ICgKICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InctZnVsbCBoLWZ1bGwgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgdGV4dC1kaW0tMiB0ZXh0LXRpbnkiPgogICAgICAgICAgICAgICAgICAgIHNlbSBwcmV2aWV3CiAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgKX0KCiAgICAgICAgICAgICAgICB7LyogcmFuayBiYWRnZSAqL30KICAgICAgICAgICAgICAgIDxkaXYKICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPXtgYWJzb2x1dGUgdG9wLTMgbGVmdC0zIGgtMTAgdy0xMCByb3VuZGVkLWZ1bGwgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgZm9udC1ib2xkIG1vbm8tbnVtIHRleHQtbGcgJHsKICAgICAgICAgICAgICAgICAgICBpZHggPT09IDAKICAgICAgICAgICAgICAgICAgICAgID8gImJnLXdhcm4gdGV4dC1ibGFjayIKICAgICAgICAgICAgICAgICAgICAgIDogaWR4ID09PSAxCiAgICAgICAgICAgICAgICAgICAgICA/ICJiZy1kaW0tMiB0ZXh0LWJsYWNrIgogICAgICAgICAgICAgICAgICAgICAgOiBpZHggPT09IDIKICAgICAgICAgICAgICAgICAgICAgID8gImJnLVsjY2Q3ZjMyXSB0ZXh0LWJsYWNrIgogICAgICAgICAgICAgICAgICAgICAgOiAiYmctYmcvODAgdGV4dC1mZyBiYWNrZHJvcC1ibHVyIgogICAgICAgICAgICAgICAgICB9YH0KICAgICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgICAge2lkeCArIDF9CiAgICAgICAgICAgICAgICA8L2Rpdj4KCiAgICAgICAgICAgICAgICB7ci5tZWRpYT8ucGVybWFsaW5rICYmICgKICAgICAgICAgICAgICAgICAgPGEKICAgICAgICAgICAgICAgICAgICBocmVmPXtyLm1lZGlhLnBlcm1hbGlua30KICAgICAgICAgICAgICAgICAgICB0YXJnZXQ9Il9ibGFuayIKICAgICAgICAgICAgICAgICAgICByZWw9Im5vcmVmZXJyZXIgbm9vcGVuZXIiCiAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJhYnNvbHV0ZSB0b3AtMyByaWdodC0zIGgtOCB3LTggcm91bmRlZC1mdWxsIGJnLWJsYWNrLzYwIGJhY2tkcm9wLWJsdXIgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgdGV4dC13aGl0ZS84MCBob3Zlcjp0ZXh0LXdoaXRlIGhvdmVyOmJnLWJsYWNrLzgwIHRyYW5zaXRpb24tYWxsIgogICAgICAgICAgICAgICAgICAgIHRpdGxlPSJBYnJpciBubyBJbnN0YWdyYW0iCiAgICAgICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgICAgICA8RXh0ZXJuYWxMaW5rIGNsYXNzTmFtZT0iaC0zLjUgdy0zLjUiIC8+CiAgICAgICAgICAgICAgICAgIDwvYT4KICAgICAgICAgICAgICAgICl9CgogICAgICAgICAgICAgICAge3IubWVkaWE/Lm1lZGlhX3R5cGUgJiYgKAogICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iYWJzb2x1dGUgYm90dG9tLTMgbGVmdC0zIj4KICAgICAgICAgICAgICAgICAgICA8U3RhdHVzUGlsbAogICAgICAgICAgICAgICAgICAgICAgdG9uZT17ci5tZWRpYS5tZWRpYV90eXBlID09PSAiVklERU8iID8gInZpb2xldCIgOiAiYWNjZW50In0KICAgICAgICAgICAgICAgICAgICAgIGxhYmVsPXtyLm1lZGlhLm1lZGlhX3R5cGV9CiAgICAgICAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICApfQogICAgICAgICAgICAgIDwvZGl2PgoKICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0icC00IHNwYWNlLXktMyI+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC14cyBsaW5lLWNsYW1wLTIgbGVhZGluZy1zbnVnIG1pbi1oLVszMnB4XSI+CiAgICAgICAgICAgICAgICAgIHtyLm1lZGlhPy5jYXB0aW9uIHx8ICgKICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtZGltLTIgaXRhbGljIj5zZW0gbGVnZW5kYTwvc3Bhbj4KICAgICAgICAgICAgICAgICAgKX0KICAgICAgICAgICAgICAgIDwvZGl2PgoKICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJncmlkIGdyaWQtY29scy00IGdhcC0yIHRleHQtY2VudGVyIj4KICAgICAgICAgICAgICAgICAgPE1ldHJpYyBsYWJlbD0iZXZlbnRzIiB2YWx1ZT17ci5ldmVudHN9IHRvbmU9ImFjY2VudCIgLz4KICAgICAgICAgICAgICAgICAgPE1ldHJpYyBsYWJlbD0iRE1zIiB2YWx1ZT17ci5kbXN9IHRvbmU9Imdvb2QiIC8+CiAgICAgICAgICAgICAgICAgIDxNZXRyaWMgbGFiZWw9InVzZXJzIiB2YWx1ZT17ci51bmlxdWVfdXNlcnNfY291bnR9IC8+CiAgICAgICAgICAgICAgICAgIDxNZXRyaWMgbGFiZWw9ImNsaWNrcyIgdmFsdWU9e3IuY2xpY2tzfSB0b25lPSJ2aW9sZXQiIC8+CiAgICAgICAgICAgICAgICA8L2Rpdj4KCiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC10aW55IHRleHQtZGltLTIgbW9uby1udW0gZmxleCBqdXN0aWZ5LWJldHdlZW4iPgogICAgICAgICAgICAgICAgICA8c3Bhbj4KICAgICAgICAgICAgICAgICAgICBjb252IHtmbXRQY3Qoci5jbGlja3MsIHIuZG1zKX0KICAgICAgICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRydW5jYXRlIG1heC13LVs1MCVdIiB0aXRsZT17ci5tZWRpYV9pZH0+CiAgICAgICAgICAgICAgICAgICAge3IubWVkaWFfaWQuc2xpY2UoMCwgMTYpfeKApgogICAgICAgICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPC9DYXJkPgogICAgICAgICAgKSl9CiAgICAgICAgPC9kaXY+CiAgICAgICl9CiAgICA8L2Rpdj4KICApOwp9CgpmdW5jdGlvbiBNZXRyaWMoewogIGxhYmVsLAogIHZhbHVlLAogIHRvbmUsCn06IHsKICBsYWJlbDogc3RyaW5nOwogIHZhbHVlOiBudW1iZXI7CiAgdG9uZT86ICJnb29kIiB8ICJ2aW9sZXQiIHwgImFjY2VudCI7Cn0pIHsKICBjb25zdCBjb2xvciA9CiAgICB0b25lID09PSAiZ29vZCIKICAgICAgPyAidGV4dC1nb29kIgogICAgICA6IHRvbmUgPT09ICJ2aW9sZXQiCiAgICAgID8gInRleHQtdmlvbGV0IgogICAgICA6IHRvbmUgPT09ICJhY2NlbnQiCiAgICAgID8gInRleHQtYWNjZW50IgogICAgICA6ICJ0ZXh0LWZnIjsKICByZXR1cm4gKAogICAgPGRpdj4KICAgICAgPGRpdiBjbGFzc05hbWU9e2B0ZXh0LXNtIGZvbnQtc2VtaWJvbGQgbW9uby1udW0gJHtjb2xvcn1gfT4KICAgICAgICB7Zm10Q29tcGFjdCh2YWx1ZSl9CiAgICAgIDwvZGl2PgogICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC10aW55IHRleHQtZGltLTIgdXBwZXJjYXNlIHRyYWNraW5nLXdpZGVyIj57bGFiZWx9PC9kaXY+CiAgICA8L2Rpdj4KICApOwp9Cg=="}
+import { supabaseAdmin } from "@/lib/supabase";
+import { Card, CardHeader, EmptyState, StatusPill } from "@/components/viz";
+import { fmtCompact, fmtPct } from "@/lib/format";
+import type { Account } from "@/types/db";
+import { Trophy, ExternalLink } from "lucide-react";
+
+export const dynamic = "force-dynamic";
+
+type Media = {
+  id: string;
+  caption: string;
+  permalink: string;
+  thumbnail: string;
+  media_type: string;
+  timestamp: string;
+};
+
+async function fetchMediaMap(account: Account): Promise<Map<string, Media>> {
+  const map = new Map<string, Media>();
+  try {
+    const url =
+      "https://graph.instagram.com/v25.0/me/media?fields=id,caption,permalink,thumbnail_url,media_url,media_type,timestamp&limit=100";
+    const res = await fetch(url, {
+      headers: { Authorization: `Bearer ${account.ig_access_token}` },
+      cache: "no-store",
+    });
+    if (!res.ok) return map;
+    const json: any = await res.json();
+    for (const m of json.data ?? []) {
+      map.set(m.id, {
+        id: m.id,
+        caption: m.caption ?? "",
+        permalink: m.permalink,
+        thumbnail: m.thumbnail_url ?? m.media_url,
+        media_type: m.media_type,
+        timestamp: m.timestamp,
+      });
+    }
+  } catch {}
+  return map;
+}
+
+async function load() {
+  const sb = supabaseAdmin();
+  const since = new Date(Date.now() - 30 * 86400000).toISOString();
+
+  const [accountRes, eventsRes, linksRes] = await Promise.all([
+    sb
+      .from("accounts")
+      .select("*")
+      .eq("active", true)
+      .limit(1)
+      .maybeSingle<Account>(),
+    sb
+      .from("events")
+      .select("ig_media_id, dm_sent, ig_user_id")
+      .gte("created_at", since)
+      .not("ig_media_id", "is", null),
+    sb
+      .from("tracked_links")
+      .select("event_id, click_count")
+      .gt("click_count", 0),
+  ]);
+
+  const account = accountRes.data;
+  if (!account) return { account: null, rows: [] };
+
+  const events = (eventsRes.data ?? []) as any[];
+  const links = (linksRes.data ?? []) as any[];
+
+  // click count per event_id
+  const clicksByEvent = new Map<string, number>();
+  for (const l of links) {
+    if (!l.event_id) continue;
+    clicksByEvent.set(l.event_id, (clicksByEvent.get(l.event_id) ?? 0) + (l.click_count ?? 0));
+  }
+
+  // Aggregate per media
+  type Agg = {
+    media_id: string;
+    events: number;
+    dms: number;
+    unique_users: Set<string>;
+    clicks: number;
+  };
+  const agg = new Map<string, Agg>();
+  for (const e of events) {
+    const key = e.ig_media_id as string;
+    const row =
+      agg.get(key) ??
+      { media_id: key, events: 0, dms: 0, unique_users: new Set(), clicks: 0 };
+    row.events++;
+    if (e.dm_sent) row.dms++;
+    if (e.ig_user_id) row.unique_users.add(e.ig_user_id);
+    agg.set(key, row);
+  }
+
+  // link clicks: need to join via event_id → media_id. We need events+links joined.
+  // For simplicity, fetch events w/ id + media
+  const { data: eventsFull } = await sb
+    .from("events")
+    .select("id, ig_media_id")
+    .gte("created_at", since)
+    .not("ig_media_id", "is", null);
+
+  const eventToMedia = new Map<string, string>();
+  for (const ef of (eventsFull ?? []) as any[]) {
+    eventToMedia.set(ef.id, ef.ig_media_id);
+  }
+  for (const [eventId, count] of clicksByEvent.entries()) {
+    const mediaId = eventToMedia.get(eventId);
+    if (!mediaId) continue;
+    const row = agg.get(mediaId);
+    if (row) row.clicks += count;
+  }
+
+  const mediaMap = await fetchMediaMap(account);
+
+  const rows = Array.from(agg.values())
+    .map((r) => ({
+      ...r,
+      unique_users_count: r.unique_users.size,
+      media: mediaMap.get(r.media_id) ?? null,
+    }))
+    .sort((a, b) => b.events - a.events)
+    .slice(0, 20);
+
+  return { account, rows };
+}
+
+export default async function LeaderboardPage() {
+  const { account, rows } = await load();
+
+  if (!account) {
+    return (
+      <div className="space-y-6">
+        <h1 className="text-4xl font-bold tracking-tight">Leaderboard</h1>
+        <EmptyState
+          title="Sem conta conectada"
+          message="Conecte uma conta pra ver leaderboard."
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-8">
+      <header>
+        <h1 className="text-4xl font-bold tracking-tight flex items-center gap-2">
+          <Trophy className="h-8 w-8 text-warn" />
+          Leaderboard
+        </h1>
+        <p className="text-dim-2 text-sm">
+          Posts que mais geraram leads nos últimos 30 dias
+        </p>
+      </header>
+
+      {rows.length === 0 ? (
+        <EmptyState
+          title="Sem dados suficientes"
+          message="Quando posts receberem eventos, aparecem aqui ordenados por volume."
+        />
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {rows.map((r, idx) => (
+            <Card key={r.media_id} className="overflow-hidden group">
+              <div className="aspect-square bg-black relative overflow-hidden">
+                {r.media?.thumbnail ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={r.media.thumbnail}
+                    alt=""
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-dim-2 text-tiny">
+                    sem preview
+                  </div>
+                )}
+
+                {/* rank badge */}
+                <div
+                  className={`absolute top-3 left-3 h-10 w-10 rounded-full flex items-center justify-center font-bold mono-num text-lg ${
+                    idx === 0
+                      ? "bg-warn text-black"
+                      : idx === 1
+                      ? "bg-dim-2 text-black"
+                      : idx === 2
+                      ? "bg-[#cd7f32] text-black"
+                      : "bg-bg/80 text-fg backdrop-blur"
+                  }`}
+                >
+                  {idx + 1}
+                </div>
+
+                {r.media?.permalink && (
+                  <a
+                    href={r.media.permalink}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="absolute top-3 right-3 h-8 w-8 rounded-full bg-black/60 backdrop-blur flex items-center justify-center text-white/80 hover:text-white hover:bg-black/80 transition-all"
+                    title="Abrir no Instagram"
+                  >
+                    <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                )}
+
+                {r.media?.media_type && (
+                  <div className="absolute bottom-3 left-3">
+                    <StatusPill
+                      tone={r.media.media_type === "VIDEO" ? "violet" : "accent"}
+                      label={r.media.media_type}
+                    />
+                  </div>
+                )}
+              </div>
+
+              <div className="p-4 space-y-3">
+                <div className="text-xs line-clamp-2 leading-snug min-h-[32px]">
+                  {r.media?.caption || (
+                    <span className="text-dim-2 italic">sem legenda</span>
+                  )}
+                </div>
+
+                <div className="grid grid-cols-4 gap-2 text-center">
+                  <Metric label="events" value={r.events} tone="accent" />
+                  <Metric label="DMs" value={r.dms} tone="good" />
+                  <Metric label="users" value={r.unique_users_count} />
+                  <Metric label="clicks" value={r.clicks} tone="violet" />
+                </div>
+
+                <div className="text-tiny text-dim-2 mono-num flex justify-between">
+                  <span>
+                    conv {fmtPct(r.clicks, r.dms)}
+                  </span>
+                  <span className="truncate max-w-[50%]" title={r.media_id}>
+                    {r.media_id.slice(0, 16)}…
+                  </span>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Metric({
+  label,
+  value,
+  tone,
+}: {
+  label: string;
+  value: number;
+  tone?: "good" | "violet" | "accent";
+}) {
+  const color =
+    tone === "good"
+      ? "text-good"
+      : tone === "violet"
+      ? "text-violet"
+      : tone === "accent"
+      ? "text-accent"
+      : "text-fg";
+  return (
+    <div>
+      <div className={`text-sm font-semibold mono-num ${color}`}>
+        {fmtCompact(value)}
+      </div>
+      <div className="text-tiny text-dim-2 uppercase tracking-wider">{label}</div>
+    </div>
+  );
+}

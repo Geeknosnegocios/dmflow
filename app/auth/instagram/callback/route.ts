@@ -1,1 +1,152 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlc3BvbnNlIH0gZnJvbSAibmV4dC9zZXJ2ZXIiOwppbXBvcnQgeyBjb29raWVzIH0gZnJvbSAibmV4dC9oZWFkZXJzIjsKaW1wb3J0IHsgc3VwYWJhc2VBZG1pbiB9IGZyb20gIkAvbGliL3N1cGFiYXNlIjsKCmV4cG9ydCBjb25zdCBydW50aW1lID0gIm5vZGVqcyI7CmV4cG9ydCBjb25zdCBkeW5hbWljID0gImZvcmNlLWR5bmFtaWMiOwoKLyoqCiAqIEhhbmRsZXMgSW5zdGFncmFtIEJ1c2luZXNzIExvZ2luIE9BdXRoIGNhbGxiYWNrLgogKiAxLiBWYWxpZGF0ZXMgc3RhdGUgZnJvbSBjb29raWUuCiAqIDIuIEV4Y2hhbmdlcyBjb2RlIGZvciBzaG9ydC1saXZlZCB0b2tlbi4KICogMy4gRXhjaGFuZ2VzIHNob3J0IGZvciBsb25nLWxpdmVkIHRva2VuICg2MGQpLgogKiA0LiBGZXRjaGVzIElHIHVzZXIgaW5mby4KICogNS4gVXBzZXJ0cyBkbWZsb3cuYWNjb3VudHMgd2l0aCBvd25lcl91c2VyX2lkLgogKi8KZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIEdFVChyZXE6IFJlcXVlc3QpIHsKICBjb25zdCB1cmwgPSBuZXcgVVJMKHJlcS51cmwpOwogIGNvbnN0IGNvZGUgPSB1cmwuc2VhcmNoUGFyYW1zLmdldCgiY29kZSIpOwogIGNvbnN0IHN0YXRlID0gdXJsLnNlYXJjaFBhcmFtcy5nZXQoInN0YXRlIik7CiAgY29uc3QgZXJyb3JNc2cgPSB1cmwuc2VhcmNoUGFyYW1zLmdldCgiZXJyb3JfZGVzY3JpcHRpb24iKTsKCiAgY29uc3Qgc3RvcmUgPSBhd2FpdCBjb29raWVzKCk7CiAgY29uc3QgZXhwZWN0ZWRTdGF0ZSA9IHN0b3JlLmdldCgiaWdfb2F1dGhfc3RhdGUiKT8udmFsdWU7CiAgY29uc3QgdXNlcklkID0gc3RvcmUuZ2V0KCJpZ19vYXV0aF91c2VyIik/LnZhbHVlOwogIHN0b3JlLmRlbGV0ZSgiaWdfb2F1dGhfc3RhdGUiKTsKICBzdG9yZS5kZWxldGUoImlnX29hdXRoX3VzZXIiKTsKCiAgaWYgKGVycm9yTXNnKSB7CiAgICByZXR1cm4gcmVkaXJlY3RXaXRoRXJyb3IodXJsLm9yaWdpbiwgZXJyb3JNc2cpOwogIH0KICBpZiAoIWNvZGUgfHwgIXN0YXRlIHx8IHN0YXRlICE9PSBleHBlY3RlZFN0YXRlIHx8ICF1c2VySWQpIHsKICAgIHJldHVybiByZWRpcmVjdFdpdGhFcnJvcih1cmwub3JpZ2luLCAiaW52YWxpZCBzdGF0ZSIpOwogIH0KCiAgY29uc3QgYXBwSWQgPSBwcm9jZXNzLmVudi5NRVRBX0lHX0FQUF9JRCA/PyBwcm9jZXNzLmVudi5ORVhUX1BVQkxJQ19NRVRBX0lHX0FQUF9JRDsKICBjb25zdCBhcHBTZWNyZXQgPSBwcm9jZXNzLmVudi5NRVRBX0lHX0FQUF9TRUNSRVQ7CiAgaWYgKCFhcHBJZCB8fCAhYXBwU2VjcmV0KSB7CiAgICByZXR1cm4gcmVkaXJlY3RXaXRoRXJyb3IodXJsLm9yaWdpbiwgImFwcCBub3QgY29uZmlndXJlZCIpOwogIH0KCiAgY29uc3QgcmVkaXJlY3RVcmkgPSBgJHt1cmwub3JpZ2lufS9hdXRoL2luc3RhZ3JhbS9jYWxsYmFja2A7CgogIC8vIDEuIEV4Y2hhbmdlIGNvZGUg4oaSIHNob3J0LWxpdmVkIHRva2VuCiAgY29uc3Qgc2hvcnRSZXMgPSBhd2FpdCBmZXRjaCgiaHR0cHM6Ly9hcGkuaW5zdGFncmFtLmNvbS9vYXV0aC9hY2Nlc3NfdG9rZW4iLCB7CiAgICBtZXRob2Q6ICJQT1NUIiwKICAgIGhlYWRlcnM6IHsgImNvbnRlbnQtdHlwZSI6ICJhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQiIH0sCiAgICBib2R5OiBuZXcgVVJMU2VhcmNoUGFyYW1zKHsKICAgICAgY2xpZW50X2lkOiBhcHBJZCwKICAgICAgY2xpZW50X3NlY3JldDogYXBwU2VjcmV0LAogICAgICBncmFudF90eXBlOiAiYXV0aG9yaXphdGlvbl9jb2RlIiwKICAgICAgcmVkaXJlY3RfdXJpOiByZWRpcmVjdFVyaSwKICAgICAgY29kZSwKICAgIH0pLAogIH0pOwogIGNvbnN0IHNob3J0SnNvbjogYW55ID0gYXdhaXQgc2hvcnRSZXMuanNvbigpLmNhdGNoKCgpID0+ICh7fSkpOwogIGlmICghc2hvcnRSZXMub2sgfHwgIXNob3J0SnNvbi5hY2Nlc3NfdG9rZW4pIHsKICAgIHJldHVybiByZWRpcmVjdFdpdGhFcnJvcigKICAgICAgdXJsLm9yaWdpbiwKICAgICAgc2hvcnRKc29uPy5lcnJvcl9tZXNzYWdlID8/IGBzaG9ydC10b2tlbiBleGNoYW5nZSBmYWlsZWQgKCR7c2hvcnRSZXMuc3RhdHVzfSlgCiAgICApOwogIH0KCiAgY29uc3Qgc2hvcnRUb2tlbjogc3RyaW5nID0gc2hvcnRKc29uLmFjY2Vzc190b2tlbjsKCiAgLy8gMi4gU2hvcnQg4oaSIGxvbmctbGl2ZWQgKDYwZCkKICBjb25zdCBsb25nUmVzID0gYXdhaXQgZmV0Y2goCiAgICBgaHR0cHM6Ly9ncmFwaC5pbnN0YWdyYW0uY29tL2FjY2Vzc190b2tlbj9ncmFudF90eXBlPWlnX2V4Y2hhbmdlX3Rva2VuJmNsaWVudF9zZWNyZXQ9JHtlbmNvZGVVUklDb21wb25lbnQoCiAgICAgIGFwcFNlY3JldAogICAgKX0mYWNjZXNzX3Rva2VuPSR7ZW5jb2RlVVJJQ29tcG9uZW50KHNob3J0VG9rZW4pfWAKICApOwogIGNvbnN0IGxvbmdKc29uOiBhbnkgPSBhd2FpdCBsb25nUmVzLmpzb24oKS5jYXRjaCgoKSA9PiAoe30pKTsKICBpZiAoIWxvbmdSZXMub2sgfHwgIWxvbmdKc29uLmFjY2Vzc190b2tlbikgewogICAgcmV0dXJuIHJlZGlyZWN0V2l0aEVycm9yKAogICAgICB1cmwub3JpZ2luLAogICAgICBsb25nSnNvbj8uZXJyb3I/Lm1lc3NhZ2UgPz8gImxvbmctdG9rZW4gZXhjaGFuZ2UgZmFpbGVkIgogICAgKTsKICB9CiAgY29uc3QgbG9uZ1Rva2VuOiBzdHJpbmcgPSBsb25nSnNvbi5hY2Nlc3NfdG9rZW47CiAgY29uc3QgZXhwaXJlc0luU2VjOiBudW1iZXIgPSBsb25nSnNvbi5leHBpcmVzX2luID8/IDYwICogMjQgKiAzNjAwOwogIGNvbnN0IGV4cGlyZXNBdCA9IG5ldyBEYXRlKERhdGUubm93KCkgKyBleHBpcmVzSW5TZWMgKiAxMDAwKTsKCiAgLy8gMy4gRmV0Y2ggdXNlciBpbmZvCiAgY29uc3QgdXNlclJlcyA9IGF3YWl0IGZldGNoKAogICAgYGh0dHBzOi8vZ3JhcGguaW5zdGFncmFtLmNvbS92MjUuMC9tZT9maWVsZHM9aWQsdXNlcm5hbWUsYWNjb3VudF90eXBlJmFjY2Vzc190b2tlbj0ke2VuY29kZVVSSUNvbXBvbmVudChsb25nVG9rZW4pfWAKICApOwogIGNvbnN0IHVzZXJKc29uOiBhbnkgPSBhd2FpdCB1c2VyUmVzLmpzb24oKS5jYXRjaCgoKSA9PiAoe30pKTsKICBpZiAoIXVzZXJSZXMub2sgfHwgIXVzZXJKc29uLmlkKSB7CiAgICByZXR1cm4gcmVkaXJlY3RXaXRoRXJyb3IoCiAgICAgIHVybC5vcmlnaW4sCiAgICAgIHVzZXJKc29uPy5lcnJvcj8ubWVzc2FnZSA/PyAiZmFpbGVkIHRvIGZldGNoIElHIHVzZXIiCiAgICApOwogIH0KCiAgY29uc3QgaWdVc2VySWQ6IHN0cmluZyA9IHVzZXJKc29uLmlkOwogIGNvbnN0IGlnVXNlcm5hbWU6IHN0cmluZyA9IHVzZXJKc29uLnVzZXJuYW1lOwogIGNvbnN0IGFjY291bnRUeXBlOiBzdHJpbmcgPSB1c2VySnNvbi5hY2NvdW50X3R5cGU7CgogIGlmIChhY2NvdW50VHlwZSAhPT0gIkJVU0lORVNTIiAmJiBhY2NvdW50VHlwZSAhPT0gIk1FRElBX0NSRUFUT1IiKSB7CiAgICByZXR1cm4gcmVkaXJlY3RXaXRoRXJyb3IoCiAgICAgIHVybC5vcmlnaW4sCiAgICAgICJDb250YSBwcmVjaXNhIHNlciBCdXNpbmVzcyBvdSBDcmVhdG9yIG5vIEluc3RhZ3JhbSIKICAgICk7CiAgfQoKICAvLyA0LiBVcHNlcnQgYWNjb3VudAogIGNvbnN0IGFkbWluID0gc3VwYWJhc2VBZG1pbigpOwogIGNvbnN0IHsgZGF0YTogZXhpc3RpbmcgfSA9IGF3YWl0IGFkbWluCiAgICAuZnJvbSgiYWNjb3VudHMiKQogICAgLnNlbGVjdCgiaWQiKQogICAgLmVxKCJpZ19idXNpbmVzc19pZCIsIGlnVXNlcklkKQogICAgLm1heWJlU2luZ2xlKCk7CgogIGNvbnN0IHZlcmlmeVRva2VuID0gYGRtZmxvd192ZXJpZnlfJHtNYXRoLnJhbmRvbSgpLnRvU3RyaW5nKDM2KS5zbGljZSgyLCAxOCl9YDsKCiAgaWYgKGV4aXN0aW5nKSB7CiAgICBhd2FpdCBhZG1pbgogICAgICAuZnJvbSgiYWNjb3VudHMiKQogICAgICAudXBkYXRlKHsKICAgICAgICBvd25lcl91c2VyX2lkOiB1c2VySWQsCiAgICAgICAgaWdfdXNlcm5hbWU6IGlnVXNlcm5hbWUsCiAgICAgICAgaWdfYWNjZXNzX3Rva2VuOiBsb25nVG9rZW4sCiAgICAgICAgaWdfdG9rZW5fZXhwaXJlc19hdDogZXhwaXJlc0F0LnRvSVNPU3RyaW5nKCksCiAgICAgICAgaWdfdG9rZW5fcmVmcmVzaGVkX2F0OiBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCksCiAgICAgICAgYXBwX2lkOiBhcHBJZCwKICAgICAgICBhcHBfc2VjcmV0OiBhcHBTZWNyZXQsCiAgICAgICAgYWN0aXZlOiB0cnVlLAogICAgICB9KQogICAgICAuZXEoImlkIiwgZXhpc3RpbmcuaWQpOwogIH0gZWxzZSB7CiAgICBhd2FpdCBhZG1pbi5mcm9tKCJhY2NvdW50cyIpLmluc2VydCh7CiAgICAgIG93bmVyX3VzZXJfaWQ6IHVzZXJJZCwKICAgICAgbmFtZTogYEAke2lnVXNlcm5hbWV9YCwKICAgICAgaWdfYnVzaW5lc3NfaWQ6IGlnVXNlcklkLAogICAgICBpZ191c2VybmFtZTogaWdVc2VybmFtZSwKICAgICAgaWdfYWNjZXNzX3Rva2VuOiBsb25nVG9rZW4sCiAgICAgIGlnX3Rva2VuX2V4cGlyZXNfYXQ6IGV4cGlyZXNBdC50b0lTT1N0cmluZygpLAogICAgICBpZ190b2tlbl9yZWZyZXNoZWRfYXQ6IG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKSwKICAgICAgYXBwX2lkOiBhcHBJZCwKICAgICAgYXBwX3NlY3JldDogYXBwU2VjcmV0LAogICAgICB2ZXJpZnlfdG9rZW46IHZlcmlmeVRva2VuLAogICAgICBhY3RpdmU6IHRydWUsCiAgICB9KTsKICB9CgogIHJldHVybiBOZXh0UmVzcG9uc2UucmVkaXJlY3QobmV3IFVSTCgiL2Rhc2hib2FyZD9jb25uZWN0ZWQ9MSIsIHVybC5vcmlnaW4pKTsKfQoKZnVuY3Rpb24gcmVkaXJlY3RXaXRoRXJyb3Iob3JpZ2luOiBzdHJpbmcsIG1zZzogc3RyaW5nKSB7CiAgY29uc3QgdXJsID0gbmV3IFVSTCgiL29uYm9hcmRpbmciLCBvcmlnaW4pOwogIHVybC5zZWFyY2hQYXJhbXMuc2V0KCJpZ19lcnJvciIsIG1zZyk7CiAgcmV0dXJuIE5leHRSZXNwb25zZS5yZWRpcmVjdCh1cmwpOwp9Cg=="}
+import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
+import { supabaseAdmin } from "@/lib/supabase";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+/**
+ * Handles Instagram Business Login OAuth callback.
+ * 1. Validates state from cookie.
+ * 2. Exchanges code for short-lived token.
+ * 3. Exchanges short for long-lived token (60d).
+ * 4. Fetches IG user info.
+ * 5. Upserts dmflow.accounts with owner_user_id.
+ */
+export async function GET(req: Request) {
+  const url = new URL(req.url);
+  const code = url.searchParams.get("code");
+  const state = url.searchParams.get("state");
+  const errorMsg = url.searchParams.get("error_description");
+
+  const store = await cookies();
+  const expectedState = store.get("ig_oauth_state")?.value;
+  const userId = store.get("ig_oauth_user")?.value;
+  store.delete("ig_oauth_state");
+  store.delete("ig_oauth_user");
+
+  if (errorMsg) {
+    return redirectWithError(url.origin, errorMsg);
+  }
+  if (!code || !state || state !== expectedState || !userId) {
+    return redirectWithError(url.origin, "invalid state");
+  }
+
+  const appId = process.env.META_IG_APP_ID ?? process.env.NEXT_PUBLIC_META_IG_APP_ID;
+  const appSecret = process.env.META_IG_APP_SECRET;
+  if (!appId || !appSecret) {
+    return redirectWithError(url.origin, "app not configured");
+  }
+
+  const redirectUri = `${url.origin}/auth/instagram/callback`;
+
+  // 1. Exchange code → short-lived token
+  const shortRes = await fetch("https://api.instagram.com/oauth/access_token", {
+    method: "POST",
+    headers: { "content-type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({
+      client_id: appId,
+      client_secret: appSecret,
+      grant_type: "authorization_code",
+      redirect_uri: redirectUri,
+      code,
+    }),
+  });
+  const shortJson: any = await shortRes.json().catch(() => ({}));
+  if (!shortRes.ok || !shortJson.access_token) {
+    return redirectWithError(
+      url.origin,
+      shortJson?.error_message ?? `short-token exchange failed (${shortRes.status})`
+    );
+  }
+
+  const shortToken: string = shortJson.access_token;
+
+  // 2. Short → long-lived (60d)
+  const longRes = await fetch(
+    `https://graph.instagram.com/access_token?grant_type=ig_exchange_token&client_secret=${encodeURIComponent(
+      appSecret
+    )}&access_token=${encodeURIComponent(shortToken)}`
+  );
+  const longJson: any = await longRes.json().catch(() => ({}));
+  if (!longRes.ok || !longJson.access_token) {
+    return redirectWithError(
+      url.origin,
+      longJson?.error?.message ?? "long-token exchange failed"
+    );
+  }
+  const longToken: string = longJson.access_token;
+  const expiresInSec: number = longJson.expires_in ?? 60 * 24 * 3600;
+  const expiresAt = new Date(Date.now() + expiresInSec * 1000);
+
+  // 3. Fetch user info
+  const userRes = await fetch(
+    `https://graph.instagram.com/v25.0/me?fields=id,username,account_type&access_token=${encodeURIComponent(longToken)}`
+  );
+  const userJson: any = await userRes.json().catch(() => ({}));
+  if (!userRes.ok || !userJson.id) {
+    return redirectWithError(
+      url.origin,
+      userJson?.error?.message ?? "failed to fetch IG user"
+    );
+  }
+
+  const igUserId: string = userJson.id;
+  const igUsername: string = userJson.username;
+  const accountType: string = userJson.account_type;
+
+  if (accountType !== "BUSINESS" && accountType !== "MEDIA_CREATOR") {
+    return redirectWithError(
+      url.origin,
+      "Conta precisa ser Business ou Creator no Instagram"
+    );
+  }
+
+  // 4. Upsert account
+  const admin = supabaseAdmin();
+  const { data: existing } = await admin
+    .from("accounts")
+    .select("id")
+    .eq("ig_business_id", igUserId)
+    .maybeSingle();
+
+  const verifyToken = `dmflow_verify_${Math.random().toString(36).slice(2, 18)}`;
+
+  if (existing) {
+    await admin
+      .from("accounts")
+      .update({
+        owner_user_id: userId,
+        ig_username: igUsername,
+        ig_access_token: longToken,
+        ig_token_expires_at: expiresAt.toISOString(),
+        ig_token_refreshed_at: new Date().toISOString(),
+        app_id: appId,
+        app_secret: appSecret,
+        active: true,
+      })
+      .eq("id", existing.id);
+  } else {
+    await admin.from("accounts").insert({
+      owner_user_id: userId,
+      name: `@${igUsername}`,
+      ig_business_id: igUserId,
+      ig_username: igUsername,
+      ig_access_token: longToken,
+      ig_token_expires_at: expiresAt.toISOString(),
+      ig_token_refreshed_at: new Date().toISOString(),
+      app_id: appId,
+      app_secret: appSecret,
+      verify_token: verifyToken,
+      active: true,
+    });
+  }
+
+  return NextResponse.redirect(new URL("/dashboard?connected=1", url.origin));
+}
+
+function redirectWithError(origin: string, msg: string) {
+  const url = new URL("/onboarding", origin);
+  url.searchParams.set("ig_error", msg);
+  return NextResponse.redirect(url);
+}

@@ -1,1 +1,49 @@
-{"data":"aW1wb3J0IHsgSW1hZ2VSZXNwb25zZSB9IGZyb20gIm5leHQvb2ciOwoKZXhwb3J0IGNvbnN0IHNpemUgPSB7IHdpZHRoOiAxODAsIGhlaWdodDogMTgwIH07CmV4cG9ydCBjb25zdCBjb250ZW50VHlwZSA9ICJpbWFnZS9wbmciOwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gQXBwbGVJY29uKCkgewogIHJldHVybiBuZXcgSW1hZ2VSZXNwb25zZSgKICAgICgKICAgICAgPGRpdgogICAgICAgIHN0eWxlPXt7CiAgICAgICAgICB3aWR0aDogIjEwMCUiLAogICAgICAgICAgaGVpZ2h0OiAiMTAwJSIsCiAgICAgICAgICBkaXNwbGF5OiAiZmxleCIsCiAgICAgICAgICBhbGlnbkl0ZW1zOiAiY2VudGVyIiwKICAgICAgICAgIGp1c3RpZnlDb250ZW50OiAiY2VudGVyIiwKICAgICAgICAgIGJhY2tncm91bmQ6ICJ0cmFuc3BhcmVudCIsCiAgICAgICAgfX0KICAgICAgPgogICAgICAgIDxzdmcKICAgICAgICAgIHdpZHRoPSIxODAiCiAgICAgICAgICBoZWlnaHQ9IjE4MCIKICAgICAgICAgIHZpZXdCb3g9IjMgMyAyNiAyNiIKICAgICAgICAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgICAgICA+CiAgICAgICAgICA8ZGVmcz4KICAgICAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iNCIgeTE9IjQiIHgyPSIyOCIgeTI9IjI4IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcENvbG9yPSIjMjJkM2VlIiAvPgogICAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcENvbG9yPSIjYTc4YmZhIiAvPgogICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9InMiIHgxPSIxNiIgeTE9IjE2IiB4Mj0iMjgiIHkyPSIyNiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3BDb2xvcj0iIzBlYTViOCIgLz4KICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3BDb2xvcj0iIzdjNWZlNiIgLz4KICAgICAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgICAgICAgIDwvZGVmcz4KICAgICAgICAgIDxwYXRoIGQ9Ik0gMjcgNSBMIDUgMTYgTCAxNCAxOCBaIiBmaWxsPSJ1cmwoI2cpIiAvPgogICAgICAgICAgPHBhdGggZD0iTSAyNyA1IEwgMTQgMTggTCAxNyAyNyBaIiBmaWxsPSJ1cmwoI3MpIiAvPgogICAgICAgICAgPHBhdGggZD0iTSAyNyA1IEwgMTQgMTggTCAxNyAyMiBaIiBmaWxsPSJ1cmwoI2cpIiBvcGFjaXR5PSIwLjU1IiAvPgogICAgICAgICAgPHBhdGgKICAgICAgICAgICAgZD0iTSAyNyA1IEwgMTQgMTgiCiAgICAgICAgICAgIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjYpIgogICAgICAgICAgICBzdHJva2VXaWR0aD0iMC42IgogICAgICAgICAgICBzdHJva2VMaW5lY2FwPSJyb3VuZCIKICAgICAgICAgIC8+CiAgICAgICAgPC9zdmc+CiAgICAgIDwvZGl2PgogICAgKSwKICAgIHNpemUKICApOwp9Cg=="}
+import { ImageResponse } from "next/og";
+
+export const size = { width: 180, height: 180 };
+export const contentType = "image/png";
+
+export default function AppleIcon() {
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          background: "transparent",
+        }}
+      >
+        <svg
+          width="180"
+          height="180"
+          viewBox="3 3 26 26"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient id="g" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#22d3ee" />
+              <stop offset="100%" stopColor="#a78bfa" />
+            </linearGradient>
+            <linearGradient id="s" x1="16" y1="16" x2="28" y2="26" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#0ea5b8" />
+              <stop offset="100%" stopColor="#7c5fe6" />
+            </linearGradient>
+          </defs>
+          <path d="M 27 5 L 5 16 L 14 18 Z" fill="url(#g)" />
+          <path d="M 27 5 L 14 18 L 17 27 Z" fill="url(#s)" />
+          <path d="M 27 5 L 14 18 L 17 22 Z" fill="url(#g)" opacity="0.55" />
+          <path
+            d="M 27 5 L 14 18"
+            stroke="rgba(255,255,255,0.6)"
+            strokeWidth="0.6"
+            strokeLinecap="round"
+          />
+        </svg>
+      </div>
+    ),
+    size
+  );
+}

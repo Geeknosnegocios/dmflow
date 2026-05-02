@@ -1,1 +1,63 @@
-{"data":"ZXhwb3J0IGZ1bmN0aW9uIGZtdFJlbGF0aXZlKGRhdGVTdHI6IHN0cmluZyk6IHN0cmluZyB7CiAgY29uc3Qgbm93ID0gRGF0ZS5ub3coKTsKICBjb25zdCB0aGVuID0gbmV3IERhdGUoZGF0ZVN0cikuZ2V0VGltZSgpOwogIGNvbnN0IGRpZmYgPSBNYXRoLm1heCgwLCBub3cgLSB0aGVuKTsKICBjb25zdCBtaW4gPSA2MCAqIDEwMDA7CiAgY29uc3QgaG91ciA9IDYwICogbWluOwogIGNvbnN0IGRheSA9IDI0ICogaG91cjsKICBpZiAoZGlmZiA8IG1pbikgcmV0dXJuICJhZ29yYSI7CiAgaWYgKGRpZmYgPCBob3VyKSByZXR1cm4gYCR7TWF0aC5mbG9vcihkaWZmIC8gbWluKX1tYDsKICBpZiAoZGlmZiA8IGRheSkgcmV0dXJuIGAke01hdGguZmxvb3IoZGlmZiAvIGhvdXIpfWhgOwogIGlmIChkaWZmIDwgNyAqIGRheSkgcmV0dXJuIGAke01hdGguZmxvb3IoZGlmZiAvIGRheSl9ZGA7CiAgcmV0dXJuIG5ldyBEYXRlKGRhdGVTdHIpLnRvTG9jYWxlRGF0ZVN0cmluZygicHQtQlIiLCB7CiAgICBkYXk6ICIyLWRpZ2l0IiwKICAgIG1vbnRoOiAiMi1kaWdpdCIsCiAgfSk7Cn0KCmV4cG9ydCBmdW5jdGlvbiBmbXRDb21wYWN0KG46IG51bWJlcik6IHN0cmluZyB7CiAgaWYgKG4gPCAxMDAwKSByZXR1cm4gbi50b0xvY2FsZVN0cmluZygicHQtQlIiKTsKICBpZiAobiA8IDFfMDAwXzAwMCkgcmV0dXJuIChuIC8gMTAwMCkudG9GaXhlZChuIDwgMTBfMDAwID8gMSA6IDApICsgImsiOwogIHJldHVybiAobiAvIDFfMDAwXzAwMCkudG9GaXhlZCgxKSArICJNIjsKfQoKZXhwb3J0IGZ1bmN0aW9uIGZtdFBjdChudW06IG51bWJlciwgZGVub206IG51bWJlcik6IHN0cmluZyB7CiAgaWYgKCFkZW5vbSkgcmV0dXJuICIwJSI7CiAgcmV0dXJuIGAkeygobnVtIC8gZGVub20pICogMTAwKS50b0ZpeGVkKG51bSAvIGRlbm9tID49IDAuMSA/IDAgOiAxKX0lYDsKfQoKLyoqCiAqIEJ1aWxkIDctZGF5IHNwYXJrbGluZSBidWNrZXRzIChvbGRlc3Qg4oaSIG5ld2VzdCkKICogRWFjaCBidWNrZXQgPSBjb3VudCBvZiBpdGVtcyB3aXRoIGNyZWF0ZWRfYXQgaW4gdGhhdCBkYXkuCiAqLwpleHBvcnQgZnVuY3Rpb24gYnVja2V0N0RheXMoZGF0ZXM6IHN0cmluZ1tdKTogbnVtYmVyW10gewogIGNvbnN0IGJ1Y2tldHMgPSBbMCwgMCwgMCwgMCwgMCwgMCwgMF07CiAgY29uc3QgdG9kYXkgPSBuZXcgRGF0ZSgpOwogIHRvZGF5LnNldEhvdXJzKDAsIDAsIDAsIDApOwogIGNvbnN0IHN0YXJ0ID0gdG9kYXkuZ2V0VGltZSgpIC0gNiAqIDg2NDAwMDAwOwogIGZvciAoY29uc3QgZCBvZiBkYXRlcykgewogICAgY29uc3QgdCA9IG5ldyBEYXRlKGQpLmdldFRpbWUoKTsKICAgIGlmICh0IDwgc3RhcnQpIGNvbnRpbnVlOwogICAgY29uc3QgaWR4ID0gTWF0aC5mbG9vcigodCAtIHN0YXJ0KSAvIDg2NDAwMDAwKTsKICAgIGlmIChpZHggPj0gMCAmJiBpZHggPCA3KSBidWNrZXRzW2lkeF0rKzsKICB9CiAgcmV0dXJuIGJ1Y2tldHM7Cn0KCi8qKgogKiBCdWlsZCBoZWF0bWFwIG1hdHJpeCBbZGF5X29mX3dlZWtfMF9tb24uLjZfc3VuXVtob3VyXzAuLjIzXQogKi8KZXhwb3J0IGZ1bmN0aW9uIGhlYXRtYXBNYXRyaXgoZGF0ZXM6IHN0cmluZ1tdKTogbnVtYmVyW11bXSB7CiAgY29uc3QgbTogbnVtYmVyW11bXSA9IEFycmF5LmZyb20oeyBsZW5ndGg6IDcgfSwgKCkgPT4KICAgIEFycmF5LmZyb20oeyBsZW5ndGg6IDI0IH0sICgpID0+IDApCiAgKTsKICBmb3IgKGNvbnN0IGQgb2YgZGF0ZXMpIHsKICAgIGNvbnN0IGR0ID0gbmV3IERhdGUoZCk7CiAgICAvLyBKUzogMD1TdW4uLjY9U2F0ICDihpIgIGNvbnZlcnQgdG8gMD1Nb24uLjY9U3VuCiAgICBjb25zdCBqc0RvdyA9IGR0LmdldERheSgpOwogICAgY29uc3Qgcm93ID0gKGpzRG93ICsgNikgJSA3OwogICAgY29uc3QgY29sID0gZHQuZ2V0SG91cnMoKTsKICAgIG1bcm93XVtjb2xdKys7CiAgfQogIHJldHVybiBtOwp9Cg=="}
+export function fmtRelative(dateStr: string): string {
+  const now = Date.now();
+  const then = new Date(dateStr).getTime();
+  const diff = Math.max(0, now - then);
+  const min = 60 * 1000;
+  const hour = 60 * min;
+  const day = 24 * hour;
+  if (diff < min) return "agora";
+  if (diff < hour) return `${Math.floor(diff / min)}m`;
+  if (diff < day) return `${Math.floor(diff / hour)}h`;
+  if (diff < 7 * day) return `${Math.floor(diff / day)}d`;
+  return new Date(dateStr).toLocaleDateString("pt-BR", {
+    day: "2-digit",
+    month: "2-digit",
+  });
+}
+
+export function fmtCompact(n: number): string {
+  if (n < 1000) return n.toLocaleString("pt-BR");
+  if (n < 1_000_000) return (n / 1000).toFixed(n < 10_000 ? 1 : 0) + "k";
+  return (n / 1_000_000).toFixed(1) + "M";
+}
+
+export function fmtPct(num: number, denom: number): string {
+  if (!denom) return "0%";
+  return `${((num / denom) * 100).toFixed(num / denom >= 0.1 ? 0 : 1)}%`;
+}
+
+/**
+ * Build 7-day sparkline buckets (oldest → newest)
+ * Each bucket = count of items with created_at in that day.
+ */
+export function bucket7Days(dates: string[]): number[] {
+  const buckets = [0, 0, 0, 0, 0, 0, 0];
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const start = today.getTime() - 6 * 86400000;
+  for (const d of dates) {
+    const t = new Date(d).getTime();
+    if (t < start) continue;
+    const idx = Math.floor((t - start) / 86400000);
+    if (idx >= 0 && idx < 7) buckets[idx]++;
+  }
+  return buckets;
+}
+
+/**
+ * Build heatmap matrix [day_of_week_0_mon..6_sun][hour_0..23]
+ */
+export function heatmapMatrix(dates: string[]): number[][] {
+  const m: number[][] = Array.from({ length: 7 }, () =>
+    Array.from({ length: 24 }, () => 0)
+  );
+  for (const d of dates) {
+    const dt = new Date(d);
+    // JS: 0=Sun..6=Sat  →  convert to 0=Mon..6=Sun
+    const jsDow = dt.getDay();
+    const row = (jsDow + 6) % 7;
+    const col = dt.getHours();
+    m[row][col]++;
+  }
+  return m;
+}

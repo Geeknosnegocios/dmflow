@@ -1,1 +1,63 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlcXVlc3QsIE5leHRSZXNwb25zZSB9IGZyb20gIm5leHQvc2VydmVyIjsKaW1wb3J0IHsgdmVyaWZ5QXBpS2V5IH0gZnJvbSAiQC9saWIvYXBpLWtleXMiOwppbXBvcnQgeyBzdXBhYmFzZUFkbWluIH0gZnJvbSAiQC9saWIvc3VwYWJhc2UiOwoKZXhwb3J0IGNvbnN0IHJ1bnRpbWUgPSAibm9kZWpzIjsKZXhwb3J0IGNvbnN0IGR5bmFtaWMgPSAiZm9yY2UtZHluYW1pYyI7Cgphc3luYyBmdW5jdGlvbiBnZXRBY2NvdW50SWRzKHVzZXJJZDogc3RyaW5nKSB7CiAgY29uc3Qgc2IgPSBzdXBhYmFzZUFkbWluKCk7CiAgY29uc3QgeyBkYXRhIH0gPSBhd2FpdCBzYi5mcm9tKCJhY2NvdW50cyIpLnNlbGVjdCgiaWQiKS5lcSgib3duZXJfdXNlcl9pZCIsIHVzZXJJZCk7CiAgcmV0dXJuIChkYXRhID8/IFtdKS5tYXAoKGE6IGFueSkgPT4gYS5pZCk7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBQQVRDSChyZXE6IE5leHRSZXF1ZXN0LCB7IHBhcmFtcyB9OiB7IHBhcmFtczogUHJvbWlzZTx7IGlkOiBzdHJpbmcgfT4gfSkgewogIGNvbnN0IGF1dGggPSByZXEuaGVhZGVycy5nZXQoImF1dGhvcml6YXRpb24iKSA/PyAiIjsKICBjb25zdCB0b2tlbiA9IGF1dGgucmVwbGFjZSgvXkJlYXJlclxzKy9pLCAiIik7CiAgY29uc3QgdiA9IGF3YWl0IHZlcmlmeUFwaUtleSh0b2tlbik7CiAgaWYgKCF2LnZhbGlkKSByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oeyBlcnJvcjogImludmFsaWQgYXBpIGtleSIgfSwgeyBzdGF0dXM6IDQwMSB9KTsKCiAgY29uc3QgeyBpZCB9ID0gYXdhaXQgcGFyYW1zOwogIGNvbnN0IGFjY291bnRJZHMgPSBhd2FpdCBnZXRBY2NvdW50SWRzKHYudXNlcl9pZCEpOwogIGlmICghYWNjb3VudElkcy5sZW5ndGgpIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IGVycm9yOiAibm8gYWNjb3VudCIgfSwgeyBzdGF0dXM6IDQwMCB9KTsKCiAgY29uc3QgYm9keSA9IGF3YWl0IHJlcS5qc29uKCk7CiAgY29uc3QgYWxsb3dlZCA9IFsibmFtZSIsICJrZXl3b3JkIiwgIm1hdGNoX21vZGUiLCAiZG1fbWVzc2FnZSIsICJhY3RpdmUiLCAicHJpb3JpdHkiLCAicGxhdGZvcm0iXTsKICBjb25zdCBwYXRjaDogUmVjb3JkPHN0cmluZywgdW5rbm93bj4gPSB7fTsKICBmb3IgKGNvbnN0IGsgb2YgYWxsb3dlZCkgaWYgKGsgaW4gYm9keSkgcGF0Y2hba10gPSBib2R5W2tdOwoKICBpZiAoIU9iamVjdC5rZXlzKHBhdGNoKS5sZW5ndGgpIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IGVycm9yOiAibm90aGluZyB0byB1cGRhdGUiIH0sIHsgc3RhdHVzOiA0MDAgfSk7CgogIGNvbnN0IHNiID0gc3VwYWJhc2VBZG1pbigpOwogIGNvbnN0IHsgZGF0YSwgZXJyb3IgfSA9IGF3YWl0IHNiCiAgICAuZnJvbSgicnVsZXMiKQogICAgLnVwZGF0ZSh7IC4uLnBhdGNoLCB1cGRhdGVkX2F0OiBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCkgfSkKICAgIC5lcSgiaWQiLCBpZCkKICAgIC5pbigiYWNjb3VudF9pZCIsIGFjY291bnRJZHMpCiAgICAuc2VsZWN0KCJpZCwgbmFtZSwga2V5d29yZCwgYWN0aXZlLCBwbGF0Zm9ybSIpCiAgICAuc2luZ2xlKCk7CgogIGlmIChlcnJvcikgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsgZXJyb3I6IGVycm9yLm1lc3NhZ2UgfSwgeyBzdGF0dXM6IDUwMCB9KTsKICByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oZGF0YSk7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBERUxFVEUocmVxOiBOZXh0UmVxdWVzdCwgeyBwYXJhbXMgfTogeyBwYXJhbXM6IFByb21pc2U8eyBpZDogc3RyaW5nIH0+IH0pIHsKICBjb25zdCBhdXRoID0gcmVxLmhlYWRlcnMuZ2V0KCJhdXRob3JpemF0aW9uIikgPz8gIiI7CiAgY29uc3QgdG9rZW4gPSBhdXRoLnJlcGxhY2UoL15CZWFyZXJccysvaSwgIiIpOwogIGNvbnN0IHYgPSBhd2FpdCB2ZXJpZnlBcGlLZXkodG9rZW4pOwogIGlmICghdi52YWxpZCkgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsgZXJyb3I6ICJpbnZhbGlkIGFwaSBrZXkiIH0sIHsgc3RhdHVzOiA0MDEgfSk7CgogIGNvbnN0IHsgaWQgfSA9IGF3YWl0IHBhcmFtczsKICBjb25zdCBhY2NvdW50SWRzID0gYXdhaXQgZ2V0QWNjb3VudElkcyh2LnVzZXJfaWQhKTsKICBpZiAoIWFjY291bnRJZHMubGVuZ3RoKSByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oeyBlcnJvcjogIm5vIGFjY291bnQiIH0sIHsgc3RhdHVzOiA0MDAgfSk7CgogIGNvbnN0IHNiID0gc3VwYWJhc2VBZG1pbigpOwogIGNvbnN0IHsgZXJyb3IgfSA9IGF3YWl0IHNiCiAgICAuZnJvbSgicnVsZXMiKQogICAgLmRlbGV0ZSgpCiAgICAuZXEoImlkIiwgaWQpCiAgICAuaW4oImFjY291bnRfaWQiLCBhY2NvdW50SWRzKTsKCiAgaWYgKGVycm9yKSByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oeyBlcnJvcjogZXJyb3IubWVzc2FnZSB9LCB7IHN0YXR1czogNTAwIH0pOwogIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IGRlbGV0ZWQ6IHRydWUgfSk7Cn0K"}
+import { NextRequest, NextResponse } from "next/server";
+import { verifyApiKey } from "@/lib/api-keys";
+import { supabaseAdmin } from "@/lib/supabase";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+async function getAccountIds(userId: string) {
+  const sb = supabaseAdmin();
+  const { data } = await sb.from("accounts").select("id").eq("owner_user_id", userId);
+  return (data ?? []).map((a: any) => a.id);
+}
+
+export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const auth = req.headers.get("authorization") ?? "";
+  const token = auth.replace(/^Bearer\s+/i, "");
+  const v = await verifyApiKey(token);
+  if (!v.valid) return NextResponse.json({ error: "invalid api key" }, { status: 401 });
+
+  const { id } = await params;
+  const accountIds = await getAccountIds(v.user_id!);
+  if (!accountIds.length) return NextResponse.json({ error: "no account" }, { status: 400 });
+
+  const body = await req.json();
+  const allowed = ["name", "keyword", "match_mode", "dm_message", "active", "priority", "platform"];
+  const patch: Record<string, unknown> = {};
+  for (const k of allowed) if (k in body) patch[k] = body[k];
+
+  if (!Object.keys(patch).length) return NextResponse.json({ error: "nothing to update" }, { status: 400 });
+
+  const sb = supabaseAdmin();
+  const { data, error } = await sb
+    .from("rules")
+    .update({ ...patch, updated_at: new Date().toISOString() })
+    .eq("id", id)
+    .in("account_id", accountIds)
+    .select("id, name, keyword, active, platform")
+    .single();
+
+  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  return NextResponse.json(data);
+}
+
+export async function DELETE(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const auth = req.headers.get("authorization") ?? "";
+  const token = auth.replace(/^Bearer\s+/i, "");
+  const v = await verifyApiKey(token);
+  if (!v.valid) return NextResponse.json({ error: "invalid api key" }, { status: 401 });
+
+  const { id } = await params;
+  const accountIds = await getAccountIds(v.user_id!);
+  if (!accountIds.length) return NextResponse.json({ error: "no account" }, { status: 400 });
+
+  const sb = supabaseAdmin();
+  const { error } = await sb
+    .from("rules")
+    .delete()
+    .eq("id", id)
+    .in("account_id", accountIds);
+
+  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  return NextResponse.json({ deleted: true });
+}

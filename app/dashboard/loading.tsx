@@ -1,1 +1,42 @@
-{"data":"aW1wb3J0IHsgS3BpU2tlbGV0b24sIENhcmRTa2VsZXRvbiwgU2tlbGV0b24sIFRhYmxlUm93U2tlbGV0b24gfSBmcm9tICJAL2NvbXBvbmVudHMvc2tlbGV0b24iOwppbXBvcnQgeyBDYXJkLCBDYXJkSGVhZGVyIH0gZnJvbSAiQC9jb21wb25lbnRzL3ZpeiI7CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBMb2FkaW5nKCkgewogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS04Ij4KICAgICAgPGhlYWRlciBjbGFzc05hbWU9ImZsZXggaXRlbXMtZW5kIGp1c3RpZnktYmV0d2VlbiBnYXAtNCI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktMiI+CiAgICAgICAgICA8U2tlbGV0b24gY2xhc3NOYW1lPSJoLTggdy0zMiIgLz4KICAgICAgICAgIDxTa2VsZXRvbiBjbGFzc05hbWU9ImgtMyB3LTQ4IiAvPgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGdhcC0yIj4KICAgICAgICAgIDxTa2VsZXRvbiBjbGFzc05hbWU9ImgtOSB3LTI0IiAvPgogICAgICAgICAgPFNrZWxldG9uIGNsYXNzTmFtZT0iaC05IHctMjQiIC8+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvaGVhZGVyPgoKICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJncmlkIGdyaWQtY29scy0yIGxnOmdyaWQtY29scy00IGdhcC0zIj4KICAgICAgICA8S3BpU2tlbGV0b24gLz4KICAgICAgICA8S3BpU2tlbGV0b24gLz4KICAgICAgICA8S3BpU2tlbGV0b24gLz4KICAgICAgICA8S3BpU2tlbGV0b24gLz4KICAgICAgPC9zZWN0aW9uPgoKICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJncmlkIGdyaWQtY29scy0xIGxnOmdyaWQtY29scy01IGdhcC00Ij4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ibGc6Y29sLXNwYW4tMiI+CiAgICAgICAgICA8Q2FyZFNrZWxldG9uIGhlaWdodD17MTgwfSAvPgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJsZzpjb2wtc3Bhbi0zIj4KICAgICAgICAgIDxDYXJkU2tlbGV0b24gaGVpZ2h0PXsxODB9IC8+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvc2VjdGlvbj4KCiAgICAgIDxDYXJkPgogICAgICAgIDxDYXJkSGVhZGVyIHRpdGxlPSJDYXJyZWdhbmRvIiBzdWJ0aXRsZT0iUHV4YW5kbyBkYWRvcyBkbyBTdXBhYmFzZSIgLz4KICAgICAgICB7QXJyYXkuZnJvbSh7IGxlbmd0aDogNSB9KS5tYXAoKF8sIGkpID0+ICgKICAgICAgICAgIDxUYWJsZVJvd1NrZWxldG9uIGtleT17aX0gLz4KICAgICAgICApKX0KICAgICAgPC9DYXJkPgogICAgPC9kaXY+CiAgKTsKfQo="}
+import { KpiSkeleton, CardSkeleton, Skeleton, TableRowSkeleton } from "@/components/skeleton";
+import { Card, CardHeader } from "@/components/viz";
+
+export default function Loading() {
+  return (
+    <div className="space-y-8">
+      <header className="flex items-end justify-between gap-4">
+        <div className="space-y-2">
+          <Skeleton className="h-8 w-32" />
+          <Skeleton className="h-3 w-48" />
+        </div>
+        <div className="flex gap-2">
+          <Skeleton className="h-9 w-24" />
+          <Skeleton className="h-9 w-24" />
+        </div>
+      </header>
+
+      <section className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+        <KpiSkeleton />
+        <KpiSkeleton />
+        <KpiSkeleton />
+        <KpiSkeleton />
+      </section>
+
+      <section className="grid grid-cols-1 lg:grid-cols-5 gap-4">
+        <div className="lg:col-span-2">
+          <CardSkeleton height={180} />
+        </div>
+        <div className="lg:col-span-3">
+          <CardSkeleton height={180} />
+        </div>
+      </section>
+
+      <Card>
+        <CardHeader title="Carregando" subtitle="Puxando dados do Supabase" />
+        {Array.from({ length: 5 }).map((_, i) => (
+          <TableRowSkeleton key={i} />
+        ))}
+      </Card>
+    </div>
+  );
+}

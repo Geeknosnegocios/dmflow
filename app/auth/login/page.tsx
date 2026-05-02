@@ -1,1 +1,91 @@
-{"data":"aW1wb3J0IExpbmsgZnJvbSAibmV4dC9saW5rIjsKaW1wb3J0IHsgcmVkaXJlY3QgfSBmcm9tICJuZXh0L25hdmlnYXRpb24iOwppbXBvcnQgeyBzdXBhYmFzZVNlcnZlciB9IGZyb20gIkAvbGliL3N1cGFiYXNlLXNlcnZlciI7CmltcG9ydCB7IFN1Ym1pdEJ1dHRvbiB9IGZyb20gIkAvY29tcG9uZW50cy9zdWJtaXQtYnV0dG9uIjsKCmV4cG9ydCBjb25zdCBkeW5hbWljID0gImZvcmNlLWR5bmFtaWMiOwoKYXN5bmMgZnVuY3Rpb24gc2lnbkluKGZvcm1EYXRhOiBGb3JtRGF0YSkgewogICJ1c2Ugc2VydmVyIjsKICBjb25zdCBlbWFpbCA9IFN0cmluZyhmb3JtRGF0YS5nZXQoImVtYWlsIikgPz8gIiIpLnRyaW0oKTsKICBjb25zdCBwYXNzd29yZCA9IFN0cmluZyhmb3JtRGF0YS5nZXQoInBhc3N3b3JkIikgPz8gIiIpOwogIGNvbnN0IG5leHQgPSBTdHJpbmcoZm9ybURhdGEuZ2V0KCJuZXh0IikgPz8gIi9kYXNoYm9hcmQiKTsKCiAgY29uc3Qgc2IgPSBhd2FpdCBzdXBhYmFzZVNlcnZlcigpOwogIGNvbnN0IHsgZXJyb3IgfSA9IGF3YWl0IHNiLmF1dGguc2lnbkluV2l0aFBhc3N3b3JkKHsgZW1haWwsIHBhc3N3b3JkIH0pOwoKICBpZiAoZXJyb3IpIHsKICAgIHJlZGlyZWN0KGAvYXV0aC9sb2dpbj9lcnJvcj0ke2VuY29kZVVSSUNvbXBvbmVudChlcnJvci5tZXNzYWdlKX1gKTsKICB9CiAgcmVkaXJlY3QobmV4dCk7Cn0KCmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIExvZ2luUGFnZSh7CiAgc2VhcmNoUGFyYW1zLAp9OiB7CiAgc2VhcmNoUGFyYW1zOiBQcm9taXNlPHsgZXJyb3I/OiBzdHJpbmc7IG5leHQ/OiBzdHJpbmcgfT47Cn0pIHsKICBjb25zdCBwYXJhbXMgPSBhd2FpdCBzZWFyY2hQYXJhbXM7CiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJyb3VuZGVkLTJ4bCBib3JkZXIgYm9yZGVyLWxpbmUtMiBiZy1zdXJmYWNlIHNoYWRvdy1jYXJkIHAtNiBzcGFjZS15LTUiPgogICAgICA8ZGl2PgogICAgICAgIDxoMSBjbGFzc05hbWU9InRleHQtMnhsIGZvbnQtYm9sZCB0cmFja2luZy10aWdodCI+RW50cmFyPC9oMT4KICAgICAgICA8cCBjbGFzc05hbWU9InRleHQtZGltLTIgdGV4dC1zbSBtdC0xIj4KICAgICAgICAgIEFjZXNzZSBzZXUgZGFzaGJvYXJkIERNRmxvdwogICAgICAgIDwvcD4KICAgICAgPC9kaXY+CgogICAgICB7cGFyYW1zLmVycm9yICYmICgKICAgICAgICA8ZGl2IGNsYXNzTmFtZT0icm91bmRlZC1sZyBiZy1kYW5nZXItZGltIGJvcmRlciBib3JkZXItZGFuZ2VyLzMwIHRleHQtZGFuZ2VyIHRleHQtc20gcHgtMyBweS0yIj4KICAgICAgICAgIHtwYXJhbXMuZXJyb3J9CiAgICAgICAgPC9kaXY+CiAgICAgICl9CgogICAgICA8Zm9ybSBhY3Rpb249e3NpZ25Jbn0gY2xhc3NOYW1lPSJzcGFjZS15LTMiPgogICAgICAgIDxpbnB1dCB0eXBlPSJoaWRkZW4iIG5hbWU9Im5leHQiIHZhbHVlPXtwYXJhbXMubmV4dCA/PyAiL2Rhc2hib2FyZCJ9IC8+CiAgICAgICAgPEZpZWxkIGxhYmVsPSJFbWFpbCI+CiAgICAgICAgICA8aW5wdXQKICAgICAgICAgICAgdHlwZT0iZW1haWwiCiAgICAgICAgICAgIG5hbWU9ImVtYWlsIgogICAgICAgICAgICByZXF1aXJlZAogICAgICAgICAgICBhdXRvQ29tcGxldGU9ImVtYWlsIgogICAgICAgICAgICBjbGFzc05hbWU9InctZnVsbCBiZy1iZy0xIGJvcmRlciBib3JkZXItbGluZS0yIHJvdW5kZWQtbGcgcHgtMyBweS0yLjUgdGV4dC1zbSBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6Ym9yZGVyLWFjY2VudC81MCIKICAgICAgICAgIC8+CiAgICAgICAgPC9GaWVsZD4KICAgICAgICA8RmllbGQgbGFiZWw9IlNlbmhhIj4KICAgICAgICAgIDxpbnB1dAogICAgICAgICAgICB0eXBlPSJwYXNzd29yZCIKICAgICAgICAgICAgbmFtZT0icGFzc3dvcmQiCiAgICAgICAgICAgIHJlcXVpcmVkCiAgICAgICAgICAgIGF1dG9Db21wbGV0ZT0iY3VycmVudC1wYXNzd29yZCIKICAgICAgICAgICAgbWluTGVuZ3RoPXs2fQogICAgICAgICAgICBjbGFzc05hbWU9InctZnVsbCBiZy1iZy0xIGJvcmRlciBib3JkZXItbGluZS0yIHJvdW5kZWQtbGcgcHgtMyBweS0yLjUgdGV4dC1zbSBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6Ym9yZGVyLWFjY2VudC81MCIKICAgICAgICAgIC8+CiAgICAgICAgPC9GaWVsZD4KCiAgICAgICAgPFN1Ym1pdEJ1dHRvbgogICAgICAgICAgcGVuZGluZ0xhYmVsPSJFbnRyYW5kb+KApiIKICAgICAgICAgIGNsYXNzTmFtZT0idy1mdWxsIHJvdW5kZWQtbGcgYmctYWNjZW50IGhvdmVyOmJnLWFjY2VudC85MCB0ZXh0LWFjY2VudC1pbmsgZm9udC1zZW1pYm9sZCBweS0yLjUgdGV4dC1zbSB0cmFuc2l0aW9uLWNvbG9ycyBtdC0yIGp1c3RpZnktY2VudGVyIgogICAgICAgID4KICAgICAgICAgIEVudHJhcgogICAgICAgIDwvU3VibWl0QnV0dG9uPgogICAgICA8L2Zvcm0+CgogICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC1zbSB0ZXh0LWRpbS0yIHRleHQtY2VudGVyIj4KICAgICAgICBTZW0gY29udGE/eyIgIn0KICAgICAgICA8TGluayBocmVmPSIvYXV0aC9zaWdudXAiIGNsYXNzTmFtZT0idGV4dC1hY2NlbnQgaG92ZXI6dW5kZXJsaW5lIj4KICAgICAgICAgIENyaWFyIGdyw6F0aXMKICAgICAgICA8L0xpbms+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgKTsKfQoKZnVuY3Rpb24gRmllbGQoeyBsYWJlbCwgY2hpbGRyZW4gfTogeyBsYWJlbDogc3RyaW5nOyBjaGlsZHJlbjogUmVhY3QuUmVhY3ROb2RlIH0pIHsKICByZXR1cm4gKAogICAgPGxhYmVsIGNsYXNzTmFtZT0iYmxvY2sgc3BhY2UteS0xLjUiPgogICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtc20gZm9udC1tZWRpdW0iPntsYWJlbH08L3NwYW4+CiAgICAgIHtjaGlsZHJlbn0KICAgIDwvbGFiZWw+CiAgKTsKfQo="}
+import Link from "next/link";
+import { redirect } from "next/navigation";
+import { supabaseServer } from "@/lib/supabase-server";
+import { SubmitButton } from "@/components/submit-button";
+
+export const dynamic = "force-dynamic";
+
+async function signIn(formData: FormData) {
+  "use server";
+  const email = String(formData.get("email") ?? "").trim();
+  const password = String(formData.get("password") ?? "");
+  const next = String(formData.get("next") ?? "/dashboard");
+
+  const sb = await supabaseServer();
+  const { error } = await sb.auth.signInWithPassword({ email, password });
+
+  if (error) {
+    redirect(`/auth/login?error=${encodeURIComponent(error.message)}`);
+  }
+  redirect(next);
+}
+
+export default async function LoginPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string; next?: string }>;
+}) {
+  const params = await searchParams;
+  return (
+    <div className="rounded-2xl border border-line-2 bg-surface shadow-card p-6 space-y-5">
+      <div>
+        <h1 className="text-2xl font-bold tracking-tight">Entrar</h1>
+        <p className="text-dim-2 text-sm mt-1">
+          Acesse seu dashboard DMFlow
+        </p>
+      </div>
+
+      {params.error && (
+        <div className="rounded-lg bg-danger-dim border border-danger/30 text-danger text-sm px-3 py-2">
+          {params.error}
+        </div>
+      )}
+
+      <form action={signIn} className="space-y-3">
+        <input type="hidden" name="next" value={params.next ?? "/dashboard"} />
+        <Field label="Email">
+          <input
+            type="email"
+            name="email"
+            required
+            autoComplete="email"
+            className="w-full bg-bg-1 border border-line-2 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-accent/50"
+          />
+        </Field>
+        <Field label="Senha">
+          <input
+            type="password"
+            name="password"
+            required
+            autoComplete="current-password"
+            minLength={6}
+            className="w-full bg-bg-1 border border-line-2 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-accent/50"
+          />
+        </Field>
+
+        <SubmitButton
+          pendingLabel="Entrando…"
+          className="w-full rounded-lg bg-accent hover:bg-accent/90 text-accent-ink font-semibold py-2.5 text-sm transition-colors mt-2 justify-center"
+        >
+          Entrar
+        </SubmitButton>
+      </form>
+
+      <div className="text-sm text-dim-2 text-center">
+        Sem conta?{" "}
+        <Link href="/auth/signup" className="text-accent hover:underline">
+          Criar grátis
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+function Field({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <label className="block space-y-1.5">
+      <span className="text-sm font-medium">{label}</span>
+      {children}
+    </label>
+  );
+}

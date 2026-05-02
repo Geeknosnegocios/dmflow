@@ -1,1 +1,82 @@
-{"data":"InVzZSBjbGllbnQiOwoKaW1wb3J0IFJlYWN0LCB7IHVzZVN0YXRlLCB1c2VUcmFuc2l0aW9uIH0gZnJvbSAicmVhY3QiOwppbXBvcnQgeyB1c2VSb3V0ZXIgfSBmcm9tICJuZXh0L25hdmlnYXRpb24iOwoKZXhwb3J0IGZ1bmN0aW9uIFRlc3RSdWxlQnV0dG9uKHsgcnVsZUlkIH06IHsgcnVsZUlkOiBzdHJpbmcgfSkgewogIGNvbnN0IFtzdGF0ZSwgc2V0U3RhdGVdID0gdXNlU3RhdGU8ImlkbGUiIHwgInNlbmRpbmciIHwgInNlbnQiIHwgImVycm9yIj4oImlkbGUiKTsKICBjb25zdCBbZXJyb3JNc2csIHNldEVycm9yTXNnXSA9IHVzZVN0YXRlPHN0cmluZyB8IG51bGw+KG51bGwpOwoKICBhc3luYyBmdW5jdGlvbiBydW4oKSB7CiAgICBpZiAoc3RhdGUgPT09ICJzZW5kaW5nIikgcmV0dXJuOwogICAgc2V0U3RhdGUoInNlbmRpbmciKTsKICAgIHNldEVycm9yTXNnKG51bGwpOwogICAgdHJ5IHsKICAgICAgY29uc3QgZmQgPSBuZXcgRm9ybURhdGEoKTsKICAgICAgZmQuYXBwZW5kKCJydWxlX2lkIiwgcnVsZUlkKTsKICAgICAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2goIi9hcGkvYWRtaW4vdGVzdC1ydWxlIiwgeyBtZXRob2Q6ICJQT1NUIiwgYm9keTogZmQgfSk7CiAgICAgIGNvbnN0IGpzb24gPSBhd2FpdCByZXMuanNvbigpOwogICAgICBpZiAoIXJlcy5vayB8fCAhanNvbi5vaykgewogICAgICAgIHNldFN0YXRlKCJlcnJvciIpOwogICAgICAgIHNldEVycm9yTXNnKGpzb24uZXJyb3IgfHwgIkZhbGhhIik7CiAgICAgICAgc2V0VGltZW91dCgoKSA9PiBzZXRTdGF0ZSgiaWRsZSIpLCAzMDAwKTsKICAgICAgfSBlbHNlIHsKICAgICAgICBzZXRTdGF0ZSgic2VudCIpOwogICAgICAgIHNldFRpbWVvdXQoKCkgPT4gc2V0U3RhdGUoImlkbGUiKSwgMzAwMCk7CiAgICAgIH0KICAgIH0gY2F0Y2ggKGUpIHsKICAgICAgc2V0U3RhdGUoImVycm9yIik7CiAgICAgIHNldEVycm9yTXNnKChlIGFzIEVycm9yKS5tZXNzYWdlKTsKICAgICAgc2V0VGltZW91dCgoKSA9PiBzZXRTdGF0ZSgiaWRsZSIpLCAzMDAwKTsKICAgIH0KICB9CgogIGNvbnN0IGxhYmVscyA9IHsKICAgIGlkbGU6ICJUZXN0YXIiLAogICAgc2VuZGluZzogIkVudmlhbmRv4oCmIiwKICAgIHNlbnQ6ICLinJMgZW52aWFkYSIsCiAgICBlcnJvcjogIuKclSBmYWxob3UiLAogIH07CiAgY29uc3QgY2xzID0gewogICAgaWRsZTogImJvcmRlci1saW5lLTIgdGV4dC1kaW0tMiBob3Zlcjpib3JkZXItYWNjZW50LzQwIGhvdmVyOnRleHQtYWNjZW50IiwKICAgIHNlbmRpbmc6ICJib3JkZXItYWNjZW50LzQwIHRleHQtYWNjZW50IGN1cnNvci13YWl0IiwKICAgIHNlbnQ6ICJib3JkZXItZ29vZC81MCBiZy1nb29kLzEwIHRleHQtZ29vZCIsCiAgICBlcnJvcjogImJvcmRlci1kYW5nZXIvNTAgYmctZGFuZ2VyLzEwIHRleHQtZGFuZ2VyIiwKICB9OwoKICByZXR1cm4gKAogICAgPGJ1dHRvbgogICAgICB0eXBlPSJidXR0b24iCiAgICAgIG9uQ2xpY2s9e3J1bn0KICAgICAgdGl0bGU9e2Vycm9yTXNnID8/ICJFbnZpYSBETSBkZSB0ZXN0ZSBwcmEgdHVhIHByw7NwcmlhIGNvbnRhIn0KICAgICAgY2xhc3NOYW1lPXtgdGV4dC10aW55IHJvdW5kZWQtbWQgYm9yZGVyIG1pbi1oLVszMnB4XSBpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgcHgtMi41IHB5LTEgdHJhbnNpdGlvbi1jb2xvcnMgJHtjbHNbc3RhdGVdfWB9CiAgICA+CiAgICAgIHtsYWJlbHNbc3RhdGVdfQogICAgPC9idXR0b24+CiAgKTsKfQoKZXhwb3J0IGZ1bmN0aW9uIER1cGxpY2F0ZVJ1bGVCdXR0b24oeyBydWxlSWQgfTogeyBydWxlSWQ6IHN0cmluZyB9KSB7CiAgY29uc3QgW3BlbmRpbmcsIHN0YXJ0XSA9IHVzZVRyYW5zaXRpb24oKTsKICBjb25zdCByb3V0ZXIgPSB1c2VSb3V0ZXIoKTsKICByZXR1cm4gKAogICAgPGZvcm0KICAgICAgYWN0aW9uPXthc3luYyAoKSA9PiB7CiAgICAgICAgY29uc3QgZmQgPSBuZXcgRm9ybURhdGEoKTsKICAgICAgICBmZC5hcHBlbmQoInJ1bGVfaWQiLCBydWxlSWQpOwogICAgICAgIHN0YXJ0KGFzeW5jICgpID0+IHsKICAgICAgICAgIGF3YWl0IGZldGNoKCIvYXBpL2FkbWluL2R1cGxpY2F0ZS1ydWxlIiwgeyBtZXRob2Q6ICJQT1NUIiwgYm9keTogZmQgfSk7CiAgICAgICAgICByb3V0ZXIucmVmcmVzaCgpOwogICAgICAgIH0pOwogICAgICB9fQogICAgPgogICAgICA8YnV0dG9uCiAgICAgICAgdHlwZT0ic3VibWl0IgogICAgICAgIGRpc2FibGVkPXtwZW5kaW5nfQogICAgICAgIGNsYXNzTmFtZT0idGV4dC10aW55IHJvdW5kZWQtbWQgYm9yZGVyIG1pbi1oLVszMnB4XSBpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgYm9yZGVyLWxpbmUtMiBob3Zlcjpib3JkZXItYWNjZW50LzQwIHB4LTIuNSBweS0xIHRleHQtZGltLTIgaG92ZXI6dGV4dC1hY2NlbnQgdHJhbnNpdGlvbi1jb2xvcnMgZGlzYWJsZWQ6b3BhY2l0eS01MCIKICAgICAgPgogICAgICAgIHtwZW5kaW5nID8gIuKApiIgOiAiZHVwbGljYXIifQogICAgICA8L2J1dHRvbj4KICAgIDwvZm9ybT4KICApOwp9Cg=="}
+"use client";
+
+import React, { useState, useTransition } from "react";
+import { useRouter } from "next/navigation";
+
+export function TestRuleButton({ ruleId }: { ruleId: string }) {
+  const [state, setState] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+
+  async function run() {
+    if (state === "sending") return;
+    setState("sending");
+    setErrorMsg(null);
+    try {
+      const fd = new FormData();
+      fd.append("rule_id", ruleId);
+      const res = await fetch("/api/admin/test-rule", { method: "POST", body: fd });
+      const json = await res.json();
+      if (!res.ok || !json.ok) {
+        setState("error");
+        setErrorMsg(json.error || "Falha");
+        setTimeout(() => setState("idle"), 3000);
+      } else {
+        setState("sent");
+        setTimeout(() => setState("idle"), 3000);
+      }
+    } catch (e) {
+      setState("error");
+      setErrorMsg((e as Error).message);
+      setTimeout(() => setState("idle"), 3000);
+    }
+  }
+
+  const labels = {
+    idle: "Testar",
+    sending: "Enviando…",
+    sent: "✓ enviada",
+    error: "✕ falhou",
+  };
+  const cls = {
+    idle: "border-line-2 text-dim-2 hover:border-accent/40 hover:text-accent",
+    sending: "border-accent/40 text-accent cursor-wait",
+    sent: "border-good/50 bg-good/10 text-good",
+    error: "border-danger/50 bg-danger/10 text-danger",
+  };
+
+  return (
+    <button
+      type="button"
+      onClick={run}
+      title={errorMsg ?? "Envia DM de teste pra tua própria conta"}
+      className={`text-tiny rounded-md border min-h-[32px] inline-flex items-center justify-center px-2.5 py-1 transition-colors ${cls[state]}`}
+    >
+      {labels[state]}
+    </button>
+  );
+}
+
+export function DuplicateRuleButton({ ruleId }: { ruleId: string }) {
+  const [pending, start] = useTransition();
+  const router = useRouter();
+  return (
+    <form
+      action={async () => {
+        const fd = new FormData();
+        fd.append("rule_id", ruleId);
+        start(async () => {
+          await fetch("/api/admin/duplicate-rule", { method: "POST", body: fd });
+          router.refresh();
+        });
+      }}
+    >
+      <button
+        type="submit"
+        disabled={pending}
+        className="text-tiny rounded-md border min-h-[32px] inline-flex items-center justify-center border-line-2 hover:border-accent/40 px-2.5 py-1 text-dim-2 hover:text-accent transition-colors disabled:opacity-50"
+      >
+        {pending ? "…" : "duplicar"}
+      </button>
+    </form>
+  );
+}

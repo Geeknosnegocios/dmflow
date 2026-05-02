@@ -1,1 +1,28 @@
-{"data":"ewogICJuYW1lIjogImRtZmxvdy1hcHAiLAogICJ2ZXJzaW9uIjogIjAuMS4wIiwKICAicHJpdmF0ZSI6IHRydWUsCiAgInNjcmlwdHMiOiB7CiAgICAiZGV2IjogIm5leHQgZGV2IiwKICAgICJidWlsZCI6ICJuZXh0IGJ1aWxkIiwKICAgICJzdGFydCI6ICJuZXh0IHN0YXJ0IiwKICAgICJsaW50IjogIm5leHQgbGludCIKICB9LAogICJkZXBlbmRlbmNpZXMiOiB7CiAgICAiQHN1cGFiYXNlL3NzciI6ICJeMC4xMC4yIiwKICAgICJAc3VwYWJhc2Uvc3VwYWJhc2UtanMiOiAiXjIuNDUuNCIsCiAgICAibHVjaWRlLXJlYWN0IjogIl4xLjkuMCIsCiAgICAibmV4dCI6ICJeMTYuMi40IiwKICAgICJyZWFjdCI6ICJeMTkuMi41IiwKICAgICJyZWFjdC1kb20iOiAiXjE5LjIuNSIKICB9LAogICJkZXZEZXBlbmRlbmNpZXMiOiB7CiAgICAiQHR5cGVzL25vZGUiOiAiXjIyLjkuMCIsCiAgICAiQHR5cGVzL3JlYWN0IjogIl4xOS4yLjE0IiwKICAgICJAdHlwZXMvcmVhY3QtZG9tIjogIl4xOS4yLjMiLAogICAgImF1dG9wcmVmaXhlciI6ICJeMTAuNC4yMCIsCiAgICAicG9zdGNzcyI6ICJeOC40LjQ5IiwKICAgICJ0YWlsd2luZGNzcyI6ICJeMy40LjE0IiwKICAgICJ0eXBlc2NyaXB0IjogIl41LjYuMyIKICB9Cn0K"}
+{
+  "name": "dmflow-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.10.2",
+    "@supabase/supabase-js": "^2.45.4",
+    "lucide-react": "^1.9.0",
+    "next": "^16.2.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
+  }
+}

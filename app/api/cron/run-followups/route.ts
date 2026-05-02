@@ -1,1 +1,132 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlcXVlc3QsIE5leHRSZXNwb25zZSB9IGZyb20gIm5leHQvc2VydmVyIjsKaW1wb3J0IHsgc3VwYWJhc2VBZG1pbiB9IGZyb20gIkAvbGliL3N1cGFiYXNlIjsKaW1wb3J0IHsgc2VuZERpcmVjdE1lc3NhZ2UgfSBmcm9tICJAL2xpYi9tZXRhIjsKaW1wb3J0IHsgYnVpbGRUcmFja2VkQnV0dG9ucywgcmVzb2x2ZUJhc2VVcmwgfSBmcm9tICJAL2xpYi90cmFja2luZyI7CmltcG9ydCB7IGludGVycG9sYXRlIH0gZnJvbSAiQC9saWIvcGxhY2Vob2xkZXJzIjsKaW1wb3J0IHR5cGUgeyBBY2NvdW50LCBSdWxlIH0gZnJvbSAiQC90eXBlcy9kYiI7CgpleHBvcnQgY29uc3QgcnVudGltZSA9ICJub2RlanMiOwpleHBvcnQgY29uc3QgZHluYW1pYyA9ICJmb3JjZS1keW5hbWljIjsKCmZ1bmN0aW9uIGF1dGhPayhyZXE6IE5leHRSZXF1ZXN0KTogYm9vbGVhbiB7CiAgY29uc3Qgc2VjcmV0ID0gcHJvY2Vzcy5lbnYuQ1JPTl9TRUNSRVQ7CiAgY29uc3QgaXNWZXJjZWxDcm9uID0gcmVxLmhlYWRlcnMuZ2V0KCJ1c2VyLWFnZW50Iik/LmluY2x1ZGVzKCJ2ZXJjZWwtY3JvbiIpID8/IGZhbHNlOwogIGlmIChpc1ZlcmNlbENyb24pIHJldHVybiB0cnVlOwogIGlmICghc2VjcmV0KSByZXR1cm4gdHJ1ZTsKICByZXR1cm4gcmVxLmhlYWRlcnMuZ2V0KCJhdXRob3JpemF0aW9uIikgPT09IGBCZWFyZXIgJHtzZWNyZXR9YDsKfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIEdFVChyZXE6IE5leHRSZXF1ZXN0KSB7CiAgaWYgKCFhdXRoT2socmVxKSkgewogICAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsgZXJyb3I6ICJ1bmF1dGhvcml6ZWQiIH0sIHsgc3RhdHVzOiA0MDEgfSk7CiAgfQoKICBjb25zdCBzYiA9IHN1cGFiYXNlQWRtaW4oKTsKICBjb25zdCBiYXNlVXJsID0gcmVzb2x2ZUJhc2VVcmwocmVxKTsKICBjb25zdCBub3cgPSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCk7CgogIGNvbnN0IHsgZGF0YTogcGVuZGluZyB9ID0gYXdhaXQgc2IKICAgIC5mcm9tKCJmb2xsb3d1cHMiKQogICAgLnNlbGVjdCgiKiIpCiAgICAuaXMoInNlbnRfYXQiLCBudWxsKQogICAgLmlzKCJza2lwcGVkX3JlYXNvbiIsIG51bGwpCiAgICAubHRlKCJzY2hlZHVsZWRfZm9yIiwgbm93KQogICAgLm9yZGVyKCJzY2hlZHVsZWRfZm9yIiwgeyBhc2NlbmRpbmc6IHRydWUgfSkKICAgIC5saW1pdCg1MCk7CgogIGNvbnN0IHJlc3VsdHM6IGFueVtdID0gW107CgogIGZvciAoY29uc3QgZm9sbG93dXAgb2YgKHBlbmRpbmcgPz8gW10pIGFzIGFueVtdKSB7CiAgICBjb25zdCB7IGRhdGE6IHJ1bGUgfSA9IGF3YWl0IHNiCiAgICAgIC5mcm9tKCJydWxlcyIpCiAgICAgIC5zZWxlY3QoIioiKQogICAgICAuZXEoImlkIiwgZm9sbG93dXAucnVsZV9pZCkKICAgICAgLm1heWJlU2luZ2xlPFJ1bGU+KCk7CiAgICBjb25zdCB7IGRhdGE6IGFjY291bnQgfSA9IGF3YWl0IHNiCiAgICAgIC5mcm9tKCJhY2NvdW50cyIpCiAgICAgIC5zZWxlY3QoIioiKQogICAgICAuZXEoImlkIiwgZm9sbG93dXAuYWNjb3VudF9pZCkKICAgICAgLm1heWJlU2luZ2xlPEFjY291bnQ+KCk7CgogICAgaWYgKCFydWxlIHx8ICFhY2NvdW50KSB7CiAgICAgIGF3YWl0IHNiCiAgICAgICAgLmZyb20oImZvbGxvd3VwcyIpCiAgICAgICAgLnVwZGF0ZSh7IHNraXBwZWRfcmVhc29uOiAicnVsZV9vcl9hY2NvdW50X21pc3NpbmciIH0pCiAgICAgICAgLmVxKCJpZCIsIGZvbGxvd3VwLmlkKTsKICAgICAgcmVzdWx0cy5wdXNoKHsgaWQ6IGZvbGxvd3VwLmlkLCBzdGF0dXM6ICJza2lwcGVkIiwgcmVhc29uOiAibWlzc2luZyIgfSk7CiAgICAgIGNvbnRpbnVlOwogICAgfQoKICAgIC8vIFNraXAgaWYgdXNlciBhbHJlYWR5IGNsaWNrZWQgKGNvbnZlcnNpb24gYWNoaWV2ZWQpCiAgICBjb25zdCB7IGRhdGE6IGNsaWNrZWQgfSA9IGF3YWl0IHNiCiAgICAgIC5mcm9tKCJ0cmFja2VkX2xpbmtzIikKICAgICAgLnNlbGVjdCgiaWQiKQogICAgICAuZXEoImV2ZW50X2lkIiwgZm9sbG93dXAuZXZlbnRfaWQpCiAgICAgIC5ndCgiY2xpY2tfY291bnQiLCAwKQogICAgICAubGltaXQoMSk7CgogICAgaWYgKGNsaWNrZWQgJiYgY2xpY2tlZC5sZW5ndGggPiAwKSB7CiAgICAgIGF3YWl0IHNiCiAgICAgICAgLmZyb20oImZvbGxvd3VwcyIpCiAgICAgICAgLnVwZGF0ZSh7IHNraXBwZWRfcmVhc29uOiAiYWxyZWFkeV9jbGlja2VkIiB9KQogICAgICAgIC5lcSgiaWQiLCBmb2xsb3d1cC5pZCk7CiAgICAgIHJlc3VsdHMucHVzaCh7IGlkOiBmb2xsb3d1cC5pZCwgc3RhdHVzOiAic2tpcHBlZCIsIHJlYXNvbjogImNvbnZlcnRlZCIgfSk7CiAgICAgIGNvbnRpbnVlOwogICAgfQoKICAgIGlmICghcnVsZS5mb2xsb3d1cF9tZXNzYWdlKSB7CiAgICAgIGF3YWl0IHNiCiAgICAgICAgLmZyb20oImZvbGxvd3VwcyIpCiAgICAgICAgLnVwZGF0ZSh7IHNraXBwZWRfcmVhc29uOiAibm9fbWVzc2FnZSIgfSkKICAgICAgICAuZXEoImlkIiwgZm9sbG93dXAuaWQpOwogICAgICBjb250aW51ZTsKICAgIH0KCiAgICBjb25zdCBwZXJzb25hbGl6ZWQgPSBpbnRlcnBvbGF0ZShydWxlLmZvbGxvd3VwX21lc3NhZ2UsIHsKICAgICAgdXNlcm5hbWU6IG51bGwsIC8vIGZvbGxvd3VwIGRvZXNuJ3QgaGF2ZSB1c2VybmFtZSBjb250ZXh0IHJlYWRpbHk7IG9wdGlvbmFsIGVuaGFuY2VtZW50CiAgICB9KTsKCiAgICBjb25zdCBidXR0b25zID0gcnVsZS5mb2xsb3d1cF9idXR0b25zID8/IHJ1bGUuZG1fYnV0dG9ucyA/PyBbXTsKICAgIGNvbnN0IHRyYWNrZWQgPQogICAgICBidXR0b25zLmxlbmd0aCA+IDAKICAgICAgICA/IGF3YWl0IGJ1aWxkVHJhY2tlZEJ1dHRvbnMoewogICAgICAgICAgICBidXR0b25zLAogICAgICAgICAgICBhY2NvdW50SWQ6IGFjY291bnQuaWQsCiAgICAgICAgICAgIHJ1bGVJZDogcnVsZS5pZCwKICAgICAgICAgICAgZXZlbnRJZDogZm9sbG93dXAuZXZlbnRfaWQsCiAgICAgICAgICAgIGlnVXNlcklkOiBmb2xsb3d1cC5pZ191c2VyX2lkLAogICAgICAgICAgICBiYXNlVXJsLAogICAgICAgICAgfSkKICAgICAgICA6IFtdOwoKICAgIGNvbnN0IGRtID0gYXdhaXQgc2VuZERpcmVjdE1lc3NhZ2UoewogICAgICByZWNpcGllbnRJZDogZm9sbG93dXAuaWdfdXNlcl9pZCwKICAgICAgbWVzc2FnZTogcGVyc29uYWxpemVkLAogICAgICBidXR0b25zOiB0cmFja2VkLmxlbmd0aCA+IDAgPyB0cmFja2VkIDogbnVsbCwKICAgICAgYWNjZXNzVG9rZW46IGFjY291bnQuaWdfYWNjZXNzX3Rva2VuLAogICAgfSk7CgogICAgYXdhaXQgc2IKICAgICAgLmZyb20oImZvbGxvd3VwcyIpCiAgICAgIC51cGRhdGUoewogICAgICAgIHNlbnRfYXQ6IG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKSwKICAgICAgICBza2lwcGVkX3JlYXNvbjogZG0ub2sgPyBudWxsIDogYHNlbmRfZmFpbGVkOiAke2RtLmVycm9yfWAsCiAgICAgIH0pCiAgICAgIC5lcSgiaWQiLCBmb2xsb3d1cC5pZCk7CgogICAgcmVzdWx0cy5wdXNoKHsKICAgICAgaWQ6IGZvbGxvd3VwLmlkLAogICAgICBzdGF0dXM6IGRtLm9rID8gInNlbnQiIDogImZhaWxlZCIsCiAgICAgIGVycm9yOiBkbS5vayA/IG51bGwgOiBkbS5lcnJvciwKICAgIH0pOwogIH0KCiAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsKICAgIGNoZWNrZWQ6IChwZW5kaW5nID8/IFtdKS5sZW5ndGgsCiAgICBwcm9jZXNzZWQ6IHJlc3VsdHMubGVuZ3RoLAogICAgc2VudDogcmVzdWx0cy5maWx0ZXIoKHIpID0+IHIuc3RhdHVzID09PSAic2VudCIpLmxlbmd0aCwKICAgIHNraXBwZWQ6IHJlc3VsdHMuZmlsdGVyKChyKSA9PiByLnN0YXR1cyA9PT0gInNraXBwZWQiKS5sZW5ndGgsCiAgICBmYWlsZWQ6IHJlc3VsdHMuZmlsdGVyKChyKSA9PiByLnN0YXR1cyA9PT0gImZhaWxlZCIpLmxlbmd0aCwKICAgIHJlc3VsdHMsCiAgfSk7Cn0K"}
+import { NextRequest, NextResponse } from "next/server";
+import { supabaseAdmin } from "@/lib/supabase";
+import { sendDirectMessage } from "@/lib/meta";
+import { buildTrackedButtons, resolveBaseUrl } from "@/lib/tracking";
+import { interpolate } from "@/lib/placeholders";
+import type { Account, Rule } from "@/types/db";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+function authOk(req: NextRequest): boolean {
+  const secret = process.env.CRON_SECRET;
+  const isVercelCron = req.headers.get("user-agent")?.includes("vercel-cron") ?? false;
+  if (isVercelCron) return true;
+  if (!secret) return true;
+  return req.headers.get("authorization") === `Bearer ${secret}`;
+}
+
+export async function GET(req: NextRequest) {
+  if (!authOk(req)) {
+    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  }
+
+  const sb = supabaseAdmin();
+  const baseUrl = resolveBaseUrl(req);
+  const now = new Date().toISOString();
+
+  const { data: pending } = await sb
+    .from("followups")
+    .select("*")
+    .is("sent_at", null)
+    .is("skipped_reason", null)
+    .lte("scheduled_for", now)
+    .order("scheduled_for", { ascending: true })
+    .limit(50);
+
+  const results: any[] = [];
+
+  for (const followup of (pending ?? []) as any[]) {
+    const { data: rule } = await sb
+      .from("rules")
+      .select("*")
+      .eq("id", followup.rule_id)
+      .maybeSingle<Rule>();
+    const { data: account } = await sb
+      .from("accounts")
+      .select("*")
+      .eq("id", followup.account_id)
+      .maybeSingle<Account>();
+
+    if (!rule || !account) {
+      await sb
+        .from("followups")
+        .update({ skipped_reason: "rule_or_account_missing" })
+        .eq("id", followup.id);
+      results.push({ id: followup.id, status: "skipped", reason: "missing" });
+      continue;
+    }
+
+    // Skip if user already clicked (conversion achieved)
+    const { data: clicked } = await sb
+      .from("tracked_links")
+      .select("id")
+      .eq("event_id", followup.event_id)
+      .gt("click_count", 0)
+      .limit(1);
+
+    if (clicked && clicked.length > 0) {
+      await sb
+        .from("followups")
+        .update({ skipped_reason: "already_clicked" })
+        .eq("id", followup.id);
+      results.push({ id: followup.id, status: "skipped", reason: "converted" });
+      continue;
+    }
+
+    if (!rule.followup_message) {
+      await sb
+        .from("followups")
+        .update({ skipped_reason: "no_message" })
+        .eq("id", followup.id);
+      continue;
+    }
+
+    const personalized = interpolate(rule.followup_message, {
+      username: null, // followup doesn't have username context readily; optional enhancement
+    });
+
+    const buttons = rule.followup_buttons ?? rule.dm_buttons ?? [];
+    const tracked =
+      buttons.length > 0
+        ? await buildTrackedButtons({
+            buttons,
+            accountId: account.id,
+            ruleId: rule.id,
+            eventId: followup.event_id,
+            igUserId: followup.ig_user_id,
+            baseUrl,
+          })
+        : [];
+
+    const dm = await sendDirectMessage({
+      recipientId: followup.ig_user_id,
+      message: personalized,
+      buttons: tracked.length > 0 ? tracked : null,
+      accessToken: account.ig_access_token,
+    });
+
+    await sb
+      .from("followups")
+      .update({
+        sent_at: new Date().toISOString(),
+        skipped_reason: dm.ok ? null : `send_failed: ${dm.error}`,
+      })
+      .eq("id", followup.id);
+
+    results.push({
+      id: followup.id,
+      status: dm.ok ? "sent" : "failed",
+      error: dm.ok ? null : dm.error,
+    });
+  }
+
+  return NextResponse.json({
+    checked: (pending ?? []).length,
+    processed: results.length,
+    sent: results.filter((r) => r.status === "sent").length,
+    skipped: results.filter((r) => r.status === "skipped").length,
+    failed: results.filter((r) => r.status === "failed").length,
+    results,
+  });
+}

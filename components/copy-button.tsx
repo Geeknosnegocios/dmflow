@@ -1,1 +1,20 @@
-{"data":"InVzZSBjbGllbnQiOwppbXBvcnQgeyB1c2VTdGF0ZSB9IGZyb20gInJlYWN0IjsKCmV4cG9ydCBmdW5jdGlvbiBDb3B5QnV0dG9uKHsgdmFsdWUgfTogeyB2YWx1ZTogc3RyaW5nIH0pIHsKICBjb25zdCBbY29waWVkLCBzZXRDb3BpZWRdID0gdXNlU3RhdGUoZmFsc2UpOwogIHJldHVybiAoCiAgICA8YnV0dG9uCiAgICAgIHR5cGU9ImJ1dHRvbiIKICAgICAgb25DbGljaz17KCkgPT4gewogICAgICAgIG5hdmlnYXRvci5jbGlwYm9hcmQud3JpdGVUZXh0KHZhbHVlKS50aGVuKCgpID0+IHsKICAgICAgICAgIHNldENvcGllZCh0cnVlKTsKICAgICAgICAgIHNldFRpbWVvdXQoKCkgPT4gc2V0Q29waWVkKGZhbHNlKSwgMjAwMCk7CiAgICAgICAgfSk7CiAgICAgIH19CiAgICAgIGNsYXNzTmFtZT0icm91bmRlZC1sZyBiZy1nb29kLzIwIGhvdmVyOmJnLWdvb2QvMzAgdGV4dC1nb29kIHRleHQteHMgZm9udC1zZW1pYm9sZCBweC0zIHB5LTIgdHJhbnNpdGlvbi1jb2xvcnMgd2hpdGVzcGFjZS1ub3dyYXAiCiAgICA+CiAgICAgIHtjb3BpZWQgPyAiQ29waWFkbyDinJMiIDogIkNvcGlhciJ9CiAgICA8L2J1dHRvbj4KICApOwp9Cg=="}
+"use client";
+import { useState } from "react";
+
+export function CopyButton({ value }: { value: string }) {
+  const [copied, setCopied] = useState(false);
+  return (
+    <button
+      type="button"
+      onClick={() => {
+        navigator.clipboard.writeText(value).then(() => {
+          setCopied(true);
+          setTimeout(() => setCopied(false), 2000);
+        });
+      }}
+      className="rounded-lg bg-good/20 hover:bg-good/30 text-good text-xs font-semibold px-3 py-2 transition-colors whitespace-nowrap"
+    >
+      {copied ? "Copiado ✓" : "Copiar"}
+    </button>
+  );
+}

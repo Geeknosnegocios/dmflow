@@ -1,1 +1,22 @@
-{"data":"ewogICJidWlsZENvbW1hbmQiOiAibmV4dCBidWlsZCIsCiAgImluc3RhbGxDb21tYW5kIjogIm5wbSBpbnN0YWxsIiwKICAiZnJhbWV3b3JrIjogIm5leHRqcyIsCiAgImNyb25zIjogWwogICAgewogICAgICAicGF0aCI6ICIvYXBpL2Nyb24vcmVmcmVzaC10b2tlbnMiLAogICAgICAic2NoZWR1bGUiOiAiMCA0ICogKiAqIgogICAgfSwKICAgIHsKICAgICAgInBhdGgiOiAiL2FwaS9jcm9uL2Vycm9yLWRpZ2VzdCIsCiAgICAgICJzY2hlZHVsZSI6ICIwIDEzICogKiAqIgogICAgfSwKICAgIHsKICAgICAgInBhdGgiOiAiL2FwaS9jcm9uL3J1bi1mb2xsb3d1cHMiLAogICAgICAic2NoZWR1bGUiOiAiMCAxMCAqICogKiIKICAgIH0sCiAgICB7ICJwYXRoIjogIi9hcGkvY3Jvbi9wdWJsaXNoLXJlZWxzIiwgInNjaGVkdWxlIjogIjAgMTEgKiAqICoiIH0sCiAgICB7ICJwYXRoIjogIi9hcGkvY3Jvbi9wdWJsaXNoLXJlZWxzIiwgInNjaGVkdWxlIjogIjAgMTUgKiAqICoiIH0sCiAgICB7ICJwYXRoIjogIi9hcGkvY3Jvbi9wdWJsaXNoLXJlZWxzIiwgInNjaGVkdWxlIjogIjAgMjMgKiAqICoiIH0KICBdCn0K"}
+{
+  "buildCommand": "next build",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "crons": [
+    {
+      "path": "/api/cron/refresh-tokens",
+      "schedule": "0 4 * * *"
+    },
+    {
+      "path": "/api/cron/error-digest",
+      "schedule": "0 13 * * *"
+    },
+    {
+      "path": "/api/cron/run-followups",
+      "schedule": "0 10 * * *"
+    },
+    { "path": "/api/cron/publish-reels", "schedule": "0 11 * * *" },
+    { "path": "/api/cron/publish-reels", "schedule": "0 15 * * *" },
+    { "path": "/api/cron/publish-reels", "schedule": "0 23 * * *" }
+  ]
+}

@@ -1,1 +1,27 @@
-{"data":"aW1wb3J0IExpbmsgZnJvbSAibmV4dC9saW5rIjsKaW1wb3J0IHsgTG9nbyB9IGZyb20gIkAvY29tcG9uZW50cy9sb2dvIjsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEF1dGhMYXlvdXQoeyBjaGlsZHJlbiB9OiB7IGNoaWxkcmVuOiBSZWFjdC5SZWFjdE5vZGUgfSkgewogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0ibWluLWgtc2NyZWVuIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHJlbGF0aXZlIG92ZXJmbG93LWhpZGRlbiBwLTYiPgogICAgICA8ZGl2IGNsYXNzTmFtZT0iYWJzb2x1dGUgaW5zZXQtMCBwb2ludGVyLWV2ZW50cy1ub25lIj4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iYWJzb2x1dGUgdG9wLVstMjAwcHhdIGxlZnQtMS8yIC10cmFuc2xhdGUteC0xLzIgaC1bNjAwcHhdIHctWzkwMHB4XSByb3VuZGVkLWZ1bGwgYmctYWNjZW50LzEwIGJsdXItWzEyMHB4XSIgLz4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iYWJzb2x1dGUgYm90dG9tLVstMjAwcHhdIHJpZ2h0LVstMjAwcHhdIGgtWzUwMHB4XSB3LVs1MDBweF0gcm91bmRlZC1mdWxsIGJnLXZpb2xldC8xMCBibHVyLVsxMjBweF0iIC8+CiAgICAgIDwvZGl2PgoKICAgICAgPGRpdiBjbGFzc05hbWU9InJlbGF0aXZlIHotMTAgdy1mdWxsIG1heC13LW1kIj4KICAgICAgICA8TGluawogICAgICAgICAgaHJlZj0iLyIKICAgICAgICAgIGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgZ2FwLTIuNSBtYi02IgogICAgICAgID4KICAgICAgICAgIDxMb2dvIHNpemU9ezQwfSAvPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggZmxleC1jb2wgbGVhZGluZy10aWdodCI+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC1iYXNlIGZvbnQtc2VtaWJvbGQgdHJhY2tpbmctdGlnaHQiPkRNRmxvdzwvc3Bhbj4KICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LXRpbnkgdGV4dC1kaW0tMiBmb250LW1vbm8iPnYwLjQgwrcgU2FhUzwvc3Bhbj4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvTGluaz4KICAgICAgICB7Y2hpbGRyZW59CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgKTsKfQo="}
+import Link from "next/link";
+import { Logo } from "@/components/logo";
+
+export default function AuthLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="min-h-screen flex items-center justify-center relative overflow-hidden p-6">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full bg-accent/10 blur-[120px]" />
+        <div className="absolute bottom-[-200px] right-[-200px] h-[500px] w-[500px] rounded-full bg-violet/10 blur-[120px]" />
+      </div>
+
+      <div className="relative z-10 w-full max-w-md">
+        <Link
+          href="/"
+          className="flex items-center justify-center gap-2.5 mb-6"
+        >
+          <Logo size={40} />
+          <div className="flex flex-col leading-tight">
+            <span className="text-base font-semibold tracking-tight">DMFlow</span>
+            <span className="text-tiny text-dim-2 font-mono">v0.4 · SaaS</span>
+          </div>
+        </Link>
+        {children}
+      </div>
+    </div>
+  );
+}

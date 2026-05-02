@@ -1,1 +1,20 @@
-{"data":"aW1wb3J0IHsgY3JlYXRlQ2xpZW50IH0gZnJvbSAiQHN1cGFiYXNlL3N1cGFiYXNlLWpzIjsKCmxldCBhZG1pbjogUmV0dXJuVHlwZTx0eXBlb2YgYnVpbGQ+IHwgbnVsbCA9IG51bGw7CgpmdW5jdGlvbiBidWlsZCgpIHsKICBjb25zdCB1cmwgPSBwcm9jZXNzLmVudi5TVVBBQkFTRV9VUkw7CiAgY29uc3Qga2V5ID0gcHJvY2Vzcy5lbnYuU1VQQUJBU0VfU0VSVklDRV9ST0xFX0tFWTsKICBpZiAoIXVybCB8fCAha2V5KSB7CiAgICB0aHJvdyBuZXcgRXJyb3IoIlNVUEFCQVNFX1VSTCBvciBTVVBBQkFTRV9TRVJWSUNFX1JPTEVfS0VZIG1pc3NpbmciKTsKICB9CiAgcmV0dXJuIGNyZWF0ZUNsaWVudCh1cmwsIGtleSwgewogICAgYXV0aDogeyBwZXJzaXN0U2Vzc2lvbjogZmFsc2UsIGF1dG9SZWZyZXNoVG9rZW46IGZhbHNlIH0sCiAgICBkYjogeyBzY2hlbWE6ICJkbWZsb3ciIGFzIGFueSB9LAogIH0pOwp9CgpleHBvcnQgZnVuY3Rpb24gc3VwYWJhc2VBZG1pbigpIHsKICBpZiAoIWFkbWluKSBhZG1pbiA9IGJ1aWxkKCk7CiAgcmV0dXJuIGFkbWluOwp9Cg=="}
+import { createClient } from "@supabase/supabase-js";
+
+let admin: ReturnType<typeof build> | null = null;
+
+function build() {
+  const url = process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !key) {
+    throw new Error("SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY missing");
+  }
+  return createClient(url, key, {
+    auth: { persistSession: false, autoRefreshToken: false },
+    db: { schema: "dmflow" as any },
+  });
+}
+
+export function supabaseAdmin() {
+  if (!admin) admin = build();
+  return admin;
+}

@@ -1,1 +1,46 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlcXVlc3QsIE5leHRSZXNwb25zZSB9IGZyb20gIm5leHQvc2VydmVyIjsKaW1wb3J0IHsgdmVyaWZ5QXBpS2V5IH0gZnJvbSAiQC9saWIvYXBpLWtleXMiOwppbXBvcnQgeyBzdXBhYmFzZUFkbWluIH0gZnJvbSAiQC9saWIvc3VwYWJhc2UiOwoKZXhwb3J0IGNvbnN0IHJ1bnRpbWUgPSAibm9kZWpzIjsKZXhwb3J0IGNvbnN0IGR5bmFtaWMgPSAiZm9yY2UtZHluYW1pYyI7CgpleHBvcnQgYXN5bmMgZnVuY3Rpb24gR0VUKHJlcTogTmV4dFJlcXVlc3QpIHsKICBjb25zdCBhdXRoID0gcmVxLmhlYWRlcnMuZ2V0KCJhdXRob3JpemF0aW9uIikgPz8gIiI7CiAgY29uc3QgdG9rZW4gPSBhdXRoLnJlcGxhY2UoL15CZWFyZXJccysvaSwgIiIpOwogIGNvbnN0IHYgPSBhd2FpdCB2ZXJpZnlBcGlLZXkodG9rZW4pOwogIGlmICghdi52YWxpZCkgewogICAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsgZXJyb3I6ICJpbnZhbGlkIGFwaSBrZXkiIH0sIHsgc3RhdHVzOiA0MDEgfSk7CiAgfQoKICBjb25zdCBzYiA9IHN1cGFiYXNlQWRtaW4oKTsKICBjb25zdCB7IGRhdGE6IGFjY291bnRzIH0gPSBhd2FpdCBzYgogICAgLmZyb20oImFjY291bnRzIikKICAgIC5zZWxlY3QoImlkIikKICAgIC5lcSgib3duZXJfdXNlcl9pZCIsIHYudXNlcl9pZCEpOwogIGNvbnN0IGFjY291bnRJZHMgPSAoYWNjb3VudHMgPz8gW10pLm1hcCgoYTogYW55KSA9PiBhLmlkKTsKCiAgaWYgKGFjY291bnRJZHMubGVuZ3RoID09PSAwKSB7CiAgICByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oeyBkYXRhOiBbXSwgbWV0YTogeyB0b3RhbDogMCB9IH0pOwogIH0KCiAgY29uc3QgeyBzZWFyY2hQYXJhbXMgfSA9IG5ldyBVUkwocmVxLnVybCk7CiAgY29uc3QgbGltaXQgPSBNYXRoLm1pbig1MDAsIE1hdGgubWF4KDEsIE51bWJlcihzZWFyY2hQYXJhbXMuZ2V0KCJsaW1pdCIpID8/IDEwMCkpKTsKICBjb25zdCBzaW5jZSA9IHNlYXJjaFBhcmFtcy5nZXQoInNpbmNlIik7IC8vIElTTyBkYXRlCgogIGxldCBxID0gc2IKICAgIC5mcm9tKCJldmVudHMiKQogICAgLnNlbGVjdCgKICAgICAgImlkLCBjcmVhdGVkX2F0LCBydWxlX2lkLCBpZ19jb21tZW50X2lkLCBpZ191c2VyX2lkLCBpZ191c2VybmFtZSwgY29tbWVudF90ZXh0LCBtYXRjaGVkX2tleXdvcmQsIGRtX3NlbnQsIHB1YmxpY19yZXBseV9zZW50IgogICAgKQogICAgLmluKCJhY2NvdW50X2lkIiwgYWNjb3VudElkcykKICAgIC5vcmRlcigiY3JlYXRlZF9hdCIsIHsgYXNjZW5kaW5nOiBmYWxzZSB9KQogICAgLmxpbWl0KGxpbWl0KTsKICBpZiAoc2luY2UpIHEgPSBxLmd0ZSgiY3JlYXRlZF9hdCIsIHNpbmNlKTsKCiAgY29uc3QgeyBkYXRhIH0gPSBhd2FpdCBxOwogIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7CiAgICBkYXRhOiBkYXRhID8/IFtdLAogICAgbWV0YTogeyB0b3RhbDogKGRhdGEgPz8gW10pLmxlbmd0aCwgbGltaXQgfSwKICB9KTsKfQo="}
+import { NextRequest, NextResponse } from "next/server";
+import { verifyApiKey } from "@/lib/api-keys";
+import { supabaseAdmin } from "@/lib/supabase";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+export async function GET(req: NextRequest) {
+  const auth = req.headers.get("authorization") ?? "";
+  const token = auth.replace(/^Bearer\s+/i, "");
+  const v = await verifyApiKey(token);
+  if (!v.valid) {
+    return NextResponse.json({ error: "invalid api key" }, { status: 401 });
+  }
+
+  const sb = supabaseAdmin();
+  const { data: accounts } = await sb
+    .from("accounts")
+    .select("id")
+    .eq("owner_user_id", v.user_id!);
+  const accountIds = (accounts ?? []).map((a: any) => a.id);
+
+  if (accountIds.length === 0) {
+    return NextResponse.json({ data: [], meta: { total: 0 } });
+  }
+
+  const { searchParams } = new URL(req.url);
+  const limit = Math.min(500, Math.max(1, Number(searchParams.get("limit") ?? 100)));
+  const since = searchParams.get("since"); // ISO date
+
+  let q = sb
+    .from("events")
+    .select(
+      "id, created_at, rule_id, ig_comment_id, ig_user_id, ig_username, comment_text, matched_keyword, dm_sent, public_reply_sent"
+    )
+    .in("account_id", accountIds)
+    .order("created_at", { ascending: false })
+    .limit(limit);
+  if (since) q = q.gte("created_at", since);
+
+  const { data } = await q;
+  return NextResponse.json({
+    data: data ?? [],
+    meta: { total: (data ?? []).length, limit },
+  });
+}

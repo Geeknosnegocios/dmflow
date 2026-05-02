@@ -1,1 +1,54 @@
-{"data":"ZXhwb3J0IGNvbnN0IG1ldGFkYXRhID0gewogIHRpdGxlOiAiVGVybW9zIGRlIFVzbyDigJQgRE1GbG93IiwKfTsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFRlcm1zUGFnZSgpIHsKICByZXR1cm4gKAogICAgPG1haW4gY2xhc3NOYW1lPSJteC1hdXRvIG1heC13LTN4bCBweC02IHB5LTEyIHRleHQtZmciPgogICAgICA8aDEgY2xhc3NOYW1lPSJ0ZXh0LTN4bCBmb250LXNlbWlib2xkIG1iLTIiPlRlcm1vcyBkZSBVc288L2gxPgogICAgICA8cCBjbGFzc05hbWU9InRleHQtZGltIHRleHQtc20gbWItOCI+w5psdGltYSBhdHVhbGl6YcOnw6NvOiAyMyBkZSBhYnJpbCBkZSAyMDI2PC9wPgoKICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJzcGFjZS15LTYgdGV4dC1bMTVweF0gbGVhZGluZy1yZWxheGVkIj4KICAgICAgICA8cD4KICAgICAgICAgIEFvIHVzYXIgbyBETUZsb3csIHZvY8OqIGNvbmNvcmRhIGNvbSBlc3RlcyB0ZXJtb3MuIE8gc2VydmnDp28gw6kgb2ZlcmVjaWRvCiAgICAgICAgICBwZWxhIEdlZWsgQWNhZGVteSBjb21vIGZlcnJhbWVudGEgZGUgYXV0b21hw6fDo28gZGUgcmVzcG9zdGFzIGEKICAgICAgICAgIGNvbWVudMOhcmlvcyBlIG1lbnNhZ2VucyBkbyBJbnN0YWdyYW0uCiAgICAgICAgPC9wPgoKICAgICAgICA8ZGl2PgogICAgICAgICAgPGgyIGNsYXNzTmFtZT0idGV4dC14bCBmb250LXNlbWlib2xkIG1iLTIiPjEuIFVzbyBhY2VpdMOhdmVsPC9oMj4KICAgICAgICAgIDx1bCBjbGFzc05hbWU9Imxpc3QtZGlzYyBwbC02IG10LTIgc3BhY2UteS0xIj4KICAgICAgICAgICAgPGxpPk7Do28gdXNhciBwYXJhIHNwYW0sIGZyYXVkZSwgcGhpc2hpbmcgb3UgdmlvbGHDp8OjbyBkZSBkaXJlaXRvczwvbGk+CiAgICAgICAgICAgIDxsaT5SZXNwZWl0YXIgYXMgcG9sw610aWNhcyBkYSBNZXRhL0luc3RhZ3JhbTwvbGk+CiAgICAgICAgICAgIDxsaT5Tw7MgY29uZWN0YXIgY29udGFzIEluc3RhZ3JhbSBxdWUgdm9jw6ogw6kgZG9ubyBvdSBhZG1pbmlzdHJhIGxlZ2l0aW1hbWVudGU8L2xpPgogICAgICAgICAgPC91bD4KICAgICAgICA8L2Rpdj4KCiAgICAgICAgPGRpdj4KICAgICAgICAgIDxoMiBjbGFzc05hbWU9InRleHQteGwgZm9udC1zZW1pYm9sZCBtYi0yIj4yLiBSZXNwb25zYWJpbGlkYWRlPC9oMj4KICAgICAgICAgIDxwPgogICAgICAgICAgICBPIERNRmxvdyDDqSBmb3JuZWNpZG8gImNvbW8gZXN0w6EiLiBOw6NvIG5vcyByZXNwb25zYWJpbGl6YW1vcyBwb3Igc3VzcGVuc8O1ZXMKICAgICAgICAgICAgZGUgY29udGEgZG8gSW5zdGFncmFtIGNhdXNhZGFzIHBvciB1c28gaW5hZGVxdWFkbyBkYSBmZXJyYW1lbnRhLgogICAgICAgICAgPC9wPgogICAgICAgIDwvZGl2PgoKICAgICAgICA8ZGl2PgogICAgICAgICAgPGgyIGNsYXNzTmFtZT0idGV4dC14bCBmb250LXNlbWlib2xkIG1iLTIiPjMuIEFsdGVyYcOnw7VlczwvaDI+CiAgICAgICAgICA8cD4KICAgICAgICAgICAgUG9kZW1vcyBhdHVhbGl6YXIgZXN0ZXMgdGVybW9zLiBNdWRhbsOnYXMgcmVsZXZhbnRlcyBzZXLDo28gY29tdW5pY2FkYXMKICAgICAgICAgICAgY29tIDMwIGRpYXMgZGUgYW50ZWNlZMOqbmNpYSBwb3IgZW1haWwgb3Ugbm8gcGFpbmVsLgogICAgICAgICAgPC9wPgogICAgICAgIDwvZGl2PgoKICAgICAgICA8ZGl2PgogICAgICAgICAgPGgyIGNsYXNzTmFtZT0idGV4dC14bCBmb250LXNlbWlib2xkIG1iLTIiPjQuIENvbnRhdG88L2gyPgogICAgICAgICAgPHA+CiAgICAgICAgICAgIDxhIGhyZWY9Im1haWx0bzpjb250YXRvQGdlZWthY2FkZW15LnNpdGUiIGNsYXNzTmFtZT0idGV4dC1hY2NlbnQgdW5kZXJsaW5lIj4KICAgICAgICAgICAgICBjb250YXRvQGdlZWthY2FkZW15LnNpdGUKICAgICAgICAgICAgPC9hPgogICAgICAgICAgPC9wPgogICAgICAgIDwvZGl2PgogICAgICA8L3NlY3Rpb24+CiAgICA8L21haW4+CiAgKTsKfQo="}
+export const metadata = {
+  title: "Termos de Uso — DMFlow",
+};
+
+export default function TermsPage() {
+  return (
+    <main className="mx-auto max-w-3xl px-6 py-12 text-fg">
+      <h1 className="text-3xl font-semibold mb-2">Termos de Uso</h1>
+      <p className="text-dim text-sm mb-8">Última atualização: 23 de abril de 2026</p>
+
+      <section className="space-y-6 text-[15px] leading-relaxed">
+        <p>
+          Ao usar o DMFlow, você concorda com estes termos. O serviço é oferecido
+          pela Geek Academy como ferramenta de automação de respostas a
+          comentários e mensagens do Instagram.
+        </p>
+
+        <div>
+          <h2 className="text-xl font-semibold mb-2">1. Uso aceitável</h2>
+          <ul className="list-disc pl-6 mt-2 space-y-1">
+            <li>Não usar para spam, fraude, phishing ou violação de direitos</li>
+            <li>Respeitar as políticas da Meta/Instagram</li>
+            <li>Só conectar contas Instagram que você é dono ou administra legitimamente</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-semibold mb-2">2. Responsabilidade</h2>
+          <p>
+            O DMFlow é fornecido "como está". Não nos responsabilizamos por suspensões
+            de conta do Instagram causadas por uso inadequado da ferramenta.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-semibold mb-2">3. Alterações</h2>
+          <p>
+            Podemos atualizar estes termos. Mudanças relevantes serão comunicadas
+            com 30 dias de antecedência por email ou no painel.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-semibold mb-2">4. Contato</h2>
+          <p>
+            <a href="mailto:contato@geekacademy.site" className="text-accent underline">
+              contato@geekacademy.site
+            </a>
+          </p>
+        </div>
+      </section>
+    </main>
+  );
+}

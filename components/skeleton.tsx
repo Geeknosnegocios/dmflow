@@ -1,1 +1,56 @@
-{"data":"aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKCmZ1bmN0aW9uIGJhc2UoY2xhc3NOYW1lID0gIiIpIHsKICByZXR1cm4gYGFuaW1hdGUtcHVsc2Ugcm91bmRlZC1sZyBiZy13aGl0ZS9bMC4wNF0gJHtjbGFzc05hbWV9YDsKfQoKZXhwb3J0IGZ1bmN0aW9uIFNrZWxldG9uKHsKICBjbGFzc05hbWUgPSAiIiwKICBzdHlsZSwKfTogewogIGNsYXNzTmFtZT86IHN0cmluZzsKICBzdHlsZT86IFJlYWN0LkNTU1Byb3BlcnRpZXM7Cn0pIHsKICByZXR1cm4gPGRpdiBjbGFzc05hbWU9e2Jhc2UoY2xhc3NOYW1lKX0gc3R5bGU9e3N0eWxlfSAvPjsKfQoKZXhwb3J0IGZ1bmN0aW9uIEtwaVNrZWxldG9uKCkgewogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0icm91bmRlZC14bCBib3JkZXIgYm9yZGVyLWxpbmUgYmctc3VyZmFjZSBzaGFkb3ctY2FyZCBwLTQgZmxleCBpdGVtcy1zdGFydCBqdXN0aWZ5LWJldHdlZW4iPgogICAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS0yIGZsZXgtMSI+CiAgICAgICAgPFNrZWxldG9uIGNsYXNzTmFtZT0iaC0zIHctMjAiIC8+CiAgICAgICAgPFNrZWxldG9uIGNsYXNzTmFtZT0iaC03IHctMTYiIC8+CiAgICAgICAgPFNrZWxldG9uIGNsYXNzTmFtZT0iaC0zIHctMjQiIC8+CiAgICAgIDwvZGl2PgogICAgICA8U2tlbGV0b24gY2xhc3NOYW1lPSJoLTcgdy0yNCIgLz4KICAgIDwvZGl2PgogICk7Cn0KCmV4cG9ydCBmdW5jdGlvbiBDYXJkU2tlbGV0b24oeyBoZWlnaHQgPSAyMDAgfTogeyBoZWlnaHQ/OiBudW1iZXIgfSkgewogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0icm91bmRlZC14bCBib3JkZXIgYm9yZGVyLWxpbmUgYmctc3VyZmFjZSBzaGFkb3ctY2FyZCBvdmVyZmxvdy1oaWRkZW4iPgogICAgICA8ZGl2IGNsYXNzTmFtZT0iYm9yZGVyLWIgYm9yZGVyLWxpbmUgcC00IHNwYWNlLXktMiI+CiAgICAgICAgPFNrZWxldG9uIGNsYXNzTmFtZT0iaC00IHctNDAiIC8+CiAgICAgICAgPFNrZWxldG9uIGNsYXNzTmFtZT0iaC0zIHctNTYiIC8+CiAgICAgIDwvZGl2PgogICAgICA8ZGl2IGNsYXNzTmFtZT0icC01Ij4KICAgICAgICA8U2tlbGV0b24gc3R5bGU9e3sgaGVpZ2h0IH19IGNsYXNzTmFtZT0idy1mdWxsIiAvPgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICk7Cn0KCmV4cG9ydCBmdW5jdGlvbiBUYWJsZVJvd1NrZWxldG9uKHsgY29scyA9IDUgfTogeyBjb2xzPzogbnVtYmVyIH0pIHsKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9ImZsZXggZ2FwLTMgaXRlbXMtY2VudGVyIHB4LTUgcHktMyBib3JkZXItdCBib3JkZXItbGluZSI+CiAgICAgIHtBcnJheS5mcm9tKHsgbGVuZ3RoOiBjb2xzIH0pLm1hcCgoXywgaSkgPT4gKAogICAgICAgIDxTa2VsZXRvbgogICAgICAgICAga2V5PXtpfQogICAgICAgICAgY2xhc3NOYW1lPSJoLTQiCiAgICAgICAgICBzdHlsZT17eyBmbGV4OiBpID09PSAwID8gMiA6IDEgfSBhcyBSZWFjdC5DU1NQcm9wZXJ0aWVzfQogICAgICAgIC8+CiAgICAgICkpfQogICAgPC9kaXY+CiAgKTsKfQo="}
+import React from "react";
+
+function base(className = "") {
+  return `animate-pulse rounded-lg bg-white/[0.04] ${className}`;
+}
+
+export function Skeleton({
+  className = "",
+  style,
+}: {
+  className?: string;
+  style?: React.CSSProperties;
+}) {
+  return <div className={base(className)} style={style} />;
+}
+
+export function KpiSkeleton() {
+  return (
+    <div className="rounded-xl border border-line bg-surface shadow-card p-4 flex items-start justify-between">
+      <div className="space-y-2 flex-1">
+        <Skeleton className="h-3 w-20" />
+        <Skeleton className="h-7 w-16" />
+        <Skeleton className="h-3 w-24" />
+      </div>
+      <Skeleton className="h-7 w-24" />
+    </div>
+  );
+}
+
+export function CardSkeleton({ height = 200 }: { height?: number }) {
+  return (
+    <div className="rounded-xl border border-line bg-surface shadow-card overflow-hidden">
+      <div className="border-b border-line p-4 space-y-2">
+        <Skeleton className="h-4 w-40" />
+        <Skeleton className="h-3 w-56" />
+      </div>
+      <div className="p-5">
+        <Skeleton style={{ height }} className="w-full" />
+      </div>
+    </div>
+  );
+}
+
+export function TableRowSkeleton({ cols = 5 }: { cols?: number }) {
+  return (
+    <div className="flex gap-3 items-center px-5 py-3 border-t border-line">
+      {Array.from({ length: cols }).map((_, i) => (
+        <Skeleton
+          key={i}
+          className="h-4"
+          style={{ flex: i === 0 ? 2 : 1 } as React.CSSProperties}
+        />
+      ))}
+    </div>
+  );
+}

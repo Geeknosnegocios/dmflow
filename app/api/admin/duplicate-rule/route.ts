@@ -1,1 +1,36 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlcXVlc3QsIE5leHRSZXNwb25zZSB9IGZyb20gIm5leHQvc2VydmVyIjsKaW1wb3J0IHsgc3VwYWJhc2VBZG1pbiB9IGZyb20gIkAvbGliL3N1cGFiYXNlIjsKCmV4cG9ydCBjb25zdCBydW50aW1lID0gIm5vZGVqcyI7CmV4cG9ydCBjb25zdCBkeW5hbWljID0gImZvcmNlLWR5bmFtaWMiOwoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIFBPU1QocmVxOiBOZXh0UmVxdWVzdCkgewogIGNvbnN0IGZvcm0gPSBhd2FpdCByZXEuZm9ybURhdGEoKTsKICBjb25zdCBydWxlSWQgPSBTdHJpbmcoZm9ybS5nZXQoInJ1bGVfaWQiKSA/PyAiIik7CiAgaWYgKCFydWxlSWQpIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IGVycm9yOiAicnVsZV9pZCByZXF1aXJlZCIgfSwgeyBzdGF0dXM6IDQwMCB9KTsKCiAgY29uc3Qgc2IgPSBzdXBhYmFzZUFkbWluKCk7CiAgY29uc3QgeyBkYXRhOiBvcmlnaW5hbCB9ID0gYXdhaXQgc2IKICAgIC5mcm9tKCJydWxlcyIpCiAgICAuc2VsZWN0KCIqIikKICAgIC5lcSgiaWQiLCBydWxlSWQpCiAgICAubWF5YmVTaW5nbGUoKTsKICBpZiAoIW9yaWdpbmFsKSByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oeyBlcnJvcjogIm5vdCBmb3VuZCIgfSwgeyBzdGF0dXM6IDQwNCB9KTsKCiAgY29uc3QgeyBpZCwgY3JlYXRlZF9hdCwgdXBkYXRlZF9hdCwgdHJpZ2dlcmVkX2NvdW50LCAuLi5yZXN0IH0gPSBvcmlnaW5hbCBhcyBhbnk7CiAgY29uc3QgY29weSA9IHsKICAgIC4uLnJlc3QsCiAgICBuYW1lOiBgJHtvcmlnaW5hbC5uYW1lfSAoY8OzcGlhKWAsCiAgICBhY3RpdmU6IGZhbHNlLAogIH07CgogIGNvbnN0IHsgZGF0YTogaW5zZXJ0ZWQsIGVycm9yIH0gPSBhd2FpdCBzYgogICAgLmZyb20oInJ1bGVzIikKICAgIC5pbnNlcnQoY29weSkKICAgIC5zZWxlY3QoImlkIikKICAgIC5zaW5nbGUoKTsKCiAgaWYgKGVycm9yKSByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oeyBlcnJvcjogZXJyb3IubWVzc2FnZSB9LCB7IHN0YXR1czogNTAwIH0pOwoKICByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oeyBvazogdHJ1ZSwgbmV3X3J1bGVfaWQ6IGluc2VydGVkPy5pZCB9KTsKfQo="}
+import { NextRequest, NextResponse } from "next/server";
+import { supabaseAdmin } from "@/lib/supabase";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+export async function POST(req: NextRequest) {
+  const form = await req.formData();
+  const ruleId = String(form.get("rule_id") ?? "");
+  if (!ruleId) return NextResponse.json({ error: "rule_id required" }, { status: 400 });
+
+  const sb = supabaseAdmin();
+  const { data: original } = await sb
+    .from("rules")
+    .select("*")
+    .eq("id", ruleId)
+    .maybeSingle();
+  if (!original) return NextResponse.json({ error: "not found" }, { status: 404 });
+
+  const { id, created_at, updated_at, triggered_count, ...rest } = original as any;
+  const copy = {
+    ...rest,
+    name: `${original.name} (cópia)`,
+    active: false,
+  };
+
+  const { data: inserted, error } = await sb
+    .from("rules")
+    .insert(copy)
+    .select("id")
+    .single();
+
+  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+
+  return NextResponse.json({ ok: true, new_rule_id: inserted?.id });
+}

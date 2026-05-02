@@ -1,1 +1,109 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlcXVlc3QsIE5leHRSZXNwb25zZSB9IGZyb20gIm5leHQvc2VydmVyIjsKaW1wb3J0IHsgc3VwYWJhc2VBZG1pbiB9IGZyb20gIkAvbGliL3N1cGFiYXNlIjsKaW1wb3J0IHsgc2VuZE5vdGlmaWNhdGlvbiB9IGZyb20gIkAvbGliL25vdGlmeSI7CgpleHBvcnQgY29uc3QgcnVudGltZSA9ICJub2RlanMiOwpleHBvcnQgY29uc3QgZHluYW1pYyA9ICJmb3JjZS1keW5hbWljIjsKCmZ1bmN0aW9uIGF1dGhPayhyZXE6IE5leHRSZXF1ZXN0KTogYm9vbGVhbiB7CiAgY29uc3Qgc2VjcmV0ID0gcHJvY2Vzcy5lbnYuQ1JPTl9TRUNSRVQ7CiAgY29uc3QgaXNWZXJjZWxDcm9uID0gcmVxLmhlYWRlcnMuZ2V0KCJ1c2VyLWFnZW50Iik/LmluY2x1ZGVzKCJ2ZXJjZWwtY3JvbiIpID8/IGZhbHNlOwogIGlmIChpc1ZlcmNlbENyb24pIHJldHVybiB0cnVlOwogIGlmICghc2VjcmV0IHx8IHNlY3JldC5sZW5ndGggPT09IDApIHJldHVybiB0cnVlOwogIGNvbnN0IGhlYWRlciA9IHJlcS5oZWFkZXJzLmdldCgiYXV0aG9yaXphdGlvbiIpOwogIHJldHVybiBoZWFkZXIgPT09IGBCZWFyZXIgJHtzZWNyZXR9YDsKfQoKLyoqCiAqIENoZWNhIG5hcyDDumx0aW1hcyAyNGg6CiAqICAtICUgZGUgRE0gZmFpbHVyZXMgKHNlID4gMzAlIGUgPj0gNSB0ZW50YXRpdmFzLCBhbGVydGEpCiAqICAtIHRva2VucyBleHBpcmFuZG8gZW0gPCA3IGRpYXMKICogIC0gcXVhbHF1ZXIgc2lnbmF0dXJlX3ZhbGlkPWZhbHNlIHJlY2VudGUgKHBvc3PDrXZlbCBjb25maWcgZXJyYWRhKQogKi8KZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIEdFVChyZXE6IE5leHRSZXF1ZXN0KSB7CiAgaWYgKCFhdXRoT2socmVxKSkgewogICAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsgZXJyb3I6ICJ1bmF1dGhvcml6ZWQiIH0sIHsgc3RhdHVzOiA0MDEgfSk7CiAgfQoKICBjb25zdCBzYiA9IHN1cGFiYXNlQWRtaW4oKTsKICBjb25zdCBzaW5jZSA9IG5ldyBEYXRlKERhdGUubm93KCkgLSAyNCAqIDM2MDAgKiAxMDAwKS50b0lTT1N0cmluZygpOwoKICBjb25zdCBbZXZlbnRzUmVzLCBhY2NvdW50c1Jlcywgc2lnUmVzXSA9IGF3YWl0IFByb21pc2UuYWxsKFsKICAgIHNiCiAgICAgIC5mcm9tKCJldmVudHMiKQogICAgICAuc2VsZWN0KCJkbV9zZW50LCBkbV9lcnJvciwgcHVibGljX3JlcGx5X2Vycm9yIikKICAgICAgLmd0ZSgiY3JlYXRlZF9hdCIsIHNpbmNlKSwKICAgIHNiCiAgICAgIC5mcm9tKCJhY2NvdW50cyIpCiAgICAgIC5zZWxlY3QoImlkLCBuYW1lLCBpZ19idXNpbmVzc19pZCwgaWdfdG9rZW5fZXhwaXJlc19hdCwgbm90aWZ5X2VtYWlsIikKICAgICAgLmVxKCJhY3RpdmUiLCB0cnVlKSwKICAgIHNiCiAgICAgIC5mcm9tKCJyYXdfd2ViaG9va3MiKQogICAgICAuc2VsZWN0KCJpZCIpCiAgICAgIC5lcSgic2lnbmF0dXJlX3ZhbGlkIiwgZmFsc2UpCiAgICAgIC5ndGUoInJlY2VpdmVkX2F0Iiwgc2luY2UpLAogIF0pOwoKICBjb25zdCBldmVudHMgPSAoZXZlbnRzUmVzLmRhdGEgPz8gW10pIGFzIGFueVtdOwogIGNvbnN0IGFjY291bnRzID0gKGFjY291bnRzUmVzLmRhdGEgPz8gW10pIGFzIGFueVtdOwogIGNvbnN0IHNpZ0ZhaWx1cmVzID0gKHNpZ1Jlcy5kYXRhID8/IFtdKS5sZW5ndGg7CgogIGNvbnN0IGRtQXR0ZW1wdHMgPSBldmVudHMuZmlsdGVyKAogICAgKGUpID0+IGUuZG1fc2VudCA9PT0gdHJ1ZSB8fCBlLmRtX2Vycm9yICE9PSBudWxsCiAgKTsKICBjb25zdCBkbUZhaWx1cmVzID0gZXZlbnRzLmZpbHRlcigoZSkgPT4gZS5kbV9lcnJvciAhPT0gbnVsbCk7CiAgY29uc3QgZmFpbHVyZVJhdGUgPQogICAgZG1BdHRlbXB0cy5sZW5ndGggPiAwID8gZG1GYWlsdXJlcy5sZW5ndGggLyBkbUF0dGVtcHRzLmxlbmd0aCA6IDA7CgogIGNvbnN0IGFsZXJ0czogc3RyaW5nW10gPSBbXTsKCiAgaWYgKGRtQXR0ZW1wdHMubGVuZ3RoID49IDUgJiYgZmFpbHVyZVJhdGUgPiAwLjMpIHsKICAgIGFsZXJ0cy5wdXNoKAogICAgICBg8J+TiSA8Yj4keyhmYWlsdXJlUmF0ZSAqIDEwMCkudG9GaXhlZCgwKX0lIGRlIERNcyBmYWxoYXJhbTwvYj4gbmFzIMO6bHRpbWFzIDI0aCAoJHtkbUZhaWx1cmVzLmxlbmd0aH0vJHtkbUF0dGVtcHRzLmxlbmd0aH0pLiBQb2RlIHNlciByYXRlIGxpbWl0IG91IHRva2VuIHF1ZWJyYWRvLmAKICAgICk7CiAgfQoKICBpZiAoc2lnRmFpbHVyZXMgPiAwKSB7CiAgICBhbGVydHMucHVzaCgKICAgICAgYPCflJAgPGI+JHtzaWdGYWlsdXJlc30gd2ViaG9va3MgY29tIGFzc2luYXR1cmEgaW52w6FsaWRhPC9iPi4gVmVyaWZpcXVlIGFwcF9zZWNyZXQgb3UgY29uZmlndXJhw6fDo28gbm8gTWV0YSBEYXNoYm9hcmQuYAogICAgKTsKICB9CgogIGNvbnN0IHNvb25FeHBpcmluZyA9IGFjY291bnRzLmZpbHRlcigoYSkgPT4gewogICAgaWYgKCFhLmlnX3Rva2VuX2V4cGlyZXNfYXQpIHJldHVybiBmYWxzZTsKICAgIGNvbnN0IGRpZmZEYXlzID0KICAgICAgKG5ldyBEYXRlKGEuaWdfdG9rZW5fZXhwaXJlc19hdCkuZ2V0VGltZSgpIC0gRGF0ZS5ub3coKSkgLyA4NjQwMDAwMDsKICAgIHJldHVybiBkaWZmRGF5cyA8IDc7CiAgfSk7CiAgZm9yIChjb25zdCBhIG9mIHNvb25FeHBpcmluZykgewogICAgY29uc3QgZGF5cyA9IE1hdGgucm91bmQoCiAgICAgIChuZXcgRGF0ZShhLmlnX3Rva2VuX2V4cGlyZXNfYXQpLmdldFRpbWUoKSAtIERhdGUubm93KCkpIC8gODY0MDAwMDAKICAgICk7CiAgICBhbGVydHMucHVzaCgKICAgICAgYOKPsCBUb2tlbiBkZSA8Yj4ke2EubmFtZX08L2I+IGV4cGlyYSBlbSA8Yj4ke2RheXN9IGRpYShzKTwvYj4uIFJlZnJlc2ggYXV0b23DoXRpY28gZGV2ZSByZXNvbHZlciDigJQgc2UgbsOjbywgZ2VyZSBub3ZvIG1hbnVhbG1lbnRlLmAKICAgICk7CiAgfQoKICBsZXQgc2VudCA9IGZhbHNlOwogIGlmIChhbGVydHMubGVuZ3RoID4gMCkgewogICAgc2VudCA9IGF3YWl0IHNlbmROb3RpZmljYXRpb24oewogICAgICBzdWJqZWN0OiBg4pqg77iPIERNRmxvdyDigJQgJHthbGVydHMubGVuZ3RofSBhbGVydGEocylgLAogICAgICBodG1sOiBgPGgyPkFsZXJ0YXMgRE1GbG93IOKAlCDDumx0aW1hcyAyNGg8L2gyPgogICAgICAgIDx1bD4ke2FsZXJ0cy5tYXAoKGEpID0+IGA8bGk+JHthfTwvbGk+YCkuam9pbigiIil9PC91bD4KICAgICAgICA8aHIvPgogICAgICAgIDxwPjxiPlN0YXRzIDI0aDo8L2I+ICR7ZXZlbnRzLmxlbmd0aH0gZXZlbnRvcyDCtyAke2RtRmFpbHVyZXMubGVuZ3RofSBmYWxoYXMgwrcgJHtzaWdGYWlsdXJlc30gd2ViaG9va3MgaW52w6FsaWRvczwvcD4KICAgICAgICA8cD48YSBocmVmPSJodHRwczovL2RtZmxvdy52ZXJjZWwuYXBwL2Rhc2hib2FyZCI+QWJyaXIgZGFzaGJvYXJkPC9hPjwvcD5gLAogICAgfSk7CiAgfQoKICByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oewogICAgY2hlY2tlZF9ldmVudHM6IGV2ZW50cy5sZW5ndGgsCiAgICBkbV9hdHRlbXB0czogZG1BdHRlbXB0cy5sZW5ndGgsCiAgICBkbV9mYWlsdXJlczogZG1GYWlsdXJlcy5sZW5ndGgsCiAgICBmYWlsdXJlX3JhdGU6IGAkeyhmYWlsdXJlUmF0ZSAqIDEwMCkudG9GaXhlZCgxKX0lYCwKICAgIHNpZ25hdHVyZV9mYWlsdXJlczogc2lnRmFpbHVyZXMsCiAgICB0b2tlbnNfc29vbl9leHBpcmluZzogc29vbkV4cGlyaW5nLmxlbmd0aCwKICAgIGFsZXJ0c19jb3VudDogYWxlcnRzLmxlbmd0aCwKICAgIG5vdGlmaWNhdGlvbl9zZW50OiBzZW50LAogIH0pOwp9Cg=="}
+import { NextRequest, NextResponse } from "next/server";
+import { supabaseAdmin } from "@/lib/supabase";
+import { sendNotification } from "@/lib/notify";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+function authOk(req: NextRequest): boolean {
+  const secret = process.env.CRON_SECRET;
+  const isVercelCron = req.headers.get("user-agent")?.includes("vercel-cron") ?? false;
+  if (isVercelCron) return true;
+  if (!secret || secret.length === 0) return true;
+  const header = req.headers.get("authorization");
+  return header === `Bearer ${secret}`;
+}
+
+/**
+ * Checa nas últimas 24h:
+ *  - % de DM failures (se > 30% e >= 5 tentativas, alerta)
+ *  - tokens expirando em < 7 dias
+ *  - qualquer signature_valid=false recente (possível config errada)
+ */
+export async function GET(req: NextRequest) {
+  if (!authOk(req)) {
+    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  }
+
+  const sb = supabaseAdmin();
+  const since = new Date(Date.now() - 24 * 3600 * 1000).toISOString();
+
+  const [eventsRes, accountsRes, sigRes] = await Promise.all([
+    sb
+      .from("events")
+      .select("dm_sent, dm_error, public_reply_error")
+      .gte("created_at", since),
+    sb
+      .from("accounts")
+      .select("id, name, ig_business_id, ig_token_expires_at, notify_email")
+      .eq("active", true),
+    sb
+      .from("raw_webhooks")
+      .select("id")
+      .eq("signature_valid", false)
+      .gte("received_at", since),
+  ]);
+
+  const events = (eventsRes.data ?? []) as any[];
+  const accounts = (accountsRes.data ?? []) as any[];
+  const sigFailures = (sigRes.data ?? []).length;
+
+  const dmAttempts = events.filter(
+    (e) => e.dm_sent === true || e.dm_error !== null
+  );
+  const dmFailures = events.filter((e) => e.dm_error !== null);
+  const failureRate =
+    dmAttempts.length > 0 ? dmFailures.length / dmAttempts.length : 0;
+
+  const alerts: string[] = [];
+
+  if (dmAttempts.length >= 5 && failureRate > 0.3) {
+    alerts.push(
+      `📉 <b>${(failureRate * 100).toFixed(0)}% de DMs falharam</b> nas últimas 24h (${dmFailures.length}/${dmAttempts.length}). Pode ser rate limit ou token quebrado.`
+    );
+  }
+
+  if (sigFailures > 0) {
+    alerts.push(
+      `🔐 <b>${sigFailures} webhooks com assinatura inválida</b>. Verifique app_secret ou configuração no Meta Dashboard.`
+    );
+  }
+
+  const soonExpiring = accounts.filter((a) => {
+    if (!a.ig_token_expires_at) return false;
+    const diffDays =
+      (new Date(a.ig_token_expires_at).getTime() - Date.now()) / 86400000;
+    return diffDays < 7;
+  });
+  for (const a of soonExpiring) {
+    const days = Math.round(
+      (new Date(a.ig_token_expires_at).getTime() - Date.now()) / 86400000
+    );
+    alerts.push(
+      `⏰ Token de <b>${a.name}</b> expira em <b>${days} dia(s)</b>. Refresh automático deve resolver — se não, gere novo manualmente.`
+    );
+  }
+
+  let sent = false;
+  if (alerts.length > 0) {
+    sent = await sendNotification({
+      subject: `⚠️ DMFlow — ${alerts.length} alerta(s)`,
+      html: `<h2>Alertas DMFlow — últimas 24h</h2>
+        <ul>${alerts.map((a) => `<li>${a}</li>`).join("")}</ul>
+        <hr/>
+        <p><b>Stats 24h:</b> ${events.length} eventos · ${dmFailures.length} falhas · ${sigFailures} webhooks inválidos</p>
+        <p><a href="https://dmflow.vercel.app/dashboard">Abrir dashboard</a></p>`,
+    });
+  }
+
+  return NextResponse.json({
+    checked_events: events.length,
+    dm_attempts: dmAttempts.length,
+    dm_failures: dmFailures.length,
+    failure_rate: `${(failureRate * 100).toFixed(1)}%`,
+    signature_failures: sigFailures,
+    tokens_soon_expiring: soonExpiring.length,
+    alerts_count: alerts.length,
+    notification_sent: sent,
+  });
+}

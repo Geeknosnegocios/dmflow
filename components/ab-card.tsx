@@ -1,1 +1,68 @@
-{"data":"aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IHR5cGUgeyBSdWxlIH0gZnJvbSAiQC90eXBlcy9kYiI7CmltcG9ydCB7IHZhcmlhbnRTdGF0cyB9IGZyb20gIkAvbGliL3ZhcmlhbnQtcGlja2VyIjsKaW1wb3J0IHsgU3RhdHVzUGlsbCB9IGZyb20gIkAvY29tcG9uZW50cy92aXoiOwppbXBvcnQgeyBUcm9waHkgfSBmcm9tICJsdWNpZGUtcmVhY3QiOwoKZXhwb3J0IGZ1bmN0aW9uIEFCQ2FyZCh7IHJ1bGUgfTogeyBydWxlOiBSdWxlIH0pIHsKICBjb25zdCBzdGF0cyA9IHZhcmlhbnRTdGF0cyhydWxlKTsKICBpZiAoIXN0YXRzKSByZXR1cm4gbnVsbDsKCiAgY29uc3QgdG90YWxIaXRzID0gc3RhdHMucmVkdWNlKChhLCBzKSA9PiBhICsgcy5oaXRzLCAwKTsKICBjb25zdCBoYXNEYXRhID0gdG90YWxIaXRzID4gMDsKCiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJyb3VuZGVkLXhsIGJvcmRlciBib3JkZXItbGluZSBiZy1zdXJmYWNlIHNoYWRvdy1jYXJkIHAtNSI+CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gZ2FwLTMgbWItMyI+CiAgICAgICAgPGRpdj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmb250LXNlbWlib2xkIHRleHQtc20iPntydWxlLm5hbWV9PC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC10aW55IHRleHQtZGltLTIgZm9udC1tb25vIj4KICAgICAgICAgICAge3N0YXRzLmxlbmd0aH0gdmFyaWFudGVzIMK3IHt0b3RhbEhpdHN9IGVudmlvcwogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgICAge2hhc0RhdGEgJiYgc3RhdHMuc29tZSgocykgPT4gcy5pc19sZWFkZXIpICYmICgKICAgICAgICAgIDxTdGF0dXNQaWxsIHRvbmU9Imdvb2QiIGxhYmVsPSJnYW5oYWRvciBpZGVudGlmaWNhZG8iIC8+CiAgICAgICAgKX0KICAgICAgPC9kaXY+CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJzcGFjZS15LTIiPgogICAgICAgIHtzdGF0cy5tYXAoKHYpID0+ICgKICAgICAgICAgIDxkaXYKICAgICAgICAgICAga2V5PXt2LmluZGV4fQogICAgICAgICAgICBjbGFzc05hbWU9e2Byb3VuZGVkLWxnIGJvcmRlciAkewogICAgICAgICAgICAgIHYuaXNfbGVhZGVyID8gImJvcmRlci1nb29kLzQwIGJnLWdvb2QtZGltIiA6ICJib3JkZXItbGluZSIKICAgICAgICAgICAgfSBwLTNgfQogICAgICAgICAgPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuIGdhcC0yIG1iLTEgdGV4dC14cyI+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGdhcC0xLjUiPgogICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJtb25vLW51bSBmb250LXNlbWlib2xkIj4KICAgICAgICAgICAgICAgICAgVntTdHJpbmcuZnJvbUNoYXJDb2RlKDY1ICsgdi5pbmRleCl9CiAgICAgICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICAgICAgICB7di5pc19sZWFkZXIgJiYgPFRyb3BoeSBjbGFzc05hbWU9ImgtMyB3LTMgdGV4dC1nb29kIiAvPn0KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTMgdGV4dC10aW55IHRleHQtZGltLTIgbW9uby1udW0iPgogICAgICAgICAgICAgICAgPHNwYW4+e3YuaGl0c30gaGl0czwvc3Bhbj4KICAgICAgICAgICAgICAgIDxzcGFuPnt2LmNvbnZlcnNpb25zfSBjbGlja3M8L3NwYW4+CiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9e3YuaXNfbGVhZGVyID8gInRleHQtZ29vZCBmb250LXNlbWlib2xkIiA6ICIifT4KICAgICAgICAgICAgICAgICAgeyh2LnJhdGUgKiAxMDApLnRvRml4ZWQoMSl9JQogICAgICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQteHMgdGV4dC1kaW0tMiBsaW5lLWNsYW1wLTIiPgogICAgICAgICAgICAgIHt2Lm1lc3NhZ2VfcHJldmlldyB8fCAiKHZhcmlhbnRlIHNlbSBtZW5zYWdlbSkifQogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAge3YuaGl0cyA+IDAgJiYgKAogICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtdC0yIGgtMSByb3VuZGVkLWZ1bGwgYmctd2hpdGUvNSBvdmVyZmxvdy1oaWRkZW4iPgogICAgICAgICAgICAgICAgPGRpdgogICAgICAgICAgICAgICAgICBjbGFzc05hbWU9e2BoLWZ1bGwgJHsKICAgICAgICAgICAgICAgICAgICB2LmlzX2xlYWRlciA/ICJiZy1nb29kIiA6ICJiZy1hY2NlbnQvNTAiCiAgICAgICAgICAgICAgICAgIH1gfQogICAgICAgICAgICAgICAgICBzdHlsZT17eyB3aWR0aDogYCR7di5yYXRlICogMTAwfSVgIH19CiAgICAgICAgICAgICAgICAvPgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICApfQogICAgICAgICAgPC9kaXY+CiAgICAgICAgKSl9CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgKTsKfQo="}
+import React from "react";
+import type { Rule } from "@/types/db";
+import { variantStats } from "@/lib/variant-picker";
+import { StatusPill } from "@/components/viz";
+import { Trophy } from "lucide-react";
+
+export function ABCard({ rule }: { rule: Rule }) {
+  const stats = variantStats(rule);
+  if (!stats) return null;
+
+  const totalHits = stats.reduce((a, s) => a + s.hits, 0);
+  const hasData = totalHits > 0;
+
+  return (
+    <div className="rounded-xl border border-line bg-surface shadow-card p-5">
+      <div className="flex items-center justify-between gap-3 mb-3">
+        <div>
+          <div className="font-semibold text-sm">{rule.name}</div>
+          <div className="text-tiny text-dim-2 font-mono">
+            {stats.length} variantes · {totalHits} envios
+          </div>
+        </div>
+        {hasData && stats.some((s) => s.is_leader) && (
+          <StatusPill tone="good" label="ganhador identificado" />
+        )}
+      </div>
+      <div className="space-y-2">
+        {stats.map((v) => (
+          <div
+            key={v.index}
+            className={`rounded-lg border ${
+              v.is_leader ? "border-good/40 bg-good-dim" : "border-line"
+            } p-3`}
+          >
+            <div className="flex items-center justify-between gap-2 mb-1 text-xs">
+              <div className="flex items-center gap-1.5">
+                <span className="mono-num font-semibold">
+                  V{String.fromCharCode(65 + v.index)}
+                </span>
+                {v.is_leader && <Trophy className="h-3 w-3 text-good" />}
+              </div>
+              <div className="flex items-center gap-3 text-tiny text-dim-2 mono-num">
+                <span>{v.hits} hits</span>
+                <span>{v.conversions} clicks</span>
+                <span className={v.is_leader ? "text-good font-semibold" : ""}>
+                  {(v.rate * 100).toFixed(1)}%
+                </span>
+              </div>
+            </div>
+            <div className="text-xs text-dim-2 line-clamp-2">
+              {v.message_preview || "(variante sem mensagem)"}
+            </div>
+            {v.hits > 0 && (
+              <div className="mt-2 h-1 rounded-full bg-white/5 overflow-hidden">
+                <div
+                  className={`h-full ${
+                    v.is_leader ? "bg-good" : "bg-accent/50"
+                  }`}
+                  style={{ width: `${v.rate * 100}%` }}
+                />
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

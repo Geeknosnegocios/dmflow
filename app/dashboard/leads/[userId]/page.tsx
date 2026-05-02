@@ -1,1 +1,315 @@
-{"data":"aW1wb3J0IHsgc3VwYWJhc2VBZG1pbiB9IGZyb20gIkAvbGliL3N1cGFiYXNlIjsKaW1wb3J0IHsgQ2FyZCwgQ2FyZEhlYWRlciwgRW1wdHlTdGF0ZSwgU3RhdHVzUGlsbCB9IGZyb20gIkAvY29tcG9uZW50cy92aXoiOwppbXBvcnQgeyBmbXRSZWxhdGl2ZSB9IGZyb20gIkAvbGliL2Zvcm1hdCI7CmltcG9ydCB7CiAgTWVzc2FnZVNxdWFyZSwKICBIYW5kLAogIENhbWVyYSwKICBNYWlsLAogIE1vdXNlUG9pbnRlckNsaWNrLAogIFNlbmQsCiAgWENpcmNsZSwKICBBcnJvd0xlZnQsCn0gZnJvbSAibHVjaWRlLXJlYWN0IjsKaW1wb3J0IExpbmsgZnJvbSAibmV4dC9saW5rIjsKCmV4cG9ydCBjb25zdCBkeW5hbWljID0gImZvcmNlLWR5bmFtaWMiOwoKdHlwZSBUaW1lbGluZUl0ZW0gPQogIHwgewogICAgICBraW5kOiAiZXZlbnQiOwogICAgICBhdDogc3RyaW5nOwogICAgICBldmVudF9pZDogc3RyaW5nOwogICAgICB0cmlnZ2VyOiBzdHJpbmc7CiAgICAgIHJ1bGVfbmFtZTogc3RyaW5nIHwgbnVsbDsKICAgICAgY29tbWVudF90ZXh0OiBzdHJpbmcgfCBudWxsOwogICAgICBtYXRjaGVkX2tleXdvcmQ6IHN0cmluZyB8IG51bGw7CiAgICAgIGRtX3NlbnQ6IGJvb2xlYW47CiAgICAgIGRtX2Vycm9yOiBzdHJpbmcgfCBudWxsOwogICAgICBwdWJsaWNfcmVwbHlfc2VudDogYm9vbGVhbjsKICAgICAgcG9zdF9pZDogc3RyaW5nIHwgbnVsbDsKICAgIH0KICB8IHsKICAgICAga2luZDogImNsaWNrIjsKICAgICAgYXQ6IHN0cmluZzsKICAgICAgYnV0dG9uX3RpdGxlOiBzdHJpbmcgfCBudWxsOwogICAgICB0YXJnZXRfdXJsOiBzdHJpbmc7CiAgICAgIHJ1bGVfbmFtZTogc3RyaW5nIHwgbnVsbDsKICAgIH07Cgphc3luYyBmdW5jdGlvbiBsb2FkKHVzZXJJZDogc3RyaW5nKSB7CiAgY29uc3Qgc2IgPSBzdXBhYmFzZUFkbWluKCk7CgogIGNvbnN0IFtldmVudHNSZXMsIGxpbmtzUmVzLCBjbGlja3NSZXNdID0gYXdhaXQgUHJvbWlzZS5hbGwoWwogICAgc2IKICAgICAgLmZyb20oImV2ZW50cyIpCiAgICAgIC5zZWxlY3QoCiAgICAgICAgImlkLCBjcmVhdGVkX2F0LCBydWxlX2lkLCBtYXRjaGVkX2tleXdvcmQsIGNvbW1lbnRfdGV4dCwgZG1fc2VudCwgZG1fZXJyb3IsIHB1YmxpY19yZXBseV9zZW50LCBpZ19tZWRpYV9pZCwgaWdfdXNlcm5hbWUiCiAgICAgICkKICAgICAgLmVxKCJpZ191c2VyX2lkIiwgdXNlcklkKQogICAgICAub3JkZXIoImNyZWF0ZWRfYXQiLCB7IGFzY2VuZGluZzogdHJ1ZSB9KSwKICAgIHNiCiAgICAgIC5mcm9tKCJ0cmFja2VkX2xpbmtzIikKICAgICAgLnNlbGVjdCgiaWQsIHJ1bGVfaWQsIGJ1dHRvbl90aXRsZSwgdGFyZ2V0X3VybCwgZXZlbnRfaWQsIGNsaWNrX2NvdW50LCBmaXJzdF9jbGlja2VkX2F0LCBsYXN0X2NsaWNrZWRfYXQiKQogICAgICAuZXEoImlnX3VzZXJfaWQiLCB1c2VySWQpLAogICAgc2IKICAgICAgLmZyb20oImxpbmtfY2xpY2tzIikKICAgICAgLnNlbGVjdCgidHJhY2tlZF9saW5rX2lkLCBjbGlja2VkX2F0IikKICAgICAgLm9yZGVyKCJjbGlja2VkX2F0IiwgeyBhc2NlbmRpbmc6IHRydWUgfSksCiAgXSk7CgogIGNvbnN0IGV2ZW50cyA9IChldmVudHNSZXMuZGF0YSA/PyBbXSkgYXMgYW55W107CiAgY29uc3QgbGlua3MgPSAobGlua3NSZXMuZGF0YSA/PyBbXSkgYXMgYW55W107CiAgY29uc3QgY2xpY2tzID0gKGNsaWNrc1Jlcy5kYXRhID8/IFtdKSBhcyBhbnlbXTsKCiAgY29uc3QgeyBkYXRhOiBydWxlcyB9ID0gYXdhaXQgc2IKICAgIC5mcm9tKCJydWxlcyIpCiAgICAuc2VsZWN0KCJpZCwgbmFtZSwgdHJpZ2dlcl90eXBlIik7CiAgY29uc3QgcnVsZU5hbWVCeUlkID0gbmV3IE1hcDxzdHJpbmcsIHsgbmFtZTogc3RyaW5nOyB0cmlnZ2VyX3R5cGU6IHN0cmluZyB9PigpOwogIGZvciAoY29uc3QgciBvZiAocnVsZXMgPz8gW10pIGFzIGFueVtdKSBydWxlTmFtZUJ5SWQuc2V0KHIuaWQsIHIpOwoKICBjb25zdCBsaW5rSWRzID0gbmV3IFNldChsaW5rcy5tYXAoKGwpID0+IGwuaWQpKTsKICBjb25zdCBsaW5rTWV0YUJ5SWQgPSBuZXcgTWFwPHN0cmluZywgYW55PigpOwogIGZvciAoY29uc3QgbCBvZiBsaW5rcykgbGlua01ldGFCeUlkLnNldChsLmlkLCBsKTsKCiAgY29uc3QgdGltZWxpbmU6IFRpbWVsaW5lSXRlbVtdID0gW107CgogIGZvciAoY29uc3QgZSBvZiBldmVudHMpIHsKICAgIHRpbWVsaW5lLnB1c2goewogICAgICBraW5kOiAiZXZlbnQiLAogICAgICBhdDogZS5jcmVhdGVkX2F0LAogICAgICBldmVudF9pZDogZS5pZCwKICAgICAgdHJpZ2dlcjogcnVsZU5hbWVCeUlkLmdldChlLnJ1bGVfaWQpPy50cmlnZ2VyX3R5cGUgPz8gInVua25vd24iLAogICAgICBydWxlX25hbWU6IHJ1bGVOYW1lQnlJZC5nZXQoZS5ydWxlX2lkKT8ubmFtZSA/PyBudWxsLAogICAgICBjb21tZW50X3RleHQ6IGUuY29tbWVudF90ZXh0LAogICAgICBtYXRjaGVkX2tleXdvcmQ6IGUubWF0Y2hlZF9rZXl3b3JkLAogICAgICBkbV9zZW50OiBlLmRtX3NlbnQsCiAgICAgIGRtX2Vycm9yOiBlLmRtX2Vycm9yLAogICAgICBwdWJsaWNfcmVwbHlfc2VudDogZS5wdWJsaWNfcmVwbHlfc2VudCwKICAgICAgcG9zdF9pZDogZS5pZ19tZWRpYV9pZCwKICAgIH0pOwogIH0KCiAgZm9yIChjb25zdCBjIG9mIGNsaWNrcykgewogICAgaWYgKCFsaW5rSWRzLmhhcyhjLnRyYWNrZWRfbGlua19pZCkpIGNvbnRpbnVlOwogICAgY29uc3QgbWV0YSA9IGxpbmtNZXRhQnlJZC5nZXQoYy50cmFja2VkX2xpbmtfaWQpOwogICAgdGltZWxpbmUucHVzaCh7CiAgICAgIGtpbmQ6ICJjbGljayIsCiAgICAgIGF0OiBjLmNsaWNrZWRfYXQsCiAgICAgIGJ1dHRvbl90aXRsZTogbWV0YT8uYnV0dG9uX3RpdGxlID8/IG51bGwsCiAgICAgIHRhcmdldF91cmw6IG1ldGE/LnRhcmdldF91cmwgPz8gIiIsCiAgICAgIHJ1bGVfbmFtZTogbWV0YSA/IHJ1bGVOYW1lQnlJZC5nZXQobWV0YS5ydWxlX2lkKT8ubmFtZSA/PyBudWxsIDogbnVsbCwKICAgIH0pOwogIH0KCiAgdGltZWxpbmUuc29ydCgoYSwgYikgPT4gYS5hdC5sb2NhbGVDb21wYXJlKGIuYXQpKTsKCiAgY29uc3QgZmlyc3RTZWVuID0gZXZlbnRzWzBdPy5jcmVhdGVkX2F0ID8/IG51bGw7CiAgY29uc3QgdXNlcm5hbWUgPSBldmVudHNbMF0/LmlnX3VzZXJuYW1lID8/IG51bGw7CiAgY29uc3QgdG90YWxDbGlja3MgPSBjbGlja3MuZmlsdGVyKChjKSA9PiBsaW5rSWRzLmhhcyhjLnRyYWNrZWRfbGlua19pZCkpCiAgICAubGVuZ3RoOwogIGNvbnN0IHRvdGFsRXZlbnRzID0gZXZlbnRzLmxlbmd0aDsKICBjb25zdCB0b3RhbERtcyA9IGV2ZW50cy5maWx0ZXIoKGUpID0+IGUuZG1fc2VudCkubGVuZ3RoOwoKICByZXR1cm4gewogICAgdGltZWxpbmUsCiAgICBmaXJzdFNlZW4sCiAgICB1c2VybmFtZSwKICAgIHRvdGFsQ2xpY2tzLAogICAgdG90YWxFdmVudHMsCiAgICB0b3RhbERtcywKICAgIHVzZXJJZCwKICB9Owp9CgpleHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiBMZWFkSm91cm5leVBhZ2UoewogIHBhcmFtcywKfTogewogIHBhcmFtczogUHJvbWlzZTx7IHVzZXJJZDogc3RyaW5nIH0+Owp9KSB7CiAgY29uc3QgeyB1c2VySWQgfSA9IGF3YWl0IHBhcmFtczsKICBjb25zdCBkYXRhID0gYXdhaXQgbG9hZCh1c2VySWQpOwoKICBpZiAoZGF0YS50b3RhbEV2ZW50cyA9PT0gMCkgewogICAgcmV0dXJuICgKICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktNiI+CiAgICAgICAgPExpbmsgaHJlZj0iL2Rhc2hib2FyZCIgY2xhc3NOYW1lPSJ0ZXh0LXRpbnkgdGV4dC1kaW0tMiBob3Zlcjp0ZXh0LWZnIGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBnYXAtMSI+CiAgICAgICAgICA8QXJyb3dMZWZ0IGNsYXNzTmFtZT0iaC0zIHctMyIgLz4gdm9sdGFyCiAgICAgICAgPC9MaW5rPgogICAgICAgIDxoMSBjbGFzc05hbWU9InRleHQtNHhsIGZvbnQtYm9sZCB0cmFja2luZy10aWdodCI+TGVhZDwvaDE+CiAgICAgICAgPEVtcHR5U3RhdGUKICAgICAgICAgIHRpdGxlPSJVc3XDoXJpbyBuw6NvIHRlbSBhdGl2aWRhZGUiCiAgICAgICAgICBtZXNzYWdlPXtgTmVuaHVtIGV2ZW50byByZWdpc3RyYWRvIHBhcmEgdXNlcl9pZCAke3VzZXJJZH0uYH0KICAgICAgICAvPgogICAgICA8L2Rpdj4KICAgICk7CiAgfQoKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktOCI+CiAgICAgIDxkaXY+CiAgICAgICAgPExpbmsKICAgICAgICAgIGhyZWY9Ii9kYXNoYm9hcmQiCiAgICAgICAgICBjbGFzc05hbWU9InRleHQtdGlueSB0ZXh0LWRpbS0yIGhvdmVyOnRleHQtZmcgaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIGdhcC0xIG1iLTMiCiAgICAgICAgPgogICAgICAgICAgPEFycm93TGVmdCBjbGFzc05hbWU9ImgtMyB3LTMiIC8+IHZvbHRhciBhbyBkYXNoYm9hcmQKICAgICAgICA8L0xpbms+CiAgICAgICAgPGhlYWRlciBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGdhcC00Ij4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJoLTE2IHctMTYgcm91bmRlZC1mdWxsIGJnLWdyYWRpZW50LXRvLWJyIGZyb20tYWNjZW50IHZpYS12aW9sZXQgdG8td2FybiBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciB0ZXh0LTJ4bCBmb250LWJvbGQgdXBwZXJjYXNlIj4KICAgICAgICAgICAgeyhkYXRhLnVzZXJuYW1lID8/ICI/PyIpLnNsaWNlKDAsIDIpfQogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2PgogICAgICAgICAgICA8aDEgY2xhc3NOYW1lPSJ0ZXh0LTN4bCBmb250LWJvbGQgdHJhY2tpbmctdGlnaHQiPgogICAgICAgICAgICAgIHtkYXRhLnVzZXJuYW1lID8gYEAke2RhdGEudXNlcm5hbWV9YCA6ICJVc3XDoXJpbyBhbsO0bmltbyJ9CiAgICAgICAgICAgIDwvaDE+CiAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC1kaW0tMiB0ZXh0LXNtIGZvbnQtbW9ubyI+CiAgICAgICAgICAgICAge3VzZXJJZH0gwrcgcHJpbWVpcm8gY29udGF0byB7ZGF0YS5maXJzdFNlZW4gPyBmbXRSZWxhdGl2ZShkYXRhLmZpcnN0U2VlbikgKyAiIGF0csOhcyIgOiAi4oCUIn0KICAgICAgICAgICAgPC9wPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9oZWFkZXI+CiAgICAgIDwvZGl2PgoKICAgICAgey8qIFF1aWNrIHN0YXRzICovfQogICAgICA8c2VjdGlvbiBjbGFzc05hbWU9ImdyaWQgZ3JpZC1jb2xzLTMgZ2FwLTMiPgogICAgICAgIDxRdWlja1N0YXQgbGFiZWw9IkV2ZW50b3MiIHZhbHVlPXtkYXRhLnRvdGFsRXZlbnRzfSB0b25lPSJhY2NlbnQiIC8+CiAgICAgICAgPFF1aWNrU3RhdCBsYWJlbD0iRE1zIHJlY2ViaWRhcyIgdmFsdWU9e2RhdGEudG90YWxEbXN9IHRvbmU9Imdvb2QiIC8+CiAgICAgICAgPFF1aWNrU3RhdCBsYWJlbD0iQ2xpcXVlcyIgdmFsdWU9e2RhdGEudG90YWxDbGlja3N9IHRvbmU9InZpb2xldCIgLz4KICAgICAgPC9zZWN0aW9uPgoKICAgICAgey8qIFRpbWVsaW5lICovfQogICAgICA8Q2FyZD4KICAgICAgICA8Q2FyZEhlYWRlcgogICAgICAgICAgdGl0bGU9IlRpbWVsaW5lIGNvbXBsZXRhIgogICAgICAgICAgc3VidGl0bGU9e2Ake2RhdGEudGltZWxpbmUubGVuZ3RofSBldmVudG9zIGRvIHByaW1laXJvIGNvbnRhdG8gYXTDqSBhZ29yYWB9CiAgICAgICAgLz4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0icC01Ij4KICAgICAgICAgIDxvbCBjbGFzc05hbWU9InJlbGF0aXZlIHNwYWNlLXktNSI+CiAgICAgICAgICAgIHsvKiB2ZXJ0aWNhbCByYWlsICovfQogICAgICAgICAgICA8ZGl2CiAgICAgICAgICAgICAgY2xhc3NOYW1lPSJhYnNvbHV0ZSBsZWZ0LTQgdG9wLTIgYm90dG9tLTIgdy1weCBiZy1saW5lLTIiCiAgICAgICAgICAgICAgYXJpYS1oaWRkZW4KICAgICAgICAgICAgLz4KICAgICAgICAgICAge2RhdGEudGltZWxpbmUubWFwKChpdGVtLCBpZHgpID0+ICgKICAgICAgICAgICAgICA8VGltZWxpbmVSb3cga2V5PXtpZHh9IGl0ZW09e2l0ZW19IC8+CiAgICAgICAgICAgICkpfQogICAgICAgICAgPC9vbD4KICAgICAgICA8L2Rpdj4KICAgICAgPC9DYXJkPgogICAgPC9kaXY+CiAgKTsKfQoKZnVuY3Rpb24gUXVpY2tTdGF0KHsKICBsYWJlbCwKICB2YWx1ZSwKICB0b25lLAp9OiB7CiAgbGFiZWw6IHN0cmluZzsKICB2YWx1ZTogbnVtYmVyOwogIHRvbmU6ICJhY2NlbnQiIHwgImdvb2QiIHwgInZpb2xldCI7Cn0pIHsKICBjb25zdCBjb2xvciA9CiAgICB0b25lID09PSAiYWNjZW50IiA/ICJ0ZXh0LWFjY2VudCIgOiB0b25lID09PSAiZ29vZCIgPyAidGV4dC1nb29kIiA6ICJ0ZXh0LXZpb2xldCI7CiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJyb3VuZGVkLXhsIGJvcmRlciBib3JkZXItbGluZSBiZy1zdXJmYWNlIHNoYWRvdy1jYXJkIHAtNCI+CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJ0ZXh0LXRpbnkgdGV4dC1kaW0tMiB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXIiPntsYWJlbH08L2Rpdj4KICAgICAgPGRpdiBjbGFzc05hbWU9e2BtdC0yIHRleHQtMnhsIGZvbnQtc2VtaWJvbGQgbW9uby1udW0gJHtjb2xvcn1gfT4KICAgICAgICB7dmFsdWV9CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgKTsKfQoKZnVuY3Rpb24gVGltZWxpbmVSb3coeyBpdGVtIH06IHsgaXRlbTogVGltZWxpbmVJdGVtIH0pIHsKICBpZiAoaXRlbS5raW5kID09PSAiZXZlbnQiKSB7CiAgICBjb25zdCB0cmlnZ2VyTWFwOiBSZWNvcmQ8c3RyaW5nLCBhbnk+ID0gewogICAgICBjb21tZW50OiB7IEljb246IE1lc3NhZ2VTcXVhcmUsIHRvbmU6ICJhY2NlbnQiLCBsYWJlbDogImNvbWVudG91IiB9LAogICAgICBmaXJzdF9kbTogeyBJY29uOiBIYW5kLCB0b25lOiAidmlvbGV0IiwgbGFiZWw6ICJwcmltZWlyYSBETSIgfSwKICAgICAgc3RvcnlfcmVwbHk6IHsgSWNvbjogQ2FtZXJhLCB0b25lOiAid2FybiIsIGxhYmVsOiAicmVzcG9uZGV1IHN0b3J5IiB9LAogICAgICB1bmtub3duOiB7IEljb246IE1haWwsIHRvbmU6ICJkaW0iLCBsYWJlbDogImV2ZW50byIgfSwKICAgIH07CiAgICBjb25zdCB0ID0gdHJpZ2dlck1hcFtpdGVtLnRyaWdnZXJdID8/IHRyaWdnZXJNYXAudW5rbm93bjsKICAgIGNvbnN0IHsgSWNvbiB9ID0gdDsKICAgIHJldHVybiAoCiAgICAgIDxsaSBjbGFzc05hbWU9InJlbGF0aXZlIHBsLTEwIj4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT17YGFic29sdXRlIGxlZnQtMCB0b3AtMSBoLTggdy04IHJvdW5kZWQtZnVsbCBib3JkZXItMiBib3JkZXItYmcgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgJHsKICAgICAgICAgIHQudG9uZSA9PT0gImFjY2VudCIgPyAiYmctYWNjZW50LWRpbSB0ZXh0LWFjY2VudCIKICAgICAgICAgICAgOiB0LnRvbmUgPT09ICJ2aW9sZXQiID8gImJnLXZpb2xldC1kaW0gdGV4dC12aW9sZXQiCiAgICAgICAgICAgIDogdC50b25lID09PSAid2FybiIgPyAiYmctd2Fybi1kaW0gdGV4dC13YXJuIgogICAgICAgICAgICA6ICJiZy13aGl0ZS81IHRleHQtZGltLTIiCiAgICAgICAgfWB9PgogICAgICAgICAgPEljb24gY2xhc3NOYW1lPSJoLTQgdy00IiAvPgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJzcGFjZS15LTEuNSI+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgZmxleC13cmFwIj4KICAgICAgICAgICAgPFN0YXR1c1BpbGwgdG9uZT17dC50b25lfSBsYWJlbD17dC5sYWJlbH0gLz4KICAgICAgICAgICAge2l0ZW0ubWF0Y2hlZF9rZXl3b3JkICYmICgKICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtdGlueSBmb250LW1vbm8gdGV4dC1hY2NlbnQgYmctYWNjZW50LWRpbSByb3VuZGVkIHB4LTEuNSBweS0wLjUiPgogICAgICAgICAgICAgICAge2l0ZW0ubWF0Y2hlZF9rZXl3b3JkfQogICAgICAgICAgICAgIDwvc3Bhbj4KICAgICAgICAgICAgKX0KICAgICAgICAgICAge2l0ZW0ucnVsZV9uYW1lICYmICgKICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtdGlueSB0ZXh0LWRpbS0yIj7CtyByZWdyYSAie2l0ZW0ucnVsZV9uYW1lfSI8L3NwYW4+CiAgICAgICAgICAgICl9CiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC10aW55IHRleHQtZGltLTIgZm9udC1tb25vIG1sLWF1dG8iPgogICAgICAgICAgICAgIHtmbXRSZWxhdGl2ZShpdGVtLmF0KX0KICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICB7aXRlbS5jb21tZW50X3RleHQgJiYgKAogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC1zbSB0ZXh0LWRpbS0yIGJnLWJnLTEgcm91bmRlZC1sZyBib3JkZXIgYm9yZGVyLWxpbmUgcHgtMyBweS0yIj4KICAgICAgICAgICAgICAie2l0ZW0uY29tbWVudF90ZXh0fSIKICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICApfQogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggZ2FwLTIgdGV4dC10aW55IGZsZXgtd3JhcCI+CiAgICAgICAgICAgIHtpdGVtLmRtX3NlbnQgPyAoCiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTEgdGV4dC1nb29kIj4KICAgICAgICAgICAgICAgIDxTZW5kIGNsYXNzTmFtZT0iaC0zIHctMyIgLz4gRE0gZW52aWFkYQogICAgICAgICAgICAgIDwvc3Bhbj4KICAgICAgICAgICAgKSA6IGl0ZW0uZG1fZXJyb3IgPyAoCiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTEgdGV4dC1kYW5nZXIiIHRpdGxlPXtpdGVtLmRtX2Vycm9yfT4KICAgICAgICAgICAgICAgIDxYQ2lyY2xlIGNsYXNzTmFtZT0iaC0zIHctMyIgLz4gRE0gZmFsaG91CiAgICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICApIDogbnVsbH0KICAgICAgICAgICAge2l0ZW0ucHVibGljX3JlcGx5X3NlbnQgJiYgKAogICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIGdhcC0xIHRleHQtZ29vZCI+CiAgICAgICAgICAgICAgICA8TWVzc2FnZVNxdWFyZSBjbGFzc05hbWU9ImgtMyB3LTMiIC8+IHJlcGx5IHDDumJsaWNvIGVudmlhZG8KICAgICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICAgICl9CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgICAgPC9saT4KICAgICk7CiAgfQoKICByZXR1cm4gKAogICAgPGxpIGNsYXNzTmFtZT0icmVsYXRpdmUgcGwtMTAiPgogICAgICA8ZGl2IGNsYXNzTmFtZT0iYWJzb2x1dGUgbGVmdC0wIHRvcC0xIGgtOCB3LTggcm91bmRlZC1mdWxsIGJvcmRlci0yIGJvcmRlci1iZyBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBiZy1hY2NlbnQgdGV4dC1hY2NlbnQtaW5rIj4KICAgICAgICA8TW91c2VQb2ludGVyQ2xpY2sgY2xhc3NOYW1lPSJoLTQgdy00IiAvPgogICAgICA8L2Rpdj4KICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktMS41Ij4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgZmxleC13cmFwIj4KICAgICAgICAgIDxTdGF0dXNQaWxsIHRvbmU9ImFjY2VudCIgbGFiZWw9ImNsaWNvdSIgcHVsc2UgLz4KICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC1zbSBmb250LW1lZGl1bSI+CiAgICAgICAgICAgIHtpdGVtLmJ1dHRvbl90aXRsZSB8fCAibGluayJ9CiAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICB7aXRlbS5ydWxlX25hbWUgJiYgKAogICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtdGlueSB0ZXh0LWRpbS0yIj7CtyByZWdyYSAie2l0ZW0ucnVsZV9uYW1lfSI8L3NwYW4+CiAgICAgICAgICApfQogICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LXRpbnkgdGV4dC1kaW0tMiBmb250LW1vbm8gbWwtYXV0byI+CiAgICAgICAgICAgIHtmbXRSZWxhdGl2ZShpdGVtLmF0KX0KICAgICAgICAgIDwvc3Bhbj4KICAgICAgICA8L2Rpdj4KICAgICAgICB7aXRlbS50YXJnZXRfdXJsICYmICgKICAgICAgICAgIDxhCiAgICAgICAgICAgIGhyZWY9e2l0ZW0udGFyZ2V0X3VybH0KICAgICAgICAgICAgdGFyZ2V0PSJfYmxhbmsiCiAgICAgICAgICAgIHJlbD0ibm9yZWZlcnJlciBub29wZW5lciIKICAgICAgICAgICAgY2xhc3NOYW1lPSJ0ZXh0LXRpbnkgZm9udC1tb25vIHRleHQtYWNjZW50IHRydW5jYXRlIGJsb2NrIGhvdmVyOnVuZGVybGluZSIKICAgICAgICAgID4KICAgICAgICAgICAg4oaSIHtpdGVtLnRhcmdldF91cmx9CiAgICAgICAgICA8L2E+CiAgICAgICAgKX0KICAgICAgPC9kaXY+CiAgICA8L2xpPgogICk7Cn0K"}
+import { supabaseAdmin } from "@/lib/supabase";
+import { Card, CardHeader, EmptyState, StatusPill } from "@/components/viz";
+import { fmtRelative } from "@/lib/format";
+import {
+  MessageSquare,
+  Hand,
+  Camera,
+  Mail,
+  MousePointerClick,
+  Send,
+  XCircle,
+  ArrowLeft,
+} from "lucide-react";
+import Link from "next/link";
+
+export const dynamic = "force-dynamic";
+
+type TimelineItem =
+  | {
+      kind: "event";
+      at: string;
+      event_id: string;
+      trigger: string;
+      rule_name: string | null;
+      comment_text: string | null;
+      matched_keyword: string | null;
+      dm_sent: boolean;
+      dm_error: string | null;
+      public_reply_sent: boolean;
+      post_id: string | null;
+    }
+  | {
+      kind: "click";
+      at: string;
+      button_title: string | null;
+      target_url: string;
+      rule_name: string | null;
+    };
+
+async function load(userId: string) {
+  const sb = supabaseAdmin();
+
+  const [eventsRes, linksRes, clicksRes] = await Promise.all([
+    sb
+      .from("events")
+      .select(
+        "id, created_at, rule_id, matched_keyword, comment_text, dm_sent, dm_error, public_reply_sent, ig_media_id, ig_username"
+      )
+      .eq("ig_user_id", userId)
+      .order("created_at", { ascending: true }),
+    sb
+      .from("tracked_links")
+      .select("id, rule_id, button_title, target_url, event_id, click_count, first_clicked_at, last_clicked_at")
+      .eq("ig_user_id", userId),
+    sb
+      .from("link_clicks")
+      .select("tracked_link_id, clicked_at")
+      .order("clicked_at", { ascending: true }),
+  ]);
+
+  const events = (eventsRes.data ?? []) as any[];
+  const links = (linksRes.data ?? []) as any[];
+  const clicks = (clicksRes.data ?? []) as any[];
+
+  const { data: rules } = await sb
+    .from("rules")
+    .select("id, name, trigger_type");
+  const ruleNameById = new Map<string, { name: string; trigger_type: string }>();
+  for (const r of (rules ?? []) as any[]) ruleNameById.set(r.id, r);
+
+  const linkIds = new Set(links.map((l) => l.id));
+  const linkMetaById = new Map<string, any>();
+  for (const l of links) linkMetaById.set(l.id, l);
+
+  const timeline: TimelineItem[] = [];
+
+  for (const e of events) {
+    timeline.push({
+      kind: "event",
+      at: e.created_at,
+      event_id: e.id,
+      trigger: ruleNameById.get(e.rule_id)?.trigger_type ?? "unknown",
+      rule_name: ruleNameById.get(e.rule_id)?.name ?? null,
+      comment_text: e.comment_text,
+      matched_keyword: e.matched_keyword,
+      dm_sent: e.dm_sent,
+      dm_error: e.dm_error,
+      public_reply_sent: e.public_reply_sent,
+      post_id: e.ig_media_id,
+    });
+  }
+
+  for (const c of clicks) {
+    if (!linkIds.has(c.tracked_link_id)) continue;
+    const meta = linkMetaById.get(c.tracked_link_id);
+    timeline.push({
+      kind: "click",
+      at: c.clicked_at,
+      button_title: meta?.button_title ?? null,
+      target_url: meta?.target_url ?? "",
+      rule_name: meta ? ruleNameById.get(meta.rule_id)?.name ?? null : null,
+    });
+  }
+
+  timeline.sort((a, b) => a.at.localeCompare(b.at));
+
+  const firstSeen = events[0]?.created_at ?? null;
+  const username = events[0]?.ig_username ?? null;
+  const totalClicks = clicks.filter((c) => linkIds.has(c.tracked_link_id))
+    .length;
+  const totalEvents = events.length;
+  const totalDms = events.filter((e) => e.dm_sent).length;
+
+  return {
+    timeline,
+    firstSeen,
+    username,
+    totalClicks,
+    totalEvents,
+    totalDms,
+    userId,
+  };
+}
+
+export default async function LeadJourneyPage({
+  params,
+}: {
+  params: Promise<{ userId: string }>;
+}) {
+  const { userId } = await params;
+  const data = await load(userId);
+
+  if (data.totalEvents === 0) {
+    return (
+      <div className="space-y-6">
+        <Link href="/dashboard" className="text-tiny text-dim-2 hover:text-fg inline-flex items-center gap-1">
+          <ArrowLeft className="h-3 w-3" /> voltar
+        </Link>
+        <h1 className="text-4xl font-bold tracking-tight">Lead</h1>
+        <EmptyState
+          title="Usuário não tem atividade"
+          message={`Nenhum evento registrado para user_id ${userId}.`}
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-8">
+      <div>
+        <Link
+          href="/dashboard"
+          className="text-tiny text-dim-2 hover:text-fg inline-flex items-center gap-1 mb-3"
+        >
+          <ArrowLeft className="h-3 w-3" /> voltar ao dashboard
+        </Link>
+        <header className="flex items-center gap-4">
+          <div className="h-16 w-16 rounded-full bg-gradient-to-br from-accent via-violet to-warn flex items-center justify-center text-2xl font-bold uppercase">
+            {(data.username ?? "??").slice(0, 2)}
+          </div>
+          <div>
+            <h1 className="text-3xl font-bold tracking-tight">
+              {data.username ? `@${data.username}` : "Usuário anônimo"}
+            </h1>
+            <p className="text-dim-2 text-sm font-mono">
+              {userId} · primeiro contato {data.firstSeen ? fmtRelative(data.firstSeen) + " atrás" : "—"}
+            </p>
+          </div>
+        </header>
+      </div>
+
+      {/* Quick stats */}
+      <section className="grid grid-cols-3 gap-3">
+        <QuickStat label="Eventos" value={data.totalEvents} tone="accent" />
+        <QuickStat label="DMs recebidas" value={data.totalDms} tone="good" />
+        <QuickStat label="Cliques" value={data.totalClicks} tone="violet" />
+      </section>
+
+      {/* Timeline */}
+      <Card>
+        <CardHeader
+          title="Timeline completa"
+          subtitle={`${data.timeline.length} eventos do primeiro contato até agora`}
+        />
+        <div className="p-5">
+          <ol className="relative space-y-5">
+            {/* vertical rail */}
+            <div
+              className="absolute left-4 top-2 bottom-2 w-px bg-line-2"
+              aria-hidden
+            />
+            {data.timeline.map((item, idx) => (
+              <TimelineRow key={idx} item={item} />
+            ))}
+          </ol>
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+function QuickStat({
+  label,
+  value,
+  tone,
+}: {
+  label: string;
+  value: number;
+  tone: "accent" | "good" | "violet";
+}) {
+  const color =
+    tone === "accent" ? "text-accent" : tone === "good" ? "text-good" : "text-violet";
+  return (
+    <div className="rounded-xl border border-line bg-surface shadow-card p-4">
+      <div className="text-tiny text-dim-2 uppercase tracking-wider">{label}</div>
+      <div className={`mt-2 text-2xl font-semibold mono-num ${color}`}>
+        {value}
+      </div>
+    </div>
+  );
+}
+
+function TimelineRow({ item }: { item: TimelineItem }) {
+  if (item.kind === "event") {
+    const triggerMap: Record<string, any> = {
+      comment: { Icon: MessageSquare, tone: "accent", label: "comentou" },
+      first_dm: { Icon: Hand, tone: "violet", label: "primeira DM" },
+      story_reply: { Icon: Camera, tone: "warn", label: "respondeu story" },
+      unknown: { Icon: Mail, tone: "dim", label: "evento" },
+    };
+    const t = triggerMap[item.trigger] ?? triggerMap.unknown;
+    const { Icon } = t;
+    return (
+      <li className="relative pl-10">
+        <div className={`absolute left-0 top-1 h-8 w-8 rounded-full border-2 border-bg flex items-center justify-center ${
+          t.tone === "accent" ? "bg-accent-dim text-accent"
+            : t.tone === "violet" ? "bg-violet-dim text-violet"
+            : t.tone === "warn" ? "bg-warn-dim text-warn"
+            : "bg-white/5 text-dim-2"
+        }`}>
+          <Icon className="h-4 w-4" />
+        </div>
+        <div className="space-y-1.5">
+          <div className="flex items-center gap-2 flex-wrap">
+            <StatusPill tone={t.tone} label={t.label} />
+            {item.matched_keyword && (
+              <span className="text-tiny font-mono text-accent bg-accent-dim rounded px-1.5 py-0.5">
+                {item.matched_keyword}
+              </span>
+            )}
+            {item.rule_name && (
+              <span className="text-tiny text-dim-2">· regra "{item.rule_name}"</span>
+            )}
+            <span className="text-tiny text-dim-2 font-mono ml-auto">
+              {fmtRelative(item.at)}
+            </span>
+          </div>
+          {item.comment_text && (
+            <div className="text-sm text-dim-2 bg-bg-1 rounded-lg border border-line px-3 py-2">
+              "{item.comment_text}"
+            </div>
+          )}
+          <div className="flex gap-2 text-tiny flex-wrap">
+            {item.dm_sent ? (
+              <span className="inline-flex items-center gap-1 text-good">
+                <Send className="h-3 w-3" /> DM enviada
+              </span>
+            ) : item.dm_error ? (
+              <span className="inline-flex items-center gap-1 text-danger" title={item.dm_error}>
+                <XCircle className="h-3 w-3" /> DM falhou
+              </span>
+            ) : null}
+            {item.public_reply_sent && (
+              <span className="inline-flex items-center gap-1 text-good">
+                <MessageSquare className="h-3 w-3" /> reply público enviado
+              </span>
+            )}
+          </div>
+        </div>
+      </li>
+    );
+  }
+
+  return (
+    <li className="relative pl-10">
+      <div className="absolute left-0 top-1 h-8 w-8 rounded-full border-2 border-bg flex items-center justify-center bg-accent text-accent-ink">
+        <MousePointerClick className="h-4 w-4" />
+      </div>
+      <div className="space-y-1.5">
+        <div className="flex items-center gap-2 flex-wrap">
+          <StatusPill tone="accent" label="clicou" pulse />
+          <span className="text-sm font-medium">
+            {item.button_title || "link"}
+          </span>
+          {item.rule_name && (
+            <span className="text-tiny text-dim-2">· regra "{item.rule_name}"</span>
+          )}
+          <span className="text-tiny text-dim-2 font-mono ml-auto">
+            {fmtRelative(item.at)}
+          </span>
+        </div>
+        {item.target_url && (
+          <a
+            href={item.target_url}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="text-tiny font-mono text-accent truncate block hover:underline"
+          >
+            → {item.target_url}
+          </a>
+        )}
+      </div>
+    </li>
+  );
+}

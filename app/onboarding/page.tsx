@@ -1,1 +1,76 @@
-{"data":"aW1wb3J0IExpbmsgZnJvbSAibmV4dC9saW5rIjsKaW1wb3J0IHsgcmVkaXJlY3QgfSBmcm9tICJuZXh0L25hdmlnYXRpb24iOwppbXBvcnQgeyByZXF1aXJlUHJvZmlsZSwgZ2V0VXNlckFjY291bnRzIH0gZnJvbSAiQC9saWIvYXV0aCI7CmltcG9ydCB7IExvZ28gfSBmcm9tICJAL2NvbXBvbmVudHMvbG9nbyI7CmltcG9ydCB7IENhcmQgfSBmcm9tICJAL2NvbXBvbmVudHMvdml6IjsKaW1wb3J0IHsgQ2hlY2tDaXJjbGUyLCBBdFNpZ24gfSBmcm9tICJsdWNpZGUtcmVhY3QiOwoKZXhwb3J0IGNvbnN0IGR5bmFtaWMgPSAiZm9yY2UtZHluYW1pYyI7CgpleHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiBPbmJvYXJkaW5nUGFnZSgpIHsKICBjb25zdCBwcm9maWxlID0gYXdhaXQgcmVxdWlyZVByb2ZpbGUoKTsKICBjb25zdCBhY2NvdW50cyA9IGF3YWl0IGdldFVzZXJBY2NvdW50cyhwcm9maWxlLmlkKTsKCiAgLy8gSWYgdXNlciBhbHJlYWR5IGhhcyBhY2NvdW50LCBza2lwIG9uYm9hcmRpbmcKICBpZiAoYWNjb3VudHMubGVuZ3RoID4gMCkgewogICAgcmVkaXJlY3QoIi9kYXNoYm9hcmQiKTsKICB9CgogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0ibWluLWgtc2NyZWVuIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHAtNiByZWxhdGl2ZSBvdmVyZmxvdy1oaWRkZW4iPgogICAgICA8ZGl2IGNsYXNzTmFtZT0iYWJzb2x1dGUgaW5zZXQtMCBwb2ludGVyLWV2ZW50cy1ub25lIj4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iYWJzb2x1dGUgdG9wLVstMjAwcHhdIGxlZnQtMS8yIC10cmFuc2xhdGUteC0xLzIgaC1bNjAwcHhdIHctWzkwMHB4XSByb3VuZGVkLWZ1bGwgYmctYWNjZW50LzEwIGJsdXItWzEyMHB4XSIgLz4KICAgICAgPC9kaXY+CgogICAgICA8ZGl2IGNsYXNzTmFtZT0icmVsYXRpdmUgei0xMCB3LWZ1bGwgbWF4LXctbGcgc3BhY2UteS02Ij4KICAgICAgICA8TGluayBocmVmPSIvIiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIGdhcC0yLjUiPgogICAgICAgICAgPExvZ28gc2l6ZT17NDR9IC8+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBmbGV4LWNvbCBsZWFkaW5nLXRpZ2h0Ij4KICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LWJhc2UgZm9udC1zZW1pYm9sZCI+RE1GbG93PC9zcGFuPgogICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtdGlueSB0ZXh0LWRpbS0yIGZvbnQtbW9ubyI+YmVtLXZpbmRvPC9zcGFuPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9MaW5rPgoKICAgICAgICA8Q2FyZCBjbGFzc05hbWU9InAtNiBzcGFjZS15LTUiPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktMSB0ZXh0LWNlbnRlciI+CiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJpbmxpbmUtZmxleCBoLTEyIHctMTIgcm91bmRlZC1mdWxsIGJnLWdvb2QtZGltIHRleHQtZ29vZCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgbWItMiI+CiAgICAgICAgICAgICAgPENoZWNrQ2lyY2xlMiBjbGFzc05hbWU9ImgtNiB3LTYiIC8+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8aDEgY2xhc3NOYW1lPSJ0ZXh0LTJ4bCBmb250LWJvbGQgdHJhY2tpbmctdGlnaHQiPgogICAgICAgICAgICAgIENvbnRhIGNyaWFkYSwge3Byb2ZpbGUuZnVsbF9uYW1lPy5zcGxpdCgiICIpWzBdID8/ICJiZW0tdmluZG8ifSEKICAgICAgICAgICAgPC9oMT4KICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LWRpbS0yIHRleHQtc20iPgogICAgICAgICAgICAgIMOabHRpbW8gcGFzc286IGNvbmVjdGFyIHNldSBJbnN0YWdyYW0gcHJvZmlzc2lvbmFsIHByYSBjb21lw6dhciBhIGF1dG9tYXRpemFyLgogICAgICAgICAgICA8L3A+CiAgICAgICAgICA8L2Rpdj4KCiAgICAgICAgICA8YQogICAgICAgICAgICBocmVmPSIvYXV0aC9pbnN0YWdyYW0vc3RhcnQiCiAgICAgICAgICAgIGNsYXNzTmFtZT0idy1mdWxsIGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBnYXAtMiByb3VuZGVkLWxnIGJnLWdyYWRpZW50LXRvLXIgZnJvbS1waW5rLTUwMCB2aWEtb3JhbmdlLTUwMCB0by15ZWxsb3ctNTAwIHRleHQtd2hpdGUgZm9udC1zZW1pYm9sZCBweS0zIHRleHQtc20gaG92ZXI6b3BhY2l0eS05MCB0cmFuc2l0aW9uLW9wYWNpdHkiCiAgICAgICAgICA+CiAgICAgICAgICAgIDxBdFNpZ24gY2xhc3NOYW1lPSJoLTQgdy00IiAvPgogICAgICAgICAgICBDb25lY3RhciBJbnN0YWdyYW0KICAgICAgICAgIDwvYT4KCiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0icm91bmRlZC1sZyBiZy1iZy0xIGJvcmRlciBib3JkZXItbGluZSBwLTMgdGV4dC10aW55IHRleHQtZGltLTIgc3BhY2UteS0xIj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZvbnQtbWVkaXVtIHRleHQtZmcgbWItMSI+TyBxdWUgdmFpIGFjb250ZWNlcjo8L2Rpdj4KICAgICAgICAgICAgPGRpdj7igKIgUmVkaXJlY2lvbmEgcHJvIE1ldGEvSW5zdGFncmFtPC9kaXY+CiAgICAgICAgICAgIDxkaXY+4oCiIFZvY8OqIGF1dG9yaXphIERNRmxvdyBhIGFjZXNzYXIgc3VhIGNvbnRhIHByb2Zpc3Npb25hbDwvZGl2PgogICAgICAgICAgICA8ZGl2PuKAoiBWb2x0YSBhcXVpIGNvbSBhIGNvbnRhIGNvbmVjdGFkYTwvZGl2PgogICAgICAgICAgICA8ZGl2PuKAoiBQb2RlIGNvbWXDp2FyIGEgY3JpYXIgcmVncmFzIGltZWRpYXRhbWVudGU8L2Rpdj4KICAgICAgICAgIDwvZGl2PgoKICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJ0ZXh0LXRpbnkgdGV4dC1kaW0tMiB0ZXh0LWNlbnRlciI+CiAgICAgICAgICAgIEV4aWdlIGNvbnRhIDxzdHJvbmc+SW5zdGFncmFtIEJ1c2luZXNzIG91IENyZWF0b3I8L3N0cm9uZz4gKHNldHRpbmcgbm8gYXBwIElHKS4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvQ2FyZD4KCiAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtY2VudGVyIHRleHQtdGlueSB0ZXh0LWRpbS0yIj4KICAgICAgICAgIDxMaW5rIGhyZWY9Ii9hdXRoL2xvZ291dCIgY2xhc3NOYW1lPSJob3Zlcjp0ZXh0LWZnIj4KICAgICAgICAgICAgU2FpcgogICAgICAgICAgPC9MaW5rPgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICk7Cn0K"}
+import Link from "next/link";
+import { redirect } from "next/navigation";
+import { requireProfile, getUserAccounts } from "@/lib/auth";
+import { Logo } from "@/components/logo";
+import { Card } from "@/components/viz";
+import { CheckCircle2, AtSign } from "lucide-react";
+
+export const dynamic = "force-dynamic";
+
+export default async function OnboardingPage() {
+  const profile = await requireProfile();
+  const accounts = await getUserAccounts(profile.id);
+
+  // If user already has account, skip onboarding
+  if (accounts.length > 0) {
+    redirect("/dashboard");
+  }
+
+  return (
+    <div className="min-h-screen flex items-center justify-center p-6 relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full bg-accent/10 blur-[120px]" />
+      </div>
+
+      <div className="relative z-10 w-full max-w-lg space-y-6">
+        <Link href="/" className="flex items-center justify-center gap-2.5">
+          <Logo size={44} />
+          <div className="flex flex-col leading-tight">
+            <span className="text-base font-semibold">DMFlow</span>
+            <span className="text-tiny text-dim-2 font-mono">bem-vindo</span>
+          </div>
+        </Link>
+
+        <Card className="p-6 space-y-5">
+          <div className="space-y-1 text-center">
+            <div className="inline-flex h-12 w-12 rounded-full bg-good-dim text-good items-center justify-center mb-2">
+              <CheckCircle2 className="h-6 w-6" />
+            </div>
+            <h1 className="text-2xl font-bold tracking-tight">
+              Conta criada, {profile.full_name?.split(" ")[0] ?? "bem-vindo"}!
+            </h1>
+            <p className="text-dim-2 text-sm">
+              Último passo: conectar seu Instagram profissional pra começar a automatizar.
+            </p>
+          </div>
+
+          <a
+            href="/auth/instagram/start"
+            className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 text-white font-semibold py-3 text-sm hover:opacity-90 transition-opacity"
+          >
+            <AtSign className="h-4 w-4" />
+            Conectar Instagram
+          </a>
+
+          <div className="rounded-lg bg-bg-1 border border-line p-3 text-tiny text-dim-2 space-y-1">
+            <div className="font-medium text-fg mb-1">O que vai acontecer:</div>
+            <div>• Redireciona pro Meta/Instagram</div>
+            <div>• Você autoriza DMFlow a acessar sua conta profissional</div>
+            <div>• Volta aqui com a conta conectada</div>
+            <div>• Pode começar a criar regras imediatamente</div>
+          </div>
+
+          <div className="text-tiny text-dim-2 text-center">
+            Exige conta <strong>Instagram Business ou Creator</strong> (setting no app IG).
+          </div>
+        </Card>
+
+        <div className="text-center text-tiny text-dim-2">
+          <Link href="/auth/logout" className="hover:text-fg">
+            Sair
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}

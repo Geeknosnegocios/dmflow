@@ -1,1 +1,114 @@
-{"data":"ZXhwb3J0IGNvbnN0IG1ldGFkYXRhID0gewogIHRpdGxlOiAiUG9sw610aWNhIGRlIFByaXZhY2lkYWRlIOKAlCBETUZsb3ciLAp9OwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gUHJpdmFjeVBhZ2UoKSB7CiAgcmV0dXJuICgKICAgIDxtYWluIGNsYXNzTmFtZT0ibXgtYXV0byBtYXgtdy0zeGwgcHgtNiBweS0xMiB0ZXh0LWZnIj4KICAgICAgPGgxIGNsYXNzTmFtZT0idGV4dC0zeGwgZm9udC1zZW1pYm9sZCBtYi0yIj5Qb2zDrXRpY2EgZGUgUHJpdmFjaWRhZGU8L2gxPgogICAgICA8cCBjbGFzc05hbWU9InRleHQtZGltIHRleHQtc20gbWItOCI+w5psdGltYSBhdHVhbGl6YcOnw6NvOiAyMyBkZSBhYnJpbCBkZSAyMDI2PC9wPgoKICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJzcGFjZS15LTYgdGV4dC1bMTVweF0gbGVhZGluZy1yZWxheGVkIj4KICAgICAgICA8cD4KICAgICAgICAgIE8gRE1GbG93ICgibsOzcyIsICJub3NzbyIpIMOpIHVtYSBmZXJyYW1lbnRhIGRlIGF1dG9tYcOnw6NvIGRlIHJlc3Bvc3RhcyBhCiAgICAgICAgICBjb21lbnTDoXJpb3MgZSBtZW5zYWdlbnMgZG8gSW5zdGFncmFtLCBvcGVyYWRhIHBlbGEgR2VlayBBY2FkZW15LiBFc3RhCiAgICAgICAgICBwb2zDrXRpY2EgZGVzY3JldmUgY29tbyB0cmF0YW1vcyBkYWRvcyBhbyBvcGVyYXIgbyBzZXJ2acOnby4KICAgICAgICA8L3A+CgogICAgICAgIDxkaXY+CiAgICAgICAgICA8aDIgY2xhc3NOYW1lPSJ0ZXh0LXhsIGZvbnQtc2VtaWJvbGQgbWItMiI+MS4gRGFkb3MgY29sZXRhZG9zPC9oMj4KICAgICAgICAgIDxwPkFvIHByb2Nlc3NhciBhdXRvbWHDp8O1ZXMsIG8gRE1GbG93IHBvZGUgYWNlc3NhciBlIGFybWF6ZW5hcjo8L3A+CiAgICAgICAgICA8dWwgY2xhc3NOYW1lPSJsaXN0LWRpc2MgcGwtNiBtdC0yIHNwYWNlLXktMSI+CiAgICAgICAgICAgIDxsaT5JRCBkYSBjb250YSBJbnN0YWdyYW0gcHJvZmlzc2lvbmFsIGNvbmVjdGFkYSBhbyBzZXJ2acOnbzwvbGk+CiAgICAgICAgICAgIDxsaT5JRCBlIGNvbnRlw7pkbyBkZSBjb21lbnTDoXJpb3MgcMO6YmxpY29zIGVtIHBvc3RzIGRhIGNvbnRhIGNvbmVjdGFkYTwvbGk+CiAgICAgICAgICAgIDxsaT5JRCBkZSB1c3XDoXJpb3MgcXVlIGNvbWVudGFyYW0gb3UgZW52aWFyYW0gRE0gcGFyYSBhIGNvbnRhIGNvbmVjdGFkYTwvbGk+CiAgICAgICAgICAgIDxsaT5Ub2tlbnMgZGUgYWNlc3NvIGRhIEluc3RhZ3JhbSBHcmFwaCBBUEkgKGNyaXB0b2dyYWZhZG9zIGVtIHRyw6Juc2l0byBlIGVtIHJlcG91c28pPC9saT4KICAgICAgICAgICAgPGxpPkxvZ3MgdMOpY25pY29zIGRvcyB3ZWJob29rcyByZWNlYmlkb3MgKHBhcmEgYXVkaXRvcmlhIGUgZGVidWcpPC9saT4KICAgICAgICAgIDwvdWw+CiAgICAgICAgPC9kaXY+CgogICAgICAgIDxkaXY+CiAgICAgICAgICA8aDIgY2xhc3NOYW1lPSJ0ZXh0LXhsIGZvbnQtc2VtaWJvbGQgbWItMiI+Mi4gVXNvIGRvcyBkYWRvczwvaDI+CiAgICAgICAgICA8cD5PcyBkYWRvcyBzw6NvIHVzYWRvcyBleGNsdXNpdmFtZW50ZSBwYXJhOjwvcD4KICAgICAgICAgIDx1bCBjbGFzc05hbWU9Imxpc3QtZGlzYyBwbC02IG10LTIgc3BhY2UteS0xIj4KICAgICAgICAgICAgPGxpPkV4ZWN1dGFyIGFzIGF1dG9tYcOnw7VlcyBjb25maWd1cmFkYXMgcGVsbyBkb25vIGRhIGNvbnRhPC9saT4KICAgICAgICAgICAgPGxpPkVudmlhciByZXNwb3N0YXMgcMO6YmxpY2FzIGUgbWVuc2FnZW5zIHByaXZhZGFzIGNvbmZvcm1lIHJlZ3JhcyBkZWZpbmlkYXM8L2xpPgogICAgICAgICAgICA8bGk+RXhpYmlyIGhpc3TDs3JpY28gZGUgZXZlbnRvcyBubyBwYWluZWwgYWRtaW5pc3RyYXRpdm88L2xpPgogICAgICAgICAgICA8bGk+RGVwdXJhciBmYWxoYXMgdMOpY25pY2FzPC9saT4KICAgICAgICAgIDwvdWw+CiAgICAgICAgICA8cCBjbGFzc05hbWU9Im10LTIiPk5lbmh1bSBkYWRvIMOpIHZlbmRpZG8sIGNvbXBhcnRpbGhhZG8gY29tIHRlcmNlaXJvcyBvdSB1c2FkbyBwYXJhIHB1YmxpY2lkYWRlIGRlIHRlcmNlaXJvcy48L3A+CiAgICAgICAgPC9kaXY+CgogICAgICAgIDxkaXY+CiAgICAgICAgICA8aDIgY2xhc3NOYW1lPSJ0ZXh0LXhsIGZvbnQtc2VtaWJvbGQgbWItMiI+My4gUmV0ZW7Dp8OjbzwvaDI+CiAgICAgICAgICA8cD4KICAgICAgICAgICAgTG9ncyBkZSB3ZWJob29rIGUgZXZlbnRvcyBzw6NvIHJldGlkb3MgcG9yIDkwIGRpYXMgZSBkZXBvaXMgYXBhZ2Fkb3MuIFRva2VucwogICAgICAgICAgICBkZSBhY2Vzc28gc8OjbyBtYW50aWRvcyBlbnF1YW50byBhIGNvbmV4w6NvIGNvbSBvIEluc3RhZ3JhbSBlc3RpdmVyIGF0aXZhLgogICAgICAgICAgPC9wPgogICAgICAgIDwvZGl2PgoKICAgICAgICA8ZGl2PgogICAgICAgICAgPGgyIGNsYXNzTmFtZT0idGV4dC14bCBmb250LXNlbWlib2xkIG1iLTIiPjQuIENvbXBhcnRpbGhhbWVudG88L2gyPgogICAgICAgICAgPHA+CiAgICAgICAgICAgIERhZG9zIHPDsyBzw6NvIGNvbXBhcnRpbGhhZG9zIGNvbSBhIE1ldGEgUGxhdGZvcm1zIChJbnN0YWdyYW0vRmFjZWJvb2spCiAgICAgICAgICAgIGF0cmF2w6lzIGRhcyBBUElzIG9maWNpYWlzIHBhcmEgZXhlY3V0YXIgYXMgYXV0b21hw6fDtWVzLiBQcm9jZXNzYWRvcmVzCiAgICAgICAgICAgIHN1YmNvbnRyYXRhZG9zOiBWZXJjZWwgKGhvc3BlZGFnZW0pIGUgU3VwYWJhc2UgKGJhbmNvIGRlIGRhZG9zKS4KICAgICAgICAgIDwvcD4KICAgICAgICA8L2Rpdj4KCiAgICAgICAgPGRpdj4KICAgICAgICAgIDxoMiBjbGFzc05hbWU9InRleHQteGwgZm9udC1zZW1pYm9sZCBtYi0yIj41LiBEaXJlaXRvcyBkbyB1c3XDoXJpbzwvaDI+CiAgICAgICAgICA8cD4KICAgICAgICAgICAgVXN1w6FyaW9zIGN1am9zIGRhZG9zIGZvcmFtIHByb2Nlc3NhZG9zIHBlbG8gRE1GbG93IHBvZGVtIHNvbGljaXRhcgogICAgICAgICAgICBhY2Vzc28sIGNvcnJlw6fDo28gb3UgZXhjbHVzw6NvIHBvciBlbWFpbDp7IiAifQogICAgICAgICAgICA8YSBocmVmPSJtYWlsdG86Y29udGF0b0BnZWVrYWNhZGVteS5zaXRlIiBjbGFzc05hbWU9InRleHQtYWNjZW50IHVuZGVybGluZSI+CiAgICAgICAgICAgICAgY29udGF0b0BnZWVrYWNhZGVteS5zaXRlCiAgICAgICAgICAgIDwvYT4KICAgICAgICAgICAgLiBTb2xpY2l0YcOnw7VlcyBzw6NvIGF0ZW5kaWRhcyBlbSBhdMOpIDE1IGRpYXMuCiAgICAgICAgICA8L3A+CiAgICAgICAgPC9kaXY+CgogICAgICAgIDxkaXY+CiAgICAgICAgICA8aDIgY2xhc3NOYW1lPSJ0ZXh0LXhsIGZvbnQtc2VtaWJvbGQgbWItMiI+Ni4gSW5zdGFncmFtIFBsYXRmb3JtIFBvbGljeTwvaDI+CiAgICAgICAgICA8cD4KICAgICAgICAgICAgTyBETUZsb3cgb3BlcmEgZW0gY29uZm9ybWlkYWRlIGNvbSBheyIgIn0KICAgICAgICAgICAgPGEKICAgICAgICAgICAgICBocmVmPSJodHRwczovL2RldmVsb3BlcnMuZmFjZWJvb2suY29tL3Rlcm1zLyIKICAgICAgICAgICAgICBjbGFzc05hbWU9InRleHQtYWNjZW50IHVuZGVybGluZSIKICAgICAgICAgICAgICB0YXJnZXQ9Il9ibGFuayIKICAgICAgICAgICAgICByZWw9Im5vcmVmZXJyZXIgbm9vcGVuZXIiCiAgICAgICAgICAgID4KICAgICAgICAgICAgICBQbGF0YWZvcm1hIE1ldGEKICAgICAgICAgICAgPC9hPnsiICJ9CiAgICAgICAgICAgIGUgc2VndWUgdG9kYXMgYXMgcmVzdHJpw6fDtWVzIGRlIGVudmlvIGRlIG1lbnNhZ2VucyBkbyBJbnN0YWdyYW0sIGluY2x1aW5kbwogICAgICAgICAgICBhIGphbmVsYSBkZSA3IGRpYXMgcGFyYSByZXNwb3N0YXMgcHJpdmFkYXMgYSBjb21lbnTDoXJpb3MgZSBsaW1pdGHDp8O1ZXMgZGUKICAgICAgICAgICAgbWVuc2FnZW5zIHByb2F0aXZhcy4KICAgICAgICAgIDwvcD4KICAgICAgICA8L2Rpdj4KCiAgICAgICAgPGRpdj4KICAgICAgICAgIDxoMiBjbGFzc05hbWU9InRleHQteGwgZm9udC1zZW1pYm9sZCBtYi0yIj43LiBFeGNsdXPDo28gZGUgZGFkb3M8L2gyPgogICAgICAgICAgPHA+CiAgICAgICAgICAgIFBhcmEgcmVtb3ZlciBzZXVzIGRhZG9zIGltZWRpYXRhbWVudGUsIG8gZG9ubyBkYSBjb250YSBJbnN0YWdyYW0gY29uZWN0YWRhCiAgICAgICAgICAgIHBvZGU6CiAgICAgICAgICA8L3A+CiAgICAgICAgICA8dWwgY2xhc3NOYW1lPSJsaXN0LWRpc2MgcGwtNiBtdC0yIHNwYWNlLXktMSI+CiAgICAgICAgICAgIDxsaT5SZXZvZ2FyIHBlcm1pc3PDtWVzIGRvIGFwcCBlbSBDb25maWd1cmHDp8O1ZXMgZG8gSW5zdGFncmFtIOKGkiBTZWd1cmFuw6dhIOKGkiBBcHBzIGUgc2l0ZXM8L2xpPgogICAgICAgICAgICA8bGk+RW52aWFyIHBlZGlkbyBwb3IgZW1haWwgcGFyYSBjb250YXRvQGdlZWthY2FkZW15LnNpdGU8L2xpPgogICAgICAgICAgPC91bD4KICAgICAgICA8L2Rpdj4KCiAgICAgICAgPGRpdj4KICAgICAgICAgIDxoMiBjbGFzc05hbWU9InRleHQteGwgZm9udC1zZW1pYm9sZCBtYi0yIj44LiBDb250YXRvPC9oMj4KICAgICAgICAgIDxwPgogICAgICAgICAgICBDb250cm9sYWRvcjogR2VlayBBY2FkZW15PGJyIC8+CiAgICAgICAgICAgIEVtYWlsOnsiICJ9CiAgICAgICAgICAgIDxhIGhyZWY9Im1haWx0bzpjb250YXRvQGdlZWthY2FkZW15LnNpdGUiIGNsYXNzTmFtZT0idGV4dC1hY2NlbnQgdW5kZXJsaW5lIj4KICAgICAgICAgICAgICBjb250YXRvQGdlZWthY2FkZW15LnNpdGUKICAgICAgICAgICAgPC9hPgogICAgICAgICAgPC9wPgogICAgICAgIDwvZGl2PgogICAgICA8L3NlY3Rpb24+CiAgICA8L21haW4+CiAgKTsKfQo="}
+export const metadata = {
+  title: "Política de Privacidade — DMFlow",
+};
+
+export default function PrivacyPage() {
+  return (
+    <main className="mx-auto max-w-3xl px-6 py-12 text-fg">
+      <h1 className="text-3xl font-semibold mb-2">Política de Privacidade</h1>
+      <p className="text-dim text-sm mb-8">Última atualização: 23 de abril de 2026</p>
+
+      <section className="space-y-6 text-[15px] leading-relaxed">
+        <p>
+          O DMFlow ("nós", "nosso") é uma ferramenta de automação de respostas a
+          comentários e mensagens do Instagram, operada pela Geek Academy. Esta
+          política descreve como tratamos dados ao operar o serviço.
+        </p>
+
+        <div>
+          <h2 className="text-xl font-semibold mb-2">1. Dados coletados</h2>
+          <p>Ao processar automações, o DMFlow pode acessar e armazenar:</p>
+          <ul className="list-disc pl-6 mt-2 space-y-1">
+            <li>ID da conta Instagram profissional conectada ao serviço</li>
+            <li>ID e conteúdo de comentários públicos em posts da conta conectada</li>
+            <li>ID de usuários que comentaram ou enviaram DM para a conta conectada</li>
+            <li>Tokens de acesso da Instagram Graph API (criptografados em trânsito e em repouso)</li>
+            <li>Logs técnicos dos webhooks recebidos (para auditoria e debug)</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-semibold mb-2">2. Uso dos dados</h2>
+          <p>Os dados são usados exclusivamente para:</p>
+          <ul className="list-disc pl-6 mt-2 space-y-1">
+            <li>Executar as automações configuradas pelo dono da conta</li>
+            <li>Enviar respostas públicas e mensagens privadas conforme regras definidas</li>
+            <li>Exibir histórico de eventos no painel administrativo</li>
+            <li>Depurar falhas técnicas</li>
+          </ul>
+          <p className="mt-2">Nenhum dado é vendido, compartilhado com terceiros ou usado para publicidade de terceiros.</p>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-semibold mb-2">3. Retenção</h2>
+          <p>
+            Logs de webhook e eventos são retidos por 90 dias e depois apagados. Tokens
+            de acesso são mantidos enquanto a conexão com o Instagram estiver ativa.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-semibold mb-2">4. Compartilhamento</h2>
+          <p>
+            Dados só são compartilhados com a Meta Platforms (Instagram/Facebook)
+            através das APIs oficiais para executar as automações. Processadores
+            subcontratados: Vercel (hospedagem) e Supabase (banco de dados).
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-semibold mb-2">5. Direitos do usuário</h2>
+          <p>
+            Usuários cujos dados foram processados pelo DMFlow podem solicitar
+            acesso, correção ou exclusão por email:{" "}
+            <a href="mailto:contato@geekacademy.site" className="text-accent underline">
+              contato@geekacademy.site
+            </a>
+            . Solicitações são atendidas em até 15 dias.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-semibold mb-2">6. Instagram Platform Policy</h2>
+          <p>
+            O DMFlow opera em conformidade com a{" "}
+            <a
+              href="https://developers.facebook.com/terms/"
+              className="text-accent underline"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Plataforma Meta
+            </a>{" "}
+            e segue todas as restrições de envio de mensagens do Instagram, incluindo
+            a janela de 7 dias para respostas privadas a comentários e limitações de
+            mensagens proativas.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-semibold mb-2">7. Exclusão de dados</h2>
+          <p>
+            Para remover seus dados imediatamente, o dono da conta Instagram conectada
+            pode:
+          </p>
+          <ul className="list-disc pl-6 mt-2 space-y-1">
+            <li>Revogar permissões do app em Configurações do Instagram → Segurança → Apps e sites</li>
+            <li>Enviar pedido por email para contato@geekacademy.site</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-semibold mb-2">8. Contato</h2>
+          <p>
+            Controlador: Geek Academy<br />
+            Email:{" "}
+            <a href="mailto:contato@geekacademy.site" className="text-accent underline">
+              contato@geekacademy.site
+            </a>
+          </p>
+        </div>
+      </section>
+    </main>
+  );
+}

@@ -1,1 +1,217 @@
-{"data":"InVzZSBjbGllbnQiOwoKaW1wb3J0IFJlYWN0LCB7IHVzZUVmZmVjdCwgdXNlTWVtbywgdXNlUmVmLCB1c2VTdGF0ZSB9IGZyb20gInJlYWN0IjsKCnR5cGUgU2VyaWVzID0geyBsYWJlbDogc3RyaW5nOyBkYXRhOiBudW1iZXJbXTsgY29sb3I6IHN0cmluZyB9OwoKZXhwb3J0IGZ1bmN0aW9uIExpbmVDaGFydCh7CiAgc2VyaWVzLAogIGxhYmVscywKICBoZWlnaHQgPSAxODAsCiAgc2hvd0xlZ2VuZCA9IHRydWUsCn06IHsKICBzZXJpZXM6IFNlcmllc1tdOwogIGxhYmVsczogc3RyaW5nW107CiAgaGVpZ2h0PzogbnVtYmVyOwogIHNob3dMZWdlbmQ/OiBib29sZWFuOwp9KSB7CiAgY29uc3QgW2hvdmVySWR4LCBzZXRIb3ZlcklkeF0gPSB1c2VTdGF0ZTxudW1iZXIgfCBudWxsPihudWxsKTsKICBjb25zdCBjb250YWluZXJSZWYgPSB1c2VSZWY8SFRNTERpdkVsZW1lbnQ+KG51bGwpOwogIGNvbnN0IFt3aWR0aCwgc2V0V2lkdGhdID0gdXNlU3RhdGUoNjAwKTsKICBjb25zdCBwYWRYID0gMzI7CiAgY29uc3QgcGFkWSA9IDIwOwoKICB1c2VFZmZlY3QoKCkgPT4gewogICAgY29uc3QgZWwgPSBjb250YWluZXJSZWYuY3VycmVudDsKICAgIGlmICghZWwpIHJldHVybjsKICAgIGNvbnN0IHJvID0gbmV3IFJlc2l6ZU9ic2VydmVyKChlbnRyaWVzKSA9PiB7CiAgICAgIGNvbnN0IHcgPSBlbnRyaWVzWzBdPy5jb250ZW50UmVjdC53aWR0aDsKICAgICAgaWYgKHcgJiYgdyA+IDApIHNldFdpZHRoKE1hdGgubWF4KDMyMCwgTWF0aC5yb3VuZCh3KSkpOwogICAgfSk7CiAgICByby5vYnNlcnZlKGVsKTsKICAgIHJldHVybiAoKSA9PiByby5kaXNjb25uZWN0KCk7CiAgfSwgW10pOwoKICBjb25zdCBtYXhWYWwgPSBNYXRoLm1heCgKICAgIDEsCiAgICAuLi5zZXJpZXMuZmxhdE1hcCgocykgPT4gcy5kYXRhKQogICk7CiAgY29uc3QgcG9pbnRzRm9yID0gKGRhdGE6IG51bWJlcltdKSA9PiB7CiAgICBpZiAoZGF0YS5sZW5ndGggPCAyKSByZXR1cm4gIiI7CiAgICBjb25zdCBzdGVwID0gKHdpZHRoIC0gcGFkWCAqIDIpIC8gKGRhdGEubGVuZ3RoIC0gMSk7CiAgICByZXR1cm4gZGF0YQogICAgICAubWFwKCh2LCBpKSA9PiB7CiAgICAgICAgY29uc3QgeCA9IHBhZFggKyBpICogc3RlcDsKICAgICAgICBjb25zdCB5ID0gcGFkWSArICgxIC0gdiAvIG1heFZhbCkgKiAoaGVpZ2h0IC0gcGFkWSAqIDIpOwogICAgICAgIHJldHVybiBgJHt4LnRvRml4ZWQoMSl9LCR7eS50b0ZpeGVkKDEpfWA7CiAgICAgIH0pCiAgICAgIC5qb2luKCIgIik7CiAgfTsKCiAgY29uc3QgYXJlYVBhdGggPSAoZGF0YTogbnVtYmVyW10pID0+IHsKICAgIGlmIChkYXRhLmxlbmd0aCA8IDIpIHJldHVybiAiIjsKICAgIGNvbnN0IHN0ZXAgPSAod2lkdGggLSBwYWRYICogMikgLyAoZGF0YS5sZW5ndGggLSAxKTsKICAgIGNvbnN0IHB0cyA9IGRhdGEubWFwKCh2LCBpKSA9PiB7CiAgICAgIGNvbnN0IHggPSBwYWRYICsgaSAqIHN0ZXA7CiAgICAgIGNvbnN0IHkgPSBwYWRZICsgKDEgLSB2IC8gbWF4VmFsKSAqIChoZWlnaHQgLSBwYWRZICogMik7CiAgICAgIHJldHVybiBbeCwgeV0gYXMgY29uc3Q7CiAgICB9KTsKICAgIGNvbnN0IHN0YXJ0ID0gcHRzWzBdOwogICAgY29uc3QgZW5kID0gcHRzW3B0cy5sZW5ndGggLSAxXTsKICAgIHJldHVybiBbCiAgICAgIGBNICR7c3RhcnRbMF19ICR7aGVpZ2h0IC0gcGFkWX1gLAogICAgICAuLi5wdHMubWFwKChbeCwgeV0pID0+IGBMICR7eC50b0ZpeGVkKDEpfSAke3kudG9GaXhlZCgxKX1gKSwKICAgICAgYEwgJHtlbmRbMF19ICR7aGVpZ2h0IC0gcGFkWX1gLAogICAgICAiWiIsCiAgICBdLmpvaW4oIiAiKTsKICB9OwoKICBjb25zdCB5R3JpZCA9IHVzZU1lbW8oKCkgPT4gewogICAgY29uc3QgbGluZXMgPSBbXTsKICAgIGZvciAobGV0IGkgPSAwOyBpIDw9IDQ7IGkrKykgewogICAgICBjb25zdCB5ID0gcGFkWSArIChpIC8gNCkgKiAoaGVpZ2h0IC0gcGFkWSAqIDIpOwogICAgICBjb25zdCB2ID0gTWF0aC5yb3VuZChtYXhWYWwgKiAoMSAtIGkgLyA0KSk7CiAgICAgIGxpbmVzLnB1c2goeyB5LCB2IH0pOwogICAgfQogICAgcmV0dXJuIGxpbmVzOwogIH0sIFttYXhWYWwsIGhlaWdodF0pOwoKICBjb25zdCBob3ZlclggPSAoaWR4OiBudW1iZXIpID0+IHsKICAgIGlmICghbGFiZWxzLmxlbmd0aCkgcmV0dXJuIDA7CiAgICBjb25zdCBzdGVwID0gKHdpZHRoIC0gcGFkWCAqIDIpIC8gTWF0aC5tYXgoMSwgbGFiZWxzLmxlbmd0aCAtIDEpOwogICAgcmV0dXJuIHBhZFggKyBpZHggKiBzdGVwOwogIH07CgogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS0zIj4KICAgICAge3Nob3dMZWdlbmQgJiYgKAogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGdhcC00IGZsZXgtd3JhcCI+CiAgICAgICAgICB7c2VyaWVzLm1hcCgocykgPT4gKAogICAgICAgICAgICA8ZGl2IGtleT17cy5sYWJlbH0gY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMS41IHRleHQtdGlueSB0ZXh0LWRpbS0yIj4KICAgICAgICAgICAgICA8c3BhbgogICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJpbmxpbmUtYmxvY2sgaC0yIHctMiByb3VuZGVkLWZ1bGwiCiAgICAgICAgICAgICAgICBzdHlsZT17eyBiYWNrZ3JvdW5kOiBzLmNvbG9yIH19CiAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgICB7cy5sYWJlbH0KICAgICAgICAgICAgICB7aG92ZXJJZHggIT09IG51bGwgJiYgcy5kYXRhW2hvdmVySWR4XSAhPT0gdW5kZWZpbmVkICYmICgKICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0ibW9uby1udW0gdGV4dC1mZyI+CiAgICAgICAgICAgICAgICAgIMK3IHtzLmRhdGFbaG92ZXJJZHhdfQogICAgICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICAgICl9CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgKSl9CiAgICAgICAgICB7aG92ZXJJZHggIT09IG51bGwgJiYgbGFiZWxzW2hvdmVySWR4XSAmJiAoCiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC10aW55IGZvbnQtbW9ubyB0ZXh0LWRpbS0yIG1sLWF1dG8iPgogICAgICAgICAgICAgIHtsYWJlbHNbaG92ZXJJZHhdfQogICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICApfQogICAgICAgIDwvZGl2PgogICAgICApfQogICAgICA8ZGl2IGNsYXNzTmFtZT0icmVsYXRpdmUiIHJlZj17Y29udGFpbmVyUmVmfT4KICAgICAgICA8c3ZnCiAgICAgICAgICB2aWV3Qm94PXtgMCAwICR7d2lkdGh9ICR7aGVpZ2h0fWB9CiAgICAgICAgICB3aWR0aD0iMTAwJSIKICAgICAgICAgIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIG1lZXQiCiAgICAgICAgICBzdHlsZT17eyBoZWlnaHQsIGRpc3BsYXk6ICJibG9jayIgfX0KICAgICAgICAgIHJvbGU9ImltZyIKICAgICAgICAgIGFyaWEtbGFiZWw9e2BHcsOhZmljbyBkZSBsaW5oYTogJHtzZXJpZXMubWFwKChzKSA9PiBzLmxhYmVsKS5qb2luKCIsICIpfSBhbyBsb25nbyBkZSAke2xhYmVscy5sZW5ndGh9IHBlcsOtb2Rvc2B9CiAgICAgICAgICBvbk1vdXNlTGVhdmU9eygpID0+IHNldEhvdmVySWR4KG51bGwpfQogICAgICAgID4KICAgICAgICAgIDx0aXRsZT5UZW5kw6puY2lhIHtsYWJlbHMubGVuZ3RofSBkaWFzPC90aXRsZT4KICAgICAgICAgIHsvKiBncmlkICovfQogICAgICAgICAge3lHcmlkLm1hcCgoZywgaSkgPT4gKAogICAgICAgICAgICA8ZyBrZXk9e2l9PgogICAgICAgICAgICAgIDxsaW5lCiAgICAgICAgICAgICAgICB4MT17cGFkWH0KICAgICAgICAgICAgICAgIHkxPXtnLnl9CiAgICAgICAgICAgICAgICB4Mj17d2lkdGggLSBwYWRYfQogICAgICAgICAgICAgICAgeTI9e2cueX0KICAgICAgICAgICAgICAgIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjA0KSIKICAgICAgICAgICAgICAgIHN0cm9rZVdpZHRoPSIxIgogICAgICAgICAgICAgIC8+CiAgICAgICAgICAgICAgPHRleHQKICAgICAgICAgICAgICAgIHg9e3BhZFggLSA0fQogICAgICAgICAgICAgICAgeT17Zy55ICsgM30KICAgICAgICAgICAgICAgIHRleHRBbmNob3I9ImVuZCIKICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0iZmlsbC1kaW0tMiIKICAgICAgICAgICAgICAgIHN0eWxlPXt7IGZvbnRTaXplOiA5LCBmb250RmFtaWx5OiAiSmV0QnJhaW5zIE1vbm8sIG1vbm9zcGFjZSIgfX0KICAgICAgICAgICAgICA+CiAgICAgICAgICAgICAgICB7Zy52fQogICAgICAgICAgICAgIDwvdGV4dD4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgKSl9CgogICAgICAgICAgey8qIHNlcmllcyBhcmVhcyAqL30KICAgICAgICAgIHtzZXJpZXMubWFwKChzLCBpKSA9PiAoCiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAga2V5PXtgYXJlYS0ke2l9YH0KICAgICAgICAgICAgICBkPXthcmVhUGF0aChzLmRhdGEpfQogICAgICAgICAgICAgIGZpbGw9e3MuY29sb3J9CiAgICAgICAgICAgICAgb3BhY2l0eT17MC4wOH0KICAgICAgICAgICAgLz4KICAgICAgICAgICkpfQoKICAgICAgICAgIHsvKiBzZXJpZXMgbGluZXMgKi99CiAgICAgICAgICB7c2VyaWVzLm1hcCgocywgaSkgPT4gKAogICAgICAgICAgICA8cG9seWxpbmUKICAgICAgICAgICAgICBrZXk9e2BsaW5lLSR7aX1gfQogICAgICAgICAgICAgIHBvaW50cz17cG9pbnRzRm9yKHMuZGF0YSl9CiAgICAgICAgICAgICAgZmlsbD0ibm9uZSIKICAgICAgICAgICAgICBzdHJva2U9e3MuY29sb3J9CiAgICAgICAgICAgICAgc3Ryb2tlV2lkdGg9IjIiCiAgICAgICAgICAgICAgc3Ryb2tlTGluZWpvaW49InJvdW5kIgogICAgICAgICAgICAgIHN0cm9rZUxpbmVjYXA9InJvdW5kIgogICAgICAgICAgICAvPgogICAgICAgICAgKSl9CgogICAgICAgICAgey8qIGhvdmVyIGhpdCB6b25lcyAqL30KICAgICAgICAgIHtsYWJlbHMubWFwKChfLCBpKSA9PiB7CiAgICAgICAgICAgIGNvbnN0IHN0ZXAgPSAod2lkdGggLSBwYWRYICogMikgLyBNYXRoLm1heCgxLCBsYWJlbHMubGVuZ3RoIC0gMSk7CiAgICAgICAgICAgIGNvbnN0IHggPSBwYWRYICsgaSAqIHN0ZXA7CiAgICAgICAgICAgIHJldHVybiAoCiAgICAgICAgICAgICAgPHJlY3QKICAgICAgICAgICAgICAgIGtleT17aX0KICAgICAgICAgICAgICAgIHg9e3ggLSBzdGVwIC8gMn0KICAgICAgICAgICAgICAgIHk9ezB9CiAgICAgICAgICAgICAgICB3aWR0aD17c3RlcH0KICAgICAgICAgICAgICAgIGhlaWdodD17aGVpZ2h0fQogICAgICAgICAgICAgICAgZmlsbD0idHJhbnNwYXJlbnQiCiAgICAgICAgICAgICAgICBvbk1vdXNlRW50ZXI9eygpID0+IHNldEhvdmVySWR4KGkpfQogICAgICAgICAgICAgIC8+CiAgICAgICAgICAgICk7CiAgICAgICAgICB9KX0KCiAgICAgICAgICB7LyogaG92ZXIgbGluZSAqL30KICAgICAgICAgIHtob3ZlcklkeCAhPT0gbnVsbCAmJiAoCiAgICAgICAgICAgIDw+CiAgICAgICAgICAgICAgPGxpbmUKICAgICAgICAgICAgICAgIHgxPXtob3ZlclgoaG92ZXJJZHgpfQogICAgICAgICAgICAgICAgeTE9e3BhZFl9CiAgICAgICAgICAgICAgICB4Mj17aG92ZXJYKGhvdmVySWR4KX0KICAgICAgICAgICAgICAgIHkyPXtoZWlnaHQgLSBwYWRZfQogICAgICAgICAgICAgICAgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMTUpIgogICAgICAgICAgICAgICAgc3Ryb2tlRGFzaGFycmF5PSIzLDMiCiAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgICB7c2VyaWVzLm1hcCgocywgaSkgPT4KICAgICAgICAgICAgICAgIHMuZGF0YVtob3ZlcklkeF0gIT09IHVuZGVmaW5lZCA/ICgKICAgICAgICAgICAgICAgICAgPGNpcmNsZQogICAgICAgICAgICAgICAgICAgIGtleT17YGhkb3QtJHtpfWB9CiAgICAgICAgICAgICAgICAgICAgY3g9e2hvdmVyWChob3ZlcklkeCl9CiAgICAgICAgICAgICAgICAgICAgY3k9ewogICAgICAgICAgICAgICAgICAgICAgcGFkWSArCiAgICAgICAgICAgICAgICAgICAgICAoMSAtIHMuZGF0YVtob3ZlcklkeF0gLyBtYXhWYWwpICogKGhlaWdodCAtIHBhZFkgKiAyKQogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICByPSI0IgogICAgICAgICAgICAgICAgICAgIGZpbGw9e3MuY29sb3J9CiAgICAgICAgICAgICAgICAgICAgc3Ryb2tlPSIjMGEwYjEwIgogICAgICAgICAgICAgICAgICAgIHN0cm9rZVdpZHRoPSIyIgogICAgICAgICAgICAgICAgICAvPgogICAgICAgICAgICAgICAgKSA6IG51bGwKICAgICAgICAgICAgICApfQogICAgICAgICAgICA8Lz4KICAgICAgICAgICl9CiAgICAgICAgPC9zdmc+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgKTsKfQo="}
+"use client";
+
+import React, { useEffect, useMemo, useRef, useState } from "react";
+
+type Series = { label: string; data: number[]; color: string };
+
+export function LineChart({
+  series,
+  labels,
+  height = 180,
+  showLegend = true,
+}: {
+  series: Series[];
+  labels: string[];
+  height?: number;
+  showLegend?: boolean;
+}) {
+  const [hoverIdx, setHoverIdx] = useState<number | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [width, setWidth] = useState(600);
+  const padX = 32;
+  const padY = 20;
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver((entries) => {
+      const w = entries[0]?.contentRect.width;
+      if (w && w > 0) setWidth(Math.max(320, Math.round(w)));
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  const maxVal = Math.max(
+    1,
+    ...series.flatMap((s) => s.data)
+  );
+  const pointsFor = (data: number[]) => {
+    if (data.length < 2) return "";
+    const step = (width - padX * 2) / (data.length - 1);
+    return data
+      .map((v, i) => {
+        const x = padX + i * step;
+        const y = padY + (1 - v / maxVal) * (height - padY * 2);
+        return `${x.toFixed(1)},${y.toFixed(1)}`;
+      })
+      .join(" ");
+  };
+
+  const areaPath = (data: number[]) => {
+    if (data.length < 2) return "";
+    const step = (width - padX * 2) / (data.length - 1);
+    const pts = data.map((v, i) => {
+      const x = padX + i * step;
+      const y = padY + (1 - v / maxVal) * (height - padY * 2);
+      return [x, y] as const;
+    });
+    const start = pts[0];
+    const end = pts[pts.length - 1];
+    return [
+      `M ${start[0]} ${height - padY}`,
+      ...pts.map(([x, y]) => `L ${x.toFixed(1)} ${y.toFixed(1)}`),
+      `L ${end[0]} ${height - padY}`,
+      "Z",
+    ].join(" ");
+  };
+
+  const yGrid = useMemo(() => {
+    const lines = [];
+    for (let i = 0; i <= 4; i++) {
+      const y = padY + (i / 4) * (height - padY * 2);
+      const v = Math.round(maxVal * (1 - i / 4));
+      lines.push({ y, v });
+    }
+    return lines;
+  }, [maxVal, height]);
+
+  const hoverX = (idx: number) => {
+    if (!labels.length) return 0;
+    const step = (width - padX * 2) / Math.max(1, labels.length - 1);
+    return padX + idx * step;
+  };
+
+  return (
+    <div className="space-y-3">
+      {showLegend && (
+        <div className="flex gap-4 flex-wrap">
+          {series.map((s) => (
+            <div key={s.label} className="flex items-center gap-1.5 text-tiny text-dim-2">
+              <span
+                className="inline-block h-2 w-2 rounded-full"
+                style={{ background: s.color }}
+              />
+              {s.label}
+              {hoverIdx !== null && s.data[hoverIdx] !== undefined && (
+                <span className="mono-num text-fg">
+                  · {s.data[hoverIdx]}
+                </span>
+              )}
+            </div>
+          ))}
+          {hoverIdx !== null && labels[hoverIdx] && (
+            <span className="text-tiny font-mono text-dim-2 ml-auto">
+              {labels[hoverIdx]}
+            </span>
+          )}
+        </div>
+      )}
+      <div className="relative" ref={containerRef}>
+        <svg
+          viewBox={`0 0 ${width} ${height}`}
+          width="100%"
+          preserveAspectRatio="xMidYMid meet"
+          style={{ height, display: "block" }}
+          role="img"
+          aria-label={`Gráfico de linha: ${series.map((s) => s.label).join(", ")} ao longo de ${labels.length} períodos`}
+          onMouseLeave={() => setHoverIdx(null)}
+        >
+          <title>Tendência {labels.length} dias</title>
+          {/* grid */}
+          {yGrid.map((g, i) => (
+            <g key={i}>
+              <line
+                x1={padX}
+                y1={g.y}
+                x2={width - padX}
+                y2={g.y}
+                stroke="rgba(255,255,255,0.04)"
+                strokeWidth="1"
+              />
+              <text
+                x={padX - 4}
+                y={g.y + 3}
+                textAnchor="end"
+                className="fill-dim-2"
+                style={{ fontSize: 9, fontFamily: "JetBrains Mono, monospace" }}
+              >
+                {g.v}
+              </text>
+            </g>
+          ))}
+
+          {/* series areas */}
+          {series.map((s, i) => (
+            <path
+              key={`area-${i}`}
+              d={areaPath(s.data)}
+              fill={s.color}
+              opacity={0.08}
+            />
+          ))}
+
+          {/* series lines */}
+          {series.map((s, i) => (
+            <polyline
+              key={`line-${i}`}
+              points={pointsFor(s.data)}
+              fill="none"
+              stroke={s.color}
+              strokeWidth="2"
+              strokeLinejoin="round"
+              strokeLinecap="round"
+            />
+          ))}
+
+          {/* hover hit zones */}
+          {labels.map((_, i) => {
+            const step = (width - padX * 2) / Math.max(1, labels.length - 1);
+            const x = padX + i * step;
+            return (
+              <rect
+                key={i}
+                x={x - step / 2}
+                y={0}
+                width={step}
+                height={height}
+                fill="transparent"
+                onMouseEnter={() => setHoverIdx(i)}
+              />
+            );
+          })}
+
+          {/* hover line */}
+          {hoverIdx !== null && (
+            <>
+              <line
+                x1={hoverX(hoverIdx)}
+                y1={padY}
+                x2={hoverX(hoverIdx)}
+                y2={height - padY}
+                stroke="rgba(255,255,255,0.15)"
+                strokeDasharray="3,3"
+              />
+              {series.map((s, i) =>
+                s.data[hoverIdx] !== undefined ? (
+                  <circle
+                    key={`hdot-${i}`}
+                    cx={hoverX(hoverIdx)}
+                    cy={
+                      padY +
+                      (1 - s.data[hoverIdx] / maxVal) * (height - padY * 2)
+                    }
+                    r="4"
+                    fill={s.color}
+                    stroke="#0a0b10"
+                    strokeWidth="2"
+                  />
+                ) : null
+              )}
+            </>
+          )}
+        </svg>
+      </div>
+    </div>
+  );
+}

@@ -1,1 +1,138 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlcXVlc3QsIE5leHRSZXNwb25zZSB9IGZyb20gIm5leHQvc2VydmVyIjsKaW1wb3J0IHsgc3VwYWJhc2VBZG1pbiB9IGZyb20gIkAvbGliL3N1cGFiYXNlIjsKaW1wb3J0IGNyeXB0byBmcm9tICJjcnlwdG8iOwoKZXhwb3J0IGNvbnN0IHJ1bnRpbWUgPSAibm9kZWpzIjsKZXhwb3J0IGNvbnN0IGR5bmFtaWMgPSAiZm9yY2UtZHluYW1pYyI7CgovKioKICogTGFzdGxpbmsgd2ViaG9vayDigJQgaGFuZGxlcyBwdXJjaGFzZS9zdWJzY3JpcHRpb24gZXZlbnRzLgogKgogKiBFeHBlY3RlZCBldmVudCB0eXBlcyAoYWRhcHQgdG8gd2hhdGV2ZXIgTGFzdGxpbmsgYWN0dWFsbHkgc2VuZHMpOgogKiAgIC0gUHVyY2hhc2VfT3JkZXJfQ29uZmlybWVkCiAqICAgLSBTdWJzY3JpcHRpb25fQ2FuY2VsZWQKICogICAtIFN1YnNjcmlwdGlvbl9SZW5ld2VkCiAqCiAqIFdlIG1hcCBgUHJvZHVjdC5JZGAgb3IgYFByb2R1Y3QuTmFtZWAgdG8gb3VyIGludGVybmFsIGBwbGFuX3NsdWdgCiAqIHZpYSBlbnYgYExBU1RMSU5LX1BST0RVQ1RfTUFQYCAoSlNPTiBzdHJpbmcpOgogKiAgIHsgInByb2RfYWJjMTIzIjogInBybyIsICJwcm9kX3h5ejc4OSI6ICJidXNpbmVzcyIgfQogKi8KCmZ1bmN0aW9uIHZlcmlmeUhtYWMoYm9keTogc3RyaW5nLCBzaWduYXR1cmU6IHN0cmluZyB8IG51bGwpOiBib29sZWFuIHsKICBjb25zdCBzZWNyZXQgPSBwcm9jZXNzLmVudi5MQVNUTElOS19XRUJIT09LX1NFQ1JFVDsKICBpZiAoIXNlY3JldCkgcmV0dXJuIHRydWU7IC8vIGRldiBtb2RlIOKAlCBhY2NlcHQgYWxsCiAgaWYgKCFzaWduYXR1cmUpIHJldHVybiBmYWxzZTsKICBjb25zdCBleHBlY3RlZCA9IGNyeXB0bwogICAgLmNyZWF0ZUhtYWMoInNoYTI1NiIsIHNlY3JldCkKICAgIC51cGRhdGUoYm9keSkKICAgIC5kaWdlc3QoImhleCIpOwogIHRyeSB7CiAgICByZXR1cm4gY3J5cHRvLnRpbWluZ1NhZmVFcXVhbCgKICAgICAgQnVmZmVyLmZyb20oZXhwZWN0ZWQpLAogICAgICBCdWZmZXIuZnJvbShzaWduYXR1cmUucmVwbGFjZSgvXnNoYTI1Nj0vLCAiIikpCiAgICApOwogIH0gY2F0Y2ggewogICAgcmV0dXJuIGZhbHNlOwogIH0KfQoKZnVuY3Rpb24gcHJvZHVjdFRvUGxhbihwcm9kdWN0SWQ6IHN0cmluZyB8IHVuZGVmaW5lZCwgcHJvZHVjdE5hbWU6IHN0cmluZyB8IHVuZGVmaW5lZCk6IHN0cmluZyB8IG51bGwgewogIHRyeSB7CiAgICBjb25zdCBtYXAgPSBKU09OLnBhcnNlKHByb2Nlc3MuZW52LkxBU1RMSU5LX1BST0RVQ1RfTUFQID8/ICJ7fSIpOwogICAgaWYgKHByb2R1Y3RJZCAmJiBtYXBbcHJvZHVjdElkXSkgcmV0dXJuIG1hcFtwcm9kdWN0SWRdOwogICAgaWYgKHByb2R1Y3ROYW1lICYmIG1hcFtwcm9kdWN0TmFtZV0pIHJldHVybiBtYXBbcHJvZHVjdE5hbWVdOwogIH0gY2F0Y2gge30KICAvLyBGYWxsYmFjazogZGV0ZWN0IGZyb20gcHJvZHVjdCBuYW1lCiAgY29uc3QgbmFtZSA9IChwcm9kdWN0TmFtZSA/PyAiIikudG9Mb3dlckNhc2UoKTsKICBpZiAobmFtZS5pbmNsdWRlcygiYnVzaW5lc3MiKSkgcmV0dXJuICJidXNpbmVzcyI7CiAgaWYgKG5hbWUuaW5jbHVkZXMoInBybyIpKSByZXR1cm4gInBybyI7CiAgcmV0dXJuIG51bGw7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBQT1NUKHJlcTogTmV4dFJlcXVlc3QpIHsKICBjb25zdCByYXcgPSBhd2FpdCByZXEudGV4dCgpOwogIGNvbnN0IHNpZyA9IHJlcS5oZWFkZXJzLmdldCgieC1sYXN0bGluay1zaWduYXR1cmUtMjU2IikgPz8gcmVxLmhlYWRlcnMuZ2V0KCJ4LWh1Yi1zaWduYXR1cmUtMjU2Iik7CiAgaWYgKCF2ZXJpZnlIbWFjKHJhdywgc2lnKSkgewogICAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsgZXJyb3I6ICJpbnZhbGlkIHNpZ25hdHVyZSIgfSwgeyBzdGF0dXM6IDQwMSB9KTsKICB9CgogIGxldCBwYXlsb2FkOiBhbnk7CiAgdHJ5IHsKICAgIHBheWxvYWQgPSBKU09OLnBhcnNlKHJhdyk7CiAgfSBjYXRjaCB7CiAgICByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oeyBlcnJvcjogImludmFsaWQganNvbiIgfSwgeyBzdGF0dXM6IDQwMCB9KTsKICB9CgogIGNvbnN0IGFkbWluID0gc3VwYWJhc2VBZG1pbigpOwoKICBjb25zdCBldmVudCA9IHBheWxvYWQuRXZlbnQgPz8gcGF5bG9hZC5ldmVudCA/PyAiIjsKICBjb25zdCBlbWFpbCA9CiAgICBwYXlsb2FkPy5EYXRhPy5CdXllcj8uRW1haWwgPz8KICAgIHBheWxvYWQ/LkRhdGE/LkN1c3RvbWVyPy5FbWFpbCA/PwogICAgcGF5bG9hZD8uQnV5ZXI/LkVtYWlsID8/CiAgICBwYXlsb2FkPy5DdXN0b21lcj8uRW1haWw7CiAgY29uc3QgcHJvZHVjdElkID0gcGF5bG9hZD8uRGF0YT8uUHJvZHVjdHM/LlswXT8uSWQgPz8gcGF5bG9hZD8uUHJvZHVjdD8uSWQ7CiAgY29uc3QgcHJvZHVjdE5hbWUgPSBwYXlsb2FkPy5EYXRhPy5Qcm9kdWN0cz8uWzBdPy5OYW1lID8/IHBheWxvYWQ/LlByb2R1Y3Q/Lk5hbWU7CiAgY29uc3QgYW1vdW50ID0KICAgIHBheWxvYWQ/LkRhdGE/LlB1cmNoYXNlPy5QYXltZW50T3JkZXI/LkFtb3VudCA/PwogICAgcGF5bG9hZD8uUHVyY2hhc2U/LkFtb3VudCA/PwogICAgbnVsbDsKCiAgaWYgKCFlbWFpbCkgewogICAgYXdhaXQgYWRtaW4uZnJvbSgic3Vic2NyaXB0aW9uX2V2ZW50cyIpLmluc2VydCh7CiAgICAgIHByb3ZpZGVyOiAibGFzdGxpbmsiLAogICAgICBzdGF0dXM6ICJtaXNzaW5nX2VtYWlsIiwKICAgICAgcmF3X3BheWxvYWQ6IHBheWxvYWQsCiAgICB9KTsKICAgIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IG9rOiB0cnVlLCBub3RlOiAibm8gZW1haWwiIH0pOwogIH0KCiAgLy8gRmluZCB1c2VyIGJ5IGVtYWlsCiAgY29uc3QgeyBkYXRhOiBwcm9maWxlIH0gPSBhd2FpdCBhZG1pbgogICAgLmZyb20oInVzZXJfcHJvZmlsZXMiKQogICAgLnNlbGVjdCgiaWQiKQogICAgLmVxKCJlbWFpbCIsIGVtYWlsLnRvTG93ZXJDYXNlKCkpCiAgICAubWF5YmVTaW5nbGUoKTsKCiAgY29uc3QgcGxhblNsdWcgPSBwcm9kdWN0VG9QbGFuKHByb2R1Y3RJZCwgcHJvZHVjdE5hbWUpOwoKICBjb25zdCBpc1BhaWQgPQogICAgZXZlbnQuaW5jbHVkZXMoIlB1cmNoYXNlX09yZGVyX0NvbmZpcm1lZCIpIHx8CiAgICBldmVudC5pbmNsdWRlcygiU3Vic2NyaXB0aW9uX1JlbmV3ZWQiKSB8fAogICAgZXZlbnQuaW5jbHVkZXMoIlN1YnNjcmlwdGlvbl9BY3RpdmF0ZWQiKTsKICBjb25zdCBpc0NhbmNlbGVkID0gZXZlbnQuaW5jbHVkZXMoIlN1YnNjcmlwdGlvbl9DYW5jZWxlZCIpIHx8IGV2ZW50LmluY2x1ZGVzKCJDaGFyZ2ViYWNrIik7CgogIGF3YWl0IGFkbWluLmZyb20oInN1YnNjcmlwdGlvbl9ldmVudHMiKS5pbnNlcnQoewogICAgdXNlcl9pZDogcHJvZmlsZT8uaWQgPz8gbnVsbCwKICAgIHBsYW5fc2x1ZzogcGxhblNsdWcsCiAgICBwcm92aWRlcjogImxhc3RsaW5rIiwKICAgIGV4dGVybmFsX2lkOiBwYXlsb2FkPy5JZCA/PyBwYXlsb2FkPy5EYXRhPy5JZCA/PyBudWxsLAogICAgYW1vdW50X2JybDogYW1vdW50LAogICAgc3RhdHVzOiBpc1BhaWQgPyAicGFpZCIgOiBpc0NhbmNlbGVkID8gImNhbmNlbGVkIiA6IGV2ZW50LAogICAgcmF3X3BheWxvYWQ6IHBheWxvYWQsCiAgfSk7CgogIGlmIChwcm9maWxlICYmIHBsYW5TbHVnKSB7CiAgICBpZiAoaXNQYWlkKSB7CiAgICAgIGNvbnN0IGV4cGlyZXMgPSBuZXcgRGF0ZShEYXRlLm5vdygpICsgMzEgKiA4NjQwMCAqIDEwMDApOwogICAgICBhd2FpdCBhZG1pbgogICAgICAgIC5mcm9tKCJ1c2VyX3Byb2ZpbGVzIikKICAgICAgICAudXBkYXRlKHsKICAgICAgICAgIHBsYW5fc2x1ZzogcGxhblNsdWcsCiAgICAgICAgICBzdWJzY3JpcHRpb25fc3RhdHVzOiAiYWN0aXZlIiwKICAgICAgICAgIHN1YnNjcmlwdGlvbl9leHBpcmVzX2F0OiBleHBpcmVzLnRvSVNPU3RyaW5nKCksCiAgICAgICAgfSkKICAgICAgICAuZXEoImlkIiwgcHJvZmlsZS5pZCk7CiAgICB9IGVsc2UgaWYgKGlzQ2FuY2VsZWQpIHsKICAgICAgYXdhaXQgYWRtaW4KICAgICAgICAuZnJvbSgidXNlcl9wcm9maWxlcyIpCiAgICAgICAgLnVwZGF0ZSh7CiAgICAgICAgICBwbGFuX3NsdWc6ICJmcmVlIiwKICAgICAgICAgIHN1YnNjcmlwdGlvbl9zdGF0dXM6ICJjYW5jZWxlZCIsCiAgICAgICAgfSkKICAgICAgICAuZXEoImlkIiwgcHJvZmlsZS5pZCk7CiAgICB9CiAgfQoKICByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oeyBvazogdHJ1ZSB9KTsKfQo="}
+import { NextRequest, NextResponse } from "next/server";
+import { supabaseAdmin } from "@/lib/supabase";
+import crypto from "crypto";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+/**
+ * Lastlink webhook — handles purchase/subscription events.
+ *
+ * Expected event types (adapt to whatever Lastlink actually sends):
+ *   - Purchase_Order_Confirmed
+ *   - Subscription_Canceled
+ *   - Subscription_Renewed
+ *
+ * We map `Product.Id` or `Product.Name` to our internal `plan_slug`
+ * via env `LASTLINK_PRODUCT_MAP` (JSON string):
+ *   { "prod_abc123": "pro", "prod_xyz789": "business" }
+ */
+
+function verifyHmac(body: string, signature: string | null): boolean {
+  const secret = process.env.LASTLINK_WEBHOOK_SECRET;
+  if (!secret) return true; // dev mode — accept all
+  if (!signature) return false;
+  const expected = crypto
+    .createHmac("sha256", secret)
+    .update(body)
+    .digest("hex");
+  try {
+    return crypto.timingSafeEqual(
+      Buffer.from(expected),
+      Buffer.from(signature.replace(/^sha256=/, ""))
+    );
+  } catch {
+    return false;
+  }
+}
+
+function productToPlan(productId: string | undefined, productName: string | undefined): string | null {
+  try {
+    const map = JSON.parse(process.env.LASTLINK_PRODUCT_MAP ?? "{}");
+    if (productId && map[productId]) return map[productId];
+    if (productName && map[productName]) return map[productName];
+  } catch {}
+  // Fallback: detect from product name
+  const name = (productName ?? "").toLowerCase();
+  if (name.includes("business")) return "business";
+  if (name.includes("pro")) return "pro";
+  return null;
+}
+
+export async function POST(req: NextRequest) {
+  const raw = await req.text();
+  const sig = req.headers.get("x-lastlink-signature-256") ?? req.headers.get("x-hub-signature-256");
+  if (!verifyHmac(raw, sig)) {
+    return NextResponse.json({ error: "invalid signature" }, { status: 401 });
+  }
+
+  let payload: any;
+  try {
+    payload = JSON.parse(raw);
+  } catch {
+    return NextResponse.json({ error: "invalid json" }, { status: 400 });
+  }
+
+  const admin = supabaseAdmin();
+
+  const event = payload.Event ?? payload.event ?? "";
+  const email =
+    payload?.Data?.Buyer?.Email ??
+    payload?.Data?.Customer?.Email ??
+    payload?.Buyer?.Email ??
+    payload?.Customer?.Email;
+  const productId = payload?.Data?.Products?.[0]?.Id ?? payload?.Product?.Id;
+  const productName = payload?.Data?.Products?.[0]?.Name ?? payload?.Product?.Name;
+  const amount =
+    payload?.Data?.Purchase?.PaymentOrder?.Amount ??
+    payload?.Purchase?.Amount ??
+    null;
+
+  if (!email) {
+    await admin.from("subscription_events").insert({
+      provider: "lastlink",
+      status: "missing_email",
+      raw_payload: payload,
+    });
+    return NextResponse.json({ ok: true, note: "no email" });
+  }
+
+  // Find user by email
+  const { data: profile } = await admin
+    .from("user_profiles")
+    .select("id")
+    .eq("email", email.toLowerCase())
+    .maybeSingle();
+
+  const planSlug = productToPlan(productId, productName);
+
+  const isPaid =
+    event.includes("Purchase_Order_Confirmed") ||
+    event.includes("Subscription_Renewed") ||
+    event.includes("Subscription_Activated");
+  const isCanceled = event.includes("Subscription_Canceled") || event.includes("Chargeback");
+
+  await admin.from("subscription_events").insert({
+    user_id: profile?.id ?? null,
+    plan_slug: planSlug,
+    provider: "lastlink",
+    external_id: payload?.Id ?? payload?.Data?.Id ?? null,
+    amount_brl: amount,
+    status: isPaid ? "paid" : isCanceled ? "canceled" : event,
+    raw_payload: payload,
+  });
+
+  if (profile && planSlug) {
+    if (isPaid) {
+      const expires = new Date(Date.now() + 31 * 86400 * 1000);
+      await admin
+        .from("user_profiles")
+        .update({
+          plan_slug: planSlug,
+          subscription_status: "active",
+          subscription_expires_at: expires.toISOString(),
+        })
+        .eq("id", profile.id);
+    } else if (isCanceled) {
+      await admin
+        .from("user_profiles")
+        .update({
+          plan_slug: "free",
+          subscription_status: "canceled",
+        })
+        .eq("id", profile.id);
+    }
+  }
+
+  return NextResponse.json({ ok: true });
+}

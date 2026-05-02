@@ -1,1 +1,145 @@
-{"data":"aW1wb3J0IExpbmsgZnJvbSAibmV4dC9saW5rIjsKaW1wb3J0IHsgTG9nbyB9IGZyb20gIkAvY29tcG9uZW50cy9sb2dvIjsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEhvbWUoKSB7CiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJtaW4taC1zY3JlZW4gcmVsYXRpdmUgb3ZlcmZsb3ctaGlkZGVuIj4KICAgICAgey8qIEFtYmllbnQgZ3JhZGllbnQgZ2xvdyAqL30KICAgICAgPGRpdiBjbGFzc05hbWU9ImFic29sdXRlIGluc2V0LTAgcG9pbnRlci1ldmVudHMtbm9uZSI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9ImFic29sdXRlIHRvcC1bLTIwMHB4XSBsZWZ0LTEvMiAtdHJhbnNsYXRlLXgtMS8yIGgtWzYwMHB4XSB3LVs5MDBweF0gcm91bmRlZC1mdWxsIGJnLWFjY2VudC8xMCBibHVyLVsxMjBweF0iIC8+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9ImFic29sdXRlIGJvdHRvbS1bLTEwMHB4XSByaWdodC1bLTIwMHB4XSBoLVs1MDBweF0gdy1bNTAwcHhdIHJvdW5kZWQtZnVsbCBiZy12aW9sZXQvMTAgYmx1ci1bMTIwcHhdIiAvPgogICAgICA8L2Rpdj4KCiAgICAgIDxkaXYgY2xhc3NOYW1lPSJyZWxhdGl2ZSB6LTEwIj4KICAgICAgICB7LyogVG9wIGJhciAqL30KICAgICAgICA8aGVhZGVyIGNsYXNzTmFtZT0ibXgtYXV0byBtYXgtdy02eGwgcHgtNiBoLTE2IGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiI+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIuNSI+CiAgICAgICAgICAgIDxMb2dvIHNpemU9ezMyfSAvPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBmbGV4LWNvbCBsZWFkaW5nLXRpZ2h0Ij4KICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtc20gZm9udC1zZW1pYm9sZCB0cmFja2luZy10aWdodCI+RE1GbG93PC9zcGFuPgogICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC10aW55IHRleHQtZGltLTIgZm9udC1tb25vIj52MC4zIMK3IGJldGE8L3NwYW4+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8TGluawogICAgICAgICAgICBocmVmPSIvZGFzaGJvYXJkIgogICAgICAgICAgICBjbGFzc05hbWU9InJvdW5kZWQtbGcgYm9yZGVyIGJvcmRlci1saW5lLTIgaG92ZXI6Ym9yZGVyLWFjY2VudC80MCBweC0zIHB5LTEuNSB0ZXh0LXNtIGhvdmVyOmJnLXdoaXRlLzUgdHJhbnNpdGlvbi1jb2xvcnMiCiAgICAgICAgICA+CiAgICAgICAgICAgIEFicmlyIGRhc2hib2FyZCDihpIKICAgICAgICAgIDwvTGluaz4KICAgICAgICA8L2hlYWRlcj4KCiAgICAgICAgey8qIEhlcm8gKi99CiAgICAgICAgPG1haW4gaWQ9Im1haW4iIGNsYXNzTmFtZT0ibXgtYXV0byBtYXgtdy02eGwgcHgtNiBwdC0xNiBwYi0yNCI+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ibWF4LXctM3hsIj4KICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgcm91bmRlZC1mdWxsIGJvcmRlciBib3JkZXItbGluZS0yIGJnLXN1cmZhY2UgcHgtMyBweS0xIHRleHQtdGlueSB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXN0IHRleHQtZGltLTIiPgogICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iaC0xLjUgdy0xLjUgcm91bmRlZC1mdWxsIGJnLWdvb2QgcHVsc2UtZG90IiAvPgogICAgICAgICAgICAgIHNpc3RlbWEgYXRpdm8KICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICA8aDEgY2xhc3NOYW1lPSJtdC02IHRleHQtNHhsIHNtOnRleHQtNXhsIG1kOnRleHQtNnhsIGZvbnQtYm9sZCBsZWFkaW5nLVsxLjA1XSB0cmFja2luZy10aWdodCI+CiAgICAgICAgICAgICAgQ29tZW50w6FyaW8gdmlyYSBETS57IiAifQogICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iYmctZ3JhZGllbnQtdG8tciBmcm9tLWFjY2VudCB2aWEtYWNjZW50IHRvLXZpb2xldCBiZy1jbGlwLXRleHQgdGV4dC10cmFuc3BhcmVudCI+CiAgICAgICAgICAgICAgICBMZWFkIHZpcmEgY2xpZW50ZS4KICAgICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICAgIDwvaDE+CiAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0ibXQtNiB0ZXh0LWRpbS0yIHRleHQtbGcgbWF4LXctMnhsIj4KICAgICAgICAgICAgICBBdXRvbWHDp8OjbyBwcsOzcHJpYSBkZSByZXNwb3N0YXMgZG8gSW5zdGFncmFtLiBDb21lbnTDoXJpbyBjb20KICAgICAgICAgICAgICBrZXl3b3JkLCBwcmltZWlyYSBETSwgcmVzcG9zdGEgZGUgc3Rvcnkg4oCUIHJlc3BvbmRlIHDDumJsaWNvIGUKICAgICAgICAgICAgICBtYW5kYSBkaXJlY3QgcHJpdmFkbyBjb20gbGluayB0cmFja2VhZG8uIFNlbSBsaW1pdGUgZGUgcmVncmFzLCBzZW0KICAgICAgICAgICAgICBtZW5zYWxpZGFkZS4KICAgICAgICAgICAgPC9wPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ibXQtOCBmbGV4IGZsZXgtd3JhcCBnYXAtMyI+CiAgICAgICAgICAgICAgPExpbmsKICAgICAgICAgICAgICAgIGhyZWY9Ii9kYXNoYm9hcmQiCiAgICAgICAgICAgICAgICBjbGFzc05hbWU9InJvdW5kZWQtbGcgYmctYWNjZW50IGhvdmVyOmJnLWFjY2VudC85MCB0ZXh0LWFjY2VudC1pbmsgZm9udC1zZW1pYm9sZCBweC01IHB5LTMgdGV4dC1zbSB0cmFuc2l0aW9uLWNvbG9ycyIKICAgICAgICAgICAgICA+CiAgICAgICAgICAgICAgICBBYnJpciBkYXNoYm9hcmQKICAgICAgICAgICAgICA8L0xpbms+CiAgICAgICAgICAgICAgPExpbmsKICAgICAgICAgICAgICAgIGhyZWY9Ii9kYXNoYm9hcmQvcnVsZXMiCiAgICAgICAgICAgICAgICBjbGFzc05hbWU9InJvdW5kZWQtbGcgYm9yZGVyIGJvcmRlci1saW5lLTIgaG92ZXI6Ym9yZGVyLWFjY2VudC80MCBweC01IHB5LTMgdGV4dC1zbSBmb250LW1lZGl1bSBob3ZlcjpiZy13aGl0ZS81IHRyYW5zaXRpb24tY29sb3JzIgogICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgIEdlcmVuY2lhciByZWdyYXMKICAgICAgICAgICAgICA8L0xpbms+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9kaXY+CgogICAgICAgICAgey8qIEZlYXR1cmUgZ3JpZCAqL30KICAgICAgICAgIDxzZWN0aW9uIGNsYXNzTmFtZT0ibXQtMjQgZ3JpZCBncmlkLWNvbHMtMSBtZDpncmlkLWNvbHMtMyBnYXAtNCIgYXJpYS1sYWJlbD0iRnVuY2lvbmFsaWRhZGVzIj4KICAgICAgICAgICAge0ZFQVRVUkVTLm1hcCgoZiwgaSkgPT4gKAogICAgICAgICAgICAgIDxkaXYKICAgICAgICAgICAgICAgIGtleT17Zi50aXRsZX0KICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0icm91bmRlZC14bCBib3JkZXIgYm9yZGVyLWxpbmUgYmctc3VyZmFjZS84MCBiYWNrZHJvcC1ibHVyIHAtNiBob3Zlcjpib3JkZXItbGluZS0yIHRyYW5zaXRpb24tY29sb3JzIgogICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtYi00IGZsZXggaXRlbXMtY2VudGVyIGdhcC0yIj4KICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LXRpbnkgZm9udC1tb25vIHRleHQtYWNjZW50IGJnLWFjY2VudC1kaW0gcm91bmRlZCBweC0xLjUgcHktMC41Ij4KICAgICAgICAgICAgICAgICAgICB7U3RyaW5nKGkgKyAxKS5wYWRTdGFydCgyLCAiMCIpfQogICAgICAgICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC10aW55IHRleHQtZGltLTIgdXBwZXJjYXNlIHRyYWNraW5nLXdpZGVyIj4KICAgICAgICAgICAgICAgICAgICB7Zi50YWd9CiAgICAgICAgICAgICAgICAgIDwvc3Bhbj4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPGgyIGNsYXNzTmFtZT0idGV4dC1sZyBmb250LXNlbWlib2xkIG1iLTIiPntmLnRpdGxlfTwvaDI+CiAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9InRleHQtc20gdGV4dC1kaW0tMiBsZWFkaW5nLXJlbGF4ZWQiPntmLmJvZHl9PC9wPgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICApKX0KICAgICAgICAgIDwvc2VjdGlvbj4KCiAgICAgICAgICB7LyogQ2FwYWJpbGl0aWVzIHN0cmlwICovfQogICAgICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJtdC0xNiByb3VuZGVkLXhsIGJvcmRlciBib3JkZXItbGluZSBiZy1zdXJmYWNlLzYwIGJhY2tkcm9wLWJsdXIgcC02Ij4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtdGlueSB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXIgdGV4dC1kaW0tMiBtYi00Ij4KICAgICAgICAgICAgICBEZW50cm8gZGEgY2FpeGEKICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJncmlkIGdyaWQtY29scy0yIG1kOmdyaWQtY29scy00IGdhcC00Ij4KICAgICAgICAgICAgICB7WwogICAgICAgICAgICAgICAgWyJSZXBseSBww7pibGljbyIsICJSZXNwb25kZSBvIGNvbWVudMOhcmlvIG5vIHBvc3QiXSwKICAgICAgICAgICAgICAgIFsiRE0gcHJpdmFkYSIsICJNYW5kYSBkaXJlY3QgY29tIGF0w6kgMyBib3TDtWVzIl0sCiAgICAgICAgICAgICAgICBbIkNsaWNrIHRyYWNraW5nIiwgIk1lZGUgY29udmVyc8OjbyBib3TDo28tYS1ib3TDo28iXSwKICAgICAgICAgICAgICAgIFsiVG9rZW4gcmVmcmVzaCIsICJSZW5vdmHDp8OjbyBhdXRvbcOhdGljYSA2MGQiXSwKICAgICAgICAgICAgICAgIFsiSGVhdG1hcCIsICJRdWFuZG8gc2V1cyBzZWd1aWRvcmVzIGVuZ2FqYW0iXSwKICAgICAgICAgICAgICAgIFsiQWxlcnRhcyBlbWFpbCIsICJTYWJlIHF1YW5kbyBhbGdvIHF1ZWJyYSJdLAogICAgICAgICAgICAgICAgWyJFeHBvcnQgQ1NWIiwgIkxldmEgb3MgZGFkb3MgcHJhIHF1YWxxdWVyIGx1Z2FyIl0sCiAgICAgICAgICAgICAgICBbIk11bHRpLXRlbmFudCIsICJQcm9udG8gcHJhIHZpcmFyIFNhYVMiXSwKICAgICAgICAgICAgICBdLm1hcCgoW3RpdGxlLCBzdWJdKSA9PiAoCiAgICAgICAgICAgICAgICA8ZGl2IGtleT17dGl0bGV9PgogICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC1zbSBmb250LW1lZGl1bSI+e3RpdGxlfTwvZGl2PgogICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC10aW55IHRleHQtZGltLTIgbXQtMSI+e3N1Yn08L2Rpdj4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICkpfQogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDwvc2VjdGlvbj4KICAgICAgICA8L21haW4+CgogICAgICAgIDxmb290ZXIgY2xhc3NOYW1lPSJteC1hdXRvIG1heC13LTZ4bCBweC02IHB5LTggdGV4dC10aW55IHRleHQtZGltLTIgZmxleCBqdXN0aWZ5LWJldHdlZW4gYm9yZGVyLXQgYm9yZGVyLWxpbmUiPgogICAgICAgICAgPHNwYW4+RE1GbG93IMK3IEdlZWsgQWNhZGVteSDCtyBCdWlsdCB3aXRoIE5leHQuanMgKyBTdXBhYmFzZTwvc3Bhbj4KICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iZm9udC1tb25vIj4KICAgICAgICAgICAgPExpbmsgaHJlZj0iL3ByaXZhY3kiIGNsYXNzTmFtZT0iaG92ZXI6dGV4dC1mZyI+CiAgICAgICAgICAgICAgcHJpdmFjeQogICAgICAgICAgICA8L0xpbms+CiAgICAgICAgICAgIHsiIMK3ICJ9CiAgICAgICAgICAgIDxMaW5rIGhyZWY9Ii90ZXJtcyIgY2xhc3NOYW1lPSJob3Zlcjp0ZXh0LWZnIj4KICAgICAgICAgICAgICB0ZXJtcwogICAgICAgICAgICA8L0xpbms+CiAgICAgICAgICA8L3NwYW4+CiAgICAgICAgPC9mb290ZXI+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgKTsKfQoKY29uc3QgRkVBVFVSRVMgPSBbCiAgewogICAgdGFnOiAidHJpZ2dlciIsCiAgICB0aXRsZTogIkNvbWVudMOhcmlvIG91IERNIiwKICAgIGJvZHk6ICJBbGd1w6ltIGNvbWVudGEgdW1hIGtleXdvcmQgbm8gdGV1IHBvc3Qgb3UgbWFuZGEgcHJpbWVpcmEgRE0uIE8gd2ViaG9vayBNZXRhIGRpc3BhcmEgbyBmbHV4byBlbSA8IDJzLiIsCiAgfSwKICB7CiAgICB0YWc6ICJtYXRjaCIsCiAgICB0aXRsZTogIk1hdGNoIGludGVsaWdlbnRlIiwKICAgIGJvZHk6ICJSZWdyYXMgcG9yIHBhbGF2cmEtY2hhdmUsIHBvc3QgZXNwZWPDrWZpY28gb3Ugc3RvcnkgZXNwZWPDrWZpY28uIFByaW9yaWRhZGVzIGNvbmZpZ3Vyw6F2ZWlzLiBNdWx0aS10ZW5hbnQuIiwKICB9LAogIHsKICAgIHRhZzogInNlbmQiLAogICAgdGl0bGU6ICJSZXBseSArIERNICsgdHJhY2siLAogICAgYm9keTogIlJlc3BvbmRlIHB1YmxpY2FtZW50ZSwgbWFuZGEgRE0gcHJpdmFkYSBjb20gYm90w7VlcyB0cmFja2VhZG9zIGUgbWVkZSBjb252ZXJzw6NvIGF0w6kgbyBjbGlxdWUgZmluYWwuIiwKICB9LApdOwo="}
+import Link from "next/link";
+import { Logo } from "@/components/logo";
+
+export default function Home() {
+  return (
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Ambient gradient glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full bg-accent/10 blur-[120px]" />
+        <div className="absolute bottom-[-100px] right-[-200px] h-[500px] w-[500px] rounded-full bg-violet/10 blur-[120px]" />
+      </div>
+
+      <div className="relative z-10">
+        {/* Top bar */}
+        <header className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-2.5">
+            <Logo size={32} />
+            <div className="flex flex-col leading-tight">
+              <span className="text-sm font-semibold tracking-tight">DMFlow</span>
+              <span className="text-tiny text-dim-2 font-mono">v0.3 · beta</span>
+            </div>
+          </div>
+          <Link
+            href="/dashboard"
+            className="rounded-lg border border-line-2 hover:border-accent/40 px-3 py-1.5 text-sm hover:bg-white/5 transition-colors"
+          >
+            Abrir dashboard →
+          </Link>
+        </header>
+
+        {/* Hero */}
+        <main id="main" className="mx-auto max-w-6xl px-6 pt-16 pb-24">
+          <div className="max-w-3xl">
+            <span className="inline-flex items-center gap-2 rounded-full border border-line-2 bg-surface px-3 py-1 text-tiny uppercase tracking-widest text-dim-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-good pulse-dot" />
+              sistema ativo
+            </span>
+            <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05] tracking-tight">
+              Comentário vira DM.{" "}
+              <span className="bg-gradient-to-r from-accent via-accent to-violet bg-clip-text text-transparent">
+                Lead vira cliente.
+              </span>
+            </h1>
+            <p className="mt-6 text-dim-2 text-lg max-w-2xl">
+              Automação própria de respostas do Instagram. Comentário com
+              keyword, primeira DM, resposta de story — responde público e
+              manda direct privado com link trackeado. Sem limite de regras, sem
+              mensalidade.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/dashboard"
+                className="rounded-lg bg-accent hover:bg-accent/90 text-accent-ink font-semibold px-5 py-3 text-sm transition-colors"
+              >
+                Abrir dashboard
+              </Link>
+              <Link
+                href="/dashboard/rules"
+                className="rounded-lg border border-line-2 hover:border-accent/40 px-5 py-3 text-sm font-medium hover:bg-white/5 transition-colors"
+              >
+                Gerenciar regras
+              </Link>
+            </div>
+          </div>
+
+          {/* Feature grid */}
+          <section className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-4" aria-label="Funcionalidades">
+            {FEATURES.map((f, i) => (
+              <div
+                key={f.title}
+                className="rounded-xl border border-line bg-surface/80 backdrop-blur p-6 hover:border-line-2 transition-colors"
+              >
+                <div className="mb-4 flex items-center gap-2">
+                  <span className="text-tiny font-mono text-accent bg-accent-dim rounded px-1.5 py-0.5">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="text-tiny text-dim-2 uppercase tracking-wider">
+                    {f.tag}
+                  </span>
+                </div>
+                <h2 className="text-lg font-semibold mb-2">{f.title}</h2>
+                <p className="text-sm text-dim-2 leading-relaxed">{f.body}</p>
+              </div>
+            ))}
+          </section>
+
+          {/* Capabilities strip */}
+          <section className="mt-16 rounded-xl border border-line bg-surface/60 backdrop-blur p-6">
+            <div className="text-tiny uppercase tracking-wider text-dim-2 mb-4">
+              Dentro da caixa
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                ["Reply público", "Responde o comentário no post"],
+                ["DM privada", "Manda direct com até 3 botões"],
+                ["Click tracking", "Mede conversão botão-a-botão"],
+                ["Token refresh", "Renovação automática 60d"],
+                ["Heatmap", "Quando seus seguidores engajam"],
+                ["Alertas email", "Sabe quando algo quebra"],
+                ["Export CSV", "Leva os dados pra qualquer lugar"],
+                ["Multi-tenant", "Pronto pra virar SaaS"],
+              ].map(([title, sub]) => (
+                <div key={title}>
+                  <div className="text-sm font-medium">{title}</div>
+                  <div className="text-tiny text-dim-2 mt-1">{sub}</div>
+                </div>
+              ))}
+            </div>
+          </section>
+        </main>
+
+        <footer className="mx-auto max-w-6xl px-6 py-8 text-tiny text-dim-2 flex justify-between border-t border-line">
+          <span>DMFlow · Geek Academy · Built with Next.js + Supabase</span>
+          <span className="font-mono">
+            <Link href="/privacy" className="hover:text-fg">
+              privacy
+            </Link>
+            {" · "}
+            <Link href="/terms" className="hover:text-fg">
+              terms
+            </Link>
+          </span>
+        </footer>
+      </div>
+    </div>
+  );
+}
+
+const FEATURES = [
+  {
+    tag: "trigger",
+    title: "Comentário ou DM",
+    body: "Alguém comenta uma keyword no teu post ou manda primeira DM. O webhook Meta dispara o fluxo em < 2s.",
+  },
+  {
+    tag: "match",
+    title: "Match inteligente",
+    body: "Regras por palavra-chave, post específico ou story específico. Prioridades configuráveis. Multi-tenant.",
+  },
+  {
+    tag: "send",
+    title: "Reply + DM + track",
+    body: "Responde publicamente, manda DM privada com botões trackeados e mede conversão até o clique final.",
+  },
+];

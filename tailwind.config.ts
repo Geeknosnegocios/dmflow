@@ -1,1 +1,61 @@
-{"data":"aW1wb3J0IHR5cGUgeyBDb25maWcgfSBmcm9tICJ0YWlsd2luZGNzcyI7Cgpjb25zdCBjb25maWc6IENvbmZpZyA9IHsKICBjb250ZW50OiBbCiAgICAiLi9hcHAvKiovKi57anMsdHMsanN4LHRzeCxtZHh9IiwKICAgICIuL2NvbXBvbmVudHMvKiovKi57anMsdHMsanN4LHRzeCxtZHh9IiwKICAgICIuL2xpYi8qKi8qLntqcyx0cyxqc3gsdHN4LG1keH0iLAogIF0sCiAgdGhlbWU6IHsKICAgIGV4dGVuZDogewogICAgICBjb2xvcnM6IHsKICAgICAgICAvLyBTdXJmYWNlcwogICAgICAgIGJnOiAiIzBhMGIxMCIsCiAgICAgICAgImJnLTEiOiAiIzBlMTAxNiIsCiAgICAgICAgImJnLTIiOiAiIzE0MTYxZiIsCiAgICAgICAgc3VyZmFjZTogIiMxMjE0MWMiLAogICAgICAgICJzdXJmYWNlLTIiOiAiIzE4MWEyNCIsCiAgICAgICAgLy8gVGV4dAogICAgICAgIGZnOiAiI2U3ZTllZiIsCiAgICAgICAgZGltOiAiIzZiNzI4MCIsCiAgICAgICAgImRpbS0yIjogIiM5YWExYWQiLAogICAgICAgIC8vIExpbmVzCiAgICAgICAgbGluZTogInJnYmEoMjU1LDI1NSwyNTUsMC4wNikiLAogICAgICAgICJsaW5lLTIiOiAicmdiYSgyNTUsMjU1LDI1NSwwLjEwKSIsCiAgICAgICAgLy8gQWNjZW50IChjeWFuIHRlY2gpCiAgICAgICAgYWNjZW50OiAiIzIyZDNlZSIsCiAgICAgICAgImFjY2VudC1kaW0iOiAicmdiYSgzNCwyMTEsMjM4LDAuMTIpIiwKICAgICAgICAiYWNjZW50LWluayI6ICIjMGEwYjEwIiwKICAgICAgICAvLyBTdGF0dXMKICAgICAgICBnb29kOiAiIzM0ZDM5OSIsCiAgICAgICAgImdvb2QtZGltIjogInJnYmEoNTIsMjExLDE1MywwLjEyKSIsCiAgICAgICAgd2FybjogIiNmYmJmMjQiLAogICAgICAgICJ3YXJuLWRpbSI6ICJyZ2JhKDI1MSwxOTEsMzYsMC4xMikiLAogICAgICAgIGRhbmdlcjogIiNmODcxNzEiLAogICAgICAgICJkYW5nZXItZGltIjogInJnYmEoMjQ4LDExMywxMTMsMC4xMikiLAogICAgICAgIHZpb2xldDogIiNhNzhiZmEiLAogICAgICAgICJ2aW9sZXQtZGltIjogInJnYmEoMTY3LDEzOSwyNTAsMC4xMikiLAogICAgICB9LAogICAgICBmb250RmFtaWx5OiB7CiAgICAgICAgc2FuczogWyJ2YXIoLS1mb250LWludGVyKSIsICJ1aS1zYW5zLXNlcmlmIiwgInN5c3RlbS11aSJdLAogICAgICAgIG1vbm86IFsidmFyKC0tZm9udC1qZXRicmFpbnMpIiwgInVpLW1vbm9zcGFjZSIsICJtb25vc3BhY2UiXSwKICAgICAgfSwKICAgICAgZm9udFNpemU6IHsKICAgICAgICB0aW55OiBbIjEwLjVweCIsIHsgbGluZUhlaWdodDogIjE0cHgiLCBsZXR0ZXJTcGFjaW5nOiAiMC4wMmVtIiB9XSwKICAgICAgfSwKICAgICAgYm94U2hhZG93OiB7CiAgICAgICAgY2FyZDogIjAgMXB4IDAgMCByZ2JhKDI1NSwyNTUsMjU1LDAuMDQpIGluc2V0LCAwIDEycHggNDBweCAtMjBweCByZ2JhKDAsMCwwLDAuNykiLAogICAgICAgIGdsb3c6ICIwIDAgMCAxcHggcmdiYSgzNCwyMTEsMjM4LDAuMzUpLCAwIDAgMjRweCAtNHB4IHJnYmEoMzQsMjExLDIzOCwwLjM1KSIsCiAgICAgIH0sCiAgICAgIGJhY2tncm91bmRJbWFnZTogewogICAgICAgICJncmlkLWRvdCI6CiAgICAgICAgICAicmFkaWFsLWdyYWRpZW50KHJnYmEoMjU1LDI1NSwyNTUsMC4wNSkgMXB4LCB0cmFuc3BhcmVudCAxcHgpIiwKICAgICAgfSwKICAgICAgYmFja2dyb3VuZFNpemU6IHsKICAgICAgICAiZ3JpZC0yNCI6ICIyNHB4IDI0cHgiLAogICAgICB9LAogICAgfSwKICB9LAogIHBsdWdpbnM6IFtdLAp9OwpleHBvcnQgZGVmYXVsdCBjb25maWc7Cg=="}
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./lib/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        // Surfaces
+        bg: "#0a0b10",
+        "bg-1": "#0e1016",
+        "bg-2": "#14161f",
+        surface: "#12141c",
+        "surface-2": "#181a24",
+        // Text
+        fg: "#e7e9ef",
+        dim: "#6b7280",
+        "dim-2": "#9aa1ad",
+        // Lines
+        line: "rgba(255,255,255,0.06)",
+        "line-2": "rgba(255,255,255,0.10)",
+        // Accent (cyan tech)
+        accent: "#22d3ee",
+        "accent-dim": "rgba(34,211,238,0.12)",
+        "accent-ink": "#0a0b10",
+        // Status
+        good: "#34d399",
+        "good-dim": "rgba(52,211,153,0.12)",
+        warn: "#fbbf24",
+        "warn-dim": "rgba(251,191,36,0.12)",
+        danger: "#f87171",
+        "danger-dim": "rgba(248,113,113,0.12)",
+        violet: "#a78bfa",
+        "violet-dim": "rgba(167,139,250,0.12)",
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)", "ui-sans-serif", "system-ui"],
+        mono: ["var(--font-jetbrains)", "ui-monospace", "monospace"],
+      },
+      fontSize: {
+        tiny: ["10.5px", { lineHeight: "14px", letterSpacing: "0.02em" }],
+      },
+      boxShadow: {
+        card: "0 1px 0 0 rgba(255,255,255,0.04) inset, 0 12px 40px -20px rgba(0,0,0,0.7)",
+        glow: "0 0 0 1px rgba(34,211,238,0.35), 0 0 24px -4px rgba(34,211,238,0.35)",
+      },
+      backgroundImage: {
+        "grid-dot":
+          "radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px)",
+      },
+      backgroundSize: {
+        "grid-24": "24px 24px",
+      },
+    },
+  },
+  plugins: [],
+};
+export default config;

@@ -1,1 +1,49 @@
-{"data":"aW1wb3J0IHsgSW1hZ2VSZXNwb25zZSB9IGZyb20gIm5leHQvb2ciOwoKZXhwb3J0IGNvbnN0IHNpemUgPSB7IHdpZHRoOiA2NCwgaGVpZ2h0OiA2NCB9OwpleHBvcnQgY29uc3QgY29udGVudFR5cGUgPSAiaW1hZ2UvcG5nIjsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEljb24oKSB7CiAgcmV0dXJuIG5ldyBJbWFnZVJlc3BvbnNlKAogICAgKAogICAgICA8ZGl2CiAgICAgICAgc3R5bGU9e3sKICAgICAgICAgIHdpZHRoOiAiMTAwJSIsCiAgICAgICAgICBoZWlnaHQ6ICIxMDAlIiwKICAgICAgICAgIGRpc3BsYXk6ICJmbGV4IiwKICAgICAgICAgIGFsaWduSXRlbXM6ICJjZW50ZXIiLAogICAgICAgICAganVzdGlmeUNvbnRlbnQ6ICJjZW50ZXIiLAogICAgICAgICAgYmFja2dyb3VuZDogInRyYW5zcGFyZW50IiwKICAgICAgICB9fQogICAgICA+CiAgICAgICAgPHN2ZwogICAgICAgICAgd2lkdGg9IjY0IgogICAgICAgICAgaGVpZ2h0PSI2NCIKICAgICAgICAgIHZpZXdCb3g9IjMgMyAyNiAyNiIKICAgICAgICAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgICAgICA+CiAgICAgICAgICA8ZGVmcz4KICAgICAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iNCIgeTE9IjQiIHgyPSIyOCIgeTI9IjI4IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcENvbG9yPSIjMjJkM2VlIiAvPgogICAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcENvbG9yPSIjYTc4YmZhIiAvPgogICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9InMiIHgxPSIxNiIgeTE9IjE2IiB4Mj0iMjgiIHkyPSIyNiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3BDb2xvcj0iIzBlYTViOCIgLz4KICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3BDb2xvcj0iIzdjNWZlNiIgLz4KICAgICAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgICAgICAgIDwvZGVmcz4KICAgICAgICAgIDxwYXRoIGQ9Ik0gMjcgNSBMIDUgMTYgTCAxNCAxOCBaIiBmaWxsPSJ1cmwoI2cpIiAvPgogICAgICAgICAgPHBhdGggZD0iTSAyNyA1IEwgMTQgMTggTCAxNyAyNyBaIiBmaWxsPSJ1cmwoI3MpIiAvPgogICAgICAgICAgPHBhdGggZD0iTSAyNyA1IEwgMTQgMTggTCAxNyAyMiBaIiBmaWxsPSJ1cmwoI2cpIiBvcGFjaXR5PSIwLjU1IiAvPgogICAgICAgICAgPHBhdGgKICAgICAgICAgICAgZD0iTSAyNyA1IEwgMTQgMTgiCiAgICAgICAgICAgIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjU1KSIKICAgICAgICAgICAgc3Ryb2tlV2lkdGg9IjAuNiIKICAgICAgICAgICAgc3Ryb2tlTGluZWNhcD0icm91bmQiCiAgICAgICAgICAvPgogICAgICAgIDwvc3ZnPgogICAgICA8L2Rpdj4KICAgICksCiAgICBzaXplCiAgKTsKfQo="}
+import { ImageResponse } from "next/og";
+
+export const size = { width: 64, height: 64 };
+export const contentType = "image/png";
+
+export default function Icon() {
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          background: "transparent",
+        }}
+      >
+        <svg
+          width="64"
+          height="64"
+          viewBox="3 3 26 26"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient id="g" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#22d3ee" />
+              <stop offset="100%" stopColor="#a78bfa" />
+            </linearGradient>
+            <linearGradient id="s" x1="16" y1="16" x2="28" y2="26" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#0ea5b8" />
+              <stop offset="100%" stopColor="#7c5fe6" />
+            </linearGradient>
+          </defs>
+          <path d="M 27 5 L 5 16 L 14 18 Z" fill="url(#g)" />
+          <path d="M 27 5 L 14 18 L 17 27 Z" fill="url(#s)" />
+          <path d="M 27 5 L 14 18 L 17 22 Z" fill="url(#g)" opacity="0.55" />
+          <path
+            d="M 27 5 L 14 18"
+            stroke="rgba(255,255,255,0.55)"
+            strokeWidth="0.6"
+            strokeLinecap="round"
+          />
+        </svg>
+      </div>
+    ),
+    size
+  );
+}

@@ -1,1 +1,100 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlcXVlc3QsIE5leHRSZXNwb25zZSB9IGZyb20gIm5leHQvc2VydmVyIjsKaW1wb3J0IHsgdmVyaWZ5QXBpS2V5IH0gZnJvbSAiQC9saWIvYXBpLWtleXMiOwppbXBvcnQgeyBzdXBhYmFzZUFkbWluIH0gZnJvbSAiQC9saWIvc3VwYWJhc2UiOwoKZXhwb3J0IGNvbnN0IHJ1bnRpbWUgPSAibm9kZWpzIjsKZXhwb3J0IGNvbnN0IGR5bmFtaWMgPSAiZm9yY2UtZHluYW1pYyI7CgpleHBvcnQgYXN5bmMgZnVuY3Rpb24gR0VUKHJlcTogTmV4dFJlcXVlc3QpIHsKICBjb25zdCBhdXRoID0gcmVxLmhlYWRlcnMuZ2V0KCJhdXRob3JpemF0aW9uIikgPz8gIiI7CiAgY29uc3QgdG9rZW4gPSBhdXRoLnJlcGxhY2UoL15CZWFyZXJccysvaSwgIiIpOwogIGNvbnN0IHYgPSBhd2FpdCB2ZXJpZnlBcGlLZXkodG9rZW4pOwogIGlmICghdi52YWxpZCkgewogICAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsgZXJyb3I6ICJpbnZhbGlkIGFwaSBrZXkiIH0sIHsgc3RhdHVzOiA0MDEgfSk7CiAgfQoKICBjb25zdCBzYiA9IHN1cGFiYXNlQWRtaW4oKTsKICBjb25zdCB7IGRhdGE6IGFjY291bnRzIH0gPSBhd2FpdCBzYgogICAgLmZyb20oImFjY291bnRzIikKICAgIC5zZWxlY3QoImlkIikKICAgIC5lcSgib3duZXJfdXNlcl9pZCIsIHYudXNlcl9pZCEpOwogIGNvbnN0IGFjY291bnRJZHMgPSAoYWNjb3VudHMgPz8gW10pLm1hcCgoYTogYW55KSA9PiBhLmlkKTsKCiAgaWYgKGFjY291bnRJZHMubGVuZ3RoID09PSAwKSB7CiAgICByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oeyBkYXRhOiBbXSB9KTsKICB9CgogIGNvbnN0IHsgZGF0YSB9ID0gYXdhaXQgc2IKICAgIC5mcm9tKCJydWxlcyIpCiAgICAuc2VsZWN0KAogICAgICAiaWQsIG5hbWUsIHRyaWdnZXJfdHlwZSwga2V5d29yZCwgbWF0Y2hfbW9kZSwgcG9zdF9pZCwgc3RvcnlfaWQsIGFjdGl2ZSwgdHJpZ2dlcmVkX2NvdW50LCBkbV9tZXNzYWdlLCBkbV9idXR0b25zLCBwcmlvcml0eSwgcGxhdGZvcm0sIGNyZWF0ZWRfYXQiCiAgICApCiAgICAuaW4oImFjY291bnRfaWQiLCBhY2NvdW50SWRzKQogICAgLm9yZGVyKCJwcmlvcml0eSIsIHsgYXNjZW5kaW5nOiBmYWxzZSB9KTsKCiAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsgZGF0YTogZGF0YSA/PyBbXSB9KTsKfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIFBPU1QocmVxOiBOZXh0UmVxdWVzdCkgewogIGNvbnN0IGF1dGggPSByZXEuaGVhZGVycy5nZXQoImF1dGhvcml6YXRpb24iKSA/PyAiIjsKICBjb25zdCB0b2tlbiA9IGF1dGgucmVwbGFjZSgvXkJlYXJlclxzKy9pLCAiIik7CiAgY29uc3QgdiA9IGF3YWl0IHZlcmlmeUFwaUtleSh0b2tlbik7CiAgaWYgKCF2LnZhbGlkKSB7CiAgICByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oeyBlcnJvcjogImludmFsaWQgYXBpIGtleSIgfSwgeyBzdGF0dXM6IDQwMSB9KTsKICB9CgogIGNvbnN0IHNiID0gc3VwYWJhc2VBZG1pbigpOwogIGNvbnN0IHsgZGF0YTogYWNjb3VudHMgfSA9IGF3YWl0IHNiCiAgICAuZnJvbSgiYWNjb3VudHMiKQogICAgLnNlbGVjdCgiaWQiKQogICAgLmVxKCJvd25lcl91c2VyX2lkIiwgdi51c2VyX2lkISk7CiAgY29uc3QgYWNjb3VudElkcyA9IChhY2NvdW50cyA/PyBbXSkubWFwKChhOiBhbnkpID0+IGEuaWQpOwogIGlmIChhY2NvdW50SWRzLmxlbmd0aCA9PT0gMCkgewogICAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsgZXJyb3I6ICJubyBhY2NvdW50IGZvdW5kIiB9LCB7IHN0YXR1czogNDAwIH0pOwogIH0KICBjb25zdCBhY2NvdW50SWQgPSBhY2NvdW50SWRzWzBdOwoKICBjb25zdCBib2R5ID0gYXdhaXQgcmVxLmpzb24oKTsKICBjb25zdCB7CiAgICBuYW1lLAogICAgdHJpZ2dlcl90eXBlID0gImNvbW1lbnQiLAogICAga2V5d29yZCwKICAgIG1hdGNoX21vZGUgPSAiY29udGFpbnMiLAogICAgcG9zdF9pZCA9IG51bGwsCiAgICBzdG9yeV9pZCA9IG51bGwsCiAgICBhY3RpdmUgPSB0cnVlLAogICAgZG1fbWVzc2FnZSwKICAgIGRtX2J1dHRvbnMgPSBbXSwKICAgIHByaW9yaXR5ID0gNTAsCiAgICBwbGF0Zm9ybSA9ICJpbnN0YWdyYW0iLAogIH0gPSBib2R5OwoKICBpZiAoIWtleXdvcmQgfHwgIWRtX21lc3NhZ2UpIHsKICAgIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IGVycm9yOiAia2V5d29yZCBlIGRtX21lc3NhZ2Ugb2JyaWdhdG9yaW9zIiB9LCB7IHN0YXR1czogNDAwIH0pOwogIH0KCiAgY29uc3QgeyBkYXRhLCBlcnJvciB9ID0gYXdhaXQgc2IKICAgIC5mcm9tKCJydWxlcyIpCiAgICAuaW5zZXJ0KHsKICAgICAgYWNjb3VudF9pZDogYWNjb3VudElkLAogICAgICBuYW1lOiBuYW1lIHx8IGtleXdvcmQsCiAgICAgIHRyaWdnZXJfdHlwZSwKICAgICAga2V5d29yZCwKICAgICAgbWF0Y2hfbW9kZSwKICAgICAgcG9zdF9pZCwKICAgICAgc3RvcnlfaWQsCiAgICAgIGFjdGl2ZSwKICAgICAgZG1fbWVzc2FnZSwKICAgICAgZG1fYnV0dG9ucywKICAgICAgcHJpb3JpdHksCiAgICAgIHBsYXRmb3JtLAogICAgfSkKICAgIC5zZWxlY3QoImlkLCBuYW1lLCBrZXl3b3JkIikKICAgIC5zaW5nbGUoKTsKCiAgaWYgKGVycm9yKSB7CiAgICByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oeyBlcnJvcjogZXJyb3IubWVzc2FnZSB9LCB7IHN0YXR1czogNTAwIH0pOwogIH0KCiAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsgaWQ6IGRhdGEuaWQsIG5hbWU6IGRhdGEubmFtZSwga2V5d29yZDogZGF0YS5rZXl3b3JkIH0pOwp9Cg=="}
+import { NextRequest, NextResponse } from "next/server";
+import { verifyApiKey } from "@/lib/api-keys";
+import { supabaseAdmin } from "@/lib/supabase";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+export async function GET(req: NextRequest) {
+  const auth = req.headers.get("authorization") ?? "";
+  const token = auth.replace(/^Bearer\s+/i, "");
+  const v = await verifyApiKey(token);
+  if (!v.valid) {
+    return NextResponse.json({ error: "invalid api key" }, { status: 401 });
+  }
+
+  const sb = supabaseAdmin();
+  const { data: accounts } = await sb
+    .from("accounts")
+    .select("id")
+    .eq("owner_user_id", v.user_id!);
+  const accountIds = (accounts ?? []).map((a: any) => a.id);
+
+  if (accountIds.length === 0) {
+    return NextResponse.json({ data: [] });
+  }
+
+  const { data } = await sb
+    .from("rules")
+    .select(
+      "id, name, trigger_type, keyword, match_mode, post_id, story_id, active, triggered_count, dm_message, dm_buttons, priority, platform, created_at"
+    )
+    .in("account_id", accountIds)
+    .order("priority", { ascending: false });
+
+  return NextResponse.json({ data: data ?? [] });
+}
+
+export async function POST(req: NextRequest) {
+  const auth = req.headers.get("authorization") ?? "";
+  const token = auth.replace(/^Bearer\s+/i, "");
+  const v = await verifyApiKey(token);
+  if (!v.valid) {
+    return NextResponse.json({ error: "invalid api key" }, { status: 401 });
+  }
+
+  const sb = supabaseAdmin();
+  const { data: accounts } = await sb
+    .from("accounts")
+    .select("id")
+    .eq("owner_user_id", v.user_id!);
+  const accountIds = (accounts ?? []).map((a: any) => a.id);
+  if (accountIds.length === 0) {
+    return NextResponse.json({ error: "no account found" }, { status: 400 });
+  }
+  const accountId = accountIds[0];
+
+  const body = await req.json();
+  const {
+    name,
+    trigger_type = "comment",
+    keyword,
+    match_mode = "contains",
+    post_id = null,
+    story_id = null,
+    active = true,
+    dm_message,
+    dm_buttons = [],
+    priority = 50,
+    platform = "instagram",
+  } = body;
+
+  if (!keyword || !dm_message) {
+    return NextResponse.json({ error: "keyword e dm_message obrigatorios" }, { status: 400 });
+  }
+
+  const { data, error } = await sb
+    .from("rules")
+    .insert({
+      account_id: accountId,
+      name: name || keyword,
+      trigger_type,
+      keyword,
+      match_mode,
+      post_id,
+      story_id,
+      active,
+      dm_message,
+      dm_buttons,
+      priority,
+      platform,
+    })
+    .select("id, name, keyword")
+    .single();
+
+  if (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
+
+  return NextResponse.json({ id: data.id, name: data.name, keyword: data.keyword });
+}

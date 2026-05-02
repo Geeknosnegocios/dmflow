@@ -1,1 +1,16 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlc3BvbnNlIH0gZnJvbSAibmV4dC9zZXJ2ZXIiOwppbXBvcnQgeyBzdXBhYmFzZVNlcnZlciB9IGZyb20gIkAvbGliL3N1cGFiYXNlLXNlcnZlciI7CgpleHBvcnQgY29uc3QgcnVudGltZSA9ICJub2RlanMiOwpleHBvcnQgY29uc3QgZHluYW1pYyA9ICJmb3JjZS1keW5hbWljIjsKCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBHRVQocmVxOiBSZXF1ZXN0KSB7CiAgY29uc3Qgc2IgPSBhd2FpdCBzdXBhYmFzZVNlcnZlcigpOwogIGF3YWl0IHNiLmF1dGguc2lnbk91dCgpOwogIGNvbnN0IHVybCA9IG5ldyBVUkwocmVxLnVybCk7CiAgcmV0dXJuIE5leHRSZXNwb25zZS5yZWRpcmVjdChuZXcgVVJMKCIvIiwgdXJsLm9yaWdpbikpOwp9CgpleHBvcnQgYXN5bmMgZnVuY3Rpb24gUE9TVChyZXE6IFJlcXVlc3QpIHsKICByZXR1cm4gR0VUKHJlcSk7Cn0K"}
+import { NextResponse } from "next/server";
+import { supabaseServer } from "@/lib/supabase-server";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+export async function GET(req: Request) {
+  const sb = await supabaseServer();
+  await sb.auth.signOut();
+  const url = new URL(req.url);
+  return NextResponse.redirect(new URL("/", url.origin));
+}
+
+export async function POST(req: Request) {
+  return GET(req);
+}

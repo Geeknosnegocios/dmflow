@@ -1,1 +1,130 @@
-{"data":"InVzZSBjbGllbnQiOwoKaW1wb3J0IFJlYWN0LCB7IHVzZVN0YXRlIH0gZnJvbSAicmVhY3QiOwppbXBvcnQgeyBTcGFya2xlcywgUmVmcmVzaEN3IH0gZnJvbSAibHVjaWRlLXJlYWN0IjsKCnR5cGUgU3VnZ2VzdGlvbiA9IHsKICBrZXl3b3JkOiBzdHJpbmc7CiAgcmF0aW9uYWxlOiBzdHJpbmc7CiAgc3VnZ2VzdGVkX2N0YTogc3RyaW5nOwp9OwoKZXhwb3J0IGZ1bmN0aW9uIEtleXdvcmRTdWdnZXN0aW9ucygpIHsKICBjb25zdCBbbG9hZGluZywgc2V0TG9hZGluZ10gPSB1c2VTdGF0ZShmYWxzZSk7CiAgY29uc3QgW2l0ZW1zLCBzZXRJdGVtc10gPSB1c2VTdGF0ZTxTdWdnZXN0aW9uW10gfCBudWxsPihudWxsKTsKICBjb25zdCBbZXJyb3IsIHNldEVycm9yXSA9IHVzZVN0YXRlPHN0cmluZyB8IG51bGw+KG51bGwpOwogIGNvbnN0IFttZXRhLCBzZXRNZXRhXSA9IHVzZVN0YXRlPHsKICAgIGFuYWx5emVkOiBudW1iZXI7CiAgICBjdXJyZW50OiBzdHJpbmdbXTsKICB9IHwgbnVsbD4obnVsbCk7CgogIGFzeW5jIGZ1bmN0aW9uIHJ1bigpIHsKICAgIHNldExvYWRpbmcodHJ1ZSk7CiAgICBzZXRFcnJvcihudWxsKTsKICAgIHRyeSB7CiAgICAgIGNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKCIvYXBpL2FkbWluL3N1Z2dlc3Qta2V5d29yZHMiKTsKICAgICAgY29uc3QganNvbiA9IGF3YWl0IHJlcy5qc29uKCk7CiAgICAgIGlmICghcmVzLm9rKSB0aHJvdyBuZXcgRXJyb3IoanNvbi5lcnJvciB8fCAiZmFsaGEiKTsKICAgICAgc2V0SXRlbXMoanNvbi5zdWdnZXN0aW9ucyA/PyBbXSk7CiAgICAgIHNldE1ldGEoewogICAgICAgIGFuYWx5emVkOiBqc29uLmNvbW1lbnRzX2FuYWx5emVkID8/IDAsCiAgICAgICAgY3VycmVudDoganNvbi5rZXl3b3Jkc19pbl91c2UgPz8gW10sCiAgICAgIH0pOwogICAgfSBjYXRjaCAoZSkgewogICAgICBzZXRFcnJvcigoZSBhcyBFcnJvcikubWVzc2FnZSk7CiAgICB9IGZpbmFsbHkgewogICAgICBzZXRMb2FkaW5nKGZhbHNlKTsKICAgIH0KICB9CgogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0icm91bmRlZC14bCBib3JkZXIgYm9yZGVyLWxpbmUgYmctc3VyZmFjZSBzaGFkb3ctY2FyZCBvdmVyZmxvdy1oaWRkZW4iPgogICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuIGdhcC00IHB4LTUgcHktNCBib3JkZXItYiBib3JkZXItbGluZSI+CiAgICAgICAgPGRpdj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJ0ZXh0LXNtIGZvbnQtc2VtaWJvbGQgZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIiPgogICAgICAgICAgICA8U3BhcmtsZXMgY2xhc3NOYW1lPSJoLTMuNSB3LTMuNSB0ZXh0LWFjY2VudCIgLz4KICAgICAgICAgICAgU3VnZXN0w7VlcyBJQSBkZSBrZXl3b3JkcwogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC10aW55IHRleHQtZGltLTIgbXQtMC41Ij4KICAgICAgICAgICAgQW5hbGlzYSBjb21lbnTDoXJpb3MgcmVjZW50ZXMgZSBwcm9ww7VlIENUQXMgbm92b3MgKEdyb3EgKyBMbGFtYSAzLjMpCiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgICAgICA8YnV0dG9uCiAgICAgICAgICB0eXBlPSJidXR0b24iCiAgICAgICAgICBvbkNsaWNrPXtydW59CiAgICAgICAgICBkaXNhYmxlZD17bG9hZGluZ30KICAgICAgICAgIGNsYXNzTmFtZT0idGV4dC10aW55IHJvdW5kZWQtbGcgYm9yZGVyIGJvcmRlci1hY2NlbnQvMzAgYmctYWNjZW50LWRpbSB0ZXh0LWFjY2VudCBob3ZlcjpiZy1hY2NlbnQvMjAgcHgtMyBweS0yIHRyYW5zaXRpb24tY29sb3JzIGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBnYXAtMS41IGRpc2FibGVkOm9wYWNpdHktNTAgbWluLWgtWzM2cHhdIgogICAgICAgID4KICAgICAgICAgIDxSZWZyZXNoQ3cKICAgICAgICAgICAgY2xhc3NOYW1lPXtgaC0zLjUgdy0zLjUgJHtsb2FkaW5nID8gImFuaW1hdGUtc3BpbiIgOiAiIn1gfQogICAgICAgICAgLz4KICAgICAgICAgIHtsb2FkaW5nID8gImFuYWxpc2FuZG/igKYiIDogaXRlbXMgPyAiYXR1YWxpemFyIiA6ICJnZXJhciJ9CiAgICAgICAgPC9idXR0b24+CiAgICAgIDwvZGl2PgoKICAgICAgPGRpdiBjbGFzc05hbWU9InAtNSI+CiAgICAgICAgeyFpdGVtcyAmJiAhbG9hZGluZyAmJiAhZXJyb3IgJiYgKAogICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtY2VudGVyIHRleHQtZGltLTIgdGV4dC1zbSBweS02Ij4KICAgICAgICAgICAgQ2xpY2EgZW0gImdlcmFyIiBwcmEgSUEgc3VnZXJpciBDVEFzIGJhc2VhZG8gbm9zIHRldXMgw7psdGltb3MgY29tZW50w6FyaW9zLgogICAgICAgICAgPC9kaXY+CiAgICAgICAgKX0KCiAgICAgICAge2xvYWRpbmcgJiYgKAogICAgICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktMiI+CiAgICAgICAgICAgIHtbMCwgMSwgMiwgMywgNF0ubWFwKChpKSA9PiAoCiAgICAgICAgICAgICAgPGRpdgogICAgICAgICAgICAgICAga2V5PXtpfQogICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJoLTE2IHJvdW5kZWQtbGcgYmctd2hpdGUvWzAuMDRdIGFuaW1hdGUtcHVsc2UiCiAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgKSl9CiAgICAgICAgICA8L2Rpdj4KICAgICAgICApfQoKICAgICAgICB7ZXJyb3IgJiYgKAogICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtc20gdGV4dC1kYW5nZXIgdGV4dC1jZW50ZXIgcHktNCI+CiAgICAgICAgICAgIEVycm86IHtlcnJvcn0KICAgICAgICAgIDwvZGl2PgogICAgICAgICl9CgogICAgICAgIHtpdGVtcyAmJiBpdGVtcy5sZW5ndGggPiAwICYmICgKICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJzcGFjZS15LTIiPgogICAgICAgICAgICB7aXRlbXMubWFwKChzKSA9PiAoCiAgICAgICAgICAgICAgPGRpdgogICAgICAgICAgICAgICAga2V5PXtzLmtleXdvcmR9CiAgICAgICAgICAgICAgICBjbGFzc05hbWU9InJvdW5kZWQtbGcgYm9yZGVyIGJvcmRlci1saW5lIGJnLWJnLTEgcC0zIgogICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiBtYi0xIj4KICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJpbmxpbmUtYmxvY2sgcm91bmRlZC1tZCBiZy1hY2NlbnQtZGltIHRleHQtYWNjZW50IHB4LTIgcHktMC41IHRleHQtc20gZm9udC1tb25vIGZvbnQtc2VtaWJvbGQiPgogICAgICAgICAgICAgICAgICAgIHtzLmtleXdvcmR9CiAgICAgICAgICAgICAgICAgIDwvc3Bhbj4KICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LXRpbnkgdGV4dC1kaW0tMiBpdGFsaWMiPgogICAgICAgICAgICAgICAgICAgIHtzLnJhdGlvbmFsZX0KICAgICAgICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC1zbSB0ZXh0LWRpbS0yIGxlYWRpbmctc251ZyI+CiAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC10aW55IHVwcGVyY2FzZSB0ZXh0LWFjY2VudCBtci0xIj4KICAgICAgICAgICAgICAgICAgICBjdGE6CiAgICAgICAgICAgICAgICAgIDwvc3Bhbj4KICAgICAgICAgICAgICAgICAge3Muc3VnZ2VzdGVkX2N0YX0KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICApKX0KICAgICAgICAgIDwvZGl2PgogICAgICAgICl9CgogICAgICAgIHtpdGVtcyAmJiBpdGVtcy5sZW5ndGggPT09IDAgJiYgbWV0YSAmJiAoCiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC1zbSB0ZXh0LWRpbS0yIHRleHQtY2VudGVyIHB5LTQiPgogICAgICAgICAgICBTZW0gY29tZW50w6FyaW9zIHN1ZmljaWVudGVzLiBQdWJsaWNhIHVtIHBvc3QgY29tIENUQSBlIHZvbHRhLgogICAgICAgICAgPC9kaXY+CiAgICAgICAgKX0KCiAgICAgICAge21ldGEgJiYgKAogICAgICAgICAgPGRpdiBjbGFzc05hbWU9Im10LTMgdGV4dC10aW55IHRleHQtZGltLTIgZm9udC1tb25vIj4KICAgICAgICAgICAge21ldGEuYW5hbHl6ZWR9IGNvbWVudMOhcmlvcyBhbmFsaXNhZG9zIMK3IGVtIHVzbzp7IiAifQogICAgICAgICAgICB7bWV0YS5jdXJyZW50LnNsaWNlKDAsIDUpLmpvaW4oIiwgIikgfHwgIuKAlCJ9CiAgICAgICAgICA8L2Rpdj4KICAgICAgICApfQogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICk7Cn0K"}
+"use client";
+
+import React, { useState } from "react";
+import { Sparkles, RefreshCw } from "lucide-react";
+
+type Suggestion = {
+  keyword: string;
+  rationale: string;
+  suggested_cta: string;
+};
+
+export function KeywordSuggestions() {
+  const [loading, setLoading] = useState(false);
+  const [items, setItems] = useState<Suggestion[] | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [meta, setMeta] = useState<{
+    analyzed: number;
+    current: string[];
+  } | null>(null);
+
+  async function run() {
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/admin/suggest-keywords");
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error || "falha");
+      setItems(json.suggestions ?? []);
+      setMeta({
+        analyzed: json.comments_analyzed ?? 0,
+        current: json.keywords_in_use ?? [],
+      });
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  return (
+    <div className="rounded-xl border border-line bg-surface shadow-card overflow-hidden">
+      <div className="flex items-center justify-between gap-4 px-5 py-4 border-b border-line">
+        <div>
+          <div className="text-sm font-semibold flex items-center gap-2">
+            <Sparkles className="h-3.5 w-3.5 text-accent" />
+            Sugestões IA de keywords
+          </div>
+          <div className="text-tiny text-dim-2 mt-0.5">
+            Analisa comentários recentes e propõe CTAs novos (Groq + Llama 3.3)
+          </div>
+        </div>
+        <button
+          type="button"
+          onClick={run}
+          disabled={loading}
+          className="text-tiny rounded-lg border border-accent/30 bg-accent-dim text-accent hover:bg-accent/20 px-3 py-2 transition-colors inline-flex items-center gap-1.5 disabled:opacity-50 min-h-[36px]"
+        >
+          <RefreshCw
+            className={`h-3.5 w-3.5 ${loading ? "animate-spin" : ""}`}
+          />
+          {loading ? "analisando…" : items ? "atualizar" : "gerar"}
+        </button>
+      </div>
+
+      <div className="p-5">
+        {!items && !loading && !error && (
+          <div className="text-center text-dim-2 text-sm py-6">
+            Clica em "gerar" pra IA sugerir CTAs baseado nos teus últimos comentários.
+          </div>
+        )}
+
+        {loading && (
+          <div className="space-y-2">
+            {[0, 1, 2, 3, 4].map((i) => (
+              <div
+                key={i}
+                className="h-16 rounded-lg bg-white/[0.04] animate-pulse"
+              />
+            ))}
+          </div>
+        )}
+
+        {error && (
+          <div className="text-sm text-danger text-center py-4">
+            Erro: {error}
+          </div>
+        )}
+
+        {items && items.length > 0 && (
+          <div className="space-y-2">
+            {items.map((s) => (
+              <div
+                key={s.keyword}
+                className="rounded-lg border border-line bg-bg-1 p-3"
+              >
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="inline-block rounded-md bg-accent-dim text-accent px-2 py-0.5 text-sm font-mono font-semibold">
+                    {s.keyword}
+                  </span>
+                  <span className="text-tiny text-dim-2 italic">
+                    {s.rationale}
+                  </span>
+                </div>
+                <div className="text-sm text-dim-2 leading-snug">
+                  <span className="text-tiny uppercase text-accent mr-1">
+                    cta:
+                  </span>
+                  {s.suggested_cta}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {items && items.length === 0 && meta && (
+          <div className="text-sm text-dim-2 text-center py-4">
+            Sem comentários suficientes. Publica um post com CTA e volta.
+          </div>
+        )}
+
+        {meta && (
+          <div className="mt-3 text-tiny text-dim-2 font-mono">
+            {meta.analyzed} comentários analisados · em uso:{" "}
+            {meta.current.slice(0, 5).join(", ") || "—"}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

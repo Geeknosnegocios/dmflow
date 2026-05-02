@@ -1,1 +1,51 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlcXVlc3QsIE5leHRSZXNwb25zZSB9IGZyb20gIm5leHQvc2VydmVyIjsKaW1wb3J0IHsgc3VwYWJhc2VBZG1pbiB9IGZyb20gIkAvbGliL3N1cGFiYXNlIjsKaW1wb3J0IHR5cGUgeyBBY2NvdW50IH0gZnJvbSAiQC90eXBlcy9kYiI7CgpleHBvcnQgY29uc3QgcnVudGltZSA9ICJub2RlanMiOwpleHBvcnQgY29uc3QgZHluYW1pYyA9ICJmb3JjZS1keW5hbWljIjsKCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBHRVQocmVxOiBOZXh0UmVxdWVzdCkgewogIGNvbnN0IHsgc2VhcmNoUGFyYW1zIH0gPSBuZXcgVVJMKHJlcS51cmwpOwogIGNvbnN0IGFjY291bnRJZCA9IHNlYXJjaFBhcmFtcy5nZXQoImFjY291bnRfaWQiKTsKCiAgY29uc3Qgc2IgPSBzdXBhYmFzZUFkbWluKCk7CgogIGxldCBxdWVyeSA9IHNiLmZyb20oImFjY291bnRzIikuc2VsZWN0KCIqIikuZXEoImFjdGl2ZSIsIHRydWUpLmxpbWl0KDEpOwogIGlmIChhY2NvdW50SWQpIHF1ZXJ5ID0gcXVlcnkuZXEoImlkIiwgYWNjb3VudElkKSBhcyBhbnk7CgogIGNvbnN0IHsgZGF0YTogYWNjb3VudCB9ID0gYXdhaXQgcXVlcnkubWF5YmVTaW5nbGU8QWNjb3VudD4oKTsKICBpZiAoIWFjY291bnQpIHsKICAgIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IGVycm9yOiAiYWNjb3VudCBub3QgZm91bmQiIH0sIHsgc3RhdHVzOiA0MDQgfSk7CiAgfQoKICBjb25zdCB1cmwgPQogICAgImh0dHBzOi8vZ3JhcGguaW5zdGFncmFtLmNvbS92MjUuMC9tZS9zdG9yaWVzP2ZpZWxkcz1pZCxtZWRpYV90eXBlLG1lZGlhX3VybCx0aHVtYm5haWxfdXJsLHRpbWVzdGFtcCxwZXJtYWxpbmssY2FwdGlvbiI7CiAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2godXJsLCB7CiAgICBoZWFkZXJzOiB7IEF1dGhvcml6YXRpb246IGBCZWFyZXIgJHthY2NvdW50LmlnX2FjY2Vzc190b2tlbn1gIH0sCiAgfSk7CgogIGNvbnN0IGpzb246IGFueSA9IGF3YWl0IHJlcy5qc29uKCkuY2F0Y2goKCkgPT4gKHt9KSk7CgogIGlmICghcmVzLm9rKSB7CiAgICByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oCiAgICAgIHsKICAgICAgICBlcnJvcjoganNvbj8uZXJyb3I/Lm1lc3NhZ2UgPz8gImZhaWxlZCB0byBmZXRjaCBzdG9yaWVzIiwKICAgICAgICBoaW50OiAiU2UgcmV0b3JuYXIgdmF6aW8gb3UgZGVyIGVycm8sIHZlcmlmaXF1ZSBzZSBow6Egc3RvcmllcyBhdGl2b3MgKFN0b3JpZXMgZXhwaXJhbSBlbSAyNGgpLiIsCiAgICAgIH0sCiAgICAgIHsgc3RhdHVzOiByZXMuc3RhdHVzIH0KICAgICk7CiAgfQoKICBjb25zdCBzdG9yaWVzID0gKGpzb24uZGF0YSA/PyBbXSkubWFwKChzOiBhbnkpID0+ICh7CiAgICBpZDogcy5pZCwKICAgIG1lZGlhX3R5cGU6IHMubWVkaWFfdHlwZSwKICAgIG1lZGlhX3VybDogcy5tZWRpYV91cmwsCiAgICB0aHVtYm5haWxfdXJsOiBzLnRodW1ibmFpbF91cmwgPz8gcy5tZWRpYV91cmwsCiAgICB0aW1lc3RhbXA6IHMudGltZXN0YW1wLAogICAgcGVybWFsaW5rOiBzLnBlcm1hbGluaywKICAgIGNhcHRpb246IHMuY2FwdGlvbiA/PyBudWxsLAogIH0pKTsKCiAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsgYWNjb3VudF9pZDogYWNjb3VudC5pZCwgY291bnQ6IHN0b3JpZXMubGVuZ3RoLCBzdG9yaWVzIH0pOwp9Cg=="}
+import { NextRequest, NextResponse } from "next/server";
+import { supabaseAdmin } from "@/lib/supabase";
+import type { Account } from "@/types/db";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+export async function GET(req: NextRequest) {
+  const { searchParams } = new URL(req.url);
+  const accountId = searchParams.get("account_id");
+
+  const sb = supabaseAdmin();
+
+  let query = sb.from("accounts").select("*").eq("active", true).limit(1);
+  if (accountId) query = query.eq("id", accountId) as any;
+
+  const { data: account } = await query.maybeSingle<Account>();
+  if (!account) {
+    return NextResponse.json({ error: "account not found" }, { status: 404 });
+  }
+
+  const url =
+    "https://graph.instagram.com/v25.0/me/stories?fields=id,media_type,media_url,thumbnail_url,timestamp,permalink,caption";
+  const res = await fetch(url, {
+    headers: { Authorization: `Bearer ${account.ig_access_token}` },
+  });
+
+  const json: any = await res.json().catch(() => ({}));
+
+  if (!res.ok) {
+    return NextResponse.json(
+      {
+        error: json?.error?.message ?? "failed to fetch stories",
+        hint: "Se retornar vazio ou der erro, verifique se há stories ativos (Stories expiram em 24h).",
+      },
+      { status: res.status }
+    );
+  }
+
+  const stories = (json.data ?? []).map((s: any) => ({
+    id: s.id,
+    media_type: s.media_type,
+    media_url: s.media_url,
+    thumbnail_url: s.thumbnail_url ?? s.media_url,
+    timestamp: s.timestamp,
+    permalink: s.permalink,
+    caption: s.caption ?? null,
+  }));
+
+  return NextResponse.json({ account_id: account.id, count: stories.length, stories });
+}

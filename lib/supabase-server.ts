@@ -1,1 +1,31 @@
-{"data":"aW1wb3J0IHsgY3JlYXRlU2VydmVyQ2xpZW50LCB0eXBlIENvb2tpZU9wdGlvbnMgfSBmcm9tICJAc3VwYWJhc2Uvc3NyIjsKaW1wb3J0IHsgY29va2llcyB9IGZyb20gIm5leHQvaGVhZGVycyI7CgovKioKICogU2VydmVyLXNpZGUgU3VwYWJhc2UgY2xpZW50IGJvdW5kIHRvIHRoZSByZXF1ZXN0IGNvb2tpZXMuCiAqIFVzZSB0aGlzIGluIFNlcnZlciBDb21wb25lbnRzLCBTZXJ2ZXIgQWN0aW9ucywgYW5kIHJvdXRlIGhhbmRsZXJzCiAqIHRoYXQgbmVlZCBhY2Nlc3MgdG8gYGF1dGguZ2V0VXNlcigpYC4KICovCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBzdXBhYmFzZVNlcnZlcigpIHsKICBjb25zdCBzdG9yZSA9IGF3YWl0IGNvb2tpZXMoKTsKICBjb25zdCB1cmwgPSBwcm9jZXNzLmVudi5ORVhUX1BVQkxJQ19TVVBBQkFTRV9VUkwhOwogIGNvbnN0IGFub24gPSBwcm9jZXNzLmVudi5ORVhUX1BVQkxJQ19TVVBBQkFTRV9BTk9OX0tFWSE7CgogIHJldHVybiBjcmVhdGVTZXJ2ZXJDbGllbnQodXJsLCBhbm9uLCB7CiAgICBjb29raWVzOiB7CiAgICAgIGdldEFsbCgpIHsKICAgICAgICByZXR1cm4gc3RvcmUuZ2V0QWxsKCk7CiAgICAgIH0sCiAgICAgIHNldEFsbChjb29raWVzVG9TZXQpIHsKICAgICAgICB0cnkgewogICAgICAgICAgY29va2llc1RvU2V0LmZvckVhY2goKHsgbmFtZSwgdmFsdWUsIG9wdGlvbnMgfSkgPT4KICAgICAgICAgICAgc3RvcmUuc2V0KG5hbWUsIHZhbHVlLCBvcHRpb25zIGFzIENvb2tpZU9wdGlvbnMpCiAgICAgICAgICApOwogICAgICAgIH0gY2F0Y2ggewogICAgICAgICAgLy8gY2FsbGVkIGZyb20gYSBTZXJ2ZXIgQ29tcG9uZW50IOKAlCBjb29raWVzKCkgaXMgcmVhZC1vbmx5OyBpZ25vcmUKICAgICAgICB9CiAgICAgIH0sCiAgICB9LAogICAgZGI6IHsgc2NoZW1hOiAiZG1mbG93IiBhcyBhbnkgfSwKICB9KTsKfQo="}
+import { createServerClient, type CookieOptions } from "@supabase/ssr";
+import { cookies } from "next/headers";
+
+/**
+ * Server-side Supabase client bound to the request cookies.
+ * Use this in Server Components, Server Actions, and route handlers
+ * that need access to `auth.getUser()`.
+ */
+export async function supabaseServer() {
+  const store = await cookies();
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+  const anon = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+
+  return createServerClient(url, anon, {
+    cookies: {
+      getAll() {
+        return store.getAll();
+      },
+      setAll(cookiesToSet) {
+        try {
+          cookiesToSet.forEach(({ name, value, options }) =>
+            store.set(name, value, options as CookieOptions)
+          );
+        } catch {
+          // called from a Server Component — cookies() is read-only; ignore
+        }
+      },
+    },
+    db: { schema: "dmflow" as any },
+  });
+}

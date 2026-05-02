@@ -1,1 +1,263 @@
-{"data":"aW1wb3J0IHsgc3VwYWJhc2VBZG1pbiB9IGZyb20gIkAvbGliL3N1cGFiYXNlIjsKaW1wb3J0IHsgcmV2YWxpZGF0ZVBhdGggfSBmcm9tICJuZXh0L2NhY2hlIjsKaW1wb3J0IHsgQ2FyZCwgQ2FyZEhlYWRlciwgRW1wdHlTdGF0ZSwgU3RhdHVzUGlsbCB9IGZyb20gIkAvY29tcG9uZW50cy92aXoiOwppbXBvcnQgdHlwZSB7IEFjY291bnQgfSBmcm9tICJAL3R5cGVzL2RiIjsKCmV4cG9ydCBjb25zdCBkeW5hbWljID0gImZvcmNlLWR5bmFtaWMiOwoKdHlwZSBTdG9yeSA9IHsKICBpZDogc3RyaW5nOwogIG1lZGlhX3R5cGU6IHN0cmluZzsKICBtZWRpYV91cmw6IHN0cmluZzsKICB0aHVtYm5haWxfdXJsOiBzdHJpbmc7CiAgdGltZXN0YW1wOiBzdHJpbmc7CiAgcGVybWFsaW5rOiBzdHJpbmc7CiAgY2FwdGlvbjogc3RyaW5nIHwgbnVsbDsKfTsKCmFzeW5jIGZ1bmN0aW9uIGZldGNoU3RvcmllcyhhY2NvdW50SWQ6IHN0cmluZyk6IFByb21pc2U8U3RvcnlbXT4gewogIGNvbnN0IHNiID0gc3VwYWJhc2VBZG1pbigpOwogIGNvbnN0IHsgZGF0YTogYWNjb3VudCB9ID0gYXdhaXQgc2IKICAgIC5mcm9tKCJhY2NvdW50cyIpCiAgICAuc2VsZWN0KCJpZ19hY2Nlc3NfdG9rZW4iKQogICAgLmVxKCJpZCIsIGFjY291bnRJZCkKICAgIC5tYXliZVNpbmdsZTxBY2NvdW50PigpOwogIGlmICghYWNjb3VudCkgcmV0dXJuIFtdOwoKICBjb25zdCB1cmwgPQogICAgImh0dHBzOi8vZ3JhcGguaW5zdGFncmFtLmNvbS92MjUuMC9tZS9zdG9yaWVzP2ZpZWxkcz1pZCxtZWRpYV90eXBlLG1lZGlhX3VybCx0aHVtYm5haWxfdXJsLHRpbWVzdGFtcCxwZXJtYWxpbmssY2FwdGlvbiI7CiAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2godXJsLCB7CiAgICBoZWFkZXJzOiB7IEF1dGhvcml6YXRpb246IGBCZWFyZXIgJHthY2NvdW50LmlnX2FjY2Vzc190b2tlbn1gIH0sCiAgICBjYWNoZTogIm5vLXN0b3JlIiwKICB9KTsKICBpZiAoIXJlcy5vaykgcmV0dXJuIFtdOwogIGNvbnN0IGpzb246IGFueSA9IGF3YWl0IHJlcy5qc29uKCkuY2F0Y2goKCkgPT4gKHt9KSk7CiAgcmV0dXJuIChqc29uLmRhdGEgPz8gW10pIGFzIFN0b3J5W107Cn0KCmFzeW5jIGZ1bmN0aW9uIGNyZWF0ZVN0b3J5UnVsZShmb3JtRGF0YTogRm9ybURhdGEpIHsKICAidXNlIHNlcnZlciI7CiAgY29uc3Qgc2IgPSBzdXBhYmFzZUFkbWluKCk7CgogIGNvbnN0IGFjY291bnRJZCA9IFN0cmluZyhmb3JtRGF0YS5nZXQoImFjY291bnRfaWQiKSk7CiAgY29uc3Qgc3RvcnlJZCA9IFN0cmluZyhmb3JtRGF0YS5nZXQoInN0b3J5X2lkIikpOwogIGNvbnN0IHN0b3J5TGFiZWwgPSBTdHJpbmcoZm9ybURhdGEuZ2V0KCJzdG9yeV9sYWJlbCIpID8/ICIiKTsKICBjb25zdCBrZXl3b3JkID0gU3RyaW5nKGZvcm1EYXRhLmdldCgia2V5d29yZCIpID8/ICIiKS50cmltKCk7CiAgY29uc3QgbWF0Y2hNb2RlID0gKFN0cmluZyhmb3JtRGF0YS5nZXQoIm1hdGNoX21vZGUiKSA/PyAiY29udGFpbnMiKSkgYXMgYW55OwogIGNvbnN0IGRtTWVzc2FnZSA9IFN0cmluZyhmb3JtRGF0YS5nZXQoImRtX21lc3NhZ2UiKSA/PyAiIikudHJpbSgpOwogIGNvbnN0IGJ1dHRvblRleHQgPSBTdHJpbmcoZm9ybURhdGEuZ2V0KCJidXR0b25fdGV4dCIpID8/ICIiKS50cmltKCk7CiAgY29uc3QgYnV0dG9uVXJsID0gU3RyaW5nKGZvcm1EYXRhLmdldCgiYnV0dG9uX3VybCIpID8/ICIiKS50cmltKCk7CgogIGlmICghYWNjb3VudElkIHx8ICFzdG9yeUlkIHx8ICFkbU1lc3NhZ2UpIHJldHVybjsKCiAgY29uc3QgdXNlS2V5d29yZCA9IGtleXdvcmQubGVuZ3RoID4gMCAmJiBtYXRjaE1vZGUgIT09ICJhbnkiOwoKICBhd2FpdCBzYi5mcm9tKCJydWxlcyIpLmluc2VydCh7CiAgICBhY2NvdW50X2lkOiBhY2NvdW50SWQsCiAgICBuYW1lOiBgU3RvcnkgJHtzdG9yeUxhYmVsfSDigJQgJHtrZXl3b3JkIHx8ICJxdWFscXVlciByZXNwb3N0YSJ9YCwKICAgIHRyaWdnZXJfdHlwZTogInN0b3J5X3JlcGx5IiwKICAgIHN0b3J5X2lkOiBzdG9yeUlkLAogICAga2V5d29yZDogdXNlS2V5d29yZCA/IGtleXdvcmQgOiBudWxsLAogICAgbWF0Y2hfbW9kZTogdXNlS2V5d29yZCA/IG1hdGNoTW9kZSA6ICJhbnkiLAogICAgZG1fbWVzc2FnZTogZG1NZXNzYWdlLAogICAgZG1fYnV0dG9uczoKICAgICAgYnV0dG9uVGV4dCAmJiBidXR0b25VcmwKICAgICAgICA/IFt7IHRpdGxlOiBidXR0b25UZXh0LCB1cmw6IGJ1dHRvblVybCB9XQogICAgICAgIDogbnVsbCwKICAgIHByaW9yaXR5OiAzMCwKICB9KTsKCiAgcmV2YWxpZGF0ZVBhdGgoIi9kYXNoYm9hcmQvc3RvcmllcyIpOwp9CgpleHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiBTdG9yaWVzUGFnZSgpIHsKICBjb25zdCBzYiA9IHN1cGFiYXNlQWRtaW4oKTsKICBjb25zdCB7IGRhdGE6IGFjY291bnRzIH0gPSBhd2FpdCBzYgogICAgLmZyb20oImFjY291bnRzIikKICAgIC5zZWxlY3QoImlkLCBuYW1lLCBpZ191c2VybmFtZSIpCiAgICAuZXEoImFjdGl2ZSIsIHRydWUpOwoKICBjb25zdCBhY2NvdW50ID0gYWNjb3VudHM/LlswXTsKICBpZiAoIWFjY291bnQpIHsKICAgIHJldHVybiAoCiAgICAgIDxFbXB0eVN0YXRlCiAgICAgICAgdGl0bGU9Ik5lbmh1bWEgY29udGEgY29uZWN0YWRhIgogICAgICAgIG1lc3NhZ2U9IkNhZGFzdHJlIHVtYSBjb250YSBJbnN0YWdyYW0gYW50ZXMgZGUgdXNhciBzdG9yaWVzLiIKICAgICAgLz4KICAgICk7CiAgfQoKICBjb25zdCBzdG9yaWVzID0gYXdhaXQgZmV0Y2hTdG9yaWVzKGFjY291bnQuaWQpOwoKICBjb25zdCB7IGRhdGE6IGV4aXN0aW5nUnVsZXMgfSA9IGF3YWl0IHNiCiAgICAuZnJvbSgicnVsZXMiKQogICAgLnNlbGVjdCgiaWQsIG5hbWUsIGtleXdvcmQsIHN0b3J5X2lkLCB0cmlnZ2VyZWRfY291bnQsIGFjdGl2ZSIpCiAgICAuZXEoImFjY291bnRfaWQiLCBhY2NvdW50LmlkKQogICAgLmVxKCJ0cmlnZ2VyX3R5cGUiLCAic3RvcnlfcmVwbHkiKQogICAgLm9yZGVyKCJjcmVhdGVkX2F0IiwgeyBhc2NlbmRpbmc6IGZhbHNlIH0pOwoKICBjb25zdCBydWxlc0J5U3RvcnkgPSBuZXcgTWFwPHN0cmluZywgYW55W10+KCk7CiAgZm9yIChjb25zdCByIG9mIChleGlzdGluZ1J1bGVzID8/IFtdKSBhcyBhbnlbXSkgewogICAgaWYgKCFyLnN0b3J5X2lkKSBjb250aW51ZTsKICAgIGNvbnN0IGFyciA9IHJ1bGVzQnlTdG9yeS5nZXQoci5zdG9yeV9pZCkgPz8gW107CiAgICBhcnIucHVzaChyKTsKICAgIHJ1bGVzQnlTdG9yeS5zZXQoci5zdG9yeV9pZCwgYXJyKTsKICB9CgogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS04Ij4KICAgICAgPGhlYWRlciBjbGFzc05hbWU9ImZsZXggZmxleC13cmFwIGl0ZW1zLWVuZCBqdXN0aWZ5LWJldHdlZW4gZ2FwLTQiPgogICAgICAgIDxkaXY+CiAgICAgICAgICA8aDEgY2xhc3NOYW1lPSJ0ZXh0LTR4bCBmb250LWJvbGQgdHJhY2tpbmctdGlnaHQiPlN0b3JpZXMgYXRpdm9zPC9oMT4KICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC1kaW0tMiB0ZXh0LXNtIj4KICAgICAgICAgICAgQHthY2NvdW50LmlnX3VzZXJuYW1lfSDCtyDDumx0aW1vcyAyNGggwrcgY2xpY2EgbnVtIHN0b3J5IHByYSBjcmlhciByZWdyYQogICAgICAgICAgPC9wPgogICAgICAgIDwvZGl2PgogICAgICAgIDxTdGF0dXNQaWxsCiAgICAgICAgICB0b25lPXtzdG9yaWVzLmxlbmd0aCA+IDAgPyAiYWNjZW50IiA6ICJkaW0ifQogICAgICAgICAgbGFiZWw9e2Ake3N0b3JpZXMubGVuZ3RofSBhdGl2byR7c3Rvcmllcy5sZW5ndGggIT09IDEgPyAicyIgOiAiIn1gfQogICAgICAgIC8+CiAgICAgIDwvaGVhZGVyPgoKICAgICAge3N0b3JpZXMubGVuZ3RoID09PSAwID8gKAogICAgICAgIDxFbXB0eVN0YXRlCiAgICAgICAgICB0aXRsZT0iU2VtIHN0b3JpZXMgYXRpdm9zIG5vIG1vbWVudG8iCiAgICAgICAgICBtZXNzYWdlPSJTdG9yaWVzIGV4cGlyYW0gZW0gMjRoLiBQdWJsaWNhIHVtIG5vIEluc3RhZ3JhbSBlIHZvbHRhIGFxdWkg4oCUIHZhaSBhcGFyZWNlciBlbSBzZWd1bmRvcy4iCiAgICAgICAgLz4KICAgICAgKSA6ICgKICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZ3JpZCBncmlkLWNvbHMtMSBtZDpncmlkLWNvbHMtMiBsZzpncmlkLWNvbHMtMyBnYXAtNCI+CiAgICAgICAgICB7c3Rvcmllcy5tYXAoKHMpID0+IHsKICAgICAgICAgICAgY29uc3QgcnVsZXMgPSBydWxlc0J5U3RvcnkuZ2V0KHMuaWQpID8/IFtdOwogICAgICAgICAgICBjb25zdCBzdG9yeUxhYmVsID0gbmV3IERhdGUocy50aW1lc3RhbXApLnRvTG9jYWxlU3RyaW5nKCJwdC1CUiIsIHsKICAgICAgICAgICAgICBkYXk6ICIyLWRpZ2l0IiwKICAgICAgICAgICAgICBtb250aDogIjItZGlnaXQiLAogICAgICAgICAgICAgIGhvdXI6ICIyLWRpZ2l0IiwKICAgICAgICAgICAgICBtaW51dGU6ICIyLWRpZ2l0IiwKICAgICAgICAgICAgfSk7CiAgICAgICAgICAgIHJldHVybiAoCiAgICAgICAgICAgICAgPENhcmQga2V5PXtzLmlkfSBjbGFzc05hbWU9Im92ZXJmbG93LWhpZGRlbiI+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iYXNwZWN0LVs5LzE2XSBiZy1iZy0xIHJlbGF0aXZlIj4KICAgICAgICAgICAgICAgICAge3MubWVkaWFfdHlwZSA9PT0gIlZJREVPIiA/ICgKICAgICAgICAgICAgICAgICAgICA8dmlkZW8KICAgICAgICAgICAgICAgICAgICAgIHNyYz17cy5tZWRpYV91cmx9CiAgICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9InctZnVsbCBoLWZ1bGwgb2JqZWN0LWNvdmVyIgogICAgICAgICAgICAgICAgICAgICAgbXV0ZWQKICAgICAgICAgICAgICAgICAgICAgIHBsYXlzSW5saW5lCiAgICAgICAgICAgICAgICAgICAgICBwcmVsb2FkPSJtZXRhZGF0YSIKICAgICAgICAgICAgICAgICAgICAvPgogICAgICAgICAgICAgICAgICApIDogKAogICAgICAgICAgICAgICAgICAgIC8vIGVzbGludC1kaXNhYmxlLW5leHQtbGluZSBAbmV4dC9uZXh0L25vLWltZy1lbGVtZW50CiAgICAgICAgICAgICAgICAgICAgPGltZwogICAgICAgICAgICAgICAgICAgICAgc3JjPXtzLnRodW1ibmFpbF91cmwgfHwgcy5tZWRpYV91cmx9CiAgICAgICAgICAgICAgICAgICAgICBhbHQ9InN0b3J5IgogICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJ3LWZ1bGwgaC1mdWxsIG9iamVjdC1jb3ZlciIKICAgICAgICAgICAgICAgICAgICAvPgogICAgICAgICAgICAgICAgICApfQogICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iYWJzb2x1dGUgdG9wLTMgbGVmdC0zIj4KICAgICAgICAgICAgICAgICAgICA8U3RhdHVzUGlsbAogICAgICAgICAgICAgICAgICAgICAgdG9uZT17cy5tZWRpYV90eXBlID09PSAiVklERU8iID8gInZpb2xldCIgOiAiYWNjZW50In0KICAgICAgICAgICAgICAgICAgICAgIGxhYmVsPXtzLm1lZGlhX3R5cGV9CiAgICAgICAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICAgIHtydWxlcy5sZW5ndGggPiAwICYmICgKICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iYWJzb2x1dGUgdG9wLTMgcmlnaHQtMyI+CiAgICAgICAgICAgICAgICAgICAgICA8U3RhdHVzUGlsbAogICAgICAgICAgICAgICAgICAgICAgICB0b25lPSJnb29kIgogICAgICAgICAgICAgICAgICAgICAgICBsYWJlbD17YCR7cnVsZXMubGVuZ3RofSByZWdyYSR7cnVsZXMubGVuZ3RoICE9PSAxID8gInMiIDogIiJ9YH0KICAgICAgICAgICAgICAgICAgICAgICAgcHVsc2UKICAgICAgICAgICAgICAgICAgICAgIC8+CiAgICAgICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICAgICl9CiAgICAgICAgICAgICAgICA8L2Rpdj4KCiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0icC00IHNwYWNlLXktMyI+CiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gdGV4dC10aW55IHRleHQtZGltLTIgZm9udC1tb25vIj4KICAgICAgICAgICAgICAgICAgICA8c3Bhbj57c3RvcnlMYWJlbH08L3NwYW4+CiAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0cnVuY2F0ZSBtYXgtdy1bNjAlXSIgdGl0bGU9e3MuaWR9PgogICAgICAgICAgICAgICAgICAgICAge3MuaWQuc2xpY2UoMCwgMTQpfeKApgogICAgICAgICAgICAgICAgICAgIDwvc3Bhbj4KICAgICAgICAgICAgICAgICAgPC9kaXY+CgogICAgICAgICAgICAgICAgICB7cnVsZXMubGVuZ3RoID4gMCAmJiAoCiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktMSI+CiAgICAgICAgICAgICAgICAgICAgICB7cnVsZXMubWFwKChyKSA9PiAoCiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYKICAgICAgICAgICAgICAgICAgICAgICAgICBrZXk9e3IuaWR9CiAgICAgICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJ0ZXh0LXRpbnkgZmxleCBqdXN0aWZ5LWJldHdlZW4gaXRlbXMtY2VudGVyIGJnLWFjY2VudC1kaW0gcm91bmRlZCBweC0yIHB5LTEiCiAgICAgICAgICAgICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtYWNjZW50IGZvbnQtbW9ubyI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7ci5rZXl3b3JkID8/ICJxdWFscXVlciJ9CiAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC1kaW0tMiBtb25vLW51bSI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7ci50cmlnZ2VyZWRfY291bnR9eAogICAgICAgICAgICAgICAgICAgICAgICAgIDwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICAgICAgICApKX0KICAgICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgKX0KCiAgICAgICAgICAgICAgICAgIDxkZXRhaWxzIGNsYXNzTmFtZT0iZ3JvdXAiPgogICAgICAgICAgICAgICAgICAgIDxzdW1tYXJ5IGNsYXNzTmFtZT0iY3Vyc29yLXBvaW50ZXIgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LWFjY2VudCBob3Zlcjp0ZXh0LWFjY2VudC84MCBsaXN0LW5vbmUgc2VsZWN0LW5vbmUiPgogICAgICAgICAgICAgICAgICAgICAgKyBOb3ZhIHJlZ3JhIHByYSBlc3RlIHN0b3J5CiAgICAgICAgICAgICAgICAgICAgPC9zdW1tYXJ5PgogICAgICAgICAgICAgICAgICAgIDxmb3JtCiAgICAgICAgICAgICAgICAgICAgICBhY3Rpb249e2NyZWF0ZVN0b3J5UnVsZX0KICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0ibXQtMyBzcGFjZS15LTIiCiAgICAgICAgICAgICAgICAgICAgPgogICAgICAgICAgICAgICAgICAgICAgPGlucHV0IHR5cGU9ImhpZGRlbiIgbmFtZT0iYWNjb3VudF9pZCIgdmFsdWU9e2FjY291bnQuaWR9IC8+CiAgICAgICAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBuYW1lPSJzdG9yeV9pZCIgdmFsdWU9e3MuaWR9IC8+CiAgICAgICAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBuYW1lPSJzdG9yeV9sYWJlbCIgdmFsdWU9e3N0b3J5TGFiZWx9IC8+CiAgICAgICAgICAgICAgICAgICAgICA8aW5wdXQKICAgICAgICAgICAgICAgICAgICAgICAgbmFtZT0ia2V5d29yZCIKICAgICAgICAgICAgICAgICAgICAgICAgcGxhY2Vob2xkZXI9J0tleXdvcmQgKGV4OiAiVFVSQk8iKSBvdSB2YXppbycKICAgICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJ3LWZ1bGwgYmctYmctMSBib3JkZXIgYm9yZGVyLWxpbmUtMiByb3VuZGVkLWxnIHB4LTIuNSBweS0xLjUgdGV4dC14cyIKICAgICAgICAgICAgICAgICAgICAgIC8+CiAgICAgICAgICAgICAgICAgICAgICA8c2VsZWN0CiAgICAgICAgICAgICAgICAgICAgICAgIG5hbWU9Im1hdGNoX21vZGUiCiAgICAgICAgICAgICAgICAgICAgICAgIGRlZmF1bHRWYWx1ZT0iY29udGFpbnMiCiAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0idy1mdWxsIGJnLWJnLTEgYm9yZGVyIGJvcmRlci1saW5lLTIgcm91bmRlZC1sZyBweC0yLjUgcHktMS41IHRleHQteHMiCiAgICAgICAgICAgICAgICAgICAgICA+CiAgICAgICAgICAgICAgICAgICAgICAgIDxvcHRpb24gdmFsdWU9ImNvbnRhaW5zIj5jb250w6ltIGtleXdvcmQ8L29wdGlvbj4KICAgICAgICAgICAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT0iZXhhY3QiPmV4YXRvPC9vcHRpb24+CiAgICAgICAgICAgICAgICAgICAgICAgIDxvcHRpb24gdmFsdWU9InN0YXJ0c193aXRoIj5jb21lw6dhIGNvbTwvb3B0aW9uPgogICAgICAgICAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSJhbnkiPnF1YWxxdWVyIHJlc3Bvc3RhPC9vcHRpb24+CiAgICAgICAgICAgICAgICAgICAgICA8L3NlbGVjdD4KICAgICAgICAgICAgICAgICAgICAgIDx0ZXh0YXJlYQogICAgICAgICAgICAgICAgICAgICAgICBuYW1lPSJkbV9tZXNzYWdlIgogICAgICAgICAgICAgICAgICAgICAgICByb3dzPXsyfQogICAgICAgICAgICAgICAgICAgICAgICBkZWZhdWx0VmFsdWU9IlZhbGV1IHBvciByZXNwb25kZXIgbWV1IHN0b3J5IPCflKUgQ29tbyBwcm9tZXRpLCBhcXVpIGVzdMOhIG8gbWF0ZXJpYWwg8J+RhyIKICAgICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJ3LWZ1bGwgYmctYmctMSBib3JkZXIgYm9yZGVyLWxpbmUtMiByb3VuZGVkLWxnIHB4LTIuNSBweS0xLjUgdGV4dC14cyIKICAgICAgICAgICAgICAgICAgICAgICAgcmVxdWlyZWQKICAgICAgICAgICAgICAgICAgICAgIC8+CiAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZ3JpZCBncmlkLWNvbHMtMiBnYXAtMiI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxpbnB1dAogICAgICAgICAgICAgICAgICAgICAgICAgIG5hbWU9ImJ1dHRvbl90ZXh0IgogICAgICAgICAgICAgICAgICAgICAgICAgIHBsYWNlaG9sZGVyPSJCb3TDo28iCiAgICAgICAgICAgICAgICAgICAgICAgICAgZGVmYXVsdFZhbHVlPSJBY2Vzc2FyIgogICAgICAgICAgICAgICAgICAgICAgICAgIG1heExlbmd0aD17MjB9CiAgICAgICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJiZy1iZy0xIGJvcmRlciBib3JkZXItbGluZS0yIHJvdW5kZWQtbGcgcHgtMi41IHB5LTEuNSB0ZXh0LXhzIgogICAgICAgICAgICAgICAgICAgICAgICAvPgogICAgICAgICAgICAgICAgICAgICAgICA8aW5wdXQKICAgICAgICAgICAgICAgICAgICAgICAgICBuYW1lPSJidXR0b25fdXJsIgogICAgICAgICAgICAgICAgICAgICAgICAgIHBsYWNlaG9sZGVyPSJVUkwiCiAgICAgICAgICAgICAgICAgICAgICAgICAgZGVmYXVsdFZhbHVlPSJodHRwczovL2dlZWstb3MuZ2Vla2FjYWRlbXkuc2l0ZS8/dXRtX3NvdXJjZT1pbnN0YWdyYW0mdXRtX21lZGl1bT1kbWZsb3cmdXRtX2NhbXBhaWduPXN0b3J5IgogICAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0iYmctYmctMSBib3JkZXIgYm9yZGVyLWxpbmUtMiByb3VuZGVkLWxnIHB4LTIuNSBweS0xLjUgdGV4dC14cyIKICAgICAgICAgICAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbgogICAgICAgICAgICAgICAgICAgICAgICB0eXBlPSJzdWJtaXQiCiAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0idy1mdWxsIHJvdW5kZWQtbGcgYmctYWNjZW50IGhvdmVyOmJnLWFjY2VudC85MCB0ZXh0LWFjY2VudC1pbmsgZm9udC1zZW1pYm9sZCBweS0yIHRleHQteHMgdHJhbnNpdGlvbi1jb2xvcnMiCiAgICAgICAgICAgICAgICAgICAgICA+CiAgICAgICAgICAgICAgICAgICAgICAgIENyaWFyIHJlZ3JhCiAgICAgICAgICAgICAgICAgICAgICA8L2J1dHRvbj4KICAgICAgICAgICAgICAgICAgICA8L2Zvcm0+CiAgICAgICAgICAgICAgICAgIDwvZGV0YWlscz4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgIDwvQ2FyZD4KICAgICAgICAgICAgKTsKICAgICAgICAgIH0pfQogICAgICAgIDwvZGl2PgogICAgICApfQogICAgPC9kaXY+CiAgKTsKfQo="}
+import { supabaseAdmin } from "@/lib/supabase";
+import { revalidatePath } from "next/cache";
+import { Card, CardHeader, EmptyState, StatusPill } from "@/components/viz";
+import type { Account } from "@/types/db";
+
+export const dynamic = "force-dynamic";
+
+type Story = {
+  id: string;
+  media_type: string;
+  media_url: string;
+  thumbnail_url: string;
+  timestamp: string;
+  permalink: string;
+  caption: string | null;
+};
+
+async function fetchStories(accountId: string): Promise<Story[]> {
+  const sb = supabaseAdmin();
+  const { data: account } = await sb
+    .from("accounts")
+    .select("ig_access_token")
+    .eq("id", accountId)
+    .maybeSingle<Account>();
+  if (!account) return [];
+
+  const url =
+    "https://graph.instagram.com/v25.0/me/stories?fields=id,media_type,media_url,thumbnail_url,timestamp,permalink,caption";
+  const res = await fetch(url, {
+    headers: { Authorization: `Bearer ${account.ig_access_token}` },
+    cache: "no-store",
+  });
+  if (!res.ok) return [];
+  const json: any = await res.json().catch(() => ({}));
+  return (json.data ?? []) as Story[];
+}
+
+async function createStoryRule(formData: FormData) {
+  "use server";
+  const sb = supabaseAdmin();
+
+  const accountId = String(formData.get("account_id"));
+  const storyId = String(formData.get("story_id"));
+  const storyLabel = String(formData.get("story_label") ?? "");
+  const keyword = String(formData.get("keyword") ?? "").trim();
+  const matchMode = (String(formData.get("match_mode") ?? "contains")) as any;
+  const dmMessage = String(formData.get("dm_message") ?? "").trim();
+  const buttonText = String(formData.get("button_text") ?? "").trim();
+  const buttonUrl = String(formData.get("button_url") ?? "").trim();
+
+  if (!accountId || !storyId || !dmMessage) return;
+
+  const useKeyword = keyword.length > 0 && matchMode !== "any";
+
+  await sb.from("rules").insert({
+    account_id: accountId,
+    name: `Story ${storyLabel} — ${keyword || "qualquer resposta"}`,
+    trigger_type: "story_reply",
+    story_id: storyId,
+    keyword: useKeyword ? keyword : null,
+    match_mode: useKeyword ? matchMode : "any",
+    dm_message: dmMessage,
+    dm_buttons:
+      buttonText && buttonUrl
+        ? [{ title: buttonText, url: buttonUrl }]
+        : null,
+    priority: 30,
+  });
+
+  revalidatePath("/dashboard/stories");
+}
+
+export default async function StoriesPage() {
+  const sb = supabaseAdmin();
+  const { data: accounts } = await sb
+    .from("accounts")
+    .select("id, name, ig_username")
+    .eq("active", true);
+
+  const account = accounts?.[0];
+  if (!account) {
+    return (
+      <EmptyState
+        title="Nenhuma conta conectada"
+        message="Cadastre uma conta Instagram antes de usar stories."
+      />
+    );
+  }
+
+  const stories = await fetchStories(account.id);
+
+  const { data: existingRules } = await sb
+    .from("rules")
+    .select("id, name, keyword, story_id, triggered_count, active")
+    .eq("account_id", account.id)
+    .eq("trigger_type", "story_reply")
+    .order("created_at", { ascending: false });
+
+  const rulesByStory = new Map<string, any[]>();
+  for (const r of (existingRules ?? []) as any[]) {
+    if (!r.story_id) continue;
+    const arr = rulesByStory.get(r.story_id) ?? [];
+    arr.push(r);
+    rulesByStory.set(r.story_id, arr);
+  }
+
+  return (
+    <div className="space-y-8">
+      <header className="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h1 className="text-4xl font-bold tracking-tight">Stories ativos</h1>
+          <p className="text-dim-2 text-sm">
+            @{account.ig_username} · últimos 24h · clica num story pra criar regra
+          </p>
+        </div>
+        <StatusPill
+          tone={stories.length > 0 ? "accent" : "dim"}
+          label={`${stories.length} ativo${stories.length !== 1 ? "s" : ""}`}
+        />
+      </header>
+
+      {stories.length === 0 ? (
+        <EmptyState
+          title="Sem stories ativos no momento"
+          message="Stories expiram em 24h. Publica um no Instagram e volta aqui — vai aparecer em segundos."
+        />
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {stories.map((s) => {
+            const rules = rulesByStory.get(s.id) ?? [];
+            const storyLabel = new Date(s.timestamp).toLocaleString("pt-BR", {
+              day: "2-digit",
+              month: "2-digit",
+              hour: "2-digit",
+              minute: "2-digit",
+            });
+            return (
+              <Card key={s.id} className="overflow-hidden">
+                <div className="aspect-[9/16] bg-bg-1 relative">
+                  {s.media_type === "VIDEO" ? (
+                    <video
+                      src={s.media_url}
+                      className="w-full h-full object-cover"
+                      muted
+                      playsInline
+                      preload="metadata"
+                    />
+                  ) : (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={s.thumbnail_url || s.media_url}
+                      alt="story"
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                  <div className="absolute top-3 left-3">
+                    <StatusPill
+                      tone={s.media_type === "VIDEO" ? "violet" : "accent"}
+                      label={s.media_type}
+                    />
+                  </div>
+                  {rules.length > 0 && (
+                    <div className="absolute top-3 right-3">
+                      <StatusPill
+                        tone="good"
+                        label={`${rules.length} regra${rules.length !== 1 ? "s" : ""}`}
+                        pulse
+                      />
+                    </div>
+                  )}
+                </div>
+
+                <div className="p-4 space-y-3">
+                  <div className="flex items-center justify-between text-tiny text-dim-2 font-mono">
+                    <span>{storyLabel}</span>
+                    <span className="truncate max-w-[60%]" title={s.id}>
+                      {s.id.slice(0, 14)}…
+                    </span>
+                  </div>
+
+                  {rules.length > 0 && (
+                    <div className="space-y-1">
+                      {rules.map((r) => (
+                        <div
+                          key={r.id}
+                          className="text-tiny flex justify-between items-center bg-accent-dim rounded px-2 py-1"
+                        >
+                          <span className="text-accent font-mono">
+                            {r.keyword ?? "qualquer"}
+                          </span>
+                          <span className="text-dim-2 mono-num">
+                            {r.triggered_count}x
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  <details className="group">
+                    <summary className="cursor-pointer text-sm font-medium text-accent hover:text-accent/80 list-none select-none">
+                      + Nova regra pra este story
+                    </summary>
+                    <form
+                      action={createStoryRule}
+                      className="mt-3 space-y-2"
+                    >
+                      <input type="hidden" name="account_id" value={account.id} />
+                      <input type="hidden" name="story_id" value={s.id} />
+                      <input type="hidden" name="story_label" value={storyLabel} />
+                      <input
+                        name="keyword"
+                        placeholder='Keyword (ex: "TURBO") ou vazio'
+                        className="w-full bg-bg-1 border border-line-2 rounded-lg px-2.5 py-1.5 text-xs"
+                      />
+                      <select
+                        name="match_mode"
+                        defaultValue="contains"
+                        className="w-full bg-bg-1 border border-line-2 rounded-lg px-2.5 py-1.5 text-xs"
+                      >
+                        <option value="contains">contém keyword</option>
+                        <option value="exact">exato</option>
+                        <option value="starts_with">começa com</option>
+                        <option value="any">qualquer resposta</option>
+                      </select>
+                      <textarea
+                        name="dm_message"
+                        rows={2}
+                        defaultValue="Valeu por responder meu story 🔥 Como prometi, aqui está o material 👇"
+                        className="w-full bg-bg-1 border border-line-2 rounded-lg px-2.5 py-1.5 text-xs"
+                        required
+                      />
+                      <div className="grid grid-cols-2 gap-2">
+                        <input
+                          name="button_text"
+                          placeholder="Botão"
+                          defaultValue="Acessar"
+                          maxLength={20}
+                          className="bg-bg-1 border border-line-2 rounded-lg px-2.5 py-1.5 text-xs"
+                        />
+                        <input
+                          name="button_url"
+                          placeholder="URL"
+                          defaultValue="https://geek-os.geekacademy.site/?utm_source=instagram&utm_medium=dmflow&utm_campaign=story"
+                          className="bg-bg-1 border border-line-2 rounded-lg px-2.5 py-1.5 text-xs"
+                        />
+                      </div>
+                      <button
+                        type="submit"
+                        className="w-full rounded-lg bg-accent hover:bg-accent/90 text-accent-ink font-semibold py-2 text-xs transition-colors"
+                      >
+                        Criar regra
+                      </button>
+                    </form>
+                  </details>
+                </div>
+              </Card>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}

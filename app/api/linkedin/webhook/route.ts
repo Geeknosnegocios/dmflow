@@ -1,1 +1,99 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlcXVlc3QsIE5leHRSZXNwb25zZSB9IGZyb20gIm5leHQvc2VydmVyIjsKaW1wb3J0IHsgdmVyaWZ5QXBpS2V5IH0gZnJvbSAiQC9saWIvYXBpLWtleXMiOwppbXBvcnQgeyBzdXBhYmFzZUFkbWluIH0gZnJvbSAiQC9saWIvc3VwYWJhc2UiOwppbXBvcnQgeyBwaWNrUnVsZSB9IGZyb20gIkAvbGliL21hdGNoIjsKaW1wb3J0IHR5cGUgeyBSdWxlIH0gZnJvbSAiQC90eXBlcy9kYiI7CgpleHBvcnQgY29uc3QgcnVudGltZSA9ICJub2RlanMiOwpleHBvcnQgY29uc3QgZHluYW1pYyA9ICJmb3JjZS1keW5hbWljIjsKCnR5cGUgTGlua2VkSW5QYXlsb2FkID0gewogIGV2ZW50OiBzdHJpbmc7CiAga2V5d29yZDogc3RyaW5nOwogIGNvbW1lbnRlcjogewogICAgbmFtZTogc3RyaW5nOwogICAgcHJvZmlsZVVybDogc3RyaW5nOwogICAgcHJvZmlsZUlkOiBzdHJpbmc7CiAgfTsKICBjb21tZW50OiBzdHJpbmc7CiAgcG9zdFVybDogc3RyaW5nOwogIHRpbWVzdGFtcDogc3RyaW5nOwp9OwoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIFBPU1QocmVxOiBOZXh0UmVxdWVzdCkgewogIC8vIDEuIEF1dGgKICBjb25zdCBhdXRoID0gcmVxLmhlYWRlcnMuZ2V0KCJhdXRob3JpemF0aW9uIikgPz8gIiI7CiAgY29uc3QgdG9rZW4gPSBhdXRoLnJlcGxhY2UoL15CZWFyZXJccysvaSwgIiIpOwogIGNvbnN0IHYgPSBhd2FpdCB2ZXJpZnlBcGlLZXkodG9rZW4pOwogIGlmICghdi52YWxpZCkgewogICAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsgZXJyb3I6ICJpbnZhbGlkIGFwaSBrZXkiIH0sIHsgc3RhdHVzOiA0MDEgfSk7CiAgfQoKICAvLyAyLiBQYXJzZSBib2R5CiAgbGV0IGJvZHk6IExpbmtlZEluUGF5bG9hZDsKICB0cnkgewogICAgYm9keSA9IGF3YWl0IHJlcS5qc29uKCk7CiAgfSBjYXRjaCB7CiAgICByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oeyBlcnJvcjogImludmFsaWQganNvbiIgfSwgeyBzdGF0dXM6IDQwMCB9KTsKICB9CgogIGNvbnN0IHsga2V5d29yZCwgY29tbWVudGVyLCBjb21tZW50LCBwb3N0VXJsLCB0aW1lc3RhbXAgfSA9IGJvZHk7CiAgaWYgKCFjb21tZW50IHx8ICFjb21tZW50ZXI/LnByb2ZpbGVJZCkgewogICAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsgZXJyb3I6ICJtaXNzaW5nIHJlcXVpcmVkIGZpZWxkcyIgfSwgeyBzdGF0dXM6IDQwMCB9KTsKICB9CgogIGNvbnN0IHNiID0gc3VwYWJhc2VBZG1pbigpOwoKICAvLyAzLiBGZXRjaCBhY3RpdmUgTGlua2VkSW4gcnVsZXMgZm9yIHRoaXMgdXNlcgogIC8vIFJ1bGVzIGFyZSBzY29wZWQgdG8gYWNjb3VudHM7IGZpbmQgYWxsIGFjY291bnRzIG93bmVkIGJ5IHRoaXMgdXNlcgogIGNvbnN0IHsgZGF0YTogYWNjb3VudHMgfSA9IGF3YWl0IHNiCiAgICAuZnJvbSgiYWNjb3VudHMiKQogICAgLnNlbGVjdCgiaWQiKQogICAgLmVxKCJvd25lcl91c2VyX2lkIiwgdi51c2VyX2lkISk7CgogIGNvbnN0IGFjY291bnRJZHMgPSAoYWNjb3VudHMgPz8gW10pLm1hcCgoYTogeyBpZDogc3RyaW5nIH0pID0+IGEuaWQpOwogIGlmIChhY2NvdW50SWRzLmxlbmd0aCA9PT0gMCkgewogICAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsgYWN0aW9uOiAiaWdub3JlIiB9KTsKICB9CgogIGNvbnN0IHsgZGF0YTogcnVsZXMgfSA9IGF3YWl0IHNiCiAgICAuZnJvbSgicnVsZXMiKQogICAgLnNlbGVjdCgiKiIpCiAgICAuaW4oImFjY291bnRfaWQiLCBhY2NvdW50SWRzKQogICAgLmVxKCJwbGF0Zm9ybSIsICJsaW5rZWRpbiIpCiAgICAuZXEoImFjdGl2ZSIsIHRydWUpOwoKICAvLyA0LiBNYXRjaCBrZXl3b3JkIGFnYWluc3QgcnVsZXMKICBjb25zdCBtYXRjaGVkID0gcGlja1J1bGUoY29tbWVudCwgKHJ1bGVzID8/IFtdKSBhcyBSdWxlW10pOwoKICAvLyA1LiBMb2cgZXZlbnQKICBhd2FpdCBzYi5mcm9tKCJldmVudHMiKS5pbnNlcnQoewogICAgYWNjb3VudF9pZDogYWNjb3VudElkc1swXSwKICAgIHJ1bGVfaWQ6IG1hdGNoZWQ/LmlkID8/IG51bGwsCiAgICBpZ19jb21tZW50X2lkOiBgbGlfJHtjb21tZW50ZXIucHJvZmlsZUlkfV8ke0RhdGUubm93KCl9YCwKICAgIGlnX3VzZXJfaWQ6IGNvbW1lbnRlci5wcm9maWxlSWQsCiAgICBpZ191c2VybmFtZTogY29tbWVudGVyLm5hbWUsCiAgICBjb21tZW50X3RleHQ6IGNvbW1lbnQsCiAgICBtYXRjaGVkX2tleXdvcmQ6IG1hdGNoZWQ/LmtleXdvcmQgPz8gbnVsbCwKICAgIGRtX3NlbnQ6IG1hdGNoZWQgIT09IG51bGwsCiAgICBwdWJsaWNfcmVwbHlfc2VudDogZmFsc2UsCiAgICByYXdfcGF5bG9hZDogYm9keSwKICAgIHBsYXRmb3JtOiAibGlua2VkaW4iLAogIH0pOwoKICBpZiAoIW1hdGNoZWQpIHsKICAgIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IGFjdGlvbjogImlnbm9yZSIgfSk7CiAgfQoKICAvLyBJbmNyZW1lbnQgdHJpZ2dlcmVkX2NvdW50CiAgYXdhaXQgc2IKICAgIC5mcm9tKCJydWxlcyIpCiAgICAudXBkYXRlKHsgdHJpZ2dlcmVkX2NvdW50OiAobWF0Y2hlZC50cmlnZ2VyZWRfY291bnQgPz8gMCkgKyAxIH0pCiAgICAuZXEoImlkIiwgbWF0Y2hlZC5pZCk7CgogIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7CiAgICBhY3Rpb246ICJzZW5kX2RtIiwKICAgIG1lc3NhZ2U6IG1hdGNoZWQuZG1fbWVzc2FnZSwKICAgIGRlbGF5OiA0MDAwLAogIH0pOwp9Cg=="}
+import { NextRequest, NextResponse } from "next/server";
+import { verifyApiKey } from "@/lib/api-keys";
+import { supabaseAdmin } from "@/lib/supabase";
+import { pickRule } from "@/lib/match";
+import type { Rule } from "@/types/db";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+type LinkedInPayload = {
+  event: string;
+  keyword: string;
+  commenter: {
+    name: string;
+    profileUrl: string;
+    profileId: string;
+  };
+  comment: string;
+  postUrl: string;
+  timestamp: string;
+};
+
+export async function POST(req: NextRequest) {
+  // 1. Auth
+  const auth = req.headers.get("authorization") ?? "";
+  const token = auth.replace(/^Bearer\s+/i, "");
+  const v = await verifyApiKey(token);
+  if (!v.valid) {
+    return NextResponse.json({ error: "invalid api key" }, { status: 401 });
+  }
+
+  // 2. Parse body
+  let body: LinkedInPayload;
+  try {
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: "invalid json" }, { status: 400 });
+  }
+
+  const { keyword, commenter, comment, postUrl, timestamp } = body;
+  if (!comment || !commenter?.profileId) {
+    return NextResponse.json({ error: "missing required fields" }, { status: 400 });
+  }
+
+  const sb = supabaseAdmin();
+
+  // 3. Fetch active LinkedIn rules for this user
+  // Rules are scoped to accounts; find all accounts owned by this user
+  const { data: accounts } = await sb
+    .from("accounts")
+    .select("id")
+    .eq("owner_user_id", v.user_id!);
+
+  const accountIds = (accounts ?? []).map((a: { id: string }) => a.id);
+  if (accountIds.length === 0) {
+    return NextResponse.json({ action: "ignore" });
+  }
+
+  const { data: rules } = await sb
+    .from("rules")
+    .select("*")
+    .in("account_id", accountIds)
+    .eq("platform", "linkedin")
+    .eq("active", true);
+
+  // 4. Match keyword against rules
+  const matched = pickRule(comment, (rules ?? []) as Rule[]);
+
+  // 5. Log event
+  await sb.from("events").insert({
+    account_id: accountIds[0],
+    rule_id: matched?.id ?? null,
+    ig_comment_id: `li_${commenter.profileId}_${Date.now()}`,
+    ig_user_id: commenter.profileId,
+    ig_username: commenter.name,
+    comment_text: comment,
+    matched_keyword: matched?.keyword ?? null,
+    dm_sent: matched !== null,
+    public_reply_sent: false,
+    raw_payload: body,
+    platform: "linkedin",
+  });
+
+  if (!matched) {
+    return NextResponse.json({ action: "ignore" });
+  }
+
+  // Increment triggered_count
+  await sb
+    .from("rules")
+    .update({ triggered_count: (matched.triggered_count ?? 0) + 1 })
+    .eq("id", matched.id);
+
+  return NextResponse.json({
+    action: "send_dm",
+    message: matched.dm_message,
+    delay: 4000,
+  });
+}

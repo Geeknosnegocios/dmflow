@@ -1,1 +1,46 @@
-{"data":"InVzZSBjbGllbnQiOwoKaW1wb3J0IHsgdXNlRWZmZWN0IH0gZnJvbSAicmVhY3QiOwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gRXJyb3IoewogIGVycm9yLAogIHJlc2V0LAp9OiB7CiAgZXJyb3I6IEVycm9yICYgeyBkaWdlc3Q/OiBzdHJpbmcgfTsKICByZXNldDogKCkgPT4gdm9pZDsKfSkgewogIHVzZUVmZmVjdCgoKSA9PiB7CiAgICBjb25zb2xlLmVycm9yKCJbZGFzaGJvYXJkIGVycm9yXSIsIGVycm9yKTsKICB9LCBbZXJyb3JdKTsKCiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJyb3VuZGVkLXhsIGJvcmRlciBib3JkZXItZGFuZ2VyLzMwIGJnLWRhbmdlci9bMC4wM10gcC04IHRleHQtY2VudGVyIj4KICAgICAgPGRpdiBjbGFzc05hbWU9Im14LWF1dG8gbWItNCBmbGV4IGgtMTAgdy0xMCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgcm91bmRlZC14bCBib3JkZXIgYm9yZGVyLWRhbmdlci80MCBiZy1kYW5nZXIvMTAgdGV4dC1kYW5nZXIiPgogICAgICAgICEKICAgICAgPC9kaXY+CiAgICAgIDxoMiBjbGFzc05hbWU9InRleHQtbGcgZm9udC1zZW1pYm9sZCBtYi0xIj5BbGdvIHF1ZWJyb3UgY2FycmVnYW5kbyBlc3NhIHDDoWdpbmE8L2gyPgogICAgICA8cCBjbGFzc05hbWU9InRleHQtZGltLTIgdGV4dC1zbSBtYi01IG1heC13LW1kIG14LWF1dG8iPgogICAgICAgIHtlcnJvci5tZXNzYWdlIHx8ICJFcnJvIGRlc2NvbmhlY2lkbyBubyBzZXJ2aWRvci4ifQogICAgICAgIHtlcnJvci5kaWdlc3QgJiYgKAogICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJibG9jayBtdC0xIHRleHQtdGlueSBmb250LW1vbm8gdGV4dC1kaW0iPgogICAgICAgICAgICByZWY6IHtlcnJvci5kaWdlc3R9CiAgICAgICAgICA8L3NwYW4+CiAgICAgICAgKX0KICAgICAgPC9wPgogICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBnYXAtMiBqdXN0aWZ5LWNlbnRlciI+CiAgICAgICAgPGJ1dHRvbgogICAgICAgICAgb25DbGljaz17cmVzZXR9CiAgICAgICAgICBjbGFzc05hbWU9InJvdW5kZWQtbGcgYmctYWNjZW50IGhvdmVyOmJnLWFjY2VudC85MCB0ZXh0LWFjY2VudC1pbmsgZm9udC1zZW1pYm9sZCBweC00IHB5LTIgdGV4dC1zbSB0cmFuc2l0aW9uLWNvbG9ycyIKICAgICAgICA+CiAgICAgICAgICBUZW50YXIgZGUgbm92bwogICAgICAgIDwvYnV0dG9uPgogICAgICAgIDxhCiAgICAgICAgICBocmVmPSIvZGFzaGJvYXJkIgogICAgICAgICAgY2xhc3NOYW1lPSJyb3VuZGVkLWxnIGJvcmRlciBib3JkZXItbGluZS0yIHB4LTQgcHktMiB0ZXh0LXNtIGhvdmVyOmJnLXdoaXRlLzUgdHJhbnNpdGlvbi1jb2xvcnMiCiAgICAgICAgPgogICAgICAgICAgVm9sdGFyIHBybyBpbsOtY2lvCiAgICAgICAgPC9hPgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICk7Cn0K"}
+"use client";
+
+import { useEffect } from "react";
+
+export default function Error({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
+}) {
+  useEffect(() => {
+    console.error("[dashboard error]", error);
+  }, [error]);
+
+  return (
+    <div className="rounded-xl border border-danger/30 bg-danger/[0.03] p-8 text-center">
+      <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-xl border border-danger/40 bg-danger/10 text-danger">
+        !
+      </div>
+      <h2 className="text-lg font-semibold mb-1">Algo quebrou carregando essa página</h2>
+      <p className="text-dim-2 text-sm mb-5 max-w-md mx-auto">
+        {error.message || "Erro desconhecido no servidor."}
+        {error.digest && (
+          <span className="block mt-1 text-tiny font-mono text-dim">
+            ref: {error.digest}
+          </span>
+        )}
+      </p>
+      <div className="flex gap-2 justify-center">
+        <button
+          onClick={reset}
+          className="rounded-lg bg-accent hover:bg-accent/90 text-accent-ink font-semibold px-4 py-2 text-sm transition-colors"
+        >
+          Tentar de novo
+        </button>
+        <a
+          href="/dashboard"
+          className="rounded-lg border border-line-2 px-4 py-2 text-sm hover:bg-white/5 transition-colors"
+        >
+          Voltar pro início
+        </a>
+      </div>
+    </div>
+  );
+}

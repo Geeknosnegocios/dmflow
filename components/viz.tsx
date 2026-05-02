@@ -1,1 +1,330 @@
-{"data":"aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKCi8qID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICBTcGFya2xpbmUg4oCUIHRpbnkgU1ZHIGxpbmUgY2hhcnQgZm9yIEtQSSBjYXJkcwogICA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gKi8KZXhwb3J0IGZ1bmN0aW9uIFNwYXJrbGluZSh7CiAgZGF0YSwKICB3aWR0aCA9IDk2LAogIGhlaWdodCA9IDI4LAogIHN0cm9rZVdpZHRoID0gMS41LAogIGNvbG9yID0gImN1cnJlbnRDb2xvciIsCn06IHsKICBkYXRhOiBudW1iZXJbXTsKICB3aWR0aD86IG51bWJlcjsKICBoZWlnaHQ/OiBudW1iZXI7CiAgc3Ryb2tlV2lkdGg/OiBudW1iZXI7CiAgY29sb3I/OiBzdHJpbmc7Cn0pIHsKICBjb25zdCBsYXN0VmFsID0gZGF0YT8uW2RhdGEubGVuZ3RoIC0gMV07CiAgY29uc3QgbGFiZWwgPQogICAgZGF0YSAmJiBkYXRhLmxlbmd0aCA+PSAyCiAgICAgID8gYFRlbmTDqm5jaWEgw7psdGltb3MgJHtkYXRhLmxlbmd0aH0gcGVyw61vZG9zLCB2YWxvciBhdHVhbCAke2xhc3RWYWx9YAogICAgICA6ICJTZW0gZGFkb3MgaGlzdMOzcmljb3MiOwoKICBpZiAoIWRhdGEgfHwgZGF0YS5sZW5ndGggPCAyKSB7CiAgICByZXR1cm4gKAogICAgICA8c3ZnCiAgICAgICAgd2lkdGg9e3dpZHRofQogICAgICAgIGhlaWdodD17aGVpZ2h0fQogICAgICAgIGNsYXNzTmFtZT0ib3BhY2l0eS0zMCIKICAgICAgICByb2xlPSJpbWciCiAgICAgICAgYXJpYS1sYWJlbD17bGFiZWx9CiAgICAgID4KICAgICAgICA8bGluZQogICAgICAgICAgeDE9ezB9CiAgICAgICAgICB5MT17aGVpZ2h0IC8gMn0KICAgICAgICAgIHgyPXt3aWR0aH0KICAgICAgICAgIHkyPXtoZWlnaHQgLyAyfQogICAgICAgICAgc3Ryb2tlPXtjb2xvcn0KICAgICAgICAgIHN0cm9rZVdpZHRoPXtzdHJva2VXaWR0aH0KICAgICAgICAgIHN0cm9rZURhc2hhcnJheT0iMiwzIgogICAgICAgIC8+CiAgICAgIDwvc3ZnPgogICAgKTsKICB9CiAgY29uc3QgbWF4ID0gTWF0aC5tYXgoLi4uZGF0YSwgMSk7CiAgY29uc3QgbWluID0gTWF0aC5taW4oLi4uZGF0YSwgMCk7CiAgY29uc3QgcmFuZ2UgPSBtYXggLSBtaW4gfHwgMTsKICBjb25zdCBzdGVwID0gd2lkdGggLyAoZGF0YS5sZW5ndGggLSAxKTsKICBjb25zdCBwb2ludHMgPSBkYXRhCiAgICAubWFwKCh2LCBpKSA9PiB7CiAgICAgIGNvbnN0IHggPSBpICogc3RlcDsKICAgICAgY29uc3QgeSA9IGhlaWdodCAtICgodiAtIG1pbikgLyByYW5nZSkgKiBoZWlnaHQ7CiAgICAgIHJldHVybiBgJHt4LnRvRml4ZWQoMSl9LCR7eS50b0ZpeGVkKDEpfWA7CiAgICB9KQogICAgLmpvaW4oIiAiKTsKICBjb25zdCBsYXN0ID0gZGF0YVtkYXRhLmxlbmd0aCAtIDFdOwogIGNvbnN0IGxhc3RYID0gKGRhdGEubGVuZ3RoIC0gMSkgKiBzdGVwOwogIGNvbnN0IGxhc3RZID0gaGVpZ2h0IC0gKChsYXN0IC0gbWluKSAvIHJhbmdlKSAqIGhlaWdodDsKICByZXR1cm4gKAogICAgPHN2ZwogICAgICB3aWR0aD17d2lkdGh9CiAgICAgIGhlaWdodD17aGVpZ2h0fQogICAgICBjbGFzc05hbWU9Im92ZXJmbG93LXZpc2libGUiCiAgICAgIHJvbGU9ImltZyIKICAgICAgYXJpYS1sYWJlbD17bGFiZWx9CiAgICA+CiAgICAgIDxwb2x5bGluZQogICAgICAgIGZpbGw9Im5vbmUiCiAgICAgICAgc3Ryb2tlPXtjb2xvcn0KICAgICAgICBzdHJva2VXaWR0aD17c3Ryb2tlV2lkdGh9CiAgICAgICAgc3Ryb2tlTGluZWpvaW49InJvdW5kIgogICAgICAgIHN0cm9rZUxpbmVjYXA9InJvdW5kIgogICAgICAgIHBvaW50cz17cG9pbnRzfQogICAgICAvPgogICAgICA8Y2lyY2xlIGN4PXtsYXN0WH0gY3k9e2xhc3RZfSByPXsyLjV9IGZpbGw9e2NvbG9yfSAvPgogICAgPC9zdmc+CiAgKTsKfQoKLyogPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgIFN0YXR1cyBQaWxsCiAgID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSAqLwpleHBvcnQgZnVuY3Rpb24gU3RhdHVzUGlsbCh7CiAgdG9uZSwKICBsYWJlbCwKICBwdWxzZSwKfTogewogIHRvbmU6ICJnb29kIiB8ICJ3YXJuIiB8ICJkYW5nZXIiIHwgInZpb2xldCIgfCAiYWNjZW50IiB8ICJkaW0iOwogIGxhYmVsOiBzdHJpbmc7CiAgcHVsc2U/OiBib29sZWFuOwp9KSB7CiAgY29uc3QgY2xhc3NlczogUmVjb3JkPHN0cmluZywgc3RyaW5nPiA9IHsKICAgIGdvb2Q6ICJiZy1nb29kLWRpbSB0ZXh0LWdvb2QiLAogICAgd2FybjogImJnLXdhcm4tZGltIHRleHQtd2FybiIsCiAgICBkYW5nZXI6ICJiZy1kYW5nZXItZGltIHRleHQtZGFuZ2VyIiwKICAgIHZpb2xldDogImJnLXZpb2xldC1kaW0gdGV4dC12aW9sZXQiLAogICAgYWNjZW50OiAiYmctYWNjZW50LWRpbSB0ZXh0LWFjY2VudCIsCiAgICBkaW06ICJiZy13aGl0ZS81IHRleHQtZGltLTIiLAogIH07CiAgcmV0dXJuICgKICAgIDxzcGFuCiAgICAgIGNsYXNzTmFtZT17YGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBnYXAtMS41IHJvdW5kZWQtZnVsbCBweC0yLjUgcHktMSB0ZXh0LXRpbnkgZm9udC1tZWRpdW0gdXBwZXJjYXNlIHRyYWNraW5nLXdpZGVyICR7Y2xhc3Nlc1t0b25lXX1gfQogICAgPgogICAgICA8c3BhbgogICAgICAgIGNsYXNzTmFtZT17YGgtMS41IHctMS41IHJvdW5kZWQtZnVsbCBiZy1jdXJyZW50ICR7CiAgICAgICAgICBwdWxzZSA/ICJwdWxzZS1kb3QiIDogIiIKICAgICAgICB9YH0KICAgICAgLz4KICAgICAge2xhYmVsfQogICAgPC9zcGFuPgogICk7Cn0KCi8qID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICBGdW5uZWwg4oCUIGhvcml6b250YWwgYmFycyB3aXRoIHJldGVudGlvbiAlCiAgID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSAqLwpleHBvcnQgZnVuY3Rpb24gRnVubmVsKHsKICBzdGVwcywKfTogewogIHN0ZXBzOiB7IGxhYmVsOiBzdHJpbmc7IHZhbHVlOiBudW1iZXI7IHN1YmxhYmVsPzogc3RyaW5nIH1bXTsKfSkgewogIGNvbnN0IG1heCA9IE1hdGgubWF4KC4uLnN0ZXBzLm1hcCgocykgPT4gcy52YWx1ZSksIDEpOwogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS0yLjUiPgogICAgICB7c3RlcHMubWFwKChzdGVwLCBpKSA9PiB7CiAgICAgICAgY29uc3QgcGN0ID0gKHN0ZXAudmFsdWUgLyBtYXgpICogMTAwOwogICAgICAgIGNvbnN0IHJhd1JhdGlvID0KICAgICAgICAgIGkgPT09IDAKICAgICAgICAgICAgPyAxCiAgICAgICAgICAgIDogc3RlcHNbaSAtIDFdLnZhbHVlID4gMAogICAgICAgICAgICA/IHN0ZXAudmFsdWUgLyBzdGVwc1tpIC0gMV0udmFsdWUKICAgICAgICAgICAgOiAwOwogICAgICAgIC8vIFNlIHJhdGlvID4gMSwgbW9zdHJhIGNvbW8gbXVsdGlwbGljYWRvciAoZXg6IDEuM3ggY2xpcXVlcyBwb3IgRE0pCiAgICAgICAgY29uc3Qgb3Zlck9uZSA9IHJhd1JhdGlvID4gMTsKICAgICAgICBjb25zdCBmcm9tUHJldkRpc3BsYXkgPSBvdmVyT25lCiAgICAgICAgICA/IGDDlyR7cmF3UmF0aW8udG9GaXhlZCgyKX1gCiAgICAgICAgICA6IGAkeyhyYXdSYXRpbyAqIDEwMCkudG9GaXhlZCgwKX0lYDsKICAgICAgICBjb25zdCB0b25lQ2xhc3MgPSBvdmVyT25lCiAgICAgICAgICA/ICJ0ZXh0LWFjY2VudCIKICAgICAgICAgIDogcmF3UmF0aW8gPj0gMC40CiAgICAgICAgICA/ICJ0ZXh0LWdvb2QiCiAgICAgICAgICA6IHJhd1JhdGlvID49IDAuMTUKICAgICAgICAgID8gInRleHQtd2FybiIKICAgICAgICAgIDogInRleHQtZGFuZ2VyIjsKICAgICAgICByZXR1cm4gKAogICAgICAgICAgPGRpdgogICAgICAgICAgICBrZXk9e3N0ZXAubGFiZWx9CiAgICAgICAgICAgIGNsYXNzTmFtZT0iZmFkZS11cCIKICAgICAgICAgICAgc3R5bGU9e3sgYW5pbWF0aW9uRGVsYXk6IGAke2kgKiA2MH1tc2AgfSBhcyBSZWFjdC5DU1NQcm9wZXJ0aWVzfQogICAgICAgICAgPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuIHRleHQteHMgbWItMSI+CiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LWRpbS0yIj57c3RlcC5sYWJlbH08L3NwYW4+CiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiI+CiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9Im1vbm8tbnVtIHRleHQtZmciPntzdGVwLnZhbHVlLnRvTG9jYWxlU3RyaW5nKCJwdC1CUiIpfTwvc3Bhbj4KICAgICAgICAgICAgICAgIHtpID4gMCAmJiAoCiAgICAgICAgICAgICAgICAgIDxzcGFuCiAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPXtgbW9uby1udW0gdGV4dC10aW55ICR7dG9uZUNsYXNzfWB9CiAgICAgICAgICAgICAgICAgICAgdGl0bGU9e292ZXJPbmUgPyAiTcOpZGlhIGRlIGNsaXF1ZXMgcG9yIERNIGVudmlhZGEiIDogIkNvbnZlcnPDo28gZG8gcGFzc28gYW50ZXJpb3IifQogICAgICAgICAgICAgICAgICA+CiAgICAgICAgICAgICAgICAgICAge2Zyb21QcmV2RGlzcGxheX0KICAgICAgICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICAgICAgKX0KICAgICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iaC04IHJvdW5kZWQtbGcgYmctd2hpdGUvWzAuMDNdIG92ZXJmbG93LWhpZGRlbiByZWxhdGl2ZSI+CiAgICAgICAgICAgICAgPGRpdgogICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJoLWZ1bGwgYmctZ3JhZGllbnQtdG8tciBmcm9tLWFjY2VudC80MCB0by1hY2NlbnQvMTAgYm9yZGVyLXIgYm9yZGVyLWFjY2VudC80MCB0cmFuc2l0aW9uLWFsbCIKICAgICAgICAgICAgICAgIHN0eWxlPXt7IHdpZHRoOiBgJHtwY3R9JWAgfX0KICAgICAgICAgICAgICAvPgogICAgICAgICAgICAgIHtzdGVwLnN1YmxhYmVsICYmICgKICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJhYnNvbHV0ZSBpbnNldC0wIGZsZXggaXRlbXMtY2VudGVyIHB4LTMgdGV4dC10aW55IHRleHQtZGltLTIiPgogICAgICAgICAgICAgICAgICB7c3RlcC5zdWJsYWJlbH0KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICl9CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgKTsKICAgICAgfSl9CiAgICA8L2Rpdj4KICApOwp9CgovKiA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAgSGVhdG1hcCDigJQgMjRoIHggN2QgYWN0aXZpdHkgZ3JpZAogICA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gKi8KZXhwb3J0IGZ1bmN0aW9uIEhlYXRtYXAoewogIGRhdGEsCn06IHsKICBkYXRhOiBudW1iZXJbXVtdOyAvLyBbZGF5T2ZXZWVrXVtob3VyXSA9IGNvdW50OyBkYXlPZldlZWsgMD1Nb24uLjY9U3VuCn0pIHsKICBjb25zdCBkYXlzID0gWyJTZWciLCAiVGVyIiwgIlF1YSIsICJRdWkiLCAiU2V4IiwgIlPDoWIiLCAiRG9tIl07CiAgY29uc3QgbWF4ID0gTWF0aC5tYXgoMSwgLi4uZGF0YS5mbGF0KCkpOwoKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9Im92ZXJmbG93LXgtYXV0byI+CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJpbmxpbmUtZ3JpZCBnYXAtWzNweF0iIHN0eWxlPXt7IGdyaWRUZW1wbGF0ZUNvbHVtbnM6ICJhdXRvIHJlcGVhdCgyNCwgMTJweCkiIH19PgogICAgICAgIDxkaXYgLz4KICAgICAgICB7QXJyYXkuZnJvbSh7IGxlbmd0aDogMjQgfSwgKF8sIGgpID0+ICgKICAgICAgICAgIDxkaXYKICAgICAgICAgICAga2V5PXtofQogICAgICAgICAgICBjbGFzc05hbWU9InRleHQtdGlueSB0ZXh0LWRpbS0yIHRleHQtY2VudGVyIG1vbm8tbnVtIgogICAgICAgICAgICBzdHlsZT17eyB2aXNpYmlsaXR5OiBoICUgMyA9PT0gMCA/ICJ2aXNpYmxlIiA6ICJoaWRkZW4iIH19CiAgICAgICAgICA+CiAgICAgICAgICAgIHtofQogICAgICAgICAgPC9kaXY+CiAgICAgICAgKSl9CiAgICAgICAge2RheXMubWFwKChkLCByb3cpID0+ICgKICAgICAgICAgIDxSZWFjdC5GcmFnbWVudCBrZXk9e2R9PgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC10aW55IHRleHQtZGltLTIgcHItMiBsZWFkaW5nLW5vbmUgZmxleCBpdGVtcy1jZW50ZXIiPntkfTwvZGl2PgogICAgICAgICAgICB7QXJyYXkuZnJvbSh7IGxlbmd0aDogMjQgfSwgKF8sIGgpID0+IHsKICAgICAgICAgICAgICBjb25zdCB2ID0gZGF0YVtyb3ddPy5baF0gPz8gMDsKICAgICAgICAgICAgICBjb25zdCBpbnRlbnNpdHkgPSB2ID09PSAwID8gMCA6IE1hdGgubWF4KDAuMTUsIHYgLyBtYXgpOwogICAgICAgICAgICAgIHJldHVybiAoCiAgICAgICAgICAgICAgICA8ZGl2CiAgICAgICAgICAgICAgICAgIGtleT17YCR7ZH0tJHtofWB9CiAgICAgICAgICAgICAgICAgIHRpdGxlPXtgJHtkfSAke2h9aCDigJQgJHt2fSBldmVudG9zYH0KICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJoLVsxMnB4XSByb3VuZGVkLVsycHhdIgogICAgICAgICAgICAgICAgICBzdHlsZT17ewogICAgICAgICAgICAgICAgICAgIGJhY2tncm91bmQ6CiAgICAgICAgICAgICAgICAgICAgICB2ID09PSAwCiAgICAgICAgICAgICAgICAgICAgICAgID8gInJnYmEoMjU1LDI1NSwyNTUsMC4wNCkiCiAgICAgICAgICAgICAgICAgICAgICAgIDogYHJnYmEoMzQsMjExLDIzOCwke2ludGVuc2l0eS50b0ZpeGVkKDMpfSlgLAogICAgICAgICAgICAgICAgICB9fQogICAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgICApOwogICAgICAgICAgICB9KX0KICAgICAgICAgIDwvUmVhY3QuRnJhZ21lbnQ+CiAgICAgICAgKSl9CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgKTsKfQoKLyogPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgIERlbHRhIOKAlCArbiAtbiBpbmRpY2F0b3IKICAgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09ICovCmV4cG9ydCBmdW5jdGlvbiBEZWx0YSh7IHZhbHVlIH06IHsgdmFsdWU6IG51bWJlciB9KSB7CiAgaWYgKHZhbHVlID09PSAwKQogICAgcmV0dXJuIDxzcGFuIGNsYXNzTmFtZT0idGV4dC10aW55IHRleHQtZGltLTIgbW9uby1udW0iPsKxMDwvc3Bhbj47CiAgY29uc3QgcG9zaXRpdmUgPSB2YWx1ZSA+IDA7CiAgcmV0dXJuICgKICAgIDxzcGFuCiAgICAgIGNsYXNzTmFtZT17YHRleHQtdGlueSBtb25vLW51bSAkewogICAgICAgIHBvc2l0aXZlID8gInRleHQtZ29vZCIgOiAidGV4dC1kYW5nZXIiCiAgICAgIH1gfQogICAgPgogICAgICB7cG9zaXRpdmUgPyAi4payIiA6ICLilrwifSB7TWF0aC5hYnModmFsdWUpfQogICAgPC9zcGFuPgogICk7Cn0KCi8qID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICBFbXB0eSBzdGF0ZSDigJQgY2xlYW4gaWxsdXN0cmF0aW9uICsgQ1RBCiAgID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSAqLwpleHBvcnQgZnVuY3Rpb24gRW1wdHlTdGF0ZSh7CiAgdGl0bGUsCiAgbWVzc2FnZSwKICBjdGEsCn06IHsKICB0aXRsZTogc3RyaW5nOwogIG1lc3NhZ2U6IHN0cmluZzsKICBjdGE/OiB7IGxhYmVsOiBzdHJpbmc7IGhyZWY6IHN0cmluZyB9Owp9KSB7CiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJyb3VuZGVkLXhsIGJvcmRlciBib3JkZXItbGluZSBiZy1zdXJmYWNlLzUwIHB5LTEyIHB4LTYgdGV4dC1jZW50ZXIiPgogICAgICA8ZGl2IGNsYXNzTmFtZT0ibXgtYXV0byBtYi00IGZsZXggaC0xMCB3LTEwIGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciByb3VuZGVkLXhsIGJvcmRlciBib3JkZXItbGluZS0yIGJnLWJnLTEiPgogICAgICAgIDxzdmcKICAgICAgICAgIHdpZHRoPSIxOCIKICAgICAgICAgIGhlaWdodD0iMTgiCiAgICAgICAgICB2aWV3Qm94PSIwIDAgMTggMTgiCiAgICAgICAgICBmaWxsPSJub25lIgogICAgICAgICAgY2xhc3NOYW1lPSJ0ZXh0LWFjY2VudCIKICAgICAgICA+CiAgICAgICAgICA8Y2lyY2xlIGN4PSI5IiBjeT0iOSIgcj0iMyIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZVdpZHRoPSIxLjUiIC8+CiAgICAgICAgICA8Y2lyY2xlIGN4PSI5IiBjeT0iOSIgcj0iNyIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZVdpZHRoPSIxLjUiIHN0cm9rZURhc2hhcnJheT0iMiAzIiBvcGFjaXR5PSIwLjUiIC8+CiAgICAgICAgPC9zdmc+CiAgICAgIDwvZGl2PgogICAgICA8ZGl2IGNsYXNzTmFtZT0iZm9udC1zZW1pYm9sZCB0ZXh0LWZnIG1iLTEiPnt0aXRsZX08L2Rpdj4KICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtZGltLTIgdGV4dC1zbSBtYi00IG1heC13LW1kIG14LWF1dG8iPnttZXNzYWdlfTwvZGl2PgogICAgICB7Y3RhICYmICgKICAgICAgICA8YQogICAgICAgICAgaHJlZj17Y3RhLmhyZWZ9CiAgICAgICAgICBjbGFzc05hbWU9ImlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBnYXAtMS41IHRleHQteHMgZm9udC1tZWRpdW0gcm91bmRlZC1sZyBib3JkZXIgYm9yZGVyLWFjY2VudC8zMCBiZy1hY2NlbnQtZGltIHRleHQtYWNjZW50IHB4LTMgcHktMiBob3ZlcjpiZy1hY2NlbnQvMjAgdHJhbnNpdGlvbi1jb2xvcnMiCiAgICAgICAgPgogICAgICAgICAge2N0YS5sYWJlbH0g4oaSCiAgICAgICAgPC9hPgogICAgICApfQogICAgPC9kaXY+CiAgKTsKfQoKLyogPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgIENhcmQgcHJpbWl0aXZlCiAgID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSAqLwpleHBvcnQgZnVuY3Rpb24gQ2FyZCh7CiAgY2hpbGRyZW4sCiAgY2xhc3NOYW1lID0gIiIsCn06IHsKICBjaGlsZHJlbjogUmVhY3QuUmVhY3ROb2RlOwogIGNsYXNzTmFtZT86IHN0cmluZzsKfSkgewogIHJldHVybiAoCiAgICA8ZGl2CiAgICAgIGNsYXNzTmFtZT17YHJvdW5kZWQteGwgYm9yZGVyIGJvcmRlci1saW5lIGJnLXN1cmZhY2Ugc2hhZG93LWNhcmQgJHtjbGFzc05hbWV9YH0KICAgID4KICAgICAge2NoaWxkcmVufQogICAgPC9kaXY+CiAgKTsKfQoKZXhwb3J0IGZ1bmN0aW9uIENhcmRIZWFkZXIoewogIHRpdGxlLAogIHN1YnRpdGxlLAogIHJpZ2h0LAp9OiB7CiAgdGl0bGU6IHN0cmluZzsKICBzdWJ0aXRsZT86IHN0cmluZzsKICByaWdodD86IFJlYWN0LlJlYWN0Tm9kZTsKfSkgewogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuIGdhcC00IHB4LTUgcHktNCBib3JkZXItYiBib3JkZXItbGluZSI+CiAgICAgIDxkaXY+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtc20gZm9udC1zZW1pYm9sZCB0ZXh0LWZnIj57dGl0bGV9PC9kaXY+CiAgICAgICAge3N1YnRpdGxlICYmIDxkaXYgY2xhc3NOYW1lPSJ0ZXh0LXRpbnkgdGV4dC1kaW0tMiBtdC0wLjUiPntzdWJ0aXRsZX08L2Rpdj59CiAgICAgIDwvZGl2PgogICAgICB7cmlnaHQgJiYgPGRpdj57cmlnaHR9PC9kaXY+fQogICAgPC9kaXY+CiAgKTsKfQo="}
+import React from "react";
+
+/* =========================================================
+   Sparkline — tiny SVG line chart for KPI cards
+   ========================================================= */
+export function Sparkline({
+  data,
+  width = 96,
+  height = 28,
+  strokeWidth = 1.5,
+  color = "currentColor",
+}: {
+  data: number[];
+  width?: number;
+  height?: number;
+  strokeWidth?: number;
+  color?: string;
+}) {
+  const lastVal = data?.[data.length - 1];
+  const label =
+    data && data.length >= 2
+      ? `Tendência últimos ${data.length} períodos, valor atual ${lastVal}`
+      : "Sem dados históricos";
+
+  if (!data || data.length < 2) {
+    return (
+      <svg
+        width={width}
+        height={height}
+        className="opacity-30"
+        role="img"
+        aria-label={label}
+      >
+        <line
+          x1={0}
+          y1={height / 2}
+          x2={width}
+          y2={height / 2}
+          stroke={color}
+          strokeWidth={strokeWidth}
+          strokeDasharray="2,3"
+        />
+      </svg>
+    );
+  }
+  const max = Math.max(...data, 1);
+  const min = Math.min(...data, 0);
+  const range = max - min || 1;
+  const step = width / (data.length - 1);
+  const points = data
+    .map((v, i) => {
+      const x = i * step;
+      const y = height - ((v - min) / range) * height;
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
+    })
+    .join(" ");
+  const last = data[data.length - 1];
+  const lastX = (data.length - 1) * step;
+  const lastY = height - ((last - min) / range) * height;
+  return (
+    <svg
+      width={width}
+      height={height}
+      className="overflow-visible"
+      role="img"
+      aria-label={label}
+    >
+      <polyline
+        fill="none"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinejoin="round"
+        strokeLinecap="round"
+        points={points}
+      />
+      <circle cx={lastX} cy={lastY} r={2.5} fill={color} />
+    </svg>
+  );
+}
+
+/* =========================================================
+   Status Pill
+   ========================================================= */
+export function StatusPill({
+  tone,
+  label,
+  pulse,
+}: {
+  tone: "good" | "warn" | "danger" | "violet" | "accent" | "dim";
+  label: string;
+  pulse?: boolean;
+}) {
+  const classes: Record<string, string> = {
+    good: "bg-good-dim text-good",
+    warn: "bg-warn-dim text-warn",
+    danger: "bg-danger-dim text-danger",
+    violet: "bg-violet-dim text-violet",
+    accent: "bg-accent-dim text-accent",
+    dim: "bg-white/5 text-dim-2",
+  };
+  return (
+    <span
+      className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-tiny font-medium uppercase tracking-wider ${classes[tone]}`}
+    >
+      <span
+        className={`h-1.5 w-1.5 rounded-full bg-current ${
+          pulse ? "pulse-dot" : ""
+        }`}
+      />
+      {label}
+    </span>
+  );
+}
+
+/* =========================================================
+   Funnel — horizontal bars with retention %
+   ========================================================= */
+export function Funnel({
+  steps,
+}: {
+  steps: { label: string; value: number; sublabel?: string }[];
+}) {
+  const max = Math.max(...steps.map((s) => s.value), 1);
+  return (
+    <div className="space-y-2.5">
+      {steps.map((step, i) => {
+        const pct = (step.value / max) * 100;
+        const rawRatio =
+          i === 0
+            ? 1
+            : steps[i - 1].value > 0
+            ? step.value / steps[i - 1].value
+            : 0;
+        // Se ratio > 1, mostra como multiplicador (ex: 1.3x cliques por DM)
+        const overOne = rawRatio > 1;
+        const fromPrevDisplay = overOne
+          ? `×${rawRatio.toFixed(2)}`
+          : `${(rawRatio * 100).toFixed(0)}%`;
+        const toneClass = overOne
+          ? "text-accent"
+          : rawRatio >= 0.4
+          ? "text-good"
+          : rawRatio >= 0.15
+          ? "text-warn"
+          : "text-danger";
+        return (
+          <div
+            key={step.label}
+            className="fade-up"
+            style={{ animationDelay: `${i * 60}ms` } as React.CSSProperties}
+          >
+            <div className="flex items-center justify-between text-xs mb-1">
+              <span className="text-dim-2">{step.label}</span>
+              <span className="flex items-center gap-2">
+                <span className="mono-num text-fg">{step.value.toLocaleString("pt-BR")}</span>
+                {i > 0 && (
+                  <span
+                    className={`mono-num text-tiny ${toneClass}`}
+                    title={overOne ? "Média de cliques por DM enviada" : "Conversão do passo anterior"}
+                  >
+                    {fromPrevDisplay}
+                  </span>
+                )}
+              </span>
+            </div>
+            <div className="h-8 rounded-lg bg-white/[0.03] overflow-hidden relative">
+              <div
+                className="h-full bg-gradient-to-r from-accent/40 to-accent/10 border-r border-accent/40 transition-all"
+                style={{ width: `${pct}%` }}
+              />
+              {step.sublabel && (
+                <div className="absolute inset-0 flex items-center px-3 text-tiny text-dim-2">
+                  {step.sublabel}
+                </div>
+              )}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+/* =========================================================
+   Heatmap — 24h x 7d activity grid
+   ========================================================= */
+export function Heatmap({
+  data,
+}: {
+  data: number[][]; // [dayOfWeek][hour] = count; dayOfWeek 0=Mon..6=Sun
+}) {
+  const days = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sáb", "Dom"];
+  const max = Math.max(1, ...data.flat());
+
+  return (
+    <div className="overflow-x-auto">
+      <div className="inline-grid gap-[3px]" style={{ gridTemplateColumns: "auto repeat(24, 12px)" }}>
+        <div />
+        {Array.from({ length: 24 }, (_, h) => (
+          <div
+            key={h}
+            className="text-tiny text-dim-2 text-center mono-num"
+            style={{ visibility: h % 3 === 0 ? "visible" : "hidden" }}
+          >
+            {h}
+          </div>
+        ))}
+        {days.map((d, row) => (
+          <React.Fragment key={d}>
+            <div className="text-tiny text-dim-2 pr-2 leading-none flex items-center">{d}</div>
+            {Array.from({ length: 24 }, (_, h) => {
+              const v = data[row]?.[h] ?? 0;
+              const intensity = v === 0 ? 0 : Math.max(0.15, v / max);
+              return (
+                <div
+                  key={`${d}-${h}`}
+                  title={`${d} ${h}h — ${v} eventos`}
+                  className="h-[12px] rounded-[2px]"
+                  style={{
+                    background:
+                      v === 0
+                        ? "rgba(255,255,255,0.04)"
+                        : `rgba(34,211,238,${intensity.toFixed(3)})`,
+                  }}
+                />
+              );
+            })}
+          </React.Fragment>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* =========================================================
+   Delta — +n -n indicator
+   ========================================================= */
+export function Delta({ value }: { value: number }) {
+  if (value === 0)
+    return <span className="text-tiny text-dim-2 mono-num">±0</span>;
+  const positive = value > 0;
+  return (
+    <span
+      className={`text-tiny mono-num ${
+        positive ? "text-good" : "text-danger"
+      }`}
+    >
+      {positive ? "▲" : "▼"} {Math.abs(value)}
+    </span>
+  );
+}
+
+/* =========================================================
+   Empty state — clean illustration + CTA
+   ========================================================= */
+export function EmptyState({
+  title,
+  message,
+  cta,
+}: {
+  title: string;
+  message: string;
+  cta?: { label: string; href: string };
+}) {
+  return (
+    <div className="rounded-xl border border-line bg-surface/50 py-12 px-6 text-center">
+      <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-xl border border-line-2 bg-bg-1">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          className="text-accent"
+        >
+          <circle cx="9" cy="9" r="3" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="9" cy="9" r="7" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 3" opacity="0.5" />
+        </svg>
+      </div>
+      <div className="font-semibold text-fg mb-1">{title}</div>
+      <div className="text-dim-2 text-sm mb-4 max-w-md mx-auto">{message}</div>
+      {cta && (
+        <a
+          href={cta.href}
+          className="inline-flex items-center gap-1.5 text-xs font-medium rounded-lg border border-accent/30 bg-accent-dim text-accent px-3 py-2 hover:bg-accent/20 transition-colors"
+        >
+          {cta.label} →
+        </a>
+      )}
+    </div>
+  );
+}
+
+/* =========================================================
+   Card primitive
+   ========================================================= */
+export function Card({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <div
+      className={`rounded-xl border border-line bg-surface shadow-card ${className}`}
+    >
+      {children}
+    </div>
+  );
+}
+
+export function CardHeader({
+  title,
+  subtitle,
+  right,
+}: {
+  title: string;
+  subtitle?: string;
+  right?: React.ReactNode;
+}) {
+  return (
+    <div className="flex items-center justify-between gap-4 px-5 py-4 border-b border-line">
+      <div>
+        <div className="text-sm font-semibold text-fg">{title}</div>
+        {subtitle && <div className="text-tiny text-dim-2 mt-0.5">{subtitle}</div>}
+      </div>
+      {right && <div>{right}</div>}
+    </div>
+  );
+}

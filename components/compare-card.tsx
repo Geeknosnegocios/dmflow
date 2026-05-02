@@ -1,1 +1,88 @@
-{"data":"aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IHsgY29tcGFyZVRvdGFscyB9IGZyb20gIkAvbGliL2FuYWx5dGljcyI7CmltcG9ydCB7IGZtdENvbXBhY3QgfSBmcm9tICJAL2xpYi9mb3JtYXQiOwppbXBvcnQgeyBUcmVuZGluZ1VwLCBUcmVuZGluZ0Rvd24sIE1pbnVzIH0gZnJvbSAibHVjaWRlLXJlYWN0IjsKCnR5cGUgQ29tcGFyZVJvdyA9IHsKICBsYWJlbDogc3RyaW5nOwogIGN1cnJlbnQ6IG51bWJlcjsKICBwcmV2aW91czogbnVtYmVyOwogIGludmVydEdvb2Q/OiBib29sZWFuOyAvLyB0cnVlID0gbG93ZXIgaXMgYmV0dGVyIChlLmcuIGVycm9ycykKfTsKCmV4cG9ydCBmdW5jdGlvbiBDb21wYXJlQ2FyZCh7CiAgcm93cywKICBjdXJyZW50TGFiZWwsCiAgcHJldmlvdXNMYWJlbCwKfTogewogIHJvd3M6IENvbXBhcmVSb3dbXTsKICBjdXJyZW50TGFiZWw6IHN0cmluZzsKICBwcmV2aW91c0xhYmVsOiBzdHJpbmc7Cn0pIHsKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9InJvdW5kZWQteGwgYm9yZGVyIGJvcmRlci1saW5lIGJnLXN1cmZhY2Ugc2hhZG93LWNhcmQgb3ZlcmZsb3ctaGlkZGVuIj4KICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBnYXAtNCBweC01IHB5LTQgYm9yZGVyLWIgYm9yZGVyLWxpbmUiPgogICAgICAgIDxkaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC1zbSBmb250LXNlbWlib2xkIj4KICAgICAgICAgICAgQ29tcGFyYXIgcGVyw61vZG9zCiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJ0ZXh0LXRpbnkgdGV4dC1kaW0tMiBmb250LW1vbm8iPgogICAgICAgICAgICB7Y3VycmVudExhYmVsfSB2cyB7cHJldmlvdXNMYWJlbH0KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgICAgPGRpdiBjbGFzc05hbWU9ImRpdmlkZS15IGRpdmlkZS1saW5lIj4KICAgICAgICB7cm93cy5tYXAoKHJvdykgPT4gewogICAgICAgICAgY29uc3QgYyA9IGNvbXBhcmVUb3RhbHMocm93LmN1cnJlbnQsIHJvdy5wcmV2aW91cyk7CiAgICAgICAgICBjb25zdCBpc1Bvc2l0aXZlID0gcm93LmludmVydEdvb2QgPyBjLmRlbHRhX2FicyA8IDAgOiBjLmRlbHRhX2FicyA+IDA7CiAgICAgICAgICBjb25zdCBpc1plcm8gPSBjLmRlbHRhX2FicyA9PT0gMDsKICAgICAgICAgIGNvbnN0IHRvbmUgPSBpc1plcm8KICAgICAgICAgICAgPyAidGV4dC1kaW0tMiIKICAgICAgICAgICAgOiBpc1Bvc2l0aXZlCiAgICAgICAgICAgID8gInRleHQtZ29vZCIKICAgICAgICAgICAgOiAidGV4dC1kYW5nZXIiOwogICAgICAgICAgY29uc3QgSWNvbiA9IGlzWmVybwogICAgICAgICAgICA/IE1pbnVzCiAgICAgICAgICAgIDogaXNQb3NpdGl2ZQogICAgICAgICAgICA/IFRyZW5kaW5nVXAKICAgICAgICAgICAgOiBUcmVuZGluZ0Rvd247CiAgICAgICAgICByZXR1cm4gKAogICAgICAgICAgICA8ZGl2CiAgICAgICAgICAgICAga2V5PXtyb3cubGFiZWx9CiAgICAgICAgICAgICAgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gZ2FwLTQgcHgtNSBweS0zIgogICAgICAgICAgICA+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtc20gdGV4dC1kaW0tMiBmbGV4LTEiPntyb3cubGFiZWx9PC9kaXY+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGdhcC02Ij4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJ0ZXh0LXJpZ2h0Ij4KICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtdGlueSB0ZXh0LWRpbS0yIj5hdHVhbDwvZGl2PgogICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ibW9uby1udW0gdGV4dC1sZyBmb250LXNlbWlib2xkIj4KICAgICAgICAgICAgICAgICAgICB7Zm10Q29tcGFjdChjLmN1cnJlbnQpfQogICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtcmlnaHQiPgogICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC10aW55IHRleHQtZGltLTIiPmFudGVyaW9yPC9kaXY+CiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtb25vLW51bSB0ZXh0LWxnIHRleHQtZGltLTIiPgogICAgICAgICAgICAgICAgICAgIHtmbXRDb21wYWN0KGMucHJldmlvdXMpfQogICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPGRpdgogICAgICAgICAgICAgICAgICBjbGFzc05hbWU9e2B0ZXh0LXJpZ2h0IG1pbi13LVs4MHB4XSAke3RvbmV9YH0KICAgICAgICAgICAgICAgICAgdGl0bGU9e2Ake2MuZGVsdGFfYWJzID4gMCA/ICIrIiA6ICIifSR7Yy5kZWx0YV9hYnN9IMK3ICR7Yy5kZWx0YV9wY3QudG9GaXhlZCgxKX0lYH0KICAgICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktZW5kIGdhcC0xIHRleHQtc20gZm9udC1zZW1pYm9sZCBtb25vLW51bSI+CiAgICAgICAgICAgICAgICAgICAgPEljb24gY2xhc3NOYW1lPSJoLTMuNSB3LTMuNSIgLz4KICAgICAgICAgICAgICAgICAgICB7TWF0aC5hYnMoYy5kZWx0YV9wY3QpLnRvRml4ZWQoMCl9JQogICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtdGlueSBtb25vLW51bSI+CiAgICAgICAgICAgICAgICAgICAge2MuZGVsdGFfYWJzID4gMCA/ICIrIiA6ICIifQogICAgICAgICAgICAgICAgICAgIHtjLmRlbHRhX2Fic30KICAgICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICApOwogICAgICAgIH0pfQogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICk7Cn0K"}
+import React from "react";
+import { compareTotals } from "@/lib/analytics";
+import { fmtCompact } from "@/lib/format";
+import { TrendingUp, TrendingDown, Minus } from "lucide-react";
+
+type CompareRow = {
+  label: string;
+  current: number;
+  previous: number;
+  invertGood?: boolean; // true = lower is better (e.g. errors)
+};
+
+export function CompareCard({
+  rows,
+  currentLabel,
+  previousLabel,
+}: {
+  rows: CompareRow[];
+  currentLabel: string;
+  previousLabel: string;
+}) {
+  return (
+    <div className="rounded-xl border border-line bg-surface shadow-card overflow-hidden">
+      <div className="flex items-center justify-between gap-4 px-5 py-4 border-b border-line">
+        <div>
+          <div className="text-sm font-semibold">
+            Comparar períodos
+          </div>
+          <div className="text-tiny text-dim-2 font-mono">
+            {currentLabel} vs {previousLabel}
+          </div>
+        </div>
+      </div>
+      <div className="divide-y divide-line">
+        {rows.map((row) => {
+          const c = compareTotals(row.current, row.previous);
+          const isPositive = row.invertGood ? c.delta_abs < 0 : c.delta_abs > 0;
+          const isZero = c.delta_abs === 0;
+          const tone = isZero
+            ? "text-dim-2"
+            : isPositive
+            ? "text-good"
+            : "text-danger";
+          const Icon = isZero
+            ? Minus
+            : isPositive
+            ? TrendingUp
+            : TrendingDown;
+          return (
+            <div
+              key={row.label}
+              className="flex items-center justify-between gap-4 px-5 py-3"
+            >
+              <div className="text-sm text-dim-2 flex-1">{row.label}</div>
+              <div className="flex items-center gap-6">
+                <div className="text-right">
+                  <div className="text-tiny text-dim-2">atual</div>
+                  <div className="mono-num text-lg font-semibold">
+                    {fmtCompact(c.current)}
+                  </div>
+                </div>
+                <div className="text-right">
+                  <div className="text-tiny text-dim-2">anterior</div>
+                  <div className="mono-num text-lg text-dim-2">
+                    {fmtCompact(c.previous)}
+                  </div>
+                </div>
+                <div
+                  className={`text-right min-w-[80px] ${tone}`}
+                  title={`${c.delta_abs > 0 ? "+" : ""}${c.delta_abs} · ${c.delta_pct.toFixed(1)}%`}
+                >
+                  <div className="flex items-center justify-end gap-1 text-sm font-semibold mono-num">
+                    <Icon className="h-3.5 w-3.5" />
+                    {Math.abs(c.delta_pct).toFixed(0)}%
+                  </div>
+                  <div className="text-tiny mono-num">
+                    {c.delta_abs > 0 ? "+" : ""}
+                    {c.delta_abs}
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}

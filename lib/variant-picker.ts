@@ -1,1 +1,103 @@
-{"data":"aW1wb3J0IHR5cGUgeyBSdWxlLCBEbUJ1dHRvbiB9IGZyb20gIkAvdHlwZXMvZGIiOwoKZXhwb3J0IHR5cGUgUGlja2VkVmFyaWFudCA9IHsKICBtZXNzYWdlOiBzdHJpbmc7CiAgYnV0dG9uczogRG1CdXR0b25bXSB8IG51bGw7CiAgdmFyaWFudF9pbmRleDogbnVtYmVyIHwgbnVsbDsgLy8gbnVsbCA9IG5vIHZhcmlhbnQgc3lzdGVtLCB1c2VkIGJhc2UgbWVzc2FnZQp9OwoKLyoqCiAqIFBpY2tzIGEgdmFyaWFudCB0byBzZW5kIGZvciBhIHJ1bGUuCiAqCiAqIE9yZGVyIG9mIHByZWNlZGVuY2U6CiAqIDEuIElmIHJ1bGUudmFyaWFudHMgaXMgbm9uLWVtcHR5IOKGkiB1c2UgZXBzaWxvbi1ncmVlZHkgKFRob21wc29uLWlzaCBzaW1wbGUpCiAqICAgIC0gODAlIG9mIHRpbWUsIHBpY2sgdmFyaWFudCB3aXRoIGhpZ2hlc3QgY29udmVyc2lvbiByYXRlIChzbyBmYXIpCiAqICAgIC0gMjAlIG9mIHRpbWUsIGV4cGxvcmUgb3RoZXIgdmFyaWFudHMgKHVuaWZvcm1seSkKICogICAgLSBVbnRpbCBlYWNoIHZhcmlhbnQgaGFzID49IDIwIGhpdHMsIHJvdW5kLXJvYmluIHVuaWZvcm1seSAoZXhwbG9yYXRpb24gcGhhc2UpCiAqIDIuIEVsc2Ug4oaSIHJldHVybiBiYXNlIG1lc3NhZ2UgKyBiYXNlIGJ1dHRvbnMsIHZhcmlhbnRfaW5kZXggPSBudWxsLgogKi8KZXhwb3J0IGZ1bmN0aW9uIHBpY2tWYXJpYW50KHJ1bGU6IFJ1bGUpOiBQaWNrZWRWYXJpYW50IHsKICBjb25zdCB2YXJpYW50cyA9IHJ1bGUudmFyaWFudHM7CiAgaWYgKCF2YXJpYW50cyB8fCB2YXJpYW50cy5sZW5ndGggPT09IDApIHsKICAgIHJldHVybiB7CiAgICAgIG1lc3NhZ2U6IHJ1bGUuZG1fbWVzc2FnZSwKICAgICAgYnV0dG9uczogcnVsZS5kbV9idXR0b25zID8/IG51bGwsCiAgICAgIHZhcmlhbnRfaW5kZXg6IG51bGwsCiAgICB9OwogIH0KCiAgY29uc3QgaGl0cyA9IHJ1bGUudmFyaWFudF9oaXRzID8/IFtdOwogIGNvbnN0IGNvbnZzID0gcnVsZS52YXJpYW50X2NvbnZlcnNpb25zID8/IFtdOwoKICBjb25zdCB0b3RhbEhpdHMgPSBoaXRzLnJlZHVjZSgoYSwgYikgPT4gYSArIChiID8/IDApLCAwKTsKICBjb25zdCBtaW5IaXRzUGVyVmFyaWFudCA9IDIwOwogIGNvbnN0IGV4cGxvcmF0aW9uQ29tcGxldGUgPSBoaXRzLmV2ZXJ5KAogICAgKGgpID0+IChoID8/IDApID49IG1pbkhpdHNQZXJWYXJpYW50CiAgKTsKCiAgbGV0IGNob3NlbklkeCA9IDA7CgogIGlmICghZXhwbG9yYXRpb25Db21wbGV0ZSkgewogICAgLy8gUm91bmQtcm9iaW46IHBpY2sgbGVhc3Qtc2VydmVkIHZhcmlhbnQgKHNtYWxsZXIgaGl0IGNvdW50IHdpbnMpCiAgICBjaG9zZW5JZHggPSBoaXRzLmluZGV4T2YoCiAgICAgIE1hdGgubWluKC4uLmhpdHMuY29uY2F0KG5ldyBBcnJheSh2YXJpYW50cy5sZW5ndGggLSBoaXRzLmxlbmd0aCkuZmlsbCgwKSkpCiAgICApOwogICAgaWYgKGNob3NlbklkeCA8IDApIGNob3NlbklkeCA9IHRvdGFsSGl0cyAlIHZhcmlhbnRzLmxlbmd0aDsKICB9IGVsc2UgewogICAgLy8gRXBzaWxvbi1ncmVlZHk6IDIwJSBleHBsb3JlLCA4MCUgZXhwbG9pdCBiZXN0IGNvbnZlcnNpb24gcmF0ZQogICAgaWYgKE1hdGgucmFuZG9tKCkgPCAwLjIpIHsKICAgICAgY2hvc2VuSWR4ID0gTWF0aC5mbG9vcihNYXRoLnJhbmRvbSgpICogdmFyaWFudHMubGVuZ3RoKTsKICAgIH0gZWxzZSB7CiAgICAgIGxldCBiZXN0UmF0ZSA9IC0xOwogICAgICBsZXQgYmVzdElkeCA9IDA7CiAgICAgIGZvciAobGV0IGkgPSAwOyBpIDwgdmFyaWFudHMubGVuZ3RoOyBpKyspIHsKICAgICAgICBjb25zdCByYXRlID0gKGhpdHNbaV0gPz8gMCkgPiAwID8gKGNvbnZzW2ldID8/IDApIC8gKGhpdHNbaV0gPz8gMSkgOiAwOwogICAgICAgIGlmIChyYXRlID4gYmVzdFJhdGUpIHsKICAgICAgICAgIGJlc3RSYXRlID0gcmF0ZTsKICAgICAgICAgIGJlc3RJZHggPSBpOwogICAgICAgIH0KICAgICAgfQogICAgICBjaG9zZW5JZHggPSBiZXN0SWR4OwogICAgfQogIH0KCiAgY29uc3QgdiA9IHZhcmlhbnRzW2Nob3NlbklkeF07CiAgcmV0dXJuIHsKICAgIG1lc3NhZ2U6IHYubWVzc2FnZSB8fCBydWxlLmRtX21lc3NhZ2UsCiAgICBidXR0b25zOiB2LmJ1dHRvbnMgPz8gcnVsZS5kbV9idXR0b25zID8/IG51bGwsCiAgICB2YXJpYW50X2luZGV4OiBjaG9zZW5JZHgsCiAgfTsKfQoKLyoqCiAqIENvbXB1dGVzIHN0YXRzIGZvciBhIHJ1bGUncyB2YXJpYW50cyAoZm9yIGRhc2hib2FyZCBkaXNwbGF5KS4KICovCmV4cG9ydCBmdW5jdGlvbiB2YXJpYW50U3RhdHMocnVsZTogUnVsZSk6IEFycmF5PHsKICBpbmRleDogbnVtYmVyOwogIG1lc3NhZ2VfcHJldmlldzogc3RyaW5nOwogIGhpdHM6IG51bWJlcjsKICBjb252ZXJzaW9uczogbnVtYmVyOwogIHJhdGU6IG51bWJlcjsKICBpc19sZWFkZXI6IGJvb2xlYW47Cn0+IHwgbnVsbCB7CiAgY29uc3QgdmFyaWFudHMgPSBydWxlLnZhcmlhbnRzOwogIGlmICghdmFyaWFudHMgfHwgdmFyaWFudHMubGVuZ3RoID09PSAwKSByZXR1cm4gbnVsbDsKICBjb25zdCBoaXRzID0gcnVsZS52YXJpYW50X2hpdHMgPz8gW107CiAgY29uc3QgY29udnMgPSBydWxlLnZhcmlhbnRfY29udmVyc2lvbnMgPz8gW107CgogIGNvbnN0IHJhdGVzID0gdmFyaWFudHMubWFwKChfLCBpKSA9PiB7CiAgICBjb25zdCBoID0gaGl0c1tpXSA/PyAwOwogICAgY29uc3QgYyA9IGNvbnZzW2ldID8/IDA7CiAgICByZXR1cm4gaCA+IDAgPyBjIC8gaCA6IDA7CiAgfSk7CiAgY29uc3QgbWF4UmF0ZSA9IE1hdGgubWF4KC4uLnJhdGVzKTsKCiAgcmV0dXJuIHZhcmlhbnRzLm1hcCgodiwgaSkgPT4gKHsKICAgIGluZGV4OiBpLAogICAgbWVzc2FnZV9wcmV2aWV3OiAodi5tZXNzYWdlIHx8ICIiKS5zbGljZSgwLCA4MCksCiAgICBoaXRzOiBoaXRzW2ldID8/IDAsCiAgICBjb252ZXJzaW9uczogY29udnNbaV0gPz8gMCwKICAgIHJhdGU6IHJhdGVzW2ldLAogICAgaXNfbGVhZGVyOiByYXRlc1tpXSA9PT0gbWF4UmF0ZSAmJiBtYXhSYXRlID4gMCwKICB9KSk7Cn0K"}
+import type { Rule, DmButton } from "@/types/db";
+
+export type PickedVariant = {
+  message: string;
+  buttons: DmButton[] | null;
+  variant_index: number | null; // null = no variant system, used base message
+};
+
+/**
+ * Picks a variant to send for a rule.
+ *
+ * Order of precedence:
+ * 1. If rule.variants is non-empty → use epsilon-greedy (Thompson-ish simple)
+ *    - 80% of time, pick variant with highest conversion rate (so far)
+ *    - 20% of time, explore other variants (uniformly)
+ *    - Until each variant has >= 20 hits, round-robin uniformly (exploration phase)
+ * 2. Else → return base message + base buttons, variant_index = null.
+ */
+export function pickVariant(rule: Rule): PickedVariant {
+  const variants = rule.variants;
+  if (!variants || variants.length === 0) {
+    return {
+      message: rule.dm_message,
+      buttons: rule.dm_buttons ?? null,
+      variant_index: null,
+    };
+  }
+
+  const hits = rule.variant_hits ?? [];
+  const convs = rule.variant_conversions ?? [];
+
+  const totalHits = hits.reduce((a, b) => a + (b ?? 0), 0);
+  const minHitsPerVariant = 20;
+  const explorationComplete = hits.every(
+    (h) => (h ?? 0) >= minHitsPerVariant
+  );
+
+  let chosenIdx = 0;
+
+  if (!explorationComplete) {
+    // Round-robin: pick least-served variant (smaller hit count wins)
+    chosenIdx = hits.indexOf(
+      Math.min(...hits.concat(new Array(variants.length - hits.length).fill(0)))
+    );
+    if (chosenIdx < 0) chosenIdx = totalHits % variants.length;
+  } else {
+    // Epsilon-greedy: 20% explore, 80% exploit best conversion rate
+    if (Math.random() < 0.2) {
+      chosenIdx = Math.floor(Math.random() * variants.length);
+    } else {
+      let bestRate = -1;
+      let bestIdx = 0;
+      for (let i = 0; i < variants.length; i++) {
+        const rate = (hits[i] ?? 0) > 0 ? (convs[i] ?? 0) / (hits[i] ?? 1) : 0;
+        if (rate > bestRate) {
+          bestRate = rate;
+          bestIdx = i;
+        }
+      }
+      chosenIdx = bestIdx;
+    }
+  }
+
+  const v = variants[chosenIdx];
+  return {
+    message: v.message || rule.dm_message,
+    buttons: v.buttons ?? rule.dm_buttons ?? null,
+    variant_index: chosenIdx,
+  };
+}
+
+/**
+ * Computes stats for a rule's variants (for dashboard display).
+ */
+export function variantStats(rule: Rule): Array<{
+  index: number;
+  message_preview: string;
+  hits: number;
+  conversions: number;
+  rate: number;
+  is_leader: boolean;
+}> | null {
+  const variants = rule.variants;
+  if (!variants || variants.length === 0) return null;
+  const hits = rule.variant_hits ?? [];
+  const convs = rule.variant_conversions ?? [];
+
+  const rates = variants.map((_, i) => {
+    const h = hits[i] ?? 0;
+    const c = convs[i] ?? 0;
+    return h > 0 ? c / h : 0;
+  });
+  const maxRate = Math.max(...rates);
+
+  return variants.map((v, i) => ({
+    index: i,
+    message_preview: (v.message || "").slice(0, 80),
+    hits: hits[i] ?? 0,
+    conversions: convs[i] ?? 0,
+    rate: rates[i],
+    is_leader: rates[i] === maxRate && maxRate > 0,
+  }));
+}

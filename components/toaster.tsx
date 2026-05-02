@@ -1,1 +1,62 @@
-{"data":"InVzZSBjbGllbnQiOwoKaW1wb3J0IFJlYWN0LCB7IHVzZUVmZmVjdCwgdXNlU3RhdGUgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB0eXBlIHsgRmxhc2ggfSBmcm9tICJAL2xpYi9mbGFzaCI7CgpleHBvcnQgZnVuY3Rpb24gVG9hc3Rlcih7IGZsYXNoIH06IHsgZmxhc2g6IEZsYXNoIHwgbnVsbCB9KSB7CiAgY29uc3QgW3Zpc2libGUsIHNldFZpc2libGVdID0gdXNlU3RhdGUoISFmbGFzaCk7CiAgY29uc3QgW2N1cnJlbnQsIHNldEN1cnJlbnRdID0gdXNlU3RhdGU8Rmxhc2ggfCBudWxsPihmbGFzaCk7CgogIHVzZUVmZmVjdCgoKSA9PiB7CiAgICBpZiAoIWZsYXNoKSByZXR1cm47CiAgICBzZXRDdXJyZW50KGZsYXNoKTsKICAgIHNldFZpc2libGUodHJ1ZSk7CiAgICBjb25zdCB0ID0gc2V0VGltZW91dCgoKSA9PiBzZXRWaXNpYmxlKGZhbHNlKSwgNDAwMCk7CiAgICByZXR1cm4gKCkgPT4gY2xlYXJUaW1lb3V0KHQpOwogIH0sIFtmbGFzaF0pOwoKICBpZiAoIWN1cnJlbnQpIHJldHVybiBudWxsOwoKICBjb25zdCB0b25lczogUmVjb3JkPEZsYXNoWyJraW5kIl0sIHN0cmluZz4gPSB7CiAgICBzdWNjZXNzOiAiYm9yZGVyLWdvb2QvNDAgYmctZ29vZC1kaW0gdGV4dC1nb29kIiwKICAgIGVycm9yOiAiYm9yZGVyLWRhbmdlci80MCBiZy1kYW5nZXItZGltIHRleHQtZGFuZ2VyIiwKICAgIGluZm86ICJib3JkZXItYWNjZW50LzQwIGJnLWFjY2VudC1kaW0gdGV4dC1hY2NlbnQiLAogICAgd2FybjogImJvcmRlci13YXJuLzQwIGJnLXdhcm4tZGltIHRleHQtd2FybiIsCiAgfTsKCiAgY29uc3QgaWNvbnM6IFJlY29yZDxGbGFzaFsia2luZCJdLCBzdHJpbmc+ID0gewogICAgc3VjY2VzczogIuKckyIsCiAgICBlcnJvcjogIuKclSIsCiAgICBpbmZvOiAiaSIsCiAgICB3YXJuOiAiISIsCiAgfTsKCiAgcmV0dXJuICgKICAgIDxkaXYKICAgICAgcm9sZT0ic3RhdHVzIgogICAgICBhcmlhLWxpdmU9InBvbGl0ZSIKICAgICAgY2xhc3NOYW1lPXtgZml4ZWQgYm90dG9tLTQgcmlnaHQtNCB6LVs2MF0gcG9pbnRlci1ldmVudHMtYXV0byB0cmFuc2l0aW9uLWFsbCAkewogICAgICAgIHZpc2libGUKICAgICAgICAgID8gIm9wYWNpdHktMTAwIHRyYW5zbGF0ZS15LTAiCiAgICAgICAgICA6ICJvcGFjaXR5LTAgdHJhbnNsYXRlLXktMiBwb2ludGVyLWV2ZW50cy1ub25lIgogICAgICB9YH0KICAgID4KICAgICAgPGRpdgogICAgICAgIGNsYXNzTmFtZT17YGZsZXggaXRlbXMtY2VudGVyIGdhcC0zIHJvdW5kZWQteGwgYm9yZGVyICR7dG9uZXNbY3VycmVudC5raW5kXX0gYmctc3VyZmFjZSBzaGFkb3ctMnhsIHB4LTQgcHktMyBtaW4tdy1bMjYwcHhdIG1heC13LXNtYH0KICAgICAgPgogICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iaW5saW5lLWZsZXggaC02IHctNiBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgcm91bmRlZC1mdWxsIGJnLWN1cnJlbnQvMTAgZm9udC1ib2xkIHRleHQtc20iPgogICAgICAgICAge2ljb25zW2N1cnJlbnQua2luZF19CiAgICAgICAgPC9zcGFuPgogICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC1zbSBmbGV4LTEiPntjdXJyZW50Lm1lc3NhZ2V9PC9zcGFuPgogICAgICAgIDxidXR0b24KICAgICAgICAgIHR5cGU9ImJ1dHRvbiIKICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHNldFZpc2libGUoZmFsc2UpfQogICAgICAgICAgY2xhc3NOYW1lPSJ0ZXh0LWRpbS0yIGhvdmVyOnRleHQtZmciCiAgICAgICAgICBhcmlhLWxhYmVsPSJGZWNoYXIiCiAgICAgICAgPgogICAgICAgICAg4pyVCiAgICAgICAgPC9idXR0b24+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgKTsKfQo="}
+"use client";
+
+import React, { useEffect, useState } from "react";
+import type { Flash } from "@/lib/flash";
+
+export function Toaster({ flash }: { flash: Flash | null }) {
+  const [visible, setVisible] = useState(!!flash);
+  const [current, setCurrent] = useState<Flash | null>(flash);
+
+  useEffect(() => {
+    if (!flash) return;
+    setCurrent(flash);
+    setVisible(true);
+    const t = setTimeout(() => setVisible(false), 4000);
+    return () => clearTimeout(t);
+  }, [flash]);
+
+  if (!current) return null;
+
+  const tones: Record<Flash["kind"], string> = {
+    success: "border-good/40 bg-good-dim text-good",
+    error: "border-danger/40 bg-danger-dim text-danger",
+    info: "border-accent/40 bg-accent-dim text-accent",
+    warn: "border-warn/40 bg-warn-dim text-warn",
+  };
+
+  const icons: Record<Flash["kind"], string> = {
+    success: "✓",
+    error: "✕",
+    info: "i",
+    warn: "!",
+  };
+
+  return (
+    <div
+      role="status"
+      aria-live="polite"
+      className={`fixed bottom-4 right-4 z-[60] pointer-events-auto transition-all ${
+        visible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-2 pointer-events-none"
+      }`}
+    >
+      <div
+        className={`flex items-center gap-3 rounded-xl border ${tones[current.kind]} bg-surface shadow-2xl px-4 py-3 min-w-[260px] max-w-sm`}
+      >
+        <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-current/10 font-bold text-sm">
+          {icons[current.kind]}
+        </span>
+        <span className="text-sm flex-1">{current.message}</span>
+        <button
+          type="button"
+          onClick={() => setVisible(false)}
+          className="text-dim-2 hover:text-fg"
+          aria-label="Fechar"
+        >
+          ✕
+        </button>
+      </div>
+    </div>
+  );
+}

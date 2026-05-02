@@ -1,1 +1,65 @@
-{"data":"aW1wb3J0IHsgbGxtSnNvbiB9IGZyb20gIi4vbGxtIjsKaW1wb3J0IHsgc3VwYWJhc2VBZG1pbiB9IGZyb20gIi4vc3VwYWJhc2UiOwoKZXhwb3J0IHR5cGUgU2VudGltZW50TGFiZWwgPSAicG9zaXRpdmUiIHwgIm5ldXRyYWwiIHwgIm5lZ2F0aXZlIjsKCmV4cG9ydCB0eXBlIFNlbnRpbWVudFJlc3VsdCA9IHsKICBsYWJlbDogU2VudGltZW50TGFiZWw7CiAgY29uZmlkZW5jZTogbnVtYmVyOwogIHJlYXNvbjogc3RyaW5nOwp9OwoKY29uc3QgU1lTVEVNX1BST01QVCA9IGBWb2PDqiDDqSB1bSBjbGFzc2lmaWNhZG9yIGRlIHNlbnRpbWVudG8gZW0gcG9ydHVndcOqcyBkbyBCcmFzaWwuIENsYXNzaWZpY2EgY29tZW50w6FyaW9zIGRlIEluc3RhZ3JhbSBlbSAzIGNhdGVnb3JpYXM6Ci0gInBvc2l0aXZlIjogZWxvZ2lvLCBpbnRlcmVzc2UgZ2VudcOtbm8sIGVudHVzaWFzbW8sIGN1cmlvc2lkYWRlIHBvc2l0aXZhCi0gIm5ldXRyYWwiOiBwZXJndW50YSBpbmZvcm1hY2lvbmFsLCBjb21lbnTDoXJpbyBuZXV0cm8sIHBlZGlkbyBub3JtYWwsIG1hcmNhw6fDo28gZGUgYW1pZ29zCi0gIm5lZ2F0aXZlIjogcmVjbGFtYcOnw6NvLCBjcsOtdGljYSBhZ3Jlc3NpdmEsIGluc3VsdG8sIHNhcmNhc21vIG1hbGljaW9zbywgc3BhbSBvZmVuc2l2bwoKUmVzcG9uZGEgQVBFTkFTIEpTT04gdsOhbGlkbyBubyBmb3JtYXRvOgp7ImxhYmVsIjogInBvc2l0aXZlInwibmV1dHJhbCJ8Im5lZ2F0aXZlIiwgImNvbmZpZGVuY2UiOiAwLjAtMS4wLCAicmVhc29uIjogInVtYSBmcmFzZSBjdXJ0YSBlbSBwdC1CUiJ9CgpTZWphIHRvbGVyYW50ZTogYnJpbmNhZGVpcmFzLCBpcm9uaWEgbGV2ZSBvdSBnw61yaWFzIG7Do28gc8OjbyAibmVnYXRpdmUiLiBTw7MgY2xhc3NpZmljYSBjb21vICJuZWdhdGl2ZSIgc2UgZm9yIENMQVJBTUVOVEUgaG9zdGlsIG91IHJlY2xhbWHDp8OjbyBzw6lyaWEuYDsKCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBjbGFzc2lmeVNlbnRpbWVudCgKICB0ZXh0OiBzdHJpbmcKKTogUHJvbWlzZTxTZW50aW1lbnRSZXN1bHQgfCBudWxsPiB7CiAgaWYgKCF0ZXh0IHx8IHRleHQudHJpbSgpLmxlbmd0aCA8IDIpIHsKICAgIHJldHVybiB7IGxhYmVsOiAibmV1dHJhbCIsIGNvbmZpZGVuY2U6IDEsIHJlYXNvbjogInRleHRvIG11aXRvIGN1cnRvIiB9OwogIH0KICBjb25zdCByZXN1bHQgPSBhd2FpdCBsbG1Kc29uPFNlbnRpbWVudFJlc3VsdD4oU1lTVEVNX1BST01QVCwgdGV4dCwgewogICAgbW9kZWw6ICJsbGFtYS0zLjEtOGItaW5zdGFudCIsCiAgICB0ZW1wZXJhdHVyZTogMCwKICAgIG1heF90b2tlbnM6IDEyOCwKICB9KTsKICBpZiAoIXJlc3VsdD8ubGFiZWwpIHJldHVybiBudWxsOwogIHJldHVybiByZXN1bHQ7Cn0KCi8qKgogKiBDaGVja3MgaWYgY29tbWVudCBzaG91bGQgYmUgYmxvY2tlZCAobmVnYXRpdmUgc2VudGltZW50IGFib3ZlIHRocmVzaG9sZCkuCiAqIExvZ3MgZGVjaXNpb24gdG8gZG1mbG93LnNlbnRpbWVudF9sb2cuCiAqLwpleHBvcnQgYXN5bmMgZnVuY3Rpb24gY2hlY2tTZW50aW1lbnRGaWx0ZXIocGFyYW1zOiB7CiAgYWNjb3VudElkOiBzdHJpbmc7CiAgbWluQ29uZmlkZW5jZTogbnVtYmVyOwogIGNvbW1lbnRUZXh0OiBzdHJpbmc7Cn0pOiBQcm9taXNlPHsgc2hvdWxkQmxvY2s6IGJvb2xlYW47IHJlc3VsdDogU2VudGltZW50UmVzdWx0IHwgbnVsbCB9PiB7CiAgY29uc3Qgc2IgPSBzdXBhYmFzZUFkbWluKCk7CiAgY29uc3QgcmVzdWx0ID0gYXdhaXQgY2xhc3NpZnlTZW50aW1lbnQocGFyYW1zLmNvbW1lbnRUZXh0KS5jYXRjaCgoKSA9PiBudWxsKTsKCiAgaWYgKCFyZXN1bHQpIHsKICAgIHJldHVybiB7IHNob3VsZEJsb2NrOiBmYWxzZSwgcmVzdWx0OiBudWxsIH07CiAgfQoKICBjb25zdCBzaG91bGRCbG9jayA9CiAgICByZXN1bHQubGFiZWwgPT09ICJuZWdhdGl2ZSIgJiYgcmVzdWx0LmNvbmZpZGVuY2UgPj0gcGFyYW1zLm1pbkNvbmZpZGVuY2U7CgogIGF3YWl0IHNiLmZyb20oInNlbnRpbWVudF9sb2ciKS5pbnNlcnQoewogICAgYWNjb3VudF9pZDogcGFyYW1zLmFjY291bnRJZCwKICAgIGNvbW1lbnRfdGV4dDogcGFyYW1zLmNvbW1lbnRUZXh0LnNsaWNlKDAsIDUwMCksCiAgICBsYWJlbDogcmVzdWx0LmxhYmVsLAogICAgY29uZmlkZW5jZTogcmVzdWx0LmNvbmZpZGVuY2UsCiAgICBibG9ja2VkOiBzaG91bGRCbG9jaywKICB9KTsKCiAgcmV0dXJuIHsgc2hvdWxkQmxvY2ssIHJlc3VsdCB9Owp9Cg=="}
+import { llmJson } from "./llm";
+import { supabaseAdmin } from "./supabase";
+
+export type SentimentLabel = "positive" | "neutral" | "negative";
+
+export type SentimentResult = {
+  label: SentimentLabel;
+  confidence: number;
+  reason: string;
+};
+
+const SYSTEM_PROMPT = `Você é um classificador de sentimento em português do Brasil. Classifica comentários de Instagram em 3 categorias:
+- "positive": elogio, interesse genuíno, entusiasmo, curiosidade positiva
+- "neutral": pergunta informacional, comentário neutro, pedido normal, marcação de amigos
+- "negative": reclamação, crítica agressiva, insulto, sarcasmo malicioso, spam ofensivo
+
+Responda APENAS JSON válido no formato:
+{"label": "positive"|"neutral"|"negative", "confidence": 0.0-1.0, "reason": "uma frase curta em pt-BR"}
+
+Seja tolerante: brincadeiras, ironia leve ou gírias não são "negative". Só classifica como "negative" se for CLARAMENTE hostil ou reclamação séria.`;
+
+export async function classifySentiment(
+  text: string
+): Promise<SentimentResult | null> {
+  if (!text || text.trim().length < 2) {
+    return { label: "neutral", confidence: 1, reason: "texto muito curto" };
+  }
+  const result = await llmJson<SentimentResult>(SYSTEM_PROMPT, text, {
+    model: "llama-3.1-8b-instant",
+    temperature: 0,
+    max_tokens: 128,
+  });
+  if (!result?.label) return null;
+  return result;
+}
+
+/**
+ * Checks if comment should be blocked (negative sentiment above threshold).
+ * Logs decision to dmflow.sentiment_log.
+ */
+export async function checkSentimentFilter(params: {
+  accountId: string;
+  minConfidence: number;
+  commentText: string;
+}): Promise<{ shouldBlock: boolean; result: SentimentResult | null }> {
+  const sb = supabaseAdmin();
+  const result = await classifySentiment(params.commentText).catch(() => null);
+
+  if (!result) {
+    return { shouldBlock: false, result: null };
+  }
+
+  const shouldBlock =
+    result.label === "negative" && result.confidence >= params.minConfidence;
+
+  await sb.from("sentiment_log").insert({
+    account_id: params.accountId,
+    comment_text: params.commentText.slice(0, 500),
+    label: result.label,
+    confidence: result.confidence,
+    blocked: shouldBlock,
+  });
+
+  return { shouldBlock, result };
+}

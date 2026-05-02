@@ -1,1 +1,122 @@
-{"data":"aW1wb3J0IHR5cGUgeyBUcmlnZ2VyVHlwZSwgTWF0Y2hNb2RlLCBEbUJ1dHRvbiB9IGZyb20gIkAvdHlwZXMvZGIiOwoKZXhwb3J0IHR5cGUgUnVsZVRlbXBsYXRlID0gewogIGlkOiBzdHJpbmc7CiAgbmFtZTogc3RyaW5nOwogIGRlc2NyaXB0aW9uOiBzdHJpbmc7CiAgaWNvbjogc3RyaW5nOyAvLyBsdWNpZGUtcmVhY3QgaWNvbiBuYW1lCiAgdHJpZ2dlcl90eXBlOiBUcmlnZ2VyVHlwZTsKICBrZXl3b3JkOiBzdHJpbmcgfCBudWxsOwogIG1hdGNoX21vZGU6IE1hdGNoTW9kZTsKICBwdWJsaWNfcmVwbHk6IHN0cmluZyB8IG51bGw7CiAgZG1fbWVzc2FnZTogc3RyaW5nOwogIGRtX2J1dHRvbnM6IERtQnV0dG9uW107CiAgZm9sbG93dXBfZGVsYXlfaG91cnM/OiBudW1iZXIgfCBudWxsOwogIGZvbGxvd3VwX21lc3NhZ2U/OiBzdHJpbmcgfCBudWxsOwp9OwoKZXhwb3J0IGNvbnN0IFJVTEVfVEVNUExBVEVTOiBSdWxlVGVtcGxhdGVbXSA9IFsKICB7CiAgICBpZDogImxhbmNhbWVudG8iLAogICAgbmFtZTogIkxhbsOnYW1lbnRvIGRlIHByb2R1dG8iLAogICAgZGVzY3JpcHRpb246ICJDb21lbnTDoXJpbyB2aXJhIHByZS1saXN0YSBWSVAuIEVudmlhIGxpbmsgZGEgcMOhZ2luYSArIGZvbGxvdy11cCBlbSAyIGRpYXMuIiwKICAgIGljb246ICJSb2NrZXQiLAogICAgdHJpZ2dlcl90eXBlOiAiY29tbWVudCIsCiAgICBrZXl3b3JkOiAiUVVFUk8iLAogICAgbWF0Y2hfbW9kZTogImNvbnRhaW5zIiwKICAgIHB1YmxpY19yZXBseTogIk1hbmRlaSBubyBkaXJlY3Qg8J+RhyIsCiAgICBkbV9tZXNzYWdlOgogICAgICAiT3BhIHtmaXJzdF9uYW1lfSEgVmkgcXVlIHZvY8OqIHF1ZXIge1BST0RVVE99LiBBcXVpIGVzdMOhIG8gbGluayBkYSBwcsOpLWxpc3RhIFZJUCDigJQgcXVlbSBlbnRyYSBhZ29yYSBnYW5oYSBkZXNjb250byBubyBsYW7Dp2FtZW50bzoiLAogICAgZG1fYnV0dG9uczogW3sgdGl0bGU6ICJFbnRyYXIgbmEgbGlzdGEiLCB1cmw6ICJodHRwczovL2dlZWstb3MuZ2Vla2FjYWRlbXkuc2l0ZSIgfV0sCiAgICBmb2xsb3d1cF9kZWxheV9ob3VyczogNDgsCiAgICBmb2xsb3d1cF9tZXNzYWdlOgogICAgICAiT2kge2ZpcnN0X25hbWV9LCBhaW5kYSB0w6EgYWJlcnRvIG8gZGVzY29udG8gZG8gbGFuw6dhbWVudG8uIFNlIHF1aXNlciBnYXJhbnRpciwgw6kgcG9yIGFxdWk6IiwKICB9LAogIHsKICAgIGlkOiAiYmxhY2stZnJpZGF5IiwKICAgIG5hbWU6ICJCbGFjayBGcmlkYXkiLAogICAgZGVzY3JpcHRpb246ICJLZXl3b3JkICdDVVBPTScgcmVzcG9uZGUgY29tIGPDs2RpZ28gZSBsaW5rIGRpcmV0byBkbyBjaGVja291dC4iLAogICAgaWNvbjogIlRhZyIsCiAgICB0cmlnZ2VyX3R5cGU6ICJjb21tZW50IiwKICAgIGtleXdvcmQ6ICJDVVBPTSIsCiAgICBtYXRjaF9tb2RlOiAiY29udGFpbnMiLAogICAgcHVibGljX3JlcGx5OiAiVGUgbWFuZGVpIG8gY3Vwb20gbm8gZGlyZWN0IPCflKUiLAogICAgZG1fbWVzc2FnZToKICAgICAgIkJvYSB7Zmlyc3RfbmFtZX0hIFRldSBjdXBvbTogQkxBQ0szMCAodsOhbGlkbyAyNGgpLiBBcGxpY2EgZGlyZXRvIG5vIGNoZWNrb3V0OiIsCiAgICBkbV9idXR0b25zOiBbCiAgICAgIHsgdGl0bGU6ICJBdGl2YXIgY3Vwb20iLCB1cmw6ICJodHRwczovL2dlZWstb3MuZ2Vla2FjYWRlbXkuc2l0ZS8/Y291cG9uPUJMQUNLMzAiIH0sCiAgICBdLAogICAgZm9sbG93dXBfZGVsYXlfaG91cnM6IDEyLAogICAgZm9sbG93dXBfbWVzc2FnZTogIkN1cG9tIEJMQUNLMzAgZXhwaXJhIGVtIDEyaCDij7AuIEFicmUgcsOhcGlkbzoiLAogIH0sCiAgewogICAgaWQ6ICJsZWFkLW1hZ25ldCIsCiAgICBuYW1lOiAiTGVhZCBtYWduZXQgKGVib29rIGdyw6F0aXMpIiwKICAgIGRlc2NyaXB0aW9uOiAiQ29tZW50b3UgYSBwYWxhdnJhLWNoYXZlPyBFbnRyZWdhIG8gZWJvb2sgKyBhZGljaW9uYSDDoCBsaXN0YS4iLAogICAgaWNvbjogIkJvb2tPcGVuIiwKICAgIHRyaWdnZXJfdHlwZTogImNvbW1lbnQiLAogICAga2V5d29yZDogIkVCT09LIiwKICAgIG1hdGNoX21vZGU6ICJjb250YWlucyIsCiAgICBwdWJsaWNfcmVwbHk6ICJUZSBtYW5kZWkgbm8gZGlyZWN0IPCfk5UiLAogICAgZG1fbWVzc2FnZToKICAgICAgIk9wYSEgQXF1aSBlc3TDoSBvIGVib29rIHF1ZSBwcm9tZXRpLCB7Zmlyc3RfbmFtZX0uIEFwcm92ZWl0YSBxdWUgw6kgZ3LDoXRpczoiLAogICAgZG1fYnV0dG9uczogW3sgdGl0bGU6ICJCYWl4YXIgZWJvb2siLCB1cmw6ICJodHRwczovL2dlZWstb3MuZ2Vla2FjYWRlbXkuc2l0ZSIgfV0sCiAgfSwKICB7CiAgICBpZDogImNvbnN1bHRhIiwKICAgIG5hbWU6ICJDb25zdWx0YSBncmF0dWl0YSIsCiAgICBkZXNjcmlwdGlvbjogIkNvbWVudMOhcmlvIGFnZW5kYSBzbG90LiBSZXNwb25kZSBjb20gbGluayBkbyBDYWxlbmRseS4iLAogICAgaWNvbjogIkNhbGVuZGFyIiwKICAgIHRyaWdnZXJfdHlwZTogImNvbW1lbnQiLAogICAga2V5d29yZDogIkNPTlNVTFRBIiwKICAgIG1hdGNoX21vZGU6ICJjb250YWlucyIsCiAgICBwdWJsaWNfcmVwbHk6ICJBZ2VuZGFtZW50byBsaWJlcmFkbyDwn5GHIChkaXJlY3QpIiwKICAgIGRtX21lc3NhZ2U6CiAgICAgICJCb2Ege2ZpcnN0X25hbWV9ISBBZ2VuZGEgYSBjb25zdWx0YSBubyBsaW5rIGFiYWl4byDigJQgc8OzIHRlbSA1IHNsb3RzIGVzc2Egc2VtYW5hOiIsCiAgICBkbV9idXR0b25zOiBbeyB0aXRsZTogIkFnZW5kYXIiLCB1cmw6ICJodHRwczovL2NhbGVuZGx5LmNvbS9zZXUtdXN1YXJpbyIgfV0sCiAgfSwKICB7CiAgICBpZDogIndlYmluYXIiLAogICAgbmFtZTogIkluc2NyacOnw6NvIGVtIHdlYmluYXIiLAogICAgZGVzY3JpcHRpb246ICJLZXl3b3JkIGRpc3BhcmEgaW5zY3Jpw6fDo28gKyBsZW1icmV0ZSAxIGRpYSBhbnRlcy4iLAogICAgaWNvbjogIlZpZGVvIiwKICAgIHRyaWdnZXJfdHlwZTogImNvbW1lbnQiLAogICAga2V5d29yZDogIkFVTEEiLAogICAgbWF0Y2hfbW9kZTogImNvbnRhaW5zIiwKICAgIHB1YmxpY19yZXBseTogIkluc2NyacOnw6NvIG5vIGRpcmVjdCDwn46lIiwKICAgIGRtX21lc3NhZ2U6ICJUZSBnYXJhbnRpIGEgdmFnYSBuYSBhdWxhLCB7Zmlyc3RfbmFtZX0uIEFkaWNpb25hIG5hIGFnZW5kYToiLAogICAgZG1fYnV0dG9uczogW3sgdGl0bGU6ICJDb25maXJtYXIgaW5zY3Jpw6fDo28iLCB1cmw6ICJodHRwczovL2dlZWstb3MuZ2Vla2FjYWRlbXkuc2l0ZSIgfV0sCiAgICBmb2xsb3d1cF9kZWxheV9ob3VyczogMjQsCiAgICBmb2xsb3d1cF9tZXNzYWdlOgogICAgICAiT2kge2ZpcnN0X25hbWV9LCBhbWFuaMOjIGNvbWXDp2EgYSBhdWxhLiBOw6NvIHBlcmRlIOKAlCBjb25maXJtYSBhcXVpOiIsCiAgfSwKICB7CiAgICBpZDogIndlbGNvbWUtZG0iLAogICAgbmFtZTogIkJvYXMtdmluZGFzIChwcmltZWlyYSBETSkiLAogICAgZGVzY3JpcHRpb246ICJRdWFscXVlciBwZXNzb2EgcXVlIG1hbmRhciBwcmltZWlyYSBETSByZWNlYmUgYXByZXNlbnRhw6fDo28uIiwKICAgIGljb246ICJIYW5kIiwKICAgIHRyaWdnZXJfdHlwZTogImZpcnN0X2RtIiwKICAgIGtleXdvcmQ6IG51bGwsCiAgICBtYXRjaF9tb2RlOiAiYW55IiwKICAgIHB1YmxpY19yZXBseTogbnVsbCwKICAgIGRtX21lc3NhZ2U6CiAgICAgICJPcGEge2ZpcnN0X25hbWV9IPCfkYsgVmFsZXUgcG9yIGNoZWdhci4gQXF1aSDDqSBvIEFuZHJleS4gU2UgcXVlciB1c2FyIElBIHByYSBlbXByZWVuZGVyLCBkw6EgdW1hIG9saGFkYToiLAogICAgZG1fYnV0dG9uczogWwogICAgICB7IHRpdGxlOiAiWW91VHViZSBHSSIsIHVybDogImh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL0BHZWVraW50ZWxpZ2VuY2lhIiB9LAogICAgICB7IHRpdGxlOiAiRW50cmFyIG5vIE5ldHdvcmsiLCB1cmw6ICJodHRwczovL2NhcHR1cmFzLnZlcmNlbC5hcHA/c3JjPWlnLWRtIiB9LAogICAgXSwKICB9LAogIHsKICAgIGlkOiAic3RvcnktcmVwbHkiLAogICAgbmFtZTogIlJlc3Bvc3RhIGEgc3RvcnkiLAogICAgZGVzY3JpcHRpb246ICJRdWFscXVlciByZXNwb3N0YSBhIHVtIHN0b3J5IGVzcGVjw61maWNvIGRpc3BhcmEgRE0uIiwKICAgIGljb246ICJDYW1lcmEiLAogICAgdHJpZ2dlcl90eXBlOiAic3RvcnlfcmVwbHkiLAogICAga2V5d29yZDogbnVsbCwKICAgIG1hdGNoX21vZGU6ICJhbnkiLAogICAgcHVibGljX3JlcGx5OiBudWxsLAogICAgZG1fbWVzc2FnZToKICAgICAgIlZhbGV1IHBvciByZXNwb25kZXIsIHtmaXJzdF9uYW1lfSEgQ29tbyBwcm9tZXRpIG5vIHN0b3J5LCBhcXVpIGVzdMOhIG8gbWF0ZXJpYWw6IiwKICAgIGRtX2J1dHRvbnM6IFt7IHRpdGxlOiAiQWNlc3NhciIsIHVybDogImh0dHBzOi8vZ2Vlay1vcy5nZWVrYWNhZGVteS5zaXRlIiB9XSwKICB9LApdOwo="}
+import type { TriggerType, MatchMode, DmButton } from "@/types/db";
+
+export type RuleTemplate = {
+  id: string;
+  name: string;
+  description: string;
+  icon: string; // lucide-react icon name
+  trigger_type: TriggerType;
+  keyword: string | null;
+  match_mode: MatchMode;
+  public_reply: string | null;
+  dm_message: string;
+  dm_buttons: DmButton[];
+  followup_delay_hours?: number | null;
+  followup_message?: string | null;
+};
+
+export const RULE_TEMPLATES: RuleTemplate[] = [
+  {
+    id: "lancamento",
+    name: "Lançamento de produto",
+    description: "Comentário vira pre-lista VIP. Envia link da página + follow-up em 2 dias.",
+    icon: "Rocket",
+    trigger_type: "comment",
+    keyword: "QUERO",
+    match_mode: "contains",
+    public_reply: "Mandei no direct 👇",
+    dm_message:
+      "Opa {first_name}! Vi que você quer {PRODUTO}. Aqui está o link da pré-lista VIP — quem entra agora ganha desconto no lançamento:",
+    dm_buttons: [{ title: "Entrar na lista", url: "https://geek-os.geekacademy.site" }],
+    followup_delay_hours: 48,
+    followup_message:
+      "Oi {first_name}, ainda tá aberto o desconto do lançamento. Se quiser garantir, é por aqui:",
+  },
+  {
+    id: "black-friday",
+    name: "Black Friday",
+    description: "Keyword 'CUPOM' responde com código e link direto do checkout.",
+    icon: "Tag",
+    trigger_type: "comment",
+    keyword: "CUPOM",
+    match_mode: "contains",
+    public_reply: "Te mandei o cupom no direct 🔥",
+    dm_message:
+      "Boa {first_name}! Teu cupom: BLACK30 (válido 24h). Aplica direto no checkout:",
+    dm_buttons: [
+      { title: "Ativar cupom", url: "https://geek-os.geekacademy.site/?coupon=BLACK30" },
+    ],
+    followup_delay_hours: 12,
+    followup_message: "Cupom BLACK30 expira em 12h ⏰. Abre rápido:",
+  },
+  {
+    id: "lead-magnet",
+    name: "Lead magnet (ebook grátis)",
+    description: "Comentou a palavra-chave? Entrega o ebook + adiciona à lista.",
+    icon: "BookOpen",
+    trigger_type: "comment",
+    keyword: "EBOOK",
+    match_mode: "contains",
+    public_reply: "Te mandei no direct 📕",
+    dm_message:
+      "Opa! Aqui está o ebook que prometi, {first_name}. Aproveita que é grátis:",
+    dm_buttons: [{ title: "Baixar ebook", url: "https://geek-os.geekacademy.site" }],
+  },
+  {
+    id: "consulta",
+    name: "Consulta gratuita",
+    description: "Comentário agenda slot. Responde com link do Calendly.",
+    icon: "Calendar",
+    trigger_type: "comment",
+    keyword: "CONSULTA",
+    match_mode: "contains",
+    public_reply: "Agendamento liberado 👇 (direct)",
+    dm_message:
+      "Boa {first_name}! Agenda a consulta no link abaixo — só tem 5 slots essa semana:",
+    dm_buttons: [{ title: "Agendar", url: "https://calendly.com/seu-usuario" }],
+  },
+  {
+    id: "webinar",
+    name: "Inscrição em webinar",
+    description: "Keyword dispara inscrição + lembrete 1 dia antes.",
+    icon: "Video",
+    trigger_type: "comment",
+    keyword: "AULA",
+    match_mode: "contains",
+    public_reply: "Inscrição no direct 🎥",
+    dm_message: "Te garanti a vaga na aula, {first_name}. Adiciona na agenda:",
+    dm_buttons: [{ title: "Confirmar inscrição", url: "https://geek-os.geekacademy.site" }],
+    followup_delay_hours: 24,
+    followup_message:
+      "Oi {first_name}, amanhã começa a aula. Não perde — confirma aqui:",
+  },
+  {
+    id: "welcome-dm",
+    name: "Boas-vindas (primeira DM)",
+    description: "Qualquer pessoa que mandar primeira DM recebe apresentação.",
+    icon: "Hand",
+    trigger_type: "first_dm",
+    keyword: null,
+    match_mode: "any",
+    public_reply: null,
+    dm_message:
+      "Opa {first_name} 👋 Valeu por chegar. Aqui é o Andrey. Se quer usar IA pra empreender, dá uma olhada:",
+    dm_buttons: [
+      { title: "YouTube GI", url: "https://www.youtube.com/@Geekinteligencia" },
+      { title: "Entrar no Network", url: "https://capturas.vercel.app?src=ig-dm" },
+    ],
+  },
+  {
+    id: "story-reply",
+    name: "Resposta a story",
+    description: "Qualquer resposta a um story específico dispara DM.",
+    icon: "Camera",
+    trigger_type: "story_reply",
+    keyword: null,
+    match_mode: "any",
+    public_reply: null,
+    dm_message:
+      "Valeu por responder, {first_name}! Como prometi no story, aqui está o material:",
+    dm_buttons: [{ title: "Acessar", url: "https://geek-os.geekacademy.site" }],
+  },
+];

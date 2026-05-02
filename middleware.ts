@@ -1,1 +1,87 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlc3BvbnNlLCB0eXBlIE5leHRSZXF1ZXN0IH0gZnJvbSAibmV4dC9zZXJ2ZXIiOwppbXBvcnQgeyBjcmVhdGVTZXJ2ZXJDbGllbnQgfSBmcm9tICJAc3VwYWJhc2Uvc3NyIjsKCmNvbnN0IFBVQkxJQ19ST1VURVMgPSBbCiAgIi8iLAogICIvYXV0aC9sb2dpbiIsCiAgIi9hdXRoL3NpZ251cCIsCiAgIi9hdXRoL2NhbGxiYWNrIiwKICAiL3ByaXZhY3kiLAogICIvdGVybXMiLApdOwoKY29uc3QgUFVCTElDX0FQSV9QUkVGSVhFUyA9IFsKICAiL2FwaS93ZWJob29rL2luc3RhZ3JhbSIsCiAgIi9hcGkvY3Jvbi8iLAogICIvci8iLAogICIvYXV0aC9pbnN0YWdyYW0vIiwKXTsKCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBtaWRkbGV3YXJlKHJlcXVlc3Q6IE5leHRSZXF1ZXN0KSB7CiAgbGV0IHJlc3BvbnNlID0gTmV4dFJlc3BvbnNlLm5leHQoeyByZXF1ZXN0IH0pOwoKICBjb25zdCBzdXBhYmFzZSA9IGNyZWF0ZVNlcnZlckNsaWVudCgKICAgIHByb2Nlc3MuZW52Lk5FWFRfUFVCTElDX1NVUEFCQVNFX1VSTCEsCiAgICBwcm9jZXNzLmVudi5ORVhUX1BVQkxJQ19TVVBBQkFTRV9BTk9OX0tFWSEsCiAgICB7CiAgICAgIGNvb2tpZXM6IHsKICAgICAgICBnZXRBbGwoKSB7CiAgICAgICAgICByZXR1cm4gcmVxdWVzdC5jb29raWVzLmdldEFsbCgpOwogICAgICAgIH0sCiAgICAgICAgc2V0QWxsKGNvb2tpZXNUb1NldCkgewogICAgICAgICAgY29va2llc1RvU2V0LmZvckVhY2goKHsgbmFtZSwgdmFsdWUgfSkgPT4KICAgICAgICAgICAgcmVxdWVzdC5jb29raWVzLnNldChuYW1lLCB2YWx1ZSkKICAgICAgICAgICk7CiAgICAgICAgICByZXNwb25zZSA9IE5leHRSZXNwb25zZS5uZXh0KHsgcmVxdWVzdCB9KTsKICAgICAgICAgIGNvb2tpZXNUb1NldC5mb3JFYWNoKCh7IG5hbWUsIHZhbHVlLCBvcHRpb25zIH0pID0+CiAgICAgICAgICAgIHJlc3BvbnNlLmNvb2tpZXMuc2V0KG5hbWUsIHZhbHVlLCBvcHRpb25zKQogICAgICAgICAgKTsKICAgICAgICB9LAogICAgICB9LAogICAgfQogICk7CgogIGNvbnN0IHsKICAgIGRhdGE6IHsgdXNlciB9LAogIH0gPSBhd2FpdCBzdXBhYmFzZS5hdXRoLmdldFVzZXIoKTsKCiAgY29uc3QgeyBwYXRobmFtZSB9ID0gcmVxdWVzdC5uZXh0VXJsOwoKICBjb25zdCBpc1B1YmxpYyA9CiAgICBQVUJMSUNfUk9VVEVTLmluY2x1ZGVzKHBhdGhuYW1lKSB8fAogICAgUFVCTElDX0FQSV9QUkVGSVhFUy5zb21lKChwKSA9PiBwYXRobmFtZS5zdGFydHNXaXRoKHApKSB8fAogICAgcGF0aG5hbWUuc3RhcnRzV2l0aCgiL19uZXh0IikgfHwKICAgIHBhdGhuYW1lLnN0YXJ0c1dpdGgoIi9pY29uIikgfHwKICAgIHBhdGhuYW1lLnN0YXJ0c1dpdGgoIi9hcHBsZS1pY29uIikgfHwKICAgIHBhdGhuYW1lLmluY2x1ZGVzKCIuIik7CgogIGNvbnN0IGlzQXV0aFBhZ2UgPSBwYXRobmFtZS5zdGFydHNXaXRoKCIvYXV0aCIpOwogIGNvbnN0IHJlcXVpcmVzQXV0aCA9CiAgICBwYXRobmFtZS5zdGFydHNXaXRoKCIvZGFzaGJvYXJkIikgfHwKICAgIHBhdGhuYW1lLnN0YXJ0c1dpdGgoIi9hZG1pbiIpIHx8CiAgICBwYXRobmFtZS5zdGFydHNXaXRoKCIvYXBpL2FkbWluIikgfHwKICAgIHBhdGhuYW1lLnN0YXJ0c1dpdGgoIi9vbmJvYXJkaW5nIik7CgogIC8vIFJlZGlyZWN0IHVuYXV0aGVudGljYXRlZCB1c2VycyB0cnlpbmcgdG8gYWNjZXNzIHByb3RlY3RlZCByb3V0ZXMKICBpZiAocmVxdWlyZXNBdXRoICYmICF1c2VyKSB7CiAgICBjb25zdCB1cmwgPSByZXF1ZXN0Lm5leHRVcmwuY2xvbmUoKTsKICAgIHVybC5wYXRobmFtZSA9ICIvYXV0aC9sb2dpbiI7CiAgICB1cmwuc2VhcmNoUGFyYW1zLnNldCgibmV4dCIsIHBhdGhuYW1lKTsKICAgIHJldHVybiBOZXh0UmVzcG9uc2UucmVkaXJlY3QodXJsKTsKICB9CgogIC8vIFJlZGlyZWN0IGxvZ2dlZC1pbiB1c2VycyBhd2F5IGZyb20gYXV0aCBwYWdlcwogIGlmIChpc0F1dGhQYWdlICYmIHVzZXIgJiYgIXBhdGhuYW1lLnN0YXJ0c1dpdGgoIi9hdXRoL2NhbGxiYWNrIikgJiYgIXBhdGhuYW1lLnN0YXJ0c1dpdGgoIi9hdXRoL2xvZ291dCIpICYmICFwYXRobmFtZS5zdGFydHNXaXRoKCIvYXV0aC9pbnN0YWdyYW0iKSkgewogICAgY29uc3QgdXJsID0gcmVxdWVzdC5uZXh0VXJsLmNsb25lKCk7CiAgICB1cmwucGF0aG5hbWUgPSAiL2Rhc2hib2FyZCI7CiAgICByZXR1cm4gTmV4dFJlc3BvbnNlLnJlZGlyZWN0KHVybCk7CiAgfQoKICByZXR1cm4gcmVzcG9uc2U7Cn0KCmV4cG9ydCBjb25zdCBjb25maWcgPSB7CiAgbWF0Y2hlcjogWwogICAgIi8oKD8hX25leHQvc3RhdGljfF9uZXh0L2ltYWdlfGZhdmljb24uaWNvfGljb258YXBwbGUtaWNvbnwuKlxcLi4qKS4qKSIsCiAgXSwKfTsK"}
+import { NextResponse, type NextRequest } from "next/server";
+import { createServerClient } from "@supabase/ssr";
+
+const PUBLIC_ROUTES = [
+  "/",
+  "/auth/login",
+  "/auth/signup",
+  "/auth/callback",
+  "/privacy",
+  "/terms",
+];
+
+const PUBLIC_API_PREFIXES = [
+  "/api/webhook/instagram",
+  "/api/cron/",
+  "/r/",
+  "/auth/instagram/",
+];
+
+export async function middleware(request: NextRequest) {
+  let response = NextResponse.next({ request });
+
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return request.cookies.getAll();
+        },
+        setAll(cookiesToSet) {
+          cookiesToSet.forEach(({ name, value }) =>
+            request.cookies.set(name, value)
+          );
+          response = NextResponse.next({ request });
+          cookiesToSet.forEach(({ name, value, options }) =>
+            response.cookies.set(name, value, options)
+          );
+        },
+      },
+    }
+  );
+
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  const { pathname } = request.nextUrl;
+
+  const isPublic =
+    PUBLIC_ROUTES.includes(pathname) ||
+    PUBLIC_API_PREFIXES.some((p) => pathname.startsWith(p)) ||
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/icon") ||
+    pathname.startsWith("/apple-icon") ||
+    pathname.includes(".");
+
+  const isAuthPage = pathname.startsWith("/auth");
+  const requiresAuth =
+    pathname.startsWith("/dashboard") ||
+    pathname.startsWith("/admin") ||
+    pathname.startsWith("/api/admin") ||
+    pathname.startsWith("/onboarding");
+
+  // Redirect unauthenticated users trying to access protected routes
+  if (requiresAuth && !user) {
+    const url = request.nextUrl.clone();
+    url.pathname = "/auth/login";
+    url.searchParams.set("next", pathname);
+    return NextResponse.redirect(url);
+  }
+
+  // Redirect logged-in users away from auth pages
+  if (isAuthPage && user && !pathname.startsWith("/auth/callback") && !pathname.startsWith("/auth/logout") && !pathname.startsWith("/auth/instagram")) {
+    const url = request.nextUrl.clone();
+    url.pathname = "/dashboard";
+    return NextResponse.redirect(url);
+  }
+
+  return response;
+}
+
+export const config = {
+  matcher: [
+    "/((?!_next/static|_next/image|favicon.ico|icon|apple-icon|.*\\..*).*)",
+  ],
+};

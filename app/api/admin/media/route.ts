@@ -1,1 +1,69 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlcXVlc3QsIE5leHRSZXNwb25zZSB9IGZyb20gIm5leHQvc2VydmVyIjsKaW1wb3J0IHsgc3VwYWJhc2VBZG1pbiB9IGZyb20gIkAvbGliL3N1cGFiYXNlIjsKaW1wb3J0IHR5cGUgeyBBY2NvdW50IH0gZnJvbSAiQC90eXBlcy9kYiI7CgpleHBvcnQgY29uc3QgcnVudGltZSA9ICJub2RlanMiOwpleHBvcnQgY29uc3QgZHluYW1pYyA9ICJmb3JjZS1keW5hbWljIjsKCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBHRVQocmVxOiBOZXh0UmVxdWVzdCkgewogIGNvbnN0IHsgc2VhcmNoUGFyYW1zIH0gPSBuZXcgVVJMKHJlcS51cmwpOwogIGNvbnN0IGFjY291bnRJZCA9IHNlYXJjaFBhcmFtcy5nZXQoImFjY291bnRfaWQiKTsKICBjb25zdCBsaW1pdCA9IE51bWJlcihzZWFyY2hQYXJhbXMuZ2V0KCJsaW1pdCIpID8/IDUwKTsKCiAgY29uc3Qgc2IgPSBzdXBhYmFzZUFkbWluKCk7CiAgbGV0IHF1ZXJ5ID0gc2IuZnJvbSgiYWNjb3VudHMiKS5zZWxlY3QoIioiKS5lcSgiYWN0aXZlIiwgdHJ1ZSkubGltaXQoMSk7CiAgaWYgKGFjY291bnRJZCkgcXVlcnkgPSBxdWVyeS5lcSgiaWQiLCBhY2NvdW50SWQpIGFzIGFueTsKICBjb25zdCB7IGRhdGE6IGFjY291bnQgfSA9IGF3YWl0IHF1ZXJ5Lm1heWJlU2luZ2xlPEFjY291bnQ+KCk7CiAgaWYgKCFhY2NvdW50KSB7CiAgICByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oeyBlcnJvcjogImFjY291bnQgbm90IGZvdW5kIiB9LCB7IHN0YXR1czogNDA0IH0pOwogIH0KCiAgY29uc3QgZmllbGRzID0gWwogICAgImlkIiwKICAgICJjYXB0aW9uIiwKICAgICJwZXJtYWxpbmsiLAogICAgInRodW1ibmFpbF91cmwiLAogICAgIm1lZGlhX3VybCIsCiAgICAibWVkaWFfdHlwZSIsCiAgICAibWVkaWFfcHJvZHVjdF90eXBlIiwKICAgICJ0aW1lc3RhbXAiLAogICAgImxpa2VfY291bnQiLAogICAgImNvbW1lbnRzX2NvdW50IiwKICBdLmpvaW4oIiwiKTsKCiAgY29uc3QgdXJsID0gYGh0dHBzOi8vZ3JhcGguaW5zdGFncmFtLmNvbS92MjUuMC9tZS9tZWRpYT9maWVsZHM9JHtmaWVsZHN9JmxpbWl0PSR7TWF0aC5taW4oCiAgICAxMDAsCiAgICBNYXRoLm1heCgxLCBsaW1pdCkKICApfWA7CgogIGNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKHVybCwgewogICAgaGVhZGVyczogeyBBdXRob3JpemF0aW9uOiBgQmVhcmVyICR7YWNjb3VudC5pZ19hY2Nlc3NfdG9rZW59YCB9LAogICAgY2FjaGU6ICJuby1zdG9yZSIsCiAgfSk7CiAgY29uc3QganNvbjogYW55ID0gYXdhaXQgcmVzLmpzb24oKS5jYXRjaCgoKSA9PiAoe30pKTsKCiAgaWYgKCFyZXMub2spIHsKICAgIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbigKICAgICAgeyBlcnJvcjoganNvbj8uZXJyb3I/Lm1lc3NhZ2UgPz8gImZhaWxlZCB0byBmZXRjaCBtZWRpYSIgfSwKICAgICAgeyBzdGF0dXM6IHJlcy5zdGF0dXMgfQogICAgKTsKICB9CgogIGNvbnN0IG1lZGlhID0gKGpzb24uZGF0YSA/PyBbXSkubWFwKChtOiBhbnkpID0+ICh7CiAgICBpZDogbS5pZCwKICAgIGNhcHRpb246IG0uY2FwdGlvbiA/PyAiIiwKICAgIHBlcm1hbGluazogbS5wZXJtYWxpbmssCiAgICB0aHVtYm5haWw6IG0udGh1bWJuYWlsX3VybCA/PyBtLm1lZGlhX3VybCwKICAgIG1lZGlhX3R5cGU6IG0ubWVkaWFfdHlwZSwKICAgIHByb2R1Y3RfdHlwZTogbS5tZWRpYV9wcm9kdWN0X3R5cGUsCiAgICB0aW1lc3RhbXA6IG0udGltZXN0YW1wLAogICAgbGlrZXM6IG0ubGlrZV9jb3VudCA/PyAwLAogICAgY29tbWVudHM6IG0uY29tbWVudHNfY291bnQgPz8gMCwKICB9KSk7CgogIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7CiAgICBhY2NvdW50X2lkOiBhY2NvdW50LmlkLAogICAgY291bnQ6IG1lZGlhLmxlbmd0aCwKICAgIG1lZGlhLAogIH0pOwp9Cg=="}
+import { NextRequest, NextResponse } from "next/server";
+import { supabaseAdmin } from "@/lib/supabase";
+import type { Account } from "@/types/db";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+export async function GET(req: NextRequest) {
+  const { searchParams } = new URL(req.url);
+  const accountId = searchParams.get("account_id");
+  const limit = Number(searchParams.get("limit") ?? 50);
+
+  const sb = supabaseAdmin();
+  let query = sb.from("accounts").select("*").eq("active", true).limit(1);
+  if (accountId) query = query.eq("id", accountId) as any;
+  const { data: account } = await query.maybeSingle<Account>();
+  if (!account) {
+    return NextResponse.json({ error: "account not found" }, { status: 404 });
+  }
+
+  const fields = [
+    "id",
+    "caption",
+    "permalink",
+    "thumbnail_url",
+    "media_url",
+    "media_type",
+    "media_product_type",
+    "timestamp",
+    "like_count",
+    "comments_count",
+  ].join(",");
+
+  const url = `https://graph.instagram.com/v25.0/me/media?fields=${fields}&limit=${Math.min(
+    100,
+    Math.max(1, limit)
+  )}`;
+
+  const res = await fetch(url, {
+    headers: { Authorization: `Bearer ${account.ig_access_token}` },
+    cache: "no-store",
+  });
+  const json: any = await res.json().catch(() => ({}));
+
+  if (!res.ok) {
+    return NextResponse.json(
+      { error: json?.error?.message ?? "failed to fetch media" },
+      { status: res.status }
+    );
+  }
+
+  const media = (json.data ?? []).map((m: any) => ({
+    id: m.id,
+    caption: m.caption ?? "",
+    permalink: m.permalink,
+    thumbnail: m.thumbnail_url ?? m.media_url,
+    media_type: m.media_type,
+    product_type: m.media_product_type,
+    timestamp: m.timestamp,
+    likes: m.like_count ?? 0,
+    comments: m.comments_count ?? 0,
+  }));
+
+  return NextResponse.json({
+    account_id: account.id,
+    count: media.length,
+    media,
+  });
+}
