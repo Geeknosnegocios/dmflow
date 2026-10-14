@@ -78,11 +78,14 @@ export async function GET(req: NextRequest) {
       if (containerError) throw new Error(`Container sem recibo: ${containerError.message}`);
       await waitForContainer(container.id, token);
       const published = await graphPost(`${igId}/media_publish`, token, { creation_id: container.id });
+      const { error: postReceiptError } = await sb.from("scheduled_reels")
+        .update({ post_id: published.id, published_at: new Date().toISOString() })
+        .eq("id", reel.id).eq("status", "processing");
+      if (postReceiptError) throw new Error(`Post sem ID salvo: ${postReceiptError.message}`);
       const info = await graphGet(published.id, token, { fields: "permalink" });
       if (!info.permalink) throw new Error("Post criado sem permalink; reconciliação manual necessária");
       const { error: updateError } = await sb.from("scheduled_reels").update({
-        status: "published", post_id: published.id, permalink: info.permalink,
-        published_at: new Date().toISOString(), story_status: "pending",
+        status: "published", permalink: info.permalink, story_status: "pending",
       }).eq("id", reel.id).eq("status", "processing");
       if (updateError) throw new Error(`Post criado sem recibo na fila: ${updateError.message}`);
       reels.push({ id: reel.id, idx: reel.idx, ok: true, post_id: published.id });
@@ -114,9 +117,12 @@ export async function GET(req: NextRequest) {
       if (containerError) throw new Error(`Story sem recibo: ${containerError.message}`);
       await waitForContainer(container.id, token);
       const published = await graphPost(`${igId}/media_publish`, token, { creation_id: container.id });
+      const { error: storyReceiptError } = await sb.from("scheduled_reels")
+        .update({ story_post_id: published.id, story_published_at: new Date().toISOString() })
+        .eq("id", reel.id).eq("story_status", "processing");
+      if (storyReceiptError) throw new Error(`Story sem ID salvo: ${storyReceiptError.message}`);
       const { error: updateError } = await sb.from("scheduled_reels").update({
-        story_status: "published", story_post_id: published.id,
-        story_published_at: new Date().toISOString(),
+        story_status: "published",
       }).eq("id", reel.id).eq("story_status", "processing");
       if (updateError) throw new Error(`Story criado sem recibo na fila: ${updateError.message}`);
       stories.push({ id: reel.id, idx: reel.idx, ok: true, story_post_id: published.id });
