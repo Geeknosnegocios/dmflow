@@ -3,93 +3,130 @@ import { supabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+export const maxDuration = 300;
 
-const IG_ID = "17841400100030080";
-const IG_TOKEN = process.env.IG_ACCESS_TOKEN ?? "EAASN8hLPi6sBRa9cYar6pkQjl1WJbYXxAJBSZCB8ep2wgEQk0pN76MSpFeu1PFxxvHcb8ZAnrq7u7OBZAzHYHnNtGqrWjNMomZCzUWtoz7GAUiZCeNexaroWXVZCSzza6QuMSI56ZBCruxw0gtmjBT75FC9wPWI4kv6ZC2iG8yLzLZCT4W2ZBavEiroORvOemRsJjzMwZDZD"; // novo nao-expira
-// backup: EAASN8hLPi6sBRPNXnUFUzGUQfI6rqFMDj8vg8ZBRW1RODcINOhVkW6xH8mf1TSNrcTZC1azwgx9vBunxrZAZAIoyqpT8WvGQFUle8gwdPuGlv9fy4OKGD39zIoDBTF1vVutXIHip2Rx0IolG5gBV0CabtMfesZCz68d4z6NfZAfU4aqg4d9Hhiu3kgbv9EuqtmBMYY1iBLjWemButn
 const API = "https://graph.facebook.com/v19.0";
+const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-async function graphPost(path: string, data: Record<string, string>) {
-  const body = new URLSearchParams({ ...data, access_token: IG_TOKEN });
-  const res = await fetch(`${API}/${path}`, { method: "POST", body });
-  const json = await res.json();
-  if (!res.ok) throw new Error(`Graph ${res.status}: ${json?.error?.message ?? JSON.stringify(json)}`);
-  return json;
+async function graphPost(path: string, token: string, params: Record<string, string>) {
+  const body = new URLSearchParams({ ...params, access_token: token });
+  const response = await fetch(`${API}/${path}`, { method: "POST", body });
+  const result = await response.json();
+  if (!response.ok) throw new Error(`Graph ${response.status}: ${result?.error?.message ?? "request failed"}`);
+  return result;
 }
 
-async function graphGet(path: string, params: Record<string, string> = {}) {
-  const qs = new URLSearchParams({ ...params, access_token: IG_TOKEN });
-  const res = await fetch(`${API}/${path}?${qs}`);
-  const json = await res.json();
-  if (!res.ok) throw new Error(`Graph ${res.status}: ${json?.error?.message ?? JSON.stringify(json)}`);
-  return json;
+async function graphGet(path: string, token: string, params: Record<string, string>) {
+  const query = new URLSearchParams({ ...params, access_token: token });
+  const response = await fetch(`${API}/${path}?${query}`);
+  const result = await response.json();
+  if (!response.ok) throw new Error(`Graph ${response.status}: ${result?.error?.message ?? "request failed"}`);
+  return result;
 }
 
-async function publishReel(videoUrl: string, caption: string): Promise<{ post_id: string; permalink: string }> {
-  const container = await graphPost(`${IG_ID}/media`, {
-    media_type: "REELS",
-    video_url: videoUrl,
-    caption,
-    share_to_feed: "true",
-  });
-  const containerId: string = container.id;
-
-  // Poll ate FINISHED (max 90s)
-  for (let i = 0; i < 30; i++) {
-    await new Promise((r) => setTimeout(r, 3000));
-    const info = await graphGet(containerId, { fields: "status_code" });
-    if (info.status_code === "FINISHED") break;
-    if (info.status_code === "ERROR") throw new Error(`IG processing error: ${JSON.stringify(info)}`);
+async function waitForContainer(id: string, token: string) {
+  for (let attempt = 0; attempt < 30; attempt++) {
+    await wait(3000);
+    const state = await graphGet(id, token, { fields: "status_code" });
+    if (state.status_code === "FINISHED") return;
+    if (state.status_code === "ERROR" || state.status_code === "EXPIRED") {
+      throw new Error(`Instagram recusou o processamento: ${state.status_code}`);
+    }
   }
-
-  const pub = await graphPost(`${IG_ID}/media_publish`, { creation_id: containerId });
-  const postId: string = pub.id;
-
-  let permalink = "";
-  try {
-    const info2 = await graphGet(postId, { fields: "permalink" });
-    permalink = info2.permalink ?? "";
-  } catch {}
-
-  return { post_id: postId, permalink };
+  throw new Error("Processamento do Instagram excedeu 90 segundos");
 }
 
 export async function GET(req: NextRequest) {
-  // Verifica CRON_SECRET se configurado
   const secret = process.env.CRON_SECRET;
   if (secret && req.headers.get("authorization") !== `Bearer ${secret}`) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
   const sb = supabaseAdmin();
+  const { data: account, error: accountError } = await sb.from("accounts")
+    .select("ig_business_id,ig_access_token,ig_token_expires_at")
+    .eq("ig_username", "andreyogeek").eq("active", true).single();
+  if (accountError || !account?.ig_business_id || !account?.ig_access_token ||
+      (account.ig_token_expires_at && Date.parse(account.ig_token_expires_at) <= Date.now())) {
+    return NextResponse.json({ error: "Conta Instagram sem token ativo" }, { status: 503 });
+  }
+  const igId: string = account.ig_business_id;
+  const token: string = account.ig_access_token;
   const nowUnix = Math.floor(Date.now() / 1000);
-
-  const { data: due, error } = await sb
-    .from("scheduled_reels")
-    .select("*")
-    .eq("status", "pending")
-    .lte("scheduled_unix", nowUnix)
-    .limit(5);
-
+  const { data: due, error } = await sb.from("scheduled_reels").select("*")
+    .eq("status", "pending").lte("scheduled_unix", nowUnix)
+    .order("scheduled_unix", { ascending: true }).limit(3);
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
-  if (!due || due.length === 0) return NextResponse.json({ ok: true, published: 0 });
 
-  const results = [];
-  for (const reel of due) {
+  const reels = [];
+  for (const reel of due ?? []) {
+    if (!reel.cover_url || !reel.story_url) {
+      reels.push({ id: reel.id, idx: reel.idx, ok: false, error: "Capa ou Story aprovado ausente" });
+      continue;
+    }
+    const { data: claimed, error: claimError } = await sb.from("scheduled_reels")
+      .update({ status: "processing", error: null }).eq("id", reel.id).eq("status", "pending")
+      .select("id").maybeSingle();
+    if (claimError || !claimed) continue;
     try {
-      const { post_id, permalink } = await publishReel(reel.video_url, reel.caption);
-      await sb.from("scheduled_reels").update({
-        status: "published",
-        post_id,
-        permalink,
-        published_at: new Date().toISOString(),
-      }).eq("id", reel.id);
-      results.push({ id: reel.id, slug: reel.slug, idx: reel.idx, post_id, ok: true });
-    } catch (e: any) {
-      await sb.from("scheduled_reels").update({ status: "error", error: e.message }).eq("id", reel.id);
-      results.push({ id: reel.id, slug: reel.slug, idx: reel.idx, ok: false, error: e.message });
+      const container = await graphPost(`${igId}/media`, token, {
+        media_type: "REELS", video_url: reel.video_url, cover_url: reel.cover_url,
+        caption: reel.caption, share_to_feed: "true",
+      });
+      const { error: containerError } = await sb.from("scheduled_reels")
+        .update({ container_id: container.id }).eq("id", reel.id);
+      if (containerError) throw new Error(`Container sem recibo: ${containerError.message}`);
+      await waitForContainer(container.id, token);
+      const published = await graphPost(`${igId}/media_publish`, token, { creation_id: container.id });
+      const info = await graphGet(published.id, token, { fields: "permalink" });
+      if (!info.permalink) throw new Error("Post criado sem permalink; reconciliação manual necessária");
+      const { error: updateError } = await sb.from("scheduled_reels").update({
+        status: "published", post_id: published.id, permalink: info.permalink,
+        published_at: new Date().toISOString(), story_status: "pending",
+      }).eq("id", reel.id).eq("status", "processing");
+      if (updateError) throw new Error(`Post criado sem recibo na fila: ${updateError.message}`);
+      reels.push({ id: reel.id, idx: reel.idx, ok: true, post_id: published.id });
+    } catch (cause) {
+      const message = cause instanceof Error ? cause.message : String(cause);
+      // Processing is deliberately not retried: Graph may have accepted the post.
+      await sb.from("scheduled_reels").update({ status: "error", error: message })
+        .eq("id", reel.id).eq("status", "processing");
+      reels.push({ id: reel.id, idx: reel.idx, ok: false, error: message });
     }
   }
 
-  return NextResponse.json({ ok: true, published: results.filter((r) => r.ok).length, results });
+  const { data: storyDue, error: storyQueryError } = await sb.from("scheduled_reels").select("*")
+    .eq("status", "published").eq("story_status", "pending")
+    .not("story_url", "is", null).order("scheduled_unix", { ascending: true }).limit(3);
+  if (storyQueryError) return NextResponse.json({ error: storyQueryError.message, reels }, { status: 500 });
+  const stories = [];
+  for (const reel of storyDue ?? []) {
+    const { data: claimed, error: claimError } = await sb.from("scheduled_reels")
+      .update({ story_status: "processing", story_error: null })
+      .eq("id", reel.id).eq("story_status", "pending").select("id").maybeSingle();
+    if (claimError || !claimed) continue;
+    try {
+      const container = await graphPost(`${igId}/media`, token, {
+        media_type: "STORIES", video_url: reel.story_url,
+      });
+      const { error: containerError } = await sb.from("scheduled_reels")
+        .update({ story_container_id: container.id }).eq("id", reel.id);
+      if (containerError) throw new Error(`Story sem recibo: ${containerError.message}`);
+      await waitForContainer(container.id, token);
+      const published = await graphPost(`${igId}/media_publish`, token, { creation_id: container.id });
+      const { error: updateError } = await sb.from("scheduled_reels").update({
+        story_status: "published", story_post_id: published.id,
+        story_published_at: new Date().toISOString(),
+      }).eq("id", reel.id).eq("story_status", "processing");
+      if (updateError) throw new Error(`Story criado sem recibo na fila: ${updateError.message}`);
+      stories.push({ id: reel.id, idx: reel.idx, ok: true, story_post_id: published.id });
+    } catch (cause) {
+      const message = cause instanceof Error ? cause.message : String(cause);
+      // A failed or ambiguous Story stays stopped until manual reconciliation.
+      await sb.from("scheduled_reels").update({ story_status: "error", story_error: message })
+        .eq("id", reel.id).eq("story_status", "processing");
+      stories.push({ id: reel.id, idx: reel.idx, ok: false, error: message });
+    }
+  }
+  return NextResponse.json({ ok: true, reels, stories });
 }
