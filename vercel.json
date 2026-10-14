@@ -17,6 +17,7 @@
     },
     { "path": "/api/cron/publish-reels", "schedule": "0 11 * * *" },
     { "path": "/api/cron/publish-reels", "schedule": "0 15 * * *" },
+    { "path": "/api/cron/publish-reels", "schedule": "0 19 * * *" },
     { "path": "/api/cron/publish-reels", "schedule": "0 23 * * *" }
   ]
 }
