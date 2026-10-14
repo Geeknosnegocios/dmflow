@@ -1,28 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase";
+import { graphGet, graphPost, verifiedInstagramId } from "@/lib/instagram-publishing-graph";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const maxDuration = 300;
 
-const API = "https://graph.facebook.com/v19.0";
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-
-async function graphPost(path: string, token: string, params: Record<string, string>) {
-  const body = new URLSearchParams({ ...params, access_token: token });
-  const response = await fetch(`${API}/${path}`, { method: "POST", body });
-  const result = await response.json();
-  if (!response.ok) throw new Error(`Graph ${response.status}: ${result?.error?.message ?? "request failed"}`);
-  return result;
-}
-
-async function graphGet(path: string, token: string, params: Record<string, string>) {
-  const query = new URLSearchParams({ ...params, access_token: token });
-  const response = await fetch(`${API}/${path}?${query}`);
-  const result = await response.json();
-  if (!response.ok) throw new Error(`Graph ${response.status}: ${result?.error?.message ?? "request failed"}`);
-  return result;
-}
 
 async function waitForContainer(id: string, token: string) {
   for (let attempt = 0; attempt < 30; attempt++) {
@@ -38,20 +22,25 @@ async function waitForContainer(id: string, token: string) {
 
 export async function GET(req: NextRequest) {
   const secret = process.env.CRON_SECRET;
-  if (secret && req.headers.get("authorization") !== `Bearer ${secret}`) {
+  if (!secret || req.headers.get("authorization") !== `Bearer ${secret}`) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
   const sb = supabaseAdmin();
   const { data: account, error: accountError } = await sb.from("accounts")
-    .select("ig_business_id,ig_access_token,ig_token_expires_at")
+    .select("ig_access_token,ig_token_expires_at")
     .eq("ig_username", "andreyogeek").eq("active", true).single();
-  if (accountError || !account?.ig_business_id || !account?.ig_access_token ||
+  if (accountError || !account?.ig_access_token ||
       (account.ig_token_expires_at && Date.parse(account.ig_token_expires_at) <= Date.now())) {
     return NextResponse.json({ error: "Conta Instagram sem token ativo" }, { status: 503 });
   }
-  const igId: string = account.ig_business_id;
   const token: string = account.ig_access_token;
+  let igId: string;
+  try {
+    igId = await verifiedInstagramId(token, "andreyogeek");
+  } catch {
+    return NextResponse.json({ error: "Identidade da conta Instagram indisponível ou incorreta" }, { status: 503 });
+  }
   const nowUnix = Math.floor(Date.now() / 1000);
   const { data: due, error } = await sb.from("scheduled_reels").select("*")
     .eq("status", "pending").lte("scheduled_unix", nowUnix)
@@ -73,11 +62,13 @@ export async function GET(req: NextRequest) {
         media_type: "REELS", video_url: reel.video_url, cover_url: reel.cover_url,
         caption: reel.caption, share_to_feed: "true",
       });
+      if (!container.id) throw new Error("Instagram não retornou ID do container do Reel.");
       const { error: containerError } = await sb.from("scheduled_reels")
         .update({ container_id: container.id }).eq("id", reel.id);
       if (containerError) throw new Error(`Container sem recibo: ${containerError.message}`);
       await waitForContainer(container.id, token);
       const published = await graphPost(`${igId}/media_publish`, token, { creation_id: container.id });
+      if (!published.id) throw new Error("Instagram não retornou ID do Reel publicado.");
       const { error: postReceiptError } = await sb.from("scheduled_reels")
         .update({ post_id: published.id, published_at: new Date().toISOString() })
         .eq("id", reel.id).eq("status", "processing");
@@ -112,11 +103,13 @@ export async function GET(req: NextRequest) {
       const container = await graphPost(`${igId}/media`, token, {
         media_type: "STORIES", video_url: reel.story_url,
       });
+      if (!container.id) throw new Error("Instagram não retornou ID do container do Story.");
       const { error: containerError } = await sb.from("scheduled_reels")
         .update({ story_container_id: container.id }).eq("id", reel.id);
       if (containerError) throw new Error(`Story sem recibo: ${containerError.message}`);
       await waitForContainer(container.id, token);
       const published = await graphPost(`${igId}/media_publish`, token, { creation_id: container.id });
+      if (!published.id) throw new Error("Instagram não retornou ID do Story publicado.");
       const { error: storyReceiptError } = await sb.from("scheduled_reels")
         .update({ story_post_id: published.id, story_published_at: new Date().toISOString() })
         .eq("id", reel.id).eq("story_status", "processing");
