@@ -25,10 +25,31 @@ async function graphGet(path: string, params: Record<string, string> = {}) {
   return json;
 }
 
-async function publishReel(videoUrl: string, caption: string): Promise<{ post_id: string; permalink: string }> {
+function assertCoverForReel(reel: { slug: string; idx: number; cover_url?: string }) {
+  if (!reel.cover_url) throw new Error("cover_url obrigatória; publicação bloqueada antes de criar o contêiner");
+  const url = new URL(reel.cover_url);
+  if (url.protocol !== "https:") throw new Error("cover_url precisa ser HTTPS");
+  const nn = String(reel.idx).padStart(2, "0");
+  const expected = new RegExp(`/reels/\\d{4}-\\d{2}-\\d{2}/${reel.slug}/reel-${nn}-[a-f0-9]{12}-cover\\.jpg$`);
+  if (!expected.test(url.pathname)) {
+    throw new Error(`cover_url não corresponde ao slug ${reel.slug} e ao Reel ${reel.idx}`);
+  }
+  return url.toString();
+}
+
+async function assertPublicJpeg(url: string) {
+  const response = await fetch(url, { headers: { Range: "bytes=0-2" } });
+  if (!response.ok) throw new Error(`capa indisponível publicamente: HTTP ${response.status}`);
+  if (!response.headers.get("content-type")?.toLowerCase().includes("image/jpeg")) {
+    throw new Error("cover_url não retorna image/jpeg");
+  }
+}
+
+async function publishReel(videoUrl: string, coverUrl: string, caption: string): Promise<{ post_id: string; permalink: string }> {
   const container = await graphPost(`${IG_ID}/media`, {
     media_type: "REELS",
     video_url: videoUrl,
+    cover_url: coverUrl,
     caption,
     share_to_feed: "true",
   });
@@ -77,7 +98,9 @@ export async function GET(req: NextRequest) {
   const results = [];
   for (const reel of due) {
     try {
-      const { post_id, permalink } = await publishReel(reel.video_url, reel.caption);
+      const coverUrl = assertCoverForReel(reel);
+      await assertPublicJpeg(coverUrl);
+      const { post_id, permalink } = await publishReel(reel.video_url, coverUrl, reel.caption);
       await sb.from("scheduled_reels").update({
         status: "published",
         post_id,
