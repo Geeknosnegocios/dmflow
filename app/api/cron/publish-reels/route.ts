@@ -20,6 +20,26 @@ async function waitForContainer(id: string, token: string) {
   throw new Error("Processamento do Instagram excedeu 90 segundos");
 }
 
+function coverUrlForReel(reel: { slug: string; idx: number; cover_url?: string }) {
+  if (!reel.cover_url) throw new Error("Capa aprovada ausente; publicação bloqueada");
+  const url = new URL(reel.cover_url);
+  if (url.protocol !== "https:") throw new Error("cover_url precisa ser HTTPS");
+  const nn = String(reel.idx).padStart(2, "0");
+  const expected = new RegExp(`/reels/\\d{4}-\\d{2}-\\d{2}/${reel.slug}/reel-${nn}-[a-f0-9]{12}-cover\\.jpg$`);
+  if (!expected.test(url.pathname)) {
+    throw new Error(`Capa não corresponde ao slug ${reel.slug} e ao Reel ${reel.idx}`);
+  }
+  return url.toString();
+}
+
+async function assertPublicJpeg(url: string) {
+  const response = await fetch(url, { headers: { Range: "bytes=0-2" } });
+  if (!response.ok) throw new Error(`Capa indisponível publicamente: HTTP ${response.status}`);
+  if (!response.headers.get("content-type")?.toLowerCase().includes("image/jpeg")) {
+    throw new Error("cover_url não retorna image/jpeg");
+  }
+}
+
 export async function GET(req: NextRequest) {
   const secret = process.env.CRON_SECRET;
   if (!secret || req.headers.get("authorization") !== `Bearer ${secret}`) {
@@ -49,8 +69,16 @@ export async function GET(req: NextRequest) {
 
   const reels = [];
   for (const reel of due ?? []) {
-    if (!reel.cover_url || !reel.story_url) {
-      reels.push({ id: reel.id, idx: reel.idx, ok: false, error: "Capa ou Story aprovado ausente" });
+    let coverUrl: string;
+    try {
+      if (!reel.story_url) throw new Error("Story aprovado ausente; publicação bloqueada");
+      coverUrl = coverUrlForReel(reel);
+      await assertPublicJpeg(coverUrl);
+    } catch (cause) {
+      const message = cause instanceof Error ? cause.message : String(cause);
+      await sb.from("scheduled_reels").update({ status: "error", error: message })
+        .eq("id", reel.id).eq("status", "pending");
+      reels.push({ id: reel.id, idx: reel.idx, ok: false, error: message });
       continue;
     }
     const { data: claimed, error: claimError } = await sb.from("scheduled_reels")
@@ -59,7 +87,7 @@ export async function GET(req: NextRequest) {
     if (claimError || !claimed) continue;
     try {
       const container = await graphPost(`${igId}/media`, token, {
-        media_type: "REELS", video_url: reel.video_url, cover_url: reel.cover_url,
+        media_type: "REELS", video_url: reel.video_url, cover_url: coverUrl,
         caption: reel.caption, share_to_feed: "true",
       });
       if (!container.id) throw new Error("Instagram não retornou ID do container do Reel.");
