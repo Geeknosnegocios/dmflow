@@ -4,19 +4,13 @@ on:
   pull_request:
     paths:
       - "supabase/**"
-      - "tests/instagram-publishing-state.test.mjs"
-      - "tests/carousel-claim-migration.test.mjs"
-      - "tests/reel-publishing.test.mjs"
-      - "tests/reel-media.test.mjs"
+      - "tests/**"
       - ".github/workflows/supabase-schema.yml"
   push:
     branches: [main, "codex/**"]
     paths:
       - "supabase/**"
-      - "tests/instagram-publishing-state.test.mjs"
-      - "tests/carousel-claim-migration.test.mjs"
-      - "tests/reel-publishing.test.mjs"
-      - "tests/reel-media.test.mjs"
+      - "tests/**"
       - ".github/workflows/supabase-schema.yml"
 
 jobs:
@@ -79,15 +73,19 @@ jobs:
             "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028141950_carousel_parent_checkpoint.sql"
           cp "$GITHUB_WORKSPACE/supabase/migrations/20261028160000_reel_publishing_state.sql" \
             "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028160000_reel_publishing_state.sql"
+          cp "$GITHUB_WORKSPACE/supabase/migrations/20261028193000_reel_claim_recovery_and_metadata.sql" \
+            "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028193000_reel_claim_recovery_and_metadata.sql"
           mkdir -p "$SUPABASE_TEST_PROJECT/supabase/tests"
           cp "$GITHUB_WORKSPACE/supabase/tests/instagram_publishing_state.test.sql" \
             "$SUPABASE_TEST_PROJECT/supabase/tests/instagram_publishing_state.test.sql"
           cp "$GITHUB_WORKSPACE/supabase/tests/reel_publishing_state.test.sql" \
             "$SUPABASE_TEST_PROJECT/supabase/tests/reel_publishing_state.test.sql"
+          cp "$GITHUB_WORKSPACE/supabase/tests/reel_recovery_state.test.sql" \
+            "$SUPABASE_TEST_PROJECT/supabase/tests/reel_recovery_state.test.sql"
       - name: Apply ordered migrations to disposable database
         run: supabase --workdir "$SUPABASE_TEST_PROJECT" migration up --local
       - name: Check migration contract
-        run: node --test tests/instagram-publishing-state.test.mjs tests/carousel-claim-migration.test.mjs tests/reel-publishing.test.mjs tests/reel-media.test.mjs
+        run: node --test
       - name: Run database contract tests
         run: supabase --workdir "$SUPABASE_TEST_PROJECT" test db --local
       - name: Stop disposable Supabase stack

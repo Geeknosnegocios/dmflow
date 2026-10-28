@@ -6,6 +6,7 @@ on:
       - "supabase/functions/**"
       - "supabase/deno.json"
       - "supabase/deno.lock"
+      - "supabase/config.toml"
       - "tests/**"
       - ".github/workflows/supabase-edge-functions.yml"
   push:
@@ -14,6 +15,7 @@ on:
       - "supabase/functions/**"
       - "supabase/deno.json"
       - "supabase/deno.lock"
+      - "supabase/config.toml"
       - "tests/**"
       - ".github/workflows/supabase-edge-functions.yml"
 
@@ -40,6 +42,8 @@ jobs:
           supabase/functions/publish-reel/graph.ts
           supabase/functions/publish-reel/media.ts
           supabase/functions/publish-reel/index.ts
+          supabase/functions/reels-batch-control/handler.ts
+          supabase/functions/reels-batch-control/index.ts
       - name: Run Deno-native Edge Function tests
         run: deno test --frozen --config supabase/deno.json supabase/functions/_shared/publishing-state.deno.js
       - name: Run Node test suite

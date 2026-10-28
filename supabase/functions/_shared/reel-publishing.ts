@@ -22,6 +22,15 @@ export type ReelRow = {
   post_id: string | null;
   published_at: string | null;
   permalink: string | null;
+  metadata_status: string;
+  metadata_claim_token: string | null;
+  metadata_lease_until: string | null;
+  metadata_error: string | null;
+  provider_published_at: string | null;
+  action_kind: string | null;
+  action_started_at: string | null;
+  story_action_kind: string | null;
+  story_action_started_at: string | null;
   story_container_id: string | null;
   story_container_status: string | null;
   story_post_id: string | null;
@@ -40,10 +49,18 @@ type Repository = {
   loadApproval(contentType: "reel" | "reel_story", contentId: string, accountId: string, fingerprint: string): Promise<Approval>;
   claimReel(id: string, fingerprint: string, now: number): Promise<Claim | null>;
   claimStory(id: string, fingerprint: string, now: number): Promise<Claim | null>;
+  peekDueMetadata(now: number): Promise<ReelRow | null>;
+  claimMetadata(id: string, now: number): Promise<{ row: ReelRow; claim_token: string } | null>;
+  beginAction(id: string, lane: "reel" | "story" | "metadata", token: string, action: "create" | "poll" | "publish" | "lookup", now: number): Promise<boolean>;
+  recoverExpired(now: number): Promise<unknown>;
   checkpointReel(id: string, token: string, patch: Record<string, unknown>): Promise<void>;
   checkpointStory(id: string, token: string, patch: Record<string, unknown>): Promise<void>;
+  checkpointMetadata(id: string, token: string, patch: Record<string, unknown>): Promise<void>;
   reconcileReel(id: string, token: string, reason: string): Promise<void>;
   reconcileStory(id: string, token: string, reason: string): Promise<void>;
+  retryReelPoll(id: string, token: string, reason: string): Promise<void>;
+  retryStoryPoll(id: string, token: string, reason: string): Promise<void>;
+  reconcileMetadata(id: string, token: string, reason: string): Promise<void>;
 };
 
 type Graph = {
@@ -51,7 +68,8 @@ type Graph = {
   validateStory?(row: ReelRow): Promise<void>;
   createReel(row: ReelRow): Promise<{ id: string }>;
   getReelStatus(id: string): Promise<string>;
-  publishReel(id: string): Promise<{ id: string; timestamp?: string }>;
+  publishReel(id: string): Promise<{ id: string }>;
+  getReelMetadata(id: string): Promise<{ permalink?: string; timestamp?: string }>;
   createStory(row: ReelRow): Promise<{ id: string }>;
   getStoryStatus(id: string): Promise<string>;
   publishStory(id: string): Promise<{ id: string; timestamp?: string }>;
@@ -128,29 +146,46 @@ async function claimApproved(repository: Repository, due: ReelRow, contentType: 
   return { row, claim_token, invalid: false };
 }
 
-async function handleStep<T>(repository: Repository, id: string, token: string, graphCall: () => Promise<T>, checkpoint: (result: T) => Record<string, unknown>, reconcile: (id: string, token: string, reason: string) => Promise<void>) {
+class TerminalContainerStateError extends Error {}
+
+async function handleReelStep<T>(repository: Repository, row: ReelRow, token: string,
+  action: "create" | "poll" | "publish", now: number, graphCall: () => Promise<T>,
+  checkpoint: (result: T) => Record<string, unknown>) {
+  if (!await repository.beginAction(row.id, "reel", token, action, now)) throw new Error("Reel claim ended before Graph phase checkpoint");
   try {
     const result = await graphCall();
-    const patch = { claim_token: null, lease_until: null, ...checkpoint(result) };
-    await repository.checkpointReel(id, token, scheduled(patch));
+    const patch = { claim_token: null, lease_until: null, action_kind: null, action_started_at: null, ...checkpoint(result) };
+    await repository.checkpointReel(row.id, token, scheduled(patch));
     return { status: patch.publish_state === "published" ? "published" as const : "pending" as const };
   } catch (error) {
     const reason = error instanceof Error ? error.message : "Uncertain Meta Graph result";
-    await reconcile(id, token, reason);
+    if (action === "poll" && !(error instanceof TerminalContainerStateError)) {
+      await repository.retryReelPoll(row.id, token, reason);
+      return { status: "pending" as const };
+    }
+    await repository.reconcileReel(row.id, token, reason);
     return { status: "needs_reconciliation" as const };
   }
 }
 
-async function handleStoryStep<T>(repository: Repository, id: string, token: string, graphCall: () => Promise<T>, checkpoint: (result: T) => Record<string, unknown>) {
+async function handleStoryStep<T>(repository: Repository, row: ReelRow, token: string,
+  action: "create" | "poll" | "publish", now: number, graphCall: () => Promise<T>,
+  checkpoint: (result: T) => Record<string, unknown>) {
+  if (!await repository.beginAction(row.id, "story", token, action, now)) throw new Error("Story claim ended before Graph phase checkpoint");
   try {
     const result = await graphCall();
     const patch = checkpoint(result);
-    await repository.checkpointStory(id, token,
-      { story_publish_state: "pending", story_claim_token: null, story_lease_until: null, ...patch });
+    await repository.checkpointStory(row.id, token,
+      { story_publish_state: "pending", story_claim_token: null, story_lease_until: null,
+        story_action_kind: null, story_action_started_at: null, ...patch });
     return { status: patch.story_publish_state === "published" ? "published" as const : "pending" as const };
   } catch (error) {
     const reason = error instanceof Error ? error.message : "Uncertain Meta Graph result";
-    await repository.reconcileStory(id, token, reason);
+    if (action === "poll" && !(error instanceof TerminalContainerStateError)) {
+      await repository.retryStoryPoll(row.id, token, reason);
+      return { status: "pending" as const };
+    }
+    await repository.reconcileStory(row.id, token, reason);
     return { status: "needs_reconciliation" as const };
   }
 }
@@ -162,7 +197,7 @@ function idFrom(result: { id?: unknown }, label: string) {
 
 function knownStatus(status: unknown) {
   if (status === "FINISHED" || status === "IN_PROGRESS") return status;
-  throw new Error("Meta returned terminal or unexpected container state");
+  throw new TerminalContainerStateError("Meta returned terminal or unexpected container state");
 }
 
 function reconcileItem(repository: Repository, row: ReelRow, token: string, reason: string) {
@@ -192,25 +227,73 @@ export async function publishReelStep({ repository, graph, now }: { repository: 
     } catch {
       return reconcileItem(repository, row, token, "Reel approval could not be rechecked before media creation");
     }
-    return handleStep(repository, row.id, token, () => graph.createReel(row), (container) => ({
+    return handleReelStep(repository, row, token, "create", now, () => graph.createReel(row), (container) => ({
       container_id: idFrom(container, "Reel container"), container_status: null,
-    }), repository.reconcileReel.bind(repository));
+    }));
   }
   if (row.container_status !== "FINISHED") {
-    return handleStep(repository, row.id, token, async () => knownStatus(await graph.getReelStatus(row.container_id!)),
-      (status) => ({ container_status: status }), repository.reconcileReel.bind(repository));
+    return handleReelStep(repository, row, token, "poll", now,
+      async () => knownStatus(await graph.getReelStatus(row.container_id!)),
+      (status) => ({ container_status: status }));
   }
   if (!row.post_id) {
-    return handleStep(repository, row.id, token, () => graph.publishReel(row.container_id!), (receipt) => {
+    return handleReelStep(repository, row, token, "publish", now, () => graph.publishReel(row.container_id!), (receipt) => {
       const postId = idFrom(receipt, "published Reel");
-      const publishedAt = receipt.timestamp ?? new Date(now).toISOString();
+      const publishedAt = new Date(now).toISOString();
       if (!Number.isFinite(Date.parse(publishedAt))) throw new Error("Meta returned invalid Reel publication time");
       return { post_id: postId, published_at: publishedAt, status: "published", publish_state: "published",
-        claim_token: null, lease_until: null };
-    }, repository.reconcileReel.bind(repository));
+        metadata_status: "pending", metadata_error: null, metadata_claim_token: null, metadata_lease_until: null,
+        metadata_action_started_at: null, provider_published_at: null, permalink: null,
+        claim_token: null, lease_until: null, action_kind: null, action_started_at: null };
+    });
   }
-  await repository.checkpointReel(row.id, token, { status: "published", publish_state: "published", claim_token: null, lease_until: null });
-  return { status: "published" as const };
+  await repository.checkpointReel(row.id, token, { status: "published", publish_state: "published", claim_token: null,
+    lease_until: null, action_kind: null, action_started_at: null, metadata_status: row.metadata_status ?? "pending" });
+  return { status: row.metadata_status === "published" ? "published" as const : "metadata_pending" as const };
+}
+
+function validReelPermalink(value: unknown) {
+  if (typeof value !== "string") throw new Error("Meta returned no Reel permalink");
+  const url = new URL(value);
+  if (url.protocol !== "https:" || !["instagram.com", "www.instagram.com"].includes(url.hostname) ||
+      !/^\/(reel|p)\/[A-Za-z0-9_-]+\/?$/.test(url.pathname) || url.search || url.hash) {
+    throw new Error("Meta returned an invalid Reel permalink");
+  }
+  return url.toString();
+}
+
+export async function publishReelMetadataStep({ repository, graph, now }: { repository: Repository; graph: Graph; now: number }) {
+  const due = await repository.peekDueMetadata(now);
+  if (!due || due.metadata_status !== "pending" || due.publish_state !== "published" || !due.post_id) {
+    return { status: "not_claimed" as const };
+  }
+  const claim = await repository.claimMetadata(due.id, now);
+  if (!claim) return { status: "not_claimed" as const };
+  const { row, claim_token: token } = claim;
+  if (row.id !== due.id || row.post_id !== due.post_id || !row.metadata_claim_token) {
+    await repository.reconcileMetadata(row.id, token, "Claimed Reel receipt changed before metadata lookup");
+    return { status: "needs_reconciliation" as const };
+  }
+  if (!await repository.beginAction(row.id, "metadata", token, "lookup", now)) {
+    throw new Error("Reel metadata claim ended before Graph lookup checkpoint");
+  }
+  try {
+    const metadata = await graph.getReelMetadata(row.post_id);
+    const permalink = validReelPermalink(metadata.permalink);
+    if (typeof metadata.timestamp !== "string" || !Number.isFinite(Date.parse(metadata.timestamp))) {
+      throw new Error("Meta returned no valid provider Reel timestamp");
+    }
+    await repository.checkpointMetadata(row.id, token, {
+      metadata_status: "published", permalink, provider_published_at: metadata.timestamp,
+      metadata_error: null, metadata_claim_token: null, metadata_lease_until: null,
+      metadata_action_started_at: null,
+    });
+    return { status: "published" as const };
+  } catch (error) {
+    const reason = error instanceof Error ? error.message : "Reel permalink lookup failed";
+    await repository.reconcileMetadata(row.id, token, reason);
+    return { status: "needs_reconciliation" as const };
+  }
 }
 
 export async function publishStoryStep({ repository, graph, now }: { repository: Repository; graph: Graph; now: number }) {
@@ -244,17 +327,17 @@ export async function publishStoryStep({ repository, graph, now }: { repository:
       await repository.reconcileStory(row.id, token, "Story approval could not be rechecked before media creation");
       return { status: "needs_reconciliation" as const };
     }
-    return handleStoryStep(repository, row.id, token, () => graph.createStory(row), (container) => ({
+    return handleStoryStep(repository, row, token, "create", now, () => graph.createStory(row), (container) => ({
       story_container_id: idFrom(container, "Story container"), story_container_status: null,
     }));
   }
   if (row.story_container_status !== "FINISHED") {
-    return handleStoryStep(repository, row.id, token,
+    return handleStoryStep(repository, row, token, "poll", now,
       async () => knownStatus(await graph.getStoryStatus(row.story_container_id!)),
       (status) => ({ story_container_status: status }));
   }
   if (!row.story_post_id) {
-    return handleStoryStep(repository, row.id, token, () => graph.publishStory(row.story_container_id!), (receipt) => {
+    return handleStoryStep(repository, row, token, "publish", now, () => graph.publishStory(row.story_container_id!), (receipt) => {
       const postId = idFrom(receipt, "published Reel Story");
       const publishedAt = receipt.timestamp ?? new Date(now).toISOString();
       if (!Number.isFinite(Date.parse(publishedAt))) throw new Error("Meta returned invalid Story publication time");

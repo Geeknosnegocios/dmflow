@@ -11,3 +11,6 @@ major_version = 17
 
 [db.seed]
 enabled = false
+
+[functions.reels-batch-control]
+verify_jwt = false

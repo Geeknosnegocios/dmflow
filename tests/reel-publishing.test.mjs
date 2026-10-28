@@ -28,16 +28,28 @@ function repository(row, overrides = {}) {
   const repo = {
     async peekDueReel() { return row; },
     async peekDueStory() { return row; },
+    async peekDueMetadata() { return row; },
     async loadApproval(type, id, accountId, fingerprint) {
       events.push(["approval", type, id, accountId, fingerprint]);
       return { approved: true, revoked_at: null, fingerprint };
     },
     async claimReel() { events.push(["claim-reel"]); return { row, claim_token: "claim-1" }; },
     async claimStory() { events.push(["claim-story"]); return { row, claim_token: "story-claim-1" }; },
-    async checkpointReel(id, token, patch) { events.push(["checkpoint-reel", id, token, patch]); },
-    async checkpointStory(id, token, patch) { events.push(["checkpoint-story", id, token, patch]); },
+    async claimMetadata() {
+      events.push(["claim-metadata"]);
+      row.metadata_claim_token = "metadata-claim-1";
+      return { row, claim_token: "metadata-claim-1" };
+    },
+    async beginAction(id, lane, token, action) { events.push(["begin-action", id, lane, action]); return true; },
+    async recoverExpired() { events.push(["recover-expired"]); return []; },
+    async checkpointReel(id, token, patch) { events.push(["checkpoint-reel", id, token, patch]); Object.assign(row, patch); },
+    async checkpointStory(id, token, patch) { events.push(["checkpoint-story", id, token, patch]); Object.assign(row, patch); },
+    async checkpointMetadata(id, token, patch) { events.push(["checkpoint-metadata", id, token, patch]); Object.assign(row, patch); },
     async reconcileReel(id, token, reason) { events.push(["reconcile-reel", id, token, reason]); row.publish_state = "needs_reconciliation"; },
     async reconcileStory(id, token, reason) { events.push(["reconcile-story", id, token, reason]); row.story_publish_state = "needs_reconciliation"; },
+    async retryReelPoll(id, token, reason) { events.push(["retry-reel-poll", id, token, reason]); Object.assign(row,{status:"pending",publish_state:"pending",claim_token:null,lease_until:null,action_kind:null}); },
+    async retryStoryPoll(id, token, reason) { events.push(["retry-story-poll", id, token, reason]); Object.assign(row,{story_status:"pending",story_publish_state:"pending",story_claim_token:null,story_lease_until:null,story_action_kind:null}); },
+    async reconcileMetadata(id, token, reason) { events.push(["reconcile-metadata", id, token, reason]); Object.assign(row,{metadata_status:"needs_reconciliation",metadata_error:reason,metadata_claim_token:null,metadata_lease_until:null}); },
     ...overrides,
   };
   return { repo, events };
@@ -76,6 +88,8 @@ test("each Reel invocation performs one Graph lifecycle operation and saves its 
   assert.equal(result.status, "pending");
   assert.equal(calls, 1);
   assert.ok(events.some(([name, , , patch]) => name === "checkpoint-reel" && patch.container_id === "container-1"));
+  assert.deepEqual(events.filter(([name]) => ["begin-action", "checkpoint-reel"].includes(name)).map(([name, , , value]) => name),
+    ["begin-action", "checkpoint-reel"]);
 });
 
 test("approval is checked again after media validation immediately before Reel creation", async () => {
@@ -119,8 +133,10 @@ test("successful media_publish durably stores Reel ID and observed time before a
   row.approval_fingerprint = await reelState.canonicalReelFingerprint(row);
   const { repo, events } = repository(row);
   let calls = 0;
+  let metadataCalls = 0;
   const result = await reelState.publishReelStep({ repository: repo, graph: {
-    async publishReel() { calls++; return { id: "published-reel-1", timestamp: "2026-10-28T15:00:00.000Z" }; },
+    async publishReel() { calls++; return { id: "published-reel-1" }; },
+    async getReelMetadata() { metadataCalls++; return { permalink: "https://instagram.com/reel/r1/", timestamp: "2026-10-28T14:59:00.000Z" }; },
   }, now: Date.parse("2026-10-28T15:00:00.000Z") });
   const saved = events.find(([name]) => name === "checkpoint-reel");
   assert.equal(result.status, "published");
@@ -128,6 +144,71 @@ test("successful media_publish durably stores Reel ID and observed time before a
   assert.equal(saved[3].post_id, "published-reel-1");
   assert.equal(saved[3].published_at, "2026-10-28T15:00:00.000Z");
   assert.equal(saved[3].publish_state, "published");
+  assert.equal(saved[3].metadata_status, "pending");
+  assert.equal(saved[3].permalink, null);
+  assert.equal(metadataCalls, 0, "permalink lookup is a separate later invocation");
+});
+
+test("container status GET is safely retried while terminal status is reconciled", async () => {
+  const row = fixture({ container_id: "container-poll", container_status: "IN_PROGRESS" });
+  row.approval_fingerprint = await reelState.canonicalReelFingerprint(row);
+  const { repo, events } = repository(row);
+  let statusCalls = 0, publishCalls = 0;
+  const result = await reelState.publishReelStep({ repository: repo, graph: {
+    async getReelStatus() { statusCalls++; throw new Error("temporary GET timeout"); },
+    async publishReel() { publishCalls++; return { id: "must-not-publish" }; },
+  }, now: Date.now() });
+  assert.equal(result.status, "pending");
+  assert.equal(statusCalls, 1);
+  assert.equal(publishCalls, 0);
+  assert.ok(events.some(([name]) => name === "retry-reel-poll"));
+  assert.ok(events.some(([name]) => name === "begin-action"));
+
+  const terminal = fixture({ container_id: "container-terminal", container_status: "ERROR" });
+  terminal.approval_fingerprint = await reelState.canonicalReelFingerprint(terminal);
+  const terminalRepo = repository(terminal);
+  const failed = await reelState.publishReelStep({ repository: terminalRepo.repo, graph: {
+    async getReelStatus() { return "ERROR"; },
+    async publishReel() { throw new Error("never"); },
+  }, now: Date.now() });
+  assert.equal(failed.status, "needs_reconciliation");
+  assert.ok(terminalRepo.events.some(([name]) => name === "reconcile-reel"));
+});
+
+test("metadata lookup is a separate single GET, stores provider timestamp and never calls publish", async () => {
+  const row = fixture({ status: "published", publish_state: "published", post_id: "meta-reel-1",
+    published_at: "2026-10-28T15:00:00.000Z", metadata_status: "pending", permalink: null });
+  const { repo, events } = repository(row);
+  let getCalls = 0, publishCalls = 0;
+  const result = await reelState.publishReelMetadataStep({ repository: repo, graph: {
+    async getReelMetadata(id) { getCalls++; assert.equal(id, "meta-reel-1"); return { permalink: "https://www.instagram.com/reel/meta-reel-1/", timestamp: "2026-10-28T14:59:00Z" }; },
+    async publishReel() { publishCalls++; throw new Error("publish must not be called for metadata"); },
+  }, now: Date.now() });
+  assert.equal(result.status, "published");
+  assert.equal(getCalls, 1);
+  assert.equal(publishCalls, 0);
+  const saved = events.find(([name]) => name === "checkpoint-metadata");
+  assert.equal(saved[3].permalink, "https://www.instagram.com/reel/meta-reel-1/");
+  assert.equal(saved[3].provider_published_at, "2026-10-28T14:59:00Z");
+  assert.equal(row.post_id, "meta-reel-1");
+  assert.equal(row.published_at, "2026-10-28T15:00:00.000Z");
+});
+
+test("missing Reel permalink moves only metadata to reconciliation and never republishes", async () => {
+  const row = fixture({ status: "published", publish_state: "published", post_id: "meta-reel-no-permalink",
+    published_at: "2026-10-28T15:00:00.000Z", metadata_status: "pending", permalink: null });
+  const { repo, events } = repository(row);
+  let publishCalls = 0;
+  const result = await reelState.publishReelMetadataStep({ repository: repo, graph: {
+    async getReelMetadata() { return { timestamp: "2026-10-28T14:59:00Z" }; },
+    async publishReel() { publishCalls++; return { id: "duplicate" }; },
+  }, now: Date.now() });
+  assert.equal(result.status, "needs_reconciliation");
+  assert.equal(publishCalls, 0);
+  assert.equal(row.publish_state, "published");
+  assert.equal(row.post_id, "meta-reel-no-permalink");
+  assert.equal(row.metadata_status, "needs_reconciliation");
+  assert.ok(events.some(([name]) => name === "reconcile-metadata"));
 });
 
 test("Reel Story waits for published Reel and checkpoints Story IDs separately", async () => {

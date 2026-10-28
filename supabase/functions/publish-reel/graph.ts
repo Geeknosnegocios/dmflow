@@ -46,7 +46,11 @@ export function createReelGraphClient({ graphVersion, accessToken, instagramUser
     async getReelStatus(id: string) { return (await read(id, "status_code")).status_code as string; },
     async publishReel(id: string) {
       const data = await write(`${instagramUserId}/media_publish`, { creation_id: id });
-      return { id: data.id as string, timestamp: new Date().toISOString() };
+      return { id: data.id as string };
+    },
+    async getReelMetadata(id: string) {
+      const data = await read(id, "permalink,timestamp");
+      return { permalink: data.permalink as string | undefined, timestamp: data.timestamp as string | undefined };
     },
     async createStory(row: ReelRow) {
       if (!row.story_url) throw new Error("Approved Story URL is missing");

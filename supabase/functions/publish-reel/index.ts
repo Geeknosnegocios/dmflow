@@ -1,6 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 import { assertAuthorizedInstagramAccount, resolveInstagramIdentity } from "../_shared/meta-graph.ts";
-import { publishReelStep, publishStoryStep, type ReelRow } from "../_shared/reel-publishing.ts";
+import { publishReelStep, publishStoryStep, publishReelMetadataStep, type ReelRow } from "../_shared/reel-publishing.ts";
 import { verifyReelAssets, verifyStoryAsset } from "./media.ts";
 import { createReelGraphClient } from "./graph.ts";
 
@@ -9,6 +9,8 @@ const supabaseUrl = env("SUPABASE_URL");
 const serviceKey = env("SUPABASE_SERVICE_ROLE_KEY");
 const configuredGraphVersion = env("META_GRAPH_VERSION") || "v22.0";
 const graphVersion = /^v\d+\.\d+$/.test(configuredGraphVersion) ? configuredGraphVersion : "v22.0";
+const isRecord = (value: unknown): value is Record<string, any> =>
+  typeof value === "object" && value !== null && !Array.isArray(value);
 
 function repository(supabase: ReturnType<typeof createClient>) {
   const table = () => supabase.schema("dmflow").from("scheduled_reels");
@@ -55,6 +57,13 @@ function repository(supabase: ReturnType<typeof createClient>) {
       if (error) throw error;
       return data as ReelRow | null;
     },
+    async peekDueMetadata(now: number) {
+      const { data, error } = await table().select("*").eq("status", "published").eq("publish_state", "published")
+        .eq("metadata_status", "pending").not("post_id", "is", null)
+        .lte("scheduled_unix", Math.floor(now / 1000)).order("published_at").limit(1).maybeSingle();
+      if (error) throw error;
+      return data as ReelRow | null;
+    },
     loadApproval,
     async claimReel(id: string, fp: string, now: number) { return claim("claim_due_reel", id, fp, now); },
     async claimStory(id: string, fp: string, now: number) { return claim("claim_due_reel_story", id, fp, now); },
@@ -63,6 +72,46 @@ function repository(supabase: ReturnType<typeof createClient>) {
     },
     async checkpointStory(id: string, token: string, patch: Record<string, unknown>) {
       return checkpoint(id, "story_claim_token", token, patch);
+    },
+    async checkpointMetadata(id: string, token: string, patch: Record<string, unknown>) {
+      return checkpoint(id, "metadata_claim_token", token, patch);
+    },
+    async beginAction(id: string, lane: "reel" | "story" | "metadata", token: string,
+      action: "create" | "poll" | "publish" | "lookup", now: number) {
+      const { data, error } = await supabase.schema("dmflow").rpc("begin_reel_graph_action", {
+        p_reel_id: id, p_lane: lane, p_claim_token: token, p_action: action, p_now: new Date(now).toISOString(),
+      });
+      if (error) throw error;
+      return data === true;
+    },
+    async recoverExpired(now: number) {
+      const { data, error } = await supabase.schema("dmflow").rpc("recover_expired_reel_claims", {
+        p_now: new Date(now).toISOString(),
+      });
+      if (error) throw error;
+      return data ?? [];
+    },
+    async claimMetadata(id: string, now: number) {
+      const { data, error } = await supabase.schema("dmflow").rpc("claim_due_reel_metadata", {
+        p_reel_id: id, p_now: new Date(now).toISOString(),
+      }).maybeSingle();
+      if (error) throw error;
+      const row = data as ReelRow | null;
+      return row?.metadata_claim_token ? { row, claim_token: row.metadata_claim_token } : null;
+    },
+    async retryReelPoll(id: string, token: string, reason: string) {
+      return checkpoint(id, "claim_token", token, { status: "pending", publish_state: "pending", error: reason.slice(0, 500),
+        claim_token: null, lease_until: null, action_kind: null, action_started_at: null });
+    },
+    async retryStoryPoll(id: string, token: string, reason: string) {
+      return checkpoint(id, "story_claim_token", token, { story_status: "pending", story_publish_state: "pending",
+        story_error: reason.slice(0, 500), story_claim_token: null, story_lease_until: null,
+        story_action_kind: null, story_action_started_at: null });
+    },
+    async reconcileMetadata(id: string, token: string, reason: string) {
+      return checkpoint(id, "metadata_claim_token", token, { metadata_status: "needs_reconciliation",
+        metadata_error: reason.slice(0, 500), metadata_claim_token: null, metadata_lease_until: null,
+        metadata_action_started_at: null });
     },
     async reconcileReel(id: string, token: string, reason: string) { return reconcile(id, "claim_token", token, "reel", reason); },
     async reconcileStory(id: string, token: string, reason: string) { return reconcile(id, "story_claim_token", token, "story", reason); },
@@ -77,14 +126,17 @@ Deno.serve(async (request) => {
       request.headers.get("authorization") !== `Bearer ${serviceKey}`) {
     return new Response("Publishing service unavailable", { status: 503 });
   }
-  let mode: "reel" | "story";
+  let mode: "reel" | "story" | "metadata";
   try {
     const payload = await request.json();
-    if (payload.mode !== "reel" && payload.mode !== "story") return new Response("Invalid mode", { status: 400 });
+    if (!isRecord(payload) || !["reel", "story", "metadata"].includes(payload.mode)) return new Response("Invalid mode", { status: 400 });
     mode = payload.mode;
   } catch { return new Response("Invalid request", { status: 400 }); }
 
   const supabase = createClient(supabaseUrl, serviceKey, { auth: { persistSession: false } });
+  const repo = repository(supabase);
+  try { await repo.recoverExpired(Date.now()); }
+  catch { return new Response("Publishing recovery failed; no Graph call was made", { status: 503 }); }
   const { data: account, error } = await supabase.schema("dmflow").from("accounts")
     .select("id,active,ig_username,ig_business_id,ig_access_token,ig_token_expires_at")
     .eq("ig_username", "andreyogeek").eq("active", true).maybeSingle();
@@ -99,10 +151,12 @@ Deno.serve(async (request) => {
     const graph = createReelGraphClient({ graphVersion, accessToken: account.ig_access_token, instagramUserId: identity });
     graph.validateReel = async (row) => verifyReelAssets(row, supabaseUrl);
     graph.validateStory = async (row) => verifyStoryAsset(row, supabaseUrl);
-    const repo = repository(supabase);
+    const now = Date.now();
     const result = mode === "reel"
-      ? await publishReelStep({ repository: repo, graph, now: Date.now() })
-      : await publishStoryStep({ repository: repo, graph, now: Date.now() });
+      ? await publishReelStep({ repository: repo, graph, now })
+      : mode === "story"
+        ? await publishStoryStep({ repository: repo, graph, now })
+        : await publishReelMetadataStep({ repository: repo, graph, now });
     return Response.json(result);
   } catch {
     return new Response("Instagram publishing step failed; inspect the queue receipt", { status: 500 });
