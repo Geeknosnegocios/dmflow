@@ -1,4 +1,4 @@
-const MAX_SLIDE_BYTES = 20 * 1024 * 1024;
+const MAX_SLIDE_BYTES = 10 * 1024 * 1024;
 const MAX_TOTAL_BYTES = 80 * 1024 * 1024;
 const BUCKET_PREFIX = "/storage/v1/object/public/dmflow-content/carrosseis/";
 
