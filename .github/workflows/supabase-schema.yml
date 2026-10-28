@@ -46,7 +46,7 @@ jobs:
           rm -f "$project_dir"/supabase/migrations/*.sql
           echo "SUPABASE_TEST_PROJECT=$project_dir" >> "$GITHUB_ENV"
       - name: Start disposable Supabase stack
-        run: supabase --workdir "$SUPABASE_TEST_PROJECT" start -x studio,edge-runtime,logflare,vector
+        run: supabase --workdir "$SUPABASE_TEST_PROJECT" start -x analytics,edge-runtime,functions,imgproxy,inbucket,kong,meta,realtime,rest,storage,studio,vector
       - name: Add ordered disposable migrations
         run: |
           cat > "$SUPABASE_TEST_PROJECT/supabase/migrations/20261027000000_legacy_schema_fixture.sql" <<'SQL'

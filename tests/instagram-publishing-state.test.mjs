@@ -86,7 +86,13 @@ test("schema CI mirrors the API config and applies ordered migrations and pgTAP 
     "the disposable CI API config must match the checked-in config");
   assert.match(apiConfig, /schemas\s*=\s*\[\s*"public"\s*,\s*"dmflow"\s*\]/i);
   assert.match(workflow, /Prepare an empty temporary Supabase project[\s\S]*?mkdir -p [^\n]*supabase\/migrations/);
-  assert.match(workflow, /Start disposable Supabase stack[\s\S]*?supabase --workdir "\$SUPABASE_TEST_PROJECT" start/);
+  const startCommand = workflow.match(/supabase --workdir "\$SUPABASE_TEST_PROJECT" start -x ([a-z,-]+)/i);
+  assert.ok(startCommand, "the disposable stack must start without optional non-database services");
+  assert.deepEqual(
+    startCommand[1].split(",").sort(),
+    ["analytics", "edge-runtime", "functions", "imgproxy", "inbucket", "kong", "meta", "realtime", "rest", "storage", "studio", "vector"].sort(),
+    "exclude PostgREST and optional services so startup does not require dmflow before fixture migrations",
+  );
   assert.match(workflow, /mkdir -p "?\$project_dir\/supabase\/migrations"?/);
   assert.match(workflow, /(?:find\s+"?\$project_dir\/supabase\/migrations"?[^\n]*-type\s+f\s+-delete|rm\s+-f\s+"\$project_dir"\/supabase\/migrations\/\*\.sql)/i,
     "the disposable migrations directory must be empty before ordered fixtures are added");
