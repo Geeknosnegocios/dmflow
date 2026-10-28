@@ -90,7 +90,7 @@ test("schema CI mirrors the API config and applies ordered migrations and pgTAP 
   assert.ok(startCommand, "the disposable stack must start without optional non-database services");
   assert.deepEqual(
     startCommand[1].split(",").sort(),
-    ["analytics", "edge-runtime", "functions", "imgproxy", "inbucket", "kong", "meta", "realtime", "rest", "storage", "studio", "vector"].sort(),
+    ["edge-runtime", "gotrue", "imgproxy", "kong", "logflare", "mailpit", "postgres-meta", "postgrest", "realtime", "storage-api", "studio", "supavisor", "vector"].sort(),
     "exclude PostgREST and optional services so startup does not require dmflow before fixture migrations",
   );
   assert.match(workflow, /mkdir -p "?\$project_dir\/supabase\/migrations"?/);
