@@ -38,9 +38,39 @@ test("Graph GET and POST send the secret only as a Bearer header", async () => {
   for (const { url, init } of requests) {
     assert.equal(url.includes(accessToken), false, "access token must not appear in the URL");
     assert.equal(init.headers.Authorization, `Bearer ${accessToken}`);
-    assert.equal(init.body?.includes(accessToken) ?? false, false, "access token must not appear in the request body");
+    assert.equal(String(init.body ?? "").includes(accessToken), false, "access token must not appear in the request body");
     assert.ok(init.signal instanceof AbortSignal, "GET and POST requests must have a timeout signal");
   }
+});
+
+test("carousel POST parameters use form encoding and keep the token out of query and body", async () => {
+  const requests = [];
+  const graph = createMetaGraphClient({
+    graphVersion: "v25.0",
+    accessToken,
+    instagramUserId: "ig-user-42",
+    fetchImpl: async (input, init = {}) => {
+      requests.push({ url: String(input), init });
+      return response({ id: "container-1" });
+    },
+  });
+
+  await graph.createChild({ imageUrl: "https://cdn.example/slide.png" });
+  await graph.createParent({ children: ["child-1", "child-2"], caption: "Approved caption" });
+  await graph.publish("parent-1");
+
+  assert.equal(requests.length, 3);
+  for (const { url, init } of requests) {
+    assert.equal(url.includes(accessToken), false);
+    assert.equal(new URL(url).search, "", "POST parameters must not be placed in the query string");
+    assert.equal(init.headers.Authorization, `Bearer ${accessToken}`);
+    assert.equal(init.headers["Content-Type"], "application/x-www-form-urlencoded");
+    assert.ok(init.body instanceof URLSearchParams);
+    assert.equal(String(init.body).includes(accessToken), false);
+  }
+  assert.equal(requests[0].init.body.get("is_carousel_item"), "true");
+  assert.equal(requests[1].init.body.get("media_type"), "CAROUSEL");
+  assert.equal(requests[2].init.body.get("creation_id"), "parent-1");
 });
 
 test("Graph requests have a bounded timeout signal", async () => {

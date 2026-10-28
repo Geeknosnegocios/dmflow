@@ -6,6 +6,8 @@ on:
       - "supabase/**"
       - "tests/instagram-publishing-state.test.mjs"
       - "tests/carousel-claim-migration.test.mjs"
+      - "tests/reel-publishing.test.mjs"
+      - "tests/reel-media.test.mjs"
       - ".github/workflows/supabase-schema.yml"
   push:
     branches: [main, "codex/**"]
@@ -13,6 +15,8 @@ on:
       - "supabase/**"
       - "tests/instagram-publishing-state.test.mjs"
       - "tests/carousel-claim-migration.test.mjs"
+      - "tests/reel-publishing.test.mjs"
+      - "tests/reel-media.test.mjs"
       - ".github/workflows/supabase-schema.yml"
 
 jobs:
@@ -55,7 +59,12 @@ jobs:
           create schema if not exists dmflow;
           create table dmflow.accounts (
             id uuid primary key default gen_random_uuid(),
-            owner_user_id uuid not null
+            owner_user_id uuid not null,
+            active boolean not null default true,
+            ig_username text,
+            ig_business_id text,
+            ig_access_token text,
+            ig_token_expires_at timestamptz
           );
           create table dmflow.scheduled_reels (
             id uuid primary key default gen_random_uuid(),
@@ -68,12 +77,19 @@ jobs:
             "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028131021_centralize_instagram_publishing_state.sql"
           cp "$GITHUB_WORKSPACE/supabase/migrations/20261028141950_carousel_parent_checkpoint.sql" \
             "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028141950_carousel_parent_checkpoint.sql"
+          cp "$GITHUB_WORKSPACE/supabase/migrations/20261028160000_reel_publishing_state.sql" \
+            "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028160000_reel_publishing_state.sql"
+          mkdir -p "$SUPABASE_TEST_PROJECT/supabase/tests"
+          cp "$GITHUB_WORKSPACE/supabase/tests/instagram_publishing_state.test.sql" \
+            "$SUPABASE_TEST_PROJECT/supabase/tests/instagram_publishing_state.test.sql"
+          cp "$GITHUB_WORKSPACE/supabase/tests/reel_publishing_state.test.sql" \
+            "$SUPABASE_TEST_PROJECT/supabase/tests/reel_publishing_state.test.sql"
       - name: Apply ordered migrations to disposable database
         run: supabase --workdir "$SUPABASE_TEST_PROJECT" migration up --local
       - name: Check migration contract
-        run: node --test tests/instagram-publishing-state.test.mjs tests/carousel-claim-migration.test.mjs
+        run: node --test tests/instagram-publishing-state.test.mjs tests/carousel-claim-migration.test.mjs tests/reel-publishing.test.mjs tests/reel-media.test.mjs
       - name: Run database contract tests
-        run: supabase --workdir "$SUPABASE_TEST_PROJECT" test db --local "$GITHUB_WORKSPACE/supabase/tests/instagram_publishing_state.test.sql"
+        run: supabase --workdir "$SUPABASE_TEST_PROJECT" test db --local
       - name: Stop disposable Supabase stack
         if: always()
         run: supabase --workdir "$SUPABASE_TEST_PROJECT" stop --no-backup

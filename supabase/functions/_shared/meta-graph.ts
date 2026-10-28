@@ -15,9 +15,8 @@ export function assertAuthorizedInstagramAccount({ active, ig_username }: {
   }
 }
 
-const headers = (token: string, json = false) => ({
+const headers = (token: string) => ({
   Authorization: `Bearer ${token}`,
-  ...(json ? { "Content-Type": "application/json" } : {}),
 });
 
 async function readResponse(response: Response) {
@@ -72,8 +71,8 @@ export function createMetaGraphClient({ graphVersion, accessToken, instagramUser
   const post = async (path: string, params: Record<string, string>) => {
     const response = await fetchImpl(`${base}/${path}`, {
       method: "POST",
-      headers: headers(accessToken, true),
-      body: JSON.stringify(params),
+      headers: { ...headers(accessToken), "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(params),
       signal: AbortSignal.timeout(requestTimeoutMs),
     });
     return readResponse(response);
