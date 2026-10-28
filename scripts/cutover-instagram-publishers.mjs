@@ -18,6 +18,7 @@ const MIGRATIONS = [
   { version: "20261028160000", file: "supabase/migrations/20261028160000_reel_publishing_state.sql" },
   { version: "20261028193000", file: "supabase/migrations/20261028193000_reel_claim_recovery_and_metadata.sql" },
   { version: "20261028200000", file: "supabase/migrations/20261028200000_instagram_dispatcher_state.sql" },
+  { version: "20261028210000", file: "supabase/migrations/20261028210000_carousel_published_receipt.sql" },
 ];
 const DISPATCHER_JOB = "instagram-publishing-dispatcher";
 const LEGACY_PROCESSING = ["GI-019:true", "TIER-2026-09-18:false"];
@@ -110,28 +111,33 @@ function parseEnvFile(raw) {
   return values;
 }
 
-async function requireBatchToken(envPath, workdir) {
+async function requireBatchToken(envPath) {
   if (!envPath) throw new Error("Pass --reelsflow-env with the existing local Reelsflow .env file");
   const env = parseEnvFile(await readFile(envPath, "utf8"));
   const rawToken = env.get("DMFLOW_BATCH_CONTROL_TOKEN");
   if (!rawToken) throw new Error("The Reelsflow batch token is absent from the supplied env file");
   const localHash = createHash("sha256").update(rawToken).digest("hex");
-
-  const configuredSecrets = parseJsonOutput(
-    run("supabase", ["secrets", "list", "--project-ref", TARGET_REF, "--output-format", "json"]),
-    "Edge secret preflight",
-  ).secrets ?? [];
-  const configuredHash = configuredSecrets.find((secret) => secret.name === "REELS_BATCH_TOKEN_SHA256")?.value;
-  if (typeof configuredHash === "string" && configuredHash.toLowerCase() === localHash) return localHash;
-
-  run("supabase", ["functions", "download", "reels-batch-control", "--project-ref", TARGET_REF,
-    "--use-api", "--workdir", workdir]);
-  const functionSource = await readFile(path.join(workdir, "supabase", "functions", "reels-batch-control", "index.ts"), "utf8");
-  const oldHash = functionSource.match(/TOKEN_SHA256\s*=\s*["']([0-9a-f]{64})["']/i)?.[1]?.toLowerCase();
-  if (!oldHash || oldHash !== localHash) {
-    throw new Error("The local Reelsflow token does not match the currently deployed controller; no cutover was made");
+  const controlUrl = env.get("DMFLOW_BATCH_CONTROL_URL");
+  const publishableKey = env.get("DMFLOW_PUBLISHABLE_KEY");
+  let endpoint;
+  try { endpoint = new URL(controlUrl ?? ""); } catch { throw new Error("The Reelsflow batch-control URL is invalid"); }
+  if (endpoint.origin !== `https://${TARGET_REF}.supabase.co` ||
+      endpoint.pathname !== "/functions/v1/reels-batch-control" || !publishableKey) {
+    throw new Error("The local Reelsflow batch endpoint/key are not configured for the target project");
   }
-  return localHash;
+  let response;
+  try {
+    response = await fetch(endpoint, {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-reels-token": rawToken,
+        apikey: publishableKey, Authorization: `Bearer ${publishableKey}` },
+      body: JSON.stringify({ action: "list-slugs" }),
+      signal: AbortSignal.timeout(10_000),
+    });
+  } catch { throw new Error("Read-only Reelsflow token continuity check failed"); }
+  await response.body?.cancel();
+  if (!response.ok) throw new Error("Read-only Reelsflow token continuity check was rejected");
+  return { hash: localHash, publishableKey };
 }
 
 async function readPreflight(targetWorkdir, xhpWorkdir, vercelConfirmed) {
@@ -211,7 +217,7 @@ async function readPreflight(targetWorkdir, xhpWorkdir, vercelConfirmed) {
     `);
     queue = queueRows[0] ?? queue;
   }
-  return { checks, target: { active_story_jobs: Number(target.active_story_jobs), active_legacy_target_jobs: Number(target.active_legacy_target_jobs), active_cross_project_target_worker: Number(target.active_cross_project_target_worker), active_other_target_instagram_workers: Number(target.active_other_target_instagram_workers), active_dispatcher_jobs: Number(target.active_dispatcher_jobs), dispatcher_enabled: target.dispatcher_enabled, queue }, xhp: { active_legacy_jobs: xhp.active_legacy_jobs, active_other_instagram_workers: xhp.active_other_instagram_workers, future_publications: Number(xhp.future_publications), future_carousels: Number(xhp.future_carousels), carousel_processing_count: Number(xhp.carousel_processing_count), processing_history: xhp.publication_processing_history }, vercelProductionRouteStatus: productionRouteStatus };
+  return { checks, target: { active_story_jobs: Number(target.active_story_jobs), active_legacy_target_jobs: Number(target.active_legacy_target_jobs), active_cross_project_target_worker: Number(target.active_cross_project_target_worker), active_other_target_instagram_workers: Number(target.active_other_target_instagram_workers), active_dispatcher_jobs: Number(target.active_dispatcher_jobs), dispatcher_enabled: target.dispatcher_enabled, queue }, xhp: { active_legacy_jobs: xhp.active_legacy_jobs, active_legacy_job_count: Number(xhp.active_legacy_job_count), active_other_instagram_workers: xhp.active_other_instagram_workers, future_publications: Number(xhp.future_publications), future_carousels: Number(xhp.future_carousels), carousel_processing_count: Number(xhp.carousel_processing_count), processing_history: xhp.publication_processing_history }, vercelProductionRouteStatus: productionRouteStatus };
 }
 
 function allReadinessChecksPassed(report, { requireVercelConfirmation, requireSchemaReady = true }) {
@@ -287,8 +293,8 @@ async function applyTrackedInstagramMigrations(targetWorkdir) {
 
 async function stageLegacyPublishersOff(xhpWorkdir, targetWorkdir) {
   const jobs = LEGACY_XHP_JOBS.map(sqlLiteral).join(",");
-  runQuery(xhpWorkdir, `update cron.job set active=false where active and jobname=any(array[${jobs}]::text[]) returning jobname`);
-  runQuery(targetWorkdir, `update cron.job set active=false where active and jobname=${sqlLiteral(LEGACY_TARGET_JOB)} returning jobname`);
+  runQuery(xhpWorkdir, `select cron.alter_job(jobid, active := false) from cron.job where active and jobname=any(array[${jobs}]::text[])`);
+  runQuery(targetWorkdir, `select cron.alter_job(jobid, active := false) from cron.job where active and jobname=${sqlLiteral(LEGACY_TARGET_JOB)}`);
   const report = await readPreflight(targetWorkdir, xhpWorkdir, true);
   if (Number(report.target.active_legacy_target_jobs) !== 0 || Number(report.target.active_other_target_instagram_workers) !== 0 ||
       Number(report.xhp.active_legacy_job_count) !== 0 || String(report.xhp.active_other_instagram_workers ?? "") !== "" ||
@@ -402,24 +408,8 @@ async function main() {
       return;
     }
 
-    if (!reelsflowEnv) throw new Error("Pass --reelsflow-env with the existing local Reelsflow .env.local file");
-    const env = parseEnvFile(await readFile(reelsflowEnv, "utf8"));
-    const rawBatchToken = env.get("DMFLOW_BATCH_CONTROL_TOKEN");
-    if (!rawBatchToken) throw new Error("The supplied Reelsflow env file has no DMFLOW_BATCH_CONTROL_TOKEN");
-    const batchTokenHashCandidate = createHash("sha256").update(rawBatchToken).digest("hex");
-
-    const downloadDir = path.join(tempRoot, "legacy-function");
-    await mkdir(path.join(downloadDir, "supabase"), { recursive: true });
-    await writeFile(path.join(downloadDir, "supabase", "config.toml"), `project_id = "${TARGET_REF}"\n`, "utf8");
-    run("supabase", ["link", "--workdir", downloadDir, "--project-ref", TARGET_REF, "--yes"]);
-    run("supabase", ["functions", "download", "reels-batch-control", "--project-ref", TARGET_REF,
-      "--use-api", "--workdir", downloadDir]);
-    const oldFunctionSource = await readFile(path.join(downloadDir, "supabase", "functions", "reels-batch-control", "index.ts"), "utf8");
-    const legacyHash = oldFunctionSource.match(/TOKEN_SHA256\s*=\s*["']([0-9a-f]{64})["']/i)?.[1]?.toLowerCase();
-    if (!legacyHash || batchTokenHashCandidate !== legacyHash) {
-      throw new Error("The Reelsflow local batch token does not match the deployed controller; no cutover was performed");
-    }
-    batchTokenHash = legacyHash;
+    const batchToken = await requireBatchToken(reelsflowEnv);
+    batchTokenHash = batchToken.hash;
 
     if (!commit) {
       console.log(JSON.stringify({ mode: "dry-run", preflightPassed: true, writes: 0,
@@ -437,8 +427,7 @@ async function main() {
     if (!secretNames.includes("SUPABASE_PUBLISHABLE_KEY") && !secretNames.includes("SUPABASE_ANON_KEY")) {
       throw new Error("Missing the existing publishable/anon API key required by the batch controller");
     }
-    const dispatchApiKey = edgeSecrets.find((secret) => secret.name === "SUPABASE_PUBLISHABLE_KEY")?.value ??
-      edgeSecrets.find((secret) => secret.name === "SUPABASE_ANON_KEY")?.value;
+    const dispatchApiKey = batchToken.publishableKey;
     if (typeof dispatchApiKey !== "string" || !dispatchApiKey) {
       throw new Error("Could not read a publishable/anon key for the dispatcher request header");
     }
@@ -455,7 +444,8 @@ async function main() {
     await rm(edgeSecretFile, { force: true });
 
     for (const functionName of ["publish-carousel", "publish-reel", "reels-batch-control", "instagram-publish-dispatcher"]) {
-      run("supabase", ["functions", "deploy", functionName, "--project-ref", TARGET_REF, "--workdir", WORKSPACE_ROOT, "--use-api"]);
+      run("supabase", ["functions", "deploy", functionName, "--project-ref", TARGET_REF, "--workdir", WORKSPACE_ROOT,
+        "--import-map", path.join(WORKSPACE_ROOT, "supabase", "deno.json"), "--use-api"]);
     }
 
     await stageLegacyPublishersOff(xhpWorkdir, targetWorkdir);

@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
-import { mkdtemp, readFile, readdir, rm, writeFile } from "node:fs/promises";
+import { mkdir, mkdtemp, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -31,8 +31,10 @@ export function runSupabase(args, cwd = WORKSPACE_ROOT) {
   try {
     return execFileSync(executable, actualArgs, { cwd, encoding: "utf8", windowsHide: true, maxBuffer: 16 * 1024 * 1024,
       stdio: ["ignore", "pipe", "pipe"], shell: false });
-  } catch {
-    throw new Error("Supabase CLI operation failed; no publication is claimed");
+  } catch (error) {
+    const subcommand = args[0] ?? "operation";
+    const status = error?.status ?? error?.code ?? "unknown";
+    throw new Error(`Supabase ${subcommand} failed (${status}); no publication is claimed`);
   }
 }
 
@@ -45,8 +47,14 @@ export function parseCliJson(output, label) {
 }
 
 export function querySupabase(workdir, sql) {
-  return parseCliJson(runSupabase(["db", "query", "--workdir", workdir, "--linked", "--output-format", "json", sql]),
-    "Supabase query").rows ?? [];
+  try {
+    return parseCliJson(runSupabase(["db", "query", "--workdir", workdir, "--linked", "--output-format", "json", sql]),
+      "Supabase query").rows ?? [];
+  } catch (error) {
+    const tables = [...sql.matchAll(/\b(?:from|join)\s+([a-z_][a-z0-9_.]*)/gi)].map((match) => match[1]);
+    const label = [...new Set(tables)].join(", ") || "unknown relation";
+    throw new Error(`Supabase read query failed (${label}): ${error instanceof Error ? error.message : "unknown error"}`);
+  }
 }
 
 export async function createLinkedWorkdir(tempRoot, projectRef = TARGET_REF) {

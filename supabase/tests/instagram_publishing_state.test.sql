@@ -3,10 +3,13 @@
 -- test to the Geek Academy project or run it against production.
 begin;
 create extension if not exists pgtap;
-select plan(34);
+select plan(35);
 
 select ok(to_regnamespace('dmflow') is not null, 'private dmflow schema exists');
 select ok(to_regclass('dmflow.scheduled_carousels') is not null, 'carousel queue exists');
+select ok((select count(*)=1 from information_schema.columns where table_schema='dmflow'
+  and table_name='scheduled_carousels' and column_name='published_at'),
+  'carousel queue persists the confirmed Meta publication timestamp');
 select ok(
   (select count(*) = 18 from information_schema.columns
    where table_schema = 'dmflow' and table_name = 'scheduled_carousels'
