@@ -185,5 +185,14 @@ test("migration protects Reel and Story approvals and exposes atomic BRT claims 
   assert.match(sql, /grant execute on function dmflow\.claim_due_reel[^;]*service_role/i);
   assert.match(sql, /revoke all on function dmflow\.claim_due_reel_story/i);
   assert.match(sql, /grant execute on function dmflow\.claim_due_reel_story[^;]*service_role/i);
+  assert.match(sql, /create or replace function dmflow\.resolve_reel_publication[\s\S]*security definer/i);
+  assert.match(sql, /grant execute on function dmflow\.resolve_reel_publication[^;]*service_role/i);
+  assert.match(sql, /instagram_reel_reconciliation_events/i);
+  assert.match(sql, /instagram_reel_reconciliation_permits/i);
+  assert.match(sql, /revoke all on dmflow\.instagram_reel_reconciliation_events/i);
+  assert.match(sql, /published resolution requires external post id/i);
+  assert.match(sql, /confirmed_no_post is distinct from true/i);
+  assert.match(sql, /reel terminal state can only be resolved/i);
+  assert.match(sql, /story terminal state can only be resolved/i);
 });
 

@@ -55,6 +55,42 @@ create index if not exists scheduled_reels_due_story_state_idx
 create unique index if not exists scheduled_reels_account_slot_unique
   on dmflow.scheduled_reels (account_id, scheduled_unix) where account_id is not null;
 
+create table if not exists dmflow.instagram_reel_reconciliation_events (
+  id uuid primary key default gen_random_uuid(),
+  scheduled_reel_id uuid not null references dmflow.scheduled_reels(id),
+  lane text not null check (lane in ('reel','story')),
+  outcome text not null check (outcome in ('published','error')),
+  external_post_id text,
+  permalink text,
+  published_at timestamptz,
+  confirmed_no_post boolean not null default false,
+  reason text not null,
+  operator_user_id uuid not null references auth.users(id),
+  created_at timestamptz not null default statement_timestamp(),
+  unique (scheduled_reel_id, lane),
+  constraint reel_reconciliation_evidence_check check (
+    (outcome = 'published' and external_post_id is not null and permalink is not null
+      and published_at is not null and confirmed_no_post is false)
+    or (outcome = 'error' and external_post_id is null and permalink is null
+      and published_at is null and confirmed_no_post is true)
+  )
+);
+
+create table if not exists dmflow.instagram_reel_reconciliation_permits (
+  transaction_id bigint not null,
+  scheduled_reel_id uuid not null references dmflow.scheduled_reels(id),
+  lane text not null check (lane in ('reel','story')),
+  outcome text not null check (outcome in ('published','error')),
+  operator_user_id uuid not null references auth.users(id),
+  primary key (transaction_id, scheduled_reel_id, lane)
+);
+
+alter table dmflow.instagram_reel_reconciliation_events enable row level security;
+alter table dmflow.instagram_reel_reconciliation_permits enable row level security;
+revoke all on dmflow.instagram_reel_reconciliation_events from public, anon, authenticated, service_role;
+revoke all on dmflow.instagram_reel_reconciliation_permits from public, anon, authenticated, service_role;
+grant select on dmflow.instagram_reel_reconciliation_events to service_role;
+
 create or replace function dmflow.guard_reel_approval_insert()
 returns trigger
 language plpgsql
@@ -139,13 +175,204 @@ begin
       'permalink','story_permalink','error','story_error','updated_at']) then
     raise exception 'Approved Reel package fields are immutable; create a newly approved batch';
   end if;
-  if old.publish_state = 'needs_reconciliation' and new.publish_state <> old.publish_state then
-    raise exception 'Ambiguous Reel publication requires manual reconciliation';
+  if old.publish_state in ('needs_reconciliation','error','published') and new.publish_state <> old.publish_state then
+    if old.publish_state <> 'needs_reconciliation' or not exists (
+      select 1 from dmflow.instagram_reel_reconciliation_permits p
+      where p.transaction_id = txid_current() and p.scheduled_reel_id = old.id
+        and p.lane = 'reel' and p.outcome = new.publish_state
+    ) then
+      raise exception 'Reel terminal state can only be resolved with external proof through the reconciliation RPC';
+    end if;
   end if;
-  if old.story_publish_state = 'needs_reconciliation' and new.story_publish_state <> old.story_publish_state then
-    raise exception 'Ambiguous Story publication requires manual reconciliation';
+  if new.publish_state = 'published' and old.publish_state is distinct from new.publish_state
+     and old.publish_state not in ('processing','needs_reconciliation') then
+    raise exception 'Reel publication requires a claimed operation or verified reconciliation';
+  end if;
+  if (new.publish_state = 'published' and new.status is distinct from 'published')
+     or (new.publish_state in ('error','needs_reconciliation') and new.status is distinct from 'error') then
+    raise exception 'Reel status must match its terminal publication state';
+  end if;
+  if old.publish_state in ('error','published') and new.status is distinct from old.status then
+    raise exception 'Resolved Reel states cannot be requeued or rewritten';
+  end if;
+  if old.publish_state = 'needs_reconciliation' and new.publish_state = old.publish_state
+     and new.status is distinct from old.status then
+    raise exception 'Reel reconciliation status can only change through the resolution RPC';
+  end if;
+  if old.story_publish_state in ('needs_reconciliation','error','published')
+     and new.story_publish_state <> old.story_publish_state then
+    if old.story_publish_state <> 'needs_reconciliation' or not exists (
+      select 1 from dmflow.instagram_reel_reconciliation_permits p
+      where p.transaction_id = txid_current() and p.scheduled_reel_id = old.id
+        and p.lane = 'story' and p.outcome = new.story_publish_state
+    ) then
+      raise exception 'Story terminal state can only be resolved with external proof through the reconciliation RPC';
+    end if;
+  end if;
+  if new.story_publish_state = 'published' and old.story_publish_state is distinct from new.story_publish_state
+     and old.story_publish_state not in ('processing','needs_reconciliation') then
+    raise exception 'Story publication requires a claimed operation or verified reconciliation';
+  end if;
+  if (new.story_publish_state = 'published' and new.story_status is distinct from 'published')
+     or (new.story_publish_state in ('error','needs_reconciliation') and new.story_status is distinct from 'error') then
+    raise exception 'Story status must match its terminal publication state';
+  end if;
+  if old.story_publish_state in ('error','published') and new.story_status is distinct from old.story_status then
+    raise exception 'Resolved Reel Story states cannot be requeued or rewritten';
+  end if;
+  if old.story_publish_state = 'needs_reconciliation' and new.story_publish_state = old.story_publish_state
+     and new.story_status is distinct from old.story_status then
+    raise exception 'Story reconciliation status can only change through the resolution RPC';
   end if;
   return new;
+end;
+$$;
+
+create or replace function dmflow.guard_reel_reconciliation_event()
+returns trigger
+language plpgsql
+security definer
+set search_path = ''
+as $$
+begin
+  raise exception 'Reel reconciliation history is immutable';
+end;
+$$;
+
+revoke all on function dmflow.guard_reel_reconciliation_event() from public, anon, authenticated;
+drop trigger if exists reel_reconciliation_event_immutable on dmflow.instagram_reel_reconciliation_events;
+create trigger reel_reconciliation_event_immutable
+before update or delete on dmflow.instagram_reel_reconciliation_events
+for each row execute function dmflow.guard_reel_reconciliation_event();
+
+create or replace function dmflow.resolve_reel_publication(
+  p_scheduled_reel_id uuid,
+  p_lane text,
+  p_outcome text,
+  p_operator_user_id uuid,
+  p_external_post_id text default null,
+  p_permalink text default null,
+  p_published_at timestamptz default null,
+  p_confirmed_no_post boolean default false,
+  p_reason text default null
+)
+returns uuid
+language plpgsql
+security definer
+set search_path = ''
+as $$
+declare
+  v_account_id uuid;
+  v_status text;
+  v_publish_state text;
+  v_story_status text;
+  v_story_publish_state text;
+  v_existing_post_id text;
+  v_existing_story_post_id text;
+  v_event_id uuid;
+begin
+  if p_lane is null or p_lane not in ('reel','story') then
+    raise exception 'Resolution lane must be reel or story';
+  end if;
+  if p_outcome is null or p_outcome not in ('published','error') then
+    raise exception 'Resolution must be published or error';
+  end if;
+  if p_operator_user_id is null or p_scheduled_reel_id is null then
+    raise exception 'Queue item and authenticated operator owner are required';
+  end if;
+  if p_reason is null or btrim(p_reason) = '' or length(p_reason) > 500 then
+    raise exception 'A bounded operator explanation is required';
+  end if;
+
+  select q.account_id, q.status, q.publish_state, q.story_status, q.story_publish_state,
+         q.post_id, q.story_post_id
+    into v_account_id, v_status, v_publish_state, v_story_status, v_story_publish_state,
+         v_existing_post_id, v_existing_story_post_id
+    from dmflow.scheduled_reels q
+   where q.id = p_scheduled_reel_id
+   for update;
+  if not found then raise exception 'Reel queue item not found'; end if;
+  if not exists (select 1 from dmflow.accounts a where a.id = v_account_id
+      and a.owner_user_id = p_operator_user_id) then
+    raise exception 'Only the owning account operator can resolve this queue item';
+  end if;
+
+  if p_outcome = 'published' then
+    if p_confirmed_no_post is distinct from false or p_external_post_id is null
+       or btrim(p_external_post_id) = '' or p_permalink is null or p_published_at is null
+       or p_published_at > statement_timestamp() + interval '5 minutes' then
+      raise exception 'Published resolution requires external post id, permalink, and publish time';
+    end if;
+    if (p_lane = 'reel' and v_existing_post_id is not null and v_existing_post_id <> p_external_post_id)
+       or (p_lane = 'story' and v_existing_story_post_id is not null and v_existing_story_post_id <> p_external_post_id) then
+      raise exception 'External proof must match any Meta post id already recorded';
+    end if;
+    if p_lane = 'reel' and p_permalink !~* '^https://(www\.)?instagram\.com/(reel|p)/[A-Za-z0-9_-]+/?$' then
+      raise exception 'Reel proof permalink must be an Instagram Reel or post URL';
+    end if;
+    if p_lane = 'story' and p_permalink !~* '^https://(www\.)?instagram\.com/stories/andreyogeek/[A-Za-z0-9_-]+/?$' then
+      raise exception 'Story proof permalink must identify an andreyogeek Instagram Story';
+    end if;
+  else
+    if p_confirmed_no_post is distinct from true or p_external_post_id is not null
+       or p_permalink is not null or p_published_at is not null then
+      raise exception 'Error resolution requires explicit no-post confirmation and no post receipt';
+    end if;
+    if (p_lane = 'reel' and v_existing_post_id is not null)
+       or (p_lane = 'story' and v_existing_story_post_id is not null) then
+      raise exception 'A stored Meta post id cannot be resolved as no-post';
+    end if;
+  end if;
+
+  if p_lane = 'reel' and v_publish_state <> 'needs_reconciliation' then
+    raise exception 'Reel lane is not awaiting manual reconciliation';
+  end if;
+  if p_lane = 'story' and (v_publish_state <> 'published' or v_story_publish_state <> 'needs_reconciliation') then
+    raise exception 'Story lane requires a published parent Reel and pending manual reconciliation';
+  end if;
+
+  insert into dmflow.instagram_reel_reconciliation_permits
+    (transaction_id, scheduled_reel_id, lane, outcome, operator_user_id)
+  values (txid_current(), p_scheduled_reel_id, p_lane, p_outcome, p_operator_user_id);
+
+  if p_lane = 'reel' then
+    if p_outcome = 'published' then
+      update dmflow.scheduled_reels
+         set status = 'published', publish_state = 'published', post_id = p_external_post_id,
+             permalink = p_permalink, published_at = p_published_at, error = null,
+             claim_token = null, lease_until = null
+       where id = p_scheduled_reel_id and publish_state = 'needs_reconciliation';
+    else
+      update dmflow.scheduled_reels
+         set status = 'error', publish_state = 'error', error = p_reason,
+             claim_token = null, lease_until = null
+       where id = p_scheduled_reel_id and publish_state = 'needs_reconciliation';
+    end if;
+  elsif p_outcome = 'published' then
+    update dmflow.scheduled_reels
+       set story_status = 'published', story_publish_state = 'published', story_post_id = p_external_post_id,
+           story_permalink = p_permalink, story_published_at = p_published_at, story_error = null,
+           story_claim_token = null, story_lease_until = null
+     where id = p_scheduled_reel_id and story_publish_state = 'needs_reconciliation';
+  else
+    update dmflow.scheduled_reels
+       set story_status = 'error', story_publish_state = 'error', story_error = p_reason,
+           story_claim_token = null, story_lease_until = null
+     where id = p_scheduled_reel_id and story_publish_state = 'needs_reconciliation';
+  end if;
+
+  if not found then raise exception 'Reel publication state changed before reconciliation could be saved'; end if;
+
+  insert into dmflow.instagram_reel_reconciliation_events
+    (scheduled_reel_id, lane, outcome, external_post_id, permalink, published_at,
+     confirmed_no_post, reason, operator_user_id)
+  values (p_scheduled_reel_id, p_lane, p_outcome, p_external_post_id, p_permalink,
+          p_published_at, p_confirmed_no_post, p_reason, p_operator_user_id)
+  returning id into v_event_id;
+
+  delete from dmflow.instagram_reel_reconciliation_permits
+   where transaction_id = txid_current() and scheduled_reel_id = p_scheduled_reel_id and lane = p_lane;
+  return v_event_id;
 end;
 $$;
 
@@ -163,6 +390,10 @@ for each row execute function dmflow.guard_reel_approval_update();
 alter table dmflow.scheduled_reels enable row level security;
 revoke all on dmflow.scheduled_reels from public, anon, authenticated, service_role;
 grant select, insert, update on dmflow.scheduled_reels to service_role;
+revoke all on function dmflow.resolve_reel_publication(uuid,text,text,uuid,text,text,timestamptz,boolean,text)
+  from public, anon, authenticated, service_role;
+grant execute on function dmflow.resolve_reel_publication(uuid,text,text,uuid,text,text,timestamptz,boolean,text)
+  to service_role;
 
 create or replace function dmflow.claim_due_reel(p_reel_id uuid, p_fingerprint text, p_now timestamptz)
 returns setof dmflow.scheduled_reels
