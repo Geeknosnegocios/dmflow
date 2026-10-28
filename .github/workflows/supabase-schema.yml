@@ -1,0 +1,97 @@
+name: Supabase schema contract
+
+on:
+  pull_request:
+    paths:
+      - "supabase/**"
+      - "tests/**"
+      - ".github/workflows/supabase-schema.yml"
+  push:
+    branches: [main, "codex/**"]
+    paths:
+      - "supabase/**"
+      - "tests/**"
+      - ".github/workflows/supabase-schema.yml"
+
+jobs:
+  publishing-state:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: supabase/setup-cli@v1
+        with:
+          version: 2.109.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Prepare an empty temporary Supabase project
+        run: |
+          project_dir="$RUNNER_TEMP/instagram-publishing-state"
+          mkdir -p "$project_dir/supabase/migrations"
+          cat > "$project_dir/supabase/config.toml" <<'TOML'
+          project_id = "zoknypleoribwomifzgi"
+
+          [api]
+          enabled = true
+          schemas = ["public", "dmflow"]
+          extra_search_path = ["public", "dmflow", "extensions"]
+          max_rows = 1000
+
+          [db]
+          major_version = 17
+
+          [db.seed]
+          enabled = false
+          TOML
+          rm -f "$project_dir"/supabase/migrations/*.sql
+          echo "SUPABASE_TEST_PROJECT=$project_dir" >> "$GITHUB_ENV"
+      - name: Start disposable Supabase stack
+        run: supabase --workdir "$SUPABASE_TEST_PROJECT" start -x edge-runtime,gotrue,imgproxy,kong,logflare,mailpit,postgres-meta,postgrest,realtime,storage-api,studio,supavisor,vector
+      - name: Add ordered disposable migrations
+        run: |
+          cat > "$SUPABASE_TEST_PROJECT/supabase/migrations/20261027000000_legacy_schema_fixture.sql" <<'SQL'
+          create schema if not exists dmflow;
+          create table dmflow.accounts (
+            id uuid primary key default gen_random_uuid(),
+            owner_user_id uuid not null,
+            active boolean not null default true,
+            ig_username text,
+            ig_business_id text,
+            ig_access_token text,
+            ig_token_expires_at timestamptz
+          );
+          create table dmflow.scheduled_reels (
+            id uuid primary key default gen_random_uuid(),
+            slug text not null,
+            idx integer not null,
+            unique (slug, idx)
+          );
+          SQL
+          cp "$GITHUB_WORKSPACE/supabase/migrations/20261028131021_centralize_instagram_publishing_state.sql" \
+            "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028131021_centralize_instagram_publishing_state.sql"
+          cp "$GITHUB_WORKSPACE/supabase/migrations/20261028141950_carousel_parent_checkpoint.sql" \
+            "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028141950_carousel_parent_checkpoint.sql"
+          cp "$GITHUB_WORKSPACE/supabase/migrations/20261028160000_reel_publishing_state.sql" \
+            "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028160000_reel_publishing_state.sql"
+          cp "$GITHUB_WORKSPACE/supabase/migrations/20261028193000_reel_claim_recovery_and_metadata.sql" \
+            "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028193000_reel_claim_recovery_and_metadata.sql"
+          cp "$GITHUB_WORKSPACE/supabase/migrations/20261028200000_instagram_dispatcher_state.sql" \
+            "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028200000_instagram_dispatcher_state.sql"
+          mkdir -p "$SUPABASE_TEST_PROJECT/supabase/tests"
+          cp "$GITHUB_WORKSPACE/supabase/tests/instagram_publishing_state.test.sql" \
+            "$SUPABASE_TEST_PROJECT/supabase/tests/instagram_publishing_state.test.sql"
+          cp "$GITHUB_WORKSPACE/supabase/tests/reel_publishing_state.test.sql" \
+            "$SUPABASE_TEST_PROJECT/supabase/tests/reel_publishing_state.test.sql"
+          cp "$GITHUB_WORKSPACE/supabase/tests/reel_recovery_state.test.sql" \
+            "$SUPABASE_TEST_PROJECT/supabase/tests/reel_recovery_state.test.sql"
+          cp "$GITHUB_WORKSPACE/supabase/tests/instagram_dispatcher_state.test.sql" \
+            "$SUPABASE_TEST_PROJECT/supabase/tests/instagram_dispatcher_state.test.sql"
+      - name: Apply ordered migrations to disposable database
+        run: supabase --workdir "$SUPABASE_TEST_PROJECT" migration up --local
+      - name: Check migration contract
+        run: node --test
+      - name: Run database contract tests
+        run: supabase --workdir "$SUPABASE_TEST_PROJECT" test db --local
+      - name: Stop disposable Supabase stack
+        if: always()
+        run: supabase --workdir "$SUPABASE_TEST_PROJECT" stop --no-backup

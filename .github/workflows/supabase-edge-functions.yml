@@ -1,0 +1,52 @@
+name: Supabase Edge Functions
+
+on:
+  pull_request:
+    paths:
+      - "supabase/functions/**"
+      - "supabase/deno.json"
+      - "supabase/deno.lock"
+      - "supabase/config.toml"
+      - "tests/**"
+      - ".github/workflows/supabase-edge-functions.yml"
+  push:
+    branches: [main, "codex/**"]
+    paths:
+      - "supabase/functions/**"
+      - "supabase/deno.json"
+      - "supabase/deno.lock"
+      - "supabase/config.toml"
+      - "tests/**"
+      - ".github/workflows/supabase-edge-functions.yml"
+
+jobs:
+  edge-functions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.1.4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Type check Edge Function and shared modules
+        run: >-
+          deno check --frozen --config supabase/deno.json
+          supabase/functions/publish-carousel/index.ts
+          supabase/functions/_shared/carousel-assets.ts
+          supabase/functions/_shared/meta-graph.ts
+          supabase/functions/_shared/publishing-state.ts
+          supabase/functions/_shared/publishing-state.deno.js
+          supabase/functions/_shared/reel-publishing.ts
+          supabase/functions/publish-reel/graph.ts
+          supabase/functions/publish-reel/media.ts
+          supabase/functions/publish-reel/index.ts
+          supabase/functions/reels-batch-control/handler.ts
+          supabase/functions/reels-batch-control/index.ts
+          supabase/functions/instagram-publish-dispatcher/handler.ts
+          supabase/functions/instagram-publish-dispatcher/index.ts
+      - name: Run Deno-native Edge Function tests
+        run: deno test --frozen --config supabase/deno.json supabase/functions/_shared/publishing-state.deno.js
+      - name: Run Node test suite
+        run: node --test

@@ -1,0 +1,19 @@
+project_id = "zoknypleoribwomifzgi"
+
+[api]
+enabled = true
+schemas = ["public", "dmflow"]
+extra_search_path = ["public", "dmflow", "extensions"]
+max_rows = 1000
+
+[db]
+major_version = 17
+
+[db.seed]
+enabled = false
+
+[functions.reels-batch-control]
+verify_jwt = false
+
+[functions.instagram-publish-dispatcher]
+verify_jwt = false
