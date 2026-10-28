@@ -1,5 +1,6 @@
 type Fetcher = (input: string | URL, init?: RequestInit) => Promise<Response>;
 const DEFAULT_REQUEST_TIMEOUT_MS = 20_000;
+const safeGraphVersion = (version: string) => /^v\d+\.\d+$/.test(version) ? version : "v22.0";
 type Account = {
   ig_username: string | null;
   ig_access_token: string;
@@ -40,7 +41,7 @@ export async function resolveInstagramIdentity({ graphVersion, now, account, fet
   if (!Number.isFinite(expiresAt) || expiresAt <= now) {
     throw new Error("Instagram access token is expired");
   }
-  const response = await fetchImpl(`https://graph.instagram.com/${graphVersion}/me?fields=id%2Cusername`, {
+  const response = await fetchImpl(`https://graph.instagram.com/${safeGraphVersion(graphVersion)}/me?fields=id%2Cusername`, {
     headers: headers(account.ig_access_token),
     signal: AbortSignal.timeout(requestTimeoutMs),
   });
@@ -60,7 +61,7 @@ export function createMetaGraphClient({ graphVersion, accessToken, instagramUser
   fetchImpl?: Fetcher;
   requestTimeoutMs?: number;
 }) {
-  const base = `https://graph.instagram.com/${graphVersion}`;
+  const base = `https://graph.instagram.com/${safeGraphVersion(graphVersion)}`;
   const get = async (path: string, fields: string) => {
     const response = await fetchImpl(`${base}/${path}?fields=${encodeURIComponent(fields)}`, {
       headers: headers(accessToken),

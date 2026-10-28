@@ -93,6 +93,24 @@ test("Graph requests have a bounded timeout signal", async () => {
   ]);
 });
 
+test("invalid Graph version cannot redirect an authenticated request to another host", async () => {
+  let requestUrl = "";
+  const graph = createMetaGraphClient({
+    graphVersion: "v25.0/../../attacker.example",
+    accessToken,
+    instagramUserId: "ig-user-42",
+    fetchImpl: async (input) => {
+      requestUrl = String(input);
+      return response({ status_code: "FINISHED" });
+    },
+  });
+
+  await graph.getContainerStatus("container-1");
+  assert.equal(new URL(requestUrl).origin, "https://graph.instagram.com");
+  assert.match(requestUrl, /graph\.instagram\.com\/v22\.0\/container-1/);
+  assert.equal(requestUrl.includes("attacker.example"), false);
+});
+
 test("resolves the Instagram user id from verified /me identity using the existing account schema", async () => {
   const requests = [];
   const instagramUserId = await resolveInstagramIdentity({

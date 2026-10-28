@@ -1,6 +1,7 @@
 import type { ReelRow } from "../_shared/reel-publishing.ts";
 
 type Fetcher = (input: string | URL, init?: RequestInit) => Promise<Response>;
+const safeGraphVersion = (version: string) => /^v\d+\.\d+$/.test(version) ? version : "v22.0";
 
 export function createReelGraphClient({ graphVersion, accessToken, instagramUserId, fetchImpl = fetch, requestTimeoutMs = 20_000 }: {
   graphVersion: string;
@@ -9,7 +10,7 @@ export function createReelGraphClient({ graphVersion, accessToken, instagramUser
   fetchImpl?: Fetcher;
   requestTimeoutMs?: number;
 }) {
-  const base = `https://graph.instagram.com/${graphVersion}`;
+  const base = `https://graph.instagram.com/${safeGraphVersion(graphVersion)}`;
   async function read(path: string, fields: string) {
     const url = new URL(`${base}/${path}`);
     url.searchParams.set("fields", fields);
