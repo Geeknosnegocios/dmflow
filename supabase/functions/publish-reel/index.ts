@@ -2,58 +2,13 @@ import { createClient } from "@supabase/supabase-js";
 import { assertAuthorizedInstagramAccount, resolveInstagramIdentity } from "../_shared/meta-graph.ts";
 import { publishReelStep, publishStoryStep, type ReelRow } from "../_shared/reel-publishing.ts";
 import { verifyReelAssets, verifyStoryAsset } from "./media.ts";
+import { createReelGraphClient } from "./graph.ts";
 
 const env = (name: string) => Deno.env.get(name) ?? "";
 const supabaseUrl = env("SUPABASE_URL");
 const serviceKey = env("SUPABASE_SERVICE_ROLE_KEY");
 const configuredGraphVersion = env("META_GRAPH_VERSION") || "v22.0";
 const graphVersion = /^v\d+\.\d+$/.test(configuredGraphVersion) ? configuredGraphVersion : "v22.0";
-
-function graphClient(graphVersion: string, accessToken: string, instagramUserId: string) {
-  const base = `https://graph.instagram.com/${graphVersion}`;
-  const timeout = 20_000;
-  async function read(path: string, fields: string) {
-    const url = new URL(`${base}/${path}`);
-    url.searchParams.set("fields", fields);
-    const response = await fetch(url, { headers: { Authorization: `Bearer ${accessToken}` }, signal: AbortSignal.timeout(timeout) });
-    if (!response.ok) throw new Error(`Instagram Graph HTTP ${response.status}`);
-    const payload = await response.json();
-    if (payload?.error) throw new Error("Instagram Graph rejected the request");
-    return payload;
-  }
-  async function write(path: string, params: Record<string, string>) {
-    const response = await fetch(`${base}/${path}`, {
-      method: "POST",
-      headers: { Authorization: `Bearer ${accessToken}`, "Content-Type": "application/json" },
-      body: JSON.stringify(params),
-      signal: AbortSignal.timeout(timeout),
-    });
-    if (!response.ok) throw new Error(`Instagram Graph HTTP ${response.status}`);
-    const payload = await response.json();
-    if (payload?.error) throw new Error("Instagram Graph rejected the request");
-    return payload;
-  }
-  return {
-    async createReel(row: ReelRow) {
-      return write(`${instagramUserId}/media`, { media_type: "REELS", video_url: row.video_url,
-        cover_url: row.cover_url, caption: row.caption, share_to_feed: "true" });
-    },
-    async getReelStatus(id: string) { return (await read(id, "status_code")).status_code as string; },
-    async publishReel(id: string) {
-      const data = await write(`${instagramUserId}/media_publish`, { creation_id: id });
-      return { id: data.id as string, timestamp: new Date().toISOString() };
-    },
-    async createStory(row: ReelRow) {
-      if (!row.story_url) throw new Error("Approved Story URL is missing");
-      return write(`${instagramUserId}/media`, { media_type: "STORIES", video_url: row.story_url });
-    },
-    async getStoryStatus(id: string) { return (await read(id, "status_code")).status_code as string; },
-    async publishStory(id: string) {
-      const data = await write(`${instagramUserId}/media_publish`, { creation_id: id });
-      return { id: data.id as string, timestamp: new Date().toISOString() };
-    },
-  };
-}
 
 function repository(supabase: ReturnType<typeof createClient>) {
   const table = () => supabase.schema("dmflow").from("scheduled_reels");
@@ -141,7 +96,7 @@ Deno.serve(async (request) => {
     assertAuthorizedInstagramAccount({ active: account.active, ig_username: account.ig_username });
     const identity = await resolveInstagramIdentity({ graphVersion, now: Date.now(), account });
     if (identity !== account.ig_business_id) return new Response("Instagram identity does not match the account", { status: 503 });
-    const graph = graphClient(graphVersion, account.ig_access_token, identity);
+    const graph = createReelGraphClient({ graphVersion, accessToken: account.ig_access_token, instagramUserId: identity });
     graph.validateReel = async (row) => verifyReelAssets(row, supabaseUrl);
     graph.validateStory = async (row) => verifyStoryAsset(row, supabaseUrl);
     const repo = repository(supabase);
