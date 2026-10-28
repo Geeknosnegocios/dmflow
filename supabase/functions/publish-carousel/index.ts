@@ -1,10 +1,12 @@
 import { createClient } from "npm:@supabase/supabase-js@2";
-import { publishCarouselStep } from "../_shared/publishing-state.ts";
+import { verifyCarouselAssets } from "../_shared/carousel-assets.ts";
+import { canonicalCarouselFingerprint, publishCarouselStep } from "../_shared/publishing-state.ts";
+import { createMetaGraphClient, resolveInstagramIdentity } from "../_shared/meta-graph.ts";
 
 const env = (name: string) => Deno.env.get(name) ?? "";
 const supabaseUrl = env("SUPABASE_URL");
 const serviceKey = env("SUPABASE_SERVICE_ROLE_KEY");
-const graphVersion = env("META_GRAPH_VERSION") || "v25.0";
+const graphVersion = env("META_GRAPH_VERSION") || "v22.0";
 
 Deno.serve(async (request) => {
   if (request.method !== "POST") return new Response("Method not allowed", { status: 405 });
@@ -19,17 +21,15 @@ Deno.serve(async (request) => {
       if (error) throw error;
       return data ? normalize(data) : null;
     },
-    async loadApproval(cardId: string) {
+    async loadApproval(cardId: string, accountId: string, contentType: "carousel", fingerprint: string) {
       const { data, error } = await supabase.schema("dmflow").from("approved_content")
-        .select("fingerprint,revoked_at").eq("content_id", cardId).eq("content_type", "carousel")
-        .order("approved_at", { ascending: false }).limit(1).maybeSingle();
+        .select("fingerprint,revoked_at").eq("content_id", cardId).eq("account_id", accountId)
+        .eq("content_type", contentType).eq("fingerprint", fingerprint).is("revoked_at", null).maybeSingle();
       if (error) throw error;
-      return data ? { ...data, approved: !data.revoked_at } : null;
+      return data ? { ...data, approved: true } : null;
     },
     async canonicalApprovalFingerprint(row: CarouselRow) {
-      const canonical = JSON.stringify({ caption: row.caption, image_urls: row.image_urls, canal: row.canal });
-      const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(canonical));
-      return `sha256:${Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, "0")).join("")}`;
+      return canonicalCarouselFingerprint(row);
     },
     async claimByCard(cardId: string, fingerprint: string, now: number) {
       const { data, error } = await supabase.schema("dmflow").rpc("claim_carousel_by_card", {
@@ -61,45 +61,15 @@ Deno.serve(async (request) => {
   };
 
   const graph = {
+    async validateAssets(row: CarouselRow) {
+      await verifyCarouselAssets({ row, storageUrl: supabaseUrl });
+    },
     async forCarousel(row: CarouselRow) {
       const { data, error } = await supabase.schema("dmflow").from("accounts")
-        .select("ig_access_token,ig_user_id").eq("id", row.account_id).single();
-      if (error || !data?.ig_access_token || !data?.ig_user_id) throw new Error("Instagram account credentials are unavailable");
-      const token = data.ig_access_token as string;
-      const userId = data.ig_user_id as string;
-      const call = async (path: string, params: Record<string, string>) => {
-        const response = await fetch(`https://graph.instagram.com/${graphVersion}/${path}`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ ...params, access_token: token }),
-        });
-        const result = await response.json();
-        if (!response.ok || result.error) throw new Error(`Instagram Graph HTTP ${response.status}`);
-        return result;
-      };
-      const get = async (id: string, fields: string) => {
-        const url = new URL(`https://graph.instagram.com/${graphVersion}/${id}`);
-        url.search = new URLSearchParams({ fields, access_token: token }).toString();
-        const response = await fetch(url);
-        const result = await response.json();
-        if (!response.ok || result.error) throw new Error(`Instagram Graph HTTP ${response.status}`);
-        return result;
-      };
-      return {
-        async createChild({ imageUrl }: { imageUrl?: string }) {
-          if (!imageUrl) throw new Error("Carousel image URL is missing");
-          return call(`${userId}/media`, { image_url: imageUrl, is_carousel_item: "true" });
-        },
-        async getContainerStatus(id: string) { return (await get(id, "status_code")).status_code; },
-        async createParent({ children, caption }: { children: string[]; caption?: string }) {
-          return call(`${userId}/media`, { media_type: "CAROUSEL", children: children.join(","), caption: caption ?? "" });
-        },
-        async publish(id: string) {
-          const result = await call(`${userId}/media_publish`, { creation_id: id });
-          return { ...result, timestamp: new Date().toISOString() };
-        },
-        async getPermalink(id: string) { return (await get(id, "permalink")).permalink; },
-      };
+        .select("ig_business_id,ig_username,ig_access_token,ig_token_expires_at").eq("id", row.account_id).single();
+      if (error || !data) throw new Error("Instagram account credentials are unavailable");
+      const instagramUserId = await resolveInstagramIdentity({ graphVersion, now: Date.now(), account: data });
+      return createMetaGraphClient({ graphVersion, accessToken: data.ig_access_token, instagramUserId });
     },
   };
 
@@ -113,22 +83,29 @@ Deno.serve(async (request) => {
 
 type CarouselRow = {
   id: string;
+  card_id: string;
   account_id: string;
   canal: string;
   caption: string;
   image_urls: string[];
-  slide_container_ids: string[];
-  slide_statuses: string[];
+  slide_hashes: string[];
+  slide_container_ids: string[] | null;
+  slide_statuses: string[] | null;
   [key: string]: unknown;
 };
 
 function normalize(row: CarouselRow) {
   return {
     ...row,
-    child_containers: row.slide_container_ids ?? [],
-    child_statuses: row.slide_statuses ?? [],
+    child_containers: checkpointArray(row.slide_container_ids),
+    child_statuses: checkpointArray(row.slide_statuses),
     parent_status: row.parent_status ?? null,
   };
+}
+
+function checkpointArray(values: string[] | null | undefined) {
+  const stored = values ?? [];
+  return Array.from({ length: Math.max(8, stored.length) }, (_, index) => stored[index] ?? null);
 }
 
 function toDatabasePatch(patch: Record<string, unknown>) {

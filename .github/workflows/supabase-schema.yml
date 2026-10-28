@@ -5,12 +5,14 @@ on:
     paths:
       - "supabase/**"
       - "tests/instagram-publishing-state.test.mjs"
+      - "tests/carousel-claim-migration.test.mjs"
       - ".github/workflows/supabase-schema.yml"
   push:
     branches: [main, "codex/**"]
     paths:
       - "supabase/**"
       - "tests/instagram-publishing-state.test.mjs"
+      - "tests/carousel-claim-migration.test.mjs"
       - ".github/workflows/supabase-schema.yml"
 
 jobs:
@@ -69,7 +71,7 @@ jobs:
       - name: Apply ordered migrations to disposable database
         run: supabase --workdir "$SUPABASE_TEST_PROJECT" migration up --local
       - name: Check migration contract
-        run: node --test tests/instagram-publishing-state.test.mjs
+        run: node --test tests/instagram-publishing-state.test.mjs tests/carousel-claim-migration.test.mjs
       - name: Run database contract tests
         run: supabase --workdir "$SUPABASE_TEST_PROJECT" test db --local "$GITHUB_WORKSPACE/supabase/tests/instagram_publishing_state.test.sql"
       - name: Stop disposable Supabase stack
