@@ -77,6 +77,8 @@ jobs:
             "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028193000_reel_claim_recovery_and_metadata.sql"
           cp "$GITHUB_WORKSPACE/supabase/migrations/20261028200000_instagram_dispatcher_state.sql" \
             "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028200000_instagram_dispatcher_state.sql"
+          cp "$GITHUB_WORKSPACE/supabase/migrations/20261028210000_carousel_published_receipt.sql" \
+            "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028210000_carousel_published_receipt.sql"
           mkdir -p "$SUPABASE_TEST_PROJECT/supabase/tests"
           cp "$GITHUB_WORKSPACE/supabase/tests/instagram_publishing_state.test.sql" \
             "$SUPABASE_TEST_PROJECT/supabase/tests/instagram_publishing_state.test.sql"

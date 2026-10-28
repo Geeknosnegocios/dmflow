@@ -69,6 +69,12 @@ test("publishing migration defines private queue, approval, idempotency, and no-
   assert.doesNotMatch(sql, /xhp\.|dblink|postgres_fdw/i, "migration must not query legacy XHP data");
 });
 
+test("carousel receipt migration requires post_id and published_at for terminal published state", async () => {
+  const migration = await readFile(path.join(root, "supabase", "migrations", "20261028210000_carousel_published_receipt.sql"), "utf8");
+  assert.match(migration, /add column if not exists published_at timestamptz/i);
+  assert.match(migration, /status <> 'published' or \(post_id is not null and published_at is not null\)/i);
+});
+
 test("checked-in Supabase API config exposes the dmflow schema", async () => {
   const apiConfig = await readFile(path.join(root, "supabase", "config.toml"), "utf8");
   assert.match(apiConfig, /\[api\][\s\S]*?schemas\s*=\s*\[\s*"public"\s*,\s*"dmflow"\s*\]/i,
