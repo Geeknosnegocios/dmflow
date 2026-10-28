@@ -2,11 +2,14 @@ type Carousel = {
   id: string;
   card_id: string;
   account_id: string;
+  canal: string;
+  caption: string;
+  image_urls: string[];
   slide_hashes: string[];
   status: string;
   publish_at: string;
-  image_urls?: string[];
-  caption?: string;
+  slide_container_ids: Array<string | null> | null;
+  slide_statuses: Array<string | null> | null;
   approval_fingerprint: string;
   child_containers: Array<string | null>;
   child_statuses: Array<string | null>;
@@ -26,14 +29,16 @@ type Repository = {
   saveClaimed(id: string, token: string, patch: Partial<Carousel> & Record<string, unknown>): Promise<void>;
   needsReconciliation(id: string, reason: string, token: string): Promise<void>;
 };
-type Graph = {
-  validateAssets?(row: Carousel): Promise<void>;
-  forCarousel?(row: Carousel): Promise<Graph>;
+type GraphOperations = {
   createChild(input: { index: number; imageUrl?: string; caption?: string }): Promise<{ id: string }>;
   getContainerStatus(id: string): Promise<string>;
   createParent(input: { children: string[]; caption?: string }): Promise<{ id: string }>;
   publish(id: string): Promise<{ id: string; timestamp: string }>;
   getPermalink(id: string): Promise<string>;
+};
+type Graph = Partial<GraphOperations> & {
+  validateAssets?(row: Carousel): Promise<void>;
+  forCarousel?(row: Carousel): Promise<GraphOperations>;
 };
 
 const scheduled = (patch: Partial<Carousel> & Record<string, unknown>) => ({ status: "scheduled", ...patch });
@@ -100,10 +105,10 @@ export async function publishCarouselStep({ repository, graph, now }: {
   if (row.child_containers.length !== 8 || row.child_statuses.length !== 8) {
     return reconcile(repository, row, token, "Carousel container checkpoints must contain eight entries");
   }
-  let activeGraph: Graph;
+  let activeGraph: GraphOperations;
   try {
     await graph.validateAssets?.(row);
-    activeGraph = graph.forCarousel ? await graph.forCarousel(row) : graph;
+    activeGraph = graph.forCarousel ? await graph.forCarousel(row) : graph as GraphOperations;
   } catch (error) {
     const reason = error instanceof Error ? error.message : "Carousel validation failed";
     return reconcile(repository, row, token, reason);
@@ -154,7 +159,7 @@ export async function publishCarouselStep({ repository, graph, now }: {
     });
   }
   if (!row.permalink) {
-    return externalStep(repository, () => activeGraph.getPermalink(row.post_id), row, token, (permalink) => {
+    return externalStep(repository, () => activeGraph.getPermalink(row.post_id!), row, token, (permalink) => {
       if (typeof permalink !== "string" || !permalink) return {};
       const url = new URL(permalink);
       if (url.protocol !== "https:" || !["instagram.com", "www.instagram.com"].includes(url.hostname) ||

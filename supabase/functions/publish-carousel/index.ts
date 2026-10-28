@@ -1,4 +1,4 @@
-import { createClient } from "npm:@supabase/supabase-js@2";
+import { createClient } from "@supabase/supabase-js";
 import { verifyCarouselAssets } from "../_shared/carousel-assets.ts";
 import { canonicalCarouselFingerprint, publishCarouselStep } from "../_shared/publishing-state.ts";
 import { createMetaGraphClient, resolveInstagramIdentity } from "../_shared/meta-graph.ts";
@@ -38,7 +38,8 @@ Deno.serve(async (request) => {
         p_now: new Date(now).toISOString(),
       }).maybeSingle();
       if (error) throw error;
-      return data?.claim_token ? { row: normalize(data), claim_token: data.claim_token } : null;
+      const claimed = data as (CarouselRow & { claim_token?: string }) | null;
+      return claimed?.claim_token ? { row: normalize(claimed), claim_token: claimed.claim_token } : null;
     },
     async saveClaimed(id: string, token: string, patch: Record<string, unknown>) {
       const dbPatch = toDatabasePatch(patch);
@@ -89,9 +90,20 @@ type CarouselRow = {
   caption: string;
   image_urls: string[];
   slide_hashes: string[];
-  slide_container_ids: string[] | null;
-  slide_statuses: string[] | null;
-  [key: string]: unknown;
+  slide_container_ids: Array<string | null> | null;
+  slide_statuses: Array<string | null> | null;
+  status: string;
+  publish_at: string;
+  approval_fingerprint: string;
+  parent_container_id: string | null;
+  parent_status: string | null;
+  post_id: string | null;
+  published_at: string | null;
+  permalink: string | null;
+  claim_token?: string | null;
+  lease_until?: string | null;
+  error?: string | null;
+  updated_at?: string;
 };
 
 function normalize(row: CarouselRow) {
@@ -103,7 +115,7 @@ function normalize(row: CarouselRow) {
   };
 }
 
-function checkpointArray(values: string[] | null | undefined) {
+function checkpointArray(values: Array<string | null> | null | undefined) {
   const stored = values ?? [];
   return Array.from({ length: Math.max(8, stored.length) }, (_, index) => stored[index] ?? null);
 }
