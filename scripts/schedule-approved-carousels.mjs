@@ -168,7 +168,7 @@ export async function uploadApprovedSlide({ supabaseUrl, publishableKey, objectP
     throw new Error("Storage returned a signed URL outside the approved object path");
   }
   const response = await fetchImpl(signedUrl, {
-    method: "POST",
+    method: "PUT",
     headers: { Authorization: `Bearer ${publishableKey}`, apikey: publishableKey,
       "Content-Type": "image/png", "Cache-Control": "max-age=3600", "x-upsert": "false" },
     body: bytes,

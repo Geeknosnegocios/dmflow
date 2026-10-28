@@ -117,6 +117,7 @@ test("approved slide upload uses only a matching signed URL and publishable head
   assert.deepEqual(signingRequest,{path:objectPath,contentType:"image/png"});
   assert.equal(new URL(captured.url).origin,"https://zoknypleoribwomifzgi.supabase.co");
   assert.equal(captured.url,signedUrl);
+  assert.equal(captured.init.method,"PUT");
   assert.equal(captured.init.headers.Authorization,"Bearer publishable-key");
   assert.equal(String(captured.init.body).includes("publishable-key"),false);
   assert.equal(captured.init.headers["x-upsert"],"false");
