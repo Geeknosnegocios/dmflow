@@ -75,6 +75,8 @@ jobs:
             "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028160000_reel_publishing_state.sql"
           cp "$GITHUB_WORKSPACE/supabase/migrations/20261028193000_reel_claim_recovery_and_metadata.sql" \
             "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028193000_reel_claim_recovery_and_metadata.sql"
+          cp "$GITHUB_WORKSPACE/supabase/migrations/20261028200000_instagram_dispatcher_state.sql" \
+            "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028200000_instagram_dispatcher_state.sql"
           mkdir -p "$SUPABASE_TEST_PROJECT/supabase/tests"
           cp "$GITHUB_WORKSPACE/supabase/tests/instagram_publishing_state.test.sql" \
             "$SUPABASE_TEST_PROJECT/supabase/tests/instagram_publishing_state.test.sql"
@@ -82,6 +84,8 @@ jobs:
             "$SUPABASE_TEST_PROJECT/supabase/tests/reel_publishing_state.test.sql"
           cp "$GITHUB_WORKSPACE/supabase/tests/reel_recovery_state.test.sql" \
             "$SUPABASE_TEST_PROJECT/supabase/tests/reel_recovery_state.test.sql"
+          cp "$GITHUB_WORKSPACE/supabase/tests/instagram_dispatcher_state.test.sql" \
+            "$SUPABASE_TEST_PROJECT/supabase/tests/instagram_dispatcher_state.test.sql"
       - name: Apply ordered migrations to disposable database
         run: supabase --workdir "$SUPABASE_TEST_PROJECT" migration up --local
       - name: Check migration contract

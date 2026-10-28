@@ -61,8 +61,10 @@ async function verifiedBytes(raw: string, expectedHash: string, supabaseUrl: str
 }
 
 export async function verifyReelAssets(row: ReelRow, supabaseUrl: string) {
-  await verifiedBytes(row.video_url, row.video_sha256, supabaseUrl, VIDEO_LIMIT, "video");
-  await verifiedBytes(row.cover_url, row.cover_sha256, supabaseUrl, COVER_LIMIT, "image");
+  await Promise.all([
+    verifiedBytes(row.video_url, row.video_sha256, supabaseUrl, VIDEO_LIMIT, "video"),
+    verifiedBytes(row.cover_url, row.cover_sha256, supabaseUrl, COVER_LIMIT, "image"),
+  ]);
 }
 
 export async function verifyStoryAsset(row: ReelRow, supabaseUrl: string) {

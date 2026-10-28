@@ -44,6 +44,8 @@ jobs:
           supabase/functions/publish-reel/index.ts
           supabase/functions/reels-batch-control/handler.ts
           supabase/functions/reels-batch-control/index.ts
+          supabase/functions/instagram-publish-dispatcher/handler.ts
+          supabase/functions/instagram-publish-dispatcher/index.ts
       - name: Run Deno-native Edge Function tests
         run: deno test --frozen --config supabase/deno.json supabase/functions/_shared/publishing-state.deno.js
       - name: Run Node test suite

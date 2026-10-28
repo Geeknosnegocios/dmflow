@@ -14,3 +14,6 @@ enabled = false
 
 [functions.reels-batch-control]
 verify_jwt = false
+
+[functions.instagram-publish-dispatcher]
+verify_jwt = false
