@@ -177,6 +177,26 @@ test("preserves list-slugs, verify-batch, and one-time sign-upload contracts", a
   assert.equal(state.writes.signs, 1);
 });
 
+test("sign-carousel-upload signs only the 32 exact W44 PNG paths", async () => {
+  const { repository, state } = db();
+  const handler = createReelsBatchControlHandler({ config: config(), repository, now: () => now });
+  const valid = await handler(request({ action: "sign-carousel-upload",
+    path: "instagram/carousels/ANDREY-W44-2026-C01/slide-01-0123456789ab.png", contentType: "image/png" }));
+  assert.equal(valid.status, 200);
+  assert.equal((await valid.json()).token, "single-use");
+  assert.equal(state.writes.signs, 1);
+  for (const body of [
+    { path: "instagram/carousels/ANDREY-W44-2026-C05/slide-01-0123456789ab.png", contentType: "image/png" },
+    { path: "instagram/carousels/ANDREY-W44-2026-C01/slide-09-0123456789ab.png", contentType: "image/png" },
+    { path: "instagram/carousels/ANDREY-W44-2026-C01/slide-01-0123456789ab.jpg", contentType: "image/jpeg" },
+    { path: "instagram/carousels/ANDREY-W44-2026-C01/slide-01-not-a-hash.png", contentType: "image/png" },
+  ]) {
+    const response = await handler(request({ action: "sign-carousel-upload", ...body }));
+    assert.equal(response.status, 400);
+  }
+  assert.equal(state.writes.signs, 1);
+});
+
 test("schedule-batch requires exact preapproved hashes and inserts three rows without creating approvals", async () => {
   const payload = batch();
   payload.approved_by = "caller-forged-owner";

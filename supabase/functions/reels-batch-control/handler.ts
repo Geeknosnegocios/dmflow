@@ -162,6 +162,12 @@ function validateUploadPath(path: unknown, contentType: unknown, nowMs: number) 
   return { date, sourceVideoId: source, idx, scheduledUnix: scheduled, path, contentType };
 }
 
+function validateCarouselUploadPath(path: unknown, contentType: unknown) {
+  if (typeof path === "string" && contentType === "image/png" &&
+      /^instagram\/carousels\/ANDREY-W44-2026-C0[1-4]\/slide-0[1-8]-[0-9a-f]{12}\.png$/.test(path)) return { path, contentType };
+  throw new ControlError(400, "carrossel inválido");
+}
+
 function expectedAssetUrls(item: Record<string, unknown>, date: string, source: string, idx: number, config: Pick<BatchControlConfig, "supabaseUrl">) {
   for (const field of ["video_url", "cover_url", "story_url"] as const) {
     if (typeof item[field] !== "string") throw new ControlError(400, `Reel ${idx}: ${field} inválida`);
@@ -400,8 +406,8 @@ export function createReelsBatchControlHandler(deps: HandlerDependencies) {
         assertBatchDateAndSource(body.date, body.sourceVideoId);
         return json({ ok: true, rows: await repository.verifyBatch(body.date, body.sourceVideoId) });
       }
-      if (body.action === "sign-upload") {
-        const parsed = validateUploadPath(body.path, body.contentType, nowMs);
+      if (body.action === "sign-upload" || body.action === "sign-carousel-upload") {
+        const parsed = body.action === "sign-upload" ? validateUploadPath(body.path, body.contentType, nowMs) : validateCarouselUploadPath(body.path, body.contentType);
         const signed = await repository.signUpload(parsed.path, parsed.contentType);
         return json({ ok: true, ...parsed, signedUrl: signed.signedUrl, token: signed.token });
       }
