@@ -83,7 +83,7 @@ select lives_ok($sql$
     where id='00000000-0000-0000-0000-000000000303';
   update dmflow.scheduled_reels set status='published',publish_state='published',post_id='parent-d',published_at=statement_timestamp(),permalink='https://www.instagram.com/reel/parent-d/'
     where id='00000000-0000-0000-0000-000000000303';
-  update dmflow.scheduled_reels set story_status='processing',story_publish_state='processing',story_claim_token='story-lease-c',story_lease_until=statement_timestamp()+interval '5 minutes'
+  update dmflow.scheduled_reels set story_status='processing',story_publish_state='processing',story_claim_token='story-lease-c',story_lease_until=statement_timestamp()+interval '5 minutes',story_container_id='story-container-c',story_container_status='FINISHED'
     where id='00000000-0000-0000-0000-000000000303';
   update dmflow.scheduled_reels set status='processing',publish_state='processing',claim_token='lease-d',lease_until=statement_timestamp()+interval '5 minutes',container_id='container-d',container_status='FINISHED'
     where id='00000000-0000-0000-0000-000000000304';
