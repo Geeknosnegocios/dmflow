@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { test } from "node:test";
 import { APPROVED_CARDS } from "../scripts/register-approved-carousel-batch.mjs";
-import { carouselInsertSql, carouselSlidePath, chooseCarouselScheduleDates, existingCarouselBatchMatches, verifyRemoteSlide } from "../scripts/schedule-approved-carousels.mjs";
+import { carouselInsertSql, carouselSlidePath, chooseCarouselScheduleDates, existingCarouselBatchMatches, requestCarouselUploadSignature, uploadApprovedSlide, verifyRemoteSlide } from "../scripts/schedule-approved-carousels.mjs";
 
 const hash = (char) => `sha256:${char.repeat(64)}`;
 const fakePackage = (index) => ({
@@ -97,4 +97,49 @@ test("remote asset verification distinguishes missing objects from hash or MIME 
     async () => new Response(bytes, { status: 200, headers: { "content-type": "image/png" } })), /SHA-256/);
   await assert.rejects(() => verifyRemoteSlide("https://example.invalid/slide.png", correct,
     async () => new Response(bytes, { status: 200, headers: { "content-type": "image/jpeg" } })), /PNG/);
+});
+
+test("approved slide upload uses only a matching signed URL and publishable headers", async () => {
+  const bytes=Buffer.from("approved-slide-bytes");
+  let captured;
+  let signingRequest;
+  const objectPath="instagram/carousels/ANDREY-W44-2026-C01/slide-01-0123456789ab.png";
+  const signedUrl=`https://zoknypleoribwomifzgi.supabase.co/storage/v1/object/upload/sign/dmflow-content/${objectPath}?token=single-use`;
+  const result=await uploadApprovedSlide({
+    supabaseUrl:"https://zoknypleoribwomifzgi.supabase.co",
+    publishableKey:"publishable-key",
+    objectPath,
+    bytes,
+    signUpload:async(path,contentType)=>{signingRequest={path,contentType};return {signedUrl,token:"single-use"};},
+    fetchImpl:async(input,init)=>{captured={url:String(input),init};return new Response(null,{status:200});},
+  });
+  assert.equal(result.ok,true);
+  assert.deepEqual(signingRequest,{path:objectPath,contentType:"image/png"});
+  assert.equal(new URL(captured.url).origin,"https://zoknypleoribwomifzgi.supabase.co");
+  assert.equal(captured.url,signedUrl);
+  assert.equal(captured.init.headers.Authorization,"Bearer publishable-key");
+  assert.equal(String(captured.init.body).includes("publishable-key"),false);
+  assert.equal(captured.init.headers["x-upsert"],"false");
+  await assert.rejects(()=>uploadApprovedSlide({supabaseUrl:"https://other.supabase.co",publishableKey:"k",
+    objectPath,bytes,signUpload:async()=>{throw new Error("must not call");},
+    fetchImpl:async()=>{throw new Error("must not call");}}),/only an approved W44 slide/);
+  await assert.rejects(()=>uploadApprovedSlide({supabaseUrl:"https://zoknypleoribwomifzgi.supabase.co",publishableKey:"k",
+    objectPath,bytes,signUpload:async()=>({signedUrl:"https://attacker.invalid/upload?token=single-use",token:"single-use"}),
+    fetchImpl:async()=>{throw new Error("must not call");}}),/outside the approved object path/);
+});
+
+test("carousel upload signing authenticates to the target controller and rejects unsafe paths before network access", async () => {
+  const objectPath="instagram/carousels/ANDREY-W44-2026-C04/slide-08-0123456789ab.png";
+  let captured;
+  const signature={signedUrl:`https://zoknypleoribwomifzgi.supabase.co/storage/v1/object/upload/sign/dmflow-content/${objectPath}?token=once`,token:"once"};
+  const fetchImpl=async(input,init)=>{captured={url:String(input),init};return Response.json({ok:true,path:objectPath,contentType:"image/png",...signature});};
+  const signed=await requestCarouselUploadSignature({controlUrl:"https://zoknypleoribwomifzgi.supabase.co/functions/v1/reels-batch-control",
+    batchToken:"private-batch-token",publishableKey:"publishable-key",objectPath,fetchImpl});
+  assert.deepEqual(signed,signature);
+  assert.equal(captured.init.headers["x-reels-token"],"private-batch-token");
+  assert.deepEqual(JSON.parse(captured.init.body),{action:"sign-carousel-upload",path:objectPath,contentType:"image/png"});
+  await assert.rejects(()=>requestCarouselUploadSignature({controlUrl:"https://other.supabase.co/functions/v1/reels-batch-control",
+    batchToken:"x",publishableKey:"k",objectPath,fetchImpl:async()=>{throw new Error("must not call");}}),/limited to approved W44/);
+  await assert.rejects(()=>requestCarouselUploadSignature({controlUrl:"https://zoknypleoribwomifzgi.supabase.co/functions/v1/reels-batch-control",
+    batchToken:"x",publishableKey:"k",objectPath:objectPath.replace("C04","C05"),fetchImpl:async()=>{throw new Error("must not call");}}),/limited to approved W44/);
 });

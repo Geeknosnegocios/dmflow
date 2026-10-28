@@ -4,7 +4,7 @@ import os from "node:os";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import {
-  APPROVED_CARDS, TARGET_REF, cleanupTempRoot, createLinkedWorkdir, loadApprovedCarouselPackages,
+  APPROVED_CARDS, TARGET_REF, cleanupTempRoot, createLinkedWorkdir, loadApprovedCarouselPackages, parseCliJson,
   packageFingerprint, querySupabase, runSupabase, sqlQuote, verifyCutoverReady,
 } from "./register-approved-carousel-batch.mjs";
 
@@ -119,6 +119,90 @@ export async function verifyRemoteSlide(url, expectedHash, fetchImpl = fetch) {
   return { exists: true };
 }
 
+export async function requestCarouselUploadSignature({ controlUrl, batchToken, publishableKey, objectPath, fetchImpl = fetch }) {
+  let endpoint;
+  try { endpoint = new URL(controlUrl); } catch { throw new Error("Batch-control upload URL is invalid"); }
+  if (endpoint.origin !== `https://${TARGET_REF}.supabase.co` ||
+      endpoint.pathname !== "/functions/v1/reels-batch-control" || endpoint.search || endpoint.hash ||
+      !batchToken || !publishableKey ||
+      !/^instagram\/carousels\/ANDREY-W44-2026-C0[1-4]\/slide-0[1-8]-[0-9a-f]{12}\.png$/.test(objectPath)) {
+    throw new Error("Upload signing is limited to approved W44 carousel PNGs in Geek Academy");
+  }
+  let response;
+  try {
+    response = await fetchImpl(endpoint, {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-reels-token": batchToken,
+        apikey: publishableKey, Authorization: `Bearer ${publishableKey}` },
+      body: JSON.stringify({ action: "sign-carousel-upload", path: objectPath, contentType: "image/png" }),
+      redirect: "error",
+      signal: AbortSignal.timeout(15_000),
+    });
+  } catch { throw new Error("Carousel upload signing request failed"); }
+  if (!response.ok) {
+    await response.body?.cancel();
+    throw new Error("Carousel upload signing request was rejected");
+  }
+  let data;
+  try { data = await response.json(); }
+  catch { throw new Error("Carousel upload signing response is invalid"); }
+  if (!data || data.ok !== true || data.path !== objectPath || data.contentType !== "image/png" ||
+      typeof data.signedUrl !== "string" || typeof data.token !== "string" || !data.token || data.token.length > 4096) {
+    throw new Error("Carousel upload signing response did not match the requested asset");
+  }
+  return { signedUrl: data.signedUrl, token: data.token };
+}
+
+export async function uploadApprovedSlide({ supabaseUrl, publishableKey, objectPath, bytes, signUpload, fetchImpl = fetch }) {
+  if (new URL(supabaseUrl).origin !== `https://${TARGET_REF}.supabase.co` || !publishableKey ||
+      typeof signUpload !== "function" ||
+      !/^instagram\/carousels\/ANDREY-W44-2026-C0[1-4]\/slide-0[1-8]-[0-9a-f]{12}\.png$/.test(objectPath)) {
+    throw new Error("Upload rejected: only an approved W44 slide in the target Storage bucket is allowed");
+  }
+  const signed = await signUpload(objectPath, "image/png");
+  let signedUrl;
+  try { signedUrl = new URL(signed.signedUrl); } catch { throw new Error("Storage signed URL is invalid"); }
+  const expectedPath = `/storage/v1/object/upload/sign/${BUCKET}/${objectPath}`;
+  if (signedUrl.origin !== `https://${TARGET_REF}.supabase.co` || signedUrl.pathname !== expectedPath ||
+      signedUrl.searchParams.size !== 1 || signedUrl.searchParams.get("token") !== signed.token || signedUrl.hash) {
+    throw new Error("Storage returned a signed URL outside the approved object path");
+  }
+  const response = await fetchImpl(signedUrl, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${publishableKey}`, apikey: publishableKey,
+      "Content-Type": "image/png", "Cache-Control": "max-age=3600", "x-upsert": "false" },
+    body: bytes,
+    redirect: "error",
+    signal: AbortSignal.timeout(60_000),
+  });
+  await response.body?.cancel();
+  return { ok: response.ok, status: response.status, url: storageUrl(objectPath) };
+}
+
+async function loadBatchControlCredentials(envPath) {
+  if (!envPath) throw new Error("Pass --reelsflow-env with the existing local Reelsflow .env file");
+  const values = new Map();
+  for (const line of (await readFile(envPath, "utf8")).split(/\r?\n/)) {
+    const match = line.match(/^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*?)\s*$/);
+    if (!match || match[1].startsWith("#")) continue;
+    let value = match[2];
+    if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+      value = value.slice(1, -1);
+    }
+    values.set(match[1], value);
+  }
+  const config = { controlUrl: values.get("DMFLOW_BATCH_CONTROL_URL"),
+    batchToken: values.get("DMFLOW_BATCH_CONTROL_TOKEN"), publishableKey: values.get("DMFLOW_PUBLISHABLE_KEY") };
+  let endpoint;
+  try { endpoint = new URL(config.controlUrl ?? ""); } catch { throw new Error("Reelsflow batch-control URL is invalid"); }
+  if (endpoint.origin !== `https://${TARGET_REF}.supabase.co` ||
+      endpoint.pathname !== "/functions/v1/reels-batch-control" || endpoint.search || endpoint.hash ||
+      !config.batchToken || !config.publishableKey) {
+    throw new Error("Reelsflow upload signer is not configured for the target project");
+  }
+  return config;
+}
+
 async function main() {
   const commit = process.argv.includes("--commit");
   const vercelConfirmed = process.argv.includes("--vercel-crons-removed");
@@ -203,11 +287,16 @@ async function main() {
       return;
     }
 
+    const uploadCredentials = await loadBatchControlCredentials(reelsflowEnv);
     for (const row of rows) for (const asset of row.assets) {
       const cached = remoteAssets.find((item) => item.cardId === row.cardId && item.slide === asset.slide.name);
       if (!cached?.exists) {
-        runSupabase(["storage", "cp", "--linked", asset.slide.filePath, "ss:///" + BUCKET + "/" + asset.objectPath,
-          "--content-type", "image/png"], workdir);
+        const uploaded = await uploadApprovedSlide({ supabaseUrl: `https://${TARGET_REF}.supabase.co`,
+          publishableKey: uploadCredentials.publishableKey, objectPath: asset.objectPath, bytes: asset.slide.bytes,
+          signUpload: (path, contentType) => requestCarouselUploadSignature({ ...uploadCredentials, objectPath: path, contentType }) });
+        if (!uploaded.ok && !(await verifyRemoteSlide(asset.url, asset.slide.sha256)).exists) {
+          throw new Error(row.cardId + "/" + asset.slide.name + ": Storage upload failed with HTTP " + uploaded.status);
+        }
       }
       if (!(await verifyRemoteSlide(asset.url, asset.slide.sha256)).exists) {
         throw new Error(row.cardId + "/" + asset.slide.name + ": upload verification failed");
