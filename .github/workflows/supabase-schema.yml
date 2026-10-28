@@ -31,19 +31,25 @@ jobs:
           cat > "$project_dir/supabase/config.toml" <<'TOML'
           project_id = "zoknypleoribwomifzgi"
 
+          [api]
+          enabled = true
+          schemas = ["public", "dmflow"]
+          extra_search_path = ["public", "dmflow", "extensions"]
+          max_rows = 1000
+
           [db]
           major_version = 17
 
           [db.seed]
           enabled = false
           TOML
+          rm -f "$project_dir"/supabase/migrations/*.sql
           echo "SUPABASE_TEST_PROJECT=$project_dir" >> "$GITHUB_ENV"
       - name: Start disposable Supabase stack
         run: supabase --workdir "$SUPABASE_TEST_PROJECT" start -x studio,edge-runtime,logflare,vector
-      - name: Create legacy schema fixture
+      - name: Add ordered disposable migrations
         run: |
-          cat > "$RUNNER_TEMP/schema-fixture.sql" <<'SQL'
-          create extension if not exists pgtap with schema extensions;
+          cat > "$SUPABASE_TEST_PROJECT/supabase/migrations/20261027000000_legacy_schema_fixture.sql" <<'SQL'
           create schema if not exists dmflow;
           create table dmflow.accounts (
             id uuid primary key default gen_random_uuid(),
@@ -56,13 +62,14 @@ jobs:
             unique (slug, idx)
           );
           SQL
-          supabase --workdir "$SUPABASE_TEST_PROJECT" db query --local --file "$RUNNER_TEMP/schema-fixture.sql"
-      - name: Apply publishing migration to disposable database
-        run: supabase --workdir "$SUPABASE_TEST_PROJECT" db query --local --file "$GITHUB_WORKSPACE/supabase/migrations/20261028131021_centralize_instagram_publishing_state.sql"
+          cp "$GITHUB_WORKSPACE/supabase/migrations/20261028131021_centralize_instagram_publishing_state.sql" \
+            "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028131021_centralize_instagram_publishing_state.sql"
+      - name: Apply ordered migrations to disposable database
+        run: supabase --workdir "$SUPABASE_TEST_PROJECT" migration up --local
       - name: Check migration contract
         run: node --test tests/instagram-publishing-state.test.mjs
       - name: Run database contract tests
-        run: supabase --workdir "$SUPABASE_TEST_PROJECT" db query --local --file "$GITHUB_WORKSPACE/supabase/tests/instagram_publishing_state.test.sql"
+        run: supabase --workdir "$SUPABASE_TEST_PROJECT" test db --local "$GITHUB_WORKSPACE/supabase/tests/instagram_publishing_state.test.sql"
       - name: Stop disposable Supabase stack
         if: always()
         run: supabase --workdir "$SUPABASE_TEST_PROJECT" stop --no-backup

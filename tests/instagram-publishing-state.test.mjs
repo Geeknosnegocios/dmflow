@@ -69,14 +69,31 @@ test("publishing migration defines private queue, approval, idempotency, and no-
   assert.doesNotMatch(sql, /xhp\.|dblink|postgres_fdw/i, "migration must not query legacy XHP data");
 });
 
-test("schema CI applies one migration and its database test to a disposable local project", async () => {
+test("checked-in Supabase API config exposes the dmflow schema", async () => {
+  const apiConfig = await readFile(path.join(root, "supabase", "config.toml"), "utf8");
+  assert.match(apiConfig, /\[api\][\s\S]*?schemas\s*=\s*\[\s*"public"\s*,\s*"dmflow"\s*\]/i,
+    "the checked-in Supabase API must expose dmflow for local client requests");
+});
+
+test("schema CI mirrors the API config and applies ordered migrations and pgTAP locally", async () => {
+  const apiConfig = await readFile(path.join(root, "supabase", "config.toml"), "utf8");
   const workflow = await readFile(path.join(root, ".github", "workflows", "supabase-schema.yml"), "utf8");
 
+  const disposableConfig = workflow.match(/cat > "\$project_dir\/supabase\/config\.toml" <<'TOML'([\s\S]*?)TOML/)?.[1] ?? "";
+  assert.match(disposableConfig, /project_id\s*=\s*"zoknypleoribwomifzgi"[\s\S]*?\[api\][\s\S]*?schemas\s*=\s*\[\s*"public"\s*,\s*"dmflow"\s*\][\s\S]*?\[db\][\s\S]*?major_version\s*=\s*17/i,
+    "the disposable CI config must match the checked-in API schemas and PostgreSQL major");
+  assert.match(disposableConfig, /schemas\s*=\s*\[\s*"public"\s*,\s*"dmflow"\s*\]/i,
+    "the disposable CI API config must match the checked-in config");
+  assert.match(apiConfig, /schemas\s*=\s*\[\s*"public"\s*,\s*"dmflow"\s*\]/i);
   assert.match(workflow, /Prepare an empty temporary Supabase project[\s\S]*?mkdir -p [^\n]*supabase\/migrations/);
   assert.match(workflow, /Start disposable Supabase stack[\s\S]*?supabase --workdir "\$SUPABASE_TEST_PROJECT" start/);
-  assert.match(workflow, /Create legacy schema fixture[\s\S]*?supabase --workdir "\$SUPABASE_TEST_PROJECT" db query --local --file "\$RUNNER_TEMP\/schema-fixture\.sql"/);
-  assert.match(workflow, /Apply publishing migration to disposable database[\s\S]*?20261028131021_centralize_instagram_publishing_state\.sql/);
-  assert.match(workflow, /Run database contract tests[\s\S]*?supabase\/tests\/instagram_publishing_state\.test\.sql/);
-  assert.equal((workflow.match(/db query --local --file/g) ?? []).length, 3);
+  assert.match(workflow, /mkdir -p "?\$project_dir\/supabase\/migrations"?/);
+  assert.match(workflow, /(?:find\s+"?\$project_dir\/supabase\/migrations"?[^\n]*-type\s+f\s+-delete|rm\s+-f\s+"\$project_dir"\/supabase\/migrations\/\*\.sql)/i,
+    "the disposable migrations directory must be empty before ordered fixtures are added");
+  assert.match(workflow, /Add ordered disposable migrations[\s\S]*?20261027000000_legacy_schema_fixture\.sql[\s\S]*?20261028131021_centralize_instagram_publishing_state\.sql/,
+    "the empty temporary migration directory must receive the legacy fixture before the target migration");
+  assert.match(workflow, /Apply ordered migrations to disposable database[\s\S]*?supabase --workdir "\$SUPABASE_TEST_PROJECT" migration up --local/);
+  assert.match(workflow, /Run database contract tests[\s\S]*?supabase --workdir "\$SUPABASE_TEST_PROJECT" test db --local/);
+  assert.doesNotMatch(workflow, /db\s+query[^\n]*--file/i, "CI must not feed multi-statement migration SQL through db query --file");
   assert.doesNotMatch(workflow, /--linked|db push/i, "schema CI must not target a linked or remote project");
 });

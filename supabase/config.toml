@@ -2,8 +2,8 @@ project_id = "zoknypleoribwomifzgi"
 
 [api]
 enabled = true
-schemas = ["public"]
-extra_search_path = ["public", "extensions"]
+schemas = ["public", "dmflow"]
+extra_search_path = ["public", "dmflow", "extensions"]
 max_rows = 1000
 
 [db]
