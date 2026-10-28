@@ -38,6 +38,23 @@ test("verifies only the requested slide at the configured public carousel bucket
   }), /approved public storage path/i);
 });
 
+test("allows the exact W44 carousel paths and rejects other cards or slide indexes", async () => {
+  const path = "/storage/v1/object/public/dmflow-content/instagram/carousels/ANDREY-W44-2026-C01/slide-01-0123456789ab.png";
+  await verifyCarouselAsset({
+    imageUrl: `${storageUrl}${path}`, slideHash: pngHash, storageUrl,
+    fetchImpl: async () => imageResponse(),
+  });
+  for (const invalid of [
+    path.replace("ANDREY-W44-2026-C01", "ANDREY-W44-2026-C05"),
+    path.replace("slide-01", "slide-09"),
+  ]) {
+    await assert.rejects(() => verifyCarouselAsset({
+      imageUrl: `${storageUrl}${invalid}`, slideHash: pngHash, storageUrl,
+      fetchImpl: async () => { throw new Error("unapproved carousel path must be rejected before fetch"); },
+    }), /approved public storage path/i);
+  }
+});
+
 test("rejects redirects, oversized bodies, non-PNG content, and mismatched approved hashes", async () => {
   const verify = (responseFactory) => verifyCarouselAsset({
     imageUrl: urls[0], slideHash: pngHash, storageUrl,

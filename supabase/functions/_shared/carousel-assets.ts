@@ -1,6 +1,7 @@
 const MAX_SLIDE_BYTES = 10 * 1024 * 1024;
 const MAX_TOTAL_BYTES = 80 * 1024 * 1024;
-const BUCKET_PREFIX = "/storage/v1/object/public/dmflow-content/carrosseis/";
+const LEGACY_BUCKET_PREFIX = "/storage/v1/object/public/dmflow-content/carrosseis/";
+const APPROVED_W44_PATH = /^\/storage\/v1\/object\/public\/dmflow-content\/instagram\/carousels\/ANDREY-W44-2026-C0[1-4]\/slide-0[1-8]-[0-9a-f]{12}\.png$/;
 
 type CarouselAssetRow = {
   image_urls: string[];
@@ -17,10 +18,12 @@ export async function verifyCarouselAsset({ imageUrl, slideHash, storageUrl, fet
 }) {
   const url = new URL(imageUrl);
   const decodedPath = decodeURIComponent(url.pathname);
+  const allowedPath = (decodedPath.startsWith(LEGACY_BUCKET_PREFIX) && decodedPath.toLowerCase().endsWith(".png")) ||
+    APPROVED_W44_PATH.test(decodedPath);
   if (url.protocol !== "https:" || url.origin !== new URL(storageUrl).origin || url.username || url.password ||
       url.search || url.hash || /%2f|%5c/i.test(url.pathname) ||
       decodedPath.split("/").includes("..") || decodedPath.includes("\\") ||
-      !decodedPath.startsWith(BUCKET_PREFIX) || !decodedPath.toLowerCase().endsWith(".png")) {
+      !allowedPath) {
     throw new Error("Carousel slide is outside the approved public storage path");
   }
   if (!/^sha256:[0-9a-f]{64}$/.test(slideHash)) throw new Error("Carousel slide hash does not match approval");
