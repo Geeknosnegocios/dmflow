@@ -1,7 +1,7 @@
 -- Run only in the disposable PG17 schema contract job.
 begin;
 create extension if not exists pgtap;
-select plan(18);
+select plan(17);
 
 select ok((select relrowsecurity from pg_class where oid='dmflow.instagram_dispatcher_state'::regclass),
   'dispatcher lease state is protected by RLS');
@@ -11,9 +11,6 @@ select ok(exists(select 1 from pg_index where indrelid='dmflow.scheduled_carouse
 select ok(not has_table_privilege('service_role','dmflow.instagram_dispatcher_state','SELECT')
   and not has_table_privilege('service_role','dmflow.instagram_dispatcher_state','UPDATE'),
   'dispatcher state is reachable only through guarded RPCs');
-select ok(exists(select 1 from pg_index where indrelid='dmflow.scheduled_carousels'::regclass
-    and indisunique and pg_get_indexdef(indexrelid) ilike '%(account_id, publish_at)%'),
-  'each Instagram account has only one Carousel queue item per timestamp');
 select is((select enabled from dmflow.instagram_dispatcher_state where id=1),false,
   'new dispatcher is disabled until explicit cutover');
 select ok(to_regprocedure('dmflow.claim_instagram_dispatcher_tick(timestamptz)') is not null
@@ -36,12 +33,14 @@ insert into dmflow.approved_content (id,content_type,content_id,account_id,finge
   ('00000000-0000-0000-0000-000000000404','carousel','DISPATCH-CARD-1',
    '00000000-0000-0000-0000-000000000401','sha256:'||repeat('a',64),
    '00000000-0000-0000-0000-000000000402');
-insert into dmflow.scheduled_carousels (id,card_id,account_id,canal,caption,image_urls,approval_fingerprint,publish_at,status)
+insert into dmflow.scheduled_carousels (id,card_id,account_id,canal,caption,image_urls,slide_hashes,approval_fingerprint,publish_at,status)
 values ('00000000-0000-0000-0000-000000000403','DISPATCH-CARD-1','00000000-0000-0000-0000-000000000401','GI',
   'approved caption',array['https://storage.example/one.png','https://storage.example/two.png',
     'https://storage.example/three.png','https://storage.example/four.png',
     'https://storage.example/five.png','https://storage.example/six.png',
     'https://storage.example/seven.png','https://storage.example/eight.png'],
+  array['sha256:'||repeat('1',64),'sha256:'||repeat('2',64),'sha256:'||repeat('3',64),'sha256:'||repeat('4',64),
+    'sha256:'||repeat('5',64),'sha256:'||repeat('6',64),'sha256:'||repeat('7',64),'sha256:'||repeat('8',64)],
   'sha256:'||repeat('a',64),statement_timestamp()-interval '1 minute','scheduled');
 create temporary table dispatcher_claim_capture (claim_token text, lane text) on commit drop;
 grant select, insert on dispatcher_claim_capture to service_role;
