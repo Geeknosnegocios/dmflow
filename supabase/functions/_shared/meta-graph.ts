@@ -1,10 +1,19 @@
 type Fetcher = (input: string | URL, init?: RequestInit) => Promise<Response>;
+const DEFAULT_REQUEST_TIMEOUT_MS = 20_000;
 type Account = {
-  ig_business_id: string;
   ig_username: string | null;
   ig_access_token: string;
   ig_token_expires_at: string | null;
 };
+
+export function assertAuthorizedInstagramAccount({ active, ig_username }: {
+  active: boolean;
+  ig_username: string | null;
+}) {
+  if (active !== true || ig_username !== "andreyogeek") {
+    throw new Error("Instagram account is not active on the allowed publishing profile");
+  }
+}
 
 const headers = (token: string, json = false) => ({
   Authorization: `Bearer ${token}`,
@@ -18,13 +27,14 @@ async function readResponse(response: Response) {
   return result;
 }
 
-export async function resolveInstagramIdentity({ graphVersion, now, account, fetchImpl = fetch }: {
+export async function resolveInstagramIdentity({ graphVersion, now, account, fetchImpl = fetch, requestTimeoutMs = DEFAULT_REQUEST_TIMEOUT_MS }: {
   graphVersion: string;
   now: number;
   account: Account;
   fetchImpl?: Fetcher;
+  requestTimeoutMs?: number;
 }) {
-  if (!account.ig_business_id || !account.ig_access_token || !account.ig_username) {
+  if (!account.ig_access_token || !account.ig_username) {
     throw new Error("Instagram account identity is unavailable");
   }
   const expiresAt = Date.parse(account.ig_token_expires_at ?? "");
@@ -33,6 +43,7 @@ export async function resolveInstagramIdentity({ graphVersion, now, account, fet
   }
   const response = await fetchImpl(`https://graph.instagram.com/${graphVersion}/me?fields=id%2Cusername`, {
     headers: headers(account.ig_access_token),
+    signal: AbortSignal.timeout(requestTimeoutMs),
   });
   const identity = await readResponse(response);
   if (typeof identity.id !== "string" || !identity.id ||
@@ -43,16 +54,18 @@ export async function resolveInstagramIdentity({ graphVersion, now, account, fet
   return identity.id as string;
 }
 
-export function createMetaGraphClient({ graphVersion, accessToken, instagramUserId, fetchImpl = fetch }: {
+export function createMetaGraphClient({ graphVersion, accessToken, instagramUserId, fetchImpl = fetch, requestTimeoutMs = DEFAULT_REQUEST_TIMEOUT_MS }: {
   graphVersion: string;
   accessToken: string;
   instagramUserId: string;
   fetchImpl?: Fetcher;
+  requestTimeoutMs?: number;
 }) {
   const base = `https://graph.instagram.com/${graphVersion}`;
   const get = async (path: string, fields: string) => {
     const response = await fetchImpl(`${base}/${path}?fields=${encodeURIComponent(fields)}`, {
       headers: headers(accessToken),
+      signal: AbortSignal.timeout(requestTimeoutMs),
     });
     return readResponse(response);
   };
@@ -61,6 +74,7 @@ export function createMetaGraphClient({ graphVersion, accessToken, instagramUser
       method: "POST",
       headers: headers(accessToken, true),
       body: JSON.stringify(params),
+      signal: AbortSignal.timeout(requestTimeoutMs),
     });
     return readResponse(response);
   };

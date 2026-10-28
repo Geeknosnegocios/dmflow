@@ -1,7 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
-import { verifyCarouselAssets } from "../_shared/carousel-assets.ts";
+import { verifyCarouselAsset } from "../_shared/carousel-assets.ts";
 import { canonicalCarouselFingerprint, publishCarouselStep } from "../_shared/publishing-state.ts";
-import { createMetaGraphClient, resolveInstagramIdentity } from "../_shared/meta-graph.ts";
+import { assertAuthorizedInstagramAccount, createMetaGraphClient, resolveInstagramIdentity } from "../_shared/meta-graph.ts";
 
 const env = (name: string) => Deno.env.get(name) ?? "";
 const supabaseUrl = env("SUPABASE_URL");
@@ -62,13 +62,17 @@ Deno.serve(async (request) => {
   };
 
   const graph = {
-    async validateAssets(row: CarouselRow) {
-      await verifyCarouselAssets({ row, storageUrl: supabaseUrl });
+    async validateAsset(row: CarouselRow, index: number) {
+      const imageUrl = row.image_urls[index];
+      const slideHash = row.slide_hashes[index];
+      if (!imageUrl || !slideHash) throw new Error("Carousel slide URL or approved hash is missing");
+      await verifyCarouselAsset({ imageUrl, slideHash, storageUrl: supabaseUrl });
     },
     async forCarousel(row: CarouselRow) {
       const { data, error } = await supabase.schema("dmflow").from("accounts")
-        .select("ig_business_id,ig_username,ig_access_token,ig_token_expires_at").eq("id", row.account_id).single();
+        .select("active,ig_username,ig_access_token,ig_token_expires_at").eq("id", row.account_id).single();
       if (error || !data) throw new Error("Instagram account credentials are unavailable");
+      assertAuthorizedInstagramAccount(data);
       const instagramUserId = await resolveInstagramIdentity({ graphVersion, now: Date.now(), account: data });
       return createMetaGraphClient({ graphVersion, accessToken: data.ig_access_token, instagramUserId });
     },

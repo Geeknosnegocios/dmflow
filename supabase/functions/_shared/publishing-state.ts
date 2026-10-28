@@ -37,7 +37,7 @@ type GraphOperations = {
   getPermalink(id: string): Promise<string>;
 };
 type Graph = Partial<GraphOperations> & {
-  validateAssets?(row: Carousel): Promise<void>;
+  validateAsset?(row: Carousel, index: number): Promise<void>;
   forCarousel?(row: Carousel): Promise<GraphOperations>;
 };
 
@@ -102,19 +102,36 @@ export async function publishCarouselStep({ repository, graph, now }: {
   const claim = await repository.claimByCard(due.card_id, due.approval_fingerprint, now);
   if (!claim) return { status: "not_claimed" };
   const { row, claim_token: token } = claim;
+  try {
+    const claimedApproval = await repository.loadApproval(
+      row.card_id,
+      row.account_id,
+      "carousel",
+      row.approval_fingerprint,
+    );
+    const claimedFingerprint = await repository.canonicalApprovalFingerprint(row);
+    if (row.id !== due.id || row.card_id !== due.card_id || row.account_id !== due.account_id ||
+        row.approval_fingerprint !== due.approval_fingerprint || !claimedApproval ||
+        claimedApproval.approved === false || claimedApproval.revoked_at !== null ||
+        claimedApproval.fingerprint !== row.approval_fingerprint || claimedFingerprint !== row.approval_fingerprint) {
+      return reconcile(repository, row, token, "Claimed carousel no longer matches its active approval");
+    }
+  } catch {
+    return reconcile(repository, row, token, "Could not revalidate the claimed carousel approval");
+  }
   if (row.child_containers.length !== 8 || row.child_statuses.length !== 8) {
     return reconcile(repository, row, token, "Carousel container checkpoints must contain eight entries");
   }
+  const childIndex = row.child_containers.findIndex((id) => !id);
   let activeGraph: GraphOperations;
   try {
-    await graph.validateAssets?.(row);
+    if (childIndex >= 0) await graph.validateAsset?.(row, childIndex);
     activeGraph = graph.forCarousel ? await graph.forCarousel(row) : graph as GraphOperations;
   } catch (error) {
     const reason = error instanceof Error ? error.message : "Carousel validation failed";
     return reconcile(repository, row, token, reason);
   }
 
-  const childIndex = row.child_containers.findIndex((id) => !id);
   if (childIndex >= 0) {
     return externalStep(repository, () => activeGraph.createChild({
       index: childIndex,

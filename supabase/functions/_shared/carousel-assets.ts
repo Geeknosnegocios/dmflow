@@ -8,10 +8,45 @@ type CarouselAssetRow = {
 };
 type Fetcher = (input: string | URL, init?: RequestInit) => Promise<Response>;
 
-export async function verifyCarouselAssets({ row, storageUrl, fetchImpl = fetch }: {
+export async function verifyCarouselAsset({ imageUrl, slideHash, storageUrl, fetchImpl = fetch, requestTimeoutMs = 20_000 }: {
+  imageUrl: string;
+  slideHash: string;
+  storageUrl: string;
+  fetchImpl?: Fetcher;
+  requestTimeoutMs?: number;
+}) {
+  const url = new URL(imageUrl);
+  const decodedPath = decodeURIComponent(url.pathname);
+  if (url.protocol !== "https:" || url.origin !== new URL(storageUrl).origin || url.username || url.password ||
+      url.search || url.hash || /%2f|%5c/i.test(url.pathname) ||
+      decodedPath.split("/").includes("..") || decodedPath.includes("\\") ||
+      !decodedPath.startsWith(BUCKET_PREFIX) || !decodedPath.toLowerCase().endsWith(".png")) {
+    throw new Error("Carousel slide is outside the approved public storage path");
+  }
+  if (!/^sha256:[0-9a-f]{64}$/.test(slideHash)) throw new Error("Carousel slide hash does not match approval");
+
+  const response = await fetchImpl(url, {
+    method: "GET", redirect: "manual", signal: AbortSignal.timeout(requestTimeoutMs),
+  });
+  if (response.status >= 300 && response.status < 400) throw new Error("Carousel slide redirected");
+  if (!response.ok || !response.headers.get("content-type")?.toLowerCase().startsWith("image/png")) {
+    throw new Error("Carousel slide is not an accessible PNG");
+  }
+  const declaredLength = Number(response.headers.get("content-length") ?? 0);
+  if (declaredLength > MAX_SLIDE_BYTES) throw new Error("Carousel slide exceeds the size limit");
+  const bytes = await readBounded(response, MAX_SLIDE_BYTES);
+  if (!isPng(bytes)) throw new Error("Carousel slide has invalid PNG bytes");
+  const digest = await crypto.subtle.digest("SHA-256", bytes);
+  const fingerprint = `sha256:${Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, "0")).join("")}`;
+  if (fingerprint !== slideHash) throw new Error("Carousel slide hash does not match approval");
+  return bytes.byteLength;
+}
+
+export async function verifyCarouselAssets({ row, storageUrl, fetchImpl = fetch, requestTimeoutMs = 20_000 }: {
   row: CarouselAssetRow;
   storageUrl: string;
   fetchImpl?: Fetcher;
+  requestTimeoutMs?: number;
 }) {
   if (row.image_urls.length !== 8 || row.slide_hashes.length !== 8) {
     throw new Error("Carousel must contain eight approved slide assets");
@@ -19,31 +54,14 @@ export async function verifyCarouselAssets({ row, storageUrl, fetchImpl = fetch 
   const allowedOrigin = new URL(storageUrl).origin;
   let totalBytes = 0;
   for (let index = 0; index < row.image_urls.length; index += 1) {
-    const url = new URL(row.image_urls[index]);
-    const decodedPath = decodeURIComponent(url.pathname);
-    if (url.protocol !== "https:" || url.origin !== allowedOrigin || url.username || url.password ||
-        url.search || url.hash || /%2f|%5c/i.test(url.pathname) ||
-        decodedPath.split("/").includes("..") || decodedPath.includes("\\") ||
-        !decodedPath.startsWith(BUCKET_PREFIX) || !decodedPath.toLowerCase().endsWith(".png")) {
-      throw new Error(`Carousel slide ${index + 1} is outside the approved public storage path`);
-    }
-
-    const response = await fetchImpl(url, { method: "GET", redirect: "manual" });
-    if (response.status >= 300 && response.status < 400) {
-      throw new Error(`Carousel slide ${index + 1} redirected`);
-    }
-    if (!response.ok || !response.headers.get("content-type")?.toLowerCase().startsWith("image/png")) {
-      throw new Error(`Carousel slide ${index + 1} is not an accessible PNG`);
-    }
-    const declaredLength = Number(response.headers.get("content-length") ?? 0);
-    if (declaredLength > MAX_SLIDE_BYTES) throw new Error(`Carousel slide ${index + 1} exceeds the size limit`);
-    const bytes = await readBounded(response, MAX_SLIDE_BYTES);
-    if (!isPng(bytes)) throw new Error(`Carousel slide ${index + 1} has invalid PNG bytes`);
-    totalBytes += bytes.byteLength;
+    totalBytes += await verifyCarouselAsset({
+      imageUrl: row.image_urls[index],
+      slideHash: row.slide_hashes[index],
+      storageUrl: allowedOrigin,
+      fetchImpl,
+      requestTimeoutMs,
+    });
     if (totalBytes > MAX_TOTAL_BYTES) throw new Error("Carousel assets exceed the total size limit");
-    const digest = await crypto.subtle.digest("SHA-256", bytes);
-    const fingerprint = `sha256:${Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, "0")).join("")}`;
-    if (fingerprint !== row.slide_hashes[index]) throw new Error(`Carousel slide ${index + 1} hash does not match approval`);
   }
 }
 

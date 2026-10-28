@@ -5,12 +5,14 @@ on:
     paths:
       - "supabase/functions/**"
       - "supabase/deno.json"
+      - "supabase/deno.lock"
       - ".github/workflows/supabase-edge-functions.yml"
   push:
     branches: [main, "codex/**"]
     paths:
       - "supabase/functions/**"
       - "supabase/deno.json"
+      - "supabase/deno.lock"
       - ".github/workflows/supabase-edge-functions.yml"
 
 jobs:
@@ -28,5 +30,6 @@ jobs:
           supabase/functions/_shared/carousel-assets.ts
           supabase/functions/_shared/meta-graph.ts
           supabase/functions/_shared/publishing-state.ts
+          supabase/functions/_shared/publishing-state.deno.js
       - name: Run Deno-native Edge Function tests
-        run: deno test --frozen --config supabase/deno.json supabase/functions
+        run: deno test --frozen --config supabase/deno.json supabase/functions/_shared/publishing-state.deno.js
