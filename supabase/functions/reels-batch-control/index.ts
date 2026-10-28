@@ -1,5 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
-import { createReelsBatchControlHandler } from "./handler.ts";
+import { createReelsBatchControlHandler, type BatchRepository, type ExistingRow } from "./handler.ts";
 
 const env = (name: string) => Deno.env.get(name) ?? "";
 const config = {
@@ -9,8 +9,8 @@ const config = {
   batchTokenSha256: env("REELS_BATCH_TOKEN_SHA256"),
 };
 
-function repository() {
-  const client = createClient(config.supabaseUrl, config.serviceRoleKey, {
+function repository(): BatchRepository {
+  const client: any = createClient(config.supabaseUrl, config.serviceRoleKey, {
     db: { schema: "dmflow" }, auth: { persistSession: false, autoRefreshToken: false },
   });
   const table = () => client.schema("dmflow").from("scheduled_reels");
@@ -43,7 +43,7 @@ function repository() {
         "slug,idx,status,publish_state,story_status,story_publish_state,scheduled_unix,post_id,permalink,published_at,cover_url,story_url,story_post_id,story_published_at,error,story_error",
       ).eq("slug", sourceVideoId).gte("scheduled_unix", start).lt("scheduled_unix", end).order("idx").limit(10);
       if (error) throw error;
-      return data ?? [];
+      return (data ?? []) as unknown as ExistingRow[];
     },
     async signUpload(path: string, _contentType: string) {
       const { data, error } = await client.storage.from("dmflow-content").createSignedUploadUrl(path, { upsert: false });
@@ -60,7 +60,7 @@ function repository() {
       const { data, error } = await table().select(fields).eq("slug", source).order("idx").limit(100);
       if (error) throw error;
       if ((data ?? []).length >= 100) throw new Error("Source Reel history exceeded safe validation limit");
-      return data ?? [];
+      return (data ?? []) as unknown as ExistingRow[];
     },
     async listRowsByDay(_accountId: string, start: number, end: number) {
       const { data, error } = await table().select(fields).gte("scheduled_unix", start).lt("scheduled_unix", end)

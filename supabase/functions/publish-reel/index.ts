@@ -1,6 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 import { assertAuthorizedInstagramAccount, resolveInstagramIdentity } from "../_shared/meta-graph.ts";
-import { publishReelStep, publishStoryStep, publishReelMetadataStep, type ReelRow } from "../_shared/reel-publishing.ts";
+import { publishReelStep, publishStoryStep, publishReelMetadataStep, type ReelRow, type Graph } from "../_shared/reel-publishing.ts";
 import { verifyReelAssets, verifyStoryAsset } from "./media.ts";
 import { createReelGraphClient } from "./graph.ts";
 
@@ -12,7 +12,7 @@ const graphVersion = /^v\d+\.\d+$/.test(configuredGraphVersion) ? configuredGrap
 const isRecord = (value: unknown): value is Record<string, any> =>
   typeof value === "object" && value !== null && !Array.isArray(value);
 
-function repository(supabase: ReturnType<typeof createClient>) {
+function repository(supabase: any) {
   const table = () => supabase.schema("dmflow").from("scheduled_reels");
   async function loadApproval(contentType: "reel" | "reel_story", contentId: string, accountId: string, fingerprint: string) {
     const { data, error } = await supabase.schema("dmflow").from("approved_content")
@@ -133,7 +133,7 @@ Deno.serve(async (request) => {
     mode = payload.mode;
   } catch { return new Response("Invalid request", { status: 400 }); }
 
-  const supabase = createClient(supabaseUrl, serviceKey, { auth: { persistSession: false } });
+  const supabase: any = createClient(supabaseUrl, serviceKey, { auth: { persistSession: false } });
   const repo = repository(supabase);
   try { await repo.recoverExpired(Date.now()); }
   catch { return new Response("Publishing recovery failed; no Graph call was made", { status: 503 }); }
@@ -148,9 +148,11 @@ Deno.serve(async (request) => {
     assertAuthorizedInstagramAccount({ active: account.active, ig_username: account.ig_username });
     const identity = await resolveInstagramIdentity({ graphVersion, now: Date.now(), account });
     if (identity !== account.ig_business_id) return new Response("Instagram identity does not match the account", { status: 503 });
-    const graph = createReelGraphClient({ graphVersion, accessToken: account.ig_access_token, instagramUserId: identity });
-    graph.validateReel = async (row) => verifyReelAssets(row, supabaseUrl);
-    graph.validateStory = async (row) => verifyStoryAsset(row, supabaseUrl);
+    const graph: Graph = {
+      ...createReelGraphClient({ graphVersion, accessToken: account.ig_access_token, instagramUserId: identity }),
+      validateReel: async (row) => verifyReelAssets(row, supabaseUrl),
+      validateStory: async (row) => verifyStoryAsset(row, supabaseUrl),
+    };
     const now = Date.now();
     const result = mode === "reel"
       ? await publishReelStep({ repository: repo, graph, now })

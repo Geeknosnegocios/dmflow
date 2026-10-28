@@ -82,7 +82,11 @@ test("stalled asset fetches time out before a Graph child create", async () => {
         imageUrl: candidate.image_urls[index], slideHash: candidate.slide_hashes[index],
         storageUrl, requestTimeoutMs: 5,
         fetchImpl: async (_url, init) => new Promise((_resolve, reject) => {
-          init.signal.addEventListener("abort", () => reject(init.signal.reason), { once: true });
+          const keepEventLoopAlive = setTimeout(() => reject(new Error("test fetch should be aborted first")), 100);
+          init.signal.addEventListener("abort", () => {
+            clearTimeout(keepEventLoopAlive);
+            reject(init.signal.reason);
+          }, { once: true });
         }),
       });
     },

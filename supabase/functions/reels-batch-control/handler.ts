@@ -12,14 +12,14 @@ const SHA_PREFIX = "sha256:";
 export type BatchControlAccount = { id: string; owner_user_id: string; active: boolean; ig_username: string };
 export type BatchApprovalRecord = { id: string; content_type: string; content_id: string; account_id: string; fingerprint: string; approved_by: string; revoked_at: string | null };
 export type BatchApprovalInput = { content_type: string; content_id: string; account_id: string; fingerprint: string; approved_by: string };
-type ExistingRow = Record<string, unknown> & {
+export type ExistingRow = Record<string, unknown> & {
   id: string;
   slug: string;
   idx: number;
   scheduled_unix: number;
   status: string;
 };
-type BatchRepository = {
+export type BatchRepository = {
   listSlugs(): Promise<unknown[]>;
   verifyBatch(date: string, sourceVideoId: string): Promise<unknown[]>;
   signUpload(path: string, contentType: string): Promise<{ signedUrl: string; token: string }>;
@@ -162,7 +162,7 @@ function validateUploadPath(path: unknown, contentType: unknown, nowMs: number) 
   return { date, sourceVideoId: source, idx, scheduledUnix: scheduled, path, contentType };
 }
 
-function expectedAssetUrls(item: Record<string, unknown>, date: string, source: string, idx: number, config: BatchControlConfig) {
+function expectedAssetUrls(item: Record<string, unknown>, date: string, source: string, idx: number, config: Pick<BatchControlConfig, "supabaseUrl">) {
   for (const field of ["video_url", "cover_url", "story_url"] as const) {
     if (typeof item[field] !== "string") throw new ControlError(400, `Reel ${idx}: ${field} inválida`);
   }
@@ -295,6 +295,9 @@ export async function prepareReelBatch(
       approval_fingerprint: "", story_approval_fingerprint: "", container_id: null, container_status: null,
       post_id: null, published_at: null, permalink: null, story_container_id: null, story_container_status: null,
       story_post_id: null, story_published_at: null, story_permalink: null,
+      metadata_status: "pending", metadata_claim_token: null, metadata_lease_until: null,
+      metadata_error: null, provider_published_at: null, action_kind: null, action_started_at: null,
+      story_action_kind: null, story_action_started_at: null,
     };
     const reelFingerprint = await canonicalReelFingerprint(reelBase);
     reelBase.approval_fingerprint = reelFingerprint;

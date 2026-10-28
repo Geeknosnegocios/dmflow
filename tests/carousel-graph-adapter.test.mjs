@@ -82,7 +82,11 @@ test("Graph requests have a bounded timeout signal", async () => {
     fetchImpl: async (_url, init = {}) => {
       assert.ok(init.signal instanceof AbortSignal, "Graph requests must have an abort deadline");
       return new Promise((_resolve, reject) => {
-        init.signal.addEventListener("abort", () => reject(init.signal.reason), { once: true });
+        const keepEventLoopAlive = setTimeout(() => reject(new Error("test fetch should be aborted first")), 100);
+        init.signal.addEventListener("abort", () => {
+          clearTimeout(keepEventLoopAlive);
+          reject(init.signal.reason);
+        }, { once: true });
       });
     },
   });

@@ -63,7 +63,7 @@ type Repository = {
   reconcileMetadata(id: string, token: string, reason: string): Promise<void>;
 };
 
-type Graph = {
+export type Graph = {
   validateReel?(row: ReelRow): Promise<void>;
   validateStory?(row: ReelRow): Promise<void>;
   createReel(row: ReelRow): Promise<{ id: string }>;
@@ -154,7 +154,7 @@ async function handleReelStep<T>(repository: Repository, row: ReelRow, token: st
   if (!await repository.beginAction(row.id, "reel", token, action, now)) throw new Error("Reel claim ended before Graph phase checkpoint");
   try {
     const result = await graphCall();
-    const patch = { claim_token: null, lease_until: null, action_kind: null, action_started_at: null, ...checkpoint(result) };
+    const patch: Record<string, unknown> = { claim_token: null, lease_until: null, action_kind: null, action_started_at: null, ...checkpoint(result) };
     await repository.checkpointReel(row.id, token, scheduled(patch));
     return { status: patch.publish_state === "published" ? "published" as const : "pending" as const };
   } catch (error) {
