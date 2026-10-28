@@ -117,6 +117,13 @@ async function requireBatchToken(envPath, workdir) {
   if (!rawToken) throw new Error("The Reelsflow batch token is absent from the supplied env file");
   const localHash = createHash("sha256").update(rawToken).digest("hex");
 
+  const configuredSecrets = parseJsonOutput(
+    run("supabase", ["secrets", "list", "--project-ref", TARGET_REF, "--output-format", "json"]),
+    "Edge secret preflight",
+  ).secrets ?? [];
+  const configuredHash = configuredSecrets.find((secret) => secret.name === "REELS_BATCH_TOKEN_SHA256")?.value;
+  if (typeof configuredHash === "string" && configuredHash.toLowerCase() === localHash) return localHash;
+
   run("supabase", ["functions", "download", "reels-batch-control", "--project-ref", TARGET_REF,
     "--use-api", "--workdir", workdir]);
   const functionSource = await readFile(path.join(workdir, "supabase", "functions", "reels-batch-control", "index.ts"), "utf8");
