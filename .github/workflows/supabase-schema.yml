@@ -64,6 +64,8 @@ jobs:
           SQL
           cp "$GITHUB_WORKSPACE/supabase/migrations/20261028131021_centralize_instagram_publishing_state.sql" \
             "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028131021_centralize_instagram_publishing_state.sql"
+          cp "$GITHUB_WORKSPACE/supabase/migrations/20261028141950_carousel_parent_checkpoint.sql" \
+            "$SUPABASE_TEST_PROJECT/supabase/migrations/20261028141950_carousel_parent_checkpoint.sql"
       - name: Apply ordered migrations to disposable database
         run: supabase --workdir "$SUPABASE_TEST_PROJECT" migration up --local
       - name: Check migration contract
