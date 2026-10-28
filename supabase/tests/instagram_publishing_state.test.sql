@@ -174,7 +174,7 @@ insert into dmflow.scheduled_carousels (
   'CARD-DEFAULT', '00000000-0000-0000-0000-000000000001', 'instagram', 'fixture caption',
   array['https://storage.invalid/1.png','https://storage.invalid/2.png','https://storage.invalid/3.png','https://storage.invalid/4.png',
         'https://storage.invalid/5.png','https://storage.invalid/6.png','https://storage.invalid/7.png','https://storage.invalid/8.png'],
-  array['h1','h2','h3','h4','h5','h6','h7','h8'], 'fp-default', '2026-10-29 13:06:00+00'
+  array['h1','h2','h3','h4','h5','h6','h7','h8'], 'fp-default', '2026-10-29 12:06:00+00'
 );
 select is(
   (select cardinality(slide_container_ids) = 8
@@ -200,11 +200,11 @@ insert into dmflow.scheduled_carousels (
   ('CARD-MISSING', '00000000-0000-0000-0000-000000000001', 'instagram', 'fixture caption',
    array['https://storage.invalid/1.png','https://storage.invalid/2.png','https://storage.invalid/3.png','https://storage.invalid/4.png',
          'https://storage.invalid/5.png','https://storage.invalid/6.png','https://storage.invalid/7.png','https://storage.invalid/8.png'],
-   array['h1','h2','h3','h4','h5','h6','h7','h8'], 'fp-missing', '2026-10-29 13:06:00+00', 'scheduled'),
+   array['h1','h2','h3','h4','h5','h6','h7','h8'], 'fp-missing', '2026-10-29 14:06:00+00', 'scheduled'),
   ('CARD-REVOKED', '00000000-0000-0000-0000-000000000001', 'instagram', 'fixture caption',
    array['https://storage.invalid/1.png','https://storage.invalid/2.png','https://storage.invalid/3.png','https://storage.invalid/4.png',
          'https://storage.invalid/5.png','https://storage.invalid/6.png','https://storage.invalid/7.png','https://storage.invalid/8.png'],
-   array['h1','h2','h3','h4','h5','h6','h7','h8'], 'fp-revoked', '2026-10-29 13:06:00+00', 'scheduled');
+   array['h1','h2','h3','h4','h5','h6','h7','h8'], 'fp-revoked', '2026-10-29 15:06:00+00', 'scheduled');
 select is((select count(*)::integer from dmflow.claim_carousel_by_card('CARD-LIVE', 'fp-live', '2030-01-01 00:00:00+00')), 1,
   'claim succeeds for the exact card and active matching approval');
 select is((select count(*)::integer from dmflow.claim_carousel_by_card('CARD-MISSING', 'fp-missing', '2030-01-01 00:00:00+00')), 0,
