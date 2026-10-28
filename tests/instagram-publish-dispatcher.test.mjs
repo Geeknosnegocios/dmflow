@@ -86,6 +86,17 @@ test("worker errors are sanitized and the lease is still released", async () => 
   assert.equal(body.includes("sensitive upstream detail"), false);
 });
 
+test("worker reconciliation requests are surfaced as failed dispatcher outcomes", async () => {
+  const response = await createInstagramPublishDispatcher({ config,
+    repository: { async claim() { return { claim_token: "lease", lane: "reel_story" }; }, async release() { return true; } },
+    fetchImpl: async () => Response.json({ status: "needs_reconciliation" }),
+  })(makeRequest());
+  assert.equal(response.status, 502);
+  assert.deepEqual(await response.json(), {
+    ok: false, lane: "reel_story", status: "needs_reconciliation", http_status: 200,
+  });
+});
+
 test("dispatcher refuses a stale lease release", async () => {
   const response = await createInstagramPublishDispatcher({ config,
     repository: { async claim() { return { claim_token: "lease", lane: "carousel" }; }, async release() { return false; } },

@@ -90,7 +90,8 @@ export function createInstagramPublishDispatcher({ config, repository, fetchImpl
     } catch {
       return json({ ...result, ok: false, status: "release_failed", lane: claim.lane }, 503);
     }
-    const ok = result.http_status >= 200 && result.http_status < 300;
+    const successfulWorkerStates = ["published", "pending", "metadata_pending", "not_claimed", "not_eligible"];
+    const ok = result.http_status >= 200 && result.http_status < 300 && successfulWorkerStates.includes(result.status);
     return json({ ok, lane: claim.lane, ...result }, ok ? 200 : 502);
   };
 }

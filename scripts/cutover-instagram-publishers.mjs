@@ -312,13 +312,15 @@ async function assertTargetQueueIdle(targetWorkdir) {
   }
 }
 
-async function setupDispatcherSecretAndCron(targetWorkdir, token) {
+async function setupDispatcherSecretAndCron(targetWorkdir, token, apiKey) {
   const secretName = "instagram_dispatcher_token";
+  const apiKeySecretName = "instagram_dispatcher_apikey";
   const sqlFile = path.join(targetWorkdir, "supabase", ".cutover-dispatcher-secret.sql");
   const cronCommand = `select net.http_post(\n` +
     `  url := (select decrypted_secret from vault.decrypted_secrets where name = 'SUPABASE_URL') || '/functions/v1/instagram-publish-dispatcher',\n` +
-    `  headers := jsonb_build_object('Content-Type','application/json','x-instagram-dispatcher-token',\n` +
-    `    (select decrypted_secret from vault.decrypted_secrets where name = '${secretName}')),\n` +
+    `  headers := jsonb_build_object('Content-Type','application/json',\n` +
+    `    'apikey',(select decrypted_secret from vault.decrypted_secrets where name = '${apiKeySecretName}'),\n` +
+    `    'x-instagram-dispatcher-token',(select decrypted_secret from vault.decrypted_secrets where name = '${secretName}')),\n` +
     `  body := '{}'::jsonb\n` +
     `);`;
   const sql = `begin;\n` +
@@ -326,6 +328,9 @@ async function setupDispatcherSecretAndCron(targetWorkdir, token) {
     `  select id into v_id from vault.secrets where name = '${secretName}' limit 1;\n` +
     `  if v_id is null then perform vault.create_secret('${token}', '${secretName}', 'Internal cron credential for the Instagram dispatcher');\n` +
     `  else perform vault.update_secret(v_id, '${token}', '${secretName}', 'Internal cron credential for the Instagram dispatcher'); end if;\n` +
+    `  select id into v_id from vault.secrets where name = '${apiKeySecretName}' limit 1;\n` +
+    `  if v_id is null then perform vault.create_secret('${apiKey}', '${apiKeySecretName}', 'Publishable project key for cron gateway routing');\n` +
+    `  else perform vault.update_secret(v_id, '${apiKey}', '${apiKeySecretName}', 'Publishable project key for cron gateway routing'); end if;\n` +
     `end $cutover$;\n` +
     `select cron.schedule('${DISPATCHER_JOB}', '* * * * *', ${sqlLiteral(cronCommand)});\n` +
     `do $cutover$ begin if not dmflow.set_instagram_dispatcher_enabled(true, statement_timestamp()) then raise exception 'dispatcher enable rejected'; end if; end $cutover$;\n` +
@@ -424,12 +429,18 @@ async function main() {
     }
 
     const secretNamesOutput = run("supabase", ["secrets", "list", "--project-ref", TARGET_REF, "--output-format", "json"]);
-    const secretNames = parseJsonOutput(secretNamesOutput, "Edge secret preflight").secrets.map((secret) => secret.name);
+    const edgeSecrets = parseJsonOutput(secretNamesOutput, "Edge secret preflight").secrets;
+    const secretNames = edgeSecrets.map((secret) => secret.name);
     for (const required of ["SUPABASE_URL", "SUPABASE_SERVICE_ROLE_KEY"]) {
       if (!secretNames.includes(required)) throw new Error(`Missing required existing Edge secret: ${required}`);
     }
     if (!secretNames.includes("SUPABASE_PUBLISHABLE_KEY") && !secretNames.includes("SUPABASE_ANON_KEY")) {
       throw new Error("Missing the existing publishable/anon API key required by the batch controller");
+    }
+    const dispatchApiKey = edgeSecrets.find((secret) => secret.name === "SUPABASE_PUBLISHABLE_KEY")?.value ??
+      edgeSecrets.find((secret) => secret.name === "SUPABASE_ANON_KEY")?.value;
+    if (typeof dispatchApiKey !== "string" || !dispatchApiKey) {
+      throw new Error("Could not read a publishable/anon key for the dispatcher request header");
     }
 
     await applyTrackedInstagramMigrations(targetWorkdir);
@@ -448,7 +459,7 @@ async function main() {
     }
 
     await stageLegacyPublishersOff(xhpWorkdir, targetWorkdir);
-    await setupDispatcherSecretAndCron(targetWorkdir, dispatcherToken);
+    await setupDispatcherSecretAndCron(targetWorkdir, dispatcherToken, dispatchApiKey);
     const finalReport = await readPreflight(targetWorkdir, xhpWorkdir, true);
     if (Number(finalReport.target.active_story_jobs) !== 5 || Number(finalReport.target.active_legacy_target_jobs) !== 0 ||
         Number(finalReport.target.active_dispatcher_jobs) !== 1 || finalReport.target.dispatcher_enabled !== true ||
