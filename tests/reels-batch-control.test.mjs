@@ -206,6 +206,7 @@ test("schedule-batch requires exact preapproved hashes and inserts three rows wi
   assert.equal(state.writes.approvals, 0);
   assert.equal(state.writes.rows, 1);
   assert.equal(state.approvals.length, 6);
+  assert.ok(state.rows.every(row => row.id && row.id !== "pending"));
   assert.ok(state.approvals.every((row) => row.approved_by === ownerId));
   assert.ok(state.approvals.every((row) => /^sha256:[0-9a-f]{64}$/.test(row.fingerprint)));
   assert.equal(new Set(state.approvals.map((row) => `${row.content_type}:${row.content_id}`)).size, 6);
@@ -232,6 +233,7 @@ test("schedule-sequence propagates all six owner approvals and inserts one Reel 
     Date.parse(`${date}T12:00:00-03:00`) / 1000));
   assert.ok(state.rows.every(row => row.approved_content_id && row.story_approved_content_id));
   assert.ok(state.rows.every(row => row.approval_fingerprint && row.story_approval_fingerprint));
+  assert.ok(state.rows.every(row => row.id && row.id !== "pending"));
   assert.equal(state.writes.approvals, 0);
   assert.equal(state.writes.rows, 1);
   const repeated = await handler(request(payload));

@@ -21,8 +21,8 @@
 
 - `app/api/v1/reels/approve-batch/handler.ts`: validate legacy or sequence schedule and derive approval fingerprints.
 - `tests/reels-approval-endpoint.test.mjs`: sequence approval, date/time validation, ownership, and idempotency.
-- `supabase/functions/reels-batch-control/handler.ts`: validate exact approval records for `schedule-sequence` and add their fingerprints/IDs to queue rows.
-- `tests/reels-batch-control.test.mjs`: approval propagation, daily caps, fail-closed behavior, and sequence idempotency.
+- `supabase/functions/reels-batch-control/handler.ts`: validate exact approval records for `schedule-sequence`, add their fingerprints/IDs, omit the local UUID placeholder, and log redacted internal errors.
+- `tests/reels-batch-control.test.mjs`: approval propagation, sequence idempotency, UUID defaults, daily caps, fail-closed behavior, and redacted diagnostics.
 - `C:/Users/freit/Documents/ChatGPT/Instagram/Reelsflow/scripts/schedule-batch.mjs`: fail before upload without owner auth; call preflight, approval, then scheduler.
 - `C:/Users/freit/Documents/ChatGPT/Instagram/Reelsflow/scripts/schedule-batch.test.mjs`: fail-fast behavior when owner auth is missing.
 
@@ -32,6 +32,6 @@
 - [x] Implement sequence schedule derivation in the owner approval handler; keep canonical fingerprints aligned with `scheduled_reels`.
 - [x] Update the Supabase sequence scheduler to require all six immutable approvals and carry their IDs/fingerprints into queue inserts.
 - [x] Integrate Reelsflow preflight, server approval, and scheduler calls; fail before upload if the owner API key is absent.
-- [x] Run the DMFlow suite (92 tests), Reelsflow scheduler tests, and production build.
-- [x] Deploy the DMFlow approval handler and verify owner preflight through `https://dmflow.vercel.app`.
+- [x] Run the DMFlow suite (93 tests), Reelsflow scheduler tests, and production build.
+- [x] Deploy the DMFlow API and Supabase Edge Function (v23); verify owner preflight through `https://dmflow.vercel.app`.
 - [ ] Schedule the approved cuts for 30/10, 31/10 and 01/11 at 12:00 BRT, then verify all three queue rows.

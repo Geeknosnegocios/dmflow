@@ -419,7 +419,10 @@ async function scheduleBatch(body: Record<string, any>, deps: HandlerDependencie
     if (!reelApproval || !storyApproval || reelApproval.revoked_at !== null || storyApproval.revoked_at !== null) {
       throw new ControlError(500, "aprovação aprovada incompleta; fila não gravada");
     }
-    return { ...row, approved_content_id: reelApproval.id, story_approved_content_id: storyApproval.id };
+    const queueRow: Record<string, unknown> = { ...row };
+    // prepareReelBatch uses a local placeholder while calculating fingerprints; PostgreSQL owns the UUID primary key.
+    delete queueRow.id;
+    return { ...queueRow, approved_content_id: reelApproval.id, story_approved_content_id: storyApproval.id };
   });
   const insertedRows = await repository.insertScheduledRows(queueRows);
   if (insertedRows.length !== 3) throw new ControlError(500, "fila não confirmou os três Reels");
