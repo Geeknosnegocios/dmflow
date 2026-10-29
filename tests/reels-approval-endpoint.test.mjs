@@ -13,16 +13,20 @@ const apiKey = "dmf_test-owner-api-key";
 const sha = (bytes) => `sha256:${createHash("sha256").update(bytes).digest("hex")}`;
 function mp4(seed) { const b = Buffer.alloc(100_256, seed); b[4]=0x66;b[5]=0x74;b[6]=0x79;b[7]=0x70;return b; }
 function jpg(seed) { const b=Buffer.alloc(2048,seed);b[0]=0xff;b[1]=0xd8;b[2]=0xff;return b; }
-function item(idx) {
+function item(idx, date = "2026-10-29") {
   const video=mp4(idx), cover=jpg(idx+10), story=mp4(idx+20);
-  const stem=`reels/2026-10-29/B07no8JWSvo/reel-0${idx}-${sha(video).slice(7,19)}`;
+  const stem=`reels/${date}/B07no8JWSvo/reel-0${idx}-${sha(video).slice(7,19)}`;
   return { idx, caption:`Reviewed caption ${idx}`,
     video_url:`${base}/storage/v1/object/public/dmflow-content/${stem}.mp4`,
     cover_url:`${base}/storage/v1/object/public/dmflow-content/${stem}-cover.jpg`,
     story_url:`${base}/storage/v1/object/public/dmflow-content/${stem}-story.mp4`,
     caller_fingerprint:"forged", caller_approved_by:"forged-owner", __assets:{video,cover,story} };
 }
-function payload() { return { date:"2026-10-29", sourceVideoId:"B07no8JWSvo", channel:"GI", account:"andreyogeek", items:[1,2,3].map(item) }; }
+function payload() { return { date:"2026-10-29", sourceVideoId:"B07no8JWSvo", channel:"GI", account:"andreyogeek", items:[1,2,3].map(idx=>item(idx)) }; }
+function sequencePayload(dates=["2026-10-29","2026-10-30","2026-11-01"],time="12:00") {
+  return { dates, time, sourceVideoId:"B07no8JWSvo", channel:"GI", account:"andreyogeek",
+    items:dates.map((date,index)=>item(index+1,date)) };
+}
 function request(body) {
   const clean={...body,items:body.items.map(({__assets,...i})=>i)};
   return new Request("https://dmflow.geekacademy.site/api/v1/reels/approve-batch",{
@@ -77,6 +81,13 @@ test("approval endpoint binds verified API key user to active account owner befo
   assert.equal(res.status,403);assert.equal(fetches,0);assert.equal(state.writes,0);
 });
 
+test("owner preflight verifies the active account without reading media or creating approvals", async()=>{
+  const body={action:"preflight",items:[]};const {repository,state}=makeRepo();let fetches=0;
+  const res=await handler(repository,body,{fetchImpl:async()=>{fetches++;return new Response();}})(request(body));
+  assert.equal(res.status,200);assert.deepEqual(await res.json(),{ok:true});
+  assert.equal(fetches,0);assert.equal(state.writes,0);
+});
+
 test("explicit owner endpoint computes immutable Reel and Story fingerprints and ignores caller approver/fingerprint", async()=>{
   const body=payload();body.approved_by="forged";body.fingerprints=["forged"];
   const {repository,state}=makeRepo();
@@ -99,6 +110,41 @@ test("explicit owner endpoint computes immutable Reel and Story fingerprints and
     assert.equal(state.approvals.find(a=>a.content_type==="reel_story"&&a.content_id===`${body.sourceVideoId}:${cut.idx}`).fingerprint,
       await canonicalStoryFingerprint({...record,approval_fingerprint:reelFingerprint}));
   }
+});
+
+test("sequence approval binds each Reel and Story to its own date and shared BRT time", async()=>{
+  const body=sequencePayload(),{repository,state}=makeRepo();
+  const res=await handler(repository,body)(request(body));
+  const result=await res.json();
+  assert.equal(res.status,200,JSON.stringify(result));assert.equal(result.count,3);
+  assert.equal(state.writes,1);assert.equal(state.approvals.length,6);
+  for(const cut of body.items){
+    const scheduled=Date.parse(`${body.dates[cut.idx-1]}T${body.time}:00-03:00`)/1000;
+    const record={account_id:accountId,slug:body.sourceVideoId,idx:cut.idx,canal:body.channel,
+      video_url:cut.video_url,video_sha256:sha(cut.__assets.video),cover_url:cut.cover_url,
+      cover_sha256:sha(cut.__assets.cover),story_url:cut.story_url,story_sha256:sha(cut.__assets.story),
+      caption:cut.caption,scheduled_unix:scheduled};
+    const reelFingerprint=await canonicalReelFingerprint(record);
+    assert.equal(state.approvals.find(a=>a.content_type==="reel"&&a.content_id===`${body.sourceVideoId}:${cut.idx}`).fingerprint,reelFingerprint);
+    assert.equal(state.approvals.find(a=>a.content_type==="reel_story"&&a.content_id===`${body.sourceVideoId}:${cut.idx}`).fingerprint,
+      await canonicalStoryFingerprint({...record,approval_fingerprint:reelFingerprint}));
+  }
+  const again=await handler(repository,body)(request(body));
+  assert.equal(again.status,200);assert.equal((await again.json()).alreadyApproved,true);assert.equal(state.writes,1);
+  const moved=sequencePayload(["2026-10-31","2026-11-01","2026-11-02"],"12:00");
+  const changed=await handler(repository,moved)(request(moved));
+  assert.equal(changed.status,409);assert.equal(state.writes,1);
+});
+
+test("sequence approval rejects unordered dates and invalid time before reading media", async()=>{
+  const body=sequencePayload(["2026-10-30","2026-10-29","2026-11-01"],"12:00");
+  const {repository,state}=makeRepo();let fetches=0;
+  const res=await handler(repository,body,{fetchImpl:async()=>{fetches++;return new Response();}})(request(body));
+  assert.equal(res.status,400);assert.equal(fetches,0);assert.equal(state.writes,0);
+
+  const badTime=sequencePayload(undefined,"25:00");
+  const second=await handler(repository,badTime,{fetchImpl:async()=>{fetches++;return new Response();}})(request(badTime));
+  assert.equal(second.status,400);assert.equal(fetches,0);assert.equal(state.writes,0);
 });
 
 test("invalid media cannot create approvals; repeated identical approval is idempotent", async()=>{
