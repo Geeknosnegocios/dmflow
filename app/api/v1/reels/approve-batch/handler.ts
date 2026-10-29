@@ -69,6 +69,7 @@ async function readBody(request: Request) {
 }
 
 const BRT_SLOTS = ["08:00", "12:00", "20:00"];
+const TIME_RE = /^(?:[01]\d|2[0-3]):[0-5]\d$/;
 function validBatchDate(value: unknown): value is string {
   if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
   const [year, month, day] = value.split("-").map(Number);
@@ -94,12 +95,30 @@ async function reelStoryFingerprint(row: Record<string, any>) {
     source_index: row.idx, story_sha256: approvedHash(row.story_sha256),
     associated_reel_approval: row.approval_fingerprint, scheduled_unix: Number(row.scheduled_unix), channel: row.canal });
 }
-function expectedSlotUnix(date: string, idx: number, nowMs: number) {
-  const slot = BRT_SLOTS[idx - 1];
-  if (!slot) throw new EndpointError(400, "invalid Reel slot");
-  const unix = Math.floor(new Date(`${date}T${slot}:00-03:00`).getTime() / 1000);
-  if (unix < nowMs / 1000 + 20 * 60) throw new EndpointError(400, `Reel ${idx} slot has passed or is too close`);
-  return unix;
+function expectedScheduleUnix(date: string, time: string, idx: number, nowMs: number) {
+  if (!validBatchDate(date) || !TIME_RE.test(time)) throw new EndpointError(400, `Reel ${idx}: invalid schedule`);
+  const scheduled = new Date(`${date}T${time}:00-03:00`).getTime();
+  if (!Number.isFinite(scheduled) || scheduled < nowMs + 20 * 60_000) {
+    throw new EndpointError(400, `Reel ${idx} slot has passed or is too close`);
+  }
+  return Math.floor(scheduled / 1000);
+}
+function approvalSchedule(body: Record<string, any>, nowMs: number) {
+  const sequenceRequested = body.dates !== undefined || body.time !== undefined;
+  if (sequenceRequested) {
+    if (body.date !== undefined || !Array.isArray(body.dates) || body.dates.length !== 3 ||
+        body.dates.some((date: unknown) => !validBatchDate(date)) || !TIME_RE.test(body.time ?? "") ||
+        new Set(body.dates).size !== 3 || body.dates.some((date: string, index: number) => index > 0 && date <= body.dates[index - 1])) {
+      throw new EndpointError(400, "invalid Reel sequence schedule");
+    }
+    return body.dates.map((date: string, index: number) => ({
+      date, scheduledUnix: expectedScheduleUnix(date, body.time, index + 1, nowMs),
+    }));
+  }
+  if (!validBatchDate(body.date)) throw new EndpointError(400, "invalid Reel batch date");
+  return BRT_SLOTS.map((time, index) => ({
+    date: body.date, scheduledUnix: expectedScheduleUnix(body.date, time, index + 1, nowMs),
+  }));
 }
 function mediaUrls(item: Record<string, any>, date: string, source: string, idx: number, supabaseUrl: string) {
   if (typeof item.video_url !== "string" || typeof item.cover_url !== "string" || typeof item.story_url !== "string") {
@@ -149,17 +168,18 @@ async function hashMedia(url: string, kind: "video" | "image", fetchImpl: typeof
 }
 async function prepareApprovalRows(body: Record<string, any>, account: ReelBatchAccount, supabaseUrl: string,
   fetchImpl: typeof fetch, nowMs: number) {
-  if (!validBatchDate(body.date) || typeof body.sourceVideoId !== "string" || !/^[A-Za-z0-9_-]{11}$/.test(body.sourceVideoId) ||
+  if (typeof body.sourceVideoId !== "string" || !/^[A-Za-z0-9_-]{11}$/.test(body.sourceVideoId) ||
       !["GN", "GI"].includes(body.channel) || body.account !== "andreyogeek" || !Array.isArray(body.items) || body.items.length !== 3) {
     throw new EndpointError(400, "invalid Reel batch");
   }
+  const schedule = approvalSchedule(body, nowMs);
   const rows = []; const coverHashes = new Set<string>();
   for (let index = 0; index < 3; index++) {
     const idx = index + 1; const item = body.items[index];
     if (!isRecord(item) || item.idx !== idx || typeof item.caption !== "string" || !item.caption.trim() ||
         item.caption !== item.caption.trim() || item.caption.length > 2200) throw new EndpointError(400, `Reel ${idx}: invalid caption`);
-    const urls = mediaUrls(item, body.date, body.sourceVideoId, idx, supabaseUrl);
-    const scheduled_unix = expectedSlotUnix(body.date, idx, nowMs);
+    const { date, scheduledUnix: scheduled_unix } = schedule[index];
+    const urls = mediaUrls(item, date, body.sourceVideoId, idx, supabaseUrl);
     const [video_sha256, cover_sha256, story_sha256] = await Promise.all([
       hashMedia(urls.videoUrl, "video", fetchImpl), hashMedia(urls.coverUrl, "image", fetchImpl), hashMedia(urls.storyUrl, "video", fetchImpl),
     ]);
@@ -207,6 +227,7 @@ export function createReelBatchApprovalHandler(deps: Dependencies) {
           !account.owner_user_id || account.owner_user_id !== userId) {
         throw new EndpointError(403, "API key must belong to the owner of the active andreyogeek account");
       }
+      if (body.action === "preflight") return json({ ok: true });
       const prepared = await prepareApprovalRows(body, account, deps.supabaseUrl, deps.fetchImpl ?? fetch,
         deps.now?.() ?? Date.now());
 
