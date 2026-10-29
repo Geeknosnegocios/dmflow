@@ -4,6 +4,7 @@ import { canonicalReelFingerprint, canonicalStoryFingerprint, type ReelRow } fro
 const BUCKET = "dmflow-content";
 const CHANNELS = new Set(["GI", "GN"]);
 const SLOTS = ["08:00", "12:00", "20:00"] as const;
+const TIME_RE = /^(?:[01]\d|2[0-3]):[0-5]\d$/;
 const VIDEO_LIMIT = 256 * 1024 * 1024;
 const COVER_LIMIT = 10 * 1024 * 1024;
 const MAX_CONTROL_BODY = 2 * 1024 * 1024;
@@ -122,6 +123,25 @@ function assertBatchDateAndSource(date: unknown, sourceVideoId: unknown): assert
   if (!strictDate(date) || typeof sourceVideoId !== "string" || !/^[A-Za-z0-9_-]{11}$/.test(sourceVideoId)) {
     throw new ControlError(400, "fonte ou data inválida");
   }
+}
+
+function publicationPlan(body: Record<string, any>, nowMs: number) {
+  if (body.action === "schedule-sequence") {
+    const { dates, time } = body;
+    if (body.date !== undefined || !Array.isArray(dates) || dates.length !== 3 ||
+        dates.some((date: unknown) => !strictDate(date)) || !TIME_RE.test(time ?? "") ||
+        new Set(dates).size !== 3 || dates.some((date: string, index: number) => index > 0 && date <= dates[index - 1])) {
+      throw new ControlError(400, "sequência inválida: informe três datas em ordem e um horário HH:MM");
+    }
+    return dates.map((date: string, index: number) => {
+      const scheduledUnix = expectedUnix(date, time);
+      if (scheduledUnix < nowMs / 1000 + 20 * 60) throw new ControlError(400, `Reel ${index + 1}: horário passou ou está próximo`);
+      return { date, time, scheduledUnix };
+    });
+  }
+  assertBatchDateAndSource(body.date, body.sourceVideoId);
+  return SLOTS.map((time, index) => ({ date: body.date, time,
+    scheduledUnix: assertUpcomingSlot(body.date, index + 1, nowMs) }));
 }
 
 function assertUpcomingSlot(date: string, idx: number, nowMs: number) {
@@ -261,11 +281,14 @@ export async function prepareReelBatch(
   if (!accountRow || accountRow.active !== true || accountRow.ig_username !== "andreyogeek" || !accountRow.owner_user_id) {
     throw new ControlError(409, "conta ativa ou proprietário não validado");
   }
-  const { date, sourceVideoId, channel, account, items } = body;
-  assertBatchDateAndSource(date, sourceVideoId);
+  const { sourceVideoId, channel, account, items } = body;
+  if (typeof sourceVideoId !== "string" || !/^[A-Za-z0-9_-]{11}$/.test(sourceVideoId)) {
+    throw new ControlError(400, "fonte inválida");
+  }
   if (!CHANNELS.has(channel) || account !== "andreyogeek" || !Array.isArray(items) || items.length !== 3) {
     throw new ControlError(400, "lote inválido");
   }
+  const plan = publicationPlan(body, nowMs);
   const expectedRows: Record<string, unknown>[] = [];
   const coverHashes = new Set<string>();
   for (let index = 0; index < 3; index++) {
@@ -275,8 +298,12 @@ export async function prepareReelBatch(
         item.caption !== item.caption.trim() || item.caption.length > 2200) {
       throw new ControlError(400, `Reel ${idx}: copy inválida`);
     }
-    const scheduledUnix = assertUpcomingSlot(date, idx, nowMs);
-    const urls = expectedAssetUrls(item, date, sourceVideoId, idx, config);
+    const slot = plan[index];
+    if (body.action === "schedule-sequence" && (item.date !== slot.date || item.time !== slot.time)) {
+      throw new ControlError(400, `Reel ${idx}: data ou horário diverge da sequência`);
+    }
+    const urls = expectedAssetUrls(item, slot.date, sourceVideoId, idx, config);
+    const scheduledUnix = slot.scheduledUnix;
     const [videoSha, coverSha, storySha] = await Promise.all([
       verifiedAsset(urls.videoUrl, "video", fetchImpl),
       verifiedAsset(urls.coverUrl, "image", fetchImpl),
@@ -315,17 +342,20 @@ export async function prepareReelBatch(
 }
 
 async function scheduleBatch(body: Record<string, any>, deps: HandlerDependencies, repository: BatchRepository, nowMs: number) {
-  const { date, sourceVideoId, channel, account, items } = body;
+  const { sourceVideoId } = body;
   const accountRow = await repository.getActiveAccount("andreyogeek");
   if (!accountRow || accountRow.active !== true || accountRow.ig_username !== "andreyogeek" || !accountRow.owner_user_id) {
     throw new ControlError(409, "conta ativa ou proprietário não validado");
   }
   const expectedRows = await prepareReelBatch(body, accountRow, deps.config, deps.fetchImpl ?? fetch, nowMs);
 
-  const start = expectedUnix(date, "00:00");
-  const end = start + 86400;
+  const dates = body.action === "schedule-sequence" ? body.dates as string[] : [body.date as string];
+  const dayResults = await Promise.all([...new Set(dates)].map(async (date) => {
+    const start = expectedUnix(date, "00:00");
+    return { date, rows: await repository.listRowsByDay(accountRow.id, start, start + 86400) };
+  }));
   const sourceRows = await repository.listRowsBySource(sourceVideoId);
-  const dayRows = await repository.listRowsByDay(accountRow.id, start, end);
+  const dayRows = dayResults.flatMap((result) => result.rows);
   const activeApprovals = new Map<string, BatchApprovalRecord>();
   for (const row of expectedRows) {
     const contentId = `${sourceVideoId}:${row.idx}`;
@@ -359,7 +389,13 @@ async function scheduleBatch(body: Record<string, any>, deps: HandlerDependencie
     }
     throw new ControlError(409, "origem já reservada ou lote divergente; reconciliação manual necessária");
   }
-  if (dayRows.length + 3 > 3) throw new ControlError(409, "limite diário de três Reels excedido");
+  if (body.action === "schedule-sequence") {
+    for (const day of dayResults) {
+      const additions = expectedRows.filter((row) => Number(row.scheduled_unix) >= expectedUnix(day.date, "00:00") &&
+        Number(row.scheduled_unix) < expectedUnix(day.date, "00:00") + 86400).length;
+      if (day.rows.length + additions > 3) throw new ControlError(409, `limite diário de três Reels excedido em ${day.date}`);
+    }
+  } else if (dayRows.length + 3 > 3) throw new ControlError(409, "limite diário de três Reels excedido");
 
   const queueRows = expectedRows.map((row) => {
     const contentId = `${sourceVideoId}:${row.idx}`;
@@ -405,7 +441,7 @@ export function createReelsBatchControlHandler(deps: HandlerDependencies) {
         const signed = await repository.signUpload(parsed.path, parsed.contentType);
         return json({ ok: true, ...parsed, signedUrl: signed.signedUrl, token: signed.token });
       }
-      if (body.action !== "schedule-batch") return json({ error: "ação inválida" }, 400);
+      if (body.action !== "schedule-batch" && body.action !== "schedule-sequence") return json({ error: "ação inválida" }, 400);
       return json(await scheduleBatch(body, deps, repository, nowMs));
     } catch (error) {
       if (error instanceof ControlError) return json({ error: error.message }, error.status);

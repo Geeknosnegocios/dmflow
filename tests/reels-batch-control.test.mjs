@@ -24,18 +24,29 @@ function jpeg(seed) {
 }
 function sha(bytes) { return createHash("sha256").update(bytes).digest("hex"); }
 
-function packageFor(idx, seed = idx) {
+function packageFor(idx, seed = idx, date = "2026-10-29", time) {
   const video = mp4(seed);
   const cover = jpeg(seed + 10);
   const story = mp4(seed + 20);
-  const stem = `reels/2026-10-29/B07no8JWSvo/reel-0${idx}-${sha(video).slice(0, 12)}`;
+  const stem = `reels/${date}/B07no8JWSvo/reel-0${idx}-${sha(video).slice(0, 12)}`;
   return {
     idx,
+    ...(time ? { date, time } : {}),
     caption: `Approved copy ${idx}`,
     video_url: `${base}/storage/v1/object/public/dmflow-content/${stem}.mp4`,
     cover_url: `${base}/storage/v1/object/public/dmflow-content/${stem}-cover.jpg`,
     story_url: `${base}/storage/v1/object/public/dmflow-content/${stem}-story.mp4`,
     __assets: { video, cover, story },
+  };
+}
+function sequence(overrides = {}) {
+  const dates = ["2026-10-30", "2026-10-31", "2026-11-01"];
+  const time = "12:00";
+  return {
+    action: "schedule-sequence", dates, time, sourceVideoId: "B07no8JWSvo",
+    channel: "GI", account: "andreyogeek",
+    items: dates.map((date, index) => packageFor(index + 1, index + 1, date, time)),
+    ...overrides,
   };
 }
 function batch(overrides = {}) {
@@ -87,7 +98,9 @@ async function seedOwnerApprovals(payload, state, { revokeContentId } = {}) {
   let index = 1;
   for (const item of payload.items) {
     const idx = item.idx;
-    const scheduledUnix = Math.floor(Date.parse(`${payload.date}T${["08:00", "12:00", "20:00"][idx - 1]}:00-03:00`) / 1000);
+    const date = payload.dates?.[idx - 1] ?? payload.date;
+    const time = payload.time ?? ["08:00", "12:00", "20:00"][idx - 1];
+    const scheduledUnix = Math.floor(Date.parse(`${date}T${time}:00-03:00`) / 1000);
     const row = {
       id: `approved-fixture-${idx}`, slug: payload.sourceVideoId, idx, account_id: state.account.id,
       canal: payload.channel, video_url: item.video_url, video_sha256: `sha256:${sha(item.__assets.video)}`,
@@ -203,6 +216,39 @@ test("schedule-batch requires exact preapproved hashes and inserts three rows wi
     Date.parse("2026-10-29T20:00:00-03:00") / 1000,
   ]);
   assert.ok(state.rows.every((row) => row.publish_state === "pending" && row.story_publish_state === "pending"));
+});
+
+test("schedule-sequence propagates all six owner approvals and inserts one Reel per date", async () => {
+  const payload = sequence();
+  const { repository, state } = db();
+  await seedOwnerApprovals(payload, state);
+  const handler = createReelsBatchControlHandler({ config: config(), repository,
+    fetchImpl: fetchMedia(payload), now: () => now });
+  const response = await handler(request(payload));
+  const result = await response.json();
+  assert.equal(response.status, 200, JSON.stringify(result));
+  assert.equal(result.rows.length, 3);
+  assert.deepEqual(state.rows.map(row => row.scheduled_unix), payload.dates.map(date =>
+    Date.parse(`${date}T12:00:00-03:00`) / 1000));
+  assert.ok(state.rows.every(row => row.approved_content_id && row.story_approved_content_id));
+  assert.ok(state.rows.every(row => row.approval_fingerprint && row.story_approval_fingerprint));
+  assert.equal(state.writes.approvals, 0);
+  assert.equal(state.writes.rows, 1);
+  const repeated = await handler(request(payload));
+  assert.equal(repeated.status, 200);
+  assert.equal((await repeated.json()).alreadyScheduled, true);
+  assert.equal(state.writes.rows, 1);
+});
+
+test("schedule-sequence requires immutable approvals before queue insertion", async () => {
+  const payload = sequence();
+  const { repository, state } = db();
+  const handler = createReelsBatchControlHandler({ config: config(), repository,
+    fetchImpl: fetchMedia(payload), now: () => now });
+  const response = await handler(request(payload));
+  assert.equal(response.status, 409);
+  assert.match((await response.json()).error, /aprovação explícita ausente/);
+  assert.equal(state.writes.rows, 0);
 });
 
 test("caller-supplied owner ids or fingerprints cannot mint approvals or schedule an unapproved batch", async () => {

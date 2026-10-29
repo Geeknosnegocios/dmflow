@@ -4,7 +4,7 @@
 
 **Goal:** Make owner-authenticated approval and scheduling support the approved cadence of one Reel per day for three days, with no queue insert unless all six Reel/Story approvals are stored.
 
-**Architecture:** Extend the existing DMFlow approval handler to accept either its legacy one-day slots or an ordered three-date sequence at one BRT time. Reelsflow will validate the owner API key before uploading, upload the exact assets, ask DMFlow to hash and persist the six owner-bound approvals, then call the existing idempotent Supabase sequence scheduler.
+**Architecture:** Extend the DMFlow approval handler to accept legacy one-day slots or an ordered three-date sequence at one BRT time. Extend the Supabase sequence scheduler to fetch the owner-approved fingerprints and IDs, verify they match the exact Reel/Story rows, and insert them. Reelsflow validates the owner API key before upload, asks DMFlow to hash and persist approvals after upload, then calls the guarded scheduler.
 
 **Tech Stack:** Next.js 16, TypeScript, Supabase/PostgREST, Node.js ESM.
 
@@ -21,15 +21,17 @@
 
 - `app/api/v1/reels/approve-batch/handler.ts`: validate legacy or sequence schedule and derive approval fingerprints.
 - `tests/reels-approval-endpoint.test.mjs`: sequence approval, date/time validation, ownership, and idempotency.
+- `supabase/functions/reels-batch-control/handler.ts`: validate exact approval records for `schedule-sequence` and add their fingerprints/IDs to queue rows.
+- `tests/reels-batch-control.test.mjs`: approval propagation, daily caps, fail-closed behavior, and sequence idempotency.
 - `C:/Users/freit/Documents/ChatGPT/Instagram/Reelsflow/scripts/schedule-batch.mjs`: fail before upload without owner auth; call preflight, approval, then scheduler.
 - `C:/Users/freit/Documents/ChatGPT/Instagram/Reelsflow/scripts/schedule-batch.test.mjs`: fail-fast behavior when owner auth is missing.
 
 ## Tasks
 
-- [x] Add failing tests for three ordered dates at one BRT time, invalid sequence inputs, and owner preflight.
+- [x] Add failing tests for ordered sequence dates, invalid sequence inputs, owner preflight, and scheduler approval propagation.
 - [x] Implement sequence schedule derivation in the owner approval handler; keep canonical fingerprints aligned with `scheduled_reels`.
-- [x] Run the approval handler tests and verify legacy one-day approvals still pass.
-- [x] Add Reelsflow owner-key preflight and approval call before `schedule-sequence`; keep dry-run and legacy modes intact.
-- [x] Verify the local scheduler fails before upload when the owner key is invalid and the sequence request carries the expected assets and dates.
-- [ ] Build and deploy the DMFlow approval handler to production, then verify it through `https://dmflow.vercel.app` using the owner key without printing it.
-- [ ] Prepare the corrected future schedule for user review; do not commit queue rows until the new dates are approved.
+- [x] Update the Supabase sequence scheduler to require all six immutable approvals and carry their IDs/fingerprints into queue inserts.
+- [x] Integrate Reelsflow preflight, server approval, and scheduler calls; fail before upload if the owner API key is absent.
+- [x] Run the DMFlow suite (92 tests), Reelsflow scheduler tests, and production build.
+- [x] Deploy the DMFlow approval handler and verify owner preflight through `https://dmflow.vercel.app`.
+- [ ] Schedule the approved cuts for 30/10, 31/10 and 01/11 at 12:00 BRT, then verify all three queue rows.
