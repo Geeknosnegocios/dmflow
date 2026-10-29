@@ -251,6 +251,27 @@ test("schedule-sequence requires immutable approvals before queue insertion", as
   assert.equal(state.writes.rows, 0);
 });
 
+test("internal schedule failures log a redacted diagnostic but return a generic response", async () => {
+  const payload = sequence();
+  const { repository, state } = db();
+  await seedOwnerApprovals(payload, state);
+  const logs = [];
+  const failingRepository = { ...repository, async insertScheduledRows() {
+    throw Object.assign(new Error("constraint failure sb_secret_TEST_VALUE dmf_TEST_OWNER"), { code: "23514" });
+  }};
+  const handler = createReelsBatchControlHandler({ config: config(), repository: failingRepository,
+    fetchImpl: fetchMedia(payload), now: () => now, logger: (event, context) => logs.push({event, context}) });
+  const response = await handler(request(payload));
+  assert.equal(response.status, 500);
+  assert.deepEqual(await response.json(), { error: "batch controller operation failed" });
+  assert.equal(state.writes.rows, 0);
+  assert.equal(logs.length, 1);
+  assert.equal(logs[0].context.code, "23514");
+  assert.match(logs[0].context.message, /\[redacted\]/);
+  assert.equal(logs[0].context.message.includes("TEST_VALUE"), false);
+  assert.equal(logs[0].context.message.includes("TEST_OWNER"), false);
+});
+
 test("caller-supplied owner ids or fingerprints cannot mint approvals or schedule an unapproved batch", async () => {
   const payload = batch();
   payload.approved_by = ownerId;

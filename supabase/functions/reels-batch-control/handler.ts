@@ -41,6 +41,7 @@ type HandlerDependencies = {
   repository: BatchRepository | (() => BatchRepository);
   fetchImpl?: typeof fetch;
   now?: () => number;
+  logger?: (event: string, context: Record<string, unknown>) => void;
 };
 
 class ControlError extends Error {
@@ -84,6 +85,20 @@ function constantTimeHexEqual(left: string, right: string) {
   let diff = 0;
   for (let index = 0; index < 64; index++) diff |= left.charCodeAt(index) ^ right.charCodeAt(index);
   return diff === 0;
+}
+
+function safeDiagnostic(error: unknown, config: BatchControlConfig) {
+  const raw = error instanceof Error ? error.message
+    : isRecord(error) && typeof error.message === "string" ? error.message : "unknown error";
+  let message = raw;
+  for (const secret of [config.serviceRoleKey, config.publishableKey]) {
+    if (secret) message = message.replaceAll(secret, "[redacted]");
+  }
+  return message
+    .replace(/(?:sb_secret_|sb_publishable_|dmf_)[A-Za-z0-9_-]+/g, "[redacted]")
+    .replace(/Bearer\s+[^\s,;]+/ig, "Bearer [redacted]")
+    .replace(/\beyJ[A-Za-z0-9_.-]{24,}\b/g, "[redacted]")
+    .slice(0, 300);
 }
 
 async function authenticated(request: Request, config: BatchControlConfig, token: string) {
@@ -449,6 +464,13 @@ export function createReelsBatchControlHandler(deps: HandlerDependencies) {
         const status = error.status >= 400 && error.status < 600 ? error.status : 400;
         return json({ error: error.message }, status);
       }
+      const logger = deps.logger ?? ((event, context) => console.error(event, context));
+      logger("reels-batch-control internal failure", {
+        action: isRecord(body) && typeof body.action === "string" ? body.action : "unknown",
+        code: isRecord(error) && typeof error.code === "string" ? error.code : null,
+        status: isRecord(error) && typeof error.status === "number" ? error.status : null,
+        message: safeDiagnostic(error, deps.config),
+      });
       return json({ error: "batch controller operation failed" }, 500);
     }
   };
