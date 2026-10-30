@@ -3,6 +3,7 @@ const DEFAULT_REQUEST_TIMEOUT_MS = 20_000;
 const safeGraphVersion = (version: string) => /^v\d+\.\d+$/.test(version) ? version : "v22.0";
 type Account = {
   ig_username: string | null;
+  ig_business_id?: string | null;
   ig_access_token: string;
   ig_token_expires_at: string | null;
 };
@@ -41,7 +42,7 @@ export async function resolveInstagramIdentity({ graphVersion, now, account, fet
   if (!Number.isFinite(expiresAt) || expiresAt <= now) {
     throw new Error("Instagram access token is expired");
   }
-  const response = await fetchImpl(`https://graph.instagram.com/${safeGraphVersion(graphVersion)}/me?fields=id%2Cusername`, {
+  const response = await fetchImpl(`https://graph.instagram.com/${safeGraphVersion(graphVersion)}/me?fields=id%2Cuser_id%2Cusername`, {
     headers: headers(account.ig_access_token),
     signal: AbortSignal.timeout(requestTimeoutMs),
   });
@@ -50,6 +51,13 @@ export async function resolveInstagramIdentity({ graphVersion, now, account, fet
       typeof identity.username !== "string" ||
       identity.username.toLowerCase() !== account.ig_username.toLowerCase()) {
     throw new Error("Instagram /me identity does not match the stored username");
+  }
+  // Instagram Login may return a scoped `id` and a different canonical `user_id`.
+  // Both must come from the same authenticated /me response, never from the caller.
+  if (account.ig_business_id != null &&
+      account.ig_business_id !== identity.id &&
+      (typeof identity.user_id !== "string" || account.ig_business_id !== identity.user_id)) {
+    throw new Error("Instagram identity does not match the stored account");
   }
   return identity.id as string;
 }
