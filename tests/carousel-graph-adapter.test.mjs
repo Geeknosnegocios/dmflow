@@ -128,12 +128,12 @@ test("resolves the Instagram user id from verified /me identity using the existi
     },
     fetchImpl: async (input, init = {}) => {
       requests.push({ url: String(input), init });
-      return response({ id: "verified-ig-id", username: "andreyogeek" });
+      return response({ id: "verified-ig-id", user_id: "business-7", username: "andreyogeek" });
     },
   });
 
   assert.equal(instagramUserId, "verified-ig-id");
-  assert.match(requests[0].url, /\/me\?fields=id%2Cusername$/);
+  assert.match(requests[0].url, /\/me\?fields=id%2Cuser_id%2Cusername$/);
   assert.equal(requests[0].url.includes(accessToken), false);
   assert.equal(requests[0].init.headers.Authorization, `Bearer ${accessToken}`);
 });

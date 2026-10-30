@@ -147,7 +147,6 @@ Deno.serve(async (request) => {
   try {
     assertAuthorizedInstagramAccount({ active: account.active, ig_username: account.ig_username });
     const identity = await resolveInstagramIdentity({ graphVersion, now: Date.now(), account });
-    if (identity !== account.ig_business_id) return new Response("Instagram identity does not match the account", { status: 503 });
     const graph: Graph = {
       ...createReelGraphClient({ graphVersion, accessToken: account.ig_access_token, instagramUserId: identity }),
       validateReel: async (row) => verifyReelAssets(row, supabaseUrl),
