@@ -229,6 +229,8 @@ test("Reel Story waits for published Reel and checkpoints Story IDs separately",
   assert.equal(result.status, "pending");
   assert.equal(calls, 1);
   assert.ok(events.some(([name, , , patch]) => name === "checkpoint-story" && patch.story_container_id === "story-container-1"));
+  assert.ok(events.some(([name, , , patch]) => name === "checkpoint-story" && patch.story_status === "pending"),
+    "checkpoint must restore pending status so the dispatcher can poll the same container");
   assert.equal(events.some(([name, , , patch]) => name === "checkpoint-reel" && "post_id" in patch), false);
 });
 

@@ -176,7 +176,7 @@ async function handleStoryStep<T>(repository: Repository, row: ReelRow, token: s
     const result = await graphCall();
     const patch = checkpoint(result);
     await repository.checkpointStory(row.id, token,
-      { story_publish_state: "pending", story_claim_token: null, story_lease_until: null,
+      { story_status: "pending", story_publish_state: "pending", story_claim_token: null, story_lease_until: null,
         story_action_kind: null, story_action_started_at: null, ...patch });
     return { status: patch.story_publish_state === "published" ? "published" as const : "pending" as const };
   } catch (error) {
