@@ -37,6 +37,7 @@ export type Rule = {
   match_mode: MatchMode;
   trigger_type: TriggerType;
   public_reply: string | null;
+  public_reply_variants?: string[] | null;
   dm_message: string;
   dm_button_url: string | null;
   dm_button_text: string | null;

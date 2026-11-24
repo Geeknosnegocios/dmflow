@@ -88,7 +88,10 @@ export function createMetaGraphClient({ graphVersion, accessToken, instagramUser
   };
 
   return {
-    async createChild({ imageUrl }: { imageUrl?: string }) {
+    async createChild({ imageUrl, videoUrl }: { imageUrl?: string; videoUrl?: string }) {
+      if (videoUrl) return post(`${instagramUserId}/media`, {
+        media_type: "VIDEO", video_url: videoUrl, is_carousel_item: "true",
+      });
       if (!imageUrl) throw new Error("Carousel image URL is missing");
       return post(`${instagramUserId}/media`, { image_url: imageUrl, is_carousel_item: "true" });
     },

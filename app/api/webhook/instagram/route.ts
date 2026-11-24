@@ -1,3 +1,4 @@
+import { isOwnInstagramComment, permitsTestComment, publicReplyFor } from "@/lib/comment-rules";
 import { NextRequest, NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase";
 import { verifyMetaSignature } from "@/lib/signature";
@@ -156,7 +157,7 @@ async function handleComment(
   baseUrl: string
 ) {
   const commentId: string | undefined = value.id;
-  if (!commentId) return;
+  if (!commentId || isOwnInstagramComment(value.from, account)) return;
 
   const commentText: string = value.text ?? "";
   const mediaId: string | undefined = value.media?.id;
@@ -177,9 +178,9 @@ async function handleComment(
     .eq("trigger_type", "comment");
   const allRules = (allRulesRaw ?? []) as Rule[];
   const rules = allRules.filter(
-    (r) => !r.post_id ||
-      (mediaId && r.post_id === mediaId) ||
-      (originalMediaId && r.post_id === originalMediaId)
+    (r) => (r.platform ?? "instagram") === "instagram" &&
+      permitsTestComment(r, value.from, process.env.DMFLOW_TEST_COMMENTERS) &&
+      (!r.post_id || r.post_id === mediaId || r.post_id === originalMediaId)
   );
 
   const rule = pickRule(commentText, rules);
@@ -229,7 +230,8 @@ async function handleComment(
     .select("id")
     .single();
 
-  const eventId = eventRow?.id;
+  if (!eventRow?.id) return;
+  const eventId = eventRow.id;
 
   let publicReplySent = false;
   let publicReplyError: string | null = null;
@@ -237,16 +239,6 @@ async function handleComment(
   let dmError: string | null = null;
 
   if (rule) {
-    if (rule.public_reply && rule.public_reply.trim()) {
-      const r = await replyToComment({
-        commentId,
-        message: rule.public_reply,
-        accessToken: account.ig_access_token,
-      });
-      publicReplySent = r.ok;
-      if (!r.ok) publicReplyError = r.error;
-    }
-
     const picked = pickVariant(rule);
     const originalButtons =
       picked.buttons && picked.buttons.length > 0
@@ -277,6 +269,17 @@ async function handleComment(
     });
     dmSent = dm.ok;
     if (!dm.ok) dmError = dm.error;
+
+    const publicReply = publicReplyFor(rule, commentId);
+    if (publicReply && (dmSent || !rule.public_reply_variants?.length)) {
+      const r = await replyToComment({
+        commentId,
+        message: publicReply,
+        accessToken: account.ig_access_token,
+      });
+      publicReplySent = r.ok;
+      if (!r.ok) publicReplyError = r.error;
+    }
 
     // Track variant hit
     if (picked.variant_index !== null && dmSent) {
