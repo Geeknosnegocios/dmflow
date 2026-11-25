@@ -7,10 +7,19 @@ type ApiKeyVerifier = (raw: string) => Promise<{ valid: boolean; user_id?: strin
 type ApprovalRepository = {
   getActiveAccount(username: string): Promise<ReelBatchAccount | null>;
   listApprovals(contentType: string, contentId: string, accountId: string): Promise<ApprovalRecord[]>;
+  scheduleSingle?(row: SingleQueueInput): Promise<{ row: SingleQueueInput & { id: string }; alreadyScheduled: boolean }>;
   insertApprovals(rows: ApprovalInput[]): Promise<ApprovalRecord[]>;
 };
 type ApprovalRecord = { id: string; content_type: string; content_id: string; account_id: string; fingerprint: string; approved_by: string; revoked_at: string | null };
 type ApprovalInput = { content_type: string; content_id: string; account_id: string; fingerprint: string; approved_by: string };
+type SingleQueueInput = {
+  slug: string; idx: number; account_id: string; canal: string; caption: string;
+  video_url: string; video_sha256: string; cover_url: string; cover_sha256: string;
+  scheduled_unix: number; approval_fingerprint: string; approved_content_id: string;
+  story_url: null; story_sha256: null; story_approval_fingerprint: null;
+  story_approved_content_id: null; story_status: null; story_publish_state: "disabled";
+  status: "pending"; publish_state: "pending";
+};
 type Dependencies = {
   verifyApiKey: ApiKeyVerifier;
   repository: ApprovalRepository | (() => ApprovalRepository);
@@ -80,8 +89,8 @@ async function makeFingerprint(value: Record<string, unknown>) {
   const bytes = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(JSON.stringify(value)));
   return `sha256:${Array.from(new Uint8Array(bytes), (byte) => byte.toString(16).padStart(2, "0")).join("")}`;
 }
-function approvedHash(value: string) {
-  if (!/^sha256:[0-9a-f]{64}$/i.test(value)) throw new EndpointError(400, "approved media hash invalid");
+function approvedHash(value: unknown) {
+  if (typeof value !== "string" || !/^sha256:[0-9a-f]{64}$/i.test(value)) throw new EndpointError(400, "approved media hash invalid");
   return value.toLowerCase();
 }
 async function reelFingerprint(row: Record<string, any>) {
@@ -120,15 +129,16 @@ function approvalSchedule(body: Record<string, any>, nowMs: number) {
     date: body.date, scheduledUnix: expectedScheduleUnix(body.date, time, index + 1, nowMs),
   }));
 }
-function mediaUrls(item: Record<string, any>, date: string, source: string, idx: number, supabaseUrl: string) {
-  if (typeof item.video_url !== "string" || typeof item.cover_url !== "string" || typeof item.story_url !== "string") {
+function mediaUrls(item: Record<string, any>, date: string, source: string, idx: number, supabaseUrl: string, includeStory: boolean) {
+  if (typeof item.video_url !== "string" || typeof item.cover_url !== "string" || (includeStory && typeof item.story_url !== "string")) {
     throw new EndpointError(400, `Reel ${idx}: invalid media URL`);
   }
-  let video: URL; let cover: URL; let story: URL;
-  try { video = new URL(item.video_url); cover = new URL(item.cover_url); story = new URL(item.story_url); }
+  let video: URL; let cover: URL; let story: URL | null;
+  try { video = new URL(item.video_url); cover = new URL(item.cover_url); story = includeStory ? new URL(item.story_url) : null; }
   catch { throw new EndpointError(400, `Reel ${idx}: invalid media URL`); }
   const origin = new URL(supabaseUrl).origin;
   for (const url of [video, cover, story]) {
+    if (!url) continue;
     if (url.origin !== origin || url.protocol !== "https:" || url.search || url.hash) throw new EndpointError(400, `Reel ${idx}: media must be in the approved bucket`);
   }
   const root = "/storage/v1/object/public/dmflow-content/";
@@ -136,8 +146,8 @@ function mediaUrls(item: Record<string, any>, date: string, source: string, idx:
   const match = videoPath.match(new RegExp(`^reels/${date}/${source}/reel-0${idx}-([0-9a-f]{12})\\.mp4$`));
   if (!match) throw new EndpointError(400, `Reel ${idx}: invalid video path`);
   const stem = `${root}reels/${date}/${source}/reel-0${idx}-${match[1]}`;
-  if (cover.pathname !== `${stem}-cover.jpg` || story.pathname !== `${stem}-story.mp4`) throw new EndpointError(400, `Reel ${idx}: cover or Story does not match its cut`);
-  return { videoUrl: video.toString(), coverUrl: cover.toString(), storyUrl: story.toString(), hashPrefix: match[1] };
+  if (cover.pathname !== `${stem}-cover.jpg` || (story && story.pathname !== `${stem}-story.mp4`)) throw new EndpointError(400, `Reel ${idx}: cover or Story does not match its cut`);
+  return { videoUrl: video.toString(), coverUrl: cover.toString(), storyUrl: story?.toString() ?? null, hashPrefix: match[1] };
 }
 async function hashMedia(url: string, kind: "video" | "image", fetchImpl: typeof fetch) {
   const response = await fetchImpl(url, { method: "GET", redirect: "error", signal: AbortSignal.timeout(30_000) });
@@ -167,30 +177,43 @@ async function hashMedia(url: string, kind: "video" | "image", fetchImpl: typeof
   return `sha256:${digest.digest("hex")}`;
 }
 async function prepareApprovalRows(body: Record<string, any>, account: ReelBatchAccount, supabaseUrl: string,
-  fetchImpl: typeof fetch, nowMs: number) {
+  fetchImpl: typeof fetch, nowMs: number, single: boolean) {
   if (typeof body.sourceVideoId !== "string" || !/^[A-Za-z0-9_-]{11}$/.test(body.sourceVideoId) ||
-      !["GN", "GI"].includes(body.channel) || body.account !== "andreyogeek" || !Array.isArray(body.items) || body.items.length !== 3) {
+      !["GN", "GI"].includes(body.channel) || body.account !== "andreyogeek" || !Array.isArray(body.items) || body.items.length !== (single ? 1 : 3)) {
     throw new EndpointError(400, "invalid Reel batch");
   }
-  const schedule = approvalSchedule(body, nowMs);
+  if (single && (!validBatchDate(body.date) || body.dates !== undefined || body.channel !== "GN" || !["10:00", "14:00", "18:00"].includes(body.time) ||
+      new Date(`${body.date}T12:00:00Z`).getUTCDay() === 0)) {
+    throw new EndpointError(400, "single GN Reel requires a non-Sunday slot at 10:00, 14:00 or 18:00 BRT");
+  }
+  const schedule = single
+    ? [{ date: body.date, scheduledUnix: expectedScheduleUnix(body.date, body.time, 1, nowMs) }]
+    : approvalSchedule(body, nowMs);
   const rows = []; const coverHashes = new Set<string>();
-  for (let index = 0; index < 3; index++) {
+  for (let index = 0; index < body.items.length; index++) {
     const idx = index + 1; const item = body.items[index];
     if (!isRecord(item) || item.idx !== idx || typeof item.caption !== "string" || !item.caption.trim() ||
         item.caption !== item.caption.trim() || item.caption.length > 2200) throw new EndpointError(400, `Reel ${idx}: invalid caption`);
+    if (single && ("story_url" in item || "story_sha256" in item)) {
+      throw new EndpointError(400, "single Reel accepts only video and cover");
+    }
     const { date, scheduledUnix: scheduled_unix } = schedule[index];
-    const urls = mediaUrls(item, date, body.sourceVideoId, idx, supabaseUrl);
+    const urls = mediaUrls(item, date, body.sourceVideoId, idx, supabaseUrl, !single);
     const [video_sha256, cover_sha256, story_sha256] = await Promise.all([
-      hashMedia(urls.videoUrl, "video", fetchImpl), hashMedia(urls.coverUrl, "image", fetchImpl), hashMedia(urls.storyUrl, "video", fetchImpl),
+      hashMedia(urls.videoUrl, "video", fetchImpl), hashMedia(urls.coverUrl, "image", fetchImpl), urls.storyUrl ? hashMedia(urls.storyUrl, "video", fetchImpl) : null,
     ]);
     if (video_sha256.slice(7, 19) !== urls.hashPrefix) throw new EndpointError(400, `Reel ${idx}: video hash/path mismatch`);
+    if (single && (approvedHash(item.video_sha256) !== video_sha256 ||
+        approvedHash(item.cover_sha256) !== cover_sha256)) {
+      throw new EndpointError(400, "media hashes do not match the reviewed files");
+    }
     if (coverHashes.has(cover_sha256)) throw new EndpointError(400, `Reel ${idx}: duplicate cover`);
     coverHashes.add(cover_sha256);
     const row = { slug: body.sourceVideoId, idx, account_id: account.id, canal: body.channel,
       video_url: urls.videoUrl, video_sha256, cover_url: urls.coverUrl, cover_sha256,
       story_url: urls.storyUrl, story_sha256, caption: item.caption, scheduled_unix, approval_fingerprint: "" };
     row.approval_fingerprint = await reelFingerprint(row);
-    const story_approval_fingerprint = await reelStoryFingerprint(row);
+    const story_approval_fingerprint = single ? null : await reelStoryFingerprint(row);
     rows.push({ ...row, story_approval_fingerprint });
   }
   return rows;
@@ -228,8 +251,38 @@ export function createReelBatchApprovalHandler(deps: Dependencies) {
         throw new EndpointError(403, "API key must belong to the owner of the active andreyogeek account");
       }
       if (body.action === "preflight") return json({ ok: true });
+      const single = body.action === "approve-single" || body.action === "schedule-single";
       const prepared = await prepareApprovalRows(body, account, deps.supabaseUrl, deps.fetchImpl ?? fetch,
-        deps.now?.() ?? Date.now());
+        deps.now?.() ?? Date.now(), single);
+      if (single) {
+        const [row] = prepared;
+        const contentId = `${row.slug}:${row.idx}`;
+        const lookup = async () => matchingApproval(await repository.listApprovals("reel", contentId, account.id),
+          "reel", contentId, account.id, row.approval_fingerprint);
+        const existing = await lookup();
+        if (existing && existing.approved_by !== userId) throw new EndpointError(403, "approval owner mismatch");
+        if (body.action === "schedule-single") {
+          if (!existing || existing.id !== body.approvalId) throw new EndpointError(409, "matching approval ID required");
+          if (!repository.scheduleSingle) throw new EndpointError(503, "single Reel scheduling is unavailable");
+          const result = await repository.scheduleSingle({
+            ...row, approved_content_id: existing.id, status: "pending", publish_state: "pending",
+            story_status: null, story_publish_state: "disabled", story_approved_content_id: null,
+            story_url: null, story_sha256: null, story_approval_fingerprint: null,
+          });
+          return json({ ok: true, ...result });
+        }
+        if (!existing) {
+          try {
+            await repository.insertApprovals([{ content_type: "reel", content_id: contentId, account_id: account.id,
+              fingerprint: row.approval_fingerprint, approved_by: userId }]);
+          } catch (error) {
+            if (!isRecord(error) || error.code !== "23505") throw error;
+          }
+        }
+        const approved = await lookup();
+        if (!approved || approved.approved_by !== userId) throw new EndpointError(409, "matching owner approval was not confirmed");
+        return json({ ok: true, alreadyApproved: Boolean(existing), approvals: [{ idx: row.idx, id: approved.id, story: false }] });
+      }
 
       const approvalsToInsert: ApprovalInput[] = [];
       for (const row of prepared) {
