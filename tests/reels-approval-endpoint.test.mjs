@@ -167,3 +167,44 @@ test("revoked approval blocks a batch reapproval until the content receives a ne
   assert.equal(second.status,409);assert.equal(state.writes,1);
 });
 
+test("single Reel requires owner approval, schedules once, and keeps Story disabled", async () => {
+  const body = payload();
+  const cut = body.items[0];
+  delete cut.story_url;
+  cut.video_sha256 = sha(cut.__assets.video);
+  cut.cover_sha256 = sha(cut.__assets.cover);
+  Object.assign(body, { action: "approve-single", time: "10:00", channel: "GN", items: [cut] });
+  const { repository, state } = makeRepo();
+  let scheduled;
+  let writes = 0;
+  repository.scheduleSingle = async (row) => {
+    if (scheduled) return { row: scheduled, alreadyScheduled: true };
+    writes++;
+    scheduled = { ...row, id: "queue-id" };
+    return { row: scheduled, alreadyScheduled: false };
+  };
+  const run = handler(repository, body);
+  const schedule = { ...body, action: "schedule-single" };
+  assert.equal((await run(request(schedule))).status, 409);
+  assert.equal(writes, 0);
+  const wrongHash = { ...body, items: [{ ...cut, cover_sha256: sha(jpg(99)) }] };
+  assert.equal((await run(request(wrongHash))).status, 400);
+  assert.equal(state.writes, 0);
+  const approved = await run(request(body));
+  assert.equal(approved.status, 200, await approved.clone().text());
+  assert.equal(state.approvals.length, 1);
+  const approvalId = (await approved.json()).approvals[0].id;
+  assert.equal(approvalId, state.approvals[0].id);
+  assert.equal((await run(request({ ...schedule, approvalId: "other-id" }))).status, 409);
+  const scheduledResponse = await run(request({ ...schedule, approvalId }));
+  assert.equal(scheduledResponse.status, 200, await scheduledResponse.clone().text());
+  assert.equal(scheduled.approved_content_id, approvalId);
+  assert.equal(scheduled.story_publish_state, "disabled");
+  assert.equal(scheduled.story_url, null);
+  assert.equal(scheduled.story_approved_content_id, null);
+  assert.equal(scheduled.approval_fingerprint, await canonicalReelFingerprint(scheduled));
+  assert.equal((await (await run(request({ ...schedule, approvalId }))).json()).alreadyScheduled, true);
+  assert.equal(writes, 1);
+  state.approvals[0].revoked_at = "2026-10-28T10:00:00Z";
+  assert.equal((await run(request({ ...schedule, approvalId }))).status, 409);
+});

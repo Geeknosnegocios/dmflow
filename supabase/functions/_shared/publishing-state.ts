@@ -6,6 +6,7 @@ type Carousel = {
   caption: string;
   image_urls: string[];
   slide_hashes: string[];
+  media_types?: Array<"IMAGE" | "VIDEO"> | null;
   status: string;
   publish_at: string;
   slide_container_ids: Array<string | null> | null;
@@ -30,7 +31,7 @@ type Repository = {
   needsReconciliation(id: string, reason: string, token: string): Promise<void>;
 };
 type GraphOperations = {
-  createChild(input: { index: number; imageUrl?: string; caption?: string }): Promise<{ id: string }>;
+  createChild(input: { index: number; imageUrl?: string; videoUrl?: string; caption?: string }): Promise<{ id: string }>;
   getContainerStatus(id: string): Promise<string>;
   createParent(input: { children: string[]; caption?: string }): Promise<{ id: string }>;
   publish(id: string): Promise<{ id: string; timestamp: string }>;
@@ -43,11 +44,12 @@ type Graph = Partial<GraphOperations> & {
 
 const scheduled = (patch: Partial<Carousel> & Record<string, unknown>) => ({ status: "scheduled", ...patch });
 
-export async function canonicalCarouselFingerprint({ account_id, card_id, caption, slide_hashes }: {
+export async function canonicalCarouselFingerprint({ account_id, card_id, caption, slide_hashes, media_types }: {
   account_id: string;
   card_id: string;
   caption: string;
   slide_hashes: string[];
+  media_types?: Array<"IMAGE" | "VIDEO"> | null;
 }) {
   const canonical = JSON.stringify({
     content_type: "carousel",
@@ -55,6 +57,7 @@ export async function canonicalCarouselFingerprint({ account_id, card_id, captio
     card_id,
     caption: caption.trim(),
     image_hashes: slide_hashes,
+    ...(media_types ? { media_types } : {}),
   });
   const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(canonical));
   return `sha256:${Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, "0")).join("")}`;
@@ -119,8 +122,11 @@ export async function publishCarouselStep({ repository, graph, now }: {
   } catch {
     return reconcile(repository, row, token, "Could not revalidate the claimed carousel approval");
   }
-  if (row.child_containers.length !== 8 || row.child_statuses.length !== 8) {
-    return reconcile(repository, row, token, "Carousel container checkpoints must contain eight entries");
+  const itemCount = row.slide_hashes.length;
+  if (itemCount < 2 || itemCount > 10 ||
+      row.child_containers.length !== itemCount || row.child_statuses.length !== itemCount ||
+      (row.media_types && row.media_types.length !== itemCount)) {
+    return reconcile(repository, row, token, "Carousel checkpoints must match the approved slides");
   }
   const childIndex = row.child_containers.findIndex((id) => !id);
   let activeGraph: GraphOperations;
@@ -135,7 +141,9 @@ export async function publishCarouselStep({ repository, graph, now }: {
   if (childIndex >= 0) {
     return externalStep(repository, () => activeGraph.createChild({
       index: childIndex,
-      imageUrl: row.image_urls?.[childIndex],
+      ...(row.media_types?.[childIndex] === "VIDEO"
+        ? { videoUrl: row.image_urls[childIndex] }
+        : { imageUrl: row.image_urls?.[childIndex] }),
       caption: row.caption,
     }), row, token, (child) => {
       if (typeof child?.id !== "string" || !child.id.trim()) throw new Error("Instagram Graph returned no child container id");

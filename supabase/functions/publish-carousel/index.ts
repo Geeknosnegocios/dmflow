@@ -66,7 +66,7 @@ Deno.serve(async (request) => {
       const imageUrl = row.image_urls[index];
       const slideHash = row.slide_hashes[index];
       if (!imageUrl || !slideHash) throw new Error("Carousel slide URL or approved hash is missing");
-      await verifyCarouselAsset({ imageUrl, slideHash, storageUrl: supabaseUrl });
+      await verifyCarouselAsset({ imageUrl, slideHash, mediaType: row.media_types?.[index], storageUrl: supabaseUrl });
     },
     async forCarousel(row: CarouselRow) {
       const { data, error } = await supabase.schema("dmflow").from("accounts")
@@ -94,6 +94,7 @@ type CarouselRow = {
   caption: string;
   image_urls: string[];
   slide_hashes: string[];
+  media_types?: Array<"IMAGE" | "VIDEO"> | null;
   slide_container_ids: Array<string | null> | null;
   slide_statuses: Array<string | null> | null;
   status: string;
@@ -113,15 +114,15 @@ type CarouselRow = {
 function normalize(row: CarouselRow) {
   return {
     ...row,
-    child_containers: checkpointArray(row.slide_container_ids),
-    child_statuses: checkpointArray(row.slide_statuses),
+    child_containers: checkpointArray(row.slide_container_ids, row.image_urls.length),
+    child_statuses: checkpointArray(row.slide_statuses, row.image_urls.length),
     parent_status: row.parent_status ?? null,
   };
 }
 
-function checkpointArray(values: Array<string | null> | null | undefined) {
+function checkpointArray(values: Array<string | null> | null | undefined, count: number) {
   const stored = values ?? [];
-  return Array.from({ length: Math.max(8, stored.length) }, (_, index) => stored[index] ?? null);
+  return Array.from({ length: Math.max(count, stored.length) }, (_, index) => stored[index] ?? null);
 }
 
 function toDatabasePatch(patch: Record<string, unknown>) {
